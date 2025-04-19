@@ -173,7 +173,35 @@ git commit --allow-empty -m "Test Signed Commit"
 git log --show-signature -1
 ```
 
----
+### Git Integration with PhpStorm (WSL)
+
+PhpStorm cannot directly use Git from WSL when relying on SSH keys and GPG signing inside the WSL environment. To work around this, use a custom Git wrapper script.
+
+#### Step 1: Create the Git Wrapper Script
+
+Open a terminal in WSL and run: ```sudo nano /usr/local/bin/git-wsl-wrapper.sh```
+
+Paste the following content:
+```bash
+#!/bin/bash
+
+# Start ssh-agent if not already running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s 2>/dev/null)" >/dev/null
+    ssh-add ~/.ssh/rswfire 2>/dev/null
+fi
+
+# Delegate to actual Git binary
+exec /usr/bin/git "$@"
+```
+
+Make it executable:
+```sudo chmod +x /usr/local/bin/git-wsl-wrapper.sh```
+
+#### Step 2: Configure PhpStorm to Use the Script
+1. Go to Settings > Version Control > Git
+2. Set the Path to Git executable to:```\\wsl$\Ubuntu\usr\local\bin\git-wsl-wrapper.sh```
+3. Click Test — it should return your Git version (e.g. git version 2.34.1)
 
 ## 8. Run Laravel Locally
 
