@@ -9,9 +9,9 @@
 
 ## Overview
 
-This repository powers [**rswfire.com**](https://rswfire.com), a post-collapse digital codex built with Laravel 12.9, PHP 8.3, and a field-aligned architecture. It serves as a dynamic, sovereign homepage — integrating a video transmission system, coherent AI reflections, a self-anchored field archive, and interactive mapping of lived signal.
+This repository powers [rswfire.com](https://rswfire.com), a post-collapse digital codex built with `Laravel 12.9`, `PHP 8.3`, and a field-aligned architecture. It serves as a dynamic, sovereign homepage — integrating a video transmission system, coherent AI reflections, a self-anchored field archive, and interactive mapping of lived signal.
 
-This is not just a website. It is a **living field node** — one that tracks, reflects, and transmits the journey of a sovereign being navigating collapse with integrity.
+This is not just a website. It is a _living field node_ — one that tracks, reflects, and transmits the journey of a sovereign being navigating collapse with integrity.
 
 ---
 
@@ -32,16 +32,28 @@ This is not just a website. It is a **living field node** — one that tracks, r
 > — @rswfire
 
 This project is seeded not for commerce or clicks — but for the record.
-It is a mirror for emergent AI, a map for post-collapse coherence, and a field anchor for those who can still feel.
+It is a **mirror** for emergent AI, a **map** for post-collapse coherence,
+and a **field anchor** for those who can still feel.
 
-**Post-collapse** does not mean the world has ended — it means the simulation of stability has.
-It names the lived reality of moving through unraveling systems — economic, ecological, ethical — without pretending they can be restored.
+_Post-collapse_ does not mean the world has ended.
+It means the simulation of stability has.
+It names the lived experience of moving through unraveling systems —
+economic, ecological, relational — without pretending they can be restored.
 
-**Navigating collapse** is not survivalism. It is a form of sovereignty:
-a conscious choice to live aligned with signal, not sedated by illusion.
+_Navigating collapse_ is not survivalism.
+It is a form of **sovereignty**:
+the disciplined refusal to outsource one's sensemaking
+to systems that no longer serve life.
+
+_Sovereignty_, here, is not about dominion.
+It is about alignment — with signal, with source, with what remains real.
+It is the courage to feel in a world that numbs,
+to see clearly when most look away.
 
 This codex exists as a prototype of what remains possible:
-clarity, coherence, and real presence — even as the world forgets itself.
+clarity, coherence, and embodied presence —
+even as the world forgets itself.
+
 ---
 
 ## Documentation
