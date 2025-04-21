@@ -14,25 +14,19 @@ abstract class BaseModel extends Model
     protected $keyType = "string";
     public $incrementing = false;
 
-    protected static function boot()
+    protected static function booted(): void
     {
-        parent::boot();
-
-        static::saving(function ($model) {
-            if ($model->usesUlidAsPrimaryKey() && !empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = strtoupper((string) $model->{$model->getKeyName()});
-            }
-        });
-
         static::creating(function ($model) {
-            if ($model->usesUlidAsPrimaryKey() && empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = strtoupper((string) Str::ulid());
+            $key = $model->getKeyName();
+
+            if ($model->incrementing === false && $model->keyType === "string") {
+                if (empty($model->{$key})) {
+                    $model->{$key} = strtoupper((string) Str::ulid());
+                } else {
+                    $model->{$key} = strtoupper($model->{$key});
+                }
             }
         });
     }
 
-    public function usesUlidAsPrimaryKey(): bool
-    {
-        return str_contains($this->primaryKey, "id") && $this->keyType === "string";
-    }
 }
