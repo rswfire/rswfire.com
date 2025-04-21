@@ -3,11 +3,14 @@
 namespace App\Models\Codex;
 
 use App\Models\Codex\Transmission;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class _Epoch extends Model
 {
+    use HasUlids;
+
     protected $table = "codex__epochs";
     protected $primaryKey = "epoch_id";
     public $incrementing = false;

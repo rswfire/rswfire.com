@@ -4,11 +4,14 @@ namespace App\Models\Codex;
 
 use App\Models\Codex\_Anchor;
 use App\Models\Codex\_Epoch;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Transmission extends Model
 {
+    use HasUlids;
+
     protected $table = "codex_transmissions";
     protected $primaryKey = "transmission_id";
     public $incrementing = false;
