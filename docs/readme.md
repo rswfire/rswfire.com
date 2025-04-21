@@ -55,7 +55,7 @@ even as the world forgets itself.
 
 ## Documentation
 
-> 📖 [`docs/setup.md`](/docs/setup.md)
+> 📖 [`/docs`](/docs)
 
 ---
 
