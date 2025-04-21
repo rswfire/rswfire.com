@@ -2,8 +2,8 @@
 
 [![PHP](https://img.shields.io/badge/PHP-8.3.6-blue)](https://php.net)
 [![Laravel](https://img.shields.io/badge/Laravel-12.9.2-blueviolet)](https://laravel.com)
-[![GitHub](https://img.shields.io/badge/GitHub-@rswfire-orange)](https://github.com/rswfire)
-[![Developer](https://img.shields.io/badge/Developer-@rswfire-red)](https://github.com/rswfire)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)](https://mysql.com)
+[![Developer](https://img.shields.io/badge/Creator-@rswfire-red)](https://github.com/rswfire)
 
 > This is not a website.  
 > It is a **living field node** — tracking, reflecting, and transmitting the embodied journey of a sovereign being navigating collapse with coherence.
@@ -55,7 +55,7 @@ even as the world forgets itself.
 
 ## Documentation
 
-📖 [`docs/setup.md`](/docs/setup.md)
+> 📖 [`docs/setup.md`](/docs/setup.md)
 
 ---
 
