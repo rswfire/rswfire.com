@@ -2,24 +2,19 @@
 
 namespace App\Models\Codex;
 
+use App\BaseModel;
 use App\Models\Codex\_Anchor;
 use App\Models\Codex\_Epoch;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Transmission extends Model
+class Transmission extends BaseModel
 {
     use HasUlids;
 
     protected $table = "codex_transmissions";
     protected $primaryKey = "transmission_id";
-    public $incrementing = false;
-    protected $keyType = "string";
-
-    const CREATED_AT = "stamp_created";
-    const UPDATED_AT = "stamp_updated";
-    public $timestamps = true;
 
     protected $fillable = [
         "youtube_id",

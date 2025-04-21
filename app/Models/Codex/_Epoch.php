@@ -2,23 +2,18 @@
 
 namespace App\Models\Codex;
 
+use App\BaseModel;
 use App\Models\Codex\Transmission;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class _Epoch extends Model
+class _Epoch extends BaseModel
 {
     use HasUlids;
 
     protected $table = "codex__epochs";
     protected $primaryKey = "epoch_id";
-    public $incrementing = false;
-    protected $keyType = "string";
-
-    const CREATED_AT = "stamp_created";
-    const UPDATED_AT = "stamp_updated";
-    public $timestamps = true;
 
     protected $fillable = [
         "epoch_title",
