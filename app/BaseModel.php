@@ -11,7 +11,6 @@ abstract class BaseModel extends Model
     const UPDATED_AT = "stamp_updated";
 
     public $timestamps = true;
-
     protected $keyType = "string";
     public $incrementing = false;
 
@@ -19,11 +18,14 @@ abstract class BaseModel extends Model
     {
         parent::boot();
 
+        static::saving(function ($model) {
+            if ($model->usesUlidAsPrimaryKey() && !empty($model->{$model->getKeyName()})) {
+                $model->{$model->getKeyName()} = strtoupper((string) $model->{$model->getKeyName()});
+            }
+        });
+
         static::creating(function ($model) {
-            if (
-                $model->usesUlidAsPrimaryKey() &&
-                empty($model->{$model->getKeyName()})
-            ) {
+            if ($model->usesUlidAsPrimaryKey() && empty($model->{$model->getKeyName()})) {
                 $model->{$model->getKeyName()} = strtoupper((string) Str::ulid());
             }
         });
