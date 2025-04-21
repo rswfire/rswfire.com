@@ -30,10 +30,10 @@ return new class extends Migration
             $objTable->json("transmission_flags")->nullable();
             $objTable->json("transmission_tags")->nullable();
 
-            $objTable->foreignUlid("anchor_id")->nullable()->constrained("codex__anchors")->nullOnDelete();
+            $objTable->foreignUlid("anchor_id")->nullable()->->constrained("codex__anchors", "anchor_id")->nullOnDelete();
             $objTable->json("anchor_trace")->nullable();
 
-            $objTable->foreignUlid("epoch_id")->nullable()->constrained("codex__epochs")->nullOnDelete();
+            $objTable->foreignUlid("epoch_id")->nullable()->->constrained("codex__epochs", "epoch_id")->nullOnDelete();
             $objTable->string("epoch_signature", 255)->default("");
 
             $objTable->decimal("transmission_latitude", 10, 7)->nullable();
