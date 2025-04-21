@@ -9,11 +9,9 @@
 
 ## Overview
 
+> This is not just a website. It is a _living field node_ — one that tracks, reflects, and transmits the journey of a sovereign being navigating collapse with integrity.
+
 This repository powers [rswfire.com](https://rswfire.com), a post-collapse digital codex built with `Laravel 12.9`, `PHP 8.3`, and a field-aligned architecture. It serves as a dynamic, sovereign homepage — integrating a video transmission system, coherent AI reflections, a self-anchored field archive, and interactive mapping of lived signal.
-
-This is not just a website. It is a _living field node_ — one that tracks, reflects, and transmits the journey of a sovereign being navigating collapse with integrity.
-
----
 
 ## Features
 
@@ -23,8 +21,6 @@ This is not just a website. It is a _living field node_ — one that tracks, ref
 - 🧭 **Epoch Codex** — Layered epoch system with semantic tagging and philosophical indexing.
 - 🔐 **Private/Public Modes** — Subscriber-based access control for deeper transmissions.
 - ⚙️ **Command Line Automation** — Artisan-based AI syncing, migration, and deployment tooling.
-
----
 
 ## Philosophy
 
@@ -55,13 +51,9 @@ clarity, coherence, and embodied presence —
 even as the world forgets itself.
 
 
----
-
 ## Documentation
 
 📖 [`docs/setup.md`](/docs/setup.md)
-
----
 
 ## License
 
