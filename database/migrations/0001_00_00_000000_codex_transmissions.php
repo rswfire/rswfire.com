@@ -13,7 +13,7 @@ return new class extends Migration
             $objTable->string("youtube_id", 20)->unique();
 
             $objTable->string("transmission_title", 255);
-            $objTable->text("transmission_description")->default("");
+            $objTable->text("transmission_description");
             $objTable->unsignedInteger("transmission_duration")->default(0);
 
             $objTable->unsignedBigInteger("count_comments")->default(0);

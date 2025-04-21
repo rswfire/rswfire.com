@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create("codex__epochs", function (Blueprint $table) {
             $table->ulid("epoch_id")->primary();
             $table->string("epoch_title", 255);
-            $table->text("epoch_slug")->default("");
+            $table->text("epoch_slug");
             $table->string("epoch_signature", 255)->unique();
             $table->date("epoch_start")->nullable();
             $table->date("epoch_end")->nullable();

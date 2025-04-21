@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create("codex__anchors", function (Blueprint $objTable) {
             $objTable->ulid("anchor_id")->primary();
             $objTable->string("anchor_title", 255);
-            $objTable->text("anchor_summary")->default("");
+            $objTable->text("anchor_summary");
             $objTable->json("anchor_tags")->nullable();
             $objTable->boolean("flag_active")->default(true);
 
