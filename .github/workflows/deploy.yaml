@@ -34,5 +34,5 @@ jobs:
             php artisan route:clear
             php artisan view:clear
             php artisan migrate --force
-            echo "✔️ Deployment Complete: $(date) ($(git rev-parse --short HEAD))"
+            echo "✔️ Deployed to rswfire.com: $(date) ($(git rev-parse --short HEAD))"
           EOF
