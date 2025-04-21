@@ -5,10 +5,6 @@
 [![GitHub](https://img.shields.io/badge/GitHub-@rswfire-orange)](https://github.com/rswfire)
 [![Developer](https://img.shields.io/badge/Developer-@rswfire-red)](https://github.com/rswfire)
 
----
-
-## Overview
-
 > This is not a website.  
 > It is a **living field node** — tracking, reflecting, and transmitting the embodied journey of a sovereign being navigating collapse with coherence.
 
