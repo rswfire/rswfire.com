@@ -1,10 +1,29 @@
 {
-    "$schema": "https://getcomposer.org/schema.json",
     "name": "rswfire/rswfire.com",
     "type": "project",
-    "description": "rswfire.com",
-    "keywords": ["rswfire"],
-    "license": "MIT",
+    "description": "rswfire.com -- ",
+    "license": "proprietary",
+    "keywords": [
+        "rswfire",
+        "rswfire.com"
+    ],
+    "authors": [
+        {
+            "name": "Robert Samuel White",
+            "email": "rsw@rswfire.com",
+            "homepage": "https://github.com/rswfire",
+            "role": "Developer"
+        }
+    ],
+    "readme": "docs/readme.md",
+    "homepage": "https://rswfire.com/",
+    "support": {
+        "email": "rsw@rswfire.com",
+        "issues": "https://github.com/rswfire/rswfire.com/issues",
+        "wiki": "https://github.com/rswfire/rswfire.com/wiki",
+        "source": "https://github.com/rswfire/rswfire.com",
+        "docs": "https://github.com/rswfire/rswfire.com/tree/main/docs"
+    },
     "require": {
         "php": "^8.2",
         "google/apiclient": "^2.18",
