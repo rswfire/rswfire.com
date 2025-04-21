@@ -1,8 +1,12 @@
-# rswfire.com Local Setup
+# @rswfire > Setup
+
+[![PHP](https://img.shields.io/badge/PHP-8.3.6-blue)](https://php.net)
+[![Laravel](https://img.shields.io/badge/Laravel-12.9.2-blueviolet)](https://laravel.com)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)](https://mysql.com)
+[![Developer](https://img.shields.io/badge/Creator-@rswfire-red)](https://github.com/rswfire)
+[![Documentation](https://img.shields.io/badge/Documentation-lightgrey)](/docs/readme.md)
 
 This guide documents how to set up `rswfire.com` on a fresh machine using WSL2 (Ubuntu 22.04). It assumes you are **not using Laravel Sail** and prefer a manual setup with full control.
-
-_Last updated: 2025-04-19_
 
 ---
 
@@ -223,3 +227,8 @@ Visit [https://rswfire.local](https://rswfire.local)
 ## ✅ Done
 
 You’re now fully set up for local development without Sail.
+
+---
+[dotenv.md](/docs/dotenv.md) |
+[readme.md](/docs/readme.md) |
+setup.md
