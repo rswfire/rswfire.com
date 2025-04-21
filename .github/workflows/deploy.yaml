@@ -1,4 +1,4 @@
-name: Deploy to EC2
+name: Server Deployment
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup SSH
@@ -24,23 +24,15 @@ jobs:
         run: |
           ssh ubuntu@rswfire.com << 'EOF'
             set -e
-
-            echo "🧭 Navigating to project directory..."
             cd /var/www/rswfire.com
-
-            echo "🔄 Resetting Git repo to match origin/main..."
             git fetch origin
             git reset --hard origin/main
-
-            echo "📦 Installing dependencies..."
+            rm -rf node_modules public/build
             npm ci
-
-            echo "🎛 Building assets..."
             npm run build
-
-            echo "🧹 Clearing Laravel caches..."
             php artisan config:clear
+            php artisan route:clear
             php artisan view:clear
-
-            echo "✅ Deployment complete: $(date)"
+            php artisan migrate --force
+            echo "✔️ Deployment Complete: $(date) ($(git rev-parse --short HEAD))"
           EOF
