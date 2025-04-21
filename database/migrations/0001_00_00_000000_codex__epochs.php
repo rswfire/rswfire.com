@@ -12,7 +12,7 @@ return new class extends Migration
             $table->ulid("epoch_id")->primary();
             $table->string("epoch_title", 255);
             $table->text("epoch_slug");
-            $table->string("epoch_signature", 255)->unique();
+            $table->string("epoch_summary", 255)->unique();
             $table->date("epoch_start")->nullable();
             $table->date("epoch_end")->nullable();
             $table->boolean("flag_active")->default(true);

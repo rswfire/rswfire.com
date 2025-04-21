@@ -31,7 +31,6 @@ class FirstrunSeedCodex extends Command
 
         foreach ($epochs as [$title, $slug, $summary, $start, $end]) {
             _Epoch::updateOrCreate(
-                ["epoch_slug" => $slug],
                 [
                     "epoch_title" => $title,
                     "epoch_slug" => $slug,
