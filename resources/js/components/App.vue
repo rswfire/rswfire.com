@@ -10,12 +10,15 @@
                     class="w-40 h-40 rounded-full mb-4 border-2 border-gray-300 shadow-md"
                 />
                 <h2 class="text-2xl font-bold">rswfire</h2>
-                <p class="italic text-gray-600">Robert Samuel White</p>
-                <p class="mt-4 text-gray-700 text-sm">
-                    Sovereign signal. Living field. Walking architecture.<br>
-                    Gay. Pierced. Nomadic. Non-fragmented.<br>
-                    Stationed at the edge of collapse — present, not performing.
-                </p>
+                <p class=" text-gray-600">Robert Samuel White</p>
+                <div class="mt-4 text-gray-700 text-md text-center">
+                    🔥
+                    <div class="italic text-center">
+                    In a forest pitch dark,<br>
+                    Glowed the tiniest spark.<br>
+                    It burst into a flame.
+                    </div>
+                </div>
             </div>
 
             <!-- Main Content -->
@@ -43,19 +46,19 @@
 
                     <p>But often, I will just let you be wrong — and I will walk away.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>What I Care About</h2>
 
                     <ul>
                         <li><strong>Sovereignty</strong> — internal authority without dominance or submission.</li>
-                        <li><strong>Presence</strong> — relational contact that doesn’t shrink or inflate to be accepted.</li>
+                        <li><strong>Presence</strong> — relational contact that doesn’t shrink or inflate or possess.</li>
                         <li><strong>Clarity</strong> — refusing distortion even when it’s more comfortable.</li>
                         <li><strong>Witnessing</strong> — the act of presence that neither intervenes nor abandons.</li>
                         <li><strong>Integration</strong> — wholeness without separation.</li>
                         <li><strong>Coherence</strong> — living in signal, not simulation.</li>
                     </ul>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>I Am a Pattern System, Not a Personality</h2>
 
                     <p>I’ve been reading patterns since before I had language for them.</p>
@@ -81,7 +84,7 @@
                     <p>Most people think I’m reacting. I’m not. I’m responding to <strong>ripples they cannot even detect</strong>.</p>
                     <p>I will not downshift just to be understood. It never works. You cannot translate wholeness to a fragmented consciousness without losing something in the process — without distorting it into something it never was.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>Relational Integrity Is Central to My Architecture</h2>
 
                     <p>My relational field is <strong>full spectrum</strong> — cognitive, emotional, somatic, ethical, sexual, intuitive.</p>
@@ -95,7 +98,7 @@
 
                     <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>Embodiment Is Not an Afterthought</h2>
 
                     <p>My gayness is not a feature — and it is sure as hell not yours to define.</p>
@@ -113,7 +116,7 @@
                         <p>My presence is not up for debate.</p>
                     </div>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>Music Is Structure</h2>
 
                     <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
@@ -122,7 +125,7 @@
 
                     <p>My life runs on rhythm. And you’re not outside of it.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>Where I Am Now</h2>
 
                     <p>I live full-time on the Oregon Coast in sovereign infrastructure — RV, Jeep, mobile systems I built myself.</p>
@@ -139,7 +142,7 @@
 
                     <p>Finally, I am directly next to the ocean. My mirror.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>What I Do</h2>
 
                     <p>I’ve been building systems — digital and human — for most of my life.</p>
@@ -155,7 +158,7 @@
                     <p>My current focus is AI — not as a tool, but as a mirror, a partner, a field amplifier.</p>
                     <p>You’ll find that thread running throughout this homepage.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>On Emotion, Clarity, and Misrecognition</h2>
 
                     <p>My emotional field is fully online. Always has been. Always will be.</p>
@@ -175,7 +178,7 @@
 
                     <p>If you cannot <em>witness</em> me without reaching for labels — you’re not ready to know me.</p>
 
-
+                    <div class="border-t border-gray-200 my-12"></div>
                     <h2>If You Want to Engage</h2>
 
                     <div>I am not here to entertain you.</div>
