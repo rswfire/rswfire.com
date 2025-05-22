@@ -1,14 +1,16 @@
 <template>
-    <div class="min-h-screen bg-white px-6 py-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] gap-12">
+    <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-12 justify-items-center ">
 
             <!-- Sidebar -->
-            <div class="flex flex-col items-center md:items-start text-center md:text-left w-full max-w-[300px]">
+            <div class="flex flex-col items-center md:items-start w-full max-w-[200px] mx-auto md:mx-0 bg-gray-100">
+                <div class="w-full flex flex-col items-center py-6">
                 <img
                     src="https://yt3.googleusercontent.com/0dTQWdATGRRnkgLkaIUy46Iy7lv9jaFkzpXPdsKJvlKEIJ5Ke-VAcjjNp6g-jZYqo5puxmRsjg=s160-c-k-c0x00ffffff-no-rj"
                     alt="Robert Samuel White"
                     class="w-40 h-40 rounded-full mb-4 border-2 border-gray-300 shadow-md"
-                />
+                >
+
                 <h2 class="text-2xl font-bold">rswfire</h2>
                 <p class=" text-gray-600">Robert Samuel White</p>
                 <div class="mt-4 text-gray-700 text-md text-center">
@@ -18,6 +20,7 @@
                     Glowed the tiniest spark.<br>
                     It burst into a flame.
                     </div>
+                </div>
                 </div>
             </div>
 
@@ -144,6 +147,8 @@
 
                     <div class="border-t border-gray-200 my-12"></div>
                     <h2>What I Do</h2>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMVKMP0PVcM?si=f-YAMELtvW9L_EwV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                     <p>I’ve been building systems — digital and human — for most of my life.</p>
                     <p>But what matters isn’t time. It’s how I built: without permission, without a template, without waiting to be taught.</p>
