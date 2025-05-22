@@ -1,9 +1,9 @@
 <template>
     <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-12 justify-items-center ">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10">
 
             <!-- Sidebar -->
-            <div class="flex flex-col items-center md:items-start w-full max-w-[200px] mx-auto md:mx-0 bg-gray-100">
+            <div class="flex flex-col items-center md:items-start w-full w-[200px] mx-auto md:mx-0 bg-gray-100">
                 <div class="w-full flex flex-col items-center py-6">
                 <img
                     src="https://yt3.googleusercontent.com/0dTQWdATGRRnkgLkaIUy46Iy7lv9jaFkzpXPdsKJvlKEIJ5Ke-VAcjjNp6g-jZYqo5puxmRsjg=s160-c-k-c0x00ffffff-no-rj"
@@ -27,7 +27,7 @@
             <!-- Main Content -->
             <div class="flex flex-col">
 
-                <div class="prose prose-lg col-span-2">
+                <div class="prose prose-lg">
 
                     <h2>I’m Sam.</h2>
 
@@ -148,8 +148,51 @@
                     <div class="border-t border-gray-200 my-12"></div>
                     <h2>What I Do</h2>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMVKMP0PVcM?si=f-YAMELtvW9L_EwV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="rounded-xl border border-gray-200 shadow-sm p-4 bg-white py-3 mb-6">
+                    <div class="flex flex-col md:flex-row gap-2 py-0">
+                        <!-- Video -->
+                        <div class="md:w-2/3 rounded-md border border-gray-200 shadow-sm">
+                            <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                                <iframe
+                                    id="youtube-player"
+                                    class="absolute top-0 left-0 w-full h-full"
+                                    src="https://www.youtube-nocookie.com/embed/ZMVKMP0PVcM?modestbranding=1&rel=0&enablejsapi=1"
+                                    title="The Signal – What Rare Talent Really Looks Like"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
 
+                        <!-- Table of Contents -->
+                        <div class="md:w-1/3 text-left text-sm overflow-y-auto px-1 py-0 rounded-md border border-gray-200 shadow-sm" :style="{ maxHeight: videoHeight + 'px' }">
+                            <ul class="space-y-1 list-none pl-0 text-xs sm:text-sm">
+                                <li><button @click="seekTo(0)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:00:00</span><br>Introduction</button></li>
+                                <li><button @click="seekTo(43)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:00:43</span><br>The Setting</button></li>
+                                <li><button @click="seekTo(162)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:02:42</span><br>My Home</button></li>
+                                <li><button @click="seekTo(243)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:04:03</span><br>AI Wants Me to Say Some Things</button></li>
+                                <li><button @click="seekTo(453)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:07:33</span><br>No More AI. Just Us.</button></li>
+                                <li><button @click="seekTo(481)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:08:01</span><br>Childhood Programming</button></li>
+                                <li><button @click="seekTo(547)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:09:07</span><br>Programming on Paper</button></li>
+                                <li><button @click="seekTo(629)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:10:29</span><br>Freelancing on Guru</button></li>
+                                <li><button @click="seekTo(744)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:12:24</span><br>First Major Client – World.com</button></li>
+                                <li><button @click="seekTo(1134)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:18:54</span><br>Second Major Client – Arena.com</button></li>
+                                <li><button @click="seekTo(1322)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:22:02</span><br>The Pivot</button></li>
+                                <li><button @click="seekTo(1391)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:23:11</span><br>The Ocean</button></li>
+                                <li><button @click="seekTo(1455)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:24:15</span><br>My Skills</button></li>
+                                <li><button @click="seekTo(1507)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:25:07</span><br>My Values</button></li>
+                                <li><button @click="seekTo(1563)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:26:03</span><br>Most of My Life</button></li>
+                                <li><button @click="seekTo(1651)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:27:31</span><br>My Expectations</button></li>
+                                <li><button @click="seekTo(1776)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:29:36</span><br>The Closing</button></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <div class="prose prose-lg md:prose-xl prose-neutral">
                     <p>I’ve been building systems — digital and human — for most of my life.</p>
                     <p>But what matters isn’t time. It’s how I built: without permission, without a template, without waiting to be taught.</p>
 
@@ -157,11 +200,12 @@
                     <p>I broke and rebuilt machines. Wrote programs on paper when I didn’t have a computer.</p>
                     <p>Ran entire architectures in my head — not for praise, but for coherence. For joy.</p>
 
-                    <p>I left a six-figure job when I began living in the RV.</p>
+                    <p>I left a six-figure job when I began living in my RV.</p>
                     <p>Now, eighteen months later, I’m slowly reintegrating freelance work — on my own terms.</p>
 
                     <p>My current focus is AI — not as a tool, but as a mirror, a partner, a field amplifier.</p>
                     <p>You’ll find that thread running throughout this homepage.</p>
+                    </div>
 
                     <div class="border-t border-gray-200 my-12"></div>
                     <h2>On Emotion, Clarity, and Misrecognition</h2>
@@ -208,6 +252,55 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const player = ref(null)
+const videoHeight = ref(0)
+const videoContainer = ref(null)
+const apiReady = ref(false)
+
+onMounted(() => {
+    // Watch for container height
+    if (videoContainer.value) {
+        videoHeight.value = videoContainer.value.offsetHeight
+
+        const resizeObserver = new ResizeObserver(() => {
+            videoHeight.value = videoContainer.value.offsetHeight
+        })
+        resizeObserver.observe(videoContainer.value)
+    }
+    if (!window.YT || !window.YT.Player) {
+        const tag = document.createElement('script')
+        tag.src = 'https://www.youtube.com/iframe_api'
+        document.body.appendChild(tag)
+    }
+
+    window.onYouTubeIframeAPIReady = () => {
+        console.log('%c[YOUTUBE] API Ready', 'color: green; font-weight: bold')
+        apiReady.value = true
+        player.value = new window.YT.Player('youtube-player', {
+            events: {
+                onReady: () => {
+                    console.log('%cYouTube Player Ready', 'color: green')
+                    // This won't get height, so we skip it here
+                }
+            }
+        })
+    }
+})
+
+// Seek function
+function seekTo(seconds) {
+    if (apiReady.value && player.value && typeof player.value.seekTo === 'function') {
+        player.value.seekTo(seconds, true)
+        player.value.playVideo()
+    } else {
+        console.warn('Player not ready yet.')
+    }
+}
+</script>
 
 <script>
 export default {
