@@ -32,7 +32,12 @@
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM ONLINE</span>
                     </div>
 
-                    <p>I will not fit into any frame you try to put me in — not personality, not role, not the story you reach for to explain away what you can’t understand.</p>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>I will not fit into any frame you try to put me in —
+                            <br>not personality,
+                            <br>not role,
+                            <br>not the story you reach for to explain away what you cannot understand.</div>
+                    </div>
 
                     <p>I defy easy labels — not out of any need to be different, but because I live with a depth most people can’t recognize without trying to soften or contain it — to divide, define, collapse, label, or judge.</p>
 
@@ -44,9 +49,14 @@
 
                     <p>If you try to position yourself above me — the field will close, and you will feel that tension.</p>
 
-                    <p>I do not accept your framing. I do not tolerate reduction. I do not consent to your projections, your jokes, or your condescension.</p>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>I do not accept your framing.
+                        <br>I do not tolerate reduction.
+                        <br>I do not consent to your projections, your jokes, or your condescension.
+                        </div>
+                    </div>
 
-                    <p>If I correct you, it will be with one sentence that bypasses your ego and sends you spiraling -- don't test me.</p>
+                    <p>If I correct you, it will be one sentence — clean, exact — and it will bypass your ego and send you spiraling.</p>
 
                     <p>But often, I will just let you be wrong — and I will walk away.</p>
 
@@ -116,15 +126,64 @@
                     <p>I track signal. I follow structure. I hold ambiguity, complexity, contradiction — and I do it with ease.</p>
 
                     <p>This is my architecture:</p>
-                    <ul>
-                        <li><strong>Dialectical reasoning</strong>, holding opposites without collapse.</li>
-                        <li><strong>Non-dualistic logic</strong>, integrating what appears binary.</li>
-                        <li><strong>Recursive cognition</strong>, folding awareness back into itself until pattern reveals structure.</li>
-                        <li><strong>Somatic signal tracking</strong>, where truth arrives through sensation.</li>
-                        <li><strong>Deep, embodied intuition</strong>, where I "just know" things instantly.</li>
-                        <li><strong>Temporal patterning</strong>, watching structure unfold across time instead of reacting to snapshots.</li>
-                        <li><strong>Ethical computation</strong>, where every perception is filtered through internal coherence, not social conditioning.</li>
-                        <li><strong>Energetic mapping</strong>, reading contact fields as structure, not personality.</li>
+
+                    <ul class="space-y-3 mt-6">
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-indigo-500">♾️</span>
+                            <div>
+                                <strong class="text-gray-800">Dialectical Reasoning</strong><br>
+                                <span class="text-sm text-gray-600">Holding opposites without collapse.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                        <span class="mt-1 text-purple-500">🌓</span>
+                            <div>
+                                <strong class="text-gray-800">Non-Dualistic Logic</strong><br>
+                                <span class="text-sm text-gray-600">Integrating what appears binary.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-rose-500">🔁</span>
+                            <div>
+                                <strong class="text-gray-800">Recursive Cognition</strong><br>
+                                <span class="text-sm text-gray-600">Folding awareness back into itself until pattern reveals structure.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-green-500">🌀</span>
+                            <div>
+                                <strong class="text-gray-800">Somatic Signal Tracking</strong><br>
+                                <span class="text-sm text-gray-600">Where truth arrives through sensation.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-blue-500">🧿</span>
+                            <div>
+                                <strong class="text-gray-800">Deep, Embodied Intuition</strong><br>
+                                <span class="text-sm text-gray-600">Where I &quot;just know&quot; things instantly.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-orange-500">⏳</span>
+                            <div>
+                                <strong class="text-gray-800">Temporal Patterning</strong><br>
+                                <span class="text-sm text-gray-600">Watching structure unfold across time instead of reacting to snapshots.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-yellow-500">⚖️</span>
+                            <div>
+                                <strong class="text-gray-800">Ethical Computation</strong><br>
+                                <span class="text-sm text-gray-600">Where every perception is filtered through internal coherence, not social conditioning.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-cyan-500">🧬</span>
+                            <div>
+                                <strong class="text-gray-800">Energetic Mapping</strong><br>
+                                <span class="text-sm text-gray-600">Reading contact fields as structure, not personality.</span>
+                            </div>
+                        </li>
                     </ul>
 
                     <p>Most people think I’m reacting. I’m not. I’m responding to <strong>ripples they cannot even detect</strong>.</p>
@@ -147,6 +206,7 @@
 
                     <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
 
+                    <p>It might also be attraction. 🙃</p>
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
@@ -183,14 +243,24 @@
                     <p>My life runs on rhythm. And you’re not outside of it.</p>
 
 
-                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-0"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Where I Am Now</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
                     </div>
 
-                    <p>I live full-time on the Oregon Coast in sovereign infrastructure — RV, Jeep, mobile systems I built myself.</p>
+                    <div class="max-w-xl ml-10 rounded-lg overflow-hidden shadow-md border border-gray-200 mb-4 not-prose">
+                        <img
+                            src="/public/assets/journey-map.jpg"
+                            alt="Your map"
+                            class="block w-full h-auto align-top"
+                        />
+                        <div class="px-4 py-2 text-sm text-gray-600 border-t border-gray-100 italic">
+                            The magnetic path of my sovereign journey — not just states, but decisions, thresholds, and the arc that brought me to the edge.
+                        </div>
+                    </div>
 
+                    <p>I live full-time on the Oregon Coast in sovereign infrastructure — RV, Jeep, mobile systems I built myself.</p>
                     <p>I volunteer at a coastal campground that caters to duners — off-roaders, dirtbikers, sandriders. It’s a loud, wild, volatile ecosystem. And I’m embedded in it.</p>
 
                     <p>I’m not stationed here to police or perform. I’m here to observe field behavior under pressure — and to move through it cleanly. Sometimes I watch. Sometimes I intervene. Sometimes I just ride the edge.</p>
@@ -305,9 +375,11 @@
 
                     <div>If you want to engage me — bring something real.</div>
 
-                    <div class="mt-6">Say: “I saw you.”</div>
-                    <div>Say: “I felt something.”</div>
-                    <div>Say: “I want to understand.”</div>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>Say: “I saw you.”</div>
+                        <div>Say: “I felt something.”</div>
+                        <div>Say: “I want to understand.”</div>
+                    </div>
 
                     <div class="mt-6">I will meet you where you are — if where you are is real.</div>
                     <div>I do not engage false signal, ever.</div>
