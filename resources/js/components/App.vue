@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10">
+        <div class="lg:max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
 
             <div class="sticky top-6 self-start w-full md:w-[200px] bg-white rounded-xl shadow-sm border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
                 <img
