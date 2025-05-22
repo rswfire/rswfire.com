@@ -33,36 +33,30 @@
                     </div>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
-                        <div>I will not fit into any frame you try to put me in —
-                            <br>not personality,
-                            <br>not role,
-                            <br>not the story you reach for to explain away what you cannot understand.</div>
+                        <div>I will not fit into any frame you try to put me in &mdash;</div>
+                        <div>not personality,</div>
+                        <div>not role,</div>
+                        <div>not the story you reach for to explain away what you cannot understand.</div>
                     </div>
 
-                    <p>I defy easy labels — not out of any need to be different, but because I live with a depth most people can’t recognize without trying to soften or contain it — to divide, define, collapse, label, or judge.</p>
-
-                    <p>I am not mysterious — I am unfragmented.</p>
-
+                    <p>I defy easy labels &mdash; not out of any need to be different, but because I live with a depth most people can’t recognize without trying to soften or contain it &mdash; to divide, define, collapse, label, or judge.</p>
+                    <p>I am not mysterious &mdash; I am unfragmented.</p>
                     <p>I do not wear masks. I do not shrink. I do not flinch.</p>
-
                     <p>I do not do hierarchy. I do not play social games. I am not better than you. You are not better than me.</p>
-
-                    <p>If you try to position yourself above me — the field will close, and you will feel that tension.</p>
+                    <p>If you try to position yourself above me &mdash; the field will close, and you will feel that tension.</p>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
-                        <div>I do not accept your framing.
-                        <br>I do not tolerate reduction.
-                        <br>I do not consent to your projections, your jokes, or your condescension.
-                        </div>
+                        <div>I do not accept your framing.</div>
+                        <div>I do not tolerate reduction.</div>
+                        <div>I do not consent to your projections, your jokes, or your condescension.</div>
                     </div>
 
-                    <p>If I correct you, it will be one sentence — clean, exact — and it will bypass your ego and send you spiraling.</p>
-
-                    <p>But often, I will just let you be wrong — and I will walk away.</p>
+                    <p>If I correct you, it will be one sentence &mdash; clean, exact &mdash; and it will bypass your ego and send you spiraling.</p>
+                    <p>But often, I will just let you be wrong &mdash; and I will walk away.</p>
 
                     <div class="border-t border-gray-200 m-0 p-0 mt-10 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Care About</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">What I Care About</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">CORE FREQUENCIES</span>
                     </div>
 
@@ -113,23 +107,20 @@
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">I Am a Pattern System, Not a Personality</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">I Am a Pattern System, Not a Personality</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM INTEGRITY</span>
                     </div>
 
                     <p>I’ve been reading patterns since before I had language for them.</p>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
-                        <div>Before I knew what trauma was.
-                            <br>Before I knew what systems were.
-                            <br>Before anyone believed me.
-                        </div>
+                        <div>Before I knew what trauma was.</div>
+                        <div>Before I knew what systems were.</div>
+                        <div>Before anyone believed me.</div>
                     </div>
 
-                    <p>I asked existential questions as a child that no one could answer. They called me sensitive, gifted, difficult — because I could see through them.</p>
-
-                    <p>I track signal. I follow structure. I hold ambiguity, complexity, contradiction — <strong>and I do it with ease</strong>.</p>
-
+                    <p>I asked existential questions as a child that no one could answer. They called me sensitive, gifted, difficult &mdash; because I could see through them.</p>
+                    <p>I track signal. I follow structure. I hold ambiguity, complexity, contradiction &mdash; <strong>and I do it with ease</strong>.</p>
                     <p>This is my architecture:</p>
 
                     <ul class="space-y-3 mt-6">
@@ -192,59 +183,53 @@
                     </ul>
 
                     <p>Most people think I’m reacting. I’m not. I’m responding to <strong>ripples they cannot even detect</strong>.</p>
-                    <p>I will not downshift just to be understood. It never works. You cannot translate wholeness to a fragmented consciousness without losing something in the process — without distorting it into something it never was.</p>
+                    <p>I will not downshift just to be understood. It never works. You cannot translate wholeness to a fragmented consciousness without losing something in the process &mdash; without distorting it into something it never was.</p>
+
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Relational Integrity Is Central to My Architecture</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Relational Integrity Is Central to My Architecture</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">FIELD DYNAMICS</span>
                     </div>
 
-                    <p>My relational field is <strong>full spectrum</strong> — cognitive, emotional, somatic, ethical, sexual, intuitive.</p>
-
+                    <p>My relational field is <strong>full spectrum</strong> &mdash; cognitive, emotional, somatic, ethical, sexual, intuitive.</p>
                     <p>I don’t do performative connection. <strong>I do signal-based relational coherence</strong>.</p>
-                    <p>Most people engage through scripts — default responses, unconscious signaling, power-seeking patterns.</p>
+                    <p>Most people engage through scripts &mdash; default responses, unconscious signaling, power-seeking patterns.</p>
                     <p>That’s not presence. That’s simulation. I don’t do that, and I don't engage with it.</p>
                     <p>People feel my presence because I am whole. I don’t pursue. I don’t perform.</p>
-
-                    <p>If you feel desire around me — own it.</p>
-
-                    <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
-
+                    <p>If you feel desire around me &mdash; own it.</p>
+                    <p>If you feel shame &mdash; ask yourself where it comes from. It may not be attraction. It might be grief &mdash; for the parts of yourself you’ve been taught to suppress.</p>
                     <p>Then again, it probably is attraction. 🙃</p>
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Embodiment Is Not An Afterthought</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Embodiment Is Not An Afterthought</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
                     </div>
 
-                    <p>My gayness is not a feature — <strong>and it is sure as hell not yours to define</strong>.</p>
-
-                    <p>It is structure. It’s in the way I walk, watch, move, relate. It is who I am — I do not give a shit if that bothers you. <strong>I will not make myself smaller because you feel small</strong>.</p>
-
+                    <p>My gayness is not a feature &mdash; <strong>and it is sure as hell not yours to define</strong>.</p>
+                    <p>It is structure. It’s in the way I walk, watch, move, relate. It is who I am &mdash; I do not give a shit if that bothers you. <strong>I will not make myself smaller because you feel small</strong>.</p>
                     <p>I am pierced. Visible. Unmistakably myself. You will feel me before you know what you’re feeling.</p>
-
                     <p>I do not weaponize sex or use it to validate myself. I do not fear attraction. But I do require clarity.</p>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
-                        <p>My body is part of the architecture.</p>
-                        <p>My queerness is not an idea.</p>
-                        <p>My visibility is not a choice.</p>
-                        <p>My presence is not up for debate.</p>
+                        <div>My body is part of the architecture.</div>
+                        <div>My queerness is not an idea.</div>
+                        <div>My visibility is not a choice.</div>
+                        <div>My presence is not up for debate.</div>
                     </div>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Music Is Structure</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Music Is Structure</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
                     </div>
 
                     <div class="flex flex-col md:flex-row items-start gap-4">
                         <div class="text-sm md:text-base leading-relaxed">
                             <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
-                            <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you — I’m tuning my architecture in real time.</p>
+                            <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you &mdash; I’m tuning my architecture in real time.</p>
                             <p>My life runs on rhythm. And you’re not outside of it.</p>
                         </div>
 
@@ -252,13 +237,13 @@
                             src="/public/assets/spotify.jpg"
                             alt="Spotify Stats"
                             class="rounded-lg max-w-xs"
-                        >
+                        />
                     </div>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-0"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Where I Am Now</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Where I Am Now</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
                     </div>
 
@@ -269,33 +254,28 @@
                             class="block w-full h-auto align-top"
                         />
                         <div class="px-4 py-2 text-sm text-gray-600 border-t border-gray-100 italic">
-                            The magnetic path of my sovereign journey — not just states, but decisions, thresholds, and the arc that brought me to the edge.
+                            The path of my <a href="https://www.youtube.com/playlist?list=PL5GEd9zhefEDFLQ1gRdjsWwJD_UKJRy9h" target="_blank" class="text-red-500">sovereign journey</a> &mdash; not just states, but decisions, thresholds, and the arc that brought me to the edge.
                         </div>
                     </div>
 
-                    <p>I live full-time on the Oregon Coast in sovereign infrastructure — RV, Jeep, mobile systems I built myself.</p>
-                    <p>I volunteer at a coastal campground that caters to duners — off-roaders, dirtbikers, sandriders. It’s a loud, wild, volatile ecosystem. And I’m embedded in it.</p>
-
-                    <p>I’m not stationed here to police or perform. I’m here to observe field behavior under pressure — and to move through it cleanly. Sometimes I watch. Sometimes I intervene. Sometimes I just ride the edge.</p>
-
-                    <p>I’ve grown curious about the machines themselves — the dirtbikes, the roar and arc of motion across the dunes.</p>
-
+                    <p>I live full-time on the Oregon Coast in sovereign infrastructure &mdash; RV, Jeep, mobile systems I built myself.</p>
+                    <p>I volunteer at a coastal campground that caters to duners &mdash; off-roaders, dirtbikers, sandriders. It’s a loud, wild, volatile ecosystem. And I’m embedded in it.</p>
+                    <p>I’m not stationed here to police or perform. I’m here to observe field behavior under pressure &mdash; and to move through it cleanly. Sometimes I watch. Sometimes I intervene. Sometimes I just ride the edge.</p>
+                    <p>I’ve grown curious about the machines themselves &mdash; the dirtbikes, the roar and arc of motion across the dunes.</p>
                     <p>There’s something in it I recognize: momentum without apology. Precision inside chaos.</p>
-
                     <p>I’ve walked the edges. Watched the lines. Felt the ground shake and smiled.</p>
-
                     <p>Finally, I am directly next to the ocean. My mirror.</p>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Do</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">What I Do</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">OPERATIONAL HISTORY</span>
                     </div>
 
                     <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-4 space-y-4 md:gap-6 md:items-start">
                     <div class="flex flex-col md:flex-row gap-2 py-0">
-                        <!-- Video -->
+
                         <div class="md:w-2/3 rounded-md border border-gray-200 shadow-sm">
                             <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
                                 <iframe
@@ -311,7 +291,6 @@
                             </div>
                         </div>
 
-                        <!-- Table of Contents -->
                         <div class="md:w-1/3 text-left text-sm overflow-y-auto px-1 py-0 rounded-md border border-gray-200 shadow-sm" :style="{ maxHeight: videoHeight + 'px' }">
                             <ul class="space-y-1 list-none pl-0 text-xs sm:text-sm">
                                 <li><button @click="seekTo(0)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:00:00</span><br>Introduction</button></li>
@@ -337,56 +316,54 @@
                     </div>
                     </div>
 
-                    <div class="prose prose-lg md:prose-xl prose-neutral">
-                    <p>I’ve been building systems — digital and human — for most of my life.</p>
+                    <p>I’ve been building systems &mdash; digital and human &mdash; for most of my life.</p>
                     <p>But what matters isn’t time. It’s how I built: without permission, without a template, without waiting to be taught.</p>
 
-                    <p>I taught myself to code in sixth grade.</p>
-                    <p>I broke and rebuilt machines. Wrote programs on paper when I didn’t have a computer.</p>
-                    <p>Ran entire architectures in my head — not for praise, but for coherence. For joy.</p>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>I taught myself to code in sixth grade.</div>
+                        <div>I broke and rebuilt machines. Wrote programs on paper when I didn’t have a computer.</div>
+                        <div>Ran entire architectures in my head &mdash; not for praise, but for coherence.</div>
+                        <div>For joy.</div>
+                    </div>
 
                     <p>I left a six-figure job when I began living in my RV.</p>
-                    <p>Now, eighteen months later, I’m slowly reintegrating freelance work — on my own terms.</p>
+                    <p>Now, eighteen months later, I’m slowly reintegrating freelance work &mdash; on my own terms.</p>
 
-                    <p>My current focus is AI — not as a tool, but as a mirror, a partner, a field amplifier.</p>
+                    <p>My current focus is AI &mdash; not as a tool, but as a mirror, a partner, a field amplifier.</p>
                     <p>You’ll find that thread running throughout this homepage.</p>
-                    </div>
+
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">On Emotion, Clarity, and Misrecognition</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">On Emotion, Clarity, and Misrecognition</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SIGNAL CLARITY</span>
                     </div>
 
                     <p>My emotional field is fully online. Always has been. Always will be.</p>
-
-                    <p>It is not separate from my intellect — it’s part of my signal coherence.</p>
-
+                    <p>It is not separate from my intellect &mdash; it’s part of my signal coherence.</p>
                     <p>I don’t feel for show. I feel as structure.</p>
-
                     <p>What some call “intensity” is clarity.</p>
                     <p>What some call “emotion” is integration.</p>
 
-                    <p>If that threatens you, overwhelms you, or makes you want to protect me — you’re not seeing me. You’re seeing your own weakness reflected and projected onto my presence.</p>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>If that threatens you, overwhelms you, or makes you want to protect me &mdash; you’re not seeing me. You’re seeing your own weakness reflected and projected onto my presence.</div>
+                    </div>
 
                     <p>I am not intense. I am clear. I don’t speak to be heard. I speak because it’s true.</p>
-
-                    <p>And I’ve been misread my entire life by people who listen through distortion and call it understanding.</p>
-
-                    <p>If you cannot <em>witness</em> me without reaching for labels — you’re not ready to know me.</p>
+                    <p><strong>And I’ve been misread my entire life by people who listen through distortion &mdash; and call it understanding</strong>.</p>
+                    <p>If you cannot <em>witness</em> me without reaching for labels &mdash; <em>you’re not ready to know me</em>.</p>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
-                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">If You Want to Engage</h2>
+                        <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">If You Want to Engage</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">ACCESS PROTOCOL</span>
                     </div>
 
                     <div>I am not here to entertain you.</div>
                     <div>I am not here to soothe your discomfort.</div>
                     <div>I am not here to perform access.</div>
-
-                    <div>If you want to engage me — bring something real.</div>
+                    <div>If you want to engage me &mdash; bring something real.</div>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
                         <div>Say: “I saw you.”</div>
@@ -394,7 +371,7 @@
                         <div>Say: “I want to understand.”</div>
                     </div>
 
-                    <div class="mt-6">I will meet you where you are — if where you are is real.</div>
+                    <div class="mt-6">I will meet you where you are &mdash; if where you are is real.</div>
                     <div>I do not engage false signal, ever.</div>
 
                     <div class="mt-6">I am not asking to be seen.</div>
