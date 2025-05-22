@@ -4,7 +4,7 @@
 
             <div class="md:sticky top-6 self-start w-full md:w-[200px] bg-white rounded-xl shadow-sm border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
                 <img
-                    src="https://yt3.googleusercontent.com/0dTQWdATGRRnkgLkaIUy46Iy7lv9jaFkzpXPdsKJvlKEIJ5Ke-VAcjjNp6g-jZYqo5puxmRsjg=s160-c-k-c0x00ffffff-no-rj"
+                    src="/public/assets/rswfire.jpg"
                     alt="Robert Samuel White"
                     class="w-32 h-32 mx-auto rounded-full border border-gray-300 shadow"
                 />
@@ -245,7 +245,7 @@
                         <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
                     </div>
 
-                    <div class="max-w-xl ml-10 rounded-lg overflow-hidden shadow-md border border-gray-200 mb-4 not-prose">
+                    <div class="max-w-xl rounded-lg overflow-hidden shadow-md border border-gray-200 mb-4 not-prose">
                         <img
                             src="/public/assets/journey-map.jpg"
                             alt="Your map"
