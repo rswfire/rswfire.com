@@ -15,21 +15,19 @@
                 </div>
 
                 <div class="text-xs italic text-gray-500 leading-snug border-t border-gray-200 pt-4">
-                    “In a forest pitch dark,<br>
+                    &quot;In a forest pitch dark,<br>
                     Glowed the tiniest spark.<br>
-                    It burst into a flame.”
+                    It burst into a flame.&quot;
                 </div>
             </div>
 
-
-            <!-- Main Content -->
             <div class="flex flex-col">
 
                 <div class="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:marker:text-gray-400 prose-strong:text-gray-900 prose-strong:font-semibold">
 
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="text-2xl font-bold m-0 p-0 not-prose">I'm Sam.</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM ONLINE</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM ONLINE</span>
                     </div>
 
                     <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
@@ -57,7 +55,7 @@
                     <div class="border-t border-gray-200 m-0 p-0 mt-10 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">What I Care About</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">CORE FREQUENCIES</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">CORE FREQUENCIES</span>
                     </div>
 
                     <ul class="space-y-3 mt-6">
@@ -108,7 +106,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">I Am a Pattern System, Not a Personality</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM INTEGRITY</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM INTEGRITY</span>
                     </div>
 
                     <p>I’ve been reading patterns since before I had language for them.</p>
@@ -189,7 +187,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Relational Integrity Is Central to My Architecture</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">FIELD DYNAMICS</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">FIELD DYNAMICS</span>
                     </div>
 
                     <p>My relational field is <strong>full spectrum</strong> &mdash; cognitive, emotional, somatic, ethical, sexual, intuitive.</p>
@@ -204,10 +202,11 @@
                         <div>Then again, it probably is attraction. <span class="not-italic">🙃</span></div>
                     </div>
 
+
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Embodiment Is Not An Afterthought</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
                     </div>
 
                     <p>My gayness is not a feature &mdash; <strong>and it is sure as hell not yours to define</strong>.</p>
@@ -226,12 +225,12 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Music Is Structure</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
                     </div>
 
-                    <div class="flex flex-wrap gap-4 justify-center items-start">
-                        <img src="/public/assets/spotify1.jpg" alt="Spotify Stats" class="w-1/2 md:w-1/3 rounded-lg shadow-md" />
-                        <img src="/public/assets/spotify2.jpg" alt="Spotify Stats - Listening Clocks" class="w-1/2 md:w-1/3 rounded-lg shadow-md" />
+                    <div class="flex flex-wrap justify-center gap-4 px-4 max-w-screen-md mx-auto">
+                        <img src="/public/assets/spotify1.jpg" alt="Spotify Stats" class="w-[40%] max-w-xs rounded-lg shadow-md" />
+                        <img src="/public/assets/spotify2.jpg" alt="Spotify Stats - Listening Clocks" class="w-[40%] max-w-xs rounded-lg shadow-md" />
                     </div>
 
                     <div class="flex flex-col md:flex-row items-start gap-4">
@@ -249,7 +248,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-0"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">Where I Am Now</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
                     </div>
 
                     <div class="max-w-xl ml-10 rounded-lg overflow-hidden shadow-md border border-gray-200 mb-4 not-prose">
@@ -279,7 +278,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">What I Do</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">OPERATIONAL HISTORY</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">OPERATIONAL HISTORY</span>
                     </div>
 
                     <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-4 space-y-4 md:gap-6 md:items-start">
@@ -300,7 +299,7 @@
                             </div>
                         </div>
 
-                        <div class="md:w-1/3 text-left text-sm overflow-y-auto px-1 py-0 rounded-md border border-gray-200 shadow-sm" :style="{ maxHeight: videoHeight + 'px' }">
+                        <div class="hidden md:inline md:w-1/3 text-left text-sm overflow-y-auto px-1 py-0 rounded-md border border-gray-200 shadow-sm" :style="{ maxHeight: videoHeight + 'px' }">
                             <ul class="space-y-1 list-none pl-0 text-xs sm:text-sm">
                                 <li><button @click="seekTo(0)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:00:00</span><br>Introduction</button></li>
                                 <li><button @click="seekTo(43)" class="text-gray-500 hover:underline text-left"><span class="font-mono">00:00:43</span><br>The Setting</button></li>
@@ -345,7 +344,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">On Emotion, Clarity, and Misrecognition</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SIGNAL CLARITY</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SIGNAL CLARITY</span>
                     </div>
 
                     <p>My emotional field is fully online. Always has been. Always will be.</p>
@@ -366,7 +365,7 @@
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 not-prose">If You Want to Engage</h2>
-                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">ACCESS PROTOCOL</span>
+                        <span class="hidden md:inline text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">ACCESS PROTOCOL</span>
                     </div>
 
                     <div>I am not here to entertain you.</div>
