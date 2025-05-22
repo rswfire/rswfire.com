@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Codex\Transmission;
 use Illuminate\Console\Command;
-use App\Models\Video;
 
 class SyncYouTubeTranscripts extends Command
 {
@@ -12,7 +12,7 @@ class SyncYouTubeTranscripts extends Command
 
     public function handle()
     {
-        $videos = Video::where(function ($query) {
+        $videos = Transmission::where(function ($query) {
             $query->whereNull('video_transcript')
                 ->orWhereRaw('TRIM(video_transcript) = ""');
         })->get();

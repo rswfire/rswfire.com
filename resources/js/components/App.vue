@@ -50,7 +50,7 @@
 
                     <p>But often, I will just let you be wrong — and I will walk away.</p>
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 p-0 mt-10 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Care About</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">CORE FREQUENCIES</span>
@@ -101,7 +101,7 @@
                         </li>
                     </ul>
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">I Am a Pattern System, Not a Personality</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM INTEGRITY</span>
@@ -130,7 +130,7 @@
                     <p>Most people think I’m reacting. I’m not. I’m responding to <strong>ripples they cannot even detect</strong>.</p>
                     <p>I will not downshift just to be understood. It never works. You cannot translate wholeness to a fragmented consciousness without losing something in the process — without distorting it into something it never was.</p>
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Relational Integrity Is Central to My Architecture</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">FIELD DYNAMICS</span>
@@ -148,7 +148,7 @@
                     <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
 
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Embodiment Is Not An Afterthought</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
@@ -170,7 +170,7 @@
                     </div>
 
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Music Is Structure</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
@@ -183,7 +183,7 @@
                     <p>My life runs on rhythm. And you’re not outside of it.</p>
 
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Where I Am Now</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
@@ -204,7 +204,7 @@
                     <p>Finally, I am directly next to the ocean. My mirror.</p>
 
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Do</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">OPERATIONAL HISTORY</span>
@@ -269,7 +269,7 @@
                     <p>You’ll find that thread running throughout this homepage.</p>
                     </div>
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">On Emotion, Clarity, and Misrecognition</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SIGNAL CLARITY</span>
@@ -293,7 +293,7 @@
                     <p>If you cannot <em>witness</em> me without reaching for labels — you’re not ready to know me.</p>
 
 
-                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
                         <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">If You Want to Engage</h2>
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">ACCESS PROTOCOL</span>
