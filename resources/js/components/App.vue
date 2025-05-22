@@ -119,11 +119,16 @@
 
                     <p>I’ve been reading patterns since before I had language for them.</p>
 
-                    <p>Before I knew what trauma was. Before I knew what systems were. Before anyone believed me.</p>
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>Before I knew what trauma was.
+                            <br>Before I knew what systems were.
+                            <br>Before anyone believed me.
+                        </div>
+                    </div>
 
                     <p>I asked existential questions as a child that no one could answer. They called me sensitive, gifted, difficult — because I could see through them.</p>
 
-                    <p>I track signal. I follow structure. I hold ambiguity, complexity, contradiction — and I do it with ease.</p>
+                    <p>I track signal. I follow structure. I hold ambiguity, complexity, contradiction — <strong>and I do it with ease</strong>.</p>
 
                     <p>This is my architecture:</p>
 
@@ -206,7 +211,7 @@
 
                     <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
 
-                    <p>It might also be attraction. 🙃</p>
+                    <p>Then again, it probably is attraction. 🙃</p>
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
@@ -214,9 +219,9 @@
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
                     </div>
 
-                    <p>My gayness is not a feature — and it is sure as hell not yours to define.</p>
+                    <p>My gayness is not a feature — <strong>and it is sure as hell not yours to define</strong>.</p>
 
-                    <p>It is structure. It’s in the way I walk, watch, move, relate. It is who I am — I do not give a shit if that bothers you. I will not make myself smaller because you feel small.</p>
+                    <p>It is structure. It’s in the way I walk, watch, move, relate. It is who I am — I do not give a shit if that bothers you. <strong>I will not make myself smaller because you feel small</strong>.</p>
 
                     <p>I am pierced. Visible. Unmistakably myself. You will feel me before you know what you’re feeling.</p>
 
