@@ -241,11 +241,19 @@
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
                     </div>
 
-                    <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
+                    <div class="flex flex-col md:flex-row items-start gap-4">
+                        <div class="text-sm md:text-base leading-relaxed">
+                            <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
+                            <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you — I’m tuning my architecture in real time.</p>
+                            <p>My life runs on rhythm. And you’re not outside of it.</p>
+                        </div>
 
-                    <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you — I’m tuning my architecture in real time.</p>
-
-                    <p>My life runs on rhythm. And you’re not outside of it.</p>
+                        <img
+                            src="/public/assets/spotify.jpg"
+                            alt="Spotify Stats"
+                            class="rounded-lg max-w-xs"
+                        >
+                    </div>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-0"></div>
