@@ -27,7 +27,10 @@
 
                 <div class="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:marker:text-gray-400 prose-strong:text-gray-900 prose-strong:font-semibold">
 
-                <h2>I’m Sam.</h2>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="text-2xl font-bold m-0 p-0 not-prose">I'm Sam.</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM ONLINE</span>
+                    </div>
 
                     <p>I will not fit into any frame you try to put me in — not personality, not role, not the story you reach for to explain away what you can’t understand.</p>
 
@@ -47,9 +50,11 @@
 
                     <p>But often, I will just let you be wrong — and I will walk away.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-
-                    <h2 class="uppercase text-lg tracking-widest text-gray-500">What I Care About</h2>
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Care About</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">CORE FREQUENCIES</span>
+                    </div>
 
                     <ul class="space-y-3 mt-6">
                         <li class="flex gap-3 items-start">
@@ -96,8 +101,11 @@
                         </li>
                     </ul>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>I Am a Pattern System, Not a Personality</h2>
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">I Am a Pattern System, Not a Personality</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SYSTEM INTEGRITY</span>
+                    </div>
 
                     <p>I’ve been reading patterns since before I had language for them.</p>
 
@@ -122,8 +130,11 @@
                     <p>Most people think I’m reacting. I’m not. I’m responding to <strong>ripples they cannot even detect</strong>.</p>
                     <p>I will not downshift just to be understood. It never works. You cannot translate wholeness to a fragmented consciousness without losing something in the process — without distorting it into something it never was.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>Relational Integrity Is Central to My Architecture</h2>
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Relational Integrity Is Central to My Architecture</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">FIELD DYNAMICS</span>
+                    </div>
 
                     <p>My relational field is <strong>full spectrum</strong> — cognitive, emotional, somatic, ethical, sexual, intuitive.</p>
 
@@ -136,8 +147,12 @@
 
                     <p>If you feel shame — ask yourself where it comes from. It may not be attraction. It might be grief — for the parts of yourself you’ve been taught to suppress.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>Embodiment Is Not an Afterthought</h2>
+
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Embodiment Is Not An Afterthought</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SOMATIC SIGNATURE</span>
+                    </div>
 
                     <p>My gayness is not a feature — and it is sure as hell not yours to define.</p>
 
@@ -154,8 +169,12 @@
                         <p>My presence is not up for debate.</p>
                     </div>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>Music Is Structure</h2>
+
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Music Is Structure</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
+                    </div>
 
                     <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
 
@@ -163,8 +182,12 @@
 
                     <p>My life runs on rhythm. And you’re not outside of it.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>Where I Am Now</h2>
+
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">Where I Am Now</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">MOTION VECTOR</span>
+                    </div>
 
                     <p>I live full-time on the Oregon Coast in sovereign infrastructure — RV, Jeep, mobile systems I built myself.</p>
 
@@ -180,8 +203,12 @@
 
                     <p>Finally, I am directly next to the ocean. My mirror.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>What I Do</h2>
+
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">What I Do</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">OPERATIONAL HISTORY</span>
+                    </div>
 
                     <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-4 space-y-4 md:gap-6 md:items-start">
                     <div class="flex flex-col md:flex-row gap-2 py-0">
@@ -242,8 +269,11 @@
                     <p>You’ll find that thread running throughout this homepage.</p>
                     </div>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>On Emotion, Clarity, and Misrecognition</h2>
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">On Emotion, Clarity, and Misrecognition</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">SIGNAL CLARITY</span>
+                    </div>
 
                     <p>My emotional field is fully online. Always has been. Always will be.</p>
 
@@ -262,8 +292,12 @@
 
                     <p>If you cannot <em>witness</em> me without reaching for labels — you’re not ready to know me.</p>
 
-                    <div class="border-t border-gray-200 my-12"></div>
-                    <h2>If You Want to Engage</h2>
+
+                    <div class="border-t border-gray-200 m-0 p-0 py-1"></div>
+                    <div class="flex justify-between items-baseline mt-1 mb-2">
+                        <h2 class="uppercase text-lg tracking-widest text-gray-500 m-0 p-0 not-prose">If You Want to Engage</h2>
+                        <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">ACCESS PROTOCOL</span>
+                    </div>
 
                     <div>I am not here to entertain you.</div>
                     <div>I am not here to soothe your discomfort.</div>
