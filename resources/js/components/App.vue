@@ -3,7 +3,7 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10">
 
             <!-- Sidebar -->
-            <div class="flex flex-col items-center md:items-start w-full w-[200px] mx-auto md:mx-0 bg-gray-100">
+            <div class="sticky top-6 self-start flex flex-col items-center md:items-start w-full max-w-[200px] mx-auto md:mx-0 bg-gray-100">
                 <div class="w-full flex flex-col items-center py-6">
                 <img
                     src="https://yt3.googleusercontent.com/0dTQWdATGRRnkgLkaIUy46Iy7lv9jaFkzpXPdsKJvlKEIJ5Ke-VAcjjNp6g-jZYqo5puxmRsjg=s160-c-k-c0x00ffffff-no-rj"
