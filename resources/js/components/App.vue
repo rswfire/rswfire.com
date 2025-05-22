@@ -197,9 +197,12 @@
                     <p>Most people engage through scripts &mdash; default responses, unconscious signaling, power-seeking patterns.</p>
                     <p>That’s not presence. That’s simulation. I don’t do that, and I don't engage with it.</p>
                     <p>People feel my presence because I am whole. I don’t pursue. I don’t perform.</p>
-                    <p>If you feel desire around me &mdash; own it.</p>
-                    <p>If you feel shame &mdash; ask yourself where it comes from. It may not be attraction. It might be grief &mdash; for the parts of yourself you’ve been taught to suppress.</p>
-                    <p>Then again, it probably is attraction. 🙃</p>
+
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>If you feel desire around me &mdash; own it.</div>
+                        <div>If you feel shame &mdash; ask yourself where it comes from. It may not be attraction. It might be grief &mdash; for the parts of yourself you’ve been taught to suppress.</div>
+                        <div>Then again, it probably is attraction. <span class="not-italic">🙃</span></div>
+                    </div>
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
                     <div class="flex justify-between items-baseline mt-1 mb-2">
@@ -226,18 +229,20 @@
                         <span class="text-sm font-semibold text-gray-500 tracking-widest whitespace-nowrap">RESYNCHRONIZATION NODE</span>
                     </div>
 
+                    <div class="flex flex-wrap gap-4 justify-center items-start">
+                        <img src="/public/assets/spotify1.jpg" alt="Spotify Stats" class="w-1/2 md:w-1/3 rounded-lg shadow-md" />
+                        <img src="/public/assets/spotify2.jpg" alt="Spotify Stats - Listening Clocks" class="w-1/2 md:w-1/3 rounded-lg shadow-md" />
+                    </div>
+
                     <div class="flex flex-col md:flex-row items-start gap-4">
                         <div class="text-sm md:text-base leading-relaxed">
-                            <p>Music isn’t my escape. It’s alignment. Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
-                            <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you &mdash; I’m tuning my architecture in real time.</p>
+                            <p>Music isn’t my escape. It’s alignment.</p>
+                            <p>Music is my cognitive scaffolding. It sets my tempo, attunes my field, calibrates my movement.</p>
+                            <p>If you see me walking with my headphones in, nodding, singing, silent, I’m not avoiding you &mdash; I’m tuning my architecture.</p>
                             <p>My life runs on rhythm. And you’re not outside of it.</p>
                         </div>
 
-                        <img
-                            src="/public/assets/spotify.jpg"
-                            alt="Spotify Stats"
-                            class="rounded-lg max-w-xs"
-                        />
+
                     </div>
 
 
@@ -264,7 +269,11 @@
                     <p>I’ve grown curious about the machines themselves &mdash; the dirtbikes, the roar and arc of motion across the dunes.</p>
                     <p>There’s something in it I recognize: momentum without apology. Precision inside chaos.</p>
                     <p>I’ve walked the edges. Watched the lines. Felt the ground shake and smiled.</p>
-                    <p>Finally, I am directly next to the ocean. My mirror.</p>
+
+                    <div class="mt-8 border-l-4 border-gray-300 pl-6 italic space-y-1">
+                        <div>Most importantly, I am directly next to the ocean.</div>
+                        <div>My mirror.</div>
+                    </div>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
@@ -351,7 +360,7 @@
 
                     <p>I am not intense. I am clear. I don’t speak to be heard. I speak because it’s true.</p>
                     <p><strong>And I’ve been misread my entire life by people who listen through distortion &mdash; and call it understanding</strong>.</p>
-                    <p>If you cannot <em>witness</em> me without reaching for labels &mdash; <em>you’re not ready to know me</em>.</p>
+                    <p><strong>If you cannot <em>witness</em> me without reaching for labels &mdash; <em>you’re not ready to know me</em></strong>.</p>
 
 
                     <div class="border-t border-gray-200 m-0 mt-10 p-0 py-1"></div>
