@@ -2,34 +2,32 @@
     <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10">
 
-            <!-- Sidebar -->
-            <div class="sticky top-6 self-start flex flex-col items-center md:items-start w-full max-w-[200px] mx-auto md:mx-0 bg-gray-100">
-                <div class="w-full flex flex-col items-center py-6">
+            <div class="sticky top-6 self-start w-full md:w-[200px] bg-white rounded-xl shadow-sm border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
                 <img
                     src="https://yt3.googleusercontent.com/0dTQWdATGRRnkgLkaIUy46Iy7lv9jaFkzpXPdsKJvlKEIJ5Ke-VAcjjNp6g-jZYqo5puxmRsjg=s160-c-k-c0x00ffffff-no-rj"
                     alt="Robert Samuel White"
-                    class="w-40 h-40 rounded-full mb-4 border-2 border-gray-300 shadow-md"
-                >
+                    class="w-32 h-32 mx-auto rounded-full border border-gray-300 shadow"
+                />
 
-                <h2 class="text-2xl font-bold">rswfire</h2>
-                <p class=" text-gray-600">Robert Samuel White</p>
-                <div class="mt-4 text-gray-700 text-md text-center">
-                    🔥
-                    <div class="italic text-center">
-                    In a forest pitch dark,<br>
-                    Glowed the tiniest spark.<br>
-                    It burst into a flame.
-                    </div>
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-900">rswfire</h2>
+                    <p class="text-xs text-gray-500">Robert Samuel White</p>
                 </div>
+
+                <div class="text-xs italic text-gray-500 leading-snug border-t border-gray-200 pt-4">
+                    “In a forest pitch dark,<br>
+                    Glowed the tiniest spark.<br>
+                    It burst into a flame.”
                 </div>
             </div>
+
 
             <!-- Main Content -->
             <div class="flex flex-col">
 
-                <div class="prose prose-lg">
+                <div class="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:marker:text-gray-400 prose-strong:text-gray-900 prose-strong:font-semibold">
 
-                    <h2>I’m Sam.</h2>
+                <h2>I’m Sam.</h2>
 
                     <p>I will not fit into any frame you try to put me in — not personality, not role, not the story you reach for to explain away what you can’t understand.</p>
 
@@ -50,15 +48,52 @@
                     <p>But often, I will just let you be wrong — and I will walk away.</p>
 
                     <div class="border-t border-gray-200 my-12"></div>
-                    <h2>What I Care About</h2>
 
-                    <ul>
-                        <li><strong>Sovereignty</strong> — internal authority without dominance or submission.</li>
-                        <li><strong>Presence</strong> — relational contact that doesn’t shrink or inflate or possess.</li>
-                        <li><strong>Clarity</strong> — refusing distortion even when it’s more comfortable.</li>
-                        <li><strong>Witnessing</strong> — the act of presence that neither intervenes nor abandons.</li>
-                        <li><strong>Integration</strong> — wholeness without separation.</li>
-                        <li><strong>Coherence</strong> — living in signal, not simulation.</li>
+                    <h2 class="uppercase text-lg tracking-widest text-gray-500">What I Care About</h2>
+
+                    <ul class="space-y-3 mt-6">
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-red-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Sovereignty</strong><br>
+                                <span class="text-sm text-gray-600">Internal authority without dominance or submission.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-blue-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Presence</strong><br>
+                                <span class="text-sm text-gray-600">Relational contact that doesn’t shrink or inflate &mdash; or possess.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-yellow-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Clarity</strong><br>
+                                <span class="text-sm text-gray-600">Refusing distortion even when it’s more comfortable.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-purple-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Witnessing</strong><br>
+                                <span class="text-sm text-gray-600">The act of presence that neither intervenes nor abandons.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-green-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Integration</strong><br>
+                                <span class="text-sm text-gray-600">Wholeness without separation.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="mt-1 text-indigo-500">●</span>
+                            <div>
+                                <strong class="text-gray-800">Coherence</strong><br>
+                                <span class="text-sm text-gray-600">Living in signal, not simulation.</span>
+                            </div>
+                        </li>
                     </ul>
 
                     <div class="border-t border-gray-200 my-12"></div>
@@ -148,7 +183,7 @@
                     <div class="border-t border-gray-200 my-12"></div>
                     <h2>What I Do</h2>
 
-                    <div class="rounded-xl border border-gray-200 shadow-sm p-4 bg-white py-3 mb-6">
+                    <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-4 space-y-4 md:gap-6 md:items-start">
                     <div class="flex flex-col md:flex-row gap-2 py-0">
                         <!-- Video -->
                         <div class="md:w-2/3 rounded-md border border-gray-200 shadow-sm">
