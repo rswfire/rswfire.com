@@ -20,10 +20,4 @@ Route::get("/oauth2callback", function () {
     return redirect()->away($client->createAuthUrl());
 });
 
-Route::get("/about", function () {
-    return view("about");
-});
-
-Route::get("/{any}", function () {
-    return view("app");
-})->where("any", ".*");
+Route::view('/{any}', 'app')->where('any', '.*');
