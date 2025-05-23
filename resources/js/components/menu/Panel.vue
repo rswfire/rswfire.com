@@ -6,7 +6,7 @@
                     <img
                         src="/public/assets/rswfire.jpg"
                         alt="RSWFIRE"
-                        class="w-12 h-12 rounded-full border border-gray-300 shadow-sm"
+                        class="w-32 h-32 rounded-full border border-gray-300 shadow-sm"
                     />
                     <div>
                         <div class="text-lg font-semibold">rswfire</div>
