@@ -255,7 +255,7 @@
         <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-4 space-y-4 md:gap-6 md:items-start">
             <div class="flex flex-col md:flex-row gap-2 py-0">
 
-                <div class="md:w-2/3 rounded-md border border-gray-200 shadow-sm">
+                <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
                     <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
                         <div
                             ref="videoElement"
