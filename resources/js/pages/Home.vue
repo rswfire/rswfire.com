@@ -25,11 +25,17 @@
         </router-link></div>
     </div>
 
-
+    <FieldRecordsPreview />
 </template>
 
 <script>
 
+import {defineComponent} from "vue";
+import FieldRecordsPreview from "../components/FieldRecordsPreview.vue";
+
+export default defineComponent({
+    components: {FieldRecordsPreview}
+})
 </script>
 
 <style>

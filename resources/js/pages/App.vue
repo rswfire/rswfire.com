@@ -24,6 +24,7 @@
                 <div class="text-sm text-gray-500 border-t border-gray-200 pt-4 text-left">
                     <div><strong>Navigation</strong></div>
                     <div class="ml-3">&bull; <router-link to="/">Home</router-link></div>
+                    <div class="ml-3">&bull; <router-link to="/field-records">Field Records</router-link></div>
                 </div>
             </div>
 
