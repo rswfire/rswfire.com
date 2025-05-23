@@ -11,13 +11,18 @@
 
                 <div>
                     <h2 class="text-lg font-semibold text-gray-900">rswfire</h2>
-                    <p class="text-xs text-gray-500">Robert Samuel White</p>
+                    <p class="text-md text-gray-500">Robert Samuel White</p>
                 </div>
 
-                <div class="text-xs italic text-gray-500 leading-snug border-t border-gray-200 pt-4">
+                <div class="text-sm italic text-gray-500 border-t border-gray-200 pt-4 text-center">
+                    <span class="not-italic">🔥</span><br>
                     &quot;In a forest pitch dark,<br>
                     Glowed the tiniest spark.<br>
                     It burst into a flame.&quot;
+                </div>
+
+                <div class="text-sm text-gray-500 border-t border-gray-200 pt-4 text-left">
+                    Navigation Coming Shortly
                 </div>
             </div>
 
