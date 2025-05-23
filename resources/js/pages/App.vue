@@ -9,7 +9,7 @@
                     class="w-16 h-16 rounded-full border border-gray-800 shadow-sm"
                 />
                 <div class="flex flex-col">
-                    <div class="text-sm font-semibold tracking-widest text-gray-800">RSWFIRE 🔥</div>
+                    <div class="text-sm font-semibold tracking-wide text-gray-800">RSWFIRE 🔥</div>
                     <div class="text-xs text-gray-800 uppercase">ROBERT SAMUEL WHITE</div>
 
                 </div>
@@ -20,7 +20,7 @@
                 class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
                 aria-label="Open menu"
             >
-                <span class="text-xl">☰</span>
+                <span class="text-lg">☰</span>
                 <span class="text-sm font-semibold uppercase tracking-wide">Menu</span>
             </button>
         </div>
