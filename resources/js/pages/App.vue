@@ -6,9 +6,12 @@
                 <img
                     src="/public/assets/rswfire.jpg"
                     alt="RSWFIRE"
-                    class="w-16 h-16 rounded-full border border-gray-300 shadow-sm"
+                    class="w-16 h-16 rounded-full border border-gray-800 shadow-sm"
                 />
-                <span class="text-sm font-semibold tracking-wide text-gray-800 uppercase">RSWFIRE</span>
+                <div class="flex flex-col">
+                    <div class="text-sm font-semibold tracking-wide text-gray-800 uppercase">ROBERT SAMUEL WHITE</div>
+                    <div class="text-sm tracking-wide text-gray-800">RSWFIRE 🔥</div>
+                </div>
             </div>
 
             <button
