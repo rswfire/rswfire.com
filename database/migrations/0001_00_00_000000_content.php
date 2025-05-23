@@ -12,7 +12,9 @@ return new class extends Migration {
             $objTable->string("content_title")->nullable();
             $objTable->longText("content_body");
             $objTable->json("content_meta")->nullable();
-            $objTable->timestamps();
+            $objTable->timestamp("stamp_created")->useCurrent();
+            $objTable->dateTime("stamp_published")->nullable();
+            $objTable->timestamp("stamp_updated")->useCurrent()->useCurrentOnUpdate();
         });
     }
 
