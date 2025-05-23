@@ -1,42 +1,55 @@
 <template>
 
-    <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[250px_1fr] gap-10">
-
-            <div class="md:sticky top-6 self-start w-full md:w-[250px] bg-white rounded-xl shadow-sm border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
+    <div class="md:hidden">
+        <div class="flex items-center justify-between p-1">
+            <div class="flex items-center gap-3">
                 <img
                     src="/public/assets/rswfire.jpg"
-                    alt="Robert Samuel White"
-                    class="w-auto h-auto mx-auto rounded-full border border-gray-300 shadow"
+                    alt="RSWFIRE"
+                    class="w-8 h-8 rounded-full border border-gray-300 shadow-sm"
                 />
-
-                <div>
-                    <h2 class="text-lg font-semibold text-gray-900">rswfire</h2>
-                    <p class="text-md text-gray-500">Robert Samuel White</p>
-                </div>
-
-                <div class="text-sm italic text-gray-500 border-t border-gray-200 pt-4 text-center">
-                    &quot;In a forest pitch dark,<br>
-                    Glowed the tiniest spark.<br>
-                    It burst into a flame.&quot;
-                </div>
-
-                <div class="text-sm text-gray-500 border-t border-gray-200 pt-4 text-left">
-                    <div><strong>Navigation</strong></div>
-                    <div class="ml-3">&bull; <router-link to="/">Home</router-link></div>
-                    <div class="ml-3">&bull; <router-link to="/field-records">Field Records</router-link></div>
-                </div>
+                <span class="text-sm font-semibold tracking-wide text-gray-800 uppercase">RSWFIRE</span>
             </div>
 
-            <div class="flex flex-col">
-                <router-view />
+            <button
+                @click="sidebarOpen = true"
+                class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
+            >
+                <span class="text-xl">☰</span>
+                <span class="text-sm font-semibold uppercase tracking-wide">Menu</span>
+            </button>
+
+        </div>
+
+        <SidebarDrawer v-if="sidebarOpen" @close="sidebarOpen = false" />
+        <div class="p-3">
+            <router-view/>
+        </div>
+
+    </div>
+
+    <div class="hidden md:block">
+        <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[250px_1fr] gap-10">
+
+                <SidebarProfile/>
+
+                <div class="flex flex-col">
+                    <router-view />
+                </div>
             </div>
         </div>
     </div>
+
 </template>
 
 <script setup>
+import { ref } from "vue"
+import SidebarDrawer from "@/components/sidebar/Drawer.vue"
 
+const sidebarOpen = ref(false)
+
+import SidebarProfile from "@/components/sidebar/Profile.vue";
 </script>
 
 <style>
