@@ -1,26 +1,45 @@
 <template>
-    <div class="p-4">
-        <h1 class="text-2xl font-bold mb-4">View Entry</h1>
-        <div v-if="entry" class="prose max-w-none" v-html="renderMarkdown(entry.content_body)"></div>
+    <div class="space-y-4">
+        <h1 class="text-2xl font-bold">{{ entry.content_title }}</h1>
+
+        <p class="text-sm text-gray-500">
+            Created: {{ formatDate(entry.stamp_created) }}
+        </p>
+
+        <div class="prose max-w-none" v-html="renderedBody"></div>
+
+        <div v-if="entry.content_meta && Object.keys(entry.content_meta).length" class="mt-4 text-sm text-gray-600">
+            <strong class="text-gray-800">Meta:</strong>
+            <span>{{ entry.content_meta }}</span>
+        </div>
+
+        <router-link
+            to="/field-records"
+            class="inline-block text-sm mt-6 text-indigo-500 hover:underline"
+        >
+            ← Back to Records
+        </router-link>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import axios from 'axios'
-import MarkdownIt from 'markdown-it'
+import { ref, onMounted } from "vue"
+import { useRoute } from "vue-router"
+import axios from "axios"
+import MarkdownIt from "markdown-it"
 
 const route = useRoute()
-const entry = ref(null)
+const entry = ref({})
+const renderedBody = ref("")
 const md = new MarkdownIt()
 
 onMounted(async () => {
-    const response = await axios.get(`/api/content/${route.params.id}`)
-    entry.value = response.data
+    const { data } = await axios.get(`/api/content/${route.params.id}`)
+    entry.value = data
+    renderedBody.value = md.render(data.content_body)
 })
 
-function renderMarkdown(mdText) {
-    return md.render(mdText)
+function formatDate(dateStr) {
+    return new Date(dateStr).toLocaleString()
 }
 </script>
