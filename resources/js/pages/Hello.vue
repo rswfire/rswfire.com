@@ -1,4 +1,5 @@
 <template>
+    <div class="border border-gray-300 rounded-2xl p-6 shadow-md bg-white w-full mx-auto">
     <div class="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:marker:text-gray-400 prose-strong:text-gray-900 prose-strong:font-semibold">
 
         <div class="flex justify-between items-baseline mt-1 mb-2">
@@ -356,6 +357,7 @@
         <div>I am standing where I can be found.</div>
         <div>Where will you be standing?</div>
 
+    </div>
     </div>
 </template>
 
