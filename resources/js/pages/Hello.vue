@@ -257,16 +257,11 @@
 
                 <div class="md:w-2/3 rounded-md border border-gray-200 shadow-sm">
                     <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                        <iframe
-                            id="youtube-player"
+                        <div
+                            ref="videoElement"
+                            id="youtube-player-tech"
                             class="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube-nocookie.com/embed/ZMVKMP0PVcM?modestbranding=1&rel=0&enablejsapi=1"
-                            title="The Signal – What Rare Talent Really Looks Like"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
-                        ></iframe>
+                        ></div>
                     </div>
                 </div>
 
@@ -362,46 +357,72 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 
 const player = ref(null)
-const videoHeight = ref(0)
+const playerReady = ref(false)
+const videoElement = ref(null)
 const videoContainer = ref(null)
-const apiReady = ref(false)
+const videoHeight = ref(0)
 
-onMounted(() => {
-    // Watch for container height
-    if (videoContainer.value) {
-        videoHeight.value = videoContainer.value.offsetHeight
+let resizeObserver = null
 
-        const resizeObserver = new ResizeObserver(() => {
-            videoHeight.value = videoContainer.value.offsetHeight
-        })
-        resizeObserver.observe(videoContainer.value)
-    }
-    if (!window.YT || !window.YT.Player) {
+const loadYouTubeAPI = () => {
+    return new Promise((resolve) => {
+        if (window.YT && window.YT.Player) return resolve()
+
+        window.onYouTubeIframeAPIReady = () => resolve()
+
         const tag = document.createElement('script')
         tag.src = 'https://www.youtube.com/iframe_api'
         document.body.appendChild(tag)
+    })
+}
+
+onMounted(async () => {
+    await loadYouTubeAPI()
+
+    if (!videoElement.value) {
+        console.error('Video element missing.')
+        return
     }
 
-    window.onYouTubeIframeAPIReady = () => {
-        console.log('%c[YOUTUBE] API Ready', 'color: green; font-weight: bold')
-        apiReady.value = true
-        player.value = new window.YT.Player('youtube-player', {
-            events: {
-                onReady: () => {
-                    console.log('%cYouTube Player Ready', 'color: green')
-                    // This won't get height, so we skip it here
-                }
+    player.value = new window.YT.Player(videoElement.value, {
+        videoId: 'ZMVKMP0PVcM',
+        playerVars: {
+            modestbranding: 1,
+            rel: 0,
+            enablejsapi: 1
+        },
+        events: {
+            onReady: () => {
+                playerReady.value = true
+                console.log('YouTube Player Ready')
+
+                nextTick(() => {
+                    if (videoContainer.value) {
+                        videoHeight.value = videoContainer.value.offsetHeight
+                        resizeObserver = new ResizeObserver(() => {
+                            videoHeight.value = videoContainer.value.offsetHeight
+                        })
+                        resizeObserver.observe(videoContainer.value)
+                    }
+                })
             }
-        })
-    }
+        }
+    })
 })
 
-// Seek function
+onBeforeUnmount(() => {
+    if (player.value?.destroy) player.value.destroy()
+    if (resizeObserver && videoContainer.value) resizeObserver.unobserve(videoContainer.value)
+    player.value = null
+    resizeObserver = null
+    playerReady.value = false
+})
+
 function seekTo(seconds) {
-    if (apiReady.value && player.value && typeof player.value.seekTo === 'function') {
+    if (playerReady.value && player.value?.seekTo) {
         player.value.seekTo(seconds, true)
         player.value.playVideo()
     } else {

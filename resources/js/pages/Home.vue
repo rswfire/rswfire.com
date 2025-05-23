@@ -34,7 +34,7 @@
         <div class="text-gray-700 text-sm leading-relaxed space-y-3">
             <p><strong>I’ve been programming since DOS.</strong> At age 11, I was shipping batch scripts to BBS systems. By 13, I was writing grading software for teachers. By 15, I was coding CMS platforms on paper — entire systems, mentally compiled, handwritten line by line.</p>
 
-            <p><strong>By 18, I was a top-ten freelancer on guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</p>
+            <p><strong>By 18, I was a top-ten freelancer on Guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</p>
 
             <p><strong>Now I live in an off-grid RV by the sea.</strong> Because depth doesn’t need a tower. And clarity doesn’t come from noise.</p>
 
