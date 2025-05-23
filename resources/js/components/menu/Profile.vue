@@ -18,14 +18,14 @@
             It burst into a flame.&quot;
         </div>
 
-        <SidebarNavigation/>
+        <MenuNavigation/>
 
     </div>
 
 </template>
 
 <script setup>
-    import SidebarNavigation from "@/components/sidebar/Navigation.vue";
+    import MenuNavigation from "@/components/menu/Navigation.vue";
 </script>
 
 <style>
