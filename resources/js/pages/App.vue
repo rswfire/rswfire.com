@@ -1,12 +1,12 @@
 <template>
 
     <div class="md:hidden">
-        <div class="flex items-center justify-between p-1">
+        <div class="flex items-center justify-between p-3 sticky top-0 z-50 bg-white border-b border-gray-300">
             <div class="flex items-center gap-3">
                 <img
                     src="/public/assets/rswfire.jpg"
                     alt="RSWFIRE"
-                    class="w-8 h-8 rounded-full border border-gray-300 shadow-sm"
+                    class="w-16 h-16 rounded-full border border-gray-300 shadow-sm"
                 />
                 <span class="text-sm font-semibold tracking-wide text-gray-800 uppercase">RSWFIRE</span>
             </div>
