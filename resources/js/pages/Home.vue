@@ -25,7 +25,32 @@
         </router-link></div>
     </div>
 
+    <div class="mt-10 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl">🛠️</span>
+            <h2 class="text-xl font-semibold text-gray-900">Builder of Systems. Steward of Depth.</h2>
+        </div>
+
+        <div class="text-gray-700 text-sm leading-relaxed space-y-3">
+            <p><strong>I’ve been programming since DOS.</strong> At age 11, I was shipping batch scripts to BBS systems. By 13, I was writing grading software for teachers. By 15, I was coding CMS platforms on paper — entire systems, mentally compiled, handwritten line by line.</p>
+
+            <p><strong>By 18, I was a top-ten freelancer on guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</p>
+
+            <p><strong>Now I live in an off-grid RV by the sea.</strong> Because depth doesn’t need a tower. And clarity doesn’t come from noise.</p>
+
+            <p><em>This isn’t hustle. It’s frequency. If you feel it, we’re already in conversation.</em></p>
+        </div>
+
+        <router-link
+            to="/tech"
+            class="inline-block px-4 py-2 border border-red-300 text-red-600 hover:bg-red-50 hover:border-red-500 rounded-md text-sm font-semibold transition"
+        >
+            See the Full Story →
+        </router-link>
+    </div>
+
     <FieldRecordsPreview />
+
 </template>
 
 <script>
