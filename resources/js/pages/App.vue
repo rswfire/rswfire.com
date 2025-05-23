@@ -10,7 +10,7 @@
                 />
                 <div class="flex flex-col">
                     <div class="text-sm font-semibold tracking-widest text-gray-800">RSWFIRE 🔥</div>
-                    <div class="text-sm text-gray-800 uppercase">ROBERT SAMUEL WHITE</div>
+                    <div class="text-xs text-gray-800 uppercase">ROBERT SAMUEL WHITE</div>
 
                 </div>
             </div>
