@@ -26,11 +26,19 @@
             </router-link>
 
             <router-link
+                to="/lexicon"
+                class="flex items-center gap-2 hover:text-red-600 transition"
+            >
+                <span>🪶</span> <span>Lexicon</span>
+            </router-link>
+
+            <router-link
                 to="/field-records"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
                 <span>📁</span> <span>Field Records</span>
             </router-link>
+
         </nav>
     </div>
 

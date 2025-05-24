@@ -39,7 +39,7 @@
             <li class="flex gap-3 items-start">
                 <span class="mt-1 text-red-500">●</span>
                 <div>
-                    <strong class="text-gray-800">Sovereignty</strong><br>
+                    <strong class="text-gray-800"><LexiconTerm slug="sovereignty">Sovereignty</LexiconTerm></strong><br>
                     <span class="text-sm text-gray-600">Internal authority without dominance or submission.</span>
                 </div>
             </li>
@@ -357,6 +357,7 @@
 </template>
 
 <script setup>
+import LexiconTerm from "@/components/LexiconTerm.vue"
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 
 const player = ref(null)

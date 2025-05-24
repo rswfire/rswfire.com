@@ -4,6 +4,7 @@ import Hello from '../pages/Hello.vue'
 import Home from '../pages/Home.vue'
 import FieldRecords from '../pages/FieldRecords.vue'
 import FieldRecordsCreate from '../pages/FieldRecordsCreate.vue'
+import Lexicon from '../pages/Lexicon.vue'
 import Tech from '../pages/Tech.vue'
 import ViewContent from '../pages/ViewContent.vue'
 
@@ -13,6 +14,7 @@ const routes = [
     { path: '/field-records', name: 'FieldRecords', component: FieldRecords },
     { path: '/field-records/create', name: 'CreateFieldRecord', component: FieldRecordsCreate },
     { path: '/content/:id', name: 'ViewContent', component: ViewContent, props: true },
+    { path: '/lexicon', name: 'Lexicon', component: Lexicon },
     { path: '/tech', name: 'Tech', component: Tech },
 ]
 
