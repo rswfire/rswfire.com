@@ -1,87 +1,69 @@
 <template>
-    <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-4">The Journey</h1>
-        <h2 class="text-xl font-semibold text-red-600 mb-2">Chapter 1 — The Goodbye: When Truth Breaks Containment</h2>
-        <p class="text-sm text-gray-500 mb-8">April 10, 2024 — The day before my 47th birthday</p>
-
-        <section class="space-y-4 mb-12">
-            <p class="text-gray-700 text-lg">
-                I filmed this the night before I turned 47.
-                I was stoned, surrounded by disorder, emotionally raw. But there was clarity too.
-                Not mental clarity — not the kind that comes from planning — but the kind that comes when something inside you
-                <strong>snaps out of illusion</strong>.
-            </p>
-            <p class="text-gray-700 text-lg">
-                I didn’t know exactly what I was walking into, but I knew I couldn’t go back.
-                This video was the spell I cast to break the bonds of a life that no longer fit.
-                I called it <em>“The Goodbye”</em> because I wasn’t just leaving a house or a state — I was leaving behind distortion,
-                entrapment, and the slow spiritual death of obedience.
-            </p>
-            <p class="text-gray-700 text-lg">
-                This was the beginning of <strong>The First Year</strong>. Of <strong>My Becoming</strong>.
-            </p>
+    <div class="px-6 py-12 max-w-4xl mx-auto">
+        <!-- Hero Section -->
+        <section class="mb-10">
+            <h1 class="text-4xl font-bold mb-2">The Goodbye – When Truth Breaks Containment</h1>
+            <p class="text-sm text-gray-500 mb-4">April 10, 2024</p>
+            <p class="text-lg text-gray-700">Recorded the night before my 47th birthday — a transmission in the raw, stoned and tired, yet lucid. A farewell to the life that no longer held me.</p>
         </section>
 
-        <section class="mb-12">
-            <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden border border-gray-300 shadow">
+        <!-- YouTube Embed -->
+        <section class="mb-10">
+
+            <div class="w-full" style="position: relative; padding-bottom: 56.25%; height: 0;">
                 <iframe
-                    src="https://www.youtube-nocookie.com/embed/nW3Knr34_OY?modestbranding=1&rel=0"
+                    class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                    src="https://www.youtube.com/embed/nW3Knr34_OY"
+                    title="The Goodbye"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
-                    class="w-full h-full">
-                </iframe>
+                ></iframe>
             </div>
+
         </section>
 
-        <section class="mb-12">
-            <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600">
-                "I'm not living my life in a way that's conducive to my own well-being… because I'm not making decisions for myself."
-            </blockquote>
-            <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600 mt-4">
-                "If there's something holding you back right now, I want to give you permission to let that thing go."
-            </blockquote>
-            <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600 mt-4">
-                "Come tomorrow, I live a new one — and I live it for me."
-            </blockquote>
-        </section>
-
-        <section class="mb-12">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Somatic Anchors</h3>
+        <!-- Themes -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Themes</h2>
             <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li><strong>Sound:</strong> Quiet voice in a silent house. The weight of late night.</li>
-                <li><strong>Touch:</strong> A bed cluttered with fragments of the past. Nowhere to rest.</li>
-                <li><strong>Emotion:</strong> Not sadness — <em>resolve</em>. The electric calm that comes after the storm.</li>
-                <li><strong>Energy:</strong> Dissolving timelines. Choosing the unknown. Integrity over certainty.</li>
+                <li>Rupture as liberation</li>
+                <li>The gravitational pull of toxic cycles</li>
+                <li>Personal sovereignty reclaimed through introspection</li>
+                <li>The somatic signature of dissonance vs truth</li>
+                <li>Permissioning transformation without external validation</li>
             </ul>
         </section>
 
-        <section class="border-t border-gray-300 pt-6">
-            <p class="text-gray-700 text-sm">
-                Have you ever stood in your own living room and <em>said goodbye</em> to who you were?
-                If this moment resonates, write your own farewell. You don’t have to share it.
-                But let it move through you. Let it name what no longer fits.
+        <!-- Field Notes -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">Field Notes</h2>
+            <p class="text-gray-700 mb-4">
+                This was the transmission that marked the end of containment. I recorded it in a house already half-dismantled, my body exhausted, my mind activated. The presence of the cat, the cluttered bed, the impossibility of rest — all of it symbolic.
+            </p>
+            <p class="text-gray-700 mb-4">
+                I didn’t just say goodbye to a place or a lifestyle. I said goodbye to the internal agreement that had kept me silent, stagnant, and subdued. This wasn’t clarity by planning — it was clarity by exhaustion, by the moment just before collapse. I spoke not to explain, but to transmute.
+            </p>
+            <p class="text-gray-700">
+                There was no catharsis. There was only contact with the unspoken truth: that freedom begins when you stop defending the structure that is killing you. And so, I began again — from the couch, at midnight, stoned and real.
+            </p>
+        </section>
+
+        <!-- Integration Prompt -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Integration Prompt</h2>
+            <p class="text-gray-700">
+                What are you still holding on to because it feels safer than the unknown? Speak a goodbye — out loud, on paper, or to the mirror. Not to the people, not even to the past. Say goodbye to the version of you that kept trying to fit. Then listen. What truth breaks free when you stop containing it?
             </p>
         </section>
     </div>
+    <ChapterNavigation/>
 </template>
 
 <script setup>
-    // Replace YOUR_VIDEO_ID with the actual ID of the embedded YouTube video
+import ChapterNavigation from '@/pages/the-journey/the-first-year/Navigation.vue'
 </script>
 
 <style scoped>
-    .aspect-w-16 {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%;
-    }
-
-    .aspect-h-9 iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+/* Tailwind handles all necessary styling */
 </style>
