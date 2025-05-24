@@ -25,6 +25,28 @@
         </router-link></div>
     </div>
 
+    <div class="mt-10 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 flex items-center">
+            ⛰️ The Journey
+        </h2>
+
+        <div class="border-l-4 border-gray-300 ml-4 pl-4 italic space-y-1">
+            <div>The journey didn’t start when I left.</div>
+            <div>It started when I woke up.</div>
+            <div>Leaving was just the first thing I did as a free man.</div>
+        </div>
+
+        <p>This is not a story of escape.</p>
+        <p>It’s a story of return — to self, to coherence, to the real.</p>
+
+        <router-link
+            to="/the-journey"
+            class="inline-block mt-2 px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-md transition"
+        >
+            Enter the Journey →
+        </router-link>
+    </div>
+
     <div class="mt-10 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
         <div class="flex items-center gap-3">
             <span class="text-2xl">🛠️</span>
