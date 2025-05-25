@@ -33,12 +33,6 @@
                 <router-link to="/field-records" @click="$emit('close')" class="block font-semibold text-red-600">📁 Field Records</router-link>
             </nav>
 
-            <div class="m-0 p-0">
-                <router-link to="/duners" @click="$emit('close')" class="block text-center p-4 rounded shadow text-white bg-black">
-                🏁<br><span class="text-xs italic">To The Ones Who Ride The Sand<br>(Click Here)</span>
-                </router-link>
-            </div>
-
         </div>
 
         <div class="text-center text-xs text-gray-400">
