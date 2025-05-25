@@ -74,7 +74,7 @@
 
     <FieldRecordsPreview />
 
-    <div class="md:hidden w-64 mx-auto bg-black text-white rounded-lg p-4 text-center shadow mt-10">
+    <div class="w-64 mx-auto bg-black text-white rounded-lg p-4 text-center shadow mt-10">
         <a href="/duners" class="block">
             <div class="text-2xl mb-2">🏁</div>
             <div class="italic text-sm leading-tight">
