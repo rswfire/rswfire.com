@@ -1,4 +1,5 @@
 <template>
+
     <div class="border border-gray-300 rounded-2xl p-6 shadow-md bg-white w-full mx-auto">
         <div class="mb-4 flex items-center gap-2">
             <div class="relative flex items-center justify-center w-8 h-8">
@@ -72,6 +73,17 @@
     </div>
 
     <FieldRecordsPreview />
+
+    <div class="md:hidden w-64 mx-auto bg-black text-white rounded-lg p-4 text-center shadow mt-10">
+        <a href="/duners" class="block">
+            <div class="text-2xl mb-2">🏁</div>
+            <div class="italic text-sm leading-tight">
+                To The Ones Who Ride The Sand
+                <br />
+                <span class="text-xs">(Click Here)</span>
+            </div>
+        </a>
+    </div>
 
 </template>
 

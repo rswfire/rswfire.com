@@ -34,7 +34,7 @@
             </nav>
 
             <div class="m-0 p-0">
-                <router-link to="/duners" @click="$emit('close')" class="block text-center p-4 rounded shadow hover:bg-gray-900 transition">
+                <router-link to="/duners" @click="$emit('close')" class="block text-center p-4 rounded shadow text-white bg-black">
                 🏁<br><span class="text-xs italic">To The Ones Who Ride The Sand<br>(Click Here)</span>
                 </router-link>
             </div>
