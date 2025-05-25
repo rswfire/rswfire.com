@@ -19,6 +19,11 @@ const routes = [
     { path: '/lexicon', name: 'Lexicon', component: Lexicon },
     { path: '/tech', name: 'Tech', component: Tech },
     {
+        path: '/duners',
+        name: 'Duners',
+        component: () => import('../pages/Duners.vue'),
+    },
+    {
         path: '/the-journey',
         name: 'TheJourney',
         component: () => import('../pages/the-journey/Index.vue'),

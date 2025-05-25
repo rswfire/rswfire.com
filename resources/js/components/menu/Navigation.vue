@@ -49,6 +49,10 @@
         </nav>
     </div>
 
+    <br><router-link to="/duners" class="block bg-black text-white text-center p-4 rounded shadow hover:bg-gray-900 transition">
+        🏁<br><span class="text-xs italic">To The Ones Who Ride The Sand<br>(Click Here)</span>
+    </router-link>
+
 </template>
 
 <script setup>

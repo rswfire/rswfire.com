@@ -32,6 +32,13 @@
                 <router-link to="/lexicon" @click="$emit('close')" class="block font-semibold text-red-600">🪶 Lexicon</router-link>
                 <router-link to="/field-records" @click="$emit('close')" class="block font-semibold text-red-600">📁 Field Records</router-link>
             </nav>
+
+            <div class="m-0 p-0">
+                <router-link to="/duners" @click="$emit('close')" class="block text-center p-4 rounded shadow hover:bg-gray-900 transition">
+                🏁<br><span class="text-xs italic">To The Ones Who Ride The Sand<br>(Click Here)</span>
+                </router-link>
+            </div>
+
         </div>
 
         <div class="text-center text-xs text-gray-400">
