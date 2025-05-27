@@ -26,7 +26,7 @@
             </router-link>
 
             <router-link
-                to="/tech"
+                to="/honeyman"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
                 <span>🌲</span> <span>Honeyman</span>
