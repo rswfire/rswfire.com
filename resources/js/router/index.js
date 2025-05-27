@@ -19,6 +19,16 @@ const routes = [
     { path: '/lexicon', name: 'Lexicon', component: Lexicon },
     { path: '/tech', name: 'Tech', component: Tech },
     {
+        path: '/honeyman',
+        name: 'Honeyman',
+        component: () => import('../pages/honeyman/Index.vue'),
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: () => import('../pages/Contact.vue'),
+    },
+    {
         path: '/duners',
         name: 'Duners',
         component: () => import('../pages/Duners.vue'),

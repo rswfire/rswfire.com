@@ -28,6 +28,7 @@
                 <router-link to="/" @click="$emit('close')" class="block font-semibold text-red-600">🏠 Home</router-link>
                 <router-link to="/hello" @click="$emit('close')" class="block font-semibold text-red-600">👤 About Me</router-link>
                 <router-link to="/the-journey" @click="$emit('close')" class="block font-semibold text-red-600">🜂 The Journey</router-link>
+                <router-link to="/honeyman" @click="$emit('close')" class="block font-semibold text-red-600">🌲 Honeyman</router-link>
                 <router-link to="/tech" @click="$emit('close')" class="block font-semibold text-red-600">🛠 Tech History</router-link>
                 <router-link to="/lexicon" @click="$emit('close')" class="block font-semibold text-red-600">🪶 Lexicon</router-link>
                 <router-link to="/field-records" @click="$emit('close')" class="block font-semibold text-red-600">📁 Field Records</router-link>

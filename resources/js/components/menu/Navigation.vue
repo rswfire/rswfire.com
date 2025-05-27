@@ -29,6 +29,13 @@
                 to="/tech"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
+                <span>🌲</span> <span>Honeyman</span>
+            </router-link>
+
+            <router-link
+                to="/tech"
+                class="flex items-center gap-2 hover:text-red-600 transition"
+            >
                 <span>🛠</span> <span>Tech History</span>
             </router-link>
 
