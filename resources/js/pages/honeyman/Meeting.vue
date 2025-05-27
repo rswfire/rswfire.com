@@ -36,13 +36,6 @@
                 </div>
             </div>
 
-            <!-- Allison's Reaction -->
-            <div>
-                <h2 class="text-2xl font-semibold mt-10 mb-4">Allison’s Attempt to Shut It Down</h2>
-                <p class="italic">“You’re not allowed to release that recording.”</p>
-                <p class="mt-2">That was Allison Watson’s direct instruction after I mentioned the recording. I noted her request. But I do not answer to systems that fail to protect and then erase the record of their failure.</p>
-            </div>
-
             <!-- Embedded Video -->
             <div>
                 <h2 class="text-2xl font-semibold mt-10 mb-4">The Recording</h2>
