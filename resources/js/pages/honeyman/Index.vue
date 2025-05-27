@@ -53,7 +53,7 @@
                 <h2 class="text-2xl font-semibold mt-10 mb-4">Primary Nodes</h2>
                 <ul class="space-y-2 text-blue-600 underline text-lg">
                     <li><router-link to="/honeyman/the-setup">The Setup – An IT Employee, a Dirty Yurt, and the Baited Encounter</router-link></li>
-                    <li><router-link to="/honeyman/the-meeting">The Meeting – Transcript + Analysis of the March 5 Interrogation</router-link></li>
+                    <li><router-link to="/honeyman/meeting">The Meeting – Transcript + Analysis of the March 5 Interrogation</router-link></li>
                     <li><router-link to="/honeyman/the-emails">The Emails – How Clarity Was Framed as Threat</router-link></li>
                     <li><router-link to="/honeyman/the-dismissal">The Dismissal – What They Said. What They Didn’t.</router-link></li>
                     <li><router-link to="/honeyman/the-silencing">The Silencing – Allison’s Role and Institutional Failure</router-link></li>

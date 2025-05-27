@@ -24,6 +24,11 @@ const routes = [
         component: () => import('../pages/honeyman/Index.vue'),
     },
     {
+        path: '/honeyman/meeting',
+        name: 'HoneymanMeeting',
+        component: () => import('../pages/honeyman/Meeting.vue'),
+    },
+    {
         path: '/contact',
         name: 'Contact',
         component: () => import('../pages/Contact.vue'),
