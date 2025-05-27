@@ -7,6 +7,7 @@
             <div>
                 <h1 class="text-4xl font-bold">The Interrogation — March 5, 2025</h1>
                 <p class="mt-2 text-lg text-gray-600">// Coercion, Gaslighting, and Constructive Dismissal on Record</p>
+                <p class="mt-2 text-xs text-gray-400">Last Updated: 05/27/25 - WIP</p>
             </div>
 
             <!-- Opening Statement -->
