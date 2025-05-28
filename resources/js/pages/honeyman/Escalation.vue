@@ -13,9 +13,9 @@
             <div>I was days away from moving on — but Ryan Warren, acting on personal offense, escalated the situation beyond recovery.</div>
         </para>
 
-        <h2 class="text-2xl font-bold tracking-tight text-black">📆 The Sequence</h2>
+        <h2 class="pt-5 text-2xl font-bold tracking-tight text-black">📆 The Sequence</h2>
         <ul>
-            <li class="prose prose-neutral"><para><strong>March 24, 2025</strong> – I receive a phone call from Ryan Warren, ostensibly to schedule a meeting. When I ask why, he reacts emotionally, and dismisses me on the spot — over the phone.</para></li>
+            <li class="pt-5 prose prose-neutral"><para><strong>March 24, 2025</strong> – I receive a phone call from Ryan Warren, ostensibly to schedule a meeting. When I ask why, he reacts emotionally, and dismisses me on the spot — over the phone.</para></li>
             <li class="prose prose-neutral"><para><strong>One hour later</strong> – Ryan shows up at my site in person. I record him taking my keys and documents. He admits he has no paperwork, offers no formal explanation, and tells me I have 24 hours to vacate the park.</para></li>
             <li class="prose prose-neutral"><para><strong>March 25, 2025</strong> – I speak with Allison Watson. That conversation is now public. I refute each of the frames used to justify my dismissal — calmly, clearly, without evasion.</para></li>
             <li class="prose prose-neutral"><para><strong>Later that day</strong> – I relocate to Tugman, as planned. Rangers are visibly uncertain — the ripple from Honeyman has reached them. I had volunteered there previously without issue.</para></li>
@@ -23,8 +23,8 @@
             <li class="prose prose-neutral"><para><strong>March 26, 2025</strong> – I receive a formal permanent dismissal from OPRD via email. The language is as vague as all of their previous accusations.</para></li>
         </ul>
 
-        <h2 class="text-2xl font-bold tracking-tight text-black">🎯 What This Reveals</h2>
-        <para>This was never about performance.<br />
+        <h2 class="pt-5 text-2xl font-bold tracking-tight text-black">🎯 What This Reveals</h2>
+        <para class="pt-5">This was never about performance.<br />
             It was about control.</para>
 
         <para>It wasn’t a response to conduct.<br />
@@ -36,10 +36,10 @@
         <para>This wasn’t a misunderstanding.<br />
             It was a calculated displacement, cloaked in policy, triggered by presence, and finalized with silence.</para>
 
-        <para><strong>🔗 <router-link to="/honeyman/meeting">See the March 5 Interrogation</router-link>.</strong></para>
+        <para class="pt-5"><strong>🔗 <router-link to="/honeyman/meeting">See the March 5 Interrogation</router-link>.</strong></para>
         <para><strong>🔗 <router-link to="/honeyman/escalation/letter">Read my letter to Allison</router-link>.</strong></para>
 
-        <div class="mt-0 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
+        <div class="mt-5 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
             <h2 class="text-lg font-semibold mb-2">🎥 Watch the Reading</h2>
             <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
             <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
