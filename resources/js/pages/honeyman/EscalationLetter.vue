@@ -3,6 +3,20 @@
         <h1 class="text-3xl font-bold mb-2">The Letter Allison Ignored</h1>
         <p class="text-sm text-gray-500 mb-6">Sent: March 24, 2025 • Public Release: May 27, 2025</p>
 
+        <div class="mt-0 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
+            <h2 class="text-lg font-semibold mb-2">🎥 Watch the Reading</h2>
+            <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
+            <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
+                <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
+                    <div
+                        ref="videoElement"
+                        id="youtube-player-tech"
+                        class="absolute top-0 left-0 w-full h-full"
+                    ></div>
+                </div>
+            </div>
+        </div>
+
         <p>Hi Allison,</p>
 
         <p>Thank you again for taking the time to speak with me. I’ve reflected on our conversation and want to offer some additional context for the record—both to clarify key points and to express concern about how some of what I shared may be interpreted.</p>
@@ -44,19 +58,6 @@
 
         <p>Sam White</p>
 
-        <div class="mt-12 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
-            <h2 class="text-lg font-semibold mb-2">🎥 Watch the Reading</h2>
-            <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
-            <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
-                <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
-                    <div
-                        ref="videoElement"
-                        id="youtube-player-tech"
-                        class="absolute top-0 left-0 w-full h-full"
-                    ></div>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
