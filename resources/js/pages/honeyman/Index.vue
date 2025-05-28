@@ -56,7 +56,7 @@
                     <li><router-link to="/honeyman/the-setup">The Setup – An IT Employee, a Dirty Yurt, and the Baited Encounter</router-link></li>
                     <li><router-link to="/honeyman/the-emails">The Emails – How Clarity Was Framed as Threat</router-link></li>
                     <li><router-link to="/honeyman/the-dismissal">The Dismissal – What They Said. What They Didn’t.</router-link></li>
-                    <li><router-link to="/honeyman/the-silencing">The Silencing – Allison’s Role and Institutional Failure</router-link></li>
+                    <li><router-link to="/honeyman/silencing">The Silencing – Allison’s Role and Institutional Failure</router-link></li>
                     <li><router-link to="/honeyman/the-system">The System – How Park Leadership Polices Authenticity</router-link></li>
                     <li><router-link to="/honeyman/the-record">The Record – Documents, Screenshots, Audio Receipts</router-link></li>
                 </ul>

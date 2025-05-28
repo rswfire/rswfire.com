@@ -29,6 +29,11 @@ const routes = [
         component: () => import('../pages/honeyman/Meeting.vue'),
     },
     {
+        path: '/honeyman/silencing',
+        name: 'HoneymanSilencing',
+        component: () => import('../pages/honeyman/Silencing.vue'),
+    },
+    {
         path: '/contact',
         name: 'Contact',
         component: () => import('../pages/Contact.vue'),
