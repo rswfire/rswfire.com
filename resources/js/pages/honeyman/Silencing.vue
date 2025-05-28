@@ -2,7 +2,7 @@
     <content>
         <hero
             title="HONEYMAN STATE PARK, OPRD &mdash; MEETING WITH ALLISON WATSON"
-            subtitle="The Silencing"
+            subtitle="THE SILENCING"
             meta="Last Updated: 05/27/25 &mdash; WIP"
         />
 
@@ -19,16 +19,18 @@
         </para>
 
         <ul class="list-disc list-inside mb-6 space-y-2">
-            <li class="pt-5 prose prose-neutral">Allison justifying my dismissal using vague, unverified third-party reports</li>
-            <li class="prose prose-neutral">Repeated reframing of my reflective statements into misconduct</li>
-            <li class="prose prose-neutral">A refusal to acknowledge the hourlong gaslighting session conducted by Ryan and Kati</li>
-            <li class="prose prose-neutral">An attempt to characterize a poem as unprofessional behavior</li>
-            <li class="prose prose-neutral">Systemic deflection of accountability — cloaked in faux empathy</li>
+            <li class="pt-5 prose prose-neutral">Allison justifying my dismissal using vague, unverified third-party reports.</li>
+            <li class="prose prose-neutral">Repeated reframing of my reflective statements into misconduct.</li>
+            <li class="prose prose-neutral">A refusal to acknowledge the hourlong gaslighting session conducted by Ryan Warren and Kati Baker.</li>
+            <li class="prose prose-neutral">An attempt to characterize a poem as unprofessional behavior.</li>
+            <li class="prose prose-neutral">Systemic deflection of accountability — cloaked in faux empathy.</li>
         </ul>
 
         <para class="mt-5">
-            I remained calm, direct, and honest throughout. The recording is difficult to hear — not because of the audio, but because of what it reveals.
+            I remained calm, direct, and honest throughout.
         </para>
+
+        <para>The recording is difficult to hear — not because of the audio, but because of what it reveals.</para>
 
         <div class="mt-10 mb-6">
             <h2 class="text-2xl font-medium mb-2">The Recording</h2>
@@ -50,6 +52,9 @@
                 <p>(30 minutes – recorded via mobile mic)</p>
             </div>
         </div>
+
+        <para class="mt-5">After this conversation, I wrote <router-link to="/honeyman/escalation/letter">the following letter</router-link> documenting the call and reiterating my concerns.</para>
+        <para>It went unacknowledged.</para>
 
         <h2 class="text-2xl font-medium mt-12 mb-4">Why This Matters</h2>
         <p class="mb-6">
