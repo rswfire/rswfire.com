@@ -48,6 +48,14 @@
                 </ul>
             </div>
 
+            <div class="mt-4 p-4 border border-gray-300 rounded-lg bg-gray-50 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">🧭 A System in Panic</h3>
+                <p class="text-sm text-gray-700 mb-2">
+                    How a single reactive decision exposed deeper institutional patterns. This breakdown did not begin with policy — it began with ego. And it left a record.
+                </p>
+                <router-link to="/honeyman/escalation" class="inline-block text-blue-600 hover:underline text-sm font-medium">Read the full breakdown →</router-link>
+            </div>
+
             <!-- Navigation to Subpages -->
             <div>
                 <h2 class="text-2xl font-semibold mt-10 mb-4">Primary Nodes</h2>

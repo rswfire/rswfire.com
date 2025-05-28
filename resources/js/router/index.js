@@ -24,6 +24,11 @@ const routes = [
         component: () => import('../pages/honeyman/Index.vue'),
     },
     {
+        path: '/honeyman/escalation',
+        name: 'HoneymanEscalation',
+        component: () => import('../pages/honeyman/Escalation.vue'),
+    },
+    {
         path: '/honeyman/meeting',
         name: 'HoneymanMeeting',
         component: () => import('../pages/honeyman/Meeting.vue'),
