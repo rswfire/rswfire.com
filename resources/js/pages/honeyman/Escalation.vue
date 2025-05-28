@@ -17,7 +17,7 @@
         <ul>
             <li class="pt-5 prose prose-neutral"><para><strong>March 24, 2025</strong> – I receive a phone call from Ryan Warren, ostensibly to schedule a meeting. When I ask why, he reacts emotionally, and dismisses me on the spot — over the phone.</para></li>
             <li class="prose prose-neutral"><para><strong>One hour later</strong> – Ryan shows up at my site in person. I record him taking my keys and documents. He admits he has no paperwork, offers no formal explanation, and tells me I have 24 hours to vacate the park.</para></li>
-            <li class="prose prose-neutral"><para><strong>March 25, 2025</strong> – I speak with Allison Watson. That conversation is now public. I refute each of the frames used to justify my dismissal — calmly, clearly, without evasion.</para></li>
+            <li class="prose prose-neutral"><para><strong>March 25, 2025</strong> – I <router-link to="/honeyman/silencing">speak with Allison Watson</router-link>. That conversation is now public. I refute each of the frames used to justify my dismissal — calmly, clearly, without evasion.</para></li>
             <li class="prose prose-neutral"><para><strong>Later that day</strong> – I relocate to Tugman, as planned. Rangers are visibly uncertain — the ripple from Honeyman has reached them. I had volunteered there previously without issue.</para></li>
             <li class="prose prose-neutral"><para><strong>That evening</strong> – I send Allison the following email. She never acknowledges it. Less than 24 hours later, I am permanently dismissed.</para></li>
             <li class="prose prose-neutral"><para><strong>March 26, 2025</strong> – I receive a formal permanent dismissal from OPRD via email. The language is as vague as all of their previous accusations.</para></li>
@@ -37,6 +37,7 @@
             It was a calculated displacement, cloaked in policy, triggered by presence, and finalized with silence.</para>
 
         <para class="pt-5"><strong>🔗 <router-link to="/honeyman/meeting">See the March 5 Interrogation with Ryan Warren and Kati Baker</router-link>.</strong></para>
+        <para><strong>🔗 <router-link to="/honeyman/silencing">Watch my meeting with Allison Watson</router-link>.</strong></para>
         <para><strong>🔗 <router-link to="/honeyman/escalation/letter">Read my letter to Allison Watson</router-link>.</strong></para>
 
         <div class="mt-5 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">

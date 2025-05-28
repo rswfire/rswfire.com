@@ -1,32 +1,34 @@
 <template>
-    <section class="min-h-screen bg-gray-100 text-gray-900 px-6 py-12">
-        <div class="max-w-4xl mx-auto space-y-12">
-        <h1 class="text-4xl font-semibold mb-4">The Silencing — March 25, 2025</h1>
-        <p class="text-sm text-gray-400 mb-8">Last Updated: 05/27/25 · WIP</p>
+    <content>
+        <hero
+            title="HONEYMAN STATE PARK, OPRD &mdash; MEETING WITH ALLISON WATSON"
+            subtitle="The Silencing"
+            meta="Last Updated: 05/27/25 &mdash; WIP"
+        />
 
-        <p class="mb-6">
+        <para class="mt-5">
             This wasn’t a conversation. It was a containment protocol.
-        </p>
+        </para>
 
-        <p class="mb-6">
+        <para>
             On March 25, 2025, I received a call from Allison Watson — Volunteer Engagement Coordinator at Oregon State Parks. I recorded the conversation for documentation and review. This was one day after Ryan Warren dismissed me from Honeyman State Park, and one day before Allison made the decision to end my entire volunteer relationship with the agency.
-        </p>
+        </para>
 
-        <p class="mb-6">
+        <para>
             In this call, you will hear:
-        </p>
+        </para>
 
         <ul class="list-disc list-inside mb-6 space-y-2">
-            <li>Allison justifying my dismissal using vague, unverified third-party reports</li>
-            <li>Repeated reframing of my reflective statements into misconduct</li>
-            <li>A refusal to acknowledge the hourlong gaslighting session conducted by Ryan and Kati</li>
-            <li>An attempt to characterize a poem as unprofessional behavior</li>
-            <li>Systemic deflection of accountability — cloaked in faux empathy</li>
+            <li class="pt-5 prose prose-neutral">Allison justifying my dismissal using vague, unverified third-party reports</li>
+            <li class="prose prose-neutral">Repeated reframing of my reflective statements into misconduct</li>
+            <li class="prose prose-neutral">A refusal to acknowledge the hourlong gaslighting session conducted by Ryan and Kati</li>
+            <li class="prose prose-neutral">An attempt to characterize a poem as unprofessional behavior</li>
+            <li class="prose prose-neutral">Systemic deflection of accountability — cloaked in faux empathy</li>
         </ul>
 
-        <p class="mb-6">
+        <para class="mt-5">
             I remained calm, direct, and honest throughout. The recording is difficult to hear — not because of the audio, but because of what it reveals.
-        </p>
+        </para>
 
         <div class="mt-10 mb-6">
             <h2 class="text-2xl font-medium mb-2">The Recording</h2>
@@ -45,7 +47,7 @@
                     </div>
                 </div>
                 <p><a href="#">🔊 Full Recording — March 25 Call with Allison Watson</a></p>
-                <p>(30 minutes – audio only – recorded via mobile mic)</p>
+                <p>(30 minutes – recorded via mobile mic)</p>
             </div>
         </div>
 
@@ -69,8 +71,8 @@
         </p>
 
         <p class="mt-12 text-gray-400 text-sm">— Sam White · <a href="https://rswfire.com/honeyman" class="underline">rswfire.com/honeyman</a></p>
-    </div>
-    </section>
+
+    </content>
 </template>
 
 <script setup>
