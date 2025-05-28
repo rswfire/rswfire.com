@@ -36,12 +36,12 @@
         <para>This wasn’t a misunderstanding.<br />
             It was a calculated displacement, cloaked in policy, triggered by presence, and finalized with silence.</para>
 
-        <para class="pt-5"><strong>🔗 <router-link to="/honeyman/meeting">See the March 5 Interrogation</router-link>.</strong></para>
-        <para><strong>🔗 <router-link to="/honeyman/escalation/letter">Read my letter to Allison</router-link>.</strong></para>
+        <para class="pt-5"><strong>🔗 <router-link to="/honeyman/meeting">See the March 5 Interrogation with Ryan Warren and Kati Baker</router-link>.</strong></para>
+        <para><strong>🔗 <router-link to="/honeyman/escalation/letter">Read my letter to Allison Watson</router-link>.</strong></para>
 
         <div class="mt-5 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
             <h2 class="text-lg font-semibold mb-2">🎥 Watch the Reading</h2>
-            <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
+            <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison Watson permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
             <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
                 <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
                     <div

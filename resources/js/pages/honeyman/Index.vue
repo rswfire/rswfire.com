@@ -93,6 +93,8 @@
             <p class="mt-4 font-medium text-gray-700">
                 This is the record. This is the beginning. This is the page they hoped would never be written.
             </p>
+            <para>If you are an OPRD employee, volunteer, or state official who has experienced or witnessed similar behavior — you’re not alone. You may contact me directly, or document what you’ve seen in your own words. The page you are reading now exists because silence is no longer acceptable.</para>
+
         </div>
     </content>
 </template>
