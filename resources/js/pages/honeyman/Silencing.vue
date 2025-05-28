@@ -53,6 +53,14 @@
             </div>
         </div>
 
+        <para><strong>Curious what I was doing at the start of this video</strong>? That first breath says:
+
+            “I am stepping into a system that does not see me,
+            but I will hold my clarity anyway.”
+
+            I was centering myself, knowing that I was about to navigate distortion, and that's precisely what happened. Allison was not present during that call, except for one very brief moment when even she was shocked by Ryan's behavior, but that was quickly masked, and she was gone again.
+        </para>
+
         <para class="mt-5">After this conversation, I wrote <router-link to="/honeyman/escalation/letter">the following letter</router-link> documenting the call and reiterating my concerns.</para>
         <para>It went unacknowledged.</para>
 
