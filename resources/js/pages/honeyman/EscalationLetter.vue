@@ -20,6 +20,12 @@
             </div>
         </div>
 
+
+        <para class="mt-5"><strong>This letter was sent to Allison Watson on March 25, 2025 — the evening before I was permanently dismissed from the Oregon State Parks volunteer program.</strong></para>
+        <para><strong>It was not acknowledged. It was not referenced in the dismissal.</strong></para>
+        <para><strong>It remains one of the most direct, measured attempts to bring clarity, truth, and accountability into an environment that rejected all three.</strong></para>
+        <para><strong>To this day, it has never been answered.</strong></para>
+
         <para class="mt-5">Hi Allison,</para>
 
         <para>Thank you again for taking the time to speak with me. I’ve reflected on our conversation and want to offer some additional context for the record—both to clarify key points and to express concern about how some of what I shared may be interpreted.</para>
