@@ -12,19 +12,19 @@
         <p>Some moments I feel are important to emphasize:</p>
         <ul>
 
-        Ryan telling me to "eat glass" during our March 5 meeting was not a miscommunication—it was inappropriate and aggressive. What I did not mention in the call, but now want to add, is that he used this same phrase in the Welcome Center the very first time he confronted me. That makes it a pattern. I have reason to believe this is not an isolated incident.
+            <li>Ryan telling me to "eat glass" during our March 5 meeting was not a miscommunication—it was inappropriate and aggressive. What I did not mention in the call, but now want to add, is that he used this same phrase in the Welcome Center the very first time he confronted me. That makes it a pattern. I have reason to believe this is not an isolated incident.</li>
 
-        At the end of that March 5 meeting, Ryan spent five minutes repeating that “I could just leave” if I felt uncomfortable. That wasn’t support—it was pressure. The interaction felt coercive and deeply unprofessional. And you can hear it clearly in his tone.
+            <li>At the end of that March 5 meeting, Ryan spent five minutes repeating that “I could just leave” if I felt uncomfortable. That wasn’t support—it was pressure. The interaction felt coercive and deeply unprofessional. And you can hear it clearly in his tone.</li>
 
-        Logan’s behavior, including doing stretches in front of me during a long shift at the Welcome Center, created discomfort and blurred boundaries. As a new volunteer, I didn’t know how to respond appropriately to a situation where I felt my professionalism was being tested by someone in a position of authority.
+            <li>Logan’s behavior, including doing stretches in front of me during a long shift at the Welcome Center, created discomfort and blurred boundaries. As a new volunteer, I didn’t know how to respond appropriately to a situation where I felt my professionalism was being tested by someone in a position of authority.</li>
 
-        Logan also told me that Ranger Leaf would train me, a commitment he never followed through on—Leaf had no knowledge of it. That breach was the final breakdown of trust in what was already a fragile dynamic.
+            <li>Logan also told me that Ranger Leaf would train me, a commitment he never followed through on—Leaf had no knowledge of it. That breach was the final breakdown of trust in what was already a fragile dynamic.</li>
 
-        Ryan admitted in our meeting that he never gave me the benefit of the doubt, beginning with my initial interaction with Kati. That admission confirms the feeling I carried throughout my time at Honeyman: that I was being judged through a fixed lens, regardless of my conduct.
+            <li>Ryan admitted in our meeting that he never gave me the benefit of the doubt, beginning with my initial interaction with Kati. That admission confirms the feeling I carried throughout my time at Honeyman: that I was being judged through a fixed lens, regardless of my conduct.</li>
 
-        The journal incident was misrepresented. My comment to the ranger assistant—"not all rangers are helpful"—was not a criticism of staff. It was an appeal to ensure the journal was not ignored in the lost and found. As someone who has been homeless, I know the emotional significance of a journal, and I was simply asking that extra care be taken.
+            <li>The journal incident was misrepresented. My comment to the ranger assistant—"not all rangers are helpful"—was not a criticism of staff. It was an appeal to ensure the journal was not ignored in the lost and found. As someone who has been homeless, I know the emotional significance of a journal, and I was simply asking that extra care be taken.</li>
 
-        The issue of guest perception was related to my early text message to Kati when the power went out. My statement that “I own this problem in the eyes of guests” was not a misunderstanding of my role. It was an accurate reflection of how guests see park hosts—as the first point of contact. My message was about optics, not blame or misalignment.
+            <li>The issue of guest perception was related to my early text message to Kati when the power went out. My statement that “I own this problem in the eyes of guests” was not a misunderstanding of my role. It was an accurate reflection of how guests see park hosts—as the first point of contact. My message was about optics, not blame or misalignment.</li>
 
         </ul>
 
@@ -44,9 +44,9 @@
 
         <p>Sam White</p>
 
-        <div class="mt-12 p-4 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
+        <div class="mt-12 p-4 pt-0 border border-gray-300 bg-gray-50 rounded-md shadow-sm">
             <h2 class="text-lg font-semibold mb-2">🎥 Watch the Reading</h2>
-            <p class="mb-3 text-sm text-gray-700">I read this into the record on March 27, after Allison had dismissed me from the volunteer program without any acknowledgement of the letter. To this day, it has never been acknowledged.</p>
+            <p class="mb-3 text-sm text-gray-700">I recorded this reading on March 27, after Allison permanently dismissed me from the volunteer program — without ever acknowledging the letter. To this day, it remains unanswered.</p>
             <div class="w-full md:w-2/3 rounded-md border border-gray-200 shadow-sm">
                 <div ref="videoContainer" class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200">
                     <div
