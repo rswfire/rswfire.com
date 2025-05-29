@@ -95,7 +95,7 @@
             <div>And when I shared my truth — my background, my journey, my sacrifices —</div>
             <div>Logan didn’t receive it.</div>
             <div>He tried to manage my perception.</div>
-            <div>Amd would weaponize it later.</div>
+            <div>And would weaponize it later.</div>
             <div>Then disappear again.</div>
             </para>
 
