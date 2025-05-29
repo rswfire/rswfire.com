@@ -29,13 +29,68 @@
             </div>
         </div>
 
-        <div class="prose prose-neutral max-w-none mt-5">
 
-            <para>
-            <div><strong>The Story of Honeyman</strong></div>
-            <div><strong>What They Did. What I Saw. What I Carried.</strong></div>
-            <div><em>— by Sam White</em></div>
-            </para>
+        <section id="key-individuals" class="mt-16 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-2">Key Individuals</h2>
+                <p class="italic text-sm text-gray-600">Oregon Parks &amp; Recreation Division (OPRD)</p>
+
+            <p class="text-sm text-gray-600">
+                These are the central figures referenced throughout this archive — each played a distinct role in the events that unfolded at Honeyman State Park and within Oregon State Parks as a whole.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+
+                <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold text-lg mb-1">Ryan Warren</h3>
+                    <p class="text-sm text-gray-700">
+                        Park Manager, Honeyman State Park.<br/>
+                        The primary enforcer of coercive tactics — initiated multiple confrontations, including the recorded March 5 meeting and a surprise dismissal phone call. His leadership masked control as professionalism.
+                    </p>
+                </li>
+
+                <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold text-lg mb-1">Kati Baker</h3>
+                    <p class="text-sm text-gray-700">
+                        Park Supervisor, Honeyman State Park.<br/>
+                        The architect of early distortion. After a brief exchange about power outage perception, she withdrew, delegating discomfort through silence and seeding a lasting narrative of dismissal.
+                    </p>
+                </li>
+
+                <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold text-lg mb-1">Logan Bliss</h3>
+                    <p class="text-sm text-gray-700">
+                        Volunteer Supervisor.<br/>
+                        Absent at key moments, then reappearing to manage perception. Shared personal stories, broke professional boundaries, and later helped justify the escalation through silence and complicity.
+                    </p>
+                </li>
+
+                <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                    <h3 class="font-semibold text-lg mb-1">Allison Watson</h3>
+                    <p class="text-sm text-gray-700">
+                        Volunteer Engagement Coordinator, OPRD Central.<br/>
+                        Conducted the post-dismissal call. Framed reflective truth as misconduct. Refused to acknowledge documented abuse, and issued the permanent dismissal without responding to direct concerns.
+                    </p>
+                </li>
+
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-10 mb-4">Index of Breaches</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Psychological manipulation disguised as supervision</li>
+                <li>Covert operative sent under false pretense (documented)</li>
+                <li>Retaliation following a single private text holding a supervisor accountable</li>
+                <li>Coerced off-the-record interrogation by park management (recorded)</li>
+                <li>Pattern of isolation, silencing, and weaponization of identity</li>
+                <li>Final dismissal with no documentation, no due process, no cause</li>
+            </ul>
+        </div>
+        </section>
+
+            <section id="system-in-panic" class="mt-16 border-t border-gray-300 pt-12 text-black">
+                <div class="prose prose-neutral max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold mb-2">The Story of Honeyman</h2>
+                    <p class="italic text-sm text-gray-600">What They Did. What I Saw. What I Carried.<br/><em>— by Sam White</em></p>
 
             <para>
             <div>I arrived at Honeyman State Park not to fill a shift, but to hold a field —</div>
@@ -240,27 +295,8 @@
             </para>
 
         </div>
+            </section>
 
-        <div class="mt-4 p-4 border border-gray-300 rounded-lg bg-gray-50 shadow-sm">
-            <h3 class="text-lg font-semibold text-gray-800 mb-1">🧭 A System in Panic</h3>
-            <p class="text-sm text-gray-700 mb-2">
-                How a single reactive decision exposed deeper institutional patterns. This breakdown did not begin with policy — it began with ego. And it left a record.
-            </p>
-            <router-link to="/honeyman/escalation" class="inline-block text-blue-600 hover:underline text-sm font-medium">Read the full breakdown →</router-link>
-        </div>
-
-        <!-- Index of Breaches -->
-        <div>
-            <h2 class="text-2xl font-semibold mt-10 mb-4">Index of Breaches</h2>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Psychological manipulation disguised as supervision</li>
-                <li>Covert operative sent under false pretense (documented)</li>
-                <li>Retaliation following a single private text holding a supervisor accountable</li>
-                <li>Coerced off-the-record interrogation by park management (recorded)</li>
-                <li>Pattern of isolation, silencing, and weaponization of identity</li>
-                <li>Final dismissal with no documentation, no due process, no cause</li>
-            </ul>
-        </div>
 
         <section id="day-use-meeting" class="mt-16 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
@@ -355,6 +391,66 @@
             </div>
         </section>
 
+        <section id="system-in-panic" class="mt-16 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-2">Timeline: A System in Panic</h2>
+                <p class="italic text-sm text-gray-600">March 24-26, 2025 — The Moment They Banished Me</p>
+
+            <p>
+                I was scheduled to leave Honeyman on March 30 — and begin my next assignment at Tugman State Park. I was calm. I was complete. I was prepared to go.
+                But Ryan Warren couldn’t let me leave clean. And what followed was a chain reaction that exposed how fragile the system really was.
+            </p>
+
+            <h3 class="text-lg font-semibold mt-6">📆 The Sequence</h3>
+
+            <ul class="space-y-4 border-l border-gray-300 pl-4">
+                <li>
+                    <strong>March 24, 2025 —</strong> Ryan Warren calls to request a third meeting. When I ask why, he reacts emotionally and dismisses me on the spot — over the phone.
+                </li>
+                <li>
+                    <strong>One hour later —</strong> Ryan shows up at my RV. I record him taking my keys and site documents. He admits he has no paperwork, no formal grounds, no process. Just presence — and power.
+                </li>
+                <li>
+                    <strong>March 25, 2025 —</strong> I speak with Allison Watson. That recording is public. I calmly refute the distortion, frame by frame.
+                </li>
+                <li>
+                    <strong>Later that day —</strong> I move to Tugman State Park as planned. I had served there previously. Rangers on-site are visibly uncertain. The disturbance has traveled.
+                </li>
+                <li>
+                    <strong>That evening —</strong> I send Allison a detailed email documenting my experience. She never acknowledges it.
+                </li>
+                <li>
+                    <strong>March 26, 2025 —</strong> I receive my permanent dismissal via email. The language is sterile. No charges, no violations — just vague institutional tone.
+                </li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mt-8">🎯 What This Reveals</h3>
+
+            <p>
+                This was not about performance.
+                It was about control.
+            </p>
+
+            <p>
+                It wasn’t a response to misconduct.
+                It was a response to coherence — especially when that coherence left a written trail.
+            </p>
+
+            <p>
+                Leadership wasn’t upholding standards.
+                They were protecting a story — and reacting to its disruption.
+            </p>
+
+            <p>
+                This was not a misunderstanding.
+                It was a calculated displacement —
+                cloaked in policy,
+                triggered by presence,
+                and finalized with silence.
+            </p>
+        </div>
+        </section>
+
         <section id="call-with-allison-watson" class="mt-16 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
                 <h2 class="text-2xl font-semibold mb-2">Call with Allison Watson</h2>
@@ -417,7 +513,7 @@
         <section id="letter-to-allison" class="mt-16 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
                 <h2 class="text-2xl font-semibold mb-2">Letter to Allison Watson</h2>
-                <p class="italic text-sm text-gray-600">March 5, 2025 — The Letter They Could Not Metabolize</p>
+                <p class="italic text-sm text-gray-600">March 27, 2025 — The Letter They Could Not Metabolize</p>
 
             <p>
                 This letter was sent to Allison Watson the evening before I was permanently dismissed from the Oregon State Parks volunteer program.
