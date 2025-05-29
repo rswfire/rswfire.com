@@ -1,71 +1,37 @@
 <template>
-    <div
-        ref="videoContainer"
-        class="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-md border border-gray-200"
-    >
-        <div
-            :id="playerId"
-            class="absolute top-0 left-0 w-full h-full"
-        ></div>
+    <div class="relative w-full pt-[56.25%]">
+        <div :id="playerId" class="absolute top-0 left-0 w-full h-full"></div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue';
+import { useYouTubeApi } from '../useYoutubeApi.js';
+import { nanoid } from 'nanoid';
 
 const props = defineProps({
-    videoId: { type: String, required: true },
-})
+    videoId: {
+        type: String,
+        required: true,
+    },
+});
 
-const player = ref(null)
-const playerReady = ref(false)
-const videoContainer = ref(null)
-const playerId = `youtube-player-${Math.random().toString(36).substring(2, 10)}`
-let resizeObserver = null
-
-const loadYouTubeAPI = () => {
-    return new Promise((resolve) => {
-        if (window.YT && window.YT.Player) return resolve()
-
-        window.onYouTubeIframeAPIReady = () => resolve()
-
-        const tag = document.createElement('script')
-        tag.src = 'https://www.youtube.com/iframe_api'
-        document.body.appendChild(tag)
-    })
-}
+const playerId = `youtube-player-${nanoid(8)}`;
+let player = null;
 
 onMounted(async () => {
-    await loadYouTubeAPI()
-
-    nextTick(() => {
-        player.value = new window.YT.Player(playerId, {
-            videoId: props.videoId,
-            playerVars: {
-                modestbranding: 1,
-                rel: 0,
-                enablejsapi: 1
-            },
-            events: {
-                onReady: () => {
-                    playerReady.value = true
-                    if (videoContainer.value) {
-                        resizeObserver = new ResizeObserver(() => {
-                            /* Optional: react to size changes */
-                        })
-                        resizeObserver.observe(videoContainer.value)
-                    }
-                }
-            }
-        })
-    })
-})
+    await useYouTubeApi();
+    player = new window.YT.Player(playerId, {
+        videoId: props.videoId,
+        playerVars: {
+            modestbranding: 1,
+            rel: 0,
+            enablejsapi: 1,
+        },
+    });
+});
 
 onBeforeUnmount(() => {
-    if (player.value?.destroy) player.value.destroy()
-    if (resizeObserver && videoContainer.value) resizeObserver.unobserve(videoContainer.value)
-    player.value = null
-    resizeObserver = null
-    playerReady.value = false
-})
+    if (player?.destroy) player.destroy();
+});
 </script>
