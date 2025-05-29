@@ -3,6 +3,7 @@ import App from "./pages/App.vue";
 import "../css/app.css";
 import router from './router';
 import VueGtag from 'vue-gtag-next';
+import { createHead } from '@vueuse/head'
 
 import Content from './components/system/Content.vue'
 import Hero from './components/system/Hero.vue'
@@ -16,6 +17,7 @@ router.afterEach((to) => {
 
 
 const app = createApp(App);
+const head = createHead();
 
 app.component('Content', Content);
 app.component('Hero', Hero);
@@ -24,6 +26,7 @@ app.component("YoutubePlayer", YoutubePlayer);
 
 const gtagId = 'G-5K6H8GR1Q7';
 
+app.use(head);
 app.use(router);
 app.use(VueGtag, {
     property: {
