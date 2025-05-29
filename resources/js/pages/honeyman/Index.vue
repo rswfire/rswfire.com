@@ -262,7 +262,83 @@
             </ul>
         </div>
 
-        <!-- Navigation to Subpages -->
+        <section id="day-use-meeting" class="mt-16 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-2">The Honeyman Day-Use Area Meeting</h2>
+                <p class="italic text-sm text-gray-600">March 5, 2025 — The Moment They Tried to Break Me</p>
+
+                <p><strong>This was not a meeting. It was containment dressed as dialogue.</strong></p>
+
+                <p>
+                    I was summoned to a picnic table in a public area of Honeyman State Park —
+                    framed by trees, watched by no one, yet orchestrated for a specific effect.
+                    Ryan and Kati sat across from me. Calm tones. Professional cadence. Measured silences.
+                    What followed was over an hour of psychological pressure, narrative distortion, and coded manipulation —
+                    designed not to resolve anything, but to subtly destabilize me enough that I’d remove myself.
+                </p>
+
+                <p>
+                    I didn’t. I stayed. I recorded. And now, the record stands.
+                </p>
+
+                <h3 class="mt-8 text-lg font-semibold">The Recording</h3>
+                <youtube-player videoId="iOuaufCH_I8" />
+
+                <p class="mt-4 text-sm italic text-gray-600">
+                    This recording was captured in a public setting, conducted by public employees,
+                    involving matters of consequence to my name and trajectory.
+                    There was no privacy notice. No warning. No reason to withhold witness.
+                    The law can debate its admissibility. But I assert its necessity.
+                </p>
+
+                <h3 class="mt-8 text-lg font-semibold">Time-Indexed Highlights</h3>
+                <table class="table-auto w-full text-sm mt-2 border-collapse border border-gray-400">
+                    <thead>
+                    <tr>
+                        <th class="border px-2 py-1 bg-gray-100">Time</th>
+                        <th class="border px-2 py-1 bg-gray-100">Segment</th>
+                        <th class="border px-2 py-1 bg-gray-100">Summary</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td class="border px-2 py-1">00:12</td><td class="border px-2 py-1">Opening Setup</td><td class="border px-2 py-1">Emails reframed as misconduct — tone replaces truth</td></tr>
+                    <tr><td class="border px-2 py-1">09:17</td><td class="border px-2 py-1">Patrick Conflict</td><td class="border px-2 py-1">Sam explains, Ryan redirects — discomfort framed as “triggers”</td></tr>
+                    <tr><td class="border px-2 py-1">17:40</td><td class="border px-2 py-1">Email Style</td><td class="border px-2 py-1">Clarity misread as aggression, reflection recast as tone policing</td></tr>
+                    <tr><td class="border px-2 py-1">23:56</td><td class="border px-2 py-1">“Chew Glass”</td><td class="border px-2 py-1">Ryan offers submission dressed as resilience</td></tr>
+                    <tr><td class="border px-2 py-1">39:30</td><td class="border px-2 py-1">No Benefit of Doubt</td><td class="border px-2 py-1">Ryan admits no goodwill was ever extended to Sam</td></tr>
+                    <tr><td class="border px-2 py-1">42:12</td><td class="border px-2 py-1">Shifting Blame</td><td class="border px-2 py-1">Sam held responsible for atmosphere, not action</td></tr>
+                    <tr><td class="border px-2 py-1">49:00</td><td class="border px-2 py-1">Assume Positive Intent</td><td class="border px-2 py-1">Sam told to trust the people who already broke it</td></tr>
+                    <tr><td class="border px-2 py-1">56:05</td><td class="border px-2 py-1">Exit Pressure</td><td class="border px-2 py-1">Encouraged to leave — no cause, only subtle push</td></tr>
+                    <tr><td class="border px-2 py-1">01:00:30</td><td class="border px-2 py-1">Closing Line</td><td class="border px-2 py-1">Sam names the distortion. Refuses the script. Holds shape.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="mt-8 text-lg font-semibold">Why This Was Preserved</h3>
+                <p>
+                    Because what happened that day was not accidental.
+                    It was deliberate — institutional harm deployed politely,
+                    with plausible deniability and procedural tone.
+                    This recording is not shared to punish. It is shared to prevent erasure.
+                </p>
+
+                <p>
+                    If you listen closely, you will hear something familiar:
+                    a system prioritizing its comfort over truth,
+                    its authority over clarity,
+                    its image over integrity.
+                </p>
+
+                <p>
+                    This is how it operates — softly, professionally, behind picnic tables.
+                </p>
+
+                <p class="font-semibold">Now, you can hear it for yourself.</p>
+            </div>
+        </section>
+
+
+
+                        <!-- Navigation to Subpages -->
         <div>
             <h2 class="text-2xl font-semibold mt-10 mb-4">Primary Nodes</h2>
             <ul class="space-y-2 text-blue-600 underline text-lg">
@@ -310,6 +386,7 @@
 
 <script setup>
 
+import YoutubePlayer from "../../components/system/YoutubePlayer.vue";
 </script>
 
 <style scoped>
