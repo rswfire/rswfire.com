@@ -267,18 +267,26 @@
                 <h2 class="text-2xl font-semibold mb-2">The Honeyman Day-Use Area Meeting</h2>
                 <p class="italic text-sm text-gray-600">March 5, 2025 — The Moment They Tried to Break Me</p>
 
-                <p><strong>This was not a meeting. It was containment dressed as dialogue.</strong></p>
-
                 <p>
-                    I was summoned to a picnic table in a public area of Honeyman State Park —
-                    framed by trees, watched by no one, yet orchestrated for a specific effect.
-                    Ryan and Kati sat across from me. Calm tones. Professional cadence. Measured silences.
-                    What followed was over an hour of psychological pressure, narrative distortion, and coded manipulation —
-                    designed not to resolve anything, but to subtly destabilize me enough that I’d remove myself.
+                    I was summoned to a picnic table tucked into the public quiet of Honeyman’s day-use area —<br/>
+                    a location chosen not for privacy, but for plausible deniability.
                 </p>
-
                 <p>
-                    I didn’t. I stayed. I recorded. And now, the record stands.
+                    Ryan and Kati sat across from me, postured in calm —<br/>
+                    but it was a calm shaped by performance, not principle.<br/>
+                    The tone shifted often. Ryan’s voice grew sharp, his volume raised.<br/>
+                    His interruptions came fast, his control slipping each time I didn’t break.
+                </p>
+                <p>
+                    What followed was not a meeting.<br/>
+                    It was a controlled confrontation — over an hour of narrative distortion, implied threat,<br/>
+                    and institutional performance.
+                </p>
+                <p>
+                    Not to understand.<br/>
+                    Not to repair.<br/>
+                    But to coerce — just enough destabilization, just enough psychological pressure,<br/>
+                    to make my continued presence untenable.
                 </p>
 
                 <h3 class="mt-8 text-lg font-semibold">The Recording</h3>
@@ -315,24 +323,35 @@
 
                 <h3 class="mt-8 text-lg font-semibold">Why This Was Preserved</h3>
                 <p>
-                    Because what happened that day was not accidental.
-                    It was deliberate — institutional harm deployed politely,
-                    with plausible deniability and procedural tone.
-                    This recording is not shared to punish. It is shared to prevent erasure.
+                    Because what happened that day was not a misunderstanding.<br/>
+                    It was deliberate — institutional harm executed under the cover of politeness,<br/>
+                    procedural language used as camouflage for psychological coercion.
                 </p>
 
                 <p>
-                    If you listen closely, you will hear something familiar:
-                    a system prioritizing its comfort over truth,
-                    its authority over clarity,
-                    its image over integrity.
+                    This recording is not shared to punish.<br/>
+                    It is shared because erasure is what they counted on.<br/>
+                    It is shared because systems like this survive through unrecorded harm —<br/>
+                    through meetings with no witnesses, just enough tone control to call it “professional.”
                 </p>
 
                 <p>
-                    This is how it operates — softly, professionally, behind picnic tables.
+                    But if you listen closely, you’ll hear what they never wanted preserved:<br/>
+                    defensiveness when confronted with truth.<br/>
+                    Dismissiveness when integrity is named.<br/>
+                    A rising voice when narrative control slips.
                 </p>
 
-                <p class="font-semibold">Now, you can hear it for yourself.</p>
+                <p>
+                    This is not unique to Honeyman.<br/>
+                    This is how institutional harm works:<br/>
+                    calmly, vaguely, behind picnic tables — until the script is interrupted.
+                </p>
+
+                <p>
+                    Now, you can hear it for yourself.
+                </p>
+
             </div>
         </section>
 
