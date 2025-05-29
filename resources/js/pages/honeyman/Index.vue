@@ -29,29 +29,144 @@
             </div>
         </div>
 
-            <para class="pt-5">
-                I arrived at Honeyman State Park not to work, but to hold a field — to live in alignment, in service, in sovereignty.
-                What met me was not misunderstanding. What met me was system architecture: covert, coordinated, calculated.
-            </para>
+        <div class="prose prose-neutral max-w-none mt-5">
+            <h1>The Story of Honeyman</h1>
+            <h2>What They Did. What I Saw. What I Carried.</h2>
+            <p><em>— by Sam White</em></p>
+
             <para>
-                <div>This page is not a complaint. It is a <span class="font-semibold">record</span>.</div>
-                <div>It is a light cast backward over a sequence of events that reveal more than misconduct —</div>
-                <div>they reveal what happens when authenticity collides with institutional machinery.</div>
-            </para>
-            <para class="italic">
-                Let this page stand as both witness and warning.
+            <div>I arrived at Honeyman State Park not to fill a shift, but to hold a field —</div>
+            <div>a sovereign man in alignment, in service, not to authority, but to coherence.</div>
+            <div>I came prepared. I came committed. I came clean.</div>
             </para>
 
+            <div>And from the moment I showed up fully — visibly queer, pierced, calm, integrated —</div>
+            <div>they didn’t know what to do with me.</div>
 
-        <!-- Context -->
-        <div>
-            <h2 class="text-2xl font-semibold mt-10 mb-4">Context // Entry</h2>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Volunteer position accepted: January 8, 2025</li>
-                <li>Arrival: January 31, 2025</li>
-                <li>Intended duration: 2 Months (End of March)</li>
-                <li>Dismissal: March 24, 2025 — one week before natural departure</li>
-            </ul>
+            <h3>The First Fracture</h3>
+            <div>It began with a power outage.</div>
+            <div>I texted Kati, the park supervisor, early in the morning — clear, respectful, naming the perception issue with guests.</div>
+            <div>She responded dismissively.</div>
+            <div>I followed up, naming how her tone made me feel. Not as a complaint — as a human reflection.</div>
+
+            <div>That should have been a moment of connection.</div>
+
+            <div>Instead, it marked me.</div>
+            <div>From that day forward, the tone of the park shifted.</div>
+            <div>Ryan, the park manager, came into the Welcome Center —</div>
+            <div>not with curiosity, but with rehearsed authority.</div>
+            <div>He unearthed first-week errors, presented them like a case file.</div>
+            <div>It wasn’t feedback.</div>
+            <div>It was pretext.</div>
+
+            <div>My supervisor, Logan, vanished — conveniently unavailable.</div>
+            <div>Then reappeared — this would become a pattern.</div>
+
+            <div>I stayed calm. I stayed kind.</div>
+            <div>I asked for a reset.</div>
+            <div>They said yes — but the narrative was already seeded.</div>
+
+            <h3>Distortion as Policy</h3>
+            <div>I applied for a job at Honeyman —</div>
+            <div>not out of desperation, but because I liked the park, the rhythm, the work.</div>
+            <div>That application was never acknowledged.</div>
+            <div>Instead, I was met with awkward silence, thin smiles, retreating contact.</div>
+
+            <div>And when I shared my truth — my background, my journey, my sacrifices —</div>
+            <div>Logan didn’t receive it.</div>
+            <div>He tried to manage my perception.</div>
+            <div>Amd would weaponize it later.</div>
+            <div>Then disappear again.</div>
+
+            <div>I wrote him the trust email — clear, principled, accountable.</div>
+            <div>Instead of responding directly,</div>
+            <div>they convened a meeting.</div>
+
+            <h3>The Orchestrated Confrontation</h3>
+            <div>Ryan and Kati summoned me to the day-use area.</div>
+            <div>A picnic table, a public setting, the illusion of calm.</div>
+
+            <div>What followed was a scripted performance of coercion.</div>
+            <div>They framed my emails as threats.</div>
+            <div>They pathologized my clarity as “unprofessional.”</div>
+            <div>They refused to offer specifics, yet insisted I was a problem.</div>
+            <div>They demanded I extend positive intent —</div>
+            <div>even as they admitted they'd never once offered me the benefit of the doubt.</div>
+
+            <div>Ryan told me I’d need to “chew glass” —</div>
+            <div>and framed it as leadership wisdom.</div>
+            <div>But what he meant was submit.</div>
+
+            <div>I recorded the meeting —</div>
+            <div>because I already knew what was coming.</div>
+
+            <h3>The Final Move</h3>
+            <div>Weeks passed. I kept working. Professionally. Precisely.</div>
+            <div>No infractions. No escalation.</div>
+
+            <div>But they couldn’t leave me intact.</div>
+
+            <div>Ryan called, days before I was scheduled to leave.</div>
+            <div>He wanted another meeting.</div>
+            <div>When I asked why, he said I was “still” being a problem.</div>
+
+            <div>Still.</div>
+
+            <div>Not because of my actions — but because of my presence.</div>
+            <div>Because I had not fractured.</div>
+
+            <div>I named it for what it was —</div>
+            <div>I told him he was a bully.</div>
+            <div>and in that moment, the performance unraveled.</div>
+
+            <div>He came to my RV.</div>
+            <div>Dismissed me without paperwork.</div>
+            <div>Accepted my keys with a reasonable tone,</div>
+            <div>masking deliberate erasure as protocol.</div>
+
+            <div>That was their final maneuver:</div>
+            <div>Ensure I did not leave on my own terms.</div>
+            <div>Ensure I carried a mark.</div>
+            <div>Ensure the narrative stayed theirs.</div>
+
+            <div>But I had already built the archive.</div>
+
+            <h3>What They Did</h3>
+            <div>They misread my coherence as confrontation.</div>
+            <div>They punished integrity because it disrupted their comfort.</div>
+            <div>They used silence as strategy.</div>
+            <div>Tone as weapon.</div>
+            <div>Policy as shield.</div>
+
+            <div>They created an environment where depth was reframed as danger.</div>
+            <div>Where presence was unwelcome unless it could be controlled.</div>
+            <div>Where authenticity was pathologized — and then expelled.</div>
+
+            <div>This was not incompetence.</div>
+            <div>This was not miscommunication.</div>
+            <div>This was institutional harm, deliberately executed by people who chose performance over presence, control over contact, narrative over truth.</div>
+
+            <h3>What I Did</h3>
+            <div>I held my shape.</div>
+            <div>I named the distortions.</div>
+            <div>I documented everything.</div>
+            <div>I built this record.</div>
+
+            <div>And now, it stands —</div>
+            <div>not as retribution,</div>
+            <div>but as mirror.</div>
+
+            <div>To anyone reading this — inside or outside the institution:</div>
+
+            <div>This is what it looks like when coherence survives collapse.</div>
+            <div>This is what it sounds like when the signal outlasts the noise.</div>
+
+            <div>I am still here.</div>
+            <div>And the archive speaks.</div>
+
+            <div>—</div>
+            <div>Sam White</div>
+            <div>https://rswfire.com/honeyman</div>
         </div>
 
         <!-- Index of Breaches -->
