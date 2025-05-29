@@ -3,7 +3,7 @@
         <hero
             title="HONEYMAN STATE PARK, OPRD"
             subtitle="What They Did. What I Saw. What I Carried."
-            meta="Last Updated: 05/28/25 &mdash; WIP"
+            meta="Last Updated: 05/28/25"
         />
 
         <div class="flex justify-center mt-6 mb-10">
@@ -355,49 +355,83 @@
             </div>
         </section>
 
+        <section id="call-with-allison-watson" class="mt-16 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-2">Call with Allison Watson</h2>
+                <p class="italic text-sm text-gray-600">March 25, 2025 — The Moment They Tried to Erase Me</p>
 
+            <p>
+                This wasn’t a conversation. It was a containment protocol.
+            </p>
 
-                        <!-- Navigation to Subpages -->
-        <div>
-            <h2 class="text-2xl font-semibold mt-10 mb-4">Primary Nodes</h2>
-            <ul class="space-y-2 text-blue-600 underline text-lg">
-                <li><router-link to="/honeyman/meeting">The Meeting – Transcript + Analysis of the March 5 Interrogation</router-link></li>
-                <li><router-link to="/honeyman/the-setup">The Setup – An IT Employee, a Dirty Yurt, and the Baited Encounter</router-link></li>
-                <li><router-link to="/honeyman/the-emails">The Emails – How Clarity Was Framed as Threat</router-link></li>
-                <li><router-link to="/honeyman/the-dismissal">The Dismissal – What They Said. What They Didn’t.</router-link></li>
-                <li><router-link to="/honeyman/silencing">The Silencing – Allison’s Role and Institutional Failure</router-link></li>
-                <li><router-link to="/honeyman/the-system">The System – How Park Leadership Polices Authenticity</router-link></li>
-                <li><router-link to="/honeyman/the-record">The Record – Documents, Screenshots, Audio Receipts</router-link></li>
+            <p>
+                One day after my dismissal from Honeyman — and one day before my entire volunteer role was terminated —
+                I received a phone call from Allison Watson, Volunteer Engagement Coordinator for Oregon State Parks.
+                I recorded the call for documentation and clarity.
+            </p>
+
+            <p>
+                What you’ll hear is not a leader showing up in presence.
+                It is institutional posture cloaked in empathy — a soft tone used to reroute accountability,
+                a performance that frames legitimacy as disruption.
+            </p>
+
+            <p>
+                In this call, you will hear:
+            </p>
+
+            <ul>
+                <li>Vague, unverifiable third-party reports used to justify my removal</li>
+                <li>Reflective statements reframed as misconduct</li>
+                <li>Complete refusal to engage the March 5 coercion meeting</li>
+                <li>A poem treated as a behavioral issue</li>
+                <li>Empathy used not to connect — but to contain</li>
             </ul>
+
+            <p>
+                The audio is clear. The subtext is clearer. This is what it sounds like when a system
+                pretends to listen — while making sure nothing changes.
+            </p>
+
+            <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Full Recording — March 25 Call with Allison Watson</div>
+                <div class="p-4">
+                    <youtube-player videoId="Px_pCUo78w4" />
+                </div>
+                <p class="text-sm italic text-gray-500 m-0 p-2">
+                    That first breath you hear at the start?
+                    It was me centering. I knew I was stepping into distortion —
+                    and I held my clarity anyway.
+                </p>
+            </div>
+
+            <p>
+                After this call, I wrote Allison a letter — clear, precise, rooted in truth.
+                She never responded.
+            </p>
+
         </div>
 
-        <!-- Statement -->
-        <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-gray-800">
-            <blockquote class="text-lg italic text-gray-800">
-                “What happened to me here cannot be dismissed as misunderstanding.
-                It was design.
-                It was the institutional response to a sovereign field they could not subsume.”
-            </blockquote>
-            <p class="mt-4 text-right font-semibold">— Sam White</p>
-        </div>
+        </section>
+
 
         <!-- Closing -->
         <div class="pt-8 text-sm text-gray-600 border-t border-gray-300">
             <p>
-                This page is not for revenge.
-                It is for those who have been told they imagined it.
-                It is for those about to walk into something similar.
+                This page is not for revenge.<br/>
+                It is for those who have been told they imagined it.<br/>
+                It is for those about to walk into something similar.<br/>
                 It is for the future, when denial no longer holds.
             </p>
             <p class="mt-4">
-                It does not ask for apology.
-                It does not ask for repair.
+                It does not ask for apology.<br/>
+                It does not ask for repair.<br/>
                 It exists <span class="font-semibold">so that the next distortion cannot pretend it was the first.</span>
             </p>
             <p class="mt-4 font-medium text-gray-700">
                 This is the record. This is the beginning. This is the page they hoped would never be written.
             </p>
-            <para>If you are an OPRD employee, volunteer, or state official who has experienced or witnessed similar behavior — you’re not alone. You may contact me directly, or document what you’ve seen in your own words. The page you are reading now exists because silence is no longer acceptable.</para>
+            <p class="mt-4 italic">If you are an OPRD employee, volunteer, or state official who has experienced or witnessed similar behavior — you’re not alone. You may contact me directly, or document what you’ve seen in your own words. The page you are reading now exists because silence is no longer acceptable.</p>
 
         </div>
     </content>
