@@ -91,7 +91,16 @@
 
 import {defineComponent} from "vue";
 import FieldRecordsPreview from "../components/FieldRecordsPreview.vue";
+import { useMeta } from '../components/useMeta.ts'
 
+useMeta({
+    title: 'rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 export default defineComponent({
     components: {FieldRecordsPreview}
 })

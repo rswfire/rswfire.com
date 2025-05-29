@@ -15,21 +15,21 @@
                 to="/hello"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
-                <span>👤</span> <span>About Me</span>
+                <span>👤</span> <span>Who I Am</span>
             </router-link>
 
             <router-link
                 to="/tech"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
-                <span>🛠</span> <span>Tech History</span>
+                <span>🛠</span> <span>What I Do</span>
             </router-link>
 
             <router-link
                 to="/the-journey"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
-                <span>🜂</span> <span>The Journey</span>
+                <span>🜂</span> <span>My Journey</span>
             </router-link>
 
             <router-link

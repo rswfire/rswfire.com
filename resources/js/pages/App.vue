@@ -49,6 +49,16 @@
 <script setup>
 import { ref } from "vue";
 import MobileNav from "@/components/menu/Panel.vue";
+import { useMeta } from '../components/useMeta.ts'
+
+useMeta({
+    title: 'rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 
 const menuOpen = ref(false);
 

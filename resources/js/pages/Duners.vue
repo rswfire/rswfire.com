@@ -63,7 +63,16 @@
 </template>
 
 <script setup>
-// No interactivity needed for now.
+import { useMeta } from '../components/useMeta.ts'
+
+useMeta({
+    title: 'To The Ones Who Ride the Sand | rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 </script>
 
 <style scoped>

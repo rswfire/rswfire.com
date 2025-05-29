@@ -21,30 +21,7 @@ const routes = [
     {
         path: '/honeyman',
         name: 'Honeyman',
-        component: () => import('../pages/honeyman/Index.vue'),
-        meta: {
-            title: 'The Story of Honeyman · rswfire',
-        },
-    },
-    {
-        path: '/honeyman/escalation',
-        name: 'HoneymanEscalation',
-        component: () => import('../pages/honeyman/Escalation.vue'),
-    },
-    {
-        path: '/honeyman/escalation/letter',
-        name: 'HoneymanEscalationLetter',
-        component: () => import('../pages/honeyman/EscalationLetter.vue'),
-    },
-    {
-        path: '/honeyman/meeting',
-        name: 'HoneymanMeeting',
-        component: () => import('../pages/honeyman/Meeting.vue'),
-    },
-    {
-        path: '/honeyman/silencing',
-        name: 'HoneymanSilencing',
-        component: () => import('../pages/honeyman/Silencing.vue'),
+        component: () => import('../pages/Honeyman.vue')
     },
     {
         path: '/contact',

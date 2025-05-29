@@ -22,6 +22,16 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useMeta } from '../components/useMeta.ts'
+
+useMeta({
+    title: 'Lexicon | rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 
 const lexicon = ref(null)
 

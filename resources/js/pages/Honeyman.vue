@@ -29,7 +29,6 @@
             </div>
         </div>
 
-
         <section id="key-individuals" class="mt-16 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
                 <h2 class="text-2xl font-semibold mb-2">Key Individuals</h2>
@@ -610,8 +609,8 @@
 
 <script setup>
 
-import YoutubePlayer from "../../components/system/YoutubePlayer.vue";
-import { useMeta } from '../../components/useMeta.ts'
+import YoutubePlayer from "../components/system/YoutubePlayer.vue";
+import { useMeta } from '../components/useMeta.ts'
 
 useMeta({
     title: 'The Story of Honeyman | rswfire.com',

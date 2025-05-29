@@ -359,6 +359,16 @@
 <script setup>
 import LexiconTerm from "@/components/LexiconTerm.vue"
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useMeta } from '../components/useMeta.ts'
+
+useMeta({
+    title: 'Who I Am | rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 
 const player = ref(null)
 const playerReady = ref(false)

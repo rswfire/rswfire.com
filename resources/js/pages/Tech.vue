@@ -113,6 +113,16 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import { useMeta } from '../components/useMeta.ts'
+
+useMeta({
+    title: 'What I Do | rswfire.com',
+    description: 'Robert Samuel White',
+    keywords: 'rswfire',
+    image: '',
+    url: 'https://rswfire.com/',
+    type: 'article',
+})
 
 const player = ref(null)
 const playerReady = ref(false)
