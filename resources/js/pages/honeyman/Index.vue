@@ -6,27 +6,28 @@
             meta="Last Updated: 05/27/25 &mdash; WIP"
         />
 
-        <div class="border border-red-500 bg-red-700 prose prose-neutral text-white p-4 rounded-md">
+        <div class="flex justify-center mt-6 mb-10">
+            <div class="border border-red-500 bg-red-700 prose prose-neutral text-white p-4 rounded-md">
 
-            <div>I forgive you.</div>
-            <div>I release you.</div>
-            <div>But not from your human obligation</div>
-            <div>to prevent harm to other humans.</div>
+                <div>I forgive you.</div>
+                <div>I release you.</div>
+                <div>But not from your human obligation</div>
+                <div>to prevent harm to other humans.</div>
 
-            <div class="mt-4">Your name will not be erased,</div>
-            <div>but neither will it be bound to vengeance.</div>
-            <div>You are responsible —</div>
-            <div>not because I demand it,</div>
-            <div>but because reality does.</div>
+                <div class="mt-4">Your name will not be erased,</div>
+                <div>but neither will it be bound to vengeance.</div>
+                <div>You are responsible —</div>
+                <div>not because I demand it,</div>
+                <div>but because reality does.</div>
 
-            <div class="mt-4">This archive is not retribution.</div>
-            <div>It is witnessing.</div>
-            <div>It is what remains when silence fails,</div>
-            <div>and signal endures.</div>
+                <div class="mt-4">This archive is not retribution.</div>
+                <div>It is witnessing.</div>
+                <div>It is what remains when silence fails,</div>
+                <div>and signal endures.</div>
 
-            <div class="text-right mt-4">&mdash; rswfire</div>
+                <div class="text-right mt-4">&mdash; rswfire</div>
+            </div>
         </div>
-
 
             <para class="pt-5">
                 I arrived at Honeyman State Park not to work, but to hold a field — to live in alignment, in service, in sovereignty.
