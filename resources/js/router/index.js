@@ -22,6 +22,9 @@ const routes = [
         path: '/honeyman',
         name: 'Honeyman',
         component: () => import('../pages/honeyman/Index.vue'),
+        meta: {
+            title: 'The Story of Honeyman · rswfire',
+        },
     },
     {
         path: '/honeyman/escalation',

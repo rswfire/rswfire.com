@@ -9,6 +9,12 @@ import Hero from './components/system/Hero.vue'
 import Para from './components/system/Para.vue'
 import YoutubePlayer from './components/system/YoutubePlayer.vue'
 
+router.afterEach((to) => {
+    const defaultTitle = 'rswfire';
+    document.title = to.meta.title || defaultTitle;
+});
+
+
 const app = createApp(App);
 
 app.component('Content', Content);

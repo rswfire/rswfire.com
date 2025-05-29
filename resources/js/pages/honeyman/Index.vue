@@ -1,8 +1,8 @@
 <template>
     <content>
         <hero
-            title="HONEYMAN STATE PARK, OPRD"
-            subtitle="What They Did. What I Saw. What I Carried."
+            title="THE STORY OF HONEYMAN"
+            subtitle="Honeyman State Park, Oregon Parks & Recreation"
             meta="Last Updated: 05/28/25"
         />
 
