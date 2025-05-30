@@ -31,7 +31,12 @@ import MarkdownIt from "markdown-it"
 const route = useRoute()
 const entry = ref({})
 const renderedBody = ref("")
-const md = new MarkdownIt()
+const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true
+})
 
 onMounted(async () => {
     const { data } = await axios.get(`/api/content/${route.params.id}`)

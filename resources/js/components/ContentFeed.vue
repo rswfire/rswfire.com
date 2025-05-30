@@ -22,7 +22,13 @@ import axios from 'axios'
 import MarkdownIt from 'markdown-it'
 
 const entries = ref([])
-const md = new MarkdownIt({ html: true, linkify: true, typographer: true })
+const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true
+})
+
 
 onMounted(async () => {
     const response = await axios.get('/api/content?type=field-record')

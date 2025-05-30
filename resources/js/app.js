@@ -4,6 +4,7 @@ import "../css/app.css";
 import router from './router';
 import VueGtag from 'vue-gtag-next';
 import { createHead } from '@vueuse/head'
+import MarkdownIt from 'markdown-it'
 
 import Content from './components/system/Content.vue'
 import Hero from './components/system/Hero.vue'
@@ -18,6 +19,14 @@ router.afterEach((to) => {
 
 const app = createApp(App);
 const head = createHead();
+
+const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    breaks: true
+});
+
+app.config.globalProperties.$md = md;
 
 app.component('Content', Content);
 app.component('Hero', Hero);
