@@ -15,7 +15,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web([
             \App\Http\Middleware\VerifyCsrfToken::class,
         ]);
+
+        $middleware->alias([
+            'field.key' => \App\Http\Middleware\VerifyFieldAccessKey::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-    })->create();
+    })
+    ->create();

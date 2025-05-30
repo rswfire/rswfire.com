@@ -30,7 +30,18 @@
                     v-model="form.meta"
                     type="text"
                     class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                    placeholder='e.g. {"tags":["drama","absurdity"]}'
+                    placeholder='e.g. {"tags":["sovereignty","field-record"]}'
+                />
+            </div>
+
+            <div>
+                <label for="access_code" class="block text-sm font-medium text-gray-700 mt-4">Access Code</label>
+                <input
+                    id="access_code"
+                    v-model="form.access_code"
+                    type="password"
+                    class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                    placeholder="Enter access code"
                 />
             </div>
 
@@ -43,6 +54,7 @@
         </form>
 
         <p v-if="submitted" class="text-green-600 mt-4">Record submitted successfully.</p>
+        <p v-if="error" class="text-red-600 mt-2">{{ error }}</p>
     </div>
 </template>
 
@@ -53,28 +65,45 @@ import axios from 'axios'
 const form = ref({
     title: '',
     body: '',
+    meta: '',
+    access_code: ''
 })
 
 const submitted = ref(false)
+const error = ref('')
 
 async function submit() {
-    await axios.post('/api/content', {
-        content_type: 'field-record',
-        content_title: form.value.title,
-        content_body: form.value.body,
-        content_meta: safeParse(form.value.meta),
-    })
+    submitted.value = false
+    error.value = ''
 
-    submitted.value = true
-    form.value.title = ''
-    form.value.body = ''
+    try {
+        await axios.post('/api/content', {
+            content_type: 'field-record',
+            content_title: form.value.title,
+            content_body: form.value.body,
+            content_meta: safeParse(form.value.meta),
+            access_code: form.value.access_code
+        })
+
+        submitted.value = true
+        form.value.title = ''
+        form.value.body = ''
+        form.value.meta = ''
+        form.value.access_code = ''
+    } catch (err) {
+        if (err.response?.status === 403) {
+            error.value = 'Access denied: invalid access code.'
+        } else {
+            error.value = 'Submission failed. Please check your input and try again.'
+        }
+    }
 }
 
 function safeParse(input) {
     try {
         return JSON.parse(input || "{}")
     } catch {
-        return { raw: input } // fallback if user types "drama, absurdity"
+        return { raw: input }
     }
 }
 </script>
