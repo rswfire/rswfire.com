@@ -2,32 +2,31 @@
     <content>
         <hero
             title="THE STORY OF HONEYMAN"
-            subtitle="Honeyman State Park, Oregon Parks & Recreation"
-            meta="Last Updated: 05/28/25"
+            subtitle="Honeyman State Park, Oregon Parks &amp; Recreation Department (OPRD)"
+            meta="Last Updated: 06/02/25"
         />
 
-        <div class="flex justify-center mt-6 mb-10">
-            <div class="border border-red-500 bg-red-700 prose prose-neutral text-white p-4 rounded-md">
+        <section id="context-matters" class="mt-6 mb-10 w-full">
+            <div class="w-full border border-blue-500 bg-blue-700 text-white p-4 rounded-md">
 
-                <div>I forgive you.</div>
-                <div>I release you.</div>
-                <div>But not from your human obligation</div>
-                <div>to prevent harm to other humans.</div>
+                <div class="text-white"><strong class="text-white">⚠️ Context Matters</strong></div>
+                <div>What you are about to read may surprise you.</div>
+                <div>But what should truly shock you is this:</div>
 
-                <div class="mt-4">Your name will not be erased,</div>
-                <div>but neither will it be bound to vengeance.</div>
-                <div>You are responsible —</div>
-                <div>not because I demand it,</div>
-                <div>but because reality does.</div>
+                <div class="mt-5">Every action taken by this institution was directed at an unpaid volunteer.</div>
+                <div>Someone without a salary, without institutional protection, without power.</div>
+                <div>Someone who showed up—by choice—to serve.</div>
+                <div>And they were bullied, surveilled, manipulated, and ultimately discarded.</div>
 
-                <div class="mt-4">This archive is not retribution.</div>
-                <div>It is witnessing.</div>
-                <div>It is what remains when silence fails,</div>
-                <div>and signal endures.</div>
+                <div class="mt-5">Hold that in mind as you move through this archive.</div>
 
-                <div class="text-right mt-4">&mdash; rswfire</div>
+                <div class="mt-5">This is not just a story of bureaucratic overreach.</div>
+                <div>It is a window into how systems treat difference, how authenticity is policed,</div>
+                <div>and how even the most vulnerable participants are framed as threats</div>
+                <div>when they maintain integrity in the face of institutional dysfunction.</div>
+
             </div>
-        </div>
+        </section>
 
         <section id="key-individuals" class="mt-16 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
@@ -584,6 +583,99 @@
         </section>
 
 
+        <section id="naming-the-harm" class="mt-16 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-2">Naming the Harm &mdash; My Final Letter to Allison Watson</h2>
+                <p class="italic text-sm text-gray-600">May 28, 2025 — The Letter They Must Reckon With</p>
+
+                <p>
+                    Two months and one day after my vulnerable follow-up letter was met with silence, I named the full scope of the harm — in language precise enough to carry its weight into the public record
+                </p>
+        <h3 class="text-lg font-semibold mt-8">Read the Letter</h3>
+
+        <div class="max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 space-y-4 text-sm leading-relaxed">
+            <div class="mt-5">Hi Allison,</div>
+
+            <div class="mt-5">This letter is not a request.</div>
+            <div>It is not an invitation to respond.</div>
+            <div>It is a statement of record.</div>
+
+            <div class="mt-5">I am writing to formally name the harm that occurred under your leadership — and to inform you that the audio of our March 25 conversation is now public.</div>
+
+            <div class="mt-5">That recording is not an accusation. It is a mirror.</div>
+            <div>And now, for the first time, others can hear what I heard — the tone, the silences, the institutional language that reframed lived human experience as “concerning” and “unprofessional.” The video speaks for itself.</div>
+
+            <div class="mt-5">🔗 Watch the recording: https://rswfire.com/honeyman/silencing</div>
+            <div>🔗 YouTube: https://youtu.be/Px_pCUo78w4</div>
+
+            <div class="mt-5">I’ve also included a page that documents the letter I sent to you that night, and a video of me reading it into the public record as testimony:</div>
+            <div>🔗 https://rswfire.com/honeyman/escalation/letter</div>
+
+            <div class="mt-5">The surrounding events are now documented here:</div>
+            <div>🔗 https://rswfire.com/honeyman/escalation</div>
+
+            <div class="mt-5">You asked me to speak openly. I did.</div>
+
+            <div class="mt-5">I told you what Ryan said to me. How he told me to "eat glass." How Logan blurred boundaries. How I was denied the benefit of the doubt from day one. I said all of this calmly, clearly, without hostility, and with the hope that it might matter.</div>
+
+            <div class="mt-5">Later that night, I sent you a follow-up letter.</div>
+
+            <div class="mt-5">It added context, detailed evidence, and gave you another opportunity to respond with presence and integrity.</div>
+
+            <div class="mt-5">You never acknowledged it.</div>
+
+            <div class="mt-5">Instead, less than twenty-four hours later, you made my dismissal permanent — a decision that now lives in stark contrast to the content of our recorded call.</div>
+
+            <div class="mt-5">So I want to name — clearly, and for the record — the full scope of harm:</div>
+
+            <div class="mt-5">You dismissed serious misconduct with silence.</div>
+
+            <div class="mt-5">You avoided specificity in order to maintain plausible deniability.</div>
+
+            <div class="mt-5">You framed human depth as inappropriate rather than interrogating your own discomfort.</div>
+
+            <div class="mt-5">You positioned yourself as a neutral evaluator while executing a pre-determined outcome.</div>
+
+            <div class="mt-5">You ignored a vulnerable and sincere follow-up letter, and responded instead with expulsion.</div>
+
+            <div class="mt-8">But there is more.</div>
+
+            <div class="mt-5">You shielded misconduct by refusing to investigate or intervene — permitting coercive behavior and inappropriate power dynamics to persist under your leadership.</div>
+
+            <div class="mt-5">You sanctioned erasure — not only of my role, but of the narrative I offered in good faith.</div>
+
+            <div class="mt-5">You endorsed retaliation by validating a removal that originated not in protocol, but in personal offense.</div>
+
+            <div class="mt-5">You fractured systemic trust, sending a clear signal to others: that clarity is dangerous, and documented truth will be buried if it threatens internal comfort.</div>
+
+            <div class="mt-5">You reinforced harmful patterns by protecting those who distorted, manipulated, and coerced — ensuring they remain unaccountable.</div>
+
+            <div class="mt-5">You disappeared the humanity of this moment. When you had the opportunity to meet it with courage, you met it with closure.</div>
+
+            <div class="mt-5">And perhaps most significantly:</div>
+            <div>You made yourself the endpoint — not a bridge, not a voice of integrity, but a terminus. A silence.</div>
+
+            <div class="mt-5">This is not about policy. It is about responsibility.</div>
+
+            <div class="mt-5">You had a choice. You could have acted with presence. With reflection. With care.</div>
+            <div>You didn’t.</div>
+
+            <div class="mt-5">I’m not asking you to undo it.</div>
+            <div>I’m naming that it happened — and ensuring that the record will outlast the silence that followed.</div>
+
+            <div class="mt-5">The archive is now public.</div>
+            <div>You are part of it.</div>
+            <div>And that, too, will be permanent.</div>
+
+            <div class="mt-5">—</div>
+            <div>Sam White</div>
+            <div>https://rswfire.com/honeyman</div>
+
+        </div>
+
+        </div>
+        </section>
+
 
         <!-- Closing -->
         <div class="pt-8 text-sm text-gray-600 border-t border-gray-300">
@@ -604,6 +696,30 @@
             <p class="mt-4 italic">If you are an OPRD employee, volunteer, or state official who has experienced or witnessed similar behavior — you’re not alone. You may contact me directly, or document what you’ve seen in your own words. The page you are reading now exists because silence is no longer acceptable.</p>
 
         </div>
+
+        <div class="w-full mt-6 mb-10">
+            <div class="border border-red-500 bg-red-700 text-white p-4 rounded-md">
+
+                <div>I forgive you.</div>
+                <div>I release you.</div>
+                <div>But not from your human obligation</div>
+                <div>to prevent harm to other humans.</div>
+
+                <div class="mt-4">Your name will not be erased,</div>
+                <div>but neither will it be bound to vengeance.</div>
+                <div>You are responsible —</div>
+                <div>not because I demand it,</div>
+                <div>but because reality does.</div>
+
+                <div class="mt-4">This archive is not retribution.</div>
+                <div>It is witnessing.</div>
+                <div>It is what remains when silence fails,</div>
+                <div>and signal endures.</div>
+
+                <div class="text-right mt-4">&mdash; rswfire</div>
+            </div>
+        </div>
+
     </content>
 </template>
 
