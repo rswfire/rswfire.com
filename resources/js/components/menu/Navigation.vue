@@ -29,6 +29,13 @@
                 to="/the-journey"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
+                <span>🌪️</span> <span>The Myth</span>
+            </router-link>
+
+            <router-link
+                to="/the-journey"
+                class="flex items-center gap-2 hover:text-red-600 transition"
+            >
                 <span>🜂</span> <span>My Journey</span>
             </router-link>
 
