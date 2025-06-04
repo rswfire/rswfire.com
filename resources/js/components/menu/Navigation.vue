@@ -26,7 +26,7 @@
             </router-link>
 
             <router-link
-                to="/the-journey"
+                to="/myth"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
                 <span>🌪️</span> <span>The Myth</span>
