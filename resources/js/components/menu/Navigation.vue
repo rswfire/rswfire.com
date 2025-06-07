@@ -4,12 +4,20 @@
         <div class="text-xs uppercase font-semibold text-gray-500 mb-2 tracking-wider">Navigation</div>
 
         <nav class="space-y-1 ml-1">
+
             <router-link
                 to="/"
                 class="flex items-center gap-2 hover:text-red-600 transition"
             >
                 <span>🏠</span> <span>Home</span>
             </router-link>
+
+            <router-link
+                    to="/lexicon"
+                    class="flex items-center gap-2 hover:text-red-600 transition"
+                >
+                    <span>🔐</span> <span>Lexicon</span>
+                </router-link>
 
             <router-link
                 to="/hello"
@@ -49,14 +57,7 @@
         </nav>
 
     </div>
-    <div class="text-center">
-        <router-link
-            to="/lexicon"
-            class="flex items-center gap-2 hover:text-red-600 transition"
-        >
-            <span>Lexicon</span>
-        </router-link>
-    </div>
+
     <div class="mt-5 text-center">
         <a href="https://github.com/rswfire/rswfire.com" target="_blank">Source Code at GitHub</a>
     </div>

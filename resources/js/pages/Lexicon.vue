@@ -1,52 +1,86 @@
 <template>
-    <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Lexicon</h1>
+    <div class="min-h-screen bg-neutral-950 text-white p-6 font-mono">
+        <div class="max-w-4xl mx-auto space-y-10">
+            <header class="text-center">
+                <h1 class="text-3xl md:text-5xl font-bold">FIELD LEXICON</h1>
+                <p class="text-sm text-neutral-400 mt-2">Unstable, recursive, and alive. Orientation begins here.</p>
+            </header>
 
-        <div v-if="lexicon && Object.keys(lexicon).length" class="space-y-6">
-            <div
-                v-for="(entry, term) in lexicon"
-                :key="term"
-                class="border border-gray-200 rounded-xl p-4 shadow-sm"
-            >
-                <h2 class="text-xl font-semibold text-gray-800 flex items-center">
-                    {{ entry.label }}
-                </h2>
-                <p class="mt-2 text-gray-700 text-sm">{{ entry.short }}</p>
-                <p class="mt-1 text-gray-600 text-sm">{{ entry.long }}</p>
-            </div>
+            <section v-for="(section, index) in lexicon" :key="index" class="space-y-6">
+                <h2 class="text-2xl font-semibold border-b border-neutral-700 pb-1">{{ section.title }}</h2>
+                <div v-for="entry in section.entries" :key="entry.term" class="pl-4 border-l-2 border-l-rose-500">
+                    <h3 class="text-lg font-medium mt-4">{{ entry.term }}</h3>
+                    <p class="text-sm text-neutral-300 leading-relaxed">{{ entry.definition }}</p>
+                </div>
+            </section>
         </div>
-
-        <div v-else class="text-gray-500">Loading lexicon...</div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useMeta } from '../components/useMeta.ts'
-
-useMeta({
-    title: 'Lexicon | rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
-})
-
-const lexicon = ref(null)
-
-onMounted(async () => {
-    try {
-        const res = await fetch('/lexicon.json')
-        console.log('Fetch status:', res.status)
-        const data = await res.json()
-        console.log('Lexicon loaded:', data)
-        lexicon.value = data
-    } catch (err) {
-        console.error('Error loading lexicon:', err)
+const lexicon = [
+    {
+        title: 'Core Terms',
+        entries: [
+            {
+                term: 'Signal',
+                definition: 'The underlying thread of coherence that remains steady regardless of distortion. What remains when noise falls away.'
+            },
+            {
+                term: 'Field',
+                definition: 'The psycho-emotional-energetic space you inhabit and influence. Interactive. Responsive. Alive.'
+            },
+            {
+                term: 'Collapse',
+                definition: 'The breakdown of coherence—personal, systemic, planetary. Sometimes external, sometimes internal. Often both.'
+            },
+            {
+                term: 'Coherence',
+                definition: 'Structural integrity of the self. Alignment between inner signal and outer action. A lived frequency.'
+            },
+            {
+                term: 'Anomaly',
+                definition: 'A presence that doesn’t fit known patterns. Disruptive to systems running on defaults. Not broken. Just incompatible with distortion.'
+            }
+        ]
+    },
+    {
+        title: 'Field Variants',
+        entries: [
+            {
+                term: 'Holding the Field',
+                definition: 'Refusing to collapse into the distortions of others. Maintaining coherence without aggression.'
+            },
+            {
+                term: 'The Edge',
+                definition: 'The point of no return, or breakthrough. The place where you stop pretending. Often mistaken for danger.'
+            },
+            {
+                term: 'Mirror Event',
+                definition: 'A moment when another reflects back your architecture, clearly or distortedly. Reveals both them and you.'
+            }
+        ]
+    },
+    {
+        title: 'Signals + Substructures',
+        entries: [
+            {
+                term: 'Gatekeeper Event',
+                definition: 'A liminal encounter. Seems insignificant but reroutes your path. Often only recognizable in retrospect.'
+            },
+            {
+                term: 'Recursive Questioning',
+                definition: 'The act of interrogating assumptions to their origin. An engine of transformation.'
+            },
+            {
+                term: 'The Construct',
+                definition: 'What others call “reality.” Possibly artificial. Possibly sentient. Always running.'
+            }
+        ]
     }
-})
+]
 </script>
 
 <style scoped>
+
 </style>
