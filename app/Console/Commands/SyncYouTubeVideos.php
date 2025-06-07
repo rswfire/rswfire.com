@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Codex\Transmission;
+use Illuminate\Console\Command;
 use Google_Client;
 use Google_Service_YouTube;
-use Illuminate\Console\Command;
+use App\Models\Video;
 
 class SyncYouTubeVideos extends Command
 {
@@ -74,7 +74,7 @@ class SyncYouTubeVideos extends Command
             $duration = $this->parseDuration($info['contentDetails']['duration']);
             $stats = $info['statistics'];
 
-            Transmission::updateOrCreate(
+            Video::updateOrCreate(
                 ['youtube_id' => $strYouTubeId],
                 [
                     'video_title' => $objSnippet['title'],
