@@ -34,11 +34,6 @@ const routes = [
         component: () => import('../pages/Contact.vue'),
     },
     {
-        path: '/duners',
-        name: 'Duners',
-        component: () => import('../pages/Duners.vue'),
-    },
-    {
         path: '/the-journey',
         name: 'TheJourney',
         component: () => import('../pages/the-journey/Index.vue'),
