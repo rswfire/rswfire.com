@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Chronicle;
 
 use App\BaseModel;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
