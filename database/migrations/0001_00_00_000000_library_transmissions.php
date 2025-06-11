@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create("codex_transmissions", function (Blueprint $objTable) {
+        Schema::create("library_transmissions", function (Blueprint $objTable) {
             $objTable->ulid("transmission_id")->primary();
             $objTable->string("youtube_id", 20)->unique();
 
@@ -49,6 +49,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists("codex_transmissions");
+        Schema::dropIfExists("library_transmissions");
     }
 };

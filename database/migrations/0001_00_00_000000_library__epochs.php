@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create("codex__epochs", function (Blueprint $table) {
+        Schema::create("library__epochs", function (Blueprint $table) {
             $table->ulid("epoch_id")->primary();
             $table->string("epoch_title", 255);
             $table->text("epoch_slug");
@@ -24,6 +24,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists("codex__epochs");
+        Schema::dropIfExists("library__epochs");
     }
 };

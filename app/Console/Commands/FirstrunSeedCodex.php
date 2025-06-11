@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use App\Models\Codex\_Epoch;
+use App\Models\Library\_Epoch;
 
 class FirstrunSeedCodex extends Command
 {

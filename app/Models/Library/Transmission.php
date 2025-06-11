@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Models\Codex;
+namespace App\Models\Library;
 
 use App\BaseModel;
-use App\Models\Codex\_Anchor;
-use App\Models\Codex\_Epoch;
+use App\Models\Library\_Anchor as LibraryAnchor;
+use App\Models\Library\_Epoch as LibraryEpoch;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Transmission extends BaseModel
 {
     use HasUlids;
 
-    protected $table = "codex_transmissions";
+    protected $table = "library_transmissions";
     protected $primaryKey = "transmission_id";
 
     protected $fillable = [
@@ -57,11 +56,11 @@ class Transmission extends BaseModel
 
     public function anchor(): BelongsTo
     {
-        return $this->belongsTo(CodexAnchor::class, "anchor_id");
+        return $this->belongsTo(LibraryAnchor::class, "anchor_id");
     }
 
     public function epoch(): BelongsTo
     {
-        return $this->belongsTo(CodexEpoch::class, "epoch_id");
+        return $this->belongsTo(LibraryEpoch::class, "epoch_id");
     }
 }

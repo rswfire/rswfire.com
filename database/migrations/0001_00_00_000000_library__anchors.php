@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create("codex__anchors", function (Blueprint $objTable) {
+        Schema::create("library__anchors", function (Blueprint $objTable) {
             $objTable->ulid("anchor_id")->primary();
             $objTable->string("anchor_title", 255);
             $objTable->text("anchor_summary");
@@ -22,6 +22,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists("codex__anchors");
+        Schema::dropIfExists("library__anchors");
     }
 };

@@ -1,34 +1,30 @@
 <?php
 
-namespace App\Models\Codex;
+namespace App\Models\Library;
 
 use App\BaseModel;
-use App\Models\Codex\Transmission;
+use App\Models\Library\Transmission;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class _Epoch extends BaseModel
+class _Anchor extends BaseModel
 {
     use HasUlids;
 
-    protected $table = "codex__epochs";
-    protected $primaryKey = "epoch_id";
+    protected $table = "library__anchors";
+    protected $primaryKey = "anchor_id";
 
     protected $fillable = [
-        "epoch_title",
-        "epoch_summary",
-        "epoch_slug",
-        "epoch_start",
-        "epoch_end",
+        "anchor_title",
+        "anchor_summary",
+        "anchor_tags",
         "flag_active",
         "stamp_created",
         "stamp_updated",
     ];
 
     protected $casts = [
-        "epoch_start" => "date",
-        "epoch_end" => "date",
+        "anchor_tags" => "array",
         "flag_active" => "boolean",
         "stamp_created" => "datetime",
         "stamp_updated" => "datetime",
@@ -36,6 +32,6 @@ class _Epoch extends BaseModel
 
     public function transmissions(): HasMany
     {
-        return $this->hasMany(Transmission::class, "epoch_id");
+        return $this->hasMany(Transmission::class, "anchor_id");
     }
 }
