@@ -6,8 +6,10 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 import DefaultLayout from './Layouts/DefaultLayout.vue';
+import { createHead } from '@vueuse/head';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const head = createHead();
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -23,6 +25,7 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(head)
             .mount(el);
     },
     progress: {

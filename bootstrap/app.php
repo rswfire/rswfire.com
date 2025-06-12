@@ -15,10 +15,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append: [
             \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
+            \Clockwork\Support\Laravel\ClockworkMiddleware::class,
         ]);
 
         $middleware->web([
             \App\Http\Middleware\VerifyCsrfToken::class,
+
         ]);
 
         $middleware->alias([
