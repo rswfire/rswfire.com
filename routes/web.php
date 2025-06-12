@@ -24,11 +24,23 @@ Route::get("/chronicle", function () {
 });
 
 Route::get("/fieldwork", function () {
-    return Inertia::render("Fieldwork", [
+    return Inertia::render("Fieldwork/Home", [
         "canLogin" => Route::has("login"),
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,
         "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get('/fieldwork/{id}', function ($id) {
+    $entry = DB::table('content')->where('content_id', $id)->first();
+
+    if (!$entry) {
+        abort(404);
+    }
+
+    return Inertia::render('Fieldwork/Entry', [
+        'entry' => $entry,
     ]);
 });
 

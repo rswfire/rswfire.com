@@ -13,12 +13,12 @@
             <span>{{ entry.content_meta }}</span>
         </div>
 
-        <router-link
-            to="/field-records"
+        <Link
+            href="/fieldwork"
             class="inline-block text-sm mt-6 text-indigo-500 hover:underline"
         >
             ← Back to Records
-        </router-link>
+        </Link>
     </div>
 </template>
 
@@ -27,6 +27,7 @@ import { ref, onMounted } from "vue"
 import { useRoute } from "vue-router"
 import axios from "axios"
 import MarkdownIt from "markdown-it"
+import { Link } from "@inertiajs/vue3"
 
 const route = useRoute()
 const entry = ref({})
