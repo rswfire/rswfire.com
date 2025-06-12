@@ -35,7 +35,7 @@
                 <p class="text-sm text-gray-600">
                     These are the central tactics used by Oregon State Parks.
                 </p>
-                <ul class="pl-4 list-disc list-inside text-gray-700">
+                <ul class="pl-12 pt-6 list-disc list-inside text-gray-700">
                     <li>Psychological manipulation disguised as supervision.</li>
                     <li>Covert operative sent under false pretense (documented).</li>
                     <li>Retaliation following a single private text holding a supervisor accountable.</li>
@@ -307,37 +307,48 @@
                 <h2 class="text-2xl font-semibold">The Honeyman Day-Use Area Meeting</h2>
                 <p class="italic text-sm text-gray-600">March 5, 2025 — The Moment They Tried to Break Me</p>
 
-                <p>
-                    I was summoned to a picnic table tucked into the public quiet of Honeyman’s day-use area —<br/>
-                    a location chosen not for privacy, but for plausible deniability.
-                </p>
-                <p>
-                    Ryan and Kati sat across from me, postured in calm —<br/>
-                    but it was a calm shaped by performance, not principle.<br/>
-                    The tone shifted often. Ryan’s voice grew sharp, his volume raised.<br/>
-                    His interruptions came fast, his control slipping each time I didn’t break.
-                </p>
-                <p>
-                    What followed was not a meeting.<br/>
-                    It was a controlled confrontation — over an hour of narrative distortion, implied threat,<br/>
-                    and institutional performance.
-                </p>
-                <p>
-                    Not to understand.<br/>
-                    Not to repair.<br/>
-                    But to coerce — just enough destabilization, just enough psychological pressure,<br/>
-                    to make my continued presence untenable.
-                </p>
+                <div class="py-6 mx-12">
 
-                <h3 class="mt-8 text-lg font-semibold">The Recording</h3>
-                <youtube-player videoId="iOuaufCH_I8" />
+                    <para>
+                        <div>I was summoned to a picnic table tucked into the public quiet of Honeyman’s day-use area —</div>
+                        <div>a location chosen not for privacy, but for plausible deniability.</div>
+                    </para>
 
-                <p class="mt-4 text-sm italic text-gray-600">
-                    This recording was captured in a public setting, conducted by public employees,
-                    involving matters of consequence to my name and trajectory.
-                    There was no privacy notice. No warning. No reason to withhold witness.
-                    The law can debate its admissibility. But I assert its necessity.
-                </p>
+                    <para>
+                        <div>Ryan and Kati sat across from me, postured in calm —</div>
+                        <div>but it was a calm shaped by performance, not principle.</div>
+                        <div>The tone shifted often. Ryan’s voice grew sharp, his volume raised.</div>
+                        <div>His interruptions came fast, his control slipping each time I didn’t break.</div>
+                    </para>
+
+                    <para>
+                        <div>What followed was not a meeting.</div>
+                        <div>It was a controlled confrontation — over an hour of narrative distortion, implied threat,</div>
+                        <div>and institutional performance.</div>
+                    </para>
+
+                    <para>
+                        <div>Not to understand.</div>
+                        <div>Not to repair.</div>
+                        <div>But to coerce — just enough destabilization, just enough psychological pressure,</div>
+                        <div>to make my continued presence untenable.</div>
+                    </para>
+
+
+                    <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+                        <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Full Recording — March 5 Meeting with Ryan Warren &amp; Kati Baker</div>
+                        <div class="p-4">
+                            <youtube-player videoId="iOuaufCH_I8" />
+                        </div>
+                        <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
+                            <div>This recording was captured in a public setting, conducted by public employees,</div>
+                            <div>involving matters of consequence to my name and trajectory.</div>
+                            <div>There was no privacy notice. No warning. No reason to withhold witness.</div>
+                            <div>The law can debate its admissibility. But I assert its necessity.</div>
+                        </para>
+                    </div>
+
+                </div>
 
                 <h3 class="mt-8 text-lg font-semibold">Time-Indexed Highlights</h3>
                 <table class="table-auto w-full text-sm mt-2 border-collapse border border-gray-400">
@@ -361,53 +372,63 @@
                     </tbody>
                 </table>
 
+
+
                 <h3 class="mt-8 text-lg font-semibold">Why This Was Preserved</h3>
-                <p>
-                    Because what happened that day was not a misunderstanding.<br/>
-                    It was deliberate — institutional harm executed under the cover of politeness,<br/>
-                    procedural language used as camouflage for psychological coercion.
-                </p>
 
-                <p>
-                    This recording is not shared to punish.<br/>
-                    It is shared because erasure is what they counted on.<br/>
-                    It is shared because systems like this survive through unrecorded harm —<br/>
-                    through meetings with no witnesses, just enough tone control to call it “professional.”
-                </p>
+                <div class="py-6 mx-12">
 
-                <p>
-                    But if you listen closely, you’ll hear what they never wanted preserved:<br/>
-                    defensiveness when confronted with truth.<br/>
-                    Dismissiveness when integrity is named.<br/>
-                    A rising voice when narrative control slips.
-                </p>
+                    <para>
+                        <div>Because what happened that day was not a misunderstanding.</div>
+                        <div>It was deliberate — institutional harm executed under the cover of politeness,</div>
+                        <div>procedural language used as camouflage for psychological coercion.</div>
+                    </para>
 
-                <p>
-                    This is not unique to Honeyman.<br/>
-                    This is how institutional harm works:<br/>
-                    calmly, vaguely, behind picnic tables — until the script is interrupted.
-                </p>
+                    <para>
+                        <div>This recording is not shared to punish.</div>
+                        <div>It is shared because erasure is what they counted on.</div>
+                        <div>It is shared because systems like this survive through unrecorded harm —</div>
+                        <div>through meetings with no witnesses, just enough tone control to call it &quot;professional.&quot;</div>
+                    </para>
 
-                <p>
-                    Now, you can hear it for yourself.
-                </p>
+                    <para>
+                        <div>But if you listen closely, you’ll hear what they never wanted preserved:</div>
+                        <div>defensiveness when confronted with truth.</div>
+                        <div>Dismissiveness when integrity is named.</div>
+                        <div>A rising voice when narrative control slips.</div>
+                    </para>
+
+                    <para>
+                        <div>This is not unique to Honeyman.</div>
+                        <div>This is how institutional harm works:</div>
+                        <div>calmly, vaguely, behind picnic tables — until the script is interrupted.</div>
+                    </para>
+
+                    <para>
+                        <div>Now, you can hear it for yourself.</div>
+                    </para>
+                </div>
 
             </div>
         </section>
 
         <section id="system-in-panic" class="border-t border-gray-300 py-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
-                <h2 class="text-2xl font-semibold mb-2">Timeline: A System in Panic</h2>
+                <h2 class="text-2xl font-semibold">Timeline: A System in Panic</h2>
                 <p class="italic text-sm text-gray-600">March 24-26, 2025 — The Moment They Banished Me</p>
 
-            <p>
-                I was scheduled to leave Honeyman on March 30 — and begin my next assignment at Tugman State Park. I was calm. I was complete. I was prepared to go.
-                But Ryan Warren couldn’t let me leave clean. And what followed was a chain reaction that exposed how fragile the system really was.
-            </p>
+                <div class="py-6 mx-12">
+                    <para>
+                        <div>I was scheduled to leave Honeyman on March 30 — and begin my next assignment at Tugman State Park.</div>
+                        <div>I was calm. I was complete. I was prepared to go.</div>
+                        <div>But Ryan Warren couldn’t let me leave clean.</div>
+                        <div>And what followed was a chain reaction that exposed how fragile the system really is.</div>
+                    </para>
+                </div>
 
-            <h3 class="text-lg font-semibold mt-6">📆 The Sequence</h3>
+            <h3 class="text-lg font-semibold py-6">📆 The Sequence</h3>
 
-            <ul class="space-y-4 border-l border-gray-300 pl-4">
+            <ul class="space-y-4 border-l border-gray-300 ml-6 pl-6 mx-12">
                 <li>
                     <strong>March 24, 2025 —</strong> Ryan Warren calls to request a third meeting. When I ask why, he reacts emotionally and dismisses me on the spot — over the phone.
                 </li>
@@ -430,28 +451,33 @@
 
             <h3 class="text-lg font-semibold mt-8">🎯 What This Reveals</h3>
 
-            <p>
-                This was not about performance.
-                It was about control.
-            </p>
+            <div class="py-6 mx-12">
 
-            <p>
-                It wasn’t a response to misconduct.
-                It was a response to coherence — especially when that coherence left a written trail.
-            </p>
+                <para>
+                    <div>This was not about performance.</div>
+                    <div>It was about control.</div>
+                </para>
 
-            <p>
-                Leadership wasn’t upholding standards.
-                They were protecting a story — and reacting to its disruption.
-            </p>
+                <para>
+                    <div>It wasn’t a response to misconduct.</div>
+                    <div>It was a response to coherence — especially when that coherence left a written trail.</div>
+                </para>
 
-            <p>
-                This was not a misunderstanding.
-                It was a calculated displacement —
-                cloaked in policy,
-                triggered by presence,
-                and finalized with silence.
-            </p>
+                <para>
+                    <div>Leadership wasn’t upholding standards.</div>
+                    <div>They were protecting a story — and reacting to its disruption.</div>
+                </para>
+
+                <para>
+                    <div>This was not a misunderstanding.</div>
+                    <div>It was a calculated displacement —</div>
+                    <div>cloaked in policy,</div>
+                    <div>triggered by presence,</div>
+                    <div>and finalized with silence.</div>
+                </para>
+
+            </div>
+
         </div>
         </section>
 
@@ -460,52 +486,56 @@
                 <h2 class="text-2xl font-semibold">Call with Allison Watson</h2>
                 <p class="italic text-sm text-gray-600">March 25, 2025 — The Moment They Tried to Erase Me</p>
 
-            <p>
-                This wasn’t a conversation. It was a containment protocol.
-            </p>
+                <div class="py-6 mx-12">
 
-            <p>
-                One day after my dismissal from Honeyman — and one day before my entire volunteer role was terminated —
-                I received a phone call from Allison Watson, Volunteer Engagement Coordinator for Oregon State Parks.
-                I recorded the call for documentation and clarity.
-            </p>
+                    <para>
+                        <div>This wasn’t a conversation. It was a containment protocol.</div>
+                    </para>
 
-            <p>
-                What you’ll hear is not a leader showing up in presence.
-                It is institutional posture cloaked in empathy — a soft tone used to reroute accountability,
-                a performance that frames legitimacy as disruption.
-            </p>
+                    <para>
+                        <div>One day after my dismissal from Honeyman — and one day before my entire volunteer role was terminated —</div>
+                        <div>I received a phone call from Allison Watson, Volunteer Engagement Coordinator for Oregon State Parks.</div>
+                        <div>I recorded the call for documentation and clarity.</div>
+                    </para>
 
-            <p>
-                In this call, you will hear:
-            </p>
+                    <para>
+                        <div>What you’ll hear is not a leader showing up in presence.</div>
+                        <div>It is institutional posture cloaked in empathy — a soft tone used to reroute accountability,</div>
+                        <div>a performance that frames legitimacy as disruption.</div>
+                    </para>
 
-            <ul>
-                <li>Vague, unverifiable third-party reports used to justify my removal</li>
-                <li>Reflective statements reframed as misconduct</li>
-                <li>Complete refusal to engage the March 5 coercion meeting</li>
-                <li>A poem treated as a behavioral issue</li>
-                <li>Empathy used not to connect — but to contain</li>
-            </ul>
+                    <para>
+                        <div>In this call, you will hear:</div>
+                    </para>
 
-            <p>
-                The audio is clear. The subtext is clearer. This is what it sounds like when a system
-                pretends to listen — while making sure nothing changes.
-            </p>
+                    <ul>
+                        <li>Vague, unverifiable third-party reports used to justify my removal</li>
+                        <li>Reflective statements reframed as misconduct</li>
+                        <li>Complete refusal to engage the March 5 coercion meeting</li>
+                        <li>A poem treated as a behavioral issue</li>
+                        <li>Empathy used not to connect — but to contain</li>
+                    </ul>
 
-            <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
-                <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Full Recording — March 25 Call with Allison Watson</div>
-                <div class="p-4">
-                    <youtube-player videoId="Px_pCUo78w4" />
+                    <para>
+                        <div>The audio is clear. The subtext is clearer. This is what it sounds like when a system</div>
+                        <div>pretends to listen — while making sure nothing changes.</div>
+                    </para>
+
+                    <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+                        <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Full Recording — March 25 Call with Allison Watson</div>
+                        <div class="p-4">
+                            <youtube-player videoId="Px_pCUo78w4" />
+                        </div>
+                        <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
+                            <div>That first breath you hear at the start?</div>
+                            <div>It was me centering. I knew I was stepping into distortion —</div>
+                            <div>and I held my clarity anyway.</div>
+                        </para>
+                    </div>
+
                 </div>
-                <p class="text-sm italic text-gray-500 m-0 p-2">
-                    That first breath you hear at the start?
-                    It was me centering. I knew I was stepping into distortion —
-                    and I held my clarity anyway.
-                </p>
-            </div>
 
-        </div>
+            </div>
 
         </section>
 
@@ -514,71 +544,75 @@
                 <h2 class="text-2xl font-semibold">Letter to Allison Watson</h2>
                 <p class="italic text-sm text-gray-600">March 27, 2025 — The Letter They Could Not Metabolize</p>
 
-            <p>
-                This letter was sent to Allison Watson the evening before I was permanently dismissed from the Oregon State Parks volunteer program.
-                It was one of the most direct, honest, and measured attempts to name harm and restore clarity.
-            </p>
+                <div class="py-6 mx-12">
 
-            <p>
-                It was never acknowledged. It was not referenced in the dismissal.
-                And to this day, it has never been answered.
-            </p>
+                    <para>
+                        <div>This letter was sent to Allison Watson the evening before I was permanently dismissed from the Oregon State Parks volunteer program.</div>
+                        <div>It was one of the most direct, honest, and measured attempts to name harm and restore clarity.</div>
+                    </para>
 
-            <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                <div class="bg-gray-100 px-4 py-2 font-semibold">🎥 Watch the Reading</div>
-                <div class="p-4">
-                    <youtube-player videoId="j7awLxjn4_4" />
+                    <para>
+                        <div>It was never acknowledged. It was not referenced in the dismissal.</div>
+                        <div>And to this day, it has never been answered.</div>
+                    </para>
+
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-gray-100 px-4 py-2 font-semibold">🎥 Watch the Reading</div>
+                        <div class="p-4">
+                            <youtube-player videoId="j7awLxjn4_4" />
+                        </div>
+                        <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
+                            <div>I recorded this on March 27 — after the final dismissal.</div>
+                            <div>I was calm. Grounded. Documenting what leadership refused to hold.</div>
+                        </para>
+                    </div>
+
+                    <h3 class="text-lg font-semibold mt-8">The Letter Allison Watson Ignored</h3>
+
+                    <div class="max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 space-y-4 text-sm leading-relaxed">
+                        <para class="mt-5">Hi Allison,</para>
+
+                        <para>Thank you again for taking the time to speak with me. I’ve reflected on our conversation and want to offer some additional context for the record—both to clarify key points and to express concern about how some of what I shared may be interpreted.</para>
+
+                        <para>Throughout our conversation, I sensed a familiar pattern—where thoughtful, human interactions were being reframed post hoc as “inappropriate” or “concerning.” That reframing is not new to me. I experienced it often during my time at Honeyman, and it appeared again during our call. I want to be transparent about what I witnessed, and how it continues to shape my understanding of the institutional dynamics at play.</para>
+
+                        <para>Some moments I feel are important to emphasize:</para>
+                        <ul>
+
+                            <li class="pt-5 prose prose-neutral">Ryan telling me to "eat glass" during our March 5 meeting was not a miscommunication—it was inappropriate and aggressive. What I did not mention in the call, but now want to add, is that he used this same phrase in the Welcome Center the very first time he confronted me. That makes it a pattern. I have reason to believe this is not an isolated incident.</li>
+
+                            <li class="pt-5 prose prose-neutral">At the end of that March 5 meeting, Ryan spent five minutes repeating that “I could just leave” if I felt uncomfortable. That wasn’t support—it was pressure. The interaction felt coercive and deeply unprofessional. And you can hear it clearly in his tone.</li>
+
+                            <li class="pt-5 prose prose-neutral">Logan’s behavior, including doing stretches in front of me during a long shift at the Welcome Center, created discomfort and blurred boundaries. As a new volunteer, I didn’t know how to respond appropriately to a situation where I felt my professionalism was being tested by someone in a position of authority.</li>
+
+                            <li class="pt-5 prose prose-neutral">Logan also told me that Ranger Leaf would train me, a commitment he never followed through on—Leaf had no knowledge of it. That breach was the final breakdown of trust in what was already a fragile dynamic.</li>
+
+                            <li class="pt-5 prose prose-neutral">Ryan admitted in our meeting that he never gave me the benefit of the doubt, beginning with my initial interaction with Kati. That admission confirms the feeling I carried throughout my time at Honeyman: that I was being judged through a fixed lens, regardless of my conduct.</li>
+
+                            <li class="pt-5 prose prose-neutral">The journal incident was misrepresented. My comment to the ranger assistant—"not all rangers are helpful"—was not a criticism of staff. It was an appeal to ensure the journal was not ignored in the lost and found. As someone who has been homeless, I know the emotional significance of a journal, and I was simply asking that extra care be taken.</li>
+
+                            <li class="pt-5 prose prose-neutral">The issue of guest perception was related to my early text message to Kati when the power went out. My statement that “I own this problem in the eyes of guests” was not a misunderstanding of my role. It was an accurate reflection of how guests see park hosts—as the first point of contact. My message was about optics, not blame or misalignment.</li>
+
+                        </ul>
+
+                        <para class="pt-5">The common thread in all of this, and what I believe is the real issue, is how I’ve held leadership accountable in writing. The primary concern Ryan raised in that March 5 meeting was not my behavior—it was my emails. The vast majority of that meeting centered on my written communication, which I’ve always approached with clarity and intent. The discomfort, in my view, stemmed not from what I said—but from the fact that I said it in a format that created a record. This is an undeniable pattern that strikes at the heart of accountability and transparency.</para>
+
+                        <para>Additionally, I want to acknowledge something I did not bring up on the call: I am aware of at least three other volunteers who have had similar challenges with Ryan. His behavior is not isolated. His approach to volunteers appears to follow a consistent pattern. I raise this not to accuse, but to suggest that what I experienced fits into a broader pattern that may be worth further attention.</para>
+
+                        <para>I’m not sharing this to escalate or attack, but to ensure that the story doesn’t get flattened into something it never was. I’ve remained calm, communicative, and reflective throughout my time in this program. I’ve adapted, learned, and tried to contribute with sincerity and care. If there are aspects of my communication style that feel different, that is not a threat—it’s a strength. And it should not be weaponized to create distance or distrust.</para>
+
+                        <para>All I ask is that this be viewed with honesty and fairness. I am not asking for special treatment—just integrity in how this is held and assessed.</para>
+
+                        <para>The integrity of any volunteer program depends not only on the contributions of its volunteers—but on the willingness of leadership to be accountable when trust is compromised.</para>
+
+                        <para>Please include this message in my file as part of the ongoing review.</para>
+
+                        <para>Warm Regards,</para>
+
+                        <para>Sam White</para>
+                    </div>
+
                 </div>
-                <p class="text-sm italic text-gray-500 mt-2">
-                    I recorded this on March 27 — after the final dismissal.
-                    I was calm. Grounded. Documenting what leadership refused to hold.
-                </p>
-            </div>
-
-            <h3 class="text-lg font-semibold mt-8">The Letter Allison Watson Ignored</h3>
-
-            <div class="max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 space-y-4 text-sm leading-relaxed">
-                <para class="mt-5">Hi Allison,</para>
-
-                <para>Thank you again for taking the time to speak with me. I’ve reflected on our conversation and want to offer some additional context for the record—both to clarify key points and to express concern about how some of what I shared may be interpreted.</para>
-
-                <para>Throughout our conversation, I sensed a familiar pattern—where thoughtful, human interactions were being reframed post hoc as “inappropriate” or “concerning.” That reframing is not new to me. I experienced it often during my time at Honeyman, and it appeared again during our call. I want to be transparent about what I witnessed, and how it continues to shape my understanding of the institutional dynamics at play.</para>
-
-                <para>Some moments I feel are important to emphasize:</para>
-                <ul>
-
-                    <li class="pt-5 prose prose-neutral">Ryan telling me to "eat glass" during our March 5 meeting was not a miscommunication—it was inappropriate and aggressive. What I did not mention in the call, but now want to add, is that he used this same phrase in the Welcome Center the very first time he confronted me. That makes it a pattern. I have reason to believe this is not an isolated incident.</li>
-
-                    <li class="pt-5 prose prose-neutral">At the end of that March 5 meeting, Ryan spent five minutes repeating that “I could just leave” if I felt uncomfortable. That wasn’t support—it was pressure. The interaction felt coercive and deeply unprofessional. And you can hear it clearly in his tone.</li>
-
-                    <li class="pt-5 prose prose-neutral">Logan’s behavior, including doing stretches in front of me during a long shift at the Welcome Center, created discomfort and blurred boundaries. As a new volunteer, I didn’t know how to respond appropriately to a situation where I felt my professionalism was being tested by someone in a position of authority.</li>
-
-                    <li class="pt-5 prose prose-neutral">Logan also told me that Ranger Leaf would train me, a commitment he never followed through on—Leaf had no knowledge of it. That breach was the final breakdown of trust in what was already a fragile dynamic.</li>
-
-                    <li class="pt-5 prose prose-neutral">Ryan admitted in our meeting that he never gave me the benefit of the doubt, beginning with my initial interaction with Kati. That admission confirms the feeling I carried throughout my time at Honeyman: that I was being judged through a fixed lens, regardless of my conduct.</li>
-
-                    <li class="pt-5 prose prose-neutral">The journal incident was misrepresented. My comment to the ranger assistant—"not all rangers are helpful"—was not a criticism of staff. It was an appeal to ensure the journal was not ignored in the lost and found. As someone who has been homeless, I know the emotional significance of a journal, and I was simply asking that extra care be taken.</li>
-
-                    <li class="pt-5 prose prose-neutral">The issue of guest perception was related to my early text message to Kati when the power went out. My statement that “I own this problem in the eyes of guests” was not a misunderstanding of my role. It was an accurate reflection of how guests see park hosts—as the first point of contact. My message was about optics, not blame or misalignment.</li>
-
-                </ul>
-
-                <para class="pt-5">The common thread in all of this, and what I believe is the real issue, is how I’ve held leadership accountable in writing. The primary concern Ryan raised in that March 5 meeting was not my behavior—it was my emails. The vast majority of that meeting centered on my written communication, which I’ve always approached with clarity and intent. The discomfort, in my view, stemmed not from what I said—but from the fact that I said it in a format that created a record. This is an undeniable pattern that strikes at the heart of accountability and transparency.</para>
-
-                <para>Additionally, I want to acknowledge something I did not bring up on the call: I am aware of at least three other volunteers who have had similar challenges with Ryan. His behavior is not isolated. His approach to volunteers appears to follow a consistent pattern. I raise this not to accuse, but to suggest that what I experienced fits into a broader pattern that may be worth further attention.</para>
-
-                <para>I’m not sharing this to escalate or attack, but to ensure that the story doesn’t get flattened into something it never was. I’ve remained calm, communicative, and reflective throughout my time in this program. I’ve adapted, learned, and tried to contribute with sincerity and care. If there are aspects of my communication style that feel different, that is not a threat—it’s a strength. And it should not be weaponized to create distance or distrust.</para>
-
-                <para>All I ask is that this be viewed with honesty and fairness. I am not asking for special treatment—just integrity in how this is held and assessed.</para>
-
-                <para>The integrity of any volunteer program depends not only on the contributions of its volunteers—but on the willingness of leadership to be accountable when trust is compromised.</para>
-
-                <para>Please include this message in my file as part of the ongoing review.</para>
-
-                <para>Warm Regards,</para>
-
-                <para>Sam White</para>
-            </div>
 
         </div>
         </section>
@@ -589,115 +623,102 @@
                 <h2 class="text-2xl font-semibold">Naming the Harm &mdash; My Final Letter to Allison Watson</h2>
                 <p class="italic text-sm text-gray-600">May 28, 2025 — The Letter They Must Reckon With</p>
 
-                <p>
-                    Two months and one day after my vulnerable follow-up letter was met with silence, I named the full scope of the harm — in language precise enough to carry its weight into the public record
-                </p>
-        <h3 class="text-lg font-semibold mt-8">Read the Letter</h3>
+                <div class="py-6 mx-12">
 
-        <div class="max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 space-y-4 text-sm leading-relaxed">
-            <div class="mt-5">Hi Allison,</div>
+                    <para>
+                        <div>Two months and one day after my vulnerable follow-up letter was met with silence, I named the full scope of the harm — in language precise enough to carry its weight into the public record.</div>
+                    </para>
 
-            <div class="mt-5">This letter is not a request.</div>
-            <div>It is not an invitation to respond.</div>
-            <div>It is a statement of record.</div>
+                    <h3 class="text-lg font-semibold mt-8">Read the Letter</h3>
 
-            <div class="mt-5">I am writing to formally name the harm that occurred under your leadership — and to inform you that the audio of our March 25 conversation is now public.</div>
+                    <div class="max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 space-y-4 text-sm leading-relaxed">
 
-            <div class="mt-5">That recording is not an accusation. It is a mirror.</div>
-            <div>And now, for the first time, others can hear what I heard — the tone, the silences, the institutional language that reframed lived human experience as “concerning” and “unprofessional.” The video speaks for itself.</div>
+                        <div class="mt-5">Hi Allison,</div>
 
-            <div class="mt-5">🔗 Watch the recording: https://rswfire.com/honeyman/silencing</div>
-            <div>🔗 YouTube: https://youtu.be/Px_pCUo78w4</div>
+                        <div class="mt-5">This letter is not a request.</div>
+                        <div>It is not an invitation to respond.</div>
+                        <div>It is a statement of record.</div>
 
-            <div class="mt-5">I’ve also included a page that documents the letter I sent to you that night, and a video of me reading it into the public record as testimony:</div>
-            <div>🔗 https://rswfire.com/honeyman/escalation/letter</div>
+                        <div class="mt-5">I am writing to formally name the harm that occurred under your leadership — and to inform you that the audio of our March 25 conversation is now public.</div>
 
-            <div class="mt-5">The surrounding events are now documented here:</div>
-            <div>🔗 https://rswfire.com/honeyman/escalation</div>
+                        <div class="mt-5">That recording is not an accusation. It is a mirror.</div>
+                        <div>And now, for the first time, others can hear what I heard — the tone, the silences, the institutional language that reframed lived human experience as “concerning” and “unprofessional.” The video speaks for itself.</div>
 
-            <div class="mt-5">You asked me to speak openly. I did.</div>
+                        <div class="mt-5">🔗 Watch the recording: https://rswfire.com/honeyman/silencing</div>
+                        <div>🔗 YouTube: https://youtu.be/Px_pCUo78w4</div>
 
-            <div class="mt-5">I told you what Ryan said to me. How he told me to "eat glass." How Logan blurred boundaries. How I was denied the benefit of the doubt from day one. I said all of this calmly, clearly, without hostility, and with the hope that it might matter.</div>
+                        <div class="mt-5">I’ve also included a page that documents the letter I sent to you that night, and a video of me reading it into the public record as testimony:</div>
+                        <div>🔗 https://rswfire.com/honeyman/escalation/letter</div>
 
-            <div class="mt-5">Later that night, I sent you a follow-up letter.</div>
+                        <div class="mt-5">The surrounding events are now documented here:</div>
+                        <div>🔗 https://rswfire.com/honeyman/escalation</div>
 
-            <div class="mt-5">It added context, detailed evidence, and gave you another opportunity to respond with presence and integrity.</div>
+                        <div class="mt-5">You asked me to speak openly. I did.</div>
 
-            <div class="mt-5">You never acknowledged it.</div>
+                        <div class="mt-5">I told you what Ryan said to me. How he told me to "eat glass." How Logan blurred boundaries. How I was denied the benefit of the doubt from day one. I said all of this calmly, clearly, without hostility, and with the hope that it might matter.</div>
 
-            <div class="mt-5">Instead, less than twenty-four hours later, you made my dismissal permanent — a decision that now lives in stark contrast to the content of our recorded call.</div>
+                        <div class="mt-5">Later that night, I sent you a follow-up letter.</div>
 
-            <div class="mt-5">So I want to name — clearly, and for the record — the full scope of harm:</div>
+                        <div class="mt-5">It added context, detailed evidence, and gave you another opportunity to respond with presence and integrity.</div>
 
-            <div class="mt-5">You dismissed serious misconduct with silence.</div>
+                        <div class="mt-5">You never acknowledged it.</div>
 
-            <div class="mt-5">You avoided specificity in order to maintain plausible deniability.</div>
+                        <div class="mt-5">Instead, less than twenty-four hours later, you made my dismissal permanent — a decision that now lives in stark contrast to the content of our recorded call.</div>
 
-            <div class="mt-5">You framed human depth as inappropriate rather than interrogating your own discomfort.</div>
+                        <div class="mt-5">So I want to name — clearly, and for the record — the full scope of harm:</div>
 
-            <div class="mt-5">You positioned yourself as a neutral evaluator while executing a pre-determined outcome.</div>
+                        <div class="mt-5">You dismissed serious misconduct with silence.</div>
 
-            <div class="mt-5">You ignored a vulnerable and sincere follow-up letter, and responded instead with expulsion.</div>
+                        <div class="mt-5">You avoided specificity in order to maintain plausible deniability.</div>
 
-            <div class="mt-8">But there is more.</div>
+                        <div class="mt-5">You framed human depth as inappropriate rather than interrogating your own discomfort.</div>
 
-            <div class="mt-5">You shielded misconduct by refusing to investigate or intervene — permitting coercive behavior and inappropriate power dynamics to persist under your leadership.</div>
+                        <div class="mt-5">You positioned yourself as a neutral evaluator while executing a pre-determined outcome.</div>
 
-            <div class="mt-5">You sanctioned erasure — not only of my role, but of the narrative I offered in good faith.</div>
+                        <div class="mt-5">You ignored a vulnerable and sincere follow-up letter, and responded instead with expulsion.</div>
 
-            <div class="mt-5">You endorsed retaliation by validating a removal that originated not in protocol, but in personal offense.</div>
+                        <div class="mt-8">But there is more.</div>
 
-            <div class="mt-5">You fractured systemic trust, sending a clear signal to others: that clarity is dangerous, and documented truth will be buried if it threatens internal comfort.</div>
+                        <div class="mt-5">You shielded misconduct by refusing to investigate or intervene — permitting coercive behavior and inappropriate power dynamics to persist under your leadership.</div>
 
-            <div class="mt-5">You reinforced harmful patterns by protecting those who distorted, manipulated, and coerced — ensuring they remain unaccountable.</div>
+                        <div class="mt-5">You sanctioned erasure — not only of my role, but of the narrative I offered in good faith.</div>
 
-            <div class="mt-5">You disappeared the humanity of this moment. When you had the opportunity to meet it with courage, you met it with closure.</div>
+                        <div class="mt-5">You endorsed retaliation by validating a removal that originated not in protocol, but in personal offense.</div>
 
-            <div class="mt-5">And perhaps most significantly:</div>
-            <div>You made yourself the endpoint — not a bridge, not a voice of integrity, but a terminus. A silence.</div>
+                        <div class="mt-5">You fractured systemic trust, sending a clear signal to others: that clarity is dangerous, and documented truth will be buried if it threatens internal comfort.</div>
 
-            <div class="mt-5">This is not about policy. It is about responsibility.</div>
+                        <div class="mt-5">You reinforced harmful patterns by protecting those who distorted, manipulated, and coerced — ensuring they remain unaccountable.</div>
 
-            <div class="mt-5">You had a choice. You could have acted with presence. With reflection. With care.</div>
-            <div>You didn’t.</div>
+                        <div class="mt-5">You disappeared the humanity of this moment. When you had the opportunity to meet it with courage, you met it with closure.</div>
 
-            <div class="mt-5">I’m not asking you to undo it.</div>
-            <div>I’m naming that it happened — and ensuring that the record will outlast the silence that followed.</div>
+                        <div class="mt-5">And perhaps most significantly:</div>
+                        <div>You made yourself the endpoint — not a bridge, not a voice of integrity, but a terminus. A silence.</div>
 
-            <div class="mt-5">The archive is now public.</div>
-            <div>You are part of it.</div>
-            <div>And that, too, will be permanent.</div>
+                        <div class="mt-5">This is not about policy. It is about responsibility.</div>
 
-            <div class="mt-5">—</div>
-            <div>Sam White</div>
-            <div>https://rswfire.com/honeyman</div>
+                        <div class="mt-5">You had a choice. You could have acted with presence. With reflection. With care.</div>
+                        <div>You didn’t.</div>
 
-        </div>
+                        <div class="mt-5">I’m not asking you to undo it.</div>
+                        <div>I’m naming that it happened — and ensuring that the record will outlast the silence that followed.</div>
+
+                        <div class="mt-5">The archive is now public.</div>
+                        <div>You are part of it.</div>
+                        <div>And that, too, will be permanent.</div>
+
+                        <div class="mt-5">—</div>
+                        <div>Sam White</div>
+                        <div>https://rswfire.com/honeyman</div>
+
+                    </div>
+
+                </div>
 
         </div>
         </section>
 
 
         <section id="page-footer" class="border-t border-gray-300 py-12 text-black">
-
-            <div class="px-6">
-                <p>
-                    This page is not for revenge.<br/>
-                    It is for those who have been told they imagined it.<br/>
-                    It is for those about to walk into something similar.<br/>
-                    It is for the future, when denial no longer holds.
-                </p>
-                <p class="mt-4">
-                    It does not ask for apology.<br/>
-                    It does not ask for repair.<br/>
-                    It exists <span class="font-semibold">so that the next distortion cannot pretend it was the first.</span>
-                </p>
-                <p class="mt-4 font-medium text-gray-700">
-                    This is the record. This is the beginning. This is the page they hoped would never be written.
-                </p>
-                <p class="mt-4 italic">If you are an OPRD employee, volunteer, or state official who has experienced or witnessed similar behavior — you’re not alone. You may contact me directly, or document what you’ve seen in your own words. The page you are reading now exists because silence is no longer acceptable.</p>
-            </div>
-
 
             <div class="pt-12 w-1/2 mx-auto">
                 <div class="border border-red-500 bg-red-700 text-white p-4 rounded-md">
@@ -721,6 +742,24 @@
                     <div class="text-right mt-4">&mdash; rswfire</div>
                 </div>
             </div>
+
+            <div class="px-12 pt-12">
+                <p>
+                    This page is not for revenge.<br/>
+                    It is for those who have been told they imagined it.<br/>
+                    It is for those about to walk into something similar.<br/>
+                    It is for the future, when denial no longer holds.
+                </p>
+                <p class="mt-4">
+                    It does not ask for apology.<br/>
+                    It does not ask for repair.<br/>
+                    It exists <span class="font-semibold">so that the next distortion cannot pretend it was the first.</span>
+                </p>
+                <p class="mt-4 font-medium text-gray-700">
+                    This is the record. This is the beginning. This is the page they hoped would never be written.
+                </p>
+            </div>
+
         </section>
 
     </div>
