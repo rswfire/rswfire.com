@@ -1,5 +1,5 @@
 <template>
-    <section class="py-6 px-6 bg-transparent">
+    <section class="pt-9 bg-transparent">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl font-bold tracking-tight text-black">
                 {{ title }}

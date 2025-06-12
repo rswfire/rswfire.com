@@ -1,4 +1,5 @@
 <template>
+    <div class="border border-gray-300 rounded-2xl pt-0 shadow-md bg-white w-full mx-auto">
 
         <hero
             title="THE STORY OF HONEYMAN"
@@ -6,7 +7,7 @@
             meta="Last Updated: 06/11/25"
         />
 
-        <section id="context-matters" class="mt-6 mb-10 w-full">
+        <section id="context-matters" class="mt-9 w-3/4 mx-auto">
             <div class="w-full border border-blue-500 bg-blue-700 text-white p-4 rounded-md">
 
                 <div class="text-white"><strong class="text-white">⚠️ Context Matters</strong></div>
@@ -28,10 +29,27 @@
             </div>
         </section>
 
-        <section id="key-individuals" class="mt-16 border-t border-gray-300 pt-12 text-black">
+        <section id="index-of-breaches" class="mt-9 border-t border-gray-300 pt-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
-                <h2 class="text-2xl font-semibold mb-2">Key Individuals</h2>
-                <p class="italic text-sm text-gray-600">Oregon Parks &amp; Recreation Division (OPRD)</p>
+                <h2 class="text-2xl font-semibold">Index of Breaches</h2>
+                <p class="text-sm text-gray-600">
+                    These are the central tactics used by Oregon State Parks.
+                </p>
+                <ul class="pl-4 list-disc list-inside text-gray-700">
+                    <li>Psychological manipulation disguised as supervision.</li>
+                    <li>Covert operative sent under false pretense (documented).</li>
+                    <li>Retaliation following a single private text holding a supervisor accountable.</li>
+                    <li>Coerced off-the-record interrogation by park management (recorded).</li>
+                    <li>Pattern of isolation, silencing, and weaponization of identity.</li>
+                    <li>Final dismissal with no documentation, no due process, no cause.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="key-individuals" class="mt-9 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold">Key Individuals</h2>
+                <p class="italic text-sm text-gray-600">Oregon Parks &amp; Recreation Department (OPRD)</p>
 
             <p class="text-sm text-gray-600">
                 These are the central figures referenced throughout this archive — each played a distinct role in the events that unfolded at Honeyman State Park and within Oregon State Parks as a whole.
@@ -40,55 +58,46 @@
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
 
                 <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-1">Ryan Warren</h3>
+                    <h3 class="font-semibold text-lg">Ryan Warren</h3>
                     <p class="text-sm text-gray-700">
-                        Park Manager, Honeyman State Park.<br/>
+                        <strong>Park Manager, Honeyman State Park</strong><br/>
                         The primary enforcer of coercive tactics — initiated multiple confrontations, including the recorded March 5 meeting and a surprise dismissal phone call. His leadership masked control as professionalism.
                     </p>
                 </li>
 
                 <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-1">Kati Baker</h3>
+                    <h3 class="font-semibold text-lg">Kati Baker</h3>
                     <p class="text-sm text-gray-700">
-                        Park Supervisor, Honeyman State Park.<br/>
+                        <strong>Park Supervisor, Honeyman State Park</strong><br/>
                         The architect of early distortion. After a brief exchange about power outage perception, she withdrew, delegating discomfort through silence and seeding a lasting narrative of dismissal.
                     </p>
                 </li>
 
                 <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-1">Logan Bliss</h3>
+                    <h3 class="font-semibold text-lg">Logan Bliss</h3>
                     <p class="text-sm text-gray-700">
-                        Volunteer Supervisor.<br/>
+                        <strong>Volunteer Supervisor, Honeyman State Park</strong><br/>
                         Absent at key moments, then reappearing to manage perception. Shared personal stories, broke professional boundaries, and later helped justify the escalation through silence and complicity.
                     </p>
                 </li>
 
                 <li class="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                    <h3 class="font-semibold text-lg mb-1">Allison Watson</h3>
+                    <h3 class="font-semibold text-lg">Allison Watson</h3>
                     <p class="text-sm text-gray-700">
-                        Volunteer Engagement Coordinator, OPRD Central.<br/>
+                        <strong>Volunteer Engagement Coordinator, OPRD Central</strong><br/>
                         Conducted the post-dismissal call. Framed reflective truth as misconduct. Refused to acknowledge documented abuse, and issued the permanent dismissal without responding to direct concerns.
                     </p>
                 </li>
 
             </ul>
 
-            <h2 class="text-2xl font-semibold mt-10 mb-4">Index of Breaches</h2>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Psychological manipulation disguised as supervision</li>
-                <li>Covert operative sent under false pretense (documented)</li>
-                <li>Retaliation following a single private text holding a supervisor accountable</li>
-                <li>Coerced off-the-record interrogation by park management (recorded)</li>
-                <li>Pattern of isolation, silencing, and weaponization of identity</li>
-                <li>Final dismissal with no documentation, no due process, no cause</li>
-            </ul>
         </div>
         </section>
 
-            <section id="system-in-panic" class="mt-16 border-t border-gray-300 pt-12 text-black">
-                <div class="prose prose-neutral max-w-3xl mx-auto">
-                    <h2 class="text-2xl font-semibold mb-2">The Story of Honeyman</h2>
-                    <p class="italic text-sm text-gray-600">What They Did. What I Saw. What I Carried.<br/><em>— by Sam White</em></p>
+        <section id="the-story-of-honeyman" class="mt-9 border-t border-gray-300 pt-12 text-black">
+            <div class="prose prose-neutral max-w-3xl mx-auto">
+                <h2 class="text-2xl font-semibold">The Story of Honeyman</h2>
+                <p class="italic text-sm text-gray-600">What They Did. What I Saw. What I Carried.<br/><em>— by Sam White</em></p>
 
             <para>
             <div>I arrived at Honeyman State Park not to fill a shift, but to hold a field —</div>
@@ -720,6 +729,7 @@
             </div>
         </div>
 
+    </div>
 </template>
 
 <script setup>

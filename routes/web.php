@@ -23,6 +23,15 @@ Route::get("/chronicle", function () {
     ]);
 });
 
+Route::get("/fieldwork", function () {
+    return Inertia::render("Fieldwork", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
 Route::get("/hello", function () {
     return Inertia::render("Hello", [
         "canLogin" => Route::has("login"),
