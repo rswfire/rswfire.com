@@ -34,7 +34,7 @@
         { icon: "🛠️", label: "What I Do", to: "/tech" },
         { icon: "📚", label: "Chronicle", to: "/chronicle" },
         { icon: "📹", label: "Transmission", to: "/transmission" },
-        { icon: "📁️", label: "Fieldwork", to: "/fieldwork" },
+        { icon: "🌱", label: "Fieldwork", to: "/fieldwork" },
         { icon: "🔥", label: "The Myth", to: "/myth" },
         { icon: "🔐", label: "Lexicon", to: "/lexicon" },
         { icon: "🌲", label: "Honeyman", to: "/honeyman" },

@@ -32,6 +32,10 @@ Route::get("/fieldwork", function () {
     ]);
 });
 
+Route::get('/fieldwork/create', function () {
+    return Inertia::render('Fieldwork/Create');
+});
+
 Route::get('/fieldwork/{id}', function ($id) {
     $entry = DB::table('content')->where('content_id', $id)->first();
 
