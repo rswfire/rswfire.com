@@ -1,14 +1,14 @@
 <template>
     <form @submit.prevent="submit" class="space-y-6 max-w-md w-full mx-auto">
         <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input id="email" v-model="form.email" type="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" autofocus />
+            <label for="login-email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input id="login-email" name="email" v-model="form.email" type="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" autofocus />
             <InputError :message="form.errors.email" />
         </div>
 
         <div>
-            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-            <input id="password" v-model="form.password" type="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" />
+            <label for="login-password" class="block text-sm font-medium text-gray-700">Password</label>
+            <input id="login-password" name="password" v-model="form.password" type="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" />
             <InputError :message="form.errors.password" />
         </div>
 

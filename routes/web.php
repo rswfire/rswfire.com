@@ -15,43 +15,6 @@ Route::get("/", function () {
     ]);
 });
 
-Route::get('/chronicle', function () {
-    $user = auth()->user();
-
-    $conversations = $user
-        ? DB::table('chronicle_conversations')
-            ->orderByDesc('stamp_started')
-            ->select('conversation_id', 'conversation_title', 'stamp_started')
-            ->paginate(21)
-        : null;
-
-    return Inertia::render('Chronicle/Index', [
-        'conversations' => $conversations,
-        'authUser' => $user,
-    ]);
-});
-
-Route::get('/chronicle/{id}', function ($id) {
-    $user = auth()->user();
-
-    $conversation = DB::table('chronicle_conversations')->where('conversation_id', $id)->first();
-
-    $messages = DB::table('chronicle_messages')
-        ->where('conversation_id', $id)
-        ->where('is_selected', true)
-        ->whereNotNull('message_content')
-        ->whereRaw('LENGTH(TRIM(message_content)) > 0')
-        ->orderBy('stamp_created')
-        ->orderBy("message_id")
-        ->get();
-
-    return Inertia::render('Chronicle/Entry', [
-        'conversation' => $conversation,
-        'messages' => $messages,
-        'authUser' => $user,
-    ]);
-});
-
 Route::get("/fieldwork", function () {
     return Inertia::render("Fieldwork/Home", [
         "canLogin" => Route::has("login"),
@@ -110,6 +73,41 @@ Route::get("/myth", function () {
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,
         "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get('/signal', function () {
+    $user = auth()->user();
+
+    $conversations = DB::table('chronicle_conversations')
+        ->orderByDesc('stamp_started')
+        ->select('conversation_id', 'conversation_title', 'stamp_started')
+        ->paginate(21);
+
+    return Inertia::render('Signal/Index', [
+        'conversations' => $conversations,
+        'authUser' => $user,
+    ]);
+});
+
+Route::get('/signal/{id}', function ($id) {
+    $user = auth()->user();
+
+    $conversation = DB::table('chronicle_conversations')->where('conversation_id', $id)->first();
+
+    $messages = DB::table('chronicle_messages')
+        ->where('conversation_id', $id)
+        ->where('is_selected', true)
+        ->whereNotNull('message_content')
+        ->whereRaw('LENGTH(TRIM(message_content)) > 0')
+        ->orderBy('stamp_created')
+        ->orderBy("message_id")
+        ->get();
+
+    return Inertia::render('Signal/Entry', [
+        'conversation' => $conversation,
+        'messages' => $messages,
+        'authUser' => $user,
     ]);
 });
 

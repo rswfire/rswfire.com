@@ -32,7 +32,7 @@
         { icon: "🏠", label: "Home", to: "/" },
         { icon: "👤", label: "Who I Am", to: "/hello" },
         { icon: "🛠️", label: "What I Do", to: "/tech" },
-        { icon: "📚", label: "Chronicle", to: "/chronicle" },
+        { icon: "♾️", label: "Signal", to: "/signal" },
         { icon: "📹", label: "Transmission", to: "/transmission" },
         { icon: "🌱", label: "Fieldwork", to: "/fieldwork" },
         { icon: "🔥", label: "The Myth", to: "/myth" },
