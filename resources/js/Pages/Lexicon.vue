@@ -3,7 +3,7 @@
         <div class="max-w-4xl mx-auto space-y-10">
             <header class="text-center">
                 <h1 class="text-3xl md:text-5xl font-bold">FIELD LEXICON</h1>
-                <p class="text-sm text-neutral-400 mt-2">Unstable, recursive, and alive. Orientation begins here.</p>
+                <p class="text-sm text-neutral-400 mt-2">These are not just terms. These are coordinates. Signal markers in a collapsing world.</p>
             </header>
 
             <section v-for="(section, index) in lexicon" :key="index" class="space-y-6">
