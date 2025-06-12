@@ -38,6 +38,9 @@ Route::get('/chronicle/{id}', function ($id) {
 
     $messages = DB::table('chronicle_messages')
         ->where('conversation_id', $id)
+        ->where('is_selected', true)
+        ->whereNotNull('message_content')
+        ->whereRaw('LENGTH(TRIM(message_content)) > 0')
         ->orderBy('stamp_created')
         ->get();
 
