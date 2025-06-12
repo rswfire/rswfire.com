@@ -1,23 +1,90 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DeployController;
+use Inertia\Inertia;
 
-Route::get("/oauth2callback", function () {
-    $client = new \Google_Client();
-    $client->setAuthConfig(storage_path("oauth/client_secret.json"));
-    $client->setRedirectUri("https://rswfire.com/oauth2callback");
-    $client->addScope(\Google_Service_YouTube::YOUTUBE_FORCE_SSL);
-    $client->setAccessType("offline");
-    $client->setPrompt("consent");
-
-    if (request()->has("code")) {
-        $accessToken = $client->fetchAccessTokenWithAuthCode(request("code"));
-        file_put_contents(storage_path("oauth/tokens.json"), json_encode($accessToken));
-        return "Tokens saved.";
-    }
-
-    return redirect()->away($client->createAuthUrl());
+Route::get("/", function () {
+    return Inertia::render("Home", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
 });
 
-Route::view('/{any}', 'app')->where('any', '.*');
+Route::get("/chronicle", function () {
+    return Inertia::render("Chronicle", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/hello", function () {
+    return Inertia::render("Hello", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/honeyman", function () {
+    return Inertia::render("Honeyman", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/lexicon", function () {
+    return Inertia::render("Lexicon", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/myth", function () {
+    return Inertia::render("Myth", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/tech", function () {
+    return Inertia::render("Tech", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/transmission", function () {
+    return Inertia::render("Transmission", [
+        "canLogin" => Route::has("login"),
+        "canRegister" => Route::has("register"),
+        "laravelVersion" => Application::VERSION,
+        "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get("/dashboard", function () {
+    return Inertia::render("Dashboard");
+})->middleware(["auth", "verified"])->name("dashboard");
+
+Route::middleware("auth")->group(function () {
+    Route::get("/profile", [ProfileController::class, "edit"])->name("profile.edit");
+    Route::patch("/profile", [ProfileController::class, "update"])->name("profile.update");
+    Route::delete("/profile", [ProfileController::class, "destroy"])->name("profile.destroy");
+});
+
+require __DIR__."/auth.php";

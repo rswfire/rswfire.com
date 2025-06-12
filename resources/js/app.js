@@ -1,49 +1,32 @@
-import { createApp } from "vue";
-import App from "./pages/App.vue";
-import "../css/app.css";
-import router from './router';
-import VueGtag from 'vue-gtag-next';
-import { createHead } from '@vueuse/head'
-import MarkdownIt from 'markdown-it'
-
-import Content from './components/system/Content.vue'
-import Hero from './components/system/Hero.vue'
-import Para from './components/system/Para.vue'
-import YoutubePlayer from './components/system/YoutubePlayer.vue'
-
-router.afterEach((to) => {
-    const defaultTitle = 'rswfire';
-    document.title = to.meta.title || defaultTitle;
-});
+import '../css/app.css';
+import './bootstrap';
 
 
-const app = createApp(App);
-const head = createHead();
+import { createInertiaApp } from '@inertiajs/vue3';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { createApp, h } from 'vue';
+import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import DefaultLayout from './Layouts/DefaultLayout.vue';
 
-const md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    breaks: true
-});
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-app.config.globalProperties.$md = md;
+createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
+    resolve: (name) => {
+        const pages = import.meta.glob('./Pages/**/*.vue', { eager: true });
+        const page = pages[`./Pages/${name}.vue`];
 
-app.component('Content', Content);
-app.component('Hero', Hero);
-app.component('Para', Para);
-app.component("YoutubePlayer", YoutubePlayer);
+        page.default.layout ??= DefaultLayout;
 
-const gtagId = 'G-5K6H8GR1Q7';
-
-app.use(head);
-app.use(router);
-app.use(VueGtag, {
-    property: {
-        id: gtagId,
+        return page;
     },
-    config: {
-        send_page_view: true
-    }
+    setup({ el, App, props, plugin }) {
+        return createApp({ render: () => h(App, props) })
+            .use(plugin)
+            .use(ZiggyVue)
+            .mount(el);
+    },
+    progress: {
+        color: '#4B5563',
+    },
 });
-
-app.mount("#app");
