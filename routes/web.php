@@ -42,6 +42,7 @@ Route::get('/chronicle/{id}', function ($id) {
         ->whereNotNull('message_content')
         ->whereRaw('LENGTH(TRIM(message_content)) > 0')
         ->orderBy('stamp_created')
+        ->orderBy("message_id")
         ->get();
 
     return Inertia::render('Chronicle/Entry', [
