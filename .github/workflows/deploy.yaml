@@ -30,6 +30,7 @@ jobs:
             rm -rf node_modules public/build
             npm ci
             npm run build
+            composer update
             php artisan config:clear
             php artisan route:clear
             php artisan view:clear
