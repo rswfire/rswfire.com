@@ -29,22 +29,26 @@
             </div>
         </section>
 
+
         <section id="index-of-breaches" class="mt-9 border-t border-gray-300 py-12 text-black">
-            <div class="prose prose-neutral max-w-3xl mx-auto">
-                <h2 class="text-2xl font-semibold">Index of Breaches</h2>
-                <p class="text-sm text-gray-600">
-                    These are the central tactics used by Oregon State Parks.
-                </p>
-                <ul class="pl-12 pt-6 list-disc list-inside text-gray-700">
-                    <li>Psychological manipulation disguised as supervision.</li>
-                    <li>Covert operative sent under false pretense (documented).</li>
-                    <li>Retaliation following a single private text holding a supervisor accountable.</li>
-                    <li>Coerced off-the-record interrogation by park management (recorded).</li>
-                    <li>Pattern of isolation, silencing, and weaponization of identity.</li>
-                    <li>Final dismissal with no documentation, no due process, no cause.</li>
-                </ul>
+            <div class="mx-12">
+                <div class="w-full border-l-4 border-red-600 bg-red-50 p-6 rounded-md shadow-sm">
+                    <h2 class="text-xl font-bold text-red-900 mb-2">Index of Breaches</h2>
+                    <p class="text-sm text-red-700 mb-4">
+                        These are the central tactics used by Oregon State Parks.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-red-800 font-medium">
+                        <li>Psychological manipulation disguised as supervision.</li>
+                        <li>Covert operative sent under false pretense (documented).</li>
+                        <li>Retaliation following a single private text holding a supervisor accountable.</li>
+                        <li>Coerced off-the-record interrogation by park management (recorded).</li>
+                        <li>Pattern of isolation, silencing, and weaponization of identity.</li>
+                        <li>Final dismissal with no documentation, no due process, no cause.</li>
+                    </ul>
+                </div>
             </div>
         </section>
+
 
         <section id="key-individuals" class="mt-9 border-t border-gray-300 py-12 text-black">
             <div class="prose prose-neutral max-w-3xl mx-auto">
