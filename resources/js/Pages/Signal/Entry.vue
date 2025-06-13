@@ -60,14 +60,12 @@
 
                 <hr class="my-6 border-t border-gray-300">
 
-                <div class="space-y-4 text-sm md:text-base text-gray-600 text-left">
-                    <p>You must sign in to see this page.</p>
-                    <p>This isn’t safe. It isn’t indexed. But it is honest.</p>
-                    <p class="font-medium">
-                        This is not a narrative.<br />
-                        This is <span class="italic">signal in motion</span>.
-                    </p>
-                    <p>Enter where the gravity pulls you.</p>
+                <div class="text-sm md:text-base text-gray-600 text-left">
+                    <div>You must sign in to see this page.</div>
+                    <div class="pt-2">This is not a narrative.</div>
+                    <div>This is <span class="italic">signal in motion</span>.</div>
+                    <div class="pt-2">This isn’t safe. It isn’t indexed. But it is honest.</div>
+                    <div>Enter where the gravity pulls you.</div>
                 </div>
 
                 <div
