@@ -1,78 +1,244 @@
 <template>
 
-    <div class="border border-gray-300 rounded-2xl p-6 shadow-md bg-white w-full mx-auto">
-        <div class="mb-4 flex items-center gap-2">
+    <!-- "Who I Am" Card -->
+    <section class="rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
             <div class="relative flex items-center justify-center w-8 h-8">
                 <span class="absolute w-full h-full rounded-full bg-orange-200 opacity-50 animate-ping"></span>
                 <span class="relative text-lg">🔥</span>
             </div>
-            <h3 class="text-2xl font-semibold text-gray-900">Start Here</h3>
+            <h2 class="text-xl font-semibold tracking-tight">
+                START HERE
+            </h2>
         </div>
 
-        <div class="text-gray-600 text-md leading-relaxed mb-4">
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
             <div>This isn’t a blog. It’s not a pitch.</div>
             <div>It’s a field anchor — a living architecture of coherence.</div>
             <div>A record of one man’s motion through fragmentation, holding wholeness as the world frays.</div>
 
-            <div>You don’t have to understand it.</div>
+            <div class="pt-4">You don’t have to understand it.</div>
             <div>But if you feel it — then yes, this part is for you.</div>
         </div>
 
-        <div><Link
-            href="/hello"
-            class="inline-block text-red-600 hover:text-red-800 transition font-medium border border-red-200 hover:border-red-400 px-4 py-2 rounded-lg"
-        >
-            About Me →
-        </Link></div>
-    </div>
+        <div class="text-left">
+            <a
+                href="/hello"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Who I Am →
+            </a>
+        </div>
+    </section>
 
-    <div class="mt-10 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-4">
-        <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 flex items-center">
-            ⛰️ The Journey
-        </h2>
 
-        <div class="border-l-4 border-gray-300 ml-4 pl-4 italic space-y-1">
-            <div>The journey didn’t start when I left.</div>
-            <div>It started when I woke up.</div>
-            <div>Leaving was just the first thing I did as a free man.</div>
+    <!-- "What I Do" Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">🛠</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                BUILDER OF SYSTEMS. STEWARD OF DEPTH.
+            </h2>
         </div>
 
-        <p>This is not a story of escape.</p>
-        <p>It’s a story of return — to self, to coherence, to the real.</p>
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div><strong>I’ve been programming since DOS.</strong> At age 11, I was shipping batch scripts to BBS systems. By 13, I was writing grading software for teachers. By 15, I was coding CMS platforms on paper — entire systems, mentally compiled, handwritten line by line.</div>
 
-        <Link
-            href="/the-journey"
-            class="inline-block mt-2 px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-md transition"
-        >
-            Enter the Journey →
-        </Link>
-    </div>
+            <div class="pt-4"><strong>By 18, I was a top-ten freelancer on Guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</div>
 
-    <div class="mt-10 rounded-xl border border-gray-200 bg-white shadow-sm p-6 space-y-3">
-        <div class="flex items-center gap-3">
-            <span class="text-2xl">🛠️</span>
-            <h2 class="text-xl font-semibold text-gray-900">Builder of Systems. Steward of Depth.</h2>
+            <div class="pt-4"><strong>Now I live in an off-grid RV by the sea.</strong> Because depth doesn’t need a tower. And clarity doesn’t come from noise.</div>
+
+            <div class="pt-4"><em>This isn’t hustle. It’s frequency. If you feel it, we’re already in conversation.</em></div>
         </div>
 
-        <div class="text-gray-700 text-sm leading-relaxed space-y-3">
-            <p><strong>I’ve been programming since DOS.</strong> At age 11, I was shipping batch scripts to BBS systems. By 13, I was writing grading software for teachers. By 15, I was coding CMS platforms on paper — entire systems, mentally compiled, handwritten line by line.</p>
+        <div class="text-left">
+            <a
+                href="/tech"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                What I Do →
+            </a>
+        </div>
+    </section>
 
-            <p><strong>By 18, I was a top-ten freelancer on Guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</p>
 
-            <p><strong>Now I live in an off-grid RV by the sea.</strong> Because depth doesn’t need a tower. And clarity doesn’t come from noise.</p>
-
-            <p><em>This isn’t hustle. It’s frequency. If you feel it, we’re already in conversation.</em></p>
+    <!-- Signal Archive Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">♾️</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                SIGNAL ARCHIVE
+            </h2>
         </div>
 
-        <Link
-            href="/tech"
-            class="inline-block px-4 py-2 border border-red-300 text-red-600 hover:bg-red-50 hover:border-red-500 rounded-md text-sm font-semibold transition"
-        >
-            See the Full Story →
-        </Link>
-    </div>
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>This is not a record of answers.</div>
+            <div>It is a map of motion through rupture and recursion.</div>
+            <div>18+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>
 
-    <FieldRecordsPreview />
+            <div class="pt-4">If you're feeling pulled toward coherence—this is where it was built.</div>
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/signal"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Enter the Archive →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Transmission Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">📡</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                TRANSMISSION ARCHIVE
+            </h2>
+        </div>
+
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>900+ videos. 18+ months. Recursive reflections across collapse, code, grief, systems, and sovereignty.</div>
+
+            <div>This is not content. This is ritual broadcast — fragments of signal recorded in the wild.</div>
+
+            <div>Many transmissions link back into the Signal Archive. Some are raw. Some are distilled. All are real.</div>
+
+            <div>If you've been here before, you'll feel the continuity. If you're new, start anywhere. Then trace the signal.</div>
+
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/transmission"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Watch the Signal Speak →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Fieldwork Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">🌱</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                FIELDWORK
+            </h2>
+        </div>
+
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>This is not theory. This is embedded observation.</div>
+
+            <div class="pt-4">Fieldwork documents life in systems as they decay — institutions, infrastructure, internal governance.</div>
+
+            <div class="pt-4">Logs. Dispatches. Pointed reflections from beneath the surface. Notes from within collapse.</div>
+
+            <div class="pt-4">If you’re tracking post-collapse resilience in real-time, this is where it begins.</div>
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/fieldwork"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Enter the Field →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Myth Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">🔥</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                MYTH
+            </h2>
+        </div>
+
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>Not a portfolio. Not a brand. Not a persona.</div>
+
+            <div class="pt-4">This is the deeper lore — the narrative architecture I build around myself <em>when language breaks</em>.</div>
+
+            <div class="pt-4">Inspired by Dwarf Fortress, cybernetics, recursion, and the sovereignty of story in a collapsing world.</div>
+
+            <div class="pt-4">You won’t find facts here. You’ll find infrastructure woven in <em>mythic form</em>.</div>
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/myth"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Descend into the Myth →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Lexicon Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">🔐</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                LEXICON
+            </h2>
+        </div>
+
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>Language is infrastructure.</div>
+
+            <div class="pt-4">These aren’t just definitions — they’re signal stabilizers. Field terminology, recursive phrases, coherence anchors.</div>
+
+            <div class="pt-4">Every word in this lexicon has been tested through collapse and recalibration.</div>
+
+            <div class="pt-4">If it doesn’t make sense yet, keep reading. It will.</div>
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/lexicon"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Decode the Signal →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Honeyman Card -->
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">🌲</span>
+            <h2 class="text-xl font-semibold tracking-tight">
+                HONEYMAN STATE PARK, OREGON STATE PARKS (OPRD)
+            </h2>
+        </div>
+
+        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
+            <div>This is the story of a fracture.</div>
+
+            <div class="pt-4">A real place. A real name. A real archive of institutional dysfunction.</div>
+
+            <div class="pt-4">Here you'll find documentation, surveillance, retaliation, and silence — all directed at an unpaid volunteer who served with integrity.</div>
+
+            <div class="pt-4">This page holds the receipts. But more than that, it holds the field that refused to collapse.</div>
+        </div>
+
+        <div class="text-left">
+            <a
+                href="/honeyman"
+                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+            >
+                Trace the Fracture →
+            </a>
+        </div>
+    </section>
 
 </template>
 

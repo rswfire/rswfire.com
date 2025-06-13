@@ -33,7 +33,7 @@
         { icon: "👤", label: "Who I Am", to: "/hello" },
         { icon: "🛠️", label: "What I Do", to: "/tech" },
         { icon: "♾️", label: "Signal", to: "/signal" },
-        { icon: "📹", label: "Transmission", to: "/transmission" },
+        { icon: "📡", label: "Transmission", to: "/transmission" },
         { icon: "🌱", label: "Fieldwork", to: "/fieldwork" },
         { icon: "🔥", label: "The Myth", to: "/myth" },
         { icon: "🔐", label: "Lexicon", to: "/lexicon" },
