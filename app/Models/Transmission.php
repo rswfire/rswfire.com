@@ -1,18 +1,15 @@
 <?php
 
-namespace App\Models\Library;
+namespace App\Models;
 
 use App\BaseModel;
-use App\Models\Library\_Anchor as LibraryAnchor;
-use App\Models\Library\_Epoch as LibraryEpoch;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Transmission extends BaseModel
 {
     use HasUlids;
 
-    protected $table = "library_transmissions";
+    protected $table = "transmissions";
     protected $primaryKey = "transmission_id";
 
     protected $fillable = [
@@ -54,13 +51,4 @@ class Transmission extends BaseModel
         "transmission_longitude" => "float",
     ];
 
-    public function anchor(): BelongsTo
-    {
-        return $this->belongsTo(LibraryAnchor::class, "anchor_id");
-    }
-
-    public function epoch(): BelongsTo
-    {
-        return $this->belongsTo(LibraryEpoch::class, "epoch_id");
-    }
 }
