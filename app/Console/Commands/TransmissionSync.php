@@ -67,6 +67,11 @@ class TransmissionSync extends Command
             $duration = $this->parseDuration($info["contentDetails"]["duration"]);
             $stats = $info["statistics"];
 
+            $thumbnail = $objSnippet['thumbnails']['high']['url']
+                ?? $objSnippet['thumbnails']['medium']['url']
+                ?? $objSnippet['thumbnails']['default']['url']
+                ?? null;
+
             Transmission::updateOrCreate(
                 ["youtube_id" => $strYouTubeId],
                 [
@@ -79,6 +84,7 @@ class TransmissionSync extends Command
                     "count_likes" => $stats["likeCount"] ?? 0,
                     "count_comments" => $stats["commentCount"] ?? 0,
                     "stamp_updated" => now(),
+                    'url_thumbnail' => $thumbnail,
                 ]
             );
 

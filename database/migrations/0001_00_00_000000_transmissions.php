@@ -25,6 +25,7 @@ return new class extends Migration
             $objTable->longText("transmission_ai_reflections")->nullable();
 
             $objTable->string("url_s3", 500)->default("");
+            $objTable->string("url_thumbnail", 500)->default("");
             $objTable->string("url_youtube", 500)->default("");
 
             $objTable->json("transmission_flags")->nullable();
