@@ -1,11 +1,50 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
+
+
+Route::get('/auth/youtube', function () {
+    $client = new Google_Client();
+    $client->setClientId('969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com');
+    $client->setRedirectUri('https://rswfire.com/oauth2callback');
+    $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
+    $client->setAccessType('offline');
+    $client->setPrompt('consent');
+
+    $authUrl = $client->createAuthUrl();
+    return redirect($authUrl);
+});
+
+Route::get('/oauth2callback', function (Request $request) {
+    $code = $request->query('code');
+
+    if (!$code) {
+        return response('Missing ?code param', 400);
+    }
+
+    $client = new Google_Client();
+    $client->setClientId('969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com');
+    $client->setRedirectUri('https://rswfire.com/oauth2callback');
+    $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
+    $client->setAccessType('offline');
+
+    $token = $client->fetchAccessTokenWithAuthCode($code);
+
+    if (isset($token['error'])) {
+        return response('Token exchange failed: ' . $token['error_description'], 500);
+    }
+
+    Storage::put('oauth-tokens.json', json_encode($token, JSON_PRETTY_PRINT));
+
+    return response('✅ OAuth tokens saved to storage/oauth-tokens.json');
+});
 
 Route::get("/", function () {
     $user = Auth::user();
