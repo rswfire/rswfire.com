@@ -64,13 +64,17 @@ class TransmissionSync extends Command
             }
 
             $info = $details[0];
+            $videoSnippet = $info['snippet'];
+            $thumbnails = $videoSnippet['thumbnails'] ?? [];
+            $thumbnail =
+                $thumbnails['maxres']['url'] ??
+                $thumbnails['standard']['url'] ??
+                $thumbnails['high']['url'] ??
+                $thumbnails['medium']['url'] ??
+                $thumbnails['default']['url'] ??
+                '';
             $duration = $this->parseDuration($info["contentDetails"]["duration"]);
             $stats = $info["statistics"];
-
-            $thumbnail = $objSnippet['thumbnails']['high']['url']
-                ?? $objSnippet['thumbnails']['medium']['url']
-                ?? $objSnippet['thumbnails']['default']['url']
-                ?? null;
 
             Transmission::updateOrCreate(
                 ["youtube_id" => $strYouTubeId],
