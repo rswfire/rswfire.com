@@ -24,6 +24,7 @@ class Transmission extends BaseModel
         "transmission_ai_notes",
         "transmission_ai_reflections",
         "url_s3",
+        "url_thumbnail",
         "url_youtube",
         "transmission_flags",
         "transmission_tags",
