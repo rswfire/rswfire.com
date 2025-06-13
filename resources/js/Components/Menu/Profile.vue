@@ -7,15 +7,9 @@
             class="w-auto h-auto mx-auto rounded-full border border-gray-300 shadow"
         />
 
-        <div>
+        <div class="text-center">
             <h2 class="text-lg font-semibold text-gray-900">rswfire</h2>
             <p class="text-md text-gray-500">Robert Samuel White</p>
-        </div>
-
-        <div class="text-sm italic text-gray-500 border-t border-gray-200 pt-4 text-center">
-            &quot;In a forest pitch dark,<br>
-            Glowed the tiniest spark.<br>
-            It burst into a flame.&quot;
         </div>
 
         <MenuNavigation/>

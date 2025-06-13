@@ -1,7 +1,6 @@
 <template>
 
     <div class="text-sm text-gray-600 border-t border-gray-200 pt-4">
-        <div class="text-xs uppercase font-semibold text-gray-500 mb-2 tracking-wider">Navigation</div>
 
         <div class="">
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-1">
@@ -32,7 +31,7 @@
         { icon: "♾️", label: "Signal", to: "/signal" },
         { icon: "📡", label: "Transmission", to: "/transmission" },
         { icon: "🌱", label: "Fieldwork", to: "/fieldwork" },
-        { icon: "🔥", label: "The Myth", to: "/myth" },
+        { icon: "🔥", label: "Myth", to: "/myth" },
         { icon: "🔐", label: "Lexicon", to: "/lexicon" },
         { icon: "🌲", label: "Honeyman", to: "/honeyman" },
 
