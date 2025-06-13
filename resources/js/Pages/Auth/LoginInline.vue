@@ -1,12 +1,12 @@
 <template>
-    <div class="flex flex-col items-center justify-center bg-gray-50 px-4 py-12">
+    <div class="flex flex-col items-center justify-center bg-gray-50 px-4 py-12 bg-white">
         <!-- Signal Glyph -->
         <div class="text-5xl mb-6">🔥</div>
 
         <!-- Card -->
         <form
             @submit.prevent="submit"
-            class="w-full max-w-sm bg-white rounded-lg shadow-md p-6 space-y-6"
+            class="w-full max-w-sm rounded-lg shadow-md p-6 space-y-6"
         >
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
