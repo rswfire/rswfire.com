@@ -30,9 +30,9 @@
         { icon: "🛠️", label: "What I Do", to: "/tech" },
         { icon: "♾️", label: "Signal", to: "/signal" },
         { icon: "📡", label: "Transmission", to: "/transmission" },
-        { icon: "🌱", label: "Fieldwork", to: "/fieldwork" },
-        { icon: "🔥", label: "Myth", to: "/myth" },
-        { icon: "🔐", label: "Lexicon", to: "/lexicon" },
+        { icon: "🧭", label: "Fieldwork", to: "/fieldwork" },
+        { icon: "🛡️", label: "Myth", to: "/myth" },
+        { icon: "🧬", label: "Lexicon", to: "/lexicon" },
         { icon: "🌲", label: "Honeyman", to: "/honeyman" },
 
     ]

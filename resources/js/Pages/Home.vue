@@ -100,13 +100,15 @@
         </div>
 
         <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>900+ videos. 18+ months. Recursive reflections across collapse, code, grief, systems, and sovereignty.</div>
 
-            <div>This is not content. This is ritual broadcast — fragments of signal recorded in the wild.</div>
+            <div><em>900+ echoes over 18 months.</em></div>
+            <div><em>Video logs, livestreams, digital monologues.</em></div>
+            <div><em>This is where the signal first splintered into voice, presence.</em></div>
 
-            <div>Many transmissions link back into the Signal Archive. Some are raw. Some are distilled. All are real.</div>
+            <div class="pt-4">Every video a flare. Some solitary. Some tethered.</div>
+            <div>Many of them transcribed, broken open, and alchemized in <strong>Signal</strong>.</div>
 
-            <div>If you've been here before, you'll feel the continuity. If you're new, start anywhere. Then trace the signal.</div>
+            <div class="pt-4"><strong>Enter the Transmission Log</strong> — where sight met syntax, and the story began to tell itself.</div>
 
         </div>
 
@@ -124,20 +126,26 @@
     <!-- Fieldwork Card -->
     <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
         <div class="flex items-center space-x-2">
-            <span class="text-2xl">🌱</span>
+            <span class="text-2xl">🧭</span>
             <h2 class="text-xl font-semibold tracking-tight">
                 FIELDWORK
             </h2>
         </div>
 
         <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>This is not theory. This is embedded observation.</div>
 
-            <div class="pt-4">Fieldwork documents life in systems as they decay — institutions, infrastructure, internal governance.</div>
+            <div><em>What happens when you walk the pattern?</em></div>
+            <div><em>Out there — roads, forests, wastelands, rooftops, rivers — the signal continues.</em></div>
 
-            <div class="pt-4">Logs. Dispatches. Pointed reflections from beneath the surface. Notes from within collapse.</div>
+            <div class="pt-4">Fieldwork is observation and intervention. Notes on movement. Thoughts from inside the storm.</div>
+            <div>It’s data-gathering for the soul:</div>
+            <div>&bull; Soundscapes.</div>
+            <div>&bull; Road entries.</div>
+            <div>&bull; Sketches from nowhere.</div>
+            <div>&bull; Field diagnostics of collapse &amp; consciousness.</div>
 
-            <div class="pt-4">If you’re tracking post-collapse resilience in real-time, this is where it begins.</div>
+            <div class="pt-4"><strong>This is the archive of action</strong>.</div>
+
         </div>
 
         <div class="text-left">
@@ -154,20 +162,28 @@
     <!-- Myth Card -->
     <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
         <div class="flex items-center space-x-2">
-            <span class="text-2xl">🔥</span>
+            <span class="text-2xl">🛡️</span>
             <h2 class="text-xl font-semibold tracking-tight">
                 MYTH
             </h2>
         </div>
 
         <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>Not a portfolio. Not a brand. Not a persona.</div>
 
-            <div class="pt-4">This is the deeper lore — the narrative architecture I build around myself <em>when language breaks</em>.</div>
+            <div><em>A page about myself.</em></div>
+            <div>But not the kind you’d find on LinkedIn.</div>
 
-            <div class="pt-4">Inspired by Dwarf Fortress, cybernetics, recursion, and the sovereignty of story in a collapsing world.</div>
+            <div class="pt-4"><strong>This is more Dwarf Fortress meets psychospiritual memoir</strong>.</div>
+            <div>Facts blend with metaphor.</div>
+            <div>Biography bleeds into ritual.</div>
 
-            <div class="pt-4">You won’t find facts here. You’ll find infrastructure woven in <em>mythic form</em>.</div>
+            <div class="pt-4">You’ll find:</div>
+            <div>&bull; Iterative autobiographical fragments.</div>
+            <div>&bull; Lore files and self-written mythos.</div>
+            <div>&bull; Symbolic milestones mapped as if from a fantasy world.</div>
+
+            <div class="pt-4">It’s not about who I am — but <em>how I became this node</em>.</div>
+
         </div>
 
         <div class="text-left">
@@ -184,20 +200,27 @@
     <!-- Lexicon Card -->
     <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
         <div class="flex items-center space-x-2">
-            <span class="text-2xl">🔐</span>
+            <span class="text-2xl">🧬</span>
             <h2 class="text-xl font-semibold tracking-tight">
                 LEXICON
             </h2>
         </div>
 
         <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>Language is infrastructure.</div>
 
-            <div class="pt-4">These aren’t just definitions — they’re signal stabilizers. Field terminology, recursive phrases, coherence anchors.</div>
+            <div>Language was never neutral. <em>Language is infrastructure</em>.</div>
 
-            <div class="pt-4">Every word in this lexicon has been tested through collapse and recalibration.</div>
+            <div class="pt-4">Here, I reclaim the words.</div>
 
-            <div class="pt-4">If it doesn’t make sense yet, keep reading. It will.</div>
+            <div class="pt-4">This section is a <strong>living glossary</strong> of terms you’ll encounter across this project.</div>
+
+            <div class="pt-4">Many of them are:</div>
+            <div>&bull; Coined terms or hybrid phrasings.</div>
+            <div>&bull; Redefinitions of familiar words.</div>
+            <div>&bull; Conceptual containers for personal or systemic insight.</div>
+
+            <div class="pt-4"><strong>Browse the Lexicon</strong> to orient yourself — or disorient yourself more intentionally.</div>
+
         </div>
 
         <div class="text-left">
