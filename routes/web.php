@@ -30,8 +30,9 @@ Route::get('/oauth2callback', function (Request $request) {
     }
 
     $client = new Google_Client();
-    $client->setClientId('969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com');
-    $client->setRedirectUri('https://rswfire.com/oauth2callback');
+    $client->setClientId(config('services.google.client_id'));
+    $client->setClientSecret(config('services.google.client_secret'));
+    $client->setRedirectUri(config('services.google.redirect'));
     $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
     $client->setAccessType('offline');
 
