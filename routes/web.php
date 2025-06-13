@@ -42,6 +42,8 @@ Route::get('/oauth2callback', function (Request $request) {
         return response('Token exchange failed: ' . $token['error_description'], 500);
     }
 
+    echo json_encode($token);
+
     Storage::put('oauth-tokens.json', json_encode($token, JSON_PRETTY_PRINT));
 
     return response('✅ OAuth tokens saved to storage/oauth-tokens.json');
