@@ -1,7 +1,7 @@
 <template>
 
     <!-- "Who I Am" Card -->
-    <section class="rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="rounded-xl bg-gray-50 border border-border p-6 shadow-sm space-y-4">
         <div class="flex items-center space-x-2">
             <div class="relative flex items-center justify-center w-8 h-8">
                 <span class="absolute w-full h-full rounded-full bg-orange-200 opacity-50 animate-ping"></span>
@@ -33,7 +33,7 @@
 
 
     <!-- "What I Do" Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-gray-100/75 space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">🛠</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -63,7 +63,7 @@
 
 
     <!-- Signal Archive Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl bg-gray-50 border border-border p-6 shadow-sm space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">♾️</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -91,7 +91,7 @@
 
 
     <!-- Transmission Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-gray-100/75 space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">📡</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -124,7 +124,7 @@
 
 
     <!-- Fieldwork Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl bg-gray-50 border border-border p-6 shadow-sm space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">🧭</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -160,7 +160,7 @@
 
 
     <!-- Myth Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-gray-100/75 space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">🛡️</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -198,7 +198,7 @@
 
 
     <!-- Lexicon Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl bg-gray-50 border border-border p-6 shadow-sm space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">🧬</span>
             <h2 class="text-xl font-semibold tracking-tight">
@@ -235,7 +235,7 @@
 
 
     <!-- Honeyman Card -->
-    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-white space-y-4">
+    <section class="mt-4 rounded-xl border border-border p-6 shadow-sm bg-green-50 space-y-4">
         <div class="flex items-center space-x-2">
             <span class="text-2xl">🌲</span>
             <h2 class="text-xl font-semibold tracking-tight">
