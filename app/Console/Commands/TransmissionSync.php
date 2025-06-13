@@ -88,7 +88,7 @@ class TransmissionSync extends Command
                     "count_likes" => $stats["likeCount"] ?? 0,
                     "count_comments" => $stats["commentCount"] ?? 0,
                     "stamp_updated" => now(),
-                    'url_thumbnail' => $thumbnail,
+                    'url_thumbnail' => "https://i.ytimg.com/vi/{$strYouTubeId}/hqdefault.jpg",
                 ]
             );
 
