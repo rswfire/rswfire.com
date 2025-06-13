@@ -19,9 +19,6 @@
 
     </div>
 
-    <div class="mt-5 text-center">
-        <a href="https://github.com/rswfire/rswfire.com" target="_blank">Source Code at GitHub</a>
-    </div>
 </template>
 
 <script setup>
