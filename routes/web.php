@@ -2,16 +2,23 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get("/", function () {
+    $user = Auth::user();
     return Inertia::render("Home", [
         "canLogin" => Route::has("login"),
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,
         "phpVersion" => PHP_VERSION,
+        "authUser" => $user ? [
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email,
+        ]: null
     ]);
 });
 
@@ -86,7 +93,7 @@ Route::get('/signal', function () {
 
     return Inertia::render('Signal/Index', [
         'conversations' => $conversations,
-        'authUser' => $user,
+        'authUser' => auth()->user(),
     ]);
 });
 

@@ -1,5 +1,5 @@
 <template>
-
+    <Header :authUser="authUser" />
     <div class="md:hidden">
         <div class="flex items-center justify-between p-3 sticky top-0 z-50 bg-white border-b border-gray-300">
             <div class="flex items-center gap-3">
@@ -47,9 +47,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import {computed, ref} from "vue";
+import Header from "@/Components/Menu/Header.vue";
 import MobileNav from "@/Components/Menu/Panel.vue";
 import { useMeta } from '../Components/useMeta.ts'
+import { usePage } from '@inertiajs/vue3'
+
+const page = usePage()
+const authUser = computed(() => page.props.auth?.user)
+
 
 useMeta({
     title: 'rswfire.com',
