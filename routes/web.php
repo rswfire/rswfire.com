@@ -87,7 +87,7 @@ Route::get('/signal', function () {
     $user = auth()->user();
 
     $conversations = DB::table('chronicle_conversations')
-        ->orderByDesc('stamp_started')
+        ->orderBy('stamp_started')
         ->select('conversation_id', 'conversation_title', 'stamp_started')
         ->paginate(21);
 

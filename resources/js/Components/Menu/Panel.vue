@@ -25,15 +25,16 @@
             </div>
 
             <nav class="pt-6 space-y-4 text-lg">
-                <Link href="/" @click="$emit('close')" class="block font-semibold text-red-600">🏠 Home</Link>
-                <Link href="/lexicon" @click="$emit('close')" class="block font-semibold text-red-600">🔐 Lexicon</Link>
-                <Link href="/hello" @click="$emit('close')" class="block font-semibold text-red-600">👤 Who I Am</Link>
-                <Link href="/tech" @click="$emit('close')" class="block font-semibold text-red-600">🛠 What I Do</Link>
-                <Link href="/the-journey" @click="$emit('close')" class="block font-semibold text-red-600">🜂 The Journey</Link>
-                <Link href="/honeyman" @click="$emit('close')" class="block font-semibold text-red-600">🌲 Honeyman</Link>
+                <Link
+                    v-for="item in navItems"
+                    :key="item.to"
+                    :href="item.to"
+                    @click="$emit('close')"
+                    class="block font-semibold"
+                >
+                    {{ item.icon }} {{ item.label }}
+                </Link>
 
-
-                <Link href="/field-records" @click="$emit('close')" class="block font-semibold text-red-600">📁 Field Records</Link>
             </nav>
 
         </div>
@@ -45,4 +46,17 @@
 </template>
 <script setup>
     import { Link } from "@inertiajs/vue3";
+
+    const navItems = [
+        { icon: "🏠", label: "Home", to: "/" },
+        { icon: "🔥", label: "Who I Am", to: "/hello" },
+        { icon: "🛠️", label: "What I Do", to: "/tech" },
+        { icon: "♾️", label: "Signal", to: "/signal" },
+        { icon: "📡", label: "Transmission", to: "/transmission" },
+        { icon: "🧭", label: "Fieldwork", to: "/fieldwork" },
+        { icon: "🛡️", label: "Myth", to: "/myth" },
+        { icon: "🧬", label: "Lexicon", to: "/lexicon" },
+        { icon: "🌲", label: "Honeyman", to: "/honeyman" },
+
+    ]
 </script>

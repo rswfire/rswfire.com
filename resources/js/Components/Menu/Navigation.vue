@@ -26,7 +26,7 @@
 
     const navItems = [
         { icon: "🏠", label: "Home", to: "/" },
-        { icon: "👤", label: "Who I Am", to: "/hello" },
+        { icon: "🔥", label: "Who I Am", to: "/hello" },
         { icon: "🛠️", label: "What I Do", to: "/tech" },
         { icon: "♾️", label: "Signal", to: "/signal" },
         { icon: "📡", label: "Transmission", to: "/transmission" },

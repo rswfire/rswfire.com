@@ -18,7 +18,7 @@
             <div>A record of one man’s motion through fragmentation, holding wholeness as the world frays.</div>
 
             <div class="pt-4">You don’t have to understand it.</div>
-            <div>But if you feel it — then yes, this part is for you.</div>
+            <div>But if you feel it — then yes, <em>this part is for you</em>.</div>
         </div>
 
         <div class="text-left">
@@ -76,7 +76,7 @@
             <div>It is a map of motion through rupture and recursion.</div>
             <div>18+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>
 
-            <div class="pt-4">If you're feeling pulled toward coherence—this is where it was built.</div>
+            <div class="pt-4">If you're feeling pulled toward coherence—<strong>this is where it was built</strong>.</div>
         </div>
 
         <div class="text-left">
@@ -244,13 +244,14 @@
         </div>
 
         <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>This is the story of a fracture.</div>
+            <div><strong>This is the story of a fracture</strong>.</div>
 
             <div class="pt-4">A real place. A real name. A real archive of institutional dysfunction.</div>
 
             <div class="pt-4">Here you'll find documentation, surveillance, retaliation, and silence — all directed at an unpaid volunteer who served with integrity.</div>
 
-            <div class="pt-4">This page holds the receipts. But more than that, it holds the field that refused to collapse.</div>
+            <div class="pt-4">This page holds the receipts.</div>
+            <div>But more than that, <em>it holds the field that refused to collapse</em>.</div>
         </div>
 
         <div class="text-left">
