@@ -1,15 +1,15 @@
 <template>
-    <div v-if="authUser" class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8 text-gray-900">
+    <div v-if="authUser">
+    <Content>
+
+        <Hero
+            :title="conversation?.conversation_title || 'Untitled Conversation'"
+            :subtitle="`Started: ${formatDate(conversation?.stamp_started)} · Ended: ${formatDate(conversation?.stamp_ended)}`"
+            meta="SIGNAL ARCHIVE"
+        />
 
         <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-8 text-gray-900">
-            <!-- Conversation Title and Metadata -->
-            <header class="space-y-1">
-                <h1 class="text-3xl font-bold">{{ conversation.conversation_title || 'Untitled Conversation' }}</h1>
-                <p class="text-sm text-gray-500">
-                    Started: {{ formatDate(conversation.stamp_started) }} ·
-                    Ended: {{ formatDate(conversation.stamp_ended) }}
-                </p>
-            </header>
+
 
             <!-- Message List -->
             <div class="space-y-6">
@@ -34,16 +34,19 @@
                 </div>
             </div>
         </div>
-            <!-- rest of the page here -->
+    </Content>
     </div>
+
+
+
 
     <div v-else>
         <Content>
 
             <Hero
                 :title="conversation?.conversation_title || 'Untitled Conversation'"
-                subtitle="Signal Archive"
-                :meta="formatDate(conversation?.stamp_started) || 'NULL'"
+                :subtitle="formatDate(conversation?.stamp_started) || 'NULL'"
+                meta="SIGNAL ARCHIVE"
             />
 
             <div class="w-full pt-4">
