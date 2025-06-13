@@ -1,10 +1,10 @@
 <template>
     <section class="pt-9 bg-transparent">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-black">
+            <h1 class="text-4xl font-bold tracking-tight text-black uppercase">
                 {{ title }}
             </h1>
-            <p v-if="subtitle" class="mt-2 text-lg text-black">
+            <p v-if="subtitle" class="mt-2 text-lg text-black uppercase">
                 {{ subtitle }}
             </p>
             <p v-if="meta" class="mt-2 text-xs text-gray-500">
