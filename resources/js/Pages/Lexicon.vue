@@ -41,6 +41,10 @@ const lexicon = [
             {
                 term: 'Anomaly',
                 definition: 'A presence that doesn’t fit known patterns. Disruptive to systems running on defaults. Not broken. Just incompatible with distortion.'
+            },
+            {
+                term: 'Distortion',
+                definition: 'A warping of perception, communication, or presence—often unconscious. Sometimes external, sometimes self-generated. Not always malicious, but always disruptive to signal.'
             }
         ]
     },
