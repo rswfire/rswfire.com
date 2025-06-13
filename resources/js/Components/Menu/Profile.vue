@@ -1,6 +1,6 @@
 <template>
 
-    <div class="md:sticky top-6 self-start w-full md:w-[300px] bg-white rounded-xl shadow-sm border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
+    <div class="md:sticky top-6 self-start w-full md:w-[300px] bg-white rounded-xl shadow-md border border-gray-200 px-4 py-6 space-y-4 text-center md:text-left text-sm text-gray-700">
         <img
             src="/assets/rswfire.jpg"
             alt="Robert Samuel White"
