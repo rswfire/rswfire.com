@@ -99,7 +99,7 @@ class TransmissionSync extends Command
 
     private function parseDuration($strDuration)
     {
-        $interval = new \\DateInterval($strDuration);
+        $interval = new \DateInterval($strDuration);
         return ($interval->h * 3600) + ($interval->i * 60) + $interval->s;
     }
 }
