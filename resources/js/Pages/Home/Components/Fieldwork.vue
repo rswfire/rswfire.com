@@ -5,7 +5,7 @@
         <div class="flex items-center space-x-2">
             <Icon name="Map" color="text-green-500" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
-                FIELDWORK
+                FIELDWORK RECORDS
             </h2>
         </div>
 

@@ -174,7 +174,7 @@ Route::get("/tech", function () {
 Route::get("/transmission", function () {
     return Inertia::render("Transmission/Index", [
         'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24)->onEachSide(1),
-        "metaTitle" => "Transmission Archive | ".request()->getHost(),
+        "metaTitle" => "Transmission Vault | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -219,7 +219,7 @@ Route::get('/transmission/{id}', function ($id) {
         'transmission' => $transmission,
         'previous' => $previous,
         'next' => $next,
-        "metaTitle" => "Transmission Archive (ID) | ".request()->getHost(),
+        "metaTitle" => "Transmission Vault (ID) | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

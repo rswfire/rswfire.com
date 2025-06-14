@@ -104,12 +104,12 @@ const showMenu = ref(false)
 
 const items = [
     { label: 'Home', icon: 'Radar', color: 'text-indigo-400', url: "/" },
-    { label: 'Who I Am', icon: 'Flame', color: 'text-orange-400', url: "/hello" },
+    { label: 'Who I Am', icon: 'Flame', color: 'text-red-400', url: "/hello" },
     { label: 'What I Do', icon: 'Hammer', color: 'text-purple-400', url: "/tech" },
     { label: 'Signal', icon: 'Activity', color: 'text-sky-400', url: "/signal" },
     { label: 'Transmission', icon: 'SatelliteDish', color: 'text-pink-400', url: "/transmission" },
     { label: 'Fieldwork', icon: 'Map', color: 'text-green-500', url: "/fieldwork" },
-    { label: 'Lexicon', icon: 'SquareLibrary', color: 'text-red-400', url: "/lexicon" },
+    { label: 'Lexicon', icon: 'SquareLibrary', color: 'text-orange-400', url: "/lexicon" },
     { label: 'Myth', icon: 'ShieldCheck', color: 'text-yellow-400', url: "/myth" },
     { label: 'Honeyman', icon: 'TreeDeciduous', color: 'text-emerald-400', url: "/honeyman" }
 ]

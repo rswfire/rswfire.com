@@ -115,16 +115,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 
-const metaTitle = "What I Do";
-const metaDescription = "Technical background of Robert Samuel White.";
-const metaUrl = `https://rswfire.com/tech`;
-
-defineExpose({
-    metaTitle,
-    metaDescription,
-    metaUrl
-})
-
 const player = ref(null)
 const playerReady = ref(false)
 const videoElement = ref(null)
