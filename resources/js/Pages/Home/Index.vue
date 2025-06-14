@@ -9,6 +9,7 @@
         <div class="md:col-span-1">
             <TechCard />
         </div>
+
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
@@ -36,29 +37,26 @@
 
 <script setup>
 
-import { Link } from '@inertiajs/vue3'
-import FieldRecordsPreview from "../../Components/FieldRecordsPreview.vue";
-import { useMeta } from '../../Components/useMeta.ts'
+    import { useMeta } from "@/Components/useMeta.ts"
+    import Icon from "@/Components/System/Icon.vue";
 
-import Icon from "@/Components/System/Icon.vue";
+    import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
+    import HelloCard from "@/Pages/Home/Components/Hello.vue";
+    import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
+    import LexiconCard from "@/Pages/Home/Components/Lexicon.vue";
+    import MythCard from "@/Pages/Home/Components/Myth.vue";
+    import SignalCard from "@/Pages/Home/Components/Signal.vue";
+    import TechCard from "@/Pages/Home/Components/Tech.vue";
+    import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
 
-import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
-import HelloCard from "@/Pages/Home/Components/Hello.vue";
-import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
-import LexiconCard from "@/Pages/Home/Components/Lexicon.vue";
-import MythCard from "@/Pages/Home/Components/Myth.vue";
-import SignalCard from "@/Pages/Home/Components/Signal.vue";
-import TechCard from "@/Pages/Home/Components/Tech.vue";
-import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
-
-useMeta({
-    title: 'rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
-})
+    useMeta({
+        title: 'rswfire.com',
+        description: 'Robert Samuel White',
+        keywords: 'rswfire',
+        image: '',
+        url: 'https://rswfire.com/',
+        type: 'article',
+    })
 
 </script>
 
