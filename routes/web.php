@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Transmission;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
@@ -169,8 +170,10 @@ Route::get("/tech", function () {
     ]);
 });
 
+
 Route::get("/transmission", function () {
-    return Inertia::render("Transmission", [
+    return Inertia::render("Transmission/Index", [
+        'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24),
         "canLogin" => Route::has("login"),
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,
