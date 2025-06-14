@@ -3,41 +3,36 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Models\Video;
+use App\Models\Transmission;
 
-class SyncYouTubeTranscripts extends Command
+class TransmissionTranscripts extends Command
 {
-    protected $signature = 'sync:transcripts';
+    protected $signature = 'transmission:transcripts';
     protected $description = 'Download and store deduplicated YouTube transcripts as clean text';
 
     public function handle()
     {
-        $videos = Video::where(function ($query) {
-            $query->whereNull('video_transcript')
-                ->orWhereRaw('TRIM(video_transcript) = ""');
+        $videos = Transmission::where(function ($query) {
+            $query->whereNull('transmission_transcript')
+                ->orWhereRaw('TRIM(transmission_transcript) = ""');
         })->get();
 
         foreach ($videos as $video) {
             $videoId = $video->youtube_id;
             $url = "https://www.youtube.com/watch?v={$videoId}";
 
-            $this->info("Fetching transcript for: {$video->video_title}");
+            $this->info("Fetching transcript for: {$video->transmission_title}");
 
             $outputDir = storage_path("app/transcripts");
             if (!is_dir($outputDir)) mkdir($outputDir, 0755, true);
 
-            $originalCookieFile = storage_path("youtubecookies.txt");
-            $cookieCopyPath = storage_path("app/tmp_cookies.txt");
-            copy($originalCookieFile, $cookieCopyPath);
-            chmod($cookieCopyPath, 0644);
-
-            $command = escapeshellcmd("yt-dlp --cookies '{$cookieCopyPath}' --skip-download --write-auto-sub --sub-lang en --output '{$outputDir}/{$videoId}.%(ext)s' {$url}");
+            $command = escapeshellcmd(
+                "yt-dlp --skip-download --write-auto-sub --sub-lang en " .
+                "--output '{$outputDir}/{$videoId}.%(ext)s' {$url}"
+            );
 
             exec($command, $output, $exitCode);
 
-            unlink($cookieCopyPath); // Cleanup temp cookie
-
-            // Find the .vtt file
             $matches = glob("{$outputDir}/{$videoId}*.vtt");
             $vttPath = $matches[0] ?? null;
 
@@ -52,10 +47,10 @@ class SyncYouTubeTranscripts extends Command
                 continue;
             }
 
-            $video->video_transcript = $transcript;
+            $video->transmission_transcript = $transcript;
             $video->save();
 
-            $this->info("Transcript saved for: {$video->video_title}");
+            $this->info("Transcript saved for: {$video->transmission_title}");
         }
 
         $this->info("All transcripts synced.");
@@ -70,7 +65,6 @@ class SyncYouTubeTranscripts extends Command
         foreach ($lines as $line) {
             $line = trim($line);
 
-            // Skip timestamps and metadata
             if (
                 $line === '' ||
                 str_starts_with($line, 'WEBVTT') ||
@@ -80,7 +74,6 @@ class SyncYouTubeTranscripts extends Command
                 continue;
             }
 
-            // Deduplicate lines
             $hash = md5($line);
             if (in_array($hash, $seen)) continue;
 

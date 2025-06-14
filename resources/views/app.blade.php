@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K6H8GR1Q7"></script>
         <script>
