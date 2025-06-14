@@ -106,6 +106,10 @@ Route::get("/honeyman", function () {
     ]);
 });
 
+Route::get('/honeyman/{any}', function () {
+    return redirect('/honeyman');
+})->where('any', '.*');
+
 Route::get("/lexicon", function () {
     return Inertia::render("Lexicon", [
         "metaTitle" => "Lexicon | ".request()->getHost(),
