@@ -80,24 +80,7 @@
             </div>
         </div>
 
-        <div class="text-center text-sm text-gray-500 mt-6">
-            Page {{ conversations.current_page }} of {{ conversations.last_page }}
-        </div>
-
-        <div class="flex justify-center mt-2 flex-wrap gap-1">
-            <Link
-                v-for="page in pageRange(conversations.current_page, conversations.last_page)"
-                :key="page"
-                :href="`?page=${page}`"
-                class="px-3 py-1 rounded border text-sm"
-                :class="{
-  'bg-gray-900 text-white': page === conversations.current_page,
-  'bg-white text-gray-700 border-gray-300 hover:bg-gray-100': page !== conversations.current_page
-}"
-            >
-                {{ page }}
-            </Link>
-        </div>
+        <Pagination :links="conversations.links" />
 
 
     </Content>
@@ -108,6 +91,7 @@ import { Link, usePage } from '@inertiajs/vue3'
 import {ref} from "vue";
 import Content from "@/Components/System/Content.vue";
 import Hero from "@/Components/System/Hero.vue";
+import Pagination from "@/Components/System/Pagination.vue";
 
 const expanded = ref(false)
 

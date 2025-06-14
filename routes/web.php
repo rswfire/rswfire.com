@@ -132,7 +132,8 @@ Route::get('/signal', function () {
     $conversations = DB::table('chronicle_conversations')
         ->orderBy('stamp_started')
         ->select('conversation_id', 'conversation_title', 'stamp_started')
-        ->paginate(21);
+        ->paginate(21)
+        ->onEachSide(1);
 
     return Inertia::render('Signal/Index', [
         'conversations' => $conversations,
