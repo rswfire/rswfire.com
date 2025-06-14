@@ -16,7 +16,7 @@
         <div class="flex flex-col h-full w-full">
             <div class="flex flex-col space-y-4">
                 <div class="flex items-center space-x-2">
-                    <Icon name="Flame" color="text-orange-400" class="flex-shrink-0" />
+                    <Icon name="Flame" color="text-red-400" class="flex-shrink-0" />
                     <h2 class="text-xl font-semibold tracking-tight">START HERE</h2>
                 </div>
 

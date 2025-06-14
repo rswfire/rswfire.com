@@ -2,7 +2,7 @@
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
         <div class="flex items-center space-x-2">
-            <Icon name="SquareLibrary" color="text-red-400" class="flex-shrink-0" />
+            <Icon name="SquareLibrary" color="text-orange-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 LEXICON
             </h2>
