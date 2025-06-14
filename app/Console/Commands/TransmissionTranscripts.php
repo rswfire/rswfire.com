@@ -26,8 +26,10 @@ class TransmissionTranscripts extends Command
             $outputDir = storage_path("app/transcripts");
             if (!is_dir($outputDir)) mkdir($outputDir, 0755, true);
 
+            $cookiePath = storage_path("youtubecookies.txt");
+
             $command = escapeshellcmd(
-                "yt-dlp --skip-download --write-auto-sub --sub-lang en " .
+                "yt-dlp --cookies '{$cookiePath}' " ."--skip-download --write-auto-sub --sub-lang en " .
                 "--output '{$outputDir}/{$videoId}.%(ext)s' {$url}"
             );
 
