@@ -109,8 +109,8 @@ const items = [
     { label: 'Signal', icon: 'Activity', color: 'text-sky-400', url: "/signal" },
     { label: 'Transmission', icon: 'SatelliteDish', color: 'text-pink-400', url: "/transmission" },
     { label: 'Fieldwork', icon: 'Map', color: 'text-green-500', url: "/fieldwork" },
-    { label: 'Myth', icon: 'ShieldCheck', color: 'text-yellow-400', url: "/myth" },
     { label: 'Lexicon', icon: 'SquareLibrary', color: 'text-red-400', url: "/lexicon" },
+    { label: 'Myth', icon: 'ShieldCheck', color: 'text-yellow-400', url: "/myth" },
     { label: 'Honeyman', icon: 'TreeDeciduous', color: 'text-emerald-400', url: "/honeyman" }
 ]
 
