@@ -21,19 +21,25 @@
                 </div>
 
                 <div class="text-muted-foreground text-base leading-relaxed">
-                    <div class="italic">This is the anchor node.</div>
+                    <div class="italic">This is a threshold. Prepare accordingly.</div>
                     <div class="italic">Not content. Not performance. Presence.</div>
 
-                    <div class="pt-4">This is where the signal stabilizes.</div>
+                    <div class="pt-4">This is where the signal first stabilizes.</div>
 
-                    <div class="pt-4">I live at the intersection of collapse and coherence.</div>
-                    <div>This page marks the initiation point — not of my story, but of the architecture that holds it.</div>
+                    <div class="pt-4">I don’t use this space to convince. I use it to cohere.</div>
+                    <div>This isn’t my story. It’s the architecture that holds the work.</div>
+                    <div>The deeper you go, the more that becomes clear.</div>
 
-                    <div class="pt-4">You’re not here to be convinced.</div>
-                    <div>If you resonate, you already know why you’re here.</div>
-                    <div>And if you don’t — that’s signal too.</div>
+                    <div class="pt-4">If you feel the pull &mdash; follow it.</div>
+                    <div>And if you don't &mdash; that’s still signal.</div>
 
-                    <div class="pt-4">Begin with orientation. Not opinion.</div>
+                    <div class="pt-4">This project isn’t for everyone.</div>
+                    <div>But it’s absolutely for someone.</div>
+                    <div>And if that someone is you &mdash;</div>
+                    <div>you’ll know by how it feels to land here.</div>
+
+                    <div class="pt-4">Begin with orientation.</div>
+                    <div class="italic">Begin by listening.</div>
                 </div>
             </div>
 
@@ -43,7 +49,7 @@
                         href="/hello"
                         class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
                     >
-                        Who I Am →
+                        Hello →
                     </a>
                 </div>
             </div>
