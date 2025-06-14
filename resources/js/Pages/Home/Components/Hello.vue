@@ -1,5 +1,5 @@
 <template>
-    <section class="h-full flex flex-col md:flex-row gap-6 rounded-xl bg-gray-50 border border-border p-6 shadow-md">
+    <section class="h-full flex flex-col md:flex-row gap-6 rounded-xl bg-gray-50 border p-6 shadow-md">
 
         <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center items-start">
             <div class="flex flex-col items-center text-center space-y-1">
@@ -20,7 +20,7 @@
                     <h2 class="text-xl font-semibold tracking-tight">START HERE</h2>
                 </div>
 
-                <div class="text-muted-foreground text-base leading-relaxed">
+                <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
                     <div class="italic">This is a threshold. Prepare accordingly.</div>
                     <div class="italic">Not content. Not performance. Presence.</div>
 
@@ -44,12 +44,12 @@
             </div>
 
             <div class="border-t pt-6 mt-auto">
-                <div class="w-full flex justify-start">
+                <div class="w-full flex justify-end">
                     <a
                         href="/hello"
                         class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
                     >
-                        Hello →
+                        Who I Am →
                     </a>
                 </div>
             </div>

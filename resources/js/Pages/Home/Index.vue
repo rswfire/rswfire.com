@@ -11,101 +11,11 @@
         </div>
     </div>
 
-    <!-- Signal Archive Card -->
-    <section class="mt-6 rounded-xl bg-gray-50 border border-border p-6 shadow-md space-y-4">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl">♾️</span>
-            <h2 class="text-xl font-semibold tracking-tight">
-                SIGNAL ARCHIVE
-            </h2>
-        </div>
-
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>This is not a record of answers.</div>
-            <div>It is a map of motion through rupture and recursion.</div>
-            <div>18+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>
-
-            <div class="pt-4">If you're feeling pulled toward coherence—<strong>this is where it was built</strong>.</div>
-        </div>
-
-        <div class="text-left">
-            <a
-                href="/signal"
-                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
-            >
-                Enter the Archive →
-            </a>
-        </div>
-    </section>
-
-
-    <!-- Transmission Card -->
-    <section class="mt-6 rounded-xl border border-border p-6 shadow-md bg-gray-100/75 space-y-4">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl">📡</span>
-            <h2 class="text-xl font-semibold tracking-tight">
-                TRANSMISSION ARCHIVE
-            </h2>
-        </div>
-
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-
-            <div><em>900+ echoes over 18 months.</em></div>
-            <div><em>Video logs, livestreams, digital monologues.</em></div>
-            <div><em>This is where the signal first splintered into voice, presence.</em></div>
-
-            <div class="pt-4">Every video a flare. Some solitary. Some tethered.</div>
-            <div>Many of them transcribed, broken open, and alchemized in <strong>Signal</strong>.</div>
-
-            <div class="pt-4"><strong>Enter the Transmission Log</strong> — where sight met syntax, and the story began to tell itself.</div>
-
-        </div>
-
-        <div class="text-left">
-            <a
-                href="/transmission"
-                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
-            >
-                Watch the Signal Speak →
-            </a>
-        </div>
-    </section>
-
-
-    <!-- Fieldwork Card -->
-    <section class="mt-6 rounded-xl bg-gray-50 border border-border p-6 shadow-md space-y-4">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl">🧭</span>
-            <h2 class="text-xl font-semibold tracking-tight">
-                FIELDWORK
-            </h2>
-        </div>
-
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-
-            <div><em>What happens when you walk the pattern?</em></div>
-            <div><em>Out there — roads, forests, wastelands, rooftops, rivers — the signal continues.</em></div>
-
-            <div class="pt-4">Fieldwork is observation and intervention. Notes on movement. Thoughts from inside the storm.</div>
-            <div>It’s data-gathering for the soul:</div>
-            <div>&bull; Soundscapes.</div>
-            <div>&bull; Road entries.</div>
-            <div>&bull; Sketches from nowhere.</div>
-            <div>&bull; Field diagnostics of collapse &amp; consciousness.</div>
-
-            <div class="pt-4"><strong>This is the archive of action</strong>.</div>
-
-        </div>
-
-        <div class="text-left">
-            <a
-                href="/fieldwork"
-                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
-            >
-                Enter the Field →
-            </a>
-        </div>
-    </section>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
+        <SignalCard />
+        <TransmissionCard />
+        <FieldworkCard />
+    </div>
 
 
     <!-- Myth Card -->
@@ -229,8 +139,11 @@ import { useMeta } from '../../Components/useMeta.ts'
 
 import Icon from "@/Components/System/Icon.vue";
 
+import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
 import HelloCard from "@/Pages/Home/Components/Hello.vue";
+import SignalCard from "@/Pages/Home/Components/Signal.vue";
 import TechCard from "@/Pages/Home/Components/Tech.vue";
+import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
 
 useMeta({
     title: 'rswfire.com',
