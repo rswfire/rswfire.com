@@ -8,7 +8,23 @@
         />
 
         <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
-            <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 {{ transmission.url_youtube }}</div>
+            <div class="bg-gray-100 px-4 py-2 font-semibold">
+                <div class="flex justify-between text-md">
+                    <div v-if="previous">
+                        <Link :href="`/transmission/${previous.transmission_id}`" class="hover:text-black hover:underline">
+                            ← Previous Video
+                        </Link>
+                    </div>
+                    <div v-else></div>
+
+                    <div v-if="next">
+                        <Link :href="`/transmission/${next.transmission_id}`" class="hover:text-black hover:underline">
+                            Next Video →
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
             <div class="p-4">
                 <YoutubePlayer :video-id="transmission.youtube_id" />
             </div>
@@ -38,9 +54,12 @@ import Hero from "@/Components/System/Hero.vue";
 import YoutubePlayer from '@/Components/System/YoutubePlayer.vue';
 import MarkdownIt from 'markdown-it';
 import { computed } from 'vue';
+import { Link } from '@inertiajs/vue3'
 
 const props = defineProps({
     transmission: Object,
+    previous: Object,
+    next: Object,
 })
 
 const md = new MarkdownIt({

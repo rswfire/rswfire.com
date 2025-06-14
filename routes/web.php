@@ -192,8 +192,34 @@ Route::get('/transmission/{id}', function ($id) {
         abort(404, 'Transmission not found.');
     }
 
+    $previous = Transmission::where(function ($query) use ($transmission) {
+        $query->where('stamp_published', '<', $transmission->stamp_published)
+            ->orWhere(function ($q) use ($transmission) {
+                $q->where('stamp_published', $transmission->stamp_published)
+                    ->where('transmission_id', '<', $transmission->transmission_id);
+            });
+    })
+        ->where('transmission_id', '!=', $transmission->transmission_id)
+        ->orderBy('stamp_published', 'desc')
+        ->orderBy('transmission_id', 'desc')
+        ->first();
+
+    $next = Transmission::where(function ($query) use ($transmission) {
+        $query->where('stamp_published', '>', $transmission->stamp_published)
+            ->orWhere(function ($q) use ($transmission) {
+                $q->where('stamp_published', $transmission->stamp_published)
+                    ->where('transmission_id', '>', $transmission->transmission_id);
+            });
+    })
+        ->where('transmission_id', '!=', $transmission->transmission_id)
+        ->orderBy('stamp_published', 'asc')
+        ->orderBy('transmission_id', 'asc')
+        ->first();
+
     return Inertia::render('Transmission/Entry', [
         'transmission' => $transmission,
+        'previous' => $previous,
+        'next' => $next,
         'authUser' => $user,
     ]);
 });
