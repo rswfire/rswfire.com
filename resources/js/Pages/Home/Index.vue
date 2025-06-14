@@ -37,7 +37,6 @@
 
 <script setup>
 
-    import { useMeta } from "@/Components/useMeta.ts"
     import Icon from "@/Components/System/Icon.vue";
 
     import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
@@ -48,15 +47,6 @@
     import SignalCard from "@/Pages/Home/Components/Signal.vue";
     import TechCard from "@/Pages/Home/Components/Tech.vue";
     import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
-
-    useMeta({
-        title: 'rswfire.com',
-        description: 'Robert Samuel White',
-        keywords: 'rswfire',
-        image: '',
-        url: 'https://rswfire.com/',
-        type: 'article',
-    })
 
 </script>
 

@@ -53,29 +53,26 @@ Route::get('/oauth2callback', function (Request $request) {
 Route::get("/", function () {
     $user = Auth::user();
     return Inertia::render("Home/Index", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
-        "authUser" => $user ? [
-            'id' => $user->id,
-            'name' => $user->name,
-            'email' => $user->email,
-        ]: null
+        "metaTitle" => "Home | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/fieldwork", function () {
     return Inertia::render("Fieldwork/Home", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "Fieldwork Records | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/fieldwork/create", function () {
-    return Inertia::render("Fieldwork/Create");
+    return Inertia::render("Fieldwork/Create", [
+        "metaTitle" => "Fieldwork Records (Create) | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
 });
 
 Route::get("/fieldwork/{id}", function ($id) {
@@ -87,42 +84,41 @@ Route::get("/fieldwork/{id}", function ($id) {
 
     return Inertia::render("Fieldwork/Entry", [
         "entry" => $entry,
+        "metaTitle" => "Fieldwork Records (ID) | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/hello", function () {
     return Inertia::render("Hello", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "Who I Am | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/honeyman", function () {
     return Inertia::render("Honeyman", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "The Story of Honeyman | ".request()->getHost(),
+        "metaDescription" => "A precise and permanent archive of institutional harm at Honeyman State Park. Documented by Sam White, this page exposes systemic coercion, silence, and dismissal inside Oregon State Parks.",
+        "metaUrl" => "https://rswfire.com/honeyman",
     ]);
 });
 
 Route::get("/lexicon", function () {
     return Inertia::render("Lexicon", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "Lexicon | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/myth", function () {
     return Inertia::render("Myth", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "Myth | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
@@ -137,7 +133,9 @@ Route::get('/signal', function () {
 
     return Inertia::render('Signal/Index', [
         'conversations' => $conversations,
-        'authUser' => auth()->user(),
+        "metaTitle" => "Signal Archive | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
@@ -158,16 +156,17 @@ Route::get('/signal/{id}', function ($id) {
     return Inertia::render('Signal/Entry', [
         'conversation' => $conversation,
         'messages' => $messages,
-        'authUser' => $user,
+        "metaTitle" => "Signal Archive (ID) | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
 Route::get("/tech", function () {
     return Inertia::render("Tech", [
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "What I Do | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
@@ -175,10 +174,9 @@ Route::get("/tech", function () {
 Route::get("/transmission", function () {
     return Inertia::render("Transmission/Index", [
         'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24)->onEachSide(1),
-        "canLogin" => Route::has("login"),
-        "canRegister" => Route::has("register"),
-        "laravelVersion" => Application::VERSION,
-        "phpVersion" => PHP_VERSION,
+        "metaTitle" => "Transmission Archive | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
@@ -221,7 +219,9 @@ Route::get('/transmission/{id}', function ($id) {
         'transmission' => $transmission,
         'previous' => $previous,
         'next' => $next,
-        'authUser' => $user,
+        "metaTitle" => "Transmission Archive (ID) | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 

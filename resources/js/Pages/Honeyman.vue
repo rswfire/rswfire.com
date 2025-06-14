@@ -1,4 +1,5 @@
 <template>
+
     <div class="border border-gray-300 rounded-2xl pt-0 shadow-md bg-white w-full mx-auto">
 
         <hero
@@ -774,17 +775,6 @@
 import Hero from "../Components/System/Hero.vue"
 import Para from "../Components/System/Para.vue"
 import YoutubePlayer from "../Components/System/YoutubePlayer.vue"
-
-import { useMeta } from '../Components/useMeta.ts'
-
-useMeta({
-    title: 'The Story of Honeyman | rswfire.com',
-    description: 'A precise and permanent archive of institutional harm at Honeyman State Park. Documented by Sam White, this page exposes systemic coercion, silence, and dismissal inside Oregon State Parks.',
-    keywords: 'Honeyman State Park, Oregon State Parks, OPRD, volunteer dismissal, institutional harm, psychological coercion, gaslighting, Sam White, Ryan Warren, Kati Baker, Allison Watson, Logan Bliss',
-    image: 'https://rswfire.com/meta/honeyman-social.jpg',
-    url: 'https://rswfire.com/honeyman',
-    type: 'article',
-})
 
 </script>
 

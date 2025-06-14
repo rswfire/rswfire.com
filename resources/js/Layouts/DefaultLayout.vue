@@ -1,4 +1,13 @@
 <template>
+
+    <Head>
+        <title>{{ metaTitle }}</title>
+        <meta name="description" :content="metaDescription" />
+        <meta property="og:title" :content="metaTitle" />
+        <meta property="og:description" :content="metaDescription" />
+        <meta property="og:url" :content="metaUrl" />
+    </Head>
+
     <Header :authUser="authUser" />
     <div class="md:hidden">
         <div class="flex items-center justify-between p-3 sticky top-0 z-50 bg-white border-b border-gray-300">
@@ -40,28 +49,20 @@
 </template>
 
 <script setup>
-import {computed, ref} from "vue";
-import Header from "@/Components/Menu/Header.vue";
-import MobileNav from "@/Components/Menu/Panel.vue";
-import { useMeta } from '../Components/useMeta.ts'
-import { usePage } from '@inertiajs/vue3'
 
-const page = usePage()
-const authUser = computed(() => page.props.auth?.user)
+    import {computed, ref} from "vue";
+    import Header from "@/Components/Menu/Header.vue";
+    import MobileNav from "@/Components/Menu/Panel.vue";
+    import { Head } from '@inertiajs/vue3'
+    import { usePage } from '@inertiajs/vue3'
 
+    defineProps(['metaTitle', 'metaDescription', 'metaKeywords', 'metaUrl'])
 
-useMeta({
-    title: 'rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
-})
+    const page = usePage()
 
-const menuOpen = ref(false);
+    const authUser = computed(() => page.props.auth?.user)
+    const menuOpen = ref(false);
 
-import MenuProfile from "@/Components/Menu/Profile.vue";
 </script>
 
 <style>

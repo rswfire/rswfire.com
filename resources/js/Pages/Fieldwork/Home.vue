@@ -1,4 +1,5 @@
 <template>
+
     <div class="space-y-8">
         <h1 class="text-3xl font-semibold text-gray-900">Fieldwork</h1>
         <div class="space-y-6">
@@ -20,20 +21,10 @@
 </template>
 
 <script setup>
-import { useMeta } from "@/Components/useMeta.js"
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import MarkdownIt from 'markdown-it'
 import { Link } from "@inertiajs/vue3"
-
-useMeta({
-    title: 'Fieldwork | rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
-})
 
 const entries = ref([])
 const md = new MarkdownIt({

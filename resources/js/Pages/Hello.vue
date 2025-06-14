@@ -1,4 +1,5 @@
 <template>
+
     <div class="border border-gray-300 rounded-2xl p-6 shadow-md bg-white w-full mx-auto">
     <div class="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:marker:text-gray-400 prose-strong:text-gray-900 prose-strong:font-semibold">
 
@@ -359,16 +360,6 @@
 <script setup>
 import LexiconTerm from "@/Components/LexiconTerm.vue"
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import { useMeta } from '../Components/useMeta.ts'
-
-useMeta({
-    title: 'Who I Am | rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
-})
 
 const player = ref(null)
 const playerReady = ref(false)

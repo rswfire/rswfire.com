@@ -1,4 +1,5 @@
 <template>
+
     <div class="max-w-3xl mx-auto py-12 space-y-6">
         <h1 class="text-3xl font-bold text-gray-900">{{ entry.content_title || 'Untitled Entry' }}</h1>
         <div class="prose max-w-none" v-html="renderMarkdown(entry.content_body)"></div>
@@ -12,7 +13,6 @@
 <script setup>
 import { onMounted } from 'vue'
 import MarkdownIt from 'markdown-it'
-import { useMeta } from '@/Components/useMeta.js'
 
 const props = defineProps({
     entry: Object
@@ -29,10 +29,4 @@ function renderMarkdown(text) {
     return md.render(text || '')
 }
 
-useMeta({
-    title: `${props.entry.content_title || 'Fieldwork Entry'} | rswfire.com`,
-    description: 'An entry from the sovereign archive',
-    url: `https://rswfire.com/fieldwork/${props.entry.content_id}`,
-    type: 'article',
-})
 </script>

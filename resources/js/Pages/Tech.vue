@@ -1,4 +1,5 @@
 <template>
+
     <div class="border border-gray-300 rounded-2xl p-6 shadow-md bg-white w-full mx-auto">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
             <section class="space-y-4">
@@ -113,15 +114,15 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import { useMeta } from '../Components/useMeta.ts'
 
-useMeta({
-    title: 'What I Do | rswfire.com',
-    description: 'Robert Samuel White',
-    keywords: 'rswfire',
-    image: '',
-    url: 'https://rswfire.com/',
-    type: 'article',
+const metaTitle = "What I Do";
+const metaDescription = "Technical background of Robert Samuel White.";
+const metaUrl = `https://rswfire.com/tech`;
+
+defineExpose({
+    metaTitle,
+    metaDescription,
+    metaUrl
 })
 
 const player = ref(null)
