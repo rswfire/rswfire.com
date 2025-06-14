@@ -173,11 +173,28 @@ Route::get("/tech", function () {
 
 Route::get("/transmission", function () {
     return Inertia::render("Transmission/Index", [
-        'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24),
+        'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24)->onEachSide(1),
         "canLogin" => Route::has("login"),
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,
         "phpVersion" => PHP_VERSION,
+    ]);
+});
+
+Route::get('/transmission/{id}', function ($id) {
+    $user = Auth::user();
+
+    $transmission = DB::table('transmissions')
+        ->where('transmission_id', $id)
+        ->first();
+
+    if (!$transmission) {
+        abort(404, 'Transmission not found.');
+    }
+
+    return Inertia::render('Transmission/Entry', [
+        'transmission' => $transmission,
+        'authUser' => $user,
     ]);
 });
 

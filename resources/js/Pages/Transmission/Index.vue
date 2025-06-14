@@ -50,44 +50,40 @@
         </section>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div v-for="transmission in transmissions.data" :key="transmission.transmission_id">
+            <div
+                v-for="transmission in transmissions.data"
+                :key="transmission.transmission_id"
+                @click="goTo(transmission.transmission_id)"
+                class="group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
+            >
 
+                <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                     <img
                         :src="transmission.url_thumbnail"
                         :alt="transmission.transmission_title"
-                        class="w-full h-48 object-cover"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                     />
-                    <div class="p-4">
-                        <h2 class="text-md font-semibold leading-tight text-gray-800">
-                            {{ transmission.transmission_title }}
-                        </h2>
-                        <p class="text-sm text-gray-500 mt-1 truncate">
-                            {{ transmission.transmission_description }}
-                        </p>
-                        <div class="text-xs text-gray-400 mt-2 flex justify-between">
-                            <span>{{ formatDate(transmission.stamp_published) }}</span>
-                            <span>{{ formatDuration(transmission.transmission_duration) }}</span>
-                        </div>
+                </div>
+
+                <div class="p-4 space-y-1">
+                    <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black line-clamp-2">
+                        {{ transmission.transmission_title }}
+                    </h2>
+                    <p class="text-sm text-gray-500 line-clamp-2">
+                        {{ transmission.transmission_description }}
+                    </p>
+                    <div class="text-xs text-gray-400 flex justify-between pt-2">
+                        <span>{{ formatDate(transmission.stamp_published) }}</span>
+                        <span>{{ formatDuration(transmission.transmission_duration) }}</span>
                     </div>
                 </div>
-            </div>
-        <div class="mt-10 flex justify-center gap-2">
-            <button
-                v-if="transmissions.prev_page_url"
-                @click="router.visit(transmissions.prev_page_url)"
-                class="px-4 py-2 text-sm font-medium bg-white border rounded shadow hover:bg-gray-50"
-            >
-                ← Previous
-            </button>
 
-            <button
-                v-if="transmissions.next_page_url"
-                @click="router.visit(transmissions.next_page_url)"
-                class="px-4 py-2 text-sm font-medium bg-white border rounded shadow hover:bg-gray-50"
-            >
-                Next →
-            </button>
+            </div>
+
         </div>
+
+        <Pagination :links="transmissions.links" />
+
     </Content>
 </template>
 
@@ -96,6 +92,7 @@ import { router } from '@inertiajs/vue3'
 import {computed, ref} from 'vue'
 import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
+import Pagination from '@/Components/System/Pagination.vue'
 
 defineProps({
     transmissions: Object
