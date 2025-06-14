@@ -5,79 +5,69 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Transmission;
 
-class TransmissionTranscripts extends Command
+class TransmissionTranscriptsCurl extends Command
 {
-    protected $signature = 'transmission:transcripts';
-    protected $description = 'Fetch and save auto-generated YouTube transcripts for unlisted videos.';
+    protected $signature = 'transmission:transcripts-curl';
+    protected $description = 'Fetch and save YouTube auto-transcripts via direct JSON API';
 
     public function handle()
     {
-        $videos = Transmission::where(function ($query) {
-            $query->whereNull('transmission_transcript')
-                ->orWhereRaw('TRIM(transmission_transcript) = ""');
-        })->get();
+        $videos = Transmission::whereNull('transmission_transcript')
+            ->orWhereRaw('TRIM(transmission_transcript) = ""')
+            ->get();
 
         foreach ($videos as $video) {
-            $videoId = $video->youtube_id;
-            $url = "https://www.youtube.com/watch?v={$videoId}";
+            $id = $video->youtube_id;
+            $url = "https://www.youtube.com/watch?v={$id}";
+            $this->info("📡 Fetching transcript for: {$video->transmission_title}");
 
-            $this->info("Fetching transcript for: {$video->transmission_title}");
+            $html = $this->curlGet($url);
+            if (!$html) { $this->warn("Failed to fetch page."); continue; }
 
-            $html = shell_exec("curl -s '{$url}'");
-            if (!$html) {
-                $this->warn("Could not fetch YouTube page.");
+            if (!preg_match(
+                '/raw_player_response\s*=\s*(\{.+?\});/',
+                $html, $m
+            )) {
+                $this->warn("raw_player_response not found.");
                 continue;
             }
 
-            if (!preg_match('/"captions":\{(.*?)\}\,"videoDetails"/s', $html, $matches)) {
-                $this->warn("No captions found on page.");
+            $json = json_decode($m[1], true);
+            $tracks = $json['captions']['playerCaptionsTracklistRenderer']['captionTracks'] ?? null;
+            if (!$tracks || empty($tracks)) {
+                $this->warn("No captionTracks found.");
                 continue;
             }
 
-            $captionsJson = json_decode('{' . $matches[1] . '}', true);
-            $captionTracks = $captionsJson['playerCaptionsTracklistRenderer']['captionTracks'] ?? null;
+            $base = $tracks[0]['baseUrl'];
+            $caps = $this->curlGet("{$base}&fmt=json3");
+            if (!$caps) { $this->warn("Transcript fetch failed."); continue; }
 
-            if (!$captionTracks || !isset($captionTracks[0]['baseUrl'])) {
-                $this->warn("No caption tracks available.");
-                continue;
-            }
+            $capsJson = json_decode($caps, true);
+            $text = implode("\n", array_map(
+                fn($e) => implode('', array_column($e['segs'] ?? [], 'utf8')),
+                $capsJson['events'] ?? []
+            ));
 
-            $captionUrl = $captionTracks[0]['baseUrl'] . '&fmt=json3';
-            $jsonTranscript = shell_exec("curl -s '{$captionUrl}'");
+            if (!$text) { $this->warn("Empty transcript."); continue; }
 
-            if (!$jsonTranscript) {
-                $this->warn("Failed to download transcript JSON.");
-                continue;
-            }
-
-            $parsed = json_decode($jsonTranscript, true);
-            $events = $parsed['events'] ?? [];
-
-            $text = collect($events)
-                ->map(function ($event) {
-                    return collect($event['segs'] ?? [])->pluck('utf8')->join('');
-                })
-                ->filter()
-                ->implode("\n");
-
-            if (trim($text) === '') {
-                $this->warn("Transcript is empty after parsing.");
-                continue;
-            }
-
-            // Save to database
             $video->transmission_transcript = $text;
             $video->save();
 
-            // Save to file
-            $outputDir = storage_path("app/transcripts");
-            if (!is_dir($outputDir)) mkdir($outputDir, 0755, true);
-
-            file_put_contents("{$outputDir}/{$videoId}.txt", $text);
-
-            $this->info("Transcript saved for: {$video->transmission_title}");
+            $this->info("✅ Saved transcript for: {$id}");
         }
 
-        $this->info("All transcripts processed.");
+        $this->info("All done.");
+    }
+
+    private function curlGet($url)
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
+        $res = curl_exec($ch);
+        $ok = curl_getinfo($ch, CURLINFO_HTTP_CODE) === 200;
+        curl_close($ch);
+        return $ok ? $res : null;
     }
 }
