@@ -28,7 +28,7 @@
             <div class="w-full flex justify-end">
                 <a
                     href="/tech"
-                    class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-purple-400 border-purple-200 shadow-md"
                 >
                     What I Do →
                 </a>

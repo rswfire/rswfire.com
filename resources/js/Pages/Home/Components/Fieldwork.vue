@@ -32,7 +32,7 @@
             <div class="flex justify-end">
                 <a
                     href="/fieldwork"
-                    class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-green-400 border-green-200 shadow-md"
                 >
                     Fieldwork →
                 </a>

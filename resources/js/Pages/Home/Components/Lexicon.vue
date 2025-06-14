@@ -29,7 +29,7 @@
             <div class="flex justify-end">
                 <a
                     href="/lexicon"
-                    class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-red-400 border-red-200 shadow-md"
                 >
                     Lexicon →
                 </a>
