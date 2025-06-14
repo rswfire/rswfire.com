@@ -27,7 +27,7 @@
                     href="/transmission"
                     class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
                 >
-                    Transmission Archive →
+                    Transmission →
                 </a>
             </div>
         </div>

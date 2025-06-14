@@ -11,15 +11,18 @@
 
         <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
 
-            <div><em>What happens when you walk the pattern?</em></div>
-            <div><em>Out there — roads, forests, wastelands, rooftops, rivers — the signal continues.</em></div>
+            <div class="italic">The pattern doesn’t end at the page.</div>
+            <div class="italic">It walks. It listens.</div>
 
-            <div class="pt-4">Fieldwork is observation and intervention. Notes on movement. Thoughts from inside the storm.</div>
-            <div>It’s data-gathering for the soul:</div>
-            <div>&bull; Soundscapes.</div>
-            <div>&bull; Road entries.</div>
-            <div>&bull; Sketches from nowhere.</div>
-            <div>&bull; Field diagnostics of collapse &amp;amp; consciousness.</div>
+            <div class="pt-4">Out there — rooftops, riverbanks, wastelands, quiet roads —</div>
+            <div>the signal reshapes itself.</div>
+
+            <div class="pt-4">This is fieldwork:</div>
+            <div>Soundscapes. Sketches.</div>
+            <div>Diagnostics of collapse.</div>
+            <div>Coordinates of coherence.</div>
+
+            <div class="pt-4">Every step a listening post.</div>
 
             <div class="pt-4"><strong>This is the archive of action</strong>.</div>
 
