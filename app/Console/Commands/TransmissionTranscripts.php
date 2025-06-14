@@ -28,10 +28,8 @@ class TransmissionTranscripts extends Command
 
             $cookiePath = storage_path("youtubecookies.txt");
 
-            $command = escapeshellcmd(
-                "yt-dlp --cookies '{$cookiePath}' " ."--skip-download --write-auto-sub --sub-lang en " .
-                "--output '{$outputDir}/{$videoId}.%(ext)s' {$url}"
-            );
+            $command = escapeshellcmd("yt-dlp --cookies '{$cookiePath}' --skip-download --write-auto-sub --sub-lang en --convert-subs srt -o '{$outputDir}/{$videoId}.%(ext)s' {$url}");
+
 
             exec($command, $output, $exitCode);
 
