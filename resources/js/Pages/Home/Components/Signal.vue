@@ -11,7 +11,7 @@
         <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
             <div>This is not a record of answers.</div>
             <div>It is a map of motion through rupture and recursion.</div>
-            <div>18+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>
+            <div>24+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>
 
             <div class="pt-4">If you're feeling pulled toward coherence—<strong>this is where it was built</strong>.</div>
         </div>
