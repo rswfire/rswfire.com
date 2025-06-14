@@ -52,7 +52,7 @@ Route::get('/oauth2callback', function (Request $request) {
 
 Route::get("/", function () {
     $user = Auth::user();
-    return Inertia::render("Home", [
+    return Inertia::render("Home/Index", [
         "canLogin" => Route::has("login"),
         "canRegister" => Route::has("register"),
         "laravelVersion" => Application::VERSION,

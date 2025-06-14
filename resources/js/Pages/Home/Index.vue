@@ -1,66 +1,15 @@
 <template>
 
-    <!-- "Who I Am" Card -->
-    <section class="rounded-xl bg-gray-50 border border-border p-6 shadow-md space-y-4">
-        <div class="flex items-center space-x-2">
-            <div class="relative flex items-center justify-center w-8 h-8">
-                <span class="absolute w-full h-full rounded-full bg-orange-200 opacity-50 animate-ping"></span>
-                <span class="relative text-lg">🔥</span>
-            </div>
-            <h2 class="text-xl font-semibold tracking-tight">
-                START HERE
-            </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="md:col-span-2">
+            <HelloCard />
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div>This isn’t a blog. It’s not a pitch.</div>
-            <div>It’s a field anchor — a living architecture of coherence.</div>
-            <div>A record of one man’s motion through fragmentation, holding wholeness as the world frays.</div>
-
-            <div class="pt-4">You don’t have to understand it.</div>
-            <div>But if you feel it — then yes, <em>this part is for you</em>.</div>
+        <div class="md:col-span-1">
+            <TechCard />
         </div>
-
-        <div class="text-left">
-            <a
-                href="/hello"
-                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
-            >
-                Who I Am →
-            </a>
-        </div>
-    </section>
-
-
-    <!-- "What I Do" Card -->
-    <section class="mt-6 rounded-xl border border-border p-6 shadow-md bg-gray-100/75 space-y-4">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl">🛠</span>
-            <h2 class="text-xl font-semibold tracking-tight">
-                BUILDER OF SYSTEMS. STEWARD OF DEPTH.
-            </h2>
-        </div>
-
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t border-b">
-            <div><strong>I’ve been programming since DOS.</strong> At age 11, I was shipping batch scripts to BBS systems. By 13, I was writing grading software for teachers. By 15, I was coding CMS platforms on paper — entire systems, mentally compiled, handwritten line by line.</div>
-
-            <div class="pt-4"><strong>By 18, I was a top-ten freelancer on Guru.com.</strong> The only American. The only solo dev. I didn’t undercut — I overdelivered. I built what clients asked for, and what their systems would need six months later.</div>
-
-            <div class="pt-4"><strong>Now I live in an off-grid RV by the sea.</strong> Because depth doesn’t need a tower. And clarity doesn’t come from noise.</div>
-
-            <div class="pt-4"><em>This isn’t hustle. It’s frequency. If you feel it, we’re already in conversation.</em></div>
-        </div>
-
-        <div class="text-left">
-            <a
-                href="/tech"
-                class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded hover:bg-black transition"
-            >
-                What I Do →
-            </a>
-        </div>
-    </section>
-
+    </div>
 
     <!-- Signal Archive Card -->
     <section class="mt-6 rounded-xl bg-gray-50 border border-border p-6 shadow-md space-y-4">
@@ -275,8 +224,13 @@
 <script setup>
 
 import { Link } from '@inertiajs/vue3'
-import FieldRecordsPreview from "../Components/FieldRecordsPreview.vue";
-import { useMeta } from '../Components/useMeta.ts'
+import FieldRecordsPreview from "../../Components/FieldRecordsPreview.vue";
+import { useMeta } from '../../Components/useMeta.ts'
+
+import Icon from "@/Components/System/Icon.vue";
+
+import HelloCard from "@/Pages/Home/Components/Hello.vue";
+import TechCard from "@/Pages/Home/Components/Tech.vue";
 
 useMeta({
     title: 'rswfire.com',

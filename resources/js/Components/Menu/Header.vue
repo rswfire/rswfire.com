@@ -1,9 +1,9 @@
 <template>
     <header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
 
             <!-- Outer container that holds both logo + nav -->
-            <div class="flex items-center space-x-2 px-4 py-2">
+            <div class="flex items-center space-x-2 py-2">
 
                 <!-- Flame + rswfire.com block -->
                 <div class="flex items-center space-x-2 pl-2 pr-4 py-0 rounded-full bg-orange-50 border border-orange-200">
@@ -12,7 +12,7 @@
                         <div class="relative text-lg leading-none text-orange-600">🔥</div>
                     </div>
                     <div class="text-sm font-semibold tracking-tight text-orange-800">
-                        <Link href="/">rswfire.com</Link>
+                        <Link href="/">RSWFIRE.COM</Link>
                     </div>
                 </div>
 
