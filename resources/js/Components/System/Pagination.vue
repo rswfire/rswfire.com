@@ -14,7 +14,7 @@
 
             <button
                 v-else
-                @click="router.visit(link.url, { preserveScroll: true })"
+                @click="router.visit(link.url, { preserveScroll: false })"
                 class="px-4 py-2 text-sm font-medium border rounded transition"
                 :class="[
           link.active

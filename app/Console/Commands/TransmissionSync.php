@@ -31,68 +31,67 @@ class TransmissionSync extends Command
 
         $objYouTube = new Google_Service_YouTube($objClient);
 
-        $channels = $objYouTube->channels->listChannels("contentDetails", ["mine" => true]);
-        $uploadsPlaylistId = $channels[0]["contentDetails"]["relatedPlaylists"]["uploads"];
-
-        $arrAllVideos = [];
-        $strPageToken = null;
+        // Step 1: Fetch video IDs using search.list
+        $videoIds = [];
+        $pageToken = null;
 
         do {
-            $response = $objYouTube->playlistItems->listPlaylistItems("snippet", [
-                "playlistId" => $uploadsPlaylistId,
-                "maxResults" => 50,
-                "pageToken" => $strPageToken,
+            $searchResponse = $objYouTube->search->listSearch('id', [
+                'forMine' => true,
+                'type' => 'video',
+                'maxResults' => 50,
+                'pageToken' => $pageToken,
             ]);
 
-            $arrAllVideos = array_merge($arrAllVideos, $response->getItems());
-            $strPageToken = $response->getNextPageToken();
-        } while ($strPageToken);
-
-        $arrAllVideos = array_reverse($arrAllVideos);
-
-        foreach ($arrAllVideos as $objVideo) {
-            $strYouTubeId = $objVideo["snippet"]["resourceId"]["videoId"];
-            $objSnippet = $objVideo["snippet"];
-
-            $details = $objYouTube->videos->listVideos("snippet,statistics,contentDetails", [
-                "id" => $strYouTubeId,
-            ]);
-
-            if (count($details->getItems()) === 0) {
-                $this->warn("No details for video: $strYouTubeId");
-                continue;
+            foreach ($searchResponse->getItems() as $item) {
+                if (isset($item['id']['videoId'])) {
+                    $videoIds[] = $item['id']['videoId'];
+                }
             }
 
-            $info = $details[0];
-            $videoSnippet = $info['snippet'];
-            $thumbnails = $videoSnippet['thumbnails'] ?? [];
-            $thumbnail =
-                $thumbnails['maxres']['url'] ??
-                $thumbnails['standard']['url'] ??
-                $thumbnails['high']['url'] ??
-                $thumbnails['medium']['url'] ??
-                $thumbnails['default']['url'] ??
-                '';
-            $duration = $this->parseDuration($info["contentDetails"]["duration"]);
-            $stats = $info["statistics"];
+            $pageToken = $searchResponse->getNextPageToken();
+        } while ($pageToken);
 
-            Transmission::updateOrCreate(
-                ["youtube_id" => $strYouTubeId],
-                [
-                    "transmission_title" => $objSnippet["title"],
-                    "transmission_description" => $objSnippet["description"],
-                    "stamp_published" => $objSnippet["publishedAt"],
-                    "url_youtube" => "https://www.youtube.com/watch?v=" . $strYouTubeId,
-                    "transmission_duration" => $duration,
-                    "count_views" => $stats["viewCount"] ?? 0,
-                    "count_likes" => $stats["likeCount"] ?? 0,
-                    "count_comments" => $stats["commentCount"] ?? 0,
-                    "stamp_updated" => now(),
-                    'url_thumbnail' => $thumbnail,
-                ]
-            );
+        $videoIds = array_reverse($videoIds); // oldest to newest
 
-            $this->info("Synced transmission: {$objSnippet["title"]}");
+        // Step 2: Fetch video details in chunks of 50
+        foreach (array_chunk($videoIds, 50) as $chunk) {
+            $details = $objYouTube->videos->listVideos("snippet,statistics,contentDetails", [
+                "id" => implode(",", $chunk),
+            ]);
+
+            foreach ($details->getItems() as $info) {
+                $videoSnippet = $info['snippet'];
+                $thumbnails = $videoSnippet['thumbnails'] ?? [];
+                $thumbnail =
+                    $thumbnails['maxres']['url'] ??
+                    $thumbnails['standard']['url'] ??
+                    $thumbnails['high']['url'] ??
+                    $thumbnails['medium']['url'] ??
+                    $thumbnails['default']['url'] ?? '';
+
+                $duration = $this->parseDuration($info["contentDetails"]["duration"]);
+                $stats = $info["statistics"];
+                $videoId = $info["id"];
+
+                Transmission::updateOrCreate(
+                    ["youtube_id" => $videoId],
+                    [
+                        "transmission_title" => $videoSnippet["title"],
+                        "transmission_description" => $videoSnippet["description"],
+                        "stamp_published" => $videoSnippet["publishedAt"],
+                        "url_youtube" => "https://www.youtube.com/watch?v=" . $videoId,
+                        "transmission_duration" => $duration,
+                        "count_views" => $stats["viewCount"] ?? 0,
+                        "count_likes" => $stats["likeCount"] ?? 0,
+                        "count_comments" => $stats["commentCount"] ?? 0,
+                        "stamp_updated" => now(),
+                        "url_thumbnail" => $thumbnail,
+                    ]
+                );
+
+                $this->info("Synced: {$videoSnippet["title"]}");
+            }
         }
 
         $this->info("All transmissions synced successfully.");
@@ -100,7 +99,7 @@ class TransmissionSync extends Command
 
     private function parseDuration($strDuration)
     {
-        $interval = new \DateInterval($strDuration);
+        $interval = new \\DateInterval($strDuration);
         return ($interval->h * 3600) + ($interval->i * 60) + $interval->s;
     }
 }

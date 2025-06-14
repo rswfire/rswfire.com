@@ -16,7 +16,7 @@
 
             <div class="pt-4">By <strong>25</strong>, I became a top-ten freelancer.</div>
             <div>I didn’t undercut. I overdelivered.</div>
-            <div>I was the only solo dev in the top ten — the only American.</div>
+            <div>I was the only solo dev in the top ten.</div>
             <div>I built what clients asked for, and what their systems didn’t know they’d need yet.</div>
 
             <div class="pt-4">Now I live in an <strong>off-grid RV by the sea</strong> —</div>
