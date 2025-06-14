@@ -32,15 +32,8 @@
     </div>
 
     <div class="hidden md:block">
-        <div class="min-h-screen bg-white px-4 py-8 sm:px-6 sm:py-12">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10">
-
-                <MenuProfile/>
-
-                <div class="flex flex-col">
-                    <slot />
-                </div>
-            </div>
+        <div class="pt-[100px] mx-auto max-w-6xl">
+            <slot />
         </div>
     </div>
 

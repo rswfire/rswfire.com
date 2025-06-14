@@ -1,5 +1,5 @@
 <template>
-
+    <Icon name="satellite-dish" color="transmission" />
     <div class="text-sm text-gray-600 border-t border-gray-200 pt-4">
 
         <div class="">
@@ -23,6 +23,7 @@
 <script setup>
     import { Link } from "@inertiajs/vue3";
     import {defineComponent} from "vue";
+    import Icon from "@/Components/System/Icon.vue";
 
     const navItems = [
         { icon: "🏠", label: "Home", to: "/" },
