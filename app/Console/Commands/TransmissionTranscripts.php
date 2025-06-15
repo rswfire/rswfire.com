@@ -4,66 +4,82 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\Transmission;
-use Illuminate\Support\Facades\Http;
 
 class TransmissionTranscripts extends Command
 {
     protected $signature = 'transmission:transcripts';
-    protected $description = 'Fetch and save auto-generated YouTube transcripts';
+    protected $description = 'Download and store deduplicated YouTube transcripts from yt-dlp output.';
 
     public function handle()
     {
-        $apiKey = config('services.youtube.key');
+        $videos = Transmission::where(function ($query) {
+            $query->whereNull('transmission_transcript')
+                ->orWhereRaw('TRIM(transmission_transcript) = ""');
+        })->get();
 
-        Transmission::whereNull('transmission_transcript')
-            ->orWhere('transmission_transcript', '')
-            ->chunk(50, function ($videos) use ($apiKey) {
-                foreach ($videos as $video) {
-                    $id = $video->youtube_id;
-                    $this->info("Processing $id …");
+        $outputDir = storage_path("app/transcripts");
+        if (!is_dir($outputDir)) mkdir($outputDir, 0755, true);
 
-                    $resp = Http::post(
-                        "https://youtubei.googleapis.com/youtubei/v1/player?key={$apiKey}",
-                        [
-                            "context" => [
-                                "client" => [
-                                    "clientName" => "WEB",
-                                    "clientVersion" => "2.20210622.10.03"
-                                ]
-                            ],
-                            "videoId" => $id
-                        ]
-                    );
+        foreach ($videos as $video) {
+            $videoId = $video->youtube_id;
+            $url = "https://www.youtube.com/watch?v={$videoId}";
 
-                    if (!$resp->ok()) {
-                        $this->warn("Failed fetching player for $id");
-                        continue;
-                    }
+            $this->info("Fetching transcript for: {$video->transmission_title}");
 
-                    $tracks = $resp->json('captions.playerCaptionsTracklistRenderer.captionTracks', []);
-                    $en = collect($tracks)->first(fn($t)=> $t['languageCode'] === 'en');
+            $cookiePath = storage_path("youtubecookies.txt");
+            $filePattern = "{$outputDir}/{$videoId}.en.vtt";
 
-                    if (!$en || empty($en['baseUrl'])) {
-                        $this->warn("No English captions for $id");
-                        continue;
-                    }
+            $command = "yt-dlp --cookies '{$cookiePath}' --skip-download --write-auto-sub --sub-lang en --convert-subs vtt --output '{$outputDir}/{$videoId}.%(ext)s' {$url}";
+            exec($command, $output, $exitCode);
 
-                    $caps = Http::get($en['baseUrl'])->json();
-                    $events = collect($caps['events'] ?? []);
-                    $text = $events->flatMap(function ($e) {
-                        return array_filter(array_map(fn($s)=> $s['utf8'] ?? '', $e['segs'] ?? []));
-                    })->join("\n");
+            $matches = glob($filePattern);
+            $vttPath = $matches[0] ?? null;
 
-                    if (empty($text)) {
-                        $this->warn("Empty transcript for $id");
-                        continue;
-                    }
+            if ($exitCode !== 0 || !$vttPath || !file_exists($vttPath)) {
+                $this->warn("Transcript not found or failed for video: {$videoId}");
+                continue;
+            }
 
-                    $video->transmission_transcript = $text;
-                    $video->save();
-                    $this->info("Saved transcript for $id");
-                }
-            });
-        $this->info("All done.");
+            $transcript = $this->parseVttTranscript($vttPath);
+            if (!$transcript) {
+                $this->warn("Transcript was empty or unusable: {$videoId}");
+                continue;
+            }
+
+            $video->transmission_transcript = $transcript;
+            $video->save();
+
+            $this->info("Transcript saved for: {$video->transmission_title}");
+        }
+
+        $this->info("All transcripts synced.");
+    }
+
+    private function parseVttTranscript(string $vttPath): ?string
+    {
+        $lines = explode("\n", file_get_contents($vttPath));
+        $text = [];
+        $seen = [];
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+
+            if (
+                $line === '' ||
+                str_starts_with($line, 'WEBVTT') ||
+                preg_match('/^\d{2}:\d{2}/', $line) ||
+                preg_match('/^NOTE/', $line)
+            ) {
+                continue;
+            }
+
+            $hash = md5($line);
+            if (in_array($hash, $seen)) continue;
+
+            $seen[] = $hash;
+            $text[] = $line;
+        }
+
+        return count($text) ? implode("\n", $text) : null;
     }
 }
