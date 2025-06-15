@@ -11,7 +11,7 @@
                     class="w-40 h-40 rounded-full border border-gray-300 shadow-md object-cover"
                 />
                 <div class="text-base font-semibold text-gray-800 shadow-sm">Robert Samuel White</div>
-                <div class="font-mono text-sm text-gray-500 italic">(( rswfire ))</div>
+                <div class="font-mono text-sm text-gray-500 italic">/* rswfire */</div>
             </div>
 
             <!-- Identity Stack -->
