@@ -19,15 +19,6 @@
                 <button @click="$emit('close')" class="text-2xl text-gray-400 hover:text-red-500">×</button>
             </div>
 
-            <!-- Quote -->
-            <div class="text-sm italic text-gray-600 border-t border-gray-200 pt-4 text-center">
-                <Icon name="Flame" class="inline-block text-red-400 w-4 h-4 mb-1" />
-                <br />
-                "In a forest pitch dark,<br />
-                Glowed the tiniest spark.<br />
-                It burst into a flame."
-            </div>
-
             <!-- Navigation Grid -->
             <div class="grid grid-cols-3 gap-4 pt-4 text-sm font-medium text-center">
                 <Link
@@ -42,6 +33,17 @@
                     <span>{{ item.label }}</span>
                 </Link>
             </div>
+
+
+            <!-- Quote -->
+            <div class="text-xs italic text-gray-600 border-t border-gray-200 pt-4 text-center">
+                <Icon name="Flame" class="inline-block text-red-400 w-4 h-4 mb-1" />
+                <br />
+                "In a forest pitch dark,<br />
+                Glowed the tiniest spark.<br />
+                It burst into a flame."
+            </div>
+
         </div>
 
         <!-- Footer -->
@@ -64,15 +66,6 @@ const items = [
         border: "border-indigo-200",
         hover: "hover:bg-indigo-100",
         url: "/",
-    },
-    {
-        label: "Codex",
-        icon: "SquareCode",
-        color: "text-amber-400",
-        bg: "bg-amber-50",
-        border: "border-amber-200",
-        hover: "hover:bg-amber-100",
-        url: "/codex",
     },
     {
         label: "Who I Am",
@@ -118,6 +111,15 @@ const items = [
         border: "border-green-200",
         hover: "hover:bg-green-100",
         url: "/fieldwork",
+    },
+    {
+        label: "Codex",
+        icon: "SquareCode",
+        color: "text-amber-400",
+        bg: "bg-amber-50",
+        border: "border-amber-200",
+        hover: "hover:bg-amber-100",
+        url: "/codex",
     },
     {
         label: "Lexicon",
