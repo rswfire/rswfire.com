@@ -7,8 +7,8 @@ use App\Models\Transmission;
 
 class TransmissionTranscripts extends Command
 {
-    protected $signature = 'transmission:transcripts-curl';
-    protected $description = 'Fetch and save YouTube auto-transcripts via direct JSON API';
+    protected $signature = 'transmission:transcripts';
+    protected $description = 'Download auto-generated YouTube transcripts via HTTP and save to "transmission_transcript"';
 
     public function handle()
     {
@@ -18,56 +18,41 @@ class TransmissionTranscripts extends Command
 
         foreach ($videos as $video) {
             $id = $video->youtube_id;
-            $url = "https://www.youtube.com/watch?v={$id}";
-            $this->info("📡 Fetching transcript for: {$video->transmission_title}");
+            $this->info("Fetching transcript for: {$video->transmission_title}");
 
-            $html = $this->curlGet($url);
-            if (!$html) { $this->warn("Failed to fetch page."); continue; }
+            $xml = @file_get_contents(
+                "http://video.google.com/timedtext?lang=en&v={$id}"
+            );
 
-            if (!preg_match(
-                '/raw_player_response\s*=\s*(\{.+?\});/',
-                $html, $m
-            )) {
-                $this->warn("raw_player_response not found.");
+            if (!$xml) {
+                $this->warn("No transcript found for: {$id}");
                 continue;
             }
 
-            $json = json_decode($m[1], true);
-            $tracks = $json['captions']['playerCaptionsTracklistRenderer']['captionTracks'] ?? null;
-            if (!$tracks || empty($tracks)) {
-                $this->warn("No captionTracks found.");
+            $text = '';
+            libxml_use_internal_errors(true);
+            $doc = new \DOMDocument();
+            if (!@$doc->loadXML($xml)) {
+                $this->warn("Failed parsing XML for: {$id}");
                 continue;
             }
 
-            $base = $tracks[0]['baseUrl'];
-            $caps = $this->curlGet("{$base}&fmt=json3");
-            if (!$caps) { $this->warn("Transcript fetch failed."); continue; }
+            foreach ($doc->getElementsByTagName('text') as $node) {
+                $text .= html_entity_decode($node->textContent) . "\n";
+            }
 
-            $capsJson = json_decode($caps, true);
-            $text = implode("\n", array_map(
-                fn($e) => implode('', array_column($e['segs'] ?? [], 'utf8')),
-                $capsJson['events'] ?? []
-            ));
+            $clean = trim(preg_replace('/\s+/', ' ', $text));
+            if (!$clean) {
+                $this->warn("Transcript empty after cleanup for {$id}");
+                continue;
+            }
 
-            if (!$text) { $this->warn("Empty transcript."); continue; }
-
-            $video->transmission_transcript = $text;
+            $video->transmission_transcript = $clean;
             $video->save();
 
-            $this->info("✅ Saved transcript for: {$id}");
+            $this->info("Saved transcript for: {$video->transmission_title}");
         }
 
         $this->info("All done.");
-    }
-
-    private function curlGet($url)
-    {
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
-        $res = curl_exec($ch);
-        $ok = curl_getinfo($ch, CURLINFO_HTTP_CODE) === 200;
-        curl_close($ch);
-        return $ok ? $res : null;
     }
 }
