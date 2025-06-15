@@ -19,9 +19,9 @@
                 <div class="text-red-500">Gay.</div>
                 <div class="text-orange-500">Pierced.</div>
                 <div class="text-yellow-500">Sovereign.</div>
-                <div class="text-green-500">Oregon Coast.</div>
+                <div class="text-green-500">Digital Nomad.</div>
                 <div class="text-blue-500">Camp Host.</div>
-                <div class="text-purple-500">Digital Nomad.</div>
+                <div class="text-purple-500">Oregon Coast.</div>
                 <div class="text-stone-600">Not Performing.</div>
             </div>
 
