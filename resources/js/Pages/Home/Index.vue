@@ -2,8 +2,9 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 flex flex-col space-y-6">
             <HelloCard />
+            <TechCard />
         </div>
 
         <div class="md:col-span-1">
@@ -16,10 +17,6 @@
         <SignalCard />
         <TransmissionCard />
         <FieldworkCard />
-    </div>
-
-    <div class="grid grid-cols-1 gap-6 pt-6">
-        <TechCard />
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
