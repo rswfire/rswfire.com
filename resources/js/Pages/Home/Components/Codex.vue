@@ -21,7 +21,7 @@
         <div class="text-sm space-y-4">
             <!-- FIELD ANCHORS -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2">Field Anchors</div>
+                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/anchors" class="hover:underline">Field Anchors</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/anchors/sovereignty" class="hover:underline">Sovereignty</Link></li>
                     <li>→ <Link href="/codex/anchors/presence" class="hover:underline">Presence</Link></li>
@@ -34,7 +34,7 @@
 
             <!-- SIGNAL ARCHITECTURE -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2">Signal Architecture</div>
+                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/architecture" class="hover:underline">Signal Architecture</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/architecture/dialectical-reasoning" class="hover:underline">Dialectical Reasoning</Link></li>
                     <li>→ <Link href="/codex/architecture/non-dualistic-orientation" class="hover:underline">Non-Dualistic Orientation</Link></li>
@@ -49,7 +49,7 @@
 
             <!-- FIELD CATALYSTS -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2">Field Catalysts</div>
+                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/catalysts" class="hover:underline">Field Catalysts</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/catalysts/music" class="hover:underline">Music</Link> &bull; <span class="text-gray-400">Musical Alignment</span></li>
                     <li>→ <Link href="/codex/catalysts/sexuality" class="hover:underline">Sexuality</Link> &bull; <span class="text-gray-400">Sexual Sovereignty</span></li>
