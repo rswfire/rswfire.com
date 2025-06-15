@@ -1,9 +1,7 @@
 <template>
     <component
         :is="iconComponent"
-        class="w-6 h-6 transition-transform duration-200 ease-in-out"
-        :class="props.color"
-        aria-hidden="true"
+        :class="['w-6 h-6 transition-transform duration-200 ease-in-out', props.color]"
     />
 </template>
 
@@ -13,7 +11,7 @@ import * as LucideIcons from 'lucide-vue-next'
 
 const props = defineProps({
     name: { type: String, required: true },
-    color: { type: String, default: 'text-gray-800' }
+    color: { type: String }
 })
 
 const iconComponent = computed(() => {
