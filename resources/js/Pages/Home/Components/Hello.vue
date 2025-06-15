@@ -1,8 +1,10 @@
 <template>
     <section class="h-full flex flex-col md:flex-row gap-6 rounded-xl bg-gray-50 border p-6 shadow-md">
 
-        <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center items-start">
-            <div class="flex flex-col items-center text-center space-y-1">
+        <div class="flex-shrink-0 w-full md:w-1/3 flex flex-col items-center text-center space-y-4">
+
+            <!-- Profile Card -->
+            <div class="flex flex-col items-center space-y-1">
                 <img
                     src="/assets/rswfire.jpg"
                     alt="Robert Samuel White"
@@ -11,6 +13,18 @@
                 <div class="text-base font-semibold text-gray-800 shadow-sm">Robert Samuel White</div>
                 <div class="font-mono text-sm text-gray-500 italic">(( rswfire ))</div>
             </div>
+
+            <!-- Identity Stack -->
+            <div class="pt-4 pl-4 text-sm text-gray-700 space-y-1 text-left self-start">
+                <div class="text-red-500">Gay.</div>
+                <div class="text-orange-500">Pierced.</div>
+                <div class="text-yellow-500">Sovereign.</div>
+                <div class="text-green-500">Oregon Coast.</div>
+                <div class="text-blue-500">Camp Host.</div>
+                <div class="text-purple-500">Digital Nomad.</div>
+                <div class="text-stone-600">Not Performing.</div>
+            </div>
+
         </div>
 
         <div class="flex flex-col h-full w-full">
@@ -20,7 +34,7 @@
                     <h2 class="text-xl font-semibold tracking-tight">START HERE</h2>
                 </div>
 
-                <div class="pt-4 text-muted-foreground text-base leading-relaxed">
+                <div class="pb-4 text-muted-foreground text-base leading-relaxed">
                     <div class="italic">This is a threshold. Prepare accordingly.</div>
                     <div class="italic">Not content. Not performance. Presence.</div>
 
