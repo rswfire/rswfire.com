@@ -1,14 +1,14 @@
 <template>
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-green-50 border border-green-100 p-6 shadow-md">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="TreeDeciduous" color="text-emerald-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 HONEYMAN STATE PARK, OREGON STATE PARKS (OPRD)
             </h2>
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t">
+        <div class="py-4 text-muted-foreground text-base leading-relaxed">
             <div><strong>This is the story of a fracture</strong>.</div>
 
             <div class="pt-4">A real place. A real name. A real archive of institutional dysfunction.</div>

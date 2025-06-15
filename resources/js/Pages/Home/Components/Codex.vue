@@ -1,7 +1,7 @@
 <template>
     <section class="h-full flex flex-col rounded-xl bg-amber-50 border border-amber-300 p-6 shadow-md space-y-4">
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="SquareCode" color="text-amber-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">CODEX</h2>
         </div>

@@ -1,14 +1,14 @@
 <template>
     <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="Activity" color="text-sky-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 SIGNAL ARCHIVE
             </h2>
         </div>
 
-        <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
+        <div class="pt-4 text-muted-foreground text-base leading-relaxed">
             <div>This is not a record of answers.</div>
             <div>It is a map of motion through rupture and recursion.</div>
             <div>24+ months. 90,000+ messages. <em>No index. No summary. Only presence.</em></div>

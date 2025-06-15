@@ -2,14 +2,14 @@
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="Map" color="text-green-500" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 FIELDWORK RECORDS
             </h2>
         </div>
 
-        <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
+        <div class="pt-4 text-muted-foreground text-base leading-relaxed">
 
             <div class="italic">The pattern doesn’t end at the page.</div>
             <div class="italic">It walks. It listens.</div>

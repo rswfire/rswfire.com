@@ -1,14 +1,14 @@
 <template>
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="SquareLibrary" color="text-orange-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 LEXICON
             </h2>
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed border-t">
+        <div class="py-4 text-muted-foreground text-base leading-relaxed">
 
             <div>Language was never neutral. <em>Language is infrastructure</em>.</div>
 

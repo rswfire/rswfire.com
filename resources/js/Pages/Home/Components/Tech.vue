@@ -2,14 +2,14 @@
 
     <section class="h-full flex flex-col gap-6 rounded-xl bg-white border p-6 shadow-md">
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 pb-4 border-b">
             <Icon name="Hammer" color="text-purple-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">BUILDER OF SYSTEMS. STEWARD OF DEPTH.</h2>
         </div>
 
         <div class="text-center">I’ve been programming since <strong>MS-DOS</strong>.</div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 text-sm max-w-6xl mx-auto border-y">
+        <div class="grid grid-cols-1 md:grid-cols-2 text-sm max-w-6xl mx-auto border-b">
 
             <div class="p-4 text-muted-foreground text-base leading-relaxed">
 

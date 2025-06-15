@@ -15,12 +15,12 @@
 
         <div class="flex flex-col h-full w-full">
             <div class="flex flex-col space-y-4">
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2 pb-4 border-b">
                     <Icon name="Flame" color="text-red-400" class="flex-shrink-0" />
                     <h2 class="text-xl font-semibold tracking-tight">START HERE</h2>
                 </div>
 
-                <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
+                <div class="pt-4 text-muted-foreground text-base leading-relaxed">
                     <div class="italic">This is a threshold. Prepare accordingly.</div>
                     <div class="italic">Not content. Not performance. Presence.</div>
 
