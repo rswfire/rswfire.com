@@ -7,12 +7,14 @@
             <h2 class="text-xl font-semibold tracking-tight">BUILDER OF SYSTEMS. STEWARD OF DEPTH.</h2>
         </div>
 
-        <div class="pt-4 text-sm text-purple-800 text-center">
-            <div class="mt-2 space-y-1 text-gray-700">
-                <div><strong>By 11</strong>, batch scripts. <strong>By 15</strong>, CMS platforms.</div>
+        <div class="text-md text-purple-800 text-center">
+            <div class="space-y-1 text-gray-700">
+                <div><strong>At 11</strong>, batch scripts.</div>
+                <div><strong>By 13</strong>, grading software for teachers.</div>
+                <div><strong>By 15</strong>, pre-CMS platforms for clients.</div>
                 <div><strong>By 25</strong>, top-ten freelancer — solo, overdelivering.</div>
-                <div class="text-purple-500 text-md font-bold">
-                    No fluff. No noise. Just signal, and structure.
+                <div class="text-purple-500">
+                    <strong>And now?</strong> Sovereign.
                 </div>
             </div>
         </div>
