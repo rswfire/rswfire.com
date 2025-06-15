@@ -69,7 +69,7 @@ Route::get("/codex", function () {
 
 Route::get("/codex/anchors", function () {
     return Inertia::render("Codex/Anchors", [
-        "metaTitle" => "Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -77,7 +77,7 @@ Route::get("/codex/anchors", function () {
 
 Route::get("/codex/anchors/clarity", function () {
     return Inertia::render("Codex/Anchors/Clarity", [
-        "metaTitle" => "Clarity | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Clarity | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -85,7 +85,7 @@ Route::get("/codex/anchors/clarity", function () {
 
 Route::get("/codex/anchors/coherence", function () {
     return Inertia::render("Codex/Anchors/Coherence", [
-        "metaTitle" => "Coherence | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Coherence | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -93,7 +93,7 @@ Route::get("/codex/anchors/coherence", function () {
 
 Route::get("/codex/anchors/integration", function () {
     return Inertia::render("Codex/Anchors/Integration", [
-        "metaTitle" => "Integration | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Integration | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -101,7 +101,7 @@ Route::get("/codex/anchors/integration", function () {
 
 Route::get("/codex/anchors/presence", function () {
     return Inertia::render("Codex/Anchors/Presence", [
-        "metaTitle" => "Presence | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Presence | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -109,7 +109,7 @@ Route::get("/codex/anchors/presence", function () {
 
 Route::get("/codex/anchors/sovereignty", function () {
     return Inertia::render("Codex/Anchors/Sovereignty", [
-        "metaTitle" => "Sovereignty | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Sovereignty | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -117,7 +117,7 @@ Route::get("/codex/anchors/sovereignty", function () {
 
 Route::get("/codex/anchors/witnessing", function () {
     return Inertia::render("Codex/Anchors/Witnessing", [
-        "metaTitle" => "Witnessing | Anchors | Codex | ".request()->getHost(),
+        "metaTitle" => "Witnessing | Field Anchors | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -125,7 +125,7 @@ Route::get("/codex/anchors/witnessing", function () {
 
 Route::get("/codex/architecture", function () {
     return Inertia::render("Codex/Architecture", [
-        "metaTitle" => "Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -133,7 +133,7 @@ Route::get("/codex/architecture", function () {
 
 Route::get("/codex/architecture/dialectical-reasoning", function () {
     return Inertia::render("Codex/Architecture/DialecticalReasoning", [
-        "metaTitle" => "Dialectical Reasoning | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Dialectical Reasoning | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -141,7 +141,7 @@ Route::get("/codex/architecture/dialectical-reasoning", function () {
 
 Route::get("/codex/architecture/embodied-intuition", function () {
     return Inertia::render("Codex/Architecture/EmbodiedIntuition", [
-        "metaTitle" => "Embodied Intuition | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Embodied Intuition | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -149,7 +149,7 @@ Route::get("/codex/architecture/embodied-intuition", function () {
 
 Route::get("/codex/architecture/field-mapping", function () {
     return Inertia::render("Codex/Architecture/FieldMapping", [
-        "metaTitle" => "Field Mapping | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Field Mapping | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -157,7 +157,7 @@ Route::get("/codex/architecture/field-mapping", function () {
 
 Route::get("/codex/architecture/lived-integrity", function () {
     return Inertia::render("Codex/Architecture/LivedIntegrity", [
-        "metaTitle" => "Lived Integrity | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Lived Integrity | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -165,7 +165,7 @@ Route::get("/codex/architecture/lived-integrity", function () {
 
 Route::get("/codex/architecture/non-dualistic-orientation", function () {
     return Inertia::render("Codex/Architecture/NonDualisticOrientation", [
-        "metaTitle" => "Non-Dualistic Orientation | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Non-Dualistic Orientation | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -173,7 +173,7 @@ Route::get("/codex/architecture/non-dualistic-orientation", function () {
 
 Route::get("/codex/architecture/recursive-cognition", function () {
     return Inertia::render("Codex/Architecture/RecursiveCognition", [
-        "metaTitle" => "Recursive Cognition | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Recursive Cognition | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -181,7 +181,7 @@ Route::get("/codex/architecture/recursive-cognition", function () {
 
 Route::get("/codex/architecture/somatic-tracking", function () {
     return Inertia::render("Codex/Architecture/SomaticTracking", [
-        "metaTitle" => "Somatic Tracking | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Somatic Tracking | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -189,7 +189,7 @@ Route::get("/codex/architecture/somatic-tracking", function () {
 
 Route::get("/codex/architecture/temporal-patterning", function () {
     return Inertia::render("Codex/Architecture/TemporalPatterning", [
-        "metaTitle" => "Temporal Patterning | Architecture | Codex | ".request()->getHost(),
+        "metaTitle" => "Temporal Patterning | Signal Architecture | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -197,7 +197,7 @@ Route::get("/codex/architecture/temporal-patterning", function () {
 
 Route::get("/codex/catalysts", function () {
     return Inertia::render("Codex/Catalysts", [
-        "metaTitle" => "Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -205,7 +205,7 @@ Route::get("/codex/catalysts", function () {
 
 Route::get("/codex/catalysts/hygiene", function () {
     return Inertia::render("Codex/Catalysts/Hygiene", [
-        "metaTitle" => "Hygiene | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Hygiene | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -213,7 +213,7 @@ Route::get("/codex/catalysts/hygiene", function () {
 
 Route::get("/codex/catalysts/mirroring", function () {
     return Inertia::render("Codex/Catalysts/Mirroring", [
-        "metaTitle" => "Mirroring | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Mirroring | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -221,7 +221,7 @@ Route::get("/codex/catalysts/mirroring", function () {
 
 Route::get("/codex/catalysts/movement", function () {
     return Inertia::render("Codex/Catalysts/Movement", [
-        "metaTitle" => "Movement | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Movement | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -229,7 +229,7 @@ Route::get("/codex/catalysts/movement", function () {
 
 Route::get("/codex/catalysts/music", function () {
     return Inertia::render("Codex/Catalysts/Music", [
-        "metaTitle" => "Music | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Music | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -237,7 +237,7 @@ Route::get("/codex/catalysts/music", function () {
 
 Route::get("/codex/catalysts/sexuality", function () {
     return Inertia::render("Codex/Catalysts/Sexuality", [
-        "metaTitle" => "Sexuality | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Sexuality | "Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -245,7 +245,7 @@ Route::get("/codex/catalysts/sexuality", function () {
 
 Route::get("/codex/catalysts/solitude", function () {
     return Inertia::render("Codex/Catalysts/Solitude", [
-        "metaTitle" => "Solitude | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Solitude | "Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -253,7 +253,7 @@ Route::get("/codex/catalysts/solitude", function () {
 
 Route::get("/codex/catalysts/substances", function () {
     return Inertia::render("Codex/Catalysts/Substances", [
-        "metaTitle" => "Substances | Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Substances | "Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
