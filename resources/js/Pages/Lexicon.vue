@@ -81,7 +81,20 @@ const lexicon = [
                 definition: 'What others call “reality.” Possibly artificial. Possibly sentient. Always running.'
             }
         ]
+    },
+    {
+        title: 'Other Terms',
+        entries: [
+            {
+                term: 'Field Catalyst',
+                definition: 'A field catalyst is any activity, experience, or element that initiates signal reorganization, emotional recursion, or embodied awareness.\n' +
+                    'It’s not just something you like — it’s something that moves the architecture.'
+            }
+        ]
     }
+
+
+
 ]
 </script>
 

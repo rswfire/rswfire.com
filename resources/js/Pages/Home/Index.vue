@@ -7,7 +7,7 @@
         </div>
 
         <div class="md:col-span-1">
-            <TechCard />
+            <CodexCard />
         </div>
 
     </div>
@@ -16,6 +16,10 @@
         <SignalCard />
         <TransmissionCard />
         <FieldworkCard />
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 pt-6">
+        <TechCard />
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
@@ -39,6 +43,7 @@
 
     import Icon from "@/Components/System/Icon.vue";
 
+    import CodexCard from "@/Pages/Home/Components/Codex.vue";
     import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
     import HelloCard from "@/Pages/Home/Components/Hello.vue";
     import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
