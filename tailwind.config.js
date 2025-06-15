@@ -11,6 +11,12 @@ export default {
         './resources/js/**/*.vue',
     ],
 
+    safelist: [
+        'bg-amber-50', 'border-amber-200', 'hover:bg-amber-100',
+        'bg-emerald-50', 'border-emerald-200', 'hover:bg-emerald-100',
+        'text-amber-400', 'text-emerald-400'
+    ],
+
     theme: {
         extend: {
             fontFamily: {

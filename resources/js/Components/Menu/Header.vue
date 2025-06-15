@@ -94,47 +94,50 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { router } from '@inertiajs/vue3'
-import { Link } from "@inertiajs/vue3"
-import Icon from "@/Components/System/Icon.vue"
 
-const hovered = ref(null)
-const showMenu = ref(false)
+    import { Link } from "@inertiajs/vue3"
+    import { ref } from "vue"
+    import { router } from "@inertiajs/vue3"
+    import Icon from "@/Components/System/Icon.vue"
 
-const items = [
-    { label: 'Home', icon: 'Radar', color: 'text-indigo-400', url: "/" },
-    { label: 'Who I Am', icon: 'Flame', color: 'text-red-400', url: "/hello" },
-    { label: 'What I Do', icon: 'Hammer', color: 'text-purple-400', url: "/tech" },
-    { label: 'Signal', icon: 'Activity', color: 'text-sky-400', url: "/signal" },
-    { label: 'Transmission', icon: 'SatelliteDish', color: 'text-pink-400', url: "/transmission" },
-    { label: 'Fieldwork', icon: 'Map', color: 'text-green-500', url: "/fieldwork" },
-    { label: 'Lexicon', icon: 'SquareLibrary', color: 'text-orange-400', url: "/lexicon" },
-    { label: 'Myth', icon: 'ShieldCheck', color: 'text-yellow-400', url: "/myth" },
-    { label: 'Honeyman', icon: 'TreeDeciduous', color: 'text-emerald-400', url: "/honeyman" }
-]
+    const hovered = ref(null)
+    const showMenu = ref(false)
 
-const props = defineProps({
-    authUser: Object
-})
+    const items = [
+        { label: "Home", icon: "Radar", color: "text-indigo-400", url: "/" },
+        { label: "Codex", icon: "SquareCode", color: "text-amber-400", url: "/codex" },
+        { label: "Who I Am", icon: "Flame", color: "text-red-400", url: "/hello" },
+        { label: "What I Do", icon: "Hammer", color: "text-purple-400", url: "/tech" },
+        { label: "Signal", icon: "Activity", color: "text-sky-400", url: "/signal" },
+        { label: "Transmission", icon: "SatelliteDish", color: "text-pink-400", url: "/transmission" },
+        { label: "Fieldwork", icon: "Map", color: "text-green-500", url: "/fieldwork" },
+        { label: "Lexicon", icon: "SquareLibrary", color: "text-orange-400", url: "/lexicon" },
+        { label: "Myth", icon: "ShieldCheck", color: "text-yellow-400", url: "/myth" },
+        { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", url: "/honeyman" },
 
-function logout() {
-    router.post(route('logout'))
-}
+    ]
+
+    const props = defineProps({
+        authUser: Object
+    })
+
+    function logout() {
+        router.post(route("logout"))
+    }
+
 </script>
 
 <style scoped>
-.fade-width-enter-active,
-.fade-width-leave-active {
-    transition: opacity 250ms ease, max-width 300ms ease, transform 250ms ease;
-    max-width: 160px;
-}
-
-.fade-width-enter-from,
-.fade-width-leave-to {
-    opacity: 0;
-    max-width: 0;
-    overflow: hidden;
-    transform: translateX(-8px);
-}
+    .fade-width-enter-active,
+    .fade-width-leave-active {
+        transition: opacity 250ms ease, max-width 300ms ease, transform 250ms ease;
+        max-width: 160px;
+    }
+    .fade-width-enter-from,
+    .fade-width-leave-to {
+        opacity: 0;
+        max-width: 0;
+        overflow: hidden;
+        transform: translateX(-8px);
+    }
 </style>
