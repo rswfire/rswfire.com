@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use App\Models\Transmission;
+
 class TransmissionTranscripts extends Command {
     protected $signature = 'transmission:transcripts';
     public function handle() {
