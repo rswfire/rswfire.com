@@ -237,7 +237,7 @@ Route::get("/codex/catalysts/music", function () {
 
 Route::get("/codex/catalysts/sexuality", function () {
     return Inertia::render("Codex/Catalysts/Sexuality", [
-        "metaTitle" => "Sexuality | "Field Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Sexuality | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -245,7 +245,7 @@ Route::get("/codex/catalysts/sexuality", function () {
 
 Route::get("/codex/catalysts/solitude", function () {
     return Inertia::render("Codex/Catalysts/Solitude", [
-        "metaTitle" => "Solitude | "Field Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Solitude | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -253,7 +253,7 @@ Route::get("/codex/catalysts/solitude", function () {
 
 Route::get("/codex/catalysts/substances", function () {
     return Inertia::render("Codex/Catalysts/Substances", [
-        "metaTitle" => "Substances | "Field Catalysts | Codex | ".request()->getHost(),
+        "metaTitle" => "Substances | Field Catalysts | Codex | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
