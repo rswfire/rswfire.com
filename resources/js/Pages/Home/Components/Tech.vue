@@ -7,19 +7,30 @@
             <h2 class="text-xl font-semibold tracking-tight">BUILDER OF SYSTEMS. STEWARD OF DEPTH.</h2>
         </div>
 
-        <div class="pt-4 text-muted-foreground text-base leading-relaxed border-t">
-            <div>I’ve been programming since <strong>MS-DOS</strong>.</div>
+        <div class="text-center">I’ve been programming since <strong>MS-DOS</strong>.</div>
 
-            <div class="pt-4">By <strong>11</strong>, batch scripts to BBS boards.</div>
-            <div>By <strong>13</strong>, grading software for teachers.</div>
-            <div>By <strong>15</strong>, hand-coded CMS platforms — no IDE, just mental compilers and paper.</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 text-sm max-w-6xl mx-auto border-y">
 
-            <div class="pt-4">By <strong>25</strong>, I became a top-ten freelancer.</div>
-            <div>I didn’t undercut. I overdelivered.</div>
-            <div>I was the only solo dev in the top ten.</div>
-            <div>I built what clients asked for, and what their systems didn’t know they’d need yet.</div>
+            <div class="p-4 text-muted-foreground text-base leading-relaxed">
 
-            <div class="pt-4">Now I live in an <strong>off-grid RV by the sea</strong> —</div>
+                <div>By <strong>11</strong>, batch scripts to BBS boards.</div>
+                <div>By <strong>13</strong>, grading software for teachers.</div>
+                <div>By <strong>15</strong>, hand-coded CMS platforms —<br/>no IDE, just mental compilers and paper.</div>
+
+            </div>
+
+            <div class="p-4 text-muted-foreground text-base leading-relaxed">
+                <div>By <strong>25</strong>, I became a top-ten freelancer.</div>
+                <div>I didn’t undercut. I overdelivered.</div>
+                <div>I was the only solo dev in the top ten.</div>
+                <div>I built what clients asked for,<br/>and what their systems didn’t know they’d need yet.</div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center italic">
+            <div>Now I live in an <strong>off-grid RV by the sea</strong> —</div>
             <div>because clarity doesn’t need a tower,</div>
             <div>and depth doesn’t come from noise.</div>
         </div>
