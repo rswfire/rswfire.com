@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Transmission;
 
-class TransmissionTranscriptsCurl extends Command
+class TransmissionTranscripts extends Command
 {
     protected $signature = 'transmission:transcripts-curl';
     protected $description = 'Fetch and save YouTube auto-transcripts via direct JSON API';
