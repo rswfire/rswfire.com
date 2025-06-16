@@ -87,7 +87,25 @@
             </div>
 
             <div v-else>
-                <a href="/login" class="text-sm font-medium text-gray-700 hover:underline">Log In</a>
+                <div class="flex items-center space-x-2">
+                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="LogIn" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
+                        Sign In
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
+
+                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="UserPlus" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
+                        Sign Up
+                    </Link>
+
+                </div>
+
             </div>
         </div>
     </header>
