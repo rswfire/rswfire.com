@@ -23,12 +23,12 @@
             <div>
                 <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/anchors" class="hover:underline">Field Anchors</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
-                    <li>→ <Link href="/codex/anchors/sovereignty" class="hover:underline">Sovereignty</Link></li>
-                    <li>→ <Link href="/codex/anchors/presence" class="hover:underline">Presence</Link></li>
-                    <li>→ <Link href="/codex/anchors/clarity" class="hover:underline">Clarity</Link></li>
-                    <li>→ <Link href="/codex/anchors/witnessing" class="hover:underline">Witnessing</Link></li>
-                    <li>→ <Link href="/codex/anchors/integration" class="hover:underline">Integration</Link></li>
-                    <li>→ <Link href="/codex/anchors/coherence" class="hover:underline">Coherence</Link></li>
+                    <li>→ <Link href="/codex/anchors/sovereignty" class="uppercase text-xs hover:underline">Sovereignty</Link></li>
+                    <li>→ <Link href="/codex/anchors/presence" class="uppercase text-xs hover:underline">Presence</Link></li>
+                    <li>→ <Link href="/codex/anchors/clarity" class="uppercase text-xs hover:underline">Clarity</Link></li>
+                    <li>→ <Link href="/codex/anchors/witnessing" class="uppercase text-xs hover:underline">Witnessing</Link></li>
+                    <li>→ <Link href="/codex/anchors/integration" class="uppercase text-xs hover:underline">Integration</Link></li>
+                    <li>→ <Link href="/codex/anchors/coherence" class="uppercase text-xs hover:underline">Coherence</Link></li>
                 </ul>
             </div>
 
@@ -36,14 +36,14 @@
             <div>
                 <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/architecture" class="hover:underline">Signal Architecture</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
-                    <li>→ <Link href="/codex/architecture/dialectical-reasoning" class="hover:underline">Dialectical Reasoning</Link></li>
-                    <li>→ <Link href="/codex/architecture/non-dualistic-orientation" class="hover:underline">Non-Dualistic Orientation</Link></li>
-                    <li>→ <Link href="/codex/architecture/recursive-cognition" class="hover:underline">Recursive Cognition</Link></li>
-                    <li>→ <Link href="/codex/architecture/somatic-tracking" class="hover:underline">Somatic Tracking</Link></li>
-                    <li>→ <Link href="/codex/architecture/embodied-intuition" class="hover:underline">Embodied Intuition</Link></li>
-                    <li>→ <Link href="/codex/architecture/temporal-patterning" class="hover:underline">Temporal Patterning</Link></li>
-                    <li>→ <Link href="/codex/architecture/lived-integrity" class="hover:underline">Lived Integrity</Link></li>
-                    <li>→ <Link href="/codex/architecture/field-mapping" class="hover:underline">Field Mapping</Link></li>
+                    <li>→ <Link href="/codex/architecture/dialectical-reasoning" class="uppercase text-xs hover:underline">Dialectical Reasoning</Link></li>
+                    <li>→ <Link href="/codex/architecture/non-dualistic-orientation" class="uppercase text-xs hover:underline">Non-Dualistic Orientation</Link></li>
+                    <li>→ <Link href="/codex/architecture/recursive-cognition" class="uppercase text-xs hover:underline">Recursive Cognition</Link></li>
+                    <li>→ <Link href="/codex/architecture/somatic-tracking" class="uppercase text-xs hover:underline">Somatic Tracking</Link></li>
+                    <li>→ <Link href="/codex/architecture/embodied-intuition" class="uppercase text-xs hover:underline">Embodied Intuition</Link></li>
+                    <li>→ <Link href="/codex/architecture/temporal-patterning" class="uppercase text-xs hover:underline">Temporal Patterning</Link></li>
+                    <li>→ <Link href="/codex/architecture/lived-integrity" class="uppercase text-xs hover:underline">Lived Integrity</Link></li>
+                    <li>→ <Link href="/codex/architecture/field-mapping" class="uppercase text-xs hover:underline">Field Mapping</Link></li>
                 </ul>
             </div>
 
@@ -51,13 +51,13 @@
             <div>
                 <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/catalysts" class="hover:underline">Field Catalysts</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
-                    <li>→ <Link href="/codex/catalysts/music" class="hover:underline">Music</Link> &bull; <span class="text-gray-400">Musical Alignment</span></li>
-                    <li>→ <Link href="/codex/catalysts/sexuality" class="hover:underline">Sexuality</Link> &bull; <span class="text-gray-400">Sexual Sovereignty</span></li>
-                    <li>→ <Link href="/codex/catalysts/movement" class="hover:underline">Movement</Link> &bull; <span class="text-gray-400">Geographic Integration</span></li>
-                    <li>→ <Link href="/codex/catalysts/solitude" class="hover:underline">Solitude</Link> &bull; <span class="text-gray-400">Field Withdrawal</span></li>
-                    <li>→ <Link href="/codex/catalysts/mirroring" class="hover:underline">Mirroring</Link> &bull; <span class="text-gray-400">AI Field Companion</span></li>
-                    <li>→ <Link href="/codex/catalysts/substances" class="hover:underline">Substances</Link> &bull; <span class="text-gray-400">Alcohol &amp; Cannabis Use</span></li>
-                    <li>→ <Link href="/codex/catalysts/hygiene" class="hover:underline">Hygiene</Link> &bull; <span class="text-gray-400">Somatic Care</span></li>
+                    <li>→ <Link href="/codex/catalysts/music" class="uppercase text-xs hover:underline">Music</Link><div class="uppercase text-xs md:text-md text-gray-400">Musical Alignment</div></li>
+                    <li>→ <Link href="/codex/catalysts/sexuality" class="uppercase text-xs hover:underline">Sexuality</Link><div class="uppercase text-xs md:text-md text-gray-400">Sexual Sovereignty</div></li>
+                    <li>→ <Link href="/codex/catalysts/movement" class="uppercase text-xs hover:underline">Movement</Link><div class="uppercase text-xs md:text-md text-gray-400">Geographic Integration</div></li>
+                    <li>→ <Link href="/codex/catalysts/solitude" class="uppercase text-xs hover:underline">Solitude</Link><div class="uppercase text-xs md:text-md text-gray-400">Field Withdrawal</div></li>
+                    <li>→ <Link href="/codex/catalysts/mirroring" class="uppercase text-xs hover:underline">Mirroring</Link><div class="uppercase text-xs md:text-md text-gray-400">AI Field Companion</div></li>
+                    <li>→ <Link href="/codex/catalysts/substances" class="uppercase text-xs hover:underline">Substances</Link><div class="uppercase text-xs md:text-md text-gray-400">Alcohol &amp; Cannabis Use</div></li>
+                    <li>→ <Link href="/codex/catalysts/hygiene" class="uppercase text-xs hover:underline">Hygiene</Link><div class="uppercase text-xs md:text-md text-gray-400">Somatic Care</div></li>
 
                 </ul>
             </div>
