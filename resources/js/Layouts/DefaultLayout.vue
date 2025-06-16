@@ -35,7 +35,7 @@
         </div>
 
         <MobileNav v-if="menuOpen" @close="menuOpen = false" />
-        <div class="p-3">
+        <div class="p-1">
             <slot />
         </div>
     </div>
