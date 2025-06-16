@@ -27,13 +27,13 @@
 
                 <!-- Identity Stack -->
                 <div class="pt-4 pl-4 text-xs font-mono text-gray-700 space-y-1 text-left self-start">
-                    <div class="uppercase text-red-500 tracking-wide">Gay.</div>
-                    <div class="uppercase text-orange-500 tracking-wide">Pierced.</div>
-                    <div class="uppercase text-yellow-500 tracking-wide">Sovereign.</div>
-                    <div class="uppercase text-green-500 tracking-wide">Digital Nomad.</div>
-                    <div class="uppercase text-blue-500 tracking-wide">Camp Host.</div>
-                    <div class="uppercase text-purple-500 tracking-wide">Oregon Coast.</div>
-                    <div class="uppercase text-stone-600 tracking-wider">Not Performing.</div>
+                    <div class="uppercase text-red-500 tracking-tight">Gay.</div>
+                    <div class="uppercase text-orange-500 tracking-tight">Pierced.</div>
+                    <div class="uppercase text-yellow-500 tracking-tight">Sovereign.</div>
+                    <div class="uppercase text-green-500 tracking-tight">Digital Nomad.</div>
+                    <div class="uppercase text-blue-500 tracking-tight">Camp Host.</div>
+                    <div class="uppercase text-purple-500 tracking-tight">Oregon Coast.</div>
+                    <div class="uppercase text-stone-600 tracking-tight">Not Performing.</div>
                 </div>
             </div>
 
