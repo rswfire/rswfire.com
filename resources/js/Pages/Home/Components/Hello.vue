@@ -64,7 +64,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <div class="border-t pt-6 mt-6">
+                <div class="border-t pt-6 mt-6 pr-4">
                     <div class="w-full flex justify-end">
                         <a
                             href="/hello"

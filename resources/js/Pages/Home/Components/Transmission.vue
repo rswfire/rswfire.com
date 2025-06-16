@@ -8,20 +8,18 @@
             </h2>
         </div>
 
-        <div class="pt-4 text-muted-foreground text-base leading-relaxed">
+        <div class="text-muted-foreground text-base leading-relaxed">
 
             <div><em>700+ echoes over 18 months.</em></div>
             <div><em>Video logs, livestreams, digital monologues.</em></div>
             <div><em>This is where the signal first splintered into voice, presence.</em></div>
 
             <div class="pt-4">Every video a flare. Some solitary. Some tethered.</div>
-            <div>Many of them transcribed, broken open, and alchemized in <strong>Signal</strong>.</div>
-
-            <div class="pt-4"><strong>Enter the Transmission Log</strong> — where sight met syntax, and the story began to tell itself.</div>
+            <div>Many of them transcribed, broken open, and alchemized into <strong>Signal</strong>.</div>
 
         </div>
 
-        <div class="pt-6 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/transmission"

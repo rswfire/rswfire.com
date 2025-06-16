@@ -9,7 +9,7 @@
             </h2>
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed">
+        <div class="text-muted-foreground text-base leading-relaxed">
 
             <div><em>A page about myself.</em></div>
             <div>But not the kind you’d find on LinkedIn.</div>
@@ -23,11 +23,9 @@
             <div>&bull; Lore files and self-written mythos.</div>
             <div>&bull; Symbolic milestones mapped as if from a fantasy world.</div>
 
-            <div class="pt-4">It’s not about who I am — but <em>how I became this node</em>.</div>
-
         </div>
 
-        <div class="pt-6 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/myth"

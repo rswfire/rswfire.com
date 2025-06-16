@@ -8,7 +8,7 @@
             </h2>
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed">
+        <div class="text-muted-foreground text-base leading-relaxed">
             <div><strong>This is the story of a fracture</strong>.</div>
 
             <div class="pt-4">A real place. A real name. A real archive of institutional dysfunction.</div>
@@ -20,7 +20,7 @@
             <div>But more than that, <em>it holds the field that refused to collapse</em>.</div>
         </div>
 
-        <div class="pt-6 border-t mt-auto">
+        <div class="pt-6 border-t mt-auto pr-4">
             <div class="flex justify-end">
                 <a
                     href="/honeyman"

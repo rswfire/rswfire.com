@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="border-t pt-6 mt-auto">
+        <div class="border-t pt-6 pr-4 mt-auto">
             <div class="w-full flex justify-end">
                 <Link
                     href="/codex"

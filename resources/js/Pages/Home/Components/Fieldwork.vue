@@ -9,7 +9,7 @@
             </h2>
         </div>
 
-        <div class="pt-4 text-muted-foreground text-base leading-relaxed">
+        <div class="text-muted-foreground text-base leading-relaxed">
 
             <div class="italic">The pattern doesn’t end at the page.</div>
             <div class="italic">It walks. It listens.</div>
@@ -22,13 +22,9 @@
             <div>Diagnostics of collapse.</div>
             <div>Coordinates of coherence.</div>
 
-            <div class="pt-4">Every step a listening post.</div>
-
-            <div class="pt-4"><strong>This is the archive of action</strong>.</div>
-
         </div>
 
-        <div class="pt-6 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/fieldwork"

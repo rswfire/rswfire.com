@@ -8,9 +8,10 @@
             </h2>
         </div>
 
-        <div class="py-4 text-muted-foreground text-base leading-relaxed">
+        <div class="text-muted-foreground text-base leading-relaxed">
 
-            <div>Language was never neutral. <em>Language is infrastructure</em>.</div>
+            <div>Language was never neutral.</div>
+            <div><em>Language is infrastructure</em>.</div>
 
             <div class="pt-4">Here, I reclaim the words.</div>
 
@@ -21,11 +22,9 @@
             <div>&bull; Redefinitions of familiar words.</div>
             <div>&bull; Conceptual containers for personal or systemic insight.</div>
 
-            <div class="pt-4"><strong>Browse the Lexicon</strong> to orient yourself — or disorient yourself more intentionally.</div>
-
         </div>
 
-        <div class="pt-6 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/lexicon"
