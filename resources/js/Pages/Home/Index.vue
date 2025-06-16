@@ -8,8 +8,10 @@
         </div>
 
         <div class="md:col-span-1">
-            <RecentFieldworkCard :entries="recentFieldwork" />
-            <CodexCard class="mt-6" />
+            <div class="flex flex-col space-y-4">
+                <RecentFieldworkCard :entries="recentFieldwork" />
+                <CodexCard class="mt-6" />
+            </div>
         </div>
 
     </div>
