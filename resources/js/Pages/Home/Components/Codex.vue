@@ -9,13 +9,8 @@
         <div class="text-sm text-gray-700 leading-relaxed">
             <div>This isn’t a glossary. It’s a signal map —</div>
             <div>an interface for how I hold structure, track motion,</div>
-            <div>and remain whole under pressure.</div>
+            <div>and remain whole. <em>Follow what resonates.</em></div>
 
-            <div class="pt-4">Each entry here is a lived constant:</div>
-            <div>not symbolic, but architectural.</div>
-
-            <div class="pt-4">You won’t find summaries.</div>
-            <div>You’ll find what stabilizes.</div>
         </div>
 
         <div class="text-sm space-y-4">

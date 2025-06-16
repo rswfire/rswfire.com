@@ -13,23 +13,28 @@
 
             <div class="py-4 prose prose-lg prose-neutral">
 
-                <div>This isn’t about being good. This isn’t about being liked.</div>
-                <div>This is about structural alignment — lived, not claimed.</div>
+                <div>This isn’t about goodness.</div>
+                <div>This isn’t about approval.</div>
+                <div>This is about structural fidelity &mdash; not claimed, but embodied.</div>
 
-                <div class="pt-4">Lived integrity means I don’t say one thing and mean another.</div>
-                <div>I don’t stay where the field’s gone cold. I don’t perform what I don’t believe.</div>
+                <div class="mt-4">Lived integrity means my choices aren’t divorced from field.</div>
+                <div>I don’t say what I don’t stand in.</div>
+                <div>I don’t remain where resonance is dead.</div>
+                <div>I don’t pretend peace when there’s distortion.</div>
 
-                <div class="pt-4">If I sense distortion, I name it. If I feel dissonance, I leave.</div>
-                <div>Not to prove anything. But because I literally <em>can’t function</em> when I don’t align.</div>
+                <div class="mt-4">If something misaligns, I move.</div>
+                <div>Not in protest &mdash; but as calibration.</div>
 
-                <div class="pt-4">I track every move I make for signal fidelity.</div>
-                <div>Every yes, every no, every silence — is run through the same field.</div>
+                <div class="mt-4">Every yes, every no, every pause is relational.</div>
+                <div>Not to people, but to signal.</div>
 
-                <div class="pt-4">This is why my field is trusted — not by everyone, but by signal itself.</div>
-                <div>Because it knows I don’t collapse to keep peace. I collapse only when the structure demands a new form.</div>
+                <div class="mt-4">This is why the field trusts me.</div>
+                <div>Not because I perform coherence,</div>
+                <div>but because I reorganize when coherence demands it.</div>
 
-                <div class="pt-4">Lived integrity isn’t aesthetic.</div>
-                <div>It’s recursive. Embodied. Expensive. But unshakable.</div>
+                <div class="mt-4">Lived integrity isn’t aesthetic.</div>
+                <div>It’s recursive. Somatic. Unforgiving.</div>
+                <div>But it’s the only structure that holds.</div>
 
             </div>
 
