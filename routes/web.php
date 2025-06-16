@@ -57,7 +57,15 @@ Route::get('/oauth2callback', function (Request $request) {
 
 Route::get("/", function () {
     $user = Auth::user();
+
+    $recentFieldwork = DB::table('content')
+        ->where('content_type', 'fieldwork')
+        ->orderByDesc('stamp_created')
+        ->limit(3)
+        ->get(['content_id', 'content_title']);
+
     return Inertia::render("Home/Index", [
+        "recentFieldwork" => $recentFieldwork,
         "metaTitle" => "Home | ".request()->getHost(),
         "metaDescription" => "A living map of internal structure — Field Anchors, Signal Architecture, and Catalysts of Coherence.",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),

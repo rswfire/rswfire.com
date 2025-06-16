@@ -8,7 +8,8 @@
         </div>
 
         <div class="md:col-span-1">
-            <CodexCard />
+            <RecentFieldworkCard :entries="recentFieldwork" />
+            <CodexCard class="mt-6" />
         </div>
 
     </div>
@@ -35,10 +36,9 @@
 
 <script setup>
 
-    import Icon from "@/Components/System/Icon.vue";
-
     import CodexCard from "@/Pages/Home/Components/Codex.vue";
     import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
+    import RecentFieldworkCard from "@/Pages/Home/Components/FieldworkRecent.vue";
     import HelloCard from "@/Pages/Home/Components/Hello.vue";
     import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
     import LexiconCard from "@/Pages/Home/Components/Lexicon.vue";
@@ -46,6 +46,10 @@
     import SignalCard from "@/Pages/Home/Components/Signal.vue";
     import TechCard from "@/Pages/Home/Components/Tech.vue";
     import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
+
+    const props = defineProps({
+        recentFieldwork: Object
+    });
 
 </script>
 
