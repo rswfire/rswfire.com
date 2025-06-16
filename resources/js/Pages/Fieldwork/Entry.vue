@@ -14,6 +14,19 @@
                 v-html="entry.content_body"
             />
 
+            <div class="mt-12 border-t pt-6 flex justify-between text-sm text-gray-600">
+                <div v-if="previous">
+                    ← <Link :href="`/fieldwork/${previous.id}`" class="hover:underline">
+                    {{ previous.title }}
+                </Link>
+                </div>
+                <div v-if="next" class="ml-auto">
+                    <Link :href="`/fieldwork/${next.id}`" class="hover:underline">
+                        {{ next.title }}
+                    </Link> →
+                </div>
+            </div>
+
             <!-- Tag Section -->
             <div
                 v-if="tags.length"
@@ -36,9 +49,12 @@
 <script setup>
 import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
+import { Link } from "@inertiajs/vue3"
 
 const props = defineProps({
-    entry: Object
+    entry: Object,
+    next: Object,
+    previous: Object
 })
 
 const tags = (() => {

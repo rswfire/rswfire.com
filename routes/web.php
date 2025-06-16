@@ -323,11 +323,31 @@ Route::get("/fieldwork/{id}", function ($id) {
         abort(404);
     }
 
+    $previous = DB::table('content')
+        ->where('content_type', 'fieldwork')
+        ->where('stamp_created', '<', $content->stamp_created)
+        ->orderByDesc('stamp_created')
+        ->first();
+
+    $next = DB::table('content')
+        ->where('content_type', 'fieldwork')
+        ->where('stamp_created', '>', $content->stamp_created)
+        ->orderBy('stamp_created')
+        ->first();
+
     return Inertia::render("Fieldwork/Entry", [
         "entry" => $content,
         "metaTitle" => $content->content_title." | Fieldwork Records | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+        'previous' => $previous ? [
+            'id' => $previous->content_id,
+            'title' => $previous->content_title,
+        ] : null,
+        'next' => $next ? [
+            'id' => $next->content_id,
+            'title' => $next->content_title,
+        ] : null,
     ]);
 });
 
