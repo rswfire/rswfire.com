@@ -1,38 +1,45 @@
 <template>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="home-index" class="p-4 pb-0 md:p-0">
 
-        <div class="md:col-span-2 flex flex-col space-y-6">
-            <HelloCard />
-            <TechCard />
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div class="md:col-span-1">
-            <div class="flex flex-col space-y-4">
-                <RecentFieldworkCard :entries="recentFieldwork" />
-                <CodexCard class="mt-6" />
+            <div class="md:col-span-2 flex flex-col">
+                <div class="flex flex-col">
+                    <RecentFieldworkCard :entries="recentFieldwork" class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
+                    <HelloCard class="mb-6 sm:mb-6" />
+                    <TechCard />
+                </div>
             </div>
+
+            <div class="md:col-span-1">
+                <div class="flex flex-col">
+                    <RecentFieldworkCard :entries="recentFieldwork" class="hidden md:block" />
+                    <CodexCard class="md:mt-6" />
+                </div>
+            </div>
+
         </div>
 
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
+            <SignalCard />
+            <TransmissionCard />
+            <FieldworkCard />
+        </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
-        <SignalCard />
-        <TransmissionCard />
-        <FieldworkCard />
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+            <LexiconCard />
+            <MythCard />
+            <HoneymanCard />
+        </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-        <LexiconCard />
-        <MythCard />
-        <HoneymanCard />
-    </div>
+        <div class="py-4 text-center text-sm">
+            <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
+            <div>No open-source license is explicitly granted.</div>
+            <div>&copy; Robert Samuel White, 2025.</div>
+        </div>
 
-    <div class="py-4 text-center text-sm">
-        <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
-        <div>No open-source license is explicitly granted.</div>
-        <div>&copy; Robert Samuel White, 2025.</div>
-    </div>
+    </section>
 
 </template>
 
