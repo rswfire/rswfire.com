@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="border-t pt-4 mt-auto">
+        <div class="border-t pt-4 pr-4 mt-auto">
             <div class="w-full flex justify-end">
                 <a
                     href="/tech"

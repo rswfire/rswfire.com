@@ -1,32 +1,62 @@
 <template>
+    <Content>
 
-    <div class="max-w-3xl mx-auto py-12 space-y-6">
-        <h1 class="text-3xl font-bold text-gray-900">{{ entry.content_title || 'Untitled Entry' }}</h1>
-        <div class="prose max-w-none" v-html="renderMarkdown(entry.content_body)"></div>
+        <Hero
+            :title="entry.content_title"
+            subtitle="Fieldwork Record • Lived Signal"
+            :meta="formatDate(entry.stamp_created)"
+        />
 
-        <div v-if="entry.content_meta" class="text-xs text-gray-400 mt-4">
-            <pre>{{ entry.content_meta }}</pre>
-        </div>
-    </div>
+        <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black py-10">
+
+            <article
+                class="prose prose-lg prose-neutral max-w-none"
+                v-html="entry.content_body"
+            />
+
+            <!-- Tag Section -->
+            <div
+                v-if="tags.length"
+                class="mt-10 flex flex-wrap gap-2 text-sm text-gray-600"
+            >
+        <span
+            v-for="tag in tags"
+            :key="tag"
+            class="px-3 py-1 bg-gray-100 rounded-full"
+        >
+          #{{ tag }}
+        </span>
+            </div>
+
+        </section>
+
+    </Content>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import MarkdownIt from 'markdown-it'
+import Content from '@/Components/System/Content.vue'
+import Hero from '@/Components/System/Hero.vue'
 
 const props = defineProps({
     entry: Object
 })
 
-const md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-    breaks: true
-})
+const tags = (() => {
+    try {
+        const parsed = typeof props.entry.content_meta === 'string'
+            ? JSON.parse(props.entry.content_meta)
+            : props.entry.content_meta
+        return parsed?.tags || []
+    } catch {
+        return []
+    }
+})()
 
-function renderMarkdown(text) {
-    return md.render(text || '')
+function formatDate(date) {
+    return new Date(date).toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    })
 }
-
 </script>

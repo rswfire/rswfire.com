@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Content;
 use App\Models\Transmission;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
@@ -9,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
+use League\CommonMark\CommonMarkConverter;
+use Illuminate\Support\Str;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 
 
 Route::get('/auth/youtube', function () {
@@ -260,10 +265,31 @@ Route::get("/codex/catalysts/substances", function () {
 });
 
 Route::get("/fieldwork", function () {
-    return Inertia::render("Fieldwork/Home", [
-        "metaTitle" => "Fieldwork Records | ".request()->getHost(),
+    $converter = new CommonMarkConverter();
+
+    $fieldwork = Content::where('content_type', 'fieldwork')
+        ->orderByDesc('stamp_created')
+        ->paginate(9)
+        ->through(function ($entry) use ($converter) {
+            // Generate a stripped summary (optional: truncate)
+            $html = $converter->convert($entry->content_body)->getContent();
+            $text = strip_tags($html); // remove all HTML tags
+            $summary = Str::limit($text, 280); // or whatever limit feels right
+
+            return [
+                'content_id' => $entry->content_id,
+                'content_title' => $entry->content_title,
+                'content_body' => $summary,
+                'stamp_created' => $entry->stamp_created->toDateString(),
+            ];
+        })
+        ->withQueryString();
+
+    return Inertia::render('Fieldwork/Index', [
+        'entries' => $fieldwork,
+        "metaTitle" => "Fieldwork Records | " . request()->getHost(),
         "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+        "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
     ]);
 });
 
@@ -276,15 +302,30 @@ Route::get("/fieldwork/create", function () {
 });
 
 Route::get("/fieldwork/{id}", function ($id) {
-    $entry = DB::table("content")->where("content_id", $id)->first();
 
-    if (!$entry) {
+    $content = DB::table("content")->where("content_id", $id)->first();
+
+    $environment = new Environment([
+        'commonmark' => [
+            'renderer' => [
+                'soft_break' => "<br />\n",
+            ],
+        ],
+    ]);
+
+    $environment->addExtension(new CommonMarkCoreExtension());
+
+    $converter = new CommonMarkConverter([], $environment);
+
+    $content->content_body = $converter->convert($content->content_body)->getContent();
+
+    if (!$content) {
         abort(404);
     }
 
     return Inertia::render("Fieldwork/Entry", [
-        "entry" => $entry,
-        "metaTitle" => "Fieldwork Records (ID) | ".request()->getHost(),
+        "entry" => $content,
+        "metaTitle" => $content->content_title." | Fieldwork Records | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
