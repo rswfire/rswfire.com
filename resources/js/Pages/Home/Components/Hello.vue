@@ -1,4 +1,5 @@
 <template>
+
     <section class="h-full flex flex-col gap-6 rounded-xl bg-gray-50 border p-6 shadow-md">
 
         <!-- START HERE HEADER -->
@@ -80,4 +81,6 @@
 
 <script setup>
 import Icon from "@/Components/System/Icon.vue";
+</script>
+<script setup>
 </script>
