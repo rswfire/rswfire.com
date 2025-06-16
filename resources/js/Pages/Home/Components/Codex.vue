@@ -9,7 +9,8 @@
         <div class="text-sm text-gray-700 leading-relaxed">
             <div>This isn’t a glossary. It’s a signal map —</div>
             <div>an interface for how I hold structure, track motion,</div>
-            <div>and remain whole. <em>Follow what resonates.</em></div>
+            <div>and remain whole.</div>
+            <div><em>Follow what resonates.</em></div>
 
         </div>
 
