@@ -33,7 +33,8 @@
                     <div class="uppercase text-green-500 tracking-tight">Living blueprint.</div>
                     <div class="uppercase text-blue-500 tracking-tight">Still here.</div>
                     <div class="uppercase text-purple-500 tracking-tighter">Still unbroken.</div>
-                    <div class="uppercase text-stone-600 tracking-tighter">At the edge of the world.</div>
+                    <div class="uppercase text-stone-600 tracking-tighter">At the edge &mdash;</div>
+                    <div class="uppercase text-stone-600 tracking-tighter ml-4">of everything.</div>
                 </div>
             </div>
 
