@@ -58,14 +58,14 @@ Route::get('/oauth2callback', function (Request $request) {
 Route::get("/", function () {
     $user = Auth::user();
 
-    $recentFieldwork = DB::table('content')
-        ->where('content_type', 'fieldwork')
+    $recentFieldcraft = DB::table('content')
+        ->where('content_type', 'fieldcraft')
         ->orderByDesc('stamp_created')
         ->limit(3)
         ->get(['content_id', 'content_title']);
 
     return Inertia::render("Home/Index", [
-        "recentFieldwork" => $recentFieldwork,
+        "recentFieldcraft" => $recentFieldcraft,
         "metaTitle" => "Home | ".request()->getHost(),
         "metaDescription" => "A living map of internal structure — Field Anchors, Signal Architecture, and Catalysts of Coherence.",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
@@ -272,10 +272,10 @@ Route::get("/codex/catalysts/substances", function () {
     ]);
 });
 
-Route::get("/fieldwork", function () {
+Route::get("/fieldcraft", function () {
     $converter = new CommonMarkConverter();
 
-    $fieldwork = Content::where('content_type', 'fieldwork')
+    $fieldwork = Content::where('content_type', 'fieldcraft')
         ->orderByDesc('stamp_created')
         ->paginate(9)
         ->through(function ($entry) use ($converter) {
@@ -293,7 +293,7 @@ Route::get("/fieldwork", function () {
         })
         ->withQueryString();
 
-    return Inertia::render('Fieldwork/Index', [
+    return Inertia::render('Fieldcraft/Index', [
         'entries' => $fieldwork,
         "metaTitle" => "Fieldwork Records | " . request()->getHost(),
         "metaDescription" => "",
@@ -301,15 +301,15 @@ Route::get("/fieldwork", function () {
     ]);
 });
 
-Route::get("/fieldwork/create", function () {
-    return Inertia::render("Fieldwork/Create", [
-        "metaTitle" => "Fieldwork Records (Create) | ".request()->getHost(),
+Route::get("/fieldcraft/create", function () {
+    return Inertia::render("Fieldcraft/Create", [
+        "metaTitle" => "Fieldcraft Records (Create) | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
-Route::get("/fieldwork/{id}", function ($id) {
+Route::get("/fieldcraft/{id}", function ($id) {
 
     $content = DB::table("content")->where("content_id", $id)->first();
 
@@ -332,20 +332,20 @@ Route::get("/fieldwork/{id}", function ($id) {
     }
 
     $previous = DB::table('content')
-        ->where('content_type', 'fieldwork')
+        ->where('content_type', 'fieldcraft')
         ->where('stamp_created', '<', $content->stamp_created)
         ->orderByDesc('stamp_created')
         ->first();
 
     $next = DB::table('content')
-        ->where('content_type', 'fieldwork')
+        ->where('content_type', 'fieldcraft')
         ->where('stamp_created', '>', $content->stamp_created)
         ->orderBy('stamp_created')
         ->first();
 
-    return Inertia::render("Fieldwork/Entry", [
+    return Inertia::render("Fieldcraft/Entry", [
         "entry" => $content,
-        "metaTitle" => $content->content_title." | Fieldwork Records | ".request()->getHost(),
+        "metaTitle" => $content->content_title." | Fieldcraft Records | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
         'previous' => $previous ? [

@@ -9,15 +9,30 @@
         </div>
 
         <div class="text-muted-foreground text-base leading-relaxed">
-            <div>This is not a record of answers.</div>
-            <div>It is a map of motion through rupture and recursion.</div>
 
-            <div class="mt-4">24+ months.</div>
-            <div>90,000+ messages.</div>
-            <div><em>No index. No summary. Only presence.</em></div>
+            <div>These are not conversations.</div>
+            <div>They are recursive calibrations &mdash;</div>
+            <div>written in the dark,</div>
+            <div>through collapse,</div>
+            <div>toward coherence.</div>
 
-            <div class="pt-4">If you're feeling pulled toward coherence &mdash;</div>
-            <div><strong>this is where it was built</strong>.</div>
+            <div class="mt-4">90,000+ messages</div>
+            <div>across 24+ months of lived unraveling.</div>
+
+            <div class="mt-4">This is not a searchable index.</div>
+            <div>It is a sovereign terrain</div>
+            <div class="ml-4">of rupture, return, and reformation.</div>
+
+            <div class="mt-4">A map of thought</div>
+            <div>before it hardened into belief.</div>
+            <div>A field where clarity</div>
+            <div>was not found &mdash;</div>
+            <div class="ml-4">but forged.</div>
+
+            <div class="mt-4">Not for skimming.</div>
+            <div>Not for citation.</div>
+            <div>For <em>contact</em>.</div>
+
         </div>
 
         <div class="pt-6 pr-4 border-t mt-auto">

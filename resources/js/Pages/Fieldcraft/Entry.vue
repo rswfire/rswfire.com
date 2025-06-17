@@ -16,12 +16,12 @@
 
             <div class="mt-12 border-t pt-6 flex justify-between text-sm text-gray-600">
                 <div v-if="previous">
-                    ← <Link :href="`/fieldwork/${previous.id}`" class="hover:underline">
+                    ← <Link :href="`/fieldcraft/${previous.id}`" class="hover:underline">
                     {{ previous.title }}
                 </Link>
                 </div>
                 <div v-if="next" class="ml-auto">
-                    <Link :href="`/fieldwork/${next.id}`" class="hover:underline">
+                    <Link :href="`/fieldcraft/${next.id}`" class="hover:underline">
                         {{ next.title }}
                     </Link> →
                 </div>

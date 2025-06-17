@@ -3,7 +3,7 @@
     <Content>
 
         <Hero
-            title="FIELDWORK ARCHIVE"
+            title="FIELDCRAFT ARCHIVE"
             subtitle="A DIGITAL ARCHIVE OF LIVED COHERENCE, COLLAPSE TRACKING, AND SIGNAL ORIENTATION"
             :meta="`PAGE ${entries.current_page} OF ${entries.last_page}`"
         />
@@ -15,7 +15,7 @@
                     <Link
                         v-for="entry in entries.data"
                         :key="entry.content_id"
-                        :href="`/fieldwork/${entry.content_id}`"
+                        :href="`/fieldcraft/${entry.content_id}`"
                         class="group block bg-white rounded-xl border border-gray-200 shadow-sm p-5 hover:bg-yellow-50 transition-all"
                     >
                         <div class="space-y-3">

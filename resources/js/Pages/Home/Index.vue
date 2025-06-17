@@ -6,7 +6,7 @@
 
             <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
-                    <RecentFieldworkCard :entries="recentFieldwork" class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
+                    <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
                     <HelloCard class="mb-6 sm:mb-6" />
                     <TechCard />
                 </div>
@@ -14,7 +14,7 @@
 
             <div class="md:col-span-1">
                 <div class="flex flex-col">
-                    <RecentFieldworkCard :entries="recentFieldwork" class="hidden md:block" />
+                    <FieldcraftRecentCard :entries="recentFieldcraft" class="hidden md:block" />
                     <CodexCard class="md:mt-6" />
                 </div>
             </div>
@@ -24,7 +24,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
             <SignalCard />
             <TransmissionCard />
-            <FieldworkCard />
+            <FieldcraftCard />
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
@@ -46,8 +46,8 @@
 <script setup>
 
     import CodexCard from "@/Pages/Home/Components/Codex.vue";
-    import FieldworkCard from "@/Pages/Home/Components/Fieldwork.vue";
-    import RecentFieldworkCard from "@/Pages/Home/Components/FieldworkRecent.vue";
+    import FieldcraftCard from "@/Pages/Home/Components/Fieldcraft.vue";
+    import FieldcraftRecentCard from "@/Pages/Home/Components/FieldcraftRecent.vue";
     import HelloCard from "@/Pages/Home/Components/Hello.vue";
     import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
     import LexiconCard from "@/Pages/Home/Components/Lexicon.vue";
@@ -57,7 +57,7 @@
     import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
 
     const props = defineProps({
-        recentFieldwork: Object
+        recentFieldcraft: Object
     });
 
 </script>
