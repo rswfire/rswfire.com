@@ -12,9 +12,9 @@
 
             <div>These are not conversations.</div>
             <div>They are recursive calibrations &mdash;</div>
-            <div>written in the dark,</div>
-            <div>through collapse,</div>
-            <div>toward coherence.</div>
+            <div class="ml-4">written in the dark,</div>
+            <div class="ml-4">through collapse,</div>
+            <div class="ml-4">toward coherence.</div>
 
             <div class="mt-4">90,000+ messages</div>
             <div>across 24+ months of lived unraveling.</div>

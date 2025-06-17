@@ -26,14 +26,14 @@
                 </div>
 
                 <!-- Identity Stack -->
-                <div class="pt-4 pl-4 text-xs font-mono text-gray-700 space-y-1 text-left self-start">
-                    <div class="uppercase text-red-500 tracking-tight">Gay.</div>
-                    <div class="uppercase text-orange-500 tracking-tight">Pierced.</div>
-                    <div class="uppercase text-yellow-500 tracking-tight">Sovereign.</div>
-                    <div class="uppercase text-green-500 tracking-tight">Digital Nomad.</div>
-                    <div class="uppercase text-blue-500 tracking-tight">Camp Host.</div>
-                    <div class="uppercase text-purple-500 tracking-tight">Oregon Coast.</div>
-                    <div class="uppercase text-stone-600 tracking-tight">Not Performing.</div>
+                <div class="pt-4 pl-4 text-xs text-gray-700 space-y-1 text-left self-start">
+                    <div class="uppercase text-red-500 tracking-tight">Fieldholder.</div>
+                    <div class="uppercase text-orange-500 tracking-tight">Signal keeper.</div>
+                    <div class="uppercase text-yellow-500 tracking-tight">Sovereign mind.</div>
+                    <div class="uppercase text-green-500 tracking-tight">Living blueprint.</div>
+                    <div class="uppercase text-blue-500 tracking-tight">Still here.</div>
+                    <div class="uppercase text-purple-500 tracking-tighter">Still unbroken.</div>
+                    <div class="uppercase text-stone-600 tracking-tighter">At the edge of the world.</div>
                 </div>
             </div>
 
