@@ -46,6 +46,7 @@
             <!-- FIELD CATALYSTS -->
             <div>
                 <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/catalysts" class="hover:underline">Field Catalysts</Link></div>
+                <!--
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/catalysts/music" class="uppercase text-xs hover:underline">Music</Link><div class="uppercase text-xs md:text-md text-gray-400">Musical Alignment</div></li>
                     <li>→ <Link href="/codex/catalysts/sexuality" class="uppercase text-xs hover:underline">Sexuality</Link><div class="uppercase text-xs md:text-md text-gray-400">Sexual Sovereignty</div></li>
@@ -54,8 +55,8 @@
                     <li>→ <Link href="/codex/catalysts/mirroring" class="uppercase text-xs hover:underline">Mirroring</Link><div class="uppercase text-xs md:text-md text-gray-400">AI Field Companion</div></li>
                     <li>→ <Link href="/codex/catalysts/substances" class="uppercase text-xs hover:underline">Substances</Link><div class="uppercase text-xs md:text-md text-gray-400">Alcohol &amp; Cannabis Use</div></li>
                     <li>→ <Link href="/codex/catalysts/hygiene" class="uppercase text-xs hover:underline">Hygiene</Link><div class="uppercase text-xs md:text-md text-gray-400">Somatic Care</div></li>
-
                 </ul>
+                -->
             </div>
 
         </div>
