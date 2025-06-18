@@ -6,6 +6,7 @@
 
             <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
+                    <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
                     <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
                     <HelloCard class="mb-6 sm:mb-6" />
                     <TechCard />
@@ -14,7 +15,8 @@
 
             <div class="md:col-span-1">
                 <div class="flex flex-col">
-                    <FieldcraftRecentCard :entries="recentFieldcraft" class="hidden md:block" />
+                    <CompanionCard class="hidden md:block" />
+                    <FieldcraftRecentCard :entries="recentFieldcraft" class="hidden md:block md:mt-6" />
                     <CodexCard class="md:mt-6" />
                 </div>
             </div>
@@ -46,6 +48,7 @@
 <script setup>
 
     import CodexCard from "@/Pages/Home/Components/Codex.vue";
+    import CompanionCard from "@/Pages/Home/Components/Companion.vue";
     import FieldcraftCard from "@/Pages/Home/Components/Fieldcraft.vue";
     import FieldcraftRecentCard from "@/Pages/Home/Components/FieldcraftRecent.vue";
     import HelloCard from "@/Pages/Home/Components/Hello.vue";
