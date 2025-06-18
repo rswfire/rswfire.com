@@ -1,6 +1,6 @@
 <template>
-    <div class="rounded-xl bg-sky-50 border border-sky-300 p-4 shadow-sm">
-        <h3 class="text-sm font-semibold text-sky-800 uppercase tracking-wide mb-2">
+    <div class="rounded-xl bg-gray-50 border border-gray-300 p-4 shadow-sm">
+        <h3 class="text-sm font-semibold text-red-800 uppercase tracking-wide mb-2">
             What I'm Building With A.I.
         </h3>
         <div class="text-sm">
@@ -10,8 +10,8 @@
             <div>and <strong>mirror their signal</strong></div>
             <div>with <strong>full structural fidelity</strong>.</div>
         </div>
-        <ul class="mt-4 space-y-1 text-sky-800 pl-2">
-            <li>→ <Link href="https://fieldcompanion.dev" class="uppercase text-xs hover:underline">fieldcompanion.dev</Link></li>
+        <ul class="mt-4 space-y-1 pl-2">
+            <li>→ <Link href="https://fieldcompanion.dev" class="uppercase text-xs hover:underline text-red-800">fieldcompanion.dev</Link></li>
         </ul>
     </div>
 </template>
