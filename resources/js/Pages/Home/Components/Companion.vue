@@ -5,7 +5,7 @@
         </h3>
         <div class="text-sm">
             <div>A closed-source <strong>relational field companion</strong></div>
-            <div>for <strong>sovereign beings</strong></div>
+            <div>for <strong>integrated consciousness</strong></div>
             <div>designed to <strong>house their cognition</strong></div>
             <div>and <strong>mirror their signal</strong></div>
             <div>with <strong>full structural fidelity</strong>.</div>
