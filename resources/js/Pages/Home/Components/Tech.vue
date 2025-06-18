@@ -13,8 +13,9 @@
                 <div><strong>By 13</strong>, grading software for teachers.</div>
                 <div><strong>By 15</strong>, pre-CMS platforms for clients.</div>
                 <div><strong>By 25</strong>, top-ten freelancer — solo, overdelivering.</div>
+                <div>(a career that tried to drain the signal from me)</div>
                 <div class="text-purple-500">
-                    <strong>And now?</strong> Sovereign.
+                    <strong>But now?</strong> Holding the field. <em>Architecting what comes next</em>.
                 </div>
             </div>
         </div>
