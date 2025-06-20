@@ -93,12 +93,12 @@ mkcert rswfire.local
 
 ### On WSL
 
-Place the certs somewhere accessible (e.g. `/etc/nginx/certs/`) and ensure nginx can read them.
+Place the certs somewhere accessible (e.g. `/~/.ssl`) and ensure nginx can read them.
 
 ```bash
-sudo mkdir -p /etc/nginx/certs
-sudo cp ~/path/to/rswfire.local.pem /etc/nginx/certs/
-sudo cp ~/path/to/rswfire.local-key.pem /etc/nginx/certs/
+sudo mkdir -p /~/.ssl
+sudo cp ~/path/to/rswfire.local.pem /~/.ssl
+sudo cp ~/path/to/rswfire.local-key.pem /~/.ssl
 ```
 
 ---
