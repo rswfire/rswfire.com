@@ -12,6 +12,7 @@
         </div>
         <ul class="mt-4 space-y-1 pl-2">
             <li>→ <a href="https://rswfire.dev" class="uppercase text-xs hover:underline text-red-800">rswfire.dev</a></li>
+            <li>→ <a href="https://fieldcompanion.dev" class="uppercase text-xs hover:underline text-red-800">fieldcompanion.dev</a></li>
         </ul>
     </div>
 </template>
