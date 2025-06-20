@@ -11,7 +11,7 @@
             <div>with <strong>full structural fidelity</strong>.</div>
         </div>
         <ul class="mt-4 space-y-1 pl-2">
-            <li>→ <Link href="https://rswfire.dev" class="uppercase text-xs hover:underline text-red-800">rswfire.dev</Link></li>
+            <li>→ <a href="https://rswfire.dev" class="uppercase text-xs hover:underline text-red-800">rswfire.dev</a></li>
         </ul>
     </div>
 </template>
