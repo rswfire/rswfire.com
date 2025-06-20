@@ -170,6 +170,25 @@ git config --global commit.gpgsign true
 git config --global user.signingkey 88A6213B73E2B0AC
 ```
 
+Add this to `~/.ssh/config`:
+
+```bash
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/rswfire
+  IdentitiesOnly yes
+```
+
+And make sure you have this in your `~/.bashrc` somewhere:
+
+```bash
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)" >/dev/null
+  ssh-add ~/.ssh/rswfire 2>/dev/null
+fi
+```
+
 Test commit signing:
 
 ```bash
