@@ -2,9 +2,9 @@
     <Content>
 
         <Hero
-            title="TRANSMISSION VAULT"
-            subtitle="A LIVING RECORD OF EMBODIED EXPRESSION"
-            meta="UNFILTERED. UNPERFORMED. UNAPOLOGETIC."
+            :title="`${tag}`"
+            subtitle="A Filtered View of the Transmission Vault"
+            meta="TRANSMISSION VAULT"
         />
 
         <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
@@ -95,7 +95,8 @@ import Content from "@/Components/System/Content.vue";
 import Pagination from '@/Components/System/Pagination.vue'
 
 defineProps({
-    transmissions: Object
+    transmissions: Object,
+    tag: String,
 })
 
 const expanded = ref(false)

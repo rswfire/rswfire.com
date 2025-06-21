@@ -16,53 +16,53 @@ use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 
 
-Route::get('/auth/youtube', function () {
+Route::get("/auth/youtube", function () {
     $client = new Google_Client();
-    $client->setClientId('969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com');
-    $client->setRedirectUri('https://rswfire.com/oauth2callback');
+    $client->setClientId("969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com");
+    $client->setRedirectUri("https://rswfire.com/oauth2callback");
     $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
-    $client->setAccessType('offline');
-    $client->setPrompt('consent');
+    $client->setAccessType("offline");
+    $client->setPrompt("consent");
 
     $authUrl = $client->createAuthUrl();
     return redirect($authUrl);
 });
 
-Route::get('/oauth2callback', function (Request $request) {
-    $code = $request->query('code');
+Route::get("/oauth2callback", function (Request $request) {
+    $code = $request->query("code");
 
     if (!$code) {
-        return response('Missing ?code param', 400);
+        return response("Missing ?code param", 400);
     }
 
     $client = new Google_Client();
-    $client->setClientId(config('services.google.client_id'));
-    $client->setClientSecret(config('services.google.client_secret'));
-    $client->setRedirectUri(config('services.google.redirect'));
+    $client->setClientId(config("services.google.client_id"));
+    $client->setClientSecret(config("services.google.client_secret"));
+    $client->setRedirectUri(config("services.google.redirect"));
     $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
-    $client->setAccessType('offline');
+    $client->setAccessType("offline");
 
     $token = $client->fetchAccessTokenWithAuthCode($code);
 
-    if (isset($token['error'])) {
-        return response('Token exchange failed: ' . $token['error_description'], 500);
+    if (isset($token["error"])) {
+        return response("Token exchange failed: " . $token["error_description"], 500);
     }
 
     echo json_encode($token);
 
-    Storage::put('oauth-tokens.json', json_encode($token, JSON_PRETTY_PRINT));
+    Storage::put("oauth-tokens.json", json_encode($token, JSON_PRETTY_PRINT));
 
-    return response('✅ OAuth tokens saved to storage/oauth-tokens.json');
+    return response("✅ OAuth tokens saved to storage/oauth-tokens.json");
 });
 
 Route::get("/", function () {
     $user = Auth::user();
 
-    $recentFieldcraft = DB::table('content')
-        ->where('content_type', 'fieldcraft')
-        ->orderByDesc('stamp_created')
+    $recentFieldcraft = DB::table("content")
+        ->where("content_type", "fieldcraft")
+        ->orderByDesc("stamp_created")
         ->limit(3)
-        ->get(['content_id', 'content_title']);
+        ->get(["content_id", "content_title"]);
 
     return Inertia::render("Home/Index", [
         "recentFieldcraft" => $recentFieldcraft,
@@ -275,8 +275,8 @@ Route::get("/codex/catalysts/substances", function () {
 Route::get("/fieldcraft", function () {
     $converter = new CommonMarkConverter();
 
-    $fieldwork = Content::where('content_type', 'fieldcraft')
-        ->orderByDesc('stamp_created')
+    $fieldwork = Content::where("content_type", "fieldcraft")
+        ->orderByDesc("stamp_created")
         ->paginate(9)
         ->through(function ($entry) use ($converter) {
             // Generate a stripped summary (optional: truncate)
@@ -285,16 +285,16 @@ Route::get("/fieldcraft", function () {
             $summary = Str::limit($text, 280); // or whatever limit feels right
 
             return [
-                'content_id' => $entry->content_id,
-                'content_title' => $entry->content_title,
-                'content_body' => $summary,
-                'stamp_created' => $entry->stamp_created->toDateString(),
+                "content_id" => $entry->content_id,
+                "content_title" => $entry->content_title,
+                "content_body" => $summary,
+                "stamp_created" => $entry->stamp_created->toDateString(),
             ];
         })
         ->withQueryString();
 
-    return Inertia::render('Fieldcraft/Index', [
-        'entries' => $fieldwork,
+    return Inertia::render("Fieldcraft/Index", [
+        "entries" => $fieldwork,
         "metaTitle" => "Fieldwork Records | " . request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
@@ -314,9 +314,9 @@ Route::get("/fieldcraft/{id}", function ($id) {
     $content = DB::table("content")->where("content_id", $id)->first();
 
     $environment = new Environment([
-        'commonmark' => [
-            'renderer' => [
-                'soft_break' => "<br />\n",
+        "commonmark" => [
+            "renderer" => [
+                "soft_break" => "<br />\n",
             ],
         ],
     ]);
@@ -331,16 +331,16 @@ Route::get("/fieldcraft/{id}", function ($id) {
         abort(404);
     }
 
-    $previous = DB::table('content')
-        ->where('content_type', 'fieldcraft')
-        ->where('stamp_created', '<', $content->stamp_created)
-        ->orderByDesc('stamp_created')
+    $previous = DB::table("content")
+        ->where("content_type", "fieldcraft")
+        ->where("stamp_created", "<", $content->stamp_created)
+        ->orderByDesc("stamp_created")
         ->first();
 
-    $next = DB::table('content')
-        ->where('content_type', 'fieldcraft')
-        ->where('stamp_created', '>', $content->stamp_created)
-        ->orderBy('stamp_created')
+    $next = DB::table("content")
+        ->where("content_type", "fieldcraft")
+        ->where("stamp_created", ">", $content->stamp_created)
+        ->orderBy("stamp_created")
         ->first();
 
     return Inertia::render("Fieldcraft/Entry", [
@@ -348,13 +348,13 @@ Route::get("/fieldcraft/{id}", function ($id) {
         "metaTitle" => $content->content_title." | Fieldcraft Records | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
-        'previous' => $previous ? [
-            'id' => $previous->content_id,
-            'title' => $previous->content_title,
+        "previous" => $previous ? [
+            "id" => $previous->content_id,
+            "title" => $previous->content_title,
         ] : null,
-        'next' => $next ? [
-            'id' => $next->content_id,
-            'title' => $next->content_title,
+        "next" => $next ? [
+            "id" => $next->content_id,
+            "title" => $next->content_title,
         ] : null,
     ]);
 });
@@ -375,9 +375,9 @@ Route::get("/honeyman", function () {
     ]);
 });
 
-Route::get('/honeyman/{any}', function () {
-    return redirect('/honeyman');
-})->where('any', '.*');
+Route::get("/honeyman/{any}", function () {
+    return redirect("/honeyman");
+})->where("any", ".*");
 
 Route::get("/lexicon", function () {
     return Inertia::render("Lexicon", [
@@ -395,40 +395,40 @@ Route::get("/myth", function () {
     ]);
 });
 
-Route::get('/signal', function () {
+Route::get("/signal", function () {
     $user = auth()->user();
 
-    $conversations = DB::table('chronicle_conversations')
-        ->orderBy('stamp_started')
-        ->select('conversation_id', 'conversation_title', 'stamp_started')
+    $conversations = DB::table("chronicle_conversations")
+        ->orderBy("stamp_started")
+        ->select("conversation_id", "conversation_title", "stamp_started")
         ->paginate(21)
         ->onEachSide(1);
 
-    return Inertia::render('Signal/Index', [
-        'conversations' => $conversations,
+    return Inertia::render("Signal/Index", [
+        "conversations" => $conversations,
         "metaTitle" => "Signal Archive | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
-Route::get('/signal/{id}', function ($id) {
+Route::get("/signal/{id}", function ($id) {
     $user = auth()->user();
 
-    $conversation = DB::table('chronicle_conversations')->where('conversation_id', $id)->first();
+    $conversation = DB::table("chronicle_conversations")->where("conversation_id", $id)->first();
 
-    $messages = DB::table('chronicle_messages')
-        ->where('conversation_id', $id)
-        ->where('is_selected', true)
-        ->whereNotNull('message_content')
-        ->whereRaw('LENGTH(TRIM(message_content)) > 0')
-        ->orderBy('stamp_created')
+    $messages = DB::table("chronicle_messages")
+        ->where("conversation_id", $id)
+        ->where("is_selected", true)
+        ->whereNotNull("message_content")
+        ->whereRaw("LENGTH(TRIM(message_content)) > 0")
+        ->orderBy("stamp_created")
         ->orderBy("message_id")
         ->get();
 
-    return Inertia::render('Signal/Entry', [
-        'conversation' => $conversation,
-        'messages' => $messages,
+    return Inertia::render("Signal/Entry", [
+        "conversation" => $conversation,
+        "messages" => $messages,
         "metaTitle" => "Signal Archive (ID) | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
@@ -457,53 +457,72 @@ Route::get("/transmission", function () {
     ]);
 });
 
-Route::get('/transmission/{id}', function ($id) {
+Route::get("/transmission/{id}", function ($id) {
     $user = Auth::user();
 
-    $transmission = DB::table('transmissions')
-        ->where('transmission_id', $id)
+    $transmission = DB::table("transmissions")
+        ->where("transmission_id", $id)
         ->Where("flag_public", 1)
         ->first();
 
     if (!$transmission) {
-        abort(404, 'Transmission not found.');
+        abort(404, "Transmission not found.");
     }
 
     $previous = Transmission::where(function ($query) use ($transmission) {
-        $query->where('stamp_published', '<', $transmission->stamp_published)
+        $query->where("stamp_published", "<", $transmission->stamp_published)
             ->Where("flag_public", 1)
             ->orWhere(function ($q) use ($transmission) {
-                $q->where('stamp_published', $transmission->stamp_published)
-                    ->where('transmission_id', '<', $transmission->transmission_id);
+                $q->where("stamp_published", $transmission->stamp_published)
+                    ->where("transmission_id", "<", $transmission->transmission_id);
             });
     })
-        ->where('transmission_id', '!=', $transmission->transmission_id)
+        ->where("transmission_id", "!=", $transmission->transmission_id)
         ->where("flag_public", 1)
-        ->orderBy('stamp_published', 'desc')
-        ->orderBy('transmission_id', 'desc')
+        ->orderBy("stamp_published", "desc")
+        ->orderBy("transmission_id", "desc")
         ->first();
 
     $next = Transmission::where(function ($query) use ($transmission) {
-        $query->where('stamp_published', '>', $transmission->stamp_published)
+        $query->where("stamp_published", ">", $transmission->stamp_published)
             ->Where("flag_public", 1)
             ->orWhere(function ($q) use ($transmission) {
-                $q->where('stamp_published', $transmission->stamp_published)
-                    ->where('transmission_id', '>', $transmission->transmission_id);
+                $q->where("stamp_published", $transmission->stamp_published)
+                    ->where("transmission_id", ">", $transmission->transmission_id);
             });
     })
-        ->where('transmission_id', '!=', $transmission->transmission_id)
-        ->orderBy('stamp_published', 'asc')
-        ->orderBy('transmission_id', 'asc')
+        ->where("transmission_id", "!=", $transmission->transmission_id)
+        ->orderBy("stamp_published", "asc")
+        ->orderBy("transmission_id", "asc")
         ->first();
 
-    return Inertia::render('Transmission/Entry', [
-        'transmission' => $transmission,
-        'previous' => $previous,
-        'next' => $next,
+    return Inertia::render("Transmission/Entry", [
+        "transmission" => $transmission,
+        "previous" => $previous,
+        "next" => $next,
         "metaTitle" => $transmission->transmission_title." (".date("F d, Y", strtotime($transmission->stamp_published)).") | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
+});
+
+Route::get("/transmission/tag/{tag}", function ($tag) {
+
+    $transmissions = Transmission::where("flag_public", 1)
+        ->whereJsonContains("transmission_tags", $tag)
+        ->orderByDesc("stamp_published")
+        ->paginate(24)
+        ->onEachSide(1)
+        ->withQueryString();
+
+    return Inertia::render("Transmission/Tag", [
+        "transmissions" => $transmissions,
+        "tag" => $tag,
+        "metaTitle" => $tag." | Tag | Transmission Vault | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+
 });
 
 Route::get("/dashboard", function () {
