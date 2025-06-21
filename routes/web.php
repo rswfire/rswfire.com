@@ -446,7 +446,10 @@ Route::get("/tech", function () {
 
 Route::get("/transmission", function () {
     return Inertia::render("Transmission/Index", [
-        'transmissions' => Transmission::orderByDesc('stamp_published')->paginate(24)->onEachSide(1),
+        "transmissions" => Transmission::where("flag_public", 1)
+            ->orderByDesc("stamp_published")
+            ->paginate(24)
+            ->onEachSide(1),
         "metaTitle" => "Transmission Vault | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
