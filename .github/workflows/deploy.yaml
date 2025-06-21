@@ -31,6 +31,7 @@ jobs:
             npm ci
             npm run build
             composer update
+            pip3 install -r requirements.txt
             php artisan config:clear
             php artisan route:clear
             php artisan view:clear
