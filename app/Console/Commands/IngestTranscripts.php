@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Process;
 
 class IngestTranscripts extends Command
 {
-    protected $signature = 'transcripts:ingest';
-    protected $description = 'Fetch and populate YouTube transcripts';
+    protected $signature = "transcripts:ingest";
+    protected $description = "Fetch and populate YouTube transcripts";
 
     public function handle()
     {
-        $rows = DB::table('transmissions')
-            ->whereNull('transmission_transcript')
-            ->select('transmission_id', 'youtube_id')
+        $rows = DB::table("transmissions")
+            ->whereNull("transmission_transcript")
+            ->select("transmission_id", "youtube_id")
             ->get();
 
         foreach ($rows as $row) {
@@ -30,16 +30,20 @@ class IngestTranscripts extends Command
 
             $payload = json_decode($result->output(), true);
 
-            if (isset($payload['error'])) {
-                $this->warn("Error: " . $payload['error']);
+            if (isset($payload["error"])) {
+                $this->warn("Error: " . $payload["error"]);
                 continue;
             }
 
-            DB::table('transmissions')
-                ->where('transmission_id', $row->transmission_id)
-                ->update(['transmission_transcript' => $payload['transcript']]);
+            if (isset($payload["segments"])) {
+                DB::table("transmissions")
+                    ->where("transmission_id", $row->transmission_id)
+                    ->update([
+                        "transmission_transcript" => json_encode($payload["segments"]),
+                    ]);
 
-            $this->info("Stored transcript for {$row->youtube_id}");
+                $this->info("Stored structured transcript for {$row->youtube_id}");
+            }
         }
     }
 }

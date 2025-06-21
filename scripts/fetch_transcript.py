@@ -12,9 +12,8 @@ video_id = sys.argv[1]
 
 try:
     transcript = YouTubeTranscriptApi.get_transcript(video_id)
-    # Concatenate text only
-    transcript_text = "\n".join([chunk["text"] for chunk in transcript])
-    print(json.dumps({"transcript": transcript_text}))
+    print(json.dumps({"segments": transcript}))
+
 except Exception as e:
     print(json.dumps({"error": str(e)}))
     sys.exit(1)
