@@ -16,6 +16,7 @@ class IngestTranscripts extends Command
         $rows = DB::table("transmissions")
             ->whereNull("transmission_transcript")
             ->select("transmission_id", "youtube_id")
+            ->orderByDesc("stamp_published")
             ->get();
 
         foreach ($rows as $row) {

@@ -446,7 +446,8 @@ Route::get("/tech", function () {
 
 Route::get("/transmission", function () {
     return Inertia::render("Transmission/Index", [
-        "transmissions" => Transmission::where("flag_public", 1)
+        "transmissions" => Transmission::
+            where("flag_public", 1)
             ->orderByDesc("stamp_published")
             ->paginate(24)
             ->onEachSide(1),
@@ -461,6 +462,7 @@ Route::get('/transmission/{id}', function ($id) {
 
     $transmission = DB::table('transmissions')
         ->where('transmission_id', $id)
+        ->Where("flag_public", 1)
         ->first();
 
     if (!$transmission) {
@@ -469,18 +471,21 @@ Route::get('/transmission/{id}', function ($id) {
 
     $previous = Transmission::where(function ($query) use ($transmission) {
         $query->where('stamp_published', '<', $transmission->stamp_published)
+            ->Where("flag_public", 1)
             ->orWhere(function ($q) use ($transmission) {
                 $q->where('stamp_published', $transmission->stamp_published)
                     ->where('transmission_id', '<', $transmission->transmission_id);
             });
     })
         ->where('transmission_id', '!=', $transmission->transmission_id)
+        ->where("flag_public", 1)
         ->orderBy('stamp_published', 'desc')
         ->orderBy('transmission_id', 'desc')
         ->first();
 
     $next = Transmission::where(function ($query) use ($transmission) {
         $query->where('stamp_published', '>', $transmission->stamp_published)
+            ->Where("flag_public", 1)
             ->orWhere(function ($q) use ($transmission) {
                 $q->where('stamp_published', $transmission->stamp_published)
                     ->where('transmission_id', '>', $transmission->transmission_id);
@@ -495,7 +500,7 @@ Route::get('/transmission/{id}', function ($id) {
         'transmission' => $transmission,
         'previous' => $previous,
         'next' => $next,
-        "metaTitle" => "Transmission Vault (ID) | ".request()->getHost(),
+        "metaTitle" => $transmission->transmission_title." (".date("F d, Y", strtotime($transmission->stamp_published)).") | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

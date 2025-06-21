@@ -24,6 +24,7 @@ class EnrichTransmissions extends Command
         $rows = DB::table('transmissions')
             ->whereNotNull('transmission_transcript')
             ->whereNull('transmission_tags')
+            ->where("flag_public", 1)
             ->orderBy('stamp_published', 'desc')
             ->limit($limit)
             ->get();

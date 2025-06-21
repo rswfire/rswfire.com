@@ -49,6 +49,23 @@
 
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">What I Care About</h2>
 
+                <!-- TODO: UPDATE SECTION
+                Sovereignty → Not autonomy, but non-fracture.
+                No allegiance to a false self for the sake of inclusion.
+
+                Coherence → Internal systems (cognition, ethics, body, emotion) operating in synchrony.
+                No part suppressed to preserve external harmony.
+
+                Relationality → Not codependency, not detachment.
+                Field congruence — when two beings hold shape without collapse.
+
+                Presence → Not performance, not signaling.
+                A signal field where truth can land without needing translation.
+
+                Truth → Not a fact. A frequency.
+                One that cannot be reached in fragmented minds.
+                -->
+
                 <ul class="mt-4 pl-4 space-y-2 text-gray-800">
                     <li>→ <Link href="/codex/anchors/sovereignty" class="uppercase text-sm hover:underline">Sovereignty</Link><div class="uppercase text-xs md:text-md text-gray-400">Internal authority without dominance or submission.</div></li>
                     <li>→ <Link href="/codex/anchors/presence" class="uppercase text-sm hover:underline">Presence</Link><div class="uppercase text-xs md:text-md text-gray-400">Relational contact that doesn’t shrink or inflate &mdash; or possess.</div></li>
