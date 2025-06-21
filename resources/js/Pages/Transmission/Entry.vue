@@ -26,7 +26,7 @@
             </div>
 
             <div class="p-4">
-                <YoutubePlayer :video-id="transmission.youtube_id" />
+                <YoutubePlayer :video-id="transmission.youtube_id" :is-portrait="transmission.is_portrait"  />
             </div>
             <div v-if="htmlDescription" v-html="htmlDescription" class="prose max-w-none p-4" />
         </div>
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div v-if="parsedTags.length" class="mt-6 text-sm text-gray-500">
+        <div v-if="(parsedTags || []).length" class="mt-6 text-sm text-gray-500">
             <strong>Tags:</strong>
             <ul class="flex flex-wrap gap-2 mt-1">
                 <li v-for="tag in parsedTags" :key="tag" class="px-2 py-1 bg-gray-200 rounded-full text-gray-700 text-xs">

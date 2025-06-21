@@ -498,6 +498,7 @@ Route::get("/transmission/{id}", function ($id) {
 
     return Inertia::render("Transmission/Entry", [
         "transmission" => $transmission,
+        "is_portrait" => $transmission->is_portrait,
         "previous" => $previous,
         "next" => $next,
         "metaTitle" => $transmission->transmission_title." (".date("F d, Y", strtotime($transmission->stamp_published)).") | ".request()->getHost(),

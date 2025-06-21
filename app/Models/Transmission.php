@@ -38,6 +38,7 @@ class Transmission extends BaseModel
         "stamp_created",
         "stamp_published",
         "stamp_updated",
+        "is_portrait",
     ];
 
     protected $casts = [
@@ -50,6 +51,7 @@ class Transmission extends BaseModel
         "stamp_updated" => "datetime",
         "transmission_latitude" => "float",
         "transmission_longitude" => "float",
+        "is_portrait" => "boolean",
     ];
 
 }
