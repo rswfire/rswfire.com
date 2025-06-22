@@ -53,7 +53,7 @@
                         <YoutubePlayer :video-id="transmission.youtube_id" :is-portrait="isPortrait" />
                     </div>
 
-                    <div class="mt-4 text-sm text-center"><strong>Transcript:</strong></div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
                     <div class="mt-2 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
                         <div v-if="parsedTranscript.length">
                             <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
