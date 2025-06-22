@@ -64,6 +64,7 @@ class SyncYouTubeMetadata extends Command
                 $description  = "Nothing here will wait for you to catch up.\n";
                 $description .= "There is no summary to soften the blow.\n";
                 $description .= "There is no title that reveals what it means.\n";
+                $description .= "These transmissions were never meant to persuade.\n";
                 $description .= "They weren’t made for you.\n";
                 $description .= "And still — they are offered.\n";
                 $description .= "https://rswfire.com/transmission/{$t->transmission_id}\n\n";
