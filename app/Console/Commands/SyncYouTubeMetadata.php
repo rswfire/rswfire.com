@@ -39,9 +39,6 @@ class SyncYouTubeMetadata extends Command
         $client->setAccessType('offline');
         $client->setPrompt('select_account consent');
 
-        // Optionally refresh token if needed
-        $client->refreshTokenIfNeeded();
-
         $youtube = new Google_Service_YouTube($client);
 
         $transmissions = Transmission::whereNotNull('youtube_id')
