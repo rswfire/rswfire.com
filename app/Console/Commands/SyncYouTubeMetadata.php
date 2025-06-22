@@ -34,7 +34,7 @@ class SyncYouTubeMetadata extends Command
         $limit = (int)$this->option('limit');
 
         $client = new Google_Client();
-        $client->setAuthConfig(storage_path('app/youtube-oauth.json'));
+        $client->setAuthConfig(storage_path('oauth-secret.json'));
         $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
         $client->setAccessType('offline');
         $client->setPrompt('select_account consent');
