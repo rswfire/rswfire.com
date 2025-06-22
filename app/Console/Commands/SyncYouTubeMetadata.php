@@ -64,7 +64,7 @@ class SyncYouTubeMetadata extends Command
 
         foreach ($transmissions as $t) {
             try {
-                $video = $youtube->videos->listVideos('snippet', [
+                $video = $youtube->videos->listVideos('snippet,status', [
                     'id' => $t->youtube_id,
                 ])->getItems()[0] ?? null;
 
