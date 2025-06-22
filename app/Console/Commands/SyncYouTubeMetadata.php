@@ -92,12 +92,16 @@ class SyncYouTubeMetadata extends Command
                     }
                 }
 
+                $status = $video->getStatus();
+                $status->setPrivacyStatus('public');
+                $video->setStatus($status);
+
                 $snippet = $video->getSnippet();
                 $snippet->setTitle($t->transmission_title);
                 $snippet->setDescription($description);
 
                 $video->setSnippet($snippet);
-                $youtube->videos->update('snippet', $video);
+                $youtube->videos->update('snippet,status', $video);
 
                 $this->info("✅ Updated: {$t->youtube_id}");
                 sleep(5);
