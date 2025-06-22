@@ -35,9 +35,23 @@ class SyncYouTubeMetadata extends Command
 
         $client = new Google_Client();
         $client->setAuthConfig(storage_path('oauth-secret.json'));
-        $client->addScope(Google_Service_YouTube::YOUTUBE_FORCE_SSL);
         $client->setAccessType('offline');
-        $client->setPrompt('select_account consent');
+        $client->setPrompt('consent');
+        $client->setScopes([
+            Google_Service_YouTube::YOUTUBE_FORCE_SSL,
+        ]);
+
+        $tokenPath = storage_path('oauth-tokens.json');
+        if (!file_exists($tokenPath)) {
+            throw new \Exception("Token file not found: {$tokenPath}");
+        }
+        $token = json_decode(file_get_contents($tokenPath), true);
+        $client->setAccessToken($token);
+
+        if ($client->isAccessTokenExpired()) {
+            $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
+            file_put_contents($tokenPath, json_encode($client->getAccessToken()));
+        }
 
         $youtube = new Google_Service_YouTube($client);
 
