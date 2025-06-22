@@ -69,6 +69,16 @@ class SyncYouTubeMetadata extends Command
                 $description .= "https://rswfire.com/transmission/{$t->transmission_id}\n\n";
                 $description .= $t->transmission_description;
 
+                if (!empty($t->transmission_tags)) {
+                    $tags = is_string($t->transmission_tags)
+                        ? json_decode($t->transmission_tags, true)
+                        : $t->transmission_tags;
+
+                    if (is_array($tags) && count($tags)) {
+                        $description .= "\n\n" . implode(', ', $tags);
+                    }
+                }
+
                 $snippet = $video->getSnippet();
                 $snippet->setTitle($t->transmission_title);
                 $snippet->setDescription($description);
