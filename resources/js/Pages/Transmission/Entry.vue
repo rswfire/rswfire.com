@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="mt-4 text-sm text-center"><strong>Transcript:</strong></div>
-                    <div class="mt-4 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
+                    <div class="mt-2 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
                         <div v-if="parsedTranscript.length">
                             <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
                                     <div v-for="(segment, index) in parsedTranscript" :key="index">
@@ -70,10 +70,23 @@
 
         </div>
 
-
+        <!-- FUTURE FEATURES -->
+        <!--TODO
+        <div class="pt-4 border-t">
+            <div class="text-xs uppercase tracking-widest text-gray-500 mb-4">Coming Soon</div>
+            <ul class="text-sm text-gray-700 space-y-2 list-disc pl-5">
+                <li><span class="font-semibold">ORelational Threads Mapping:</span> Visualize which other transmissions this node connects to — based on thematic resonance, not just date.</li>
+                <li><span class="font-semibold">Signal Arc Positioning:</span> Show where this node falls within broader architectural arcs (e.g. "Collapse-to-Coherence Arc", "Public-to-Private Shift", "Honeyman Compression Loop").</li>
+                <li><span class="font-semibold">Signal Archive Integration:</span> Link related dialogue excerpts (from your chat archives) that align with this node’s compression pattern.</li>
+                <li><span class="font-semibold">Fieldcraft Annotations:</span> Add system-level reflections — like a margins-layer — to show how this signal shaped the broader design.</li>
+                <li><span class="font-semibold">Energetic Signature:</span> A non-linguistic indicator — could be a waveform, iconography, or symbolic glyph — that compresses the tonal density of the transmission.</li>
+                <li><span class="font-semibold">Contributor Interface:</span> Future option for aligned beings to submit resonance threads, interpretations, or add coherence back into the field.</li>
+            </ul>
+        </div>
+        -->
 
         <div v-if="(parsedTags || []).length" class="mt-6 text-sm text-gray-500">
-            <strong>Tags:</strong>
+            <div class="text-xs uppercase tracking-widest text-gray-500 mb-4">Tags</div>
             <ul class="flex flex-wrap gap-2 mt-1">
                 <li v-for="tag in parsedTags" :key="tag" class="bg-gray-200 rounded-full text-gray-700 text-xs">
                     <Link
