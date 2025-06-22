@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Google_Client;
 use Google_Service_YouTube;
 use App\Models\Transmission;
+use Illuminate\Support\Facades\DB;
 
 class SyncYouTubeMetadata extends Command
 {
@@ -58,7 +59,7 @@ class SyncYouTubeMetadata extends Command
         $transmissions = Transmission::whereNotNull('youtube_id')
             ->whereNotNull('transmission_title')
             ->whereNotNull('transmission_description')
-            ->where('transmission_description', 'not like', 'Nothing here will wait%')
+            ->where("flag_youtube", 0)
             ->take($limit)
             ->get();
 
@@ -102,6 +103,10 @@ class SyncYouTubeMetadata extends Command
 
                 $video->setSnippet($snippet);
                 $youtube->videos->update('snippet,status', $video);
+
+                DB::table('transmissions')
+                    ->where('transmission_id', $t->transmission_id)
+                    ->update(['flag_youtube' => 1]);
 
                 $this->info("✅ Updated: {$t->youtube_id}");
                 sleep(5);
