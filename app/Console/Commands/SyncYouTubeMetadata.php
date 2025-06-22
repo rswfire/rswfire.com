@@ -58,6 +58,7 @@ class SyncYouTubeMetadata extends Command
         $transmissions = Transmission::whereNotNull('youtube_id')
             ->whereNotNull('transmission_title')
             ->whereNotNull('transmission_description')
+            ->where('transmission_description', 'not like', 'Nothing here will wait%')
             ->take($limit)
             ->get();
 
@@ -73,7 +74,7 @@ class SyncYouTubeMetadata extends Command
                 }
 
                 $description  = "Nothing here will wait for you to catch up.\n";
-                $description .= "There is no summary to soften the blow.\n";
+                $description .= "There is no summary to soften the entry.\n";
                 $description .= "There is no title that reveals what it means.\n";
                 $description .= "These transmissions were never meant to persuade.\n";
                 $description .= "They weren’t made for you.\n";
@@ -99,6 +100,7 @@ class SyncYouTubeMetadata extends Command
                 $youtube->videos->update('snippet', $video);
 
                 $this->info("✅ Updated: {$t->youtube_id}");
+                sleep(5);
             } catch (\Throwable $e) {
                 $this->error("❌ Error for {$t->youtube_id}: " . $e->getMessage());
             }
