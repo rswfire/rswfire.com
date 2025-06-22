@@ -14,7 +14,7 @@ class SyncYouTubeMetadata extends Command
      *
      * @var string
      */
-    protected $signature = 'youtube:sync-metadata --limit=1';
+    protected $signature = 'youtube:sync-metadata {--limit=1}';
 
     /**
      * The console command description.
