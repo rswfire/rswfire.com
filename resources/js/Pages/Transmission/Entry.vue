@@ -1,13 +1,7 @@
 <template>
     <Content>
 
-        <Hero
-            :title="transmission?.transmission_title || 'Untitled Transmission'"
-            :subtitle="formatDate(transmission?.stamp_published) || 'NULL'"
-            meta="TRANSMISSION VAULT"
-        />
-
-        <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+        <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
             <div class="bg-gray-100 px-4 py-2 font-semibold">
                 <div class="flex justify-between text-md">
                     <div v-if="previous">
@@ -16,42 +10,75 @@
                         </Link>
                     </div>
                     <div v-else></div>
-
+                    <Link href="/transmission" class="hover:text-black hover:underline">[ Return to Archive ]</Link>
                     <div v-if="next">
                         <Link :href="`/transmission/${next.transmission_id}`" class="hover:text-black hover:underline">
                             Next Video →
                         </Link>
                     </div>
+                    <div v-else></div>
                 </div>
             </div>
 
-            <div class="p-4">
-                <YoutubePlayer :video-id="transmission.youtube_id" :is-portrait="transmission.is_portrait"  />
-            </div>
-            <div v-if="htmlDescription" v-html="htmlDescription" class="prose max-w-none p-4" />
-        </div>
 
-        <div class="prose max-w-none text-gray-800 mt-6">
-            <div v-if="parsedTranscript.length">
-                <strong>Transcript:</strong>
-                <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
-                    <div class="max-h-96 overflow-y-auto border rounded-md p-3 bg-white shadow-inner text-sm leading-relaxed text-gray-700 space-y-1">
-                        <div v-for="(segment, index) in parsedTranscript" :key="index">
-                            <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
-                            <span>{{ segment.text }}</span>
+            <div v-if="(parsedTags || []).length" class="ml-4 mt-4 text-xs text-gray-500">
+                <ul class="flex flex-wrap gap-2 mt-1">
+                    <li v-for="tag in parsedTags" :key="tag" class="bg-gray-200 text-gray-700 text-xs">
+                        <Link
+                            :key="tag"
+                            :href="`/transmission/tag/${encodeURIComponent(tag.toLowerCase())}`"
+                            class="px-2 py-1 bg-gray-200 text-gray-700 text-xs hover:bg-black hover:text-white transition"
+                        >
+                            {{ tag }}
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="md:flex md:items-start md:gap-4 p-4">
+
+                <div class="md:w-7/12">
+                    <Hero
+                        :title="transmission?.transmission_title || 'Untitled Transmission'"
+                        :subtitle="formatDate(transmission?.stamp_published) || 'NULL'"
+                        meta="TRANSMISSION VAULT"
+                        align="center"
+                    />
+                    <div v-if="htmlDescription" v-html="htmlDescription" class="mt-4 prose prose-sm max-w-none" />
+                </div>
+
+                <div class="md:w-5/12 md:mt-0">
+                    <div :class="containerClass">
+                        <YoutubePlayer :video-id="transmission.youtube_id" :is-portrait="isPortrait" />
+                    </div>
+
+                    <div class="mt-4 text-sm text-center"><strong>Transcript:</strong></div>
+                    <div class="mt-4 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
+                        <div v-if="parsedTranscript.length">
+                            <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
+                                    <div v-for="(segment, index) in parsedTranscript" :key="index">
+                                        <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
+                                        <span>{{ segment.text }}</span>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
+
 
         <div v-if="(parsedTags || []).length" class="mt-6 text-sm text-gray-500">
             <strong>Tags:</strong>
             <ul class="flex flex-wrap gap-2 mt-1">
-                <li v-for="tag in parsedTags" :key="tag" class="px-2 py-1 bg-gray-200 rounded-full text-gray-700 text-xs">
+                <li v-for="tag in parsedTags" :key="tag" class="bg-gray-200 rounded-full text-gray-700 text-xs">
                     <Link
                         :key="tag"
-                        :href="`/transmission/tag/${encodeURIComponent(tag)}`"
+                        :href="`/transmission/tag/${encodeURIComponent(tag.toLowerCase())}`"
                         class="px-2 py-1 bg-gray-200 rounded-full text-gray-700 text-xs hover:bg-black hover:text-white transition"
                     >
                         {{ tag }}
@@ -94,10 +121,17 @@ import MarkdownIt from 'markdown-it';
 import { computed } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
+const containerClass = computed(() =>
+    props.isPortrait
+        ? 'relative aspect-[9/16] w-full max-w-sm mx-auto'
+        : 'relative aspect-video w-full'
+)
+
 const props = defineProps({
     transmission: Object,
     previous: Object,
     next: Object,
+    isPortrait: Boolean,
 })
 
 const md = new MarkdownIt({
@@ -112,10 +146,19 @@ const htmlDescription = computed(() => {
 })
 
 const parsedTags = computed(() => {
-    const raw = props.transmission?.transmission_tags
     try {
-        return Array.isArray(raw) ? raw : JSON.parse(raw)
-    } catch {
+        const raw = props.transmission?.transmission_tags
+        const parsed = Array.isArray(raw)
+            ? raw
+            : typeof raw === "string"
+                ? JSON.parse(raw)
+                : []
+
+        return parsed
+            .filter(tag => typeof tag === "string")
+            .sort((a, b) => a.localeCompare(b))
+            .map(tag => tag.toUpperCase())
+    } catch (e) {
         return []
     }
 })
