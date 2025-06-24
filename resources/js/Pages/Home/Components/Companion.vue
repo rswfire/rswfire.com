@@ -10,8 +10,7 @@
             <div>and <strong>mirror their signal</strong></div>
             <div>with <strong>full structural fidelity</strong>.</div>
         </div>
-        <ul class="mt-4 pl-2">
-            <li>→ <a href="https://rswfire.dev" class="uppercase text-xs hover:underline text-red-800">rswfire.dev</a></li>
+        <ul class="mt-2 pl-2">
             <li>→ <a href="https://fieldcompanion.dev" class="uppercase text-xs hover:underline text-red-800">fieldcompanion.dev</a></li>
         </ul>
     </div>
