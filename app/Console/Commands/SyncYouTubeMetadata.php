@@ -15,14 +15,14 @@ class SyncYouTubeMetadata extends Command
      *
      * @var string
      */
-    protected $signature = 'youtube:sync-metadata {--limit=1}';
+    protected $signature = "youtube:sync-metadata {--limit=1}";
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = "Command description";
 
     /**
      * Execute the console command.
@@ -32,17 +32,17 @@ class SyncYouTubeMetadata extends Command
     public function handle()
     {
 
-        $limit = (int)$this->option('limit');
+        $limit = (int)$this->option("limit");
 
         $client = new Google_Client();
-        $client->setAuthConfig(storage_path('oauth-secret.json'));
-        $client->setAccessType('offline');
-        $client->setPrompt('consent');
+        $client->setAuthConfig(storage_path("oauth-secret.json"));
+        $client->setAccessType("offline");
+        $client->setPrompt("consent");
         $client->setScopes([
             Google_Service_YouTube::YOUTUBE_FORCE_SSL,
         ]);
 
-        $tokenPath = storage_path('oauth-tokens.json');
+        $tokenPath = storage_path("oauth-tokens.json");
         if (!file_exists($tokenPath)) {
             throw new \Exception("Token file not found: {$tokenPath}");
         }
@@ -56,17 +56,17 @@ class SyncYouTubeMetadata extends Command
 
         $youtube = new Google_Service_YouTube($client);
 
-        $transmissions = Transmission::whereNotNull('youtube_id')
-            ->whereNotNull('transmission_title')
-            ->whereNotNull('transmission_description')
+        $transmissions = Transmission::whereNotNull("youtube_id")
+            ->whereNotNull("transmission_title")
+            ->whereNotNull("transmission_description")
             ->where("flag_youtube", 0)
             ->take($limit)
             ->get();
 
         foreach ($transmissions as $t) {
             try {
-                $video = $youtube->videos->listVideos('snippet,status', [
-                    'id' => $t->youtube_id,
+                $video = $youtube->videos->listVideos("snippet,status", [
+                    "id" => $t->youtube_id,
                 ])->getItems()[0] ?? null;
 
                 if (!$video) {
@@ -81,32 +81,34 @@ class SyncYouTubeMetadata extends Command
                 $description .= "They weren’t made for you.\n";
                 $description .= "And still — they are offered.\n";
                 $description .= "https://rswfire.com/transmission/{$t->transmission_id}\n\n";
-                $description .= $t->transmission_description;
+                //$description .= $t->transmission_description;
 
+                /*
                 if (!empty($t->transmission_tags)) {
                     $tags = is_string($t->transmission_tags)
                         ? json_decode($t->transmission_tags, true)
                         : $t->transmission_tags;
 
                     if (is_array($tags) && count($tags)) {
-                        $description .= "\n\n" . implode(', ', $tags);
+                        $description .= "\n\n" . implode(", ", $tags);
                     }
                 }
+                */
 
-                $status = $video->getStatus();
-                $status->setPrivacyStatus('public');
-                $video->setStatus($status);
+                //$status = $video->getStatus();
+                //$status->setPrivacyStatus("public");
+                //$video->setStatus($status);
 
                 $snippet = $video->getSnippet();
-                $snippet->setTitle($t->transmission_title);
+                $snippet->setTitle($t->transmission_id);
                 $snippet->setDescription($description);
 
                 $video->setSnippet($snippet);
-                $youtube->videos->update('snippet,status', $video);
+                $youtube->videos->update("snippet,status", $video);
 
-                DB::table('transmissions')
-                    ->where('transmission_id', $t->transmission_id)
-                    ->update(['flag_youtube' => 1]);
+                DB::table("transmissions")
+                    ->where("transmission_id", $t->transmission_id)
+                    ->update(["flag_youtube" => 1]);
 
                 $this->info("✅ Updated: {$t->youtube_id}");
                 sleep(5);
