@@ -5,14 +5,14 @@
             <div class="bg-gray-100 px-4 py-2 font-semibold">
                 <div class="flex justify-between text-md">
                     <div v-if="previous">
-                        <Link :href="`/transmission/${previous.transmission_id}`" class="hover:text-black hover:underline">
+                        <Link :href="`/transmission/${previous.signal_ulid}`" class="hover:text-black hover:underline">
                             ← Previous Video
                         </Link>
                     </div>
                     <div v-else></div>
                     <Link href="/transmission" class="hover:text-black hover:underline">[ Return to Archive ]</Link>
                     <div v-if="next">
-                        <Link :href="`/transmission/${next.transmission_id}`" class="hover:text-black hover:underline">
+                        <Link :href="`/transmission/${next.signal_ulid}`" class="hover:text-black hover:underline">
                             Next Video →
                         </Link>
                     </div>
@@ -40,8 +40,8 @@
 
                 <div class="md:w-7/12">
                     <Hero
-                        :title="transmission?.transmission_title || 'Untitled Transmission'"
-                        :subtitle="formatDate(transmission?.stamp_published) || 'NULL'"
+                        :title="transmission?.signal_title || 'Untitled Transmission'"
+                        :subtitle="formatDate(transmission?.stamp_created) || 'NULL'"
                         meta="TRANSMISSION VAULT"
                         align="center"
                     />
@@ -50,19 +50,19 @@
 
                 <div class="md:w-5/12 md:mt-0">
                     <div :class="containerClass">
-                        <YoutubePlayer :video-id="transmission.youtube_id" :is-portrait="isPortrait" />
+                        <YoutubePlayer :video-id="transmission.signal_metadata.youtube.id" :is-portrait="isPortrait" />
                     </div>
 
                     <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
                     <div class="mt-2 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
-                        <div v-if="parsedTranscript.length">
+
                             <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
-                                    <div v-for="(segment, index) in parsedTranscript" :key="index">
-                                        <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
-                                        <span>{{ segment.text }}</span>
-                                    </div>
+                                <div v-for="(segment, index) in parsedTranscript" :key="index">
+                                    <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
+                                    <span>{{ segment.text }}</span>
+                                </div>
                             </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
         <div class="mt-4 bg-gray-100 px-4 py-2 font-semibold">
             <div class="flex justify-between text-md">
                 <div v-if="previous">
-                    <Link :href="`/transmission/${previous.transmission_id}`" class="hover:text-black hover:underline">
+                    <Link :href="`/transmission/${previous.signal_ulid}`" class="hover:text-black hover:underline">
                         ← Previous Video
                     </Link>
                 </div>
@@ -114,7 +114,7 @@
                 <Link href="/transmission" class="hover:text-black hover:underline">[ Return to Archive ]</Link>
 
                 <div v-if="next">
-                    <Link :href="`/transmission/${next.transmission_id}`" class="hover:text-black hover:underline">
+                    <Link :href="`/transmission/${next.signal_ulid}`" class="hover:text-black hover:underline">
                         Next Video →
                     </Link>
                 </div>
@@ -154,13 +154,13 @@ const md = new MarkdownIt({
 })
 
 const htmlDescription = computed(() => {
-    const input = props.transmission?.transmission_description || ''
+    const input = props.transmission?.signal_description || ''
     return md.render(input)
 })
 
 const parsedTags = computed(() => {
     try {
-        const raw = props.transmission?.transmission_tags
+        const raw = props.transmission?.signal_tags
         const parsed = Array.isArray(raw)
             ? raw
             : typeof raw === "string"
@@ -178,7 +178,7 @@ const parsedTags = computed(() => {
 
 const parsedTranscript = computed(() => {
     try {
-        return JSON.parse(props.transmission?.transmission_transcript || '[]');
+        return props.transmission?.signal_payload["timed-transcript"] || [];
     } catch {
         return [];
     }

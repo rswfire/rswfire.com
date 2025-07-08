@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -445,65 +446,60 @@ Route::get("/tech", function () {
 
 
 Route::get("/transmission", function () {
+    $page = request()->get("page", 1);
+    $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
+
+    $response = Http::get("https://rswfire.online/api/transmissions", [
+        "domain" => $domain,
+        "page" => $page,
+        "perPage" => 24,
+    ]);
+
+    if ($response->failed()) {
+        abort(500, "Unable to fetch transmissions.");
+    }
+
+    $transmissions = $response->json();
+
     return Inertia::render("Transmission/Index", [
-        "transmissions" => Transmission::
-            where("flag_public", 1)
-            ->orderByDesc("stamp_published")
-            ->paginate(24)
-            ->onEachSide(1),
-        "metaTitle" => "Transmission Vault | ".request()->getHost(),
+        "transmissions" => $transmissions,
+        "metaTitle" => "Transmission Vault | " . request()->getHost(),
         "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+        "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
     ]);
 });
 
 Route::get("/transmission/{id}", function ($id) {
-    $user = Auth::user();
+    $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
 
-    $transmission = DB::table("transmissions")
-        ->where("transmission_id", $id)
-        ->Where("flag_public", 1)
-        ->first();
+    $transmissionResponse = Http::get("https://rswfire.online/api/transmission/{$id}", [
+        "domain" => $domain,
+    ]);
 
-    if (!$transmission) {
+    if ($transmissionResponse->failed()) {
         abort(404, "Transmission not found.");
     }
 
-    $previous = Transmission::where(function ($query) use ($transmission) {
-        $query->where("stamp_published", "<", $transmission->stamp_published)
-            ->Where("flag_public", 1)
-            ->orWhere(function ($q) use ($transmission) {
-                $q->where("stamp_published", $transmission->stamp_published)
-                    ->where("transmission_id", "<", $transmission->transmission_id);
-            });
-    })
-        ->where("transmission_id", "!=", $transmission->transmission_id)
-        ->where("flag_public", 1)
-        ->orderBy("stamp_published", "desc")
-        ->orderBy("transmission_id", "desc")
-        ->first();
+    $transmission = $transmissionResponse->json();
 
-    $next = Transmission::where(function ($query) use ($transmission) {
-        $query->where("stamp_published", ">", $transmission->stamp_published)
-            ->Where("flag_public", 1)
-            ->orWhere(function ($q) use ($transmission) {
-                $q->where("stamp_published", $transmission->stamp_published)
-                    ->where("transmission_id", ">", $transmission->transmission_id);
-            });
-    })
-        ->where("transmission_id", "!=", $transmission->transmission_id)
-        ->orderBy("stamp_published", "asc")
-        ->orderBy("transmission_id", "asc")
-        ->first();
+    $navResponse = Http::get("https://rswfire.online/api/transmission/{$id}/neighbors", [
+        "domain" => $domain,
+    ]);
+
+    if ($navResponse->failed()) {
+        abort(500, "Failed to fetch transmission neighbors.");
+    }
+
+    $neighbors = $navResponse->json();
 
     return Inertia::render("Transmission/Entry", [
         "transmission" => $transmission,
-        "is_portrait" => $transmission->is_portrait,
-        "previous" => $previous,
-        "next" => $next,
-        "metaTitle" => $transmission->transmission_title." (".date("F d, Y", strtotime($transmission->stamp_published)).") | ".request()->getHost(),
+        "is_portrait" => data_get($transmission, "signal_metadata.flags.is_portrait", false),
+        "previous" => $neighbors["previous"] ?? null,
+        "next" => $neighbors["next"] ?? null,
+        "metaTitle" => $transmission["signal_title"] . " (" . date("F d, Y", strtotime($transmission["stamp_created"])) . ") | " . request()->getHost(),
         "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+        "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
     ]);
 });
 
