@@ -51,7 +51,7 @@
                     <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black line-clamp-2">
                         {{ transmission.signal_title }}
                     </h2>
-                    <p class="text-sm text-gray-500 line-clamp-2">
+                    <p class="text-sm text-gray-500">
                         {{ transmission.signal_description }}
                     </p>
                     <div class="text-xs text-gray-400 flex justify-between pt-2">

@@ -40,12 +40,73 @@
 
                 <div class="md:w-7/12">
                     <Hero
-                        :title="transmission?.signal_title || 'Untitled Transmission'"
+                        :title="reflection.narrative_title || 'Untitled Transmission'"
                         :subtitle="formatDate(transmission?.stamp_created) || 'NULL'"
                         meta="TRANSMISSION VAULT"
                         align="center"
                     />
-                    <div v-if="htmlDescription" v-html="htmlDescription" class="mt-4 prose prose-sm max-w-none" />
+                    <!-- <div v-if="htmlDescription" v-html="htmlDescription" class="mt-4 prose prose-sm max-w-none" /> -->
+
+                    <section v-if="reflection" class="bg-white border border-gray-200 p-6 rounded-xl mt-8 space-y-6">
+
+                        <!-- Narrative Reflection -->
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wide">Narrative Reflection   <span class="text-sm font-bold text-gray-400 uppercase tracking-wide">LLAMA3:70B</span></h3>
+                            <p class="mt-1 whitespace-pre-line text-gray-800 text-base leading-relaxed">
+                                {{ reflection.narrative_reflection }}
+                            </p>
+                        </div>
+
+                        <!-- Symbolic Elements & Tags -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-600">Symbolic Elements</h4>
+                                <ul class="list-disc list-inside mt-1 text-gray-700">
+                                    <li v-for="(symbol, index) in reflection.symbolic_elements" :key="index">
+                                        {{ symbol }}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-600">Tags</h4>
+                                <div class="flex flex-wrap gap-2 mt-1">
+          <span
+              v-for="(tag, i) in reflection.tags"
+              :key="i"
+              class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full"
+          >
+            {{ tag }}
+          </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signature, Vector, Phase -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-700 mt-4">
+                            <div>
+                                <strong class="text-gray-500">Energetic Signature:</strong><br>
+                                {{ reflection.energetic_signature }}
+                            </div>
+                            <div>
+                                <strong class="text-gray-500">Alignment Vector:</strong><br>
+                                {{ reflection.alignment_vector }}
+                            </div>
+                            <div>
+                                <strong class="text-gray-500">Field Phase:</strong><br>
+                                {{ reflection.field_phase }}
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div v-if="reflection.notes" class="mt-4 text-gray-700">
+                            <h4 class="text-sm font-semibold text-gray-600 uppercase">Notes</h4>
+                            <p class="mt-1 text-base leading-relaxed">
+                                {{ reflection.notes }}
+                            </p>
+                        </div>
+                    </section>
+
                 </div>
 
                 <div class="md:w-5/12 md:mt-0">
@@ -144,6 +205,7 @@ const props = defineProps({
     transmission: Object,
     previous: Object,
     next: Object,
+    reflection: Object,
     isPortrait: Boolean,
 })
 
