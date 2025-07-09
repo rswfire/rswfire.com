@@ -47,7 +47,7 @@
                     />
                     <!-- <div v-if="htmlDescription" v-html="htmlDescription" class="mt-4 prose prose-sm max-w-none" /> -->
 
-                    <section v-if="reflection" class="bg-white border border-gray-200 p-6 rounded-xl mt-8 space-y-6">
+                    <section v-if="reflection.tags" class="bg-white border border-gray-200 p-6 rounded-xl mt-8 space-y-6">
 
                         <!-- Narrative Reflection -->
                         <div>
@@ -71,13 +71,13 @@
                             <div>
                                 <h4 class="text-sm font-medium text-gray-600">Tags</h4>
                                 <div class="flex flex-wrap gap-2 mt-1">
-          <span
-              v-for="(tag, i) in reflection.tags"
-              :key="i"
-              class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full"
-          >
-            {{ tag }}
-          </span>
+                                  <span
+                                      v-for="(tag, i) in reflection.tags"
+                                      :key="i"
+                                      class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full"
+                                  >
+                                    {{ tag }}
+                                  </span>
                                 </div>
                             </div>
                         </div>
