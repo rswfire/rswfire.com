@@ -51,12 +51,28 @@
                     <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black line-clamp-2">
                         {{ transmission.signal_title }}
                     </h2>
-                    <p class="text-sm text-gray-500">
+                    <p class="text-sm text-gray-500 clamp-responsive">
                         {{ transmission.signal_description }}
                     </p>
+
+                    <div v-if="getSurfaceTags(transmission).length" class="pt-2">
+                        <div class="text-xs uppercase font-semibold text-gray-500 tracking-wide">
+                            Surface Tags <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span
+                                v-for="tag in getSurfaceTags(transmission)"
+                                :key="tag"
+                                class="text-xs px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full"
+                            >
+                              {{ tag }}
+                            </span>
+                        </div>
+                    </div>
+
                     <div class="text-xs text-gray-400 flex justify-between pt-2">
                         <span>{{ formatDate(transmission.stamp_created) }}</span>
-                        <span>{{ formatDuration(transmission.transmission_duration) }}</span>
+                        <span>{{ formatDuration(transmission.signal_metadata.duration) }}</span>
                     </div>
                 </div>
 
@@ -80,6 +96,15 @@ defineProps({
     transmissions: Object
 })
 
+const getSurfaceTags = (transmission) => {
+    try {
+        const content = JSON.parse(transmission.reflection_surface?.reflection_content || "{}")
+        return content.tags || []
+    } catch (e) {
+        return []
+    }
+}
+
 const expanded = ref(false)
 const goTo = (id) => {
     router.visit(`/transmission/${id}`)
@@ -101,3 +126,24 @@ const formatDuration = (seconds) => {
     return `${m}m ${s}s`
 }
 </script>
+
+<style>
+.clamp-responsive {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+    .clamp-responsive {
+        -webkit-line-clamp: 5;
+    }
+}
+
+@media (min-width: 641px) {
+    .clamp-responsive {
+        -webkit-line-clamp: 7;
+    }
+}
+</style>
