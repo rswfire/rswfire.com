@@ -57,11 +57,26 @@
 
                     <div v-if="getSurfaceTags(transmission).length" class="pt-2">
                         <div class="text-xs uppercase font-semibold text-gray-500 tracking-wide">
-                            Surface Tags <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B</span>
+                            Surface Tags <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B-surface</span>
                         </div>
                         <div class="flex flex-wrap gap-2 mt-1">
                             <span
                                 v-for="tag in getSurfaceTags(transmission)"
+                                :key="tag"
+                                class="text-xs px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full"
+                            >
+                              {{ tag }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div v-if="getOntologicalTags(transmission).length" class="pt-2">
+                        <div class="text-xs uppercase font-semibold text-gray-500 tracking-wide">
+                            Symbolic Elements <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B-narrative</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span
+                                v-for="tag in getOntologicalTags(transmission)"
                                 :key="tag"
                                 class="text-xs px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full"
                             >
@@ -95,6 +110,15 @@ import Pagination from '@/Components/System/Pagination.vue'
 defineProps({
     transmissions: Object
 })
+
+const getOntologicalTags = (transmission) => {
+    try {
+        const content = JSON.parse(transmission.reflection_narrative?.reflection_content || "{}")
+        return content.symbolic_elements || []
+    } catch (e) {
+        return []
+    }
+}
 
 const getSurfaceTags = (transmission) => {
     try {
