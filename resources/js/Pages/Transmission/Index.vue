@@ -2,36 +2,34 @@
     <Content>
 
         <Hero
-            title="TRANSMISSION VAULT"
-            subtitle="A LIVING RECORD OF EMBODIED EXPRESSION"
-            meta="UNFILTERED. UNPERFORMED. UNAPOLOGETIC."
+            title="TRANSMISSION RECORDS"
+            subtitle="A LIVING LOG OF EMBODIED EXPRESSION"
+            meta="700+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
         />
 
         <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
-            <div class="prose prose-lg prose-neutral max-w-none columns-2 gap-8">
-                <div><strong>Nothing here will wait for you to catch up</strong>.</div>
-                <div>There is no summary to soften the blow.</div>
-                <div>There is no title that reveals what it <em>means</em>.</div>
-                <div>These transmissions were never meant to persuade.</div>
-                <div>They exist because they had to.</div>
+            <div class="max-w-none columns-2 gap-8">
 
-                <div class="space-y-1 text-sm text-gray-700 col-span-2">
-                    <div>These are not performances.</div>
-                    <div>They are real-time captures—of clarity, of grief, of fire, of collapse, of truth.</div>
-                    <div>700+ videos recorded over years of radical self-honesty.</div>
+                <div>These are real-time transmissions &mdash;</div>
+                <div class="ml-4">fragments of a sovereign life</div>
+                <div class="ml-8">caught mid-becoming.</div>
+                <div><em>Nothing here will wait for you to catch up</em>.</div>
+                <div>There is no summary to soften the entry.</div>
+                <div>There is no title that reveals what it means.</div>
 
-                    <div class="pt-4">This is the public memory of a sovereign life in progress.</div>
-                    <div>Not curated for virality. Not optimized for branding.</div>
-                    <div>They weren’t made <em>for</em> you. And still&mdash;they are offered.</div>
+                <div>700+ transmissions &mdash;</div>
+                <div class="ml-4">recorded across years of radical self-honesty.</div>
+                <div>This is not a catalog.</div>
+                <div class="ml-4">It is evidence of <em>coherence under pressure</em>.</div>
+                <div>You’re not here to watch.</div>
+                <div>You’re here to feel it move through you.</div>
 
-                    <div class="pt-4">You will not understand all of it. You are not supposed to.</div>
-                    <div>You are supposed to feel it.</div>
-                </div>
             </div>
         </section>
 
+        <Pagination :links="transmissions.links" />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
                 v-for="transmission in transmissions.data"
                 :key="transmission.signal_id"
