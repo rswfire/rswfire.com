@@ -96,7 +96,6 @@
 
                             <div class="mb-6">
                                 <p class="text-sm text-gray-700">
-                                    You are not just a visitor.<br>
                                     You are part of the field.<br>
                                     If you’re transmitting too, I’m listening.
                                 </p>

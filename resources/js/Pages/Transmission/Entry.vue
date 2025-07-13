@@ -1,6 +1,5 @@
 <template>
     <Content>
-
         <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
             <div class="bg-gray-100 px-4 py-2 font-semibold">
                 <div class="flex justify-between text-md">
@@ -20,32 +19,32 @@
                 </div>
             </div>
 
-
-            <div v-if="(parsedTags || []).length" class="ml-4 mt-4 text-xs text-gray-500">
-                <ul class="flex flex-wrap gap-2 mt-1">
-                    <li v-for="tag in parsedTags" :key="tag" class="bg-gray-200 text-gray-700 text-xs">
-                        <Link
-                            :key="tag"
-                            :href="`/transmission/tag/${encodeURIComponent(tag.toLowerCase())}`"
-                            class="px-2 py-1 bg-gray-200 text-gray-700 text-xs hover:bg-black hover:text-white transition"
-                        >
-                            {{ tag }}
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-
-
             <div class="md:flex md:items-start md:gap-4 p-4">
 
                 <div class="md:w-7/12">
                     <Hero
-                        :title="reflection.narrative_title || 'Untitled Transmission'"
-                        :subtitle="formatDate(transmission?.stamp_created) || 'NULL'"
-                        meta="TRANSMISSION VAULT"
+                        :title="transmission.signal_ulid || 'Untitled Transmission'"
+                        :subtitle="reflection.narrative.reflection_title"
+                        :meta="formatDate(transmission?.stamp_created) || 'NULL'"
                         align="center"
                     />
                     <!-- <div v-if="htmlDescription" v-html="htmlDescription" class="mt-4 prose prose-sm max-w-none" /> -->
+
+
+                    <section id="signal-metadata">
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
+                        <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Energetic Signature</div>
+                        <div class="text-sm">{{ reflection.narrative.reflection_content.energetic_signature }}</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Alignment Vector</div>
+                        <div class="text-sm">{{ reflection.narrative.reflection_content.alignment_vector }}</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Field Phase</div>
+                        <div class="text-sm">{{ reflection.narrative.reflection_content.field_phase }}</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Summary</div>
+                        <div class="text-sm">{{ reflection.surface.reflection_content.summary }}</div>
+                    </section>
+
+
 
                     <section v-if="reflection.tags" class="bg-white border border-gray-200 p-6 rounded-xl mt-8 space-y-6">
 

@@ -502,29 +502,18 @@ Route::get("/transmission/{id}", function ($id) {
 
     $neighbors = $navResponse->json();
 
-      $reflectionResponse = Http::get("https://rswfire.online/api/reflection/{$id}", [
-        "type" => "narrative",
-        "domain" => $domain,
-    ]);
+      $reflectionResponse = Http::get("https://rswfire.online/api/reflection/{$id}");
 
     $reflection = $reflectionResponse->successful()
         ? $reflectionResponse->json()
         : null;
-
-    $reflectionData = [];
-    if (!empty($reflection['narrative_reflection']) && is_string($reflection['narrative_reflection'])) {
-        $decoded = json_decode($reflection['narrative_reflection'], true);
-        if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
-            $reflectionData = $decoded;
-        }
-    }
 
     return Inertia::render("Transmission/Entry", [
         "transmission" => $transmission,
         "is_portrait" => data_get($transmission, "signal_metadata.flags.is_portrait", false),
         "previous" => $neighbors["previous"] ?? null,
         "next" => $neighbors["next"] ?? null,
-        "reflection" => $reflectionData,
+        "reflection" => $reflection,
         "metaTitle" => $transmission["signal_title"] . " (" . date("F d, Y", strtotime($transmission["stamp_created"])) . ") | " . request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
