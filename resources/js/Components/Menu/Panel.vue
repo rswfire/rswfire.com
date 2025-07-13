@@ -19,6 +19,34 @@
                 <button @click="$emit('close')" class="text-2xl text-gray-400 hover:text-red-500">×</button>
             </div>
 
+            <div class="w-full flex justify-center">
+                <div class="flex items-center space-x-2">
+                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="MessageCircle" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
+                        About
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
+                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="LogIn" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
+                        Sign In
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
+                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="UserPlus" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
+                        Register
+                    </Link>
+                </div>
+            </div>
+
+
             <!-- Navigation Grid -->
             <div class="grid grid-cols-3 gap-4 pt-4 text-sm font-medium text-center">
                 <Link
