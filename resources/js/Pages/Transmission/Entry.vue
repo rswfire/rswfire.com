@@ -1,4 +1,5 @@
 <template>
+
     <Content>
         <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
             <div class="bg-gray-100 px-4 py-2 font-semibold">
@@ -32,78 +33,16 @@
 
 
                     <section id="signal-metadata">
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
-                        <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Energetic Signature</div>
                         <div class="text-sm">{{ reflection.narrative.reflection_content.energetic_signature }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Alignment Vector</div>
                         <div class="text-sm">{{ reflection.narrative.reflection_content.alignment_vector }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Field Phase</div>
                         <div class="text-sm">{{ reflection.narrative.reflection_content.field_phase }}</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
+                        <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Summary</div>
                         <div class="text-sm">{{ reflection.surface.reflection_content.summary }}</div>
-                    </section>
-
-
-
-                    <section v-if="reflection.tags" class="bg-white border border-gray-200 p-6 rounded-xl mt-8 space-y-6">
-
-                        <!-- Narrative Reflection -->
-                        <div>
-                            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wide">Narrative Reflection   <span class="text-sm font-bold text-gray-400 uppercase tracking-wide">LLAMA3:70B</span></h3>
-                            <p class="mt-1 whitespace-pre-line text-gray-800 text-base leading-relaxed">
-                                {{ reflection.narrative_reflection }}
-                            </p>
-                        </div>
-
-                        <!-- Symbolic Elements & Tags -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-sm font-medium text-gray-600">Symbolic Elements</h4>
-                                <ul class="list-disc list-inside mt-1 text-gray-700">
-                                    <li v-for="(symbol, index) in reflection.symbolic_elements" :key="index">
-                                        {{ symbol }}
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h4 class="text-sm font-medium text-gray-600">Tags</h4>
-                                <div class="flex flex-wrap gap-2 mt-1">
-                                  <span
-                                      v-for="(tag, i) in reflection.tags"
-                                      :key="i"
-                                      class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full"
-                                  >
-                                    {{ tag }}
-                                  </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Signature, Vector, Phase -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-700 mt-4">
-                            <div>
-                                <strong class="text-gray-500">Energetic Signature:</strong><br>
-                                {{ reflection.energetic_signature }}
-                            </div>
-                            <div>
-                                <strong class="text-gray-500">Alignment Vector:</strong><br>
-                                {{ reflection.alignment_vector }}
-                            </div>
-                            <div>
-                                <strong class="text-gray-500">Field Phase:</strong><br>
-                                {{ reflection.field_phase }}
-                            </div>
-                        </div>
-
-                        <!-- Notes -->
-                        <div v-if="reflection.notes" class="mt-4 text-gray-700">
-                            <h4 class="text-sm font-semibold text-gray-600 uppercase">Notes</h4>
-                            <p class="mt-1 text-base leading-relaxed">
-                                {{ reflection.notes }}
-                            </p>
-                        </div>
                     </section>
 
                 </div>
@@ -114,7 +53,7 @@
                     </div>
 
                     <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
-                    <div class="mt-2 max-h-[50vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
+                    <div class="mt-2 max-h-[20vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
 
                             <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
                                 <div v-for="(segment, index) in parsedTranscript" :key="index">
@@ -125,8 +64,130 @@
 
                     </div>
                 </div>
-
             </div>
+
+                <div class="p-4">
+                    <div class="flex border-b border-gray-300 space-x-6 text-sm">
+                        <button
+                            v-for="tab in tabs"
+                            :key="tab"
+                            @click="active = tab"
+                            :class="[
+                                  'pb-2',
+                                  active === tab ? 'border-black border-b-2 font-semibold text-black' : 'text-gray-400'
+                                ]"
+                        >
+                            {{ tab }}
+                        </button>
+                    </div>
+
+                    <div v-if="active === 'Surface'" class="mt-4 space-y-4 text-sm text-gray-800 leading-relaxed">
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Mentioned Entities</h4>
+                            <div class="text-xs italic mb-1">Entities will be browsable after infrastructural upgrades.</div>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    v-for="entity in toListArray(reflection.surface.reflection_content.mentioned_entities)"
+                                    :key="entity"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                  {{ entity }}
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Visible Actions</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+                                <li v-for="action in toListArray(reflection.surface.reflection_content.visible_actions)" :key="action">
+                                    {{ action }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Surface Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in reflection.surface.reflection_content.tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div v-else-if="active === 'Ontological'" class="mt-4 space-y-2 text-sm text-gray-800 leading-relaxed">
+                        <div>{{ reflection.narrative.reflection_content.summary }}</div>
+
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Symbolic Elements</h4>
+                            <div>
+                                <ul class="flex flex-wrap gap-2">
+                                    <li
+                                        v-for="tag in reflection.narrative.reflection_content.symbolic_elements || []"
+                                        :key="tag"
+                                        class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                    >
+                                        {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Ontological Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in reflection.narrative.reflection_content.tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Notes</h4>
+                            <div>{{ reflection.narrative.reflection_content.notes }}</div>
+                        </div>
+
+                    </div>
+
+                    <div v-else-if="active === 'Structural'" class="mt-4 space-y-2 text-sm text-gray-800 leading-relaxed">
+                        <div>{{ transmission.signal_description }}</div>
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Structural Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in transmission.signal_tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
 
         </div>
 
@@ -145,20 +206,7 @@
         </div>
         -->
 
-        <div v-if="(parsedTags || []).length" class="mt-6 text-sm text-gray-500">
-            <div class="text-xs uppercase tracking-widest text-gray-500 mb-4">Tags</div>
-            <ul class="flex flex-wrap gap-2 mt-1">
-                <li v-for="tag in parsedTags" :key="tag" class="bg-gray-200 rounded-full text-gray-700 text-xs">
-                    <Link
-                        :key="tag"
-                        :href="`/transmission/tag/${encodeURIComponent(tag.toLowerCase())}`"
-                        class="px-2 py-1 bg-gray-200 rounded-full text-gray-700 text-xs hover:bg-black hover:text-white transition"
-                    >
-                        {{ tag }}
-                    </Link>
-                </li>
-            </ul>
-        </div>
+
 
 
 
@@ -191,7 +239,7 @@ import Content from "@/Components/System/Content.vue";
 import Hero from "@/Components/System/Hero.vue";
 import YoutubePlayer from '@/Components/System/YoutubePlayer.vue';
 import MarkdownIt from 'markdown-it';
-import { computed } from 'vue';
+import {computed, ref} from 'vue';
 import { Link } from '@inertiajs/vue3';
 
 const containerClass = computed(() =>
@@ -213,6 +261,9 @@ const md = new MarkdownIt({
     breaks: true,
     linkify: true,
 })
+
+const tabs = ['Surface', 'Ontological', 'Structural']
+const active = ref('Surface')
 
 const htmlDescription = computed(() => {
     const input = props.transmission?.signal_description || ''
@@ -263,5 +314,19 @@ const formatDate = (str) => {
 const goTo = (path) => {
     router.visit(`/${path}`)
 }
+function toListArray(raw, bullet = true) {
+    if (!raw || typeof raw !== "string") return []
+
+    return raw
+        .split("\n")                             // real newline split
+        .map(line => {
+            const cleaned = line.trim()
+            return bullet
+                ? cleaned.replace(/^[-•*]+\s*/, "")  // strip bullets if wanted
+                : cleaned
+        })
+        .filter(Boolean)
+}
+
 
 </script>
