@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Content;
 use App\Models\Transmission;
@@ -16,7 +17,7 @@ use Illuminate\Support\Str;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 
-
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::get("/auth/youtube", function () {
     $client = new Google_Client();
     $client->setClientId("969898322049-0kgk5bj8o759kvtlqh29vipatt0cdq0o.apps.googleusercontent.com");
@@ -363,6 +364,14 @@ Route::get("/fieldcraft/{id}", function ($id) {
 Route::get("/hello", function () {
     return Inertia::render("Hello", [
         "metaTitle" => "Who I Am | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/about", function () {
+    return Inertia::render("About", [
+        "metaTitle" => "About | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

@@ -88,6 +88,14 @@
 
             <div v-else>
                 <div class="flex items-center space-x-2">
+                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
+                        <Icon name="MessageCircle" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    </Link>
+                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
+                        About
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
                     <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
                         <Icon name="LogIn" color="text-black" class="w-4 h-4 flex-shrink-0" />
                     </Link>
@@ -101,7 +109,7 @@
                         <Icon name="UserPlus" color="text-black" class="w-4 h-4 flex-shrink-0" />
                     </Link>
                     <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
-                        Sign Up
+                        Register
                     </Link>
 
                 </div>
