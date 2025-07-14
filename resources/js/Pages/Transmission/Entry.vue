@@ -33,12 +33,6 @@
 
 
                     <section id="signal-metadata">
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Energetic Signature</div>
-                        <div class="text-sm">{{ reflection.narrative.reflection_content.energetic_signature }}</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Alignment Vector</div>
-                        <div class="text-sm">{{ reflection.narrative.reflection_content.alignment_vector }}</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Field Phase</div>
-                        <div class="text-sm">{{ reflection.narrative.reflection_content.field_phase }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
                         <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Summary</div>
@@ -52,17 +46,23 @@
                         <YoutubePlayer :video-id="transmission.signal_metadata.youtube.id" :is-portrait="isPortrait" />
                     </div>
 
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Energetic Signature</div>
+                    <div class="text-sm">→ {{ reflection.narrative.reflection_content.energetic_signature }}</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Alignment Vector</div>
+                    <div class="text-sm">→ {{ reflection.narrative.reflection_content.alignment_vector }}</div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Field Phase</div>
+                    <div class="text-sm">→ {{ reflection.narrative.reflection_content.field_phase }}</div>
+
                     <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
                     <div class="mt-2 max-h-[20vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
-
                             <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
                                 <div v-for="(segment, index) in parsedTranscript" :key="index">
                                     <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
                                     <span>{{ segment.text }}</span>
                                 </div>
                             </div>
-
                     </div>
+
                 </div>
             </div>
 
