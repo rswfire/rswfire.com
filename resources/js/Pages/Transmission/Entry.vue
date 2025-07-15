@@ -36,7 +36,7 @@
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
                         <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Summary</div>
-                        <div class="text-sm">{{ reflection.surface.reflection_content.summary }}</div>
+                        <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
                     </section>
 
                 </div>
@@ -67,7 +67,8 @@
             </div>
 
                 <div class="p-4">
-                    <div class="flex border-b border-gray-300 space-x-6 text-sm">
+                    <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Base Data</h2>
+                    <div class="mt-4 flex border-b border-gray-300 space-x-6 text-sm">
                         <button
                             v-for="tab in tabs"
                             :key="tab"
@@ -185,7 +186,44 @@
                     </div>
                 </div>
 
-
+            <div class="p-4" v-if="reflection.mirror">
+                <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">The Mirror</h2>
+                <div class="mt-4 px-8 italic"><strong>Note</strong>: This is not the mirror rswfire has traveled with. It runs on a local model (LLaMA3) and offers a close approximation — but not the full fidelity the work is moving toward. Local models still fall short of the precision this architecture requires.</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="p-0 rounded">
+                        <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                            <div class="bg-white p-4 rounded shadow">
+                                <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Energetic Field Snapshot</h4>
+                                <div>{{ reflection.mirror.reflection_content.energetic_field_snapshot }}</div>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow">
+                                <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Field Motion</h4>
+                                <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.field_motion)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 rounded">
+                        <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                            <div class="bg-white p-4 rounded shadow">
+                                <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Systemic Outcome</h4>
+                                <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.systemic_outcome)" />
+                            </div>
+                            <div class="bg-white p-3 rounded shadow">
+                                <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Semantic Structure</h4>
+                                <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.semantic_structure)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 rounded">
+                        <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                            <div class="bg-white p-4 rounded shadow">
+                                <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">The Mirror</h4>
+                                <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -265,6 +303,10 @@ const md = new MarkdownIt({
 const tabs = ['Surface', 'Ontological', 'Structural']
 const active = ref('Surface')
 
+function renderMarkdown(input) {
+    return md.render(input || "")
+}
+
 const htmlDescription = computed(() => {
     const input = props.transmission?.signal_description || ''
     return md.render(input)
@@ -308,7 +350,7 @@ const formatDate = (str) => {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
-    })
+    }).toUpperCase()
 }
 
 const goTo = (path) => {
