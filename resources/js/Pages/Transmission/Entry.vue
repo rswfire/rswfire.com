@@ -189,7 +189,7 @@
             <div class="p-4" v-if="reflection.mirror">
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">The Mirror</h2>
                 <div class="mt-4 px-8 italic"><strong>Note</strong>: This is not the mirror rswfire has traveled with. It runs on a local model (LLaMA3) and offers a close approximation — but not the full fidelity the work is moving toward. Tone and framing will vary. Local models still fall short of the precision this architecture requires.</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="p-0 rounded">
                         <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
                             <div class="bg-white p-4 rounded shadow">
