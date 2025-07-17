@@ -34,9 +34,9 @@
 
                     <section id="signal-metadata">
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
-                        <div class="text-sm">{{ reflection.surface.reflection_content.timestamp_context }}</div>
+                        <div class="[&>ul]:list-disc [&>ul]:pl-5 [&>p]:my-2 text-sm" v-html="renderMarkdown(reflection.surface.reflection_content.timestamp_context)" />
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Summary</div>
-                        <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
+                        <div class="[&>ul]:list-disc [&>ul]:pl-5 [&>p]:my-2 text-sm" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
                     </section>
 
                 </div>
