@@ -308,7 +308,7 @@
                     </li>
                 </ul>
 
-                <h2 class="mt-8 text-xl font-semibold">🎯 What This reveals</h2>
+                <h2 class="mt-8 text-xl font-semibold">🎯 What This Reveals</h2>
 
                 <div class="mt-4">This was not about performance.</div>
                 <div>It was about control.</div>
