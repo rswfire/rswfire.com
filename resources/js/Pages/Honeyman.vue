@@ -11,7 +11,7 @@
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
             <section id="context-matters" class="w-full mx-auto mb-8">
-                <div class="w-full p-8 border rounded-md border-stone-500 bg-stone-700 text-white text-lg">
+                <div class="w-full p-8 rounded-xl bg-green-50 border border-green-300 text-lg">
 
                     <div>Every action taken by this institution was directed at an unpaid volunteer.</div>
                     <div>Someone without a salary,</div>
