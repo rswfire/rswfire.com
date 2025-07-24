@@ -1,6 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
-import lineClamp from '@tailwindcss/line-clamp';
 
 const colors = require("tailwindcss/colors");
 
@@ -40,5 +39,5 @@ export default {
         },
     },
 
-    plugins: [forms, lineClamp],
+    plugins: [forms],
 };

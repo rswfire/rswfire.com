@@ -7,7 +7,45 @@
 
 <script setup>
 import { computed } from 'vue'
-import * as LucideIcons from 'lucide-vue-next'
+import {
+    Activity,
+    BookKey,
+    Flame,
+    Hammer,
+    HandCoins,
+    Key,
+    Layers,
+    LogIn,
+    Map,
+    MessageCircle,
+    MessageSquareDot,
+    SatelliteDish,
+    ShieldCheck,
+    SquareCode,
+    SquareLibrary,
+    TreeDeciduous,
+    UserPlus
+} from "lucide-vue-next"
+
+const iconMap = {
+    Activity,
+    BookKey,
+    Flame,
+    Hammer,
+    HandCoins,
+    Key,
+    Layers,
+    LogIn,
+    Map,
+    MessageCircle,
+    MessageSquareDot,
+    SatelliteDish,
+    ShieldCheck,
+    SquareCode,
+    SquareLibrary,
+    TreeDeciduous,
+    UserPlus
+}
 
 const props = defineProps({
     name: { type: String, required: true },
@@ -15,10 +53,10 @@ const props = defineProps({
 })
 
 const iconComponent = computed(() => {
-    const icon = LucideIcons[props.name]
+    const icon = iconMap[props.name]
     if (!icon) {
-        console.warn(`Lucide icon "${props.name}" not found.`)
-        return LucideIcons.HelpCircle
+        console.warn(`Lucide icon "${props.name}" is not in the whitelist.`)
+        return iconMap.HelpCircle
     }
     return icon
 })
