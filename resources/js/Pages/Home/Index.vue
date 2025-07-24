@@ -6,7 +6,7 @@
 
             <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
-                    <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
+                    <!-- <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" /> -->
                     <!-- <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6 md:mb-0 md:hidden" /> -->
                     <HelloCard class="mb-6 sm:mb-6" />
                     <TechCard />
@@ -15,9 +15,9 @@
 
             <div class="md:col-span-1">
                 <div class="flex flex-col">
-                    <CompanionCard class="hidden md:block" />
+                    <!-- <CompanionCard class="hidden md:block" /> -->
                     <!-- <FieldcraftRecentCard :entries="recentFieldcraft" class="hidden md:block md:mt-6" /> -->
-                    <CodexCard class="md:mt-6" />
+                    <CodexCard />
                 </div>
             </div>
 
