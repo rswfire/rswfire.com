@@ -1,5 +1,5 @@
 <template>
-    <Content>
+    <Content theme="signal">
 
         <Hero
             title="SIGNAL ARCHIVE"

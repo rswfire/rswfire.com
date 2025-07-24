@@ -1,5 +1,5 @@
 <template>
-    <Content>
+    <Content theme="transmission">
 
         <Hero
             title="TRANSMISSION RECORDS"

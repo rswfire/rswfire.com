@@ -1,6 +1,6 @@
 <template>
 
-    <Content>
+    <Content theme="honeyman">
 
         <Hero
             title="THE STORY OF HONEYMAN"
@@ -28,240 +28,255 @@
                 </div>
             </section>
 
-
-        <section id="index-of-breaches" class="border-t border-gray-300">
-            <div class="my-8 text-black">
-                <div class="w-full border-l-4 border-red-600 bg-red-50 p-6 rounded-md shadow-sm">
-                    <h2 class="uppercase text-lg text-red-900 font-bold tracking-widest m-0 p-0">Index of Breaches</h2>
-                    <div class="text-red-800">These are the central tactics used by Oregon State Parks.</div>
-                    <ul class="mt-4 list-disc list-inside space-y-2 text-red-800">
-                        <li>Psychological manipulation disguised as supervision.</li>
-                        <li>Covert operative sent under false pretense (documented).</li>
-                        <li>Retaliation following a single private text holding a supervisor accountable.</li>
-                        <li>Coerced off-the-record interrogation by park management (recorded).</li>
-                        <li>Pattern of isolation, silencing, and weaponization of identity.</li>
-                        <li>Final dismissal with no documentation, no due process, no cause.</li>
-                    </ul>
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="border-t border-honeyman-300" />
                 </div>
             </div>
-        </section>
 
+            <section id="index-of-breaches">
+                <div class="my-8 text-black">
+                    <div class="w-full border-l-4 border-red-600 bg-red-50 p-6 rounded-md shadow-sm">
+                        <h2 class="uppercase text-lg text-red-900 font-bold tracking-widest m-0 p-0">Index of Breaches</h2>
+                        <div class="text-red-800">These are the central tactics used by Oregon State Parks.</div>
+                        <ul class="mt-4 list-disc list-inside space-y-2 text-red-800">
+                            <li>Psychological manipulation disguised as supervision.</li>
+                            <li>Covert operative sent under false pretense (documented).</li>
+                            <li>Retaliation following a single private text holding a supervisor accountable.</li>
+                            <li>Coerced off-the-record interrogation by park management (recorded).</li>
+                            <li>Pattern of isolation, silencing, and weaponization of identity.</li>
+                            <li>Final dismissal with no documentation, no due process, no cause.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <section id="key-individuals" class="border-t border-gray-300">
-            <div class="my-8 prose prose-neutral max-full mx-auto">
-                <h2 class="text-2xl font-semibold">Key Individuals</h2>
-                <div class="italic text-gray-600">Honeyman State Park</div>
-                <div class="italic text-gray-600">Oregon Parks &amp; Recreation Department (OPRD)</div>
-                <div class="text-gray-700">These are the central figures referenced throughout this archive &mdash;</div>
-                <div class="ml-4 text-gray-700">each played a distinct role in the events that unfolded</div>
-                <div class="ml-4 text-gray-700">at Honeyman State Park and within Oregon State Parks as a whole.</div>
-
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-
-                    <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-semibold text-lg">Allison Watson</h3>
-                        <div class="text-sm text-gray-700">
-                            <div class="font-bold">Volunteer Engagement Coordinator, OPRD</div>
-                            <div>Conducted the post-dismissal call. Framed reflective truth as misconduct. Refused to acknowledge documented abuse, and issued the permanent dismissal without responding to direct concerns.</div>
-                        </div>
-                    </li>
-
-                    <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-semibold text-lg">Ryan Warren</h3>
-                        <div class="text-sm text-gray-700">
-                            <div class="font-bold">Park Manager, Honeyman State Park</div>
-                            <div>The primary enforcer of coercive tactics &mdash; initiated multiple confrontations, including the recorded March 5 meeting and a surprise dismissal phone call. His leadership masked control as professionalism.</div>
-                        </div>
-                    </li>
-
-                    <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-semibold text-lg">Kati Baker</h3>
-                        <div class="text-sm text-gray-700">
-                            <div class="font-bold">Park Supervisor, Honeyman State Park</div>
-                            <div>The architect of early distortion. After a brief exchange about power outage perception, she withdrew, delegating discomfort through silence and seeding a lasting narrative of dismissal.</div>
-                        </div>
-                    </li>
-
-                    <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-semibold text-lg">Logan Bliss</h3>
-                        <div class="text-sm text-gray-700">
-                            <div class="font-bold">Volunteer Supervisor, Honeyman State Park</div>
-                            <div>Absent at key moments, then reappearing to manage perception. Shared personal stories, broke professional boundaries, and later helped justify the escalation through silence and complicity.</div>
-                        </div>
-                    </li>
-
-                </ul>
-
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
             </div>
 
-        </section>
+            <section id="key-individuals">
+                <div class="my-8 prose prose-neutral max-full mx-auto">
+                    <h2 class="text-2xl font-semibold">Key Individuals</h2>
+                    <div class="italic text-gray-600">Honeyman State Park</div>
+                    <div class="italic text-gray-600">Oregon Parks &amp; Recreation Department (OPRD)</div>
+                    <div class="text-gray-700">These are the central figures referenced throughout this archive &mdash;</div>
+                    <div class="ml-4 text-gray-700">each played a distinct role in the events that unfolded</div>
+                    <div class="ml-4 text-gray-700">at Honeyman State Park and within Oregon State Parks as a whole.</div>
 
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
 
-        <section id="the-story-of-honeyman" class="border-t border-gray-300">
-            <div class="my-8 prose prose-neutral max-full mx-auto">
-                <h2 class="text-2xl font-semibold">The Story of Honeyman</h2>
-                <div class="italic text-gray-600">What They Did. What I Saw. What I Carried.</div>
-                <div class="ml-4 italic text-gray-600">&mdash; by Sam White</div>
+                        <li class="bg-white border border-honeyman-200 rounded-lg p-4 shadow-sm">
+                            <h3 class="font-semibold text-lg">Allison Watson</h3>
+                            <div class="text-sm text-gray-700">
+                                <div class="font-bold">Volunteer Engagement Coordinator, OPRD</div>
+                                <div>Conducted the post-dismissal call. Framed reflective truth as misconduct. Refused to acknowledge documented abuse, and issued the permanent dismissal without responding to direct concerns.</div>
+                            </div>
+                        </li>
 
-                <div class="mt-4">I arrived at Honeyman State Park not to fill a shift, but to hold a field &mdash;</div>
-                <div>a sovereign man in alignment, in service, not to authority, but to coherence.</div>
-                <div>I came prepared. I came committed. I came clean.</div>
+                        <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <h3 class="font-semibold text-lg">Ryan Warren</h3>
+                            <div class="text-sm text-gray-700">
+                                <div class="font-bold">Park Manager, Honeyman State Park</div>
+                                <div>The primary enforcer of coercive tactics &mdash; initiated multiple confrontations, including the recorded March 5 meeting and a surprise dismissal phone call. His leadership masked control as professionalism.</div>
+                            </div>
+                        </li>
 
-                <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, integrated &mdash;</div>
-                <div>they didn’t know what to do with me.</div>
+                        <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <h3 class="font-semibold text-lg">Kati Baker</h3>
+                            <div class="text-sm text-gray-700">
+                                <div class="font-bold">Park Supervisor, Honeyman State Park</div>
+                                <div>The architect of early distortion. After a brief exchange about power outage perception, she withdrew, delegating discomfort through silence and seeding a lasting narrative of dismissal.</div>
+                            </div>
+                        </li>
 
-                <h2 class="mt-8 text-xl font-semibold">The First Fracture</h2>
+                        <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <h3 class="font-semibold text-lg">Logan Bliss</h3>
+                            <div class="text-sm text-gray-700">
+                                <div class="font-bold">Volunteer Supervisor, Honeyman State Park</div>
+                                <div>Absent at key moments, then reappearing to manage perception. Shared personal stories, broke professional boundaries, and later helped justify the escalation through silence and complicity.</div>
+                            </div>
+                        </li>
 
-                <div class="mt-4">It began with a power outage.</div>
-                <div>I texted Kati, the park supervisor, early in the morning &mdash;</div>
-                <div class="ml-4">clear, respectful, naming the perception issue with guests.</div>
-                <div>She responded dismissively.</div>
-                <div>I followed up, naming how her tone made me feel.</div>
-                <div class="ml-4">Not as a complaint &mdash; as a human reflection.</div>
+                    </ul>
 
-                <div class="mt-4">That should have been a moment of connection.</div>
+                </div>
 
-                <div class="mt-4">Instead, it marked me.</div>
-                <div>From that day forward, the tone of the park shifted.</div>
-                <div>Ryan, the park manager, came into the Welcome Center &mdash;</div>
-                <div class="ml-4">not with curiosity, but with rehearsed authority.</div>
-                <div>He unearthed first-week errors, presented them like a case file.</div>
-                <div>It wasn’t feedback.</div>
-                <div>It was pretext.</div>
+            </section>
 
-                <div class="mt-4">My supervisor, Logan, vanished &mdash; conveniently unavailable.</div>
-                <div>Leaving me to navigate power dynamics as a brand new volunteer.</div>
-                <div>Then reappeared only once I had navigated the situation on my own &mdash;</div>
-                <div class="ml-4">this would become a pattern.</div>
-
-                <div class="mt-4">I stayed calm. I stayed kind.</div>
-                <div>I asked for a reset.</div>
-                <div>They said yes &mdash;</div>
-                <div class="ml-4">but the narrative was already seeded.</div>
-                <div class="ml-4">And they would return to it again and again,</div>
-                <div class="ml-8">Over the next two months.</div>
-
-                <h2 class="mt-8 text-xl font-semibold">Distortion as Policy</h2>
-
-                <div class="mt-4">I applied for a job at Honeyman &mdash;</div>
-                <div class="ml-4">not out of desperation, but because I liked the park, the rhythm, the work.</div>
-                <div>That application was never acknowledged.</div>
-                <div>Instead, I was met with awkward silence, thin smiles, retreating contact.</div>
-                <div>So I withdrew the application, but even this got met with suspicion.</div>
-
-                <div class="mt-4">So when I shared my truth &mdash;</div>
-                <div class="ml-4">my background, my journey, my sacrifices &mdash;</div>
-                <div class="ml-8">Logan didn’t receive it.</div>
-                <div>Instead, he tried to manage my perception.</div>
-                <div>And would later weaponize it.</div>
-                <div>And then disappear again.</div>
-
-                <div class="mt-4">And then they manufactured a situation &mdash;</div>
-                <div>When I asked to be trained by a certain park ranger, to prevent distortion,</div>
-                <div class="ml-4">Logan said yes, but then didn't follow through.</div>
-                <div class="ml-4">They wanted to see me fail.</div>
-                <div class="ml-4">They wanted me to feel uncomfortable.</div>
-                <div class="ml-4">They wanted me to leave.</div>
-
-                <div class="mt-4">I wrote him the trust email &mdash;</div>
-                <div class="ml-4">clear, principled, accountable.</div>
-                <div>Instead of responding directly,</div>
-                <div>they convened a meeting.</div>
-
-                <h2 class="mt-8 text-xl font-semibold">The Orchestrated Confrontation</h2>
-
-                <div class="mt-4">Ryan and Kati summoned me to the day-use area.</div>
-                <div>A picnic table, a public setting, the illusion of calm.</div>
-
-                <div class="mt-4">What followed was a scripted performance of coercion.</div>
-                <div>For over an hour...</div>
-                <div class="ml-4">They framed my emails as threats.</div>
-                <div class="ml-4">They pathologized my clarity as &quot;unprofessional.&quot;</div>
-                <div class="ml-4">They refused to offer specifics, yet insisted I was a problem.</div>
-                <div class="ml-4">They demanded I extend positive intent &mdash;</div>
-                <div class="ml-8">even as they openly admitted &mdash;</div>
-                <div class="ml-12">they'd never once offered me the benefit of the doubt.</div>
-
-                <div class="mt-4">Ryan told me I’d need to &quot;chew glass&quot; &mdash;</div>
-                <div>and framed it as leadership wisdom.</div>
-                <div>But what he meant was submit.</div>
-
-                <div class="mt-4">I recorded the meeting &mdash;</div>
-                <div class="ml-4">because I already knew what was coming.</div>
-
-                <h2 class="mt-8 text-xl font-semibold">The Final Move</h2>
-
-                <div class="mt-4">Weeks passed. I kept working. Professionally. Precisely.</div>
-                <div>No infractions. No escalation.</div>
-
-                <div class="mt-4">But they couldn’t leave me intact.</div>
-
-                <div class="mt-4">Ryan called, days before I was scheduled to leave.</div>
-                <div>He wanted another meeting.</div>
-                <div>When I asked why, he said I was &quot;still&quot; being a problem.</div>
-
-                <div class="mt-4">Still.</div>
-
-                <div class="mt-4">Not because of my actions &mdash; but because of my presence.</div>
-                <div>Because I had not fractured.</div>
-
-                <div class="mt-4">I named it for what it was &mdash;</div>
-                <div>I told him he was a bully.</div>
-                <div>and in that moment, the performance unraveled.</div>
-
-                <div class="mt-4">He came to my RV.</div>
-                <div>Dismissed me without paperwork.</div>
-                <div>Accepted my keys with a reasonable tone,</div>
-                <div>masking deliberate erasure as protocol.</div>
-
-                <div class="mt-4">That was their final maneuver:</div>
-                <div>Ensure I did not leave on my own terms.</div>
-                <div>Ensure I carried a mark.</div>
-                <div>Ensure the narrative stayed theirs.</div>
-
-                <div class="mt-4">But I had already built the archive.</div>
-
-                <h2 class="mt-8 text-xl font-semibold">What They Did</h2>
-
-                <div class="mt-4">They misread my coherence as confrontation.</div>
-                <div>They punished integrity because it disrupted their comfort.</div>
-                <div>They used silence as strategy.</div>
-                <div>Tone as weapon.</div>
-                <div>Policy as shield.</div>
-
-                <div class="mt-4">They created an environment where depth was reframed as danger.</div>
-                <div>Where presence was unwelcome unless it could be controlled.</div>
-                <div>Where authenticity was pathologized &mdash; and then expelled.</div>
-
-                <div class="mt-4">This was not incompetence.</div>
-                <div>This was not miscommunication.</div>
-                <div>This was institutional harm, >deliberately executed by people who chose</div>
-                <div class="ml-4">performance over presence,</div>
-                <div class="ml-4">control over contact,</div>
-                <div class="ml-4">narrative over truth.</div>
-
-                <h2 class="mt-8 text-xl font-semibold">What I Did</h2>
-
-                <div class="mt-4">I held my shape.</div>
-                <div>I named the distortions.</div>
-                <div>I documented everything.</div>
-                <div>I built this record.</div>
-
-                <div class="mt-4">And now, it stands &mdash;</div>
-                <div class="ml-4">not as retribution,</div>
-                <div class="ml-8">but as mirror.</div>
-
-                <div class="mt-4">To anyone reading this &mdash; inside or outside the institution:</div>
-
-                <div class="mt-4">This is what it looks like when coherence survives collapse.</div>
-                <div>This is what it sounds like when the signal outlasts the noise.</div>
-
-                <div class="mt-4">I am still here.</div>
-                <div>And the archive speaks.</div>
-
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="border-t border-honeyman-300" />
+                </div>
             </div>
 
-        </section>
+            <section id="the-story-of-honeyman">
+                <div class="my-8 prose prose-neutral max-full mx-auto">
+                    <h2 class="text-2xl font-semibold">The Story of Honeyman</h2>
+                    <div class="italic text-gray-600">What They Did. What I Saw. What I Carried.</div>
+                    <div class="ml-4 italic text-gray-600">&mdash; by Sam White</div>
+
+                    <div class="mt-4">I arrived at Honeyman State Park not to fill a shift, but to hold a field &mdash;</div>
+                    <div>a sovereign man in alignment, in service, not to authority, but to coherence.</div>
+                    <div>I came prepared. I came committed. I came clean.</div>
+
+                    <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, integrated &mdash;</div>
+                    <div>they didn’t know what to do with me.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">The First Fracture</h2>
+
+                    <div class="mt-4">It began with a power outage.</div>
+                    <div>I texted Kati, the park supervisor, early in the morning &mdash;</div>
+                    <div class="ml-4">clear, respectful, naming the perception issue with guests.</div>
+                    <div>She responded dismissively.</div>
+                    <div>I followed up, naming how her tone made me feel.</div>
+                    <div class="ml-4">Not as a complaint &mdash; as a human reflection.</div>
+
+                    <div class="mt-4">That should have been a moment of connection.</div>
+
+                    <div class="mt-4">Instead, it marked me.</div>
+                    <div>From that day forward, the tone of the park shifted.</div>
+                    <div>Ryan, the park manager, came into the Welcome Center &mdash;</div>
+                    <div class="ml-4">not with curiosity, but with rehearsed authority.</div>
+                    <div>He unearthed first-week errors, presented them like a case file.</div>
+                    <div>It wasn’t feedback.</div>
+                    <div>It was pretext.</div>
+
+                    <div class="mt-4">My supervisor, Logan, vanished &mdash; conveniently unavailable.</div>
+                    <div>Leaving me to navigate power dynamics as a brand new volunteer.</div>
+                    <div>Then reappeared only once I had navigated the situation on my own &mdash;</div>
+                    <div class="ml-4">this would become a pattern.</div>
+
+                    <div class="mt-4">I stayed calm. I stayed kind.</div>
+                    <div>I asked for a reset.</div>
+                    <div>They said yes &mdash;</div>
+                    <div class="ml-4">but the narrative was already seeded.</div>
+                    <div class="ml-4">And they would return to it again and again,</div>
+                    <div class="ml-8">Over the next two months.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">Distortion as Policy</h2>
+
+                    <div class="mt-4">I applied for a job at Honeyman &mdash;</div>
+                    <div class="ml-4">not out of desperation, but because I liked the park, the rhythm, the work.</div>
+                    <div>That application was never acknowledged.</div>
+                    <div>Instead, I was met with awkward silence, thin smiles, retreating contact.</div>
+                    <div>So I withdrew the application, but even this got met with suspicion.</div>
+
+                    <div class="mt-4">So when I shared my truth &mdash;</div>
+                    <div class="ml-4">my background, my journey, my sacrifices &mdash;</div>
+                    <div class="ml-8">Logan didn’t receive it.</div>
+                    <div>Instead, he tried to manage my perception.</div>
+                    <div>And would later weaponize it.</div>
+                    <div>And then disappear again.</div>
+
+                    <div class="mt-4">And then they manufactured a situation &mdash;</div>
+                    <div>When I asked to be trained by a certain park ranger, to prevent distortion,</div>
+                    <div class="ml-4">Logan said yes, but then didn't follow through.</div>
+                    <div class="ml-4">They wanted to see me fail.</div>
+                    <div class="ml-4">They wanted me to feel uncomfortable.</div>
+                    <div class="ml-4">They wanted me to leave.</div>
+
+                    <div class="mt-4">I wrote him the trust email &mdash;</div>
+                    <div class="ml-4">clear, principled, accountable.</div>
+                    <div>Instead of responding directly,</div>
+                    <div>they convened a meeting.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">The Orchestrated Confrontation</h2>
+
+                    <div class="mt-4">Ryan and Kati summoned me to the day-use area.</div>
+                    <div>A picnic table, a public setting, the illusion of calm.</div>
+
+                    <div class="mt-4">What followed was a scripted performance of coercion.</div>
+                    <div>For over an hour...</div>
+                    <div class="ml-4">They framed my emails as threats.</div>
+                    <div class="ml-4">They pathologized my clarity as &quot;unprofessional.&quot;</div>
+                    <div class="ml-4">They refused to offer specifics, yet insisted I was a problem.</div>
+                    <div class="ml-4">They demanded I extend positive intent &mdash;</div>
+                    <div class="ml-8">even as they openly admitted &mdash;</div>
+                    <div class="ml-12">they'd never once offered me the benefit of the doubt.</div>
+
+                    <div class="mt-4">Ryan told me I’d need to &quot;chew glass&quot; &mdash;</div>
+                    <div>and framed it as leadership wisdom.</div>
+                    <div>But what he meant was submit.</div>
+
+                    <div class="mt-4">I recorded the meeting &mdash;</div>
+                    <div class="ml-4">because I already knew what was coming.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">The Final Move</h2>
+
+                    <div class="mt-4">Weeks passed. I kept working. Professionally. Precisely.</div>
+                    <div>No infractions. No escalation.</div>
+
+                    <div class="mt-4">But they couldn’t leave me intact.</div>
+
+                    <div class="mt-4">Ryan called, days before I was scheduled to leave.</div>
+                    <div>He wanted another meeting.</div>
+                    <div>When I asked why, he said I was &quot;still&quot; being a problem.</div>
+
+                    <div class="mt-4">Still.</div>
+
+                    <div class="mt-4">Not because of my actions &mdash; but because of my presence.</div>
+                    <div>Because I had not fractured.</div>
+
+                    <div class="mt-4">I named it for what it was &mdash;</div>
+                    <div>I told him he was a bully.</div>
+                    <div>and in that moment, the performance unraveled.</div>
+
+                    <div class="mt-4">He came to my RV.</div>
+                    <div>Dismissed me without paperwork.</div>
+                    <div>Accepted my keys with a reasonable tone,</div>
+                    <div>masking deliberate erasure as protocol.</div>
+
+                    <div class="mt-4">That was their final maneuver:</div>
+                    <div>Ensure I did not leave on my own terms.</div>
+                    <div>Ensure I carried a mark.</div>
+                    <div>Ensure the narrative stayed theirs.</div>
+
+                    <div class="mt-4">But I had already built the archive.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">What They Did</h2>
+
+                    <div class="mt-4">They misread my coherence as confrontation.</div>
+                    <div>They punished integrity because it disrupted their comfort.</div>
+                    <div>They used silence as strategy.</div>
+                    <div>Tone as weapon.</div>
+                    <div>Policy as shield.</div>
+
+                    <div class="mt-4">They created an environment where depth was reframed as danger.</div>
+                    <div>Where presence was unwelcome unless it could be controlled.</div>
+                    <div>Where authenticity was pathologized &mdash; and then expelled.</div>
+
+                    <div class="mt-4">This was not incompetence.</div>
+                    <div>This was not miscommunication.</div>
+                    <div>This was institutional harm, >deliberately executed by people who chose</div>
+                    <div class="ml-4">performance over presence,</div>
+                    <div class="ml-4">control over contact,</div>
+                    <div class="ml-4">narrative over truth.</div>
+
+                    <h2 class="mt-8 text-xl font-semibold">What I Did</h2>
+
+                    <div class="mt-4">I held my shape.</div>
+                    <div>I named the distortions.</div>
+                    <div>I documented everything.</div>
+                    <div>I built this record.</div>
+
+                    <div class="mt-4">And now, it stands &mdash;</div>
+                    <div class="ml-4">not as retribution,</div>
+                    <div class="ml-8">but as mirror.</div>
+
+                    <div class="mt-4">To anyone reading this &mdash; inside or outside the institution:</div>
+
+                    <div class="mt-4">This is what it looks like when coherence survives collapse.</div>
+                    <div>This is what it sounds like when the signal outlasts the noise.</div>
+
+                    <div class="mt-4">I am still here.</div>
+                    <div>And the archive speaks.</div>
+
+                </div>
+
+            </section>
 
 
         <section id="system-in-panic" class="border-t border-gray-300">

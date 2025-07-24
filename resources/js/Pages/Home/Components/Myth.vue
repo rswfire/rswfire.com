@@ -1,9 +1,9 @@
 <template>
 
-    <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
+    <section class="h-full flex flex-col gap-4 rounded-xl bg-myth-50 border border-myth-300 p-6 shadow-md">
 
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="ShieldCheck" color="text-yellow-400" class="flex-shrink-0" />
+            <Icon name="ShieldCheck" color="text-myth-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 MYTH
             </h2>
@@ -29,7 +29,7 @@
             <div class="flex justify-end">
                 <a
                     href="/myth"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-yellow-400 border-yellow-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-myth-400 border-myth-200 shadow-md"
                 >
                     Myth →
                 </a>

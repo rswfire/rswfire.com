@@ -1,6 +1,6 @@
 <template>
 
-    <Content>
+    <Content theme="rswfire">
 
         <Hero
             title="ABOUT RSWFIRE.COM"

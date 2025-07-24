@@ -2,6 +2,8 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import lineClamp from '@tailwindcss/line-clamp';
 
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -10,15 +12,28 @@ export default {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
     ],
-
     safelist: [
-        'bg-amber-50', 'border-amber-200', 'hover:bg-amber-100',
-        'bg-emerald-50', 'border-emerald-200', 'hover:bg-emerald-100',
-        'text-amber-400', 'text-emerald-400'
+        {
+            pattern: /bg-(signal|transmission|fieldcraft|myth|honeyman|lexicon)-[0-9]{3}/,
+        },
+        {
+            pattern: /border-(signal|transmission|fieldcraft|myth|honeyman|lexicon)-[0-9]{3}/,
+        },
     ],
-
     theme: {
         extend: {
+            colors: {
+                codex: colors.amber,
+                companion: colors.gray,
+                fieldcraft: colors.indigo,
+                honeyman: colors.emerald,
+                lexicon: colors.orange,
+                myth: colors.amber,
+                rswfire: colors.red,
+                signal: colors.sky,
+                tech: colors.purple,
+                transmission: colors.rose,
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

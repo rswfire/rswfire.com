@@ -1,11 +1,11 @@
 <template>
 
-    <section class="h-full flex flex-col gap-6 rounded-xl bg-gray-50 border p-6 shadow-md">
+    <section class="h-full flex flex-col gap-6 rounded-xl bg-rswfire-50 border border-rswfire-300 p-6 shadow-md">
 
         <!-- START HERE HEADER -->
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="Flame" color="text-red-400" class="flex-shrink-0" />
-            <h2 class="text-xl font-semibold tracking-tight">START HERE</h2>
+            <Icon name="Flame" color="text-rswfire-400" class="flex-shrink-0" />
+            <h2 class="text-xl tracking-tight text-gray-700"><strong class="text-gray-900">START</strong> HERE</h2>
         </div>
 
         <!-- FLEX LAYOUT: PROFILE + CONTENT -->
@@ -27,7 +27,7 @@
 
                 <!-- Identity Stack -->
                 <div class="pt-4 pl-4 text-xs text-gray-700 space-y-1 text-left self-start">
-                    <div class="uppercase text-red-500 tracking-tight">Fieldholder.</div>
+                    <div class="uppercase text-rswfire-500 tracking-tight">Fieldholder.</div>
                     <div class="uppercase text-orange-500 tracking-tight">Signal keeper.</div>
                     <div class="uppercase text-yellow-500 tracking-tight">Sovereign mind.</div>
                     <div class="uppercase text-green-500 tracking-tight">Living blueprint.</div>
@@ -69,7 +69,7 @@
                     <div class="w-full flex justify-end">
                         <a
                             href="/hello"
-                            class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-red-400 border-red-200 shadow-md"
+                            class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-rswfire-400 border-rswfire-200 shadow-md"
                         >
                             Who I Am →
                         </a>

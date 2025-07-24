@@ -1,5 +1,5 @@
 <template>
-    <Content>
+    <Content theme="transmission">
 
         <Hero
             :title="`${tag}`"
@@ -11,13 +11,12 @@
 
             <div class="prose prose-lg prose-neutral max-w-none">
                 <div><strong>Nothing here will wait for you to catch up</strong>.</div>
-                <div>There is no summary to soften the blow.</div>
+                <div>There is no summary to soften the entry.</div>
                 <div>There is no title that reveals what it <em>means</em>.</div>
                 <div>These transmissions were never meant to persuade.</div>
-                <div>They exist because they had to.</div>
-
-                <div class="pt-4">If you’re looking for polish, try somewhere else.</div>
-                <div>If you’re looking for real, stay.</div>
+                <div>They weren’t made <em>for</em> you.</div>
+                <div>And still &mdash;</div>
+                <div class="ml-4">they are offered.</div>
 
                 <div
                     class="py-4 cursor-pointer font-medium text-sm text-gray-600 hover:text-black transition inline-flex items-center gap-2 select-none"

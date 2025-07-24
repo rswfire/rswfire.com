@@ -274,6 +274,46 @@ Route::get("/codex/catalysts/substances", function () {
     ]);
 });
 
+Route::get("/companion", function () {
+    return Inertia::render("Companion", [
+        "metaTitle" => "Field Companion | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/contact", function () {
+    return Inertia::render("Contact", [
+        "metaTitle" => "Contact Me | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/contribute", function () {
+    return Inertia::render("Contribute", [
+        "metaTitle" => "Contribute to the Field | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/identity", function () {
+    return Inertia::render("Identity", [
+        "metaTitle" => "Identity | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/slide", function () {
+    return Inertia::render("Slide", [
+        "metaTitle" => "Slide | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/fieldcraft", function () {
     $converter = new CommonMarkConverter();
 

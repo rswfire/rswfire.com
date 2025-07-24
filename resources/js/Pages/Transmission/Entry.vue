@@ -1,6 +1,6 @@
 <template>
 
-    <Content>
+    <Content theme="transmission">
         <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
             <div class="bg-gray-100 px-4 py-2 font-semibold">
                 <div class="flex justify-between text-md">

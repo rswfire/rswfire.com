@@ -1,8 +1,8 @@
 <template>
-    <section class="h-full flex flex-col rounded-xl bg-amber-50 border border-amber-300 p-6 shadow-md space-y-4">
+    <section class="h-full flex flex-col rounded-xl bg-codex-50 border border-codex-300 p-6 shadow-md space-y-4">
 
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="SquareCode" color="text-amber-400" class="flex-shrink-0" />
+            <Icon name="SquareCode" color="text-codex-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">CODEX</h2>
         </div>
 
@@ -17,7 +17,7 @@
         <div class="text-sm space-y-4">
             <!-- FIELD ANCHORS -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/anchors" class="hover:underline">Field Anchors</Link></div>
+                <div class="font-bold text-codex-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/anchors" class="hover:underline">Field Anchors</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/anchors/sovereignty" class="uppercase text-xs hover:underline">Sovereignty</Link></li>
                     <li>→ <Link href="/codex/anchors/presence" class="uppercase text-xs hover:underline">Presence</Link></li>
@@ -30,7 +30,7 @@
 
             <!-- SIGNAL ARCHITECTURE -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/architecture" class="hover:underline">Signal Architecture</Link></div>
+                <div class="font-bold text-codex-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/architecture" class="hover:underline">Signal Architecture</Link></div>
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/architecture/dialectical-reasoning" class="uppercase text-xs hover:underline">Dialectical Reasoning</Link></li>
                     <li>→ <Link href="/codex/architecture/non-dualistic-orientation" class="uppercase text-xs hover:underline">Non-Dualistic Orientation</Link></li>
@@ -45,7 +45,7 @@
 
             <!-- FIELD CATALYSTS -->
             <div>
-                <div class="font-bold text-amber-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/catalysts" class="hover:underline">Field Catalysts</Link></div>
+                <div class="font-bold text-codex-600 uppercase tracking-wider text-xs mb-2"><Link href="/codex/catalysts" class="hover:underline">Field Catalysts</Link></div>
                 <!--
                 <ul class="space-y-1 text-gray-800 pl-2">
                     <li>→ <Link href="/codex/catalysts/music" class="uppercase text-xs hover:underline">Music</Link><div class="uppercase text-xs md:text-md text-gray-400">Musical Alignment</div></li>
@@ -65,7 +65,7 @@
             <div class="w-full flex justify-end">
                 <Link
                     href="/codex"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-amber-400 border-amber-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-codex-400 border-codex-200 shadow-md"
                 >
                     Codex →
                 </Link>

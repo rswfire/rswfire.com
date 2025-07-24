@@ -1,6 +1,6 @@
 <template>
     <div v-if="authUser">
-    <Content>
+    <Content theme="signal">
 
         <Hero
             :title="conversation?.conversation_title || 'Untitled Conversation'"

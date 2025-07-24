@@ -4,12 +4,12 @@
             <h1 :class="['text-4xl font-bold tracking-tight uppercase', titleAlignClass]">
                 {{ title }}
             </h1>
-            <p v-if="subtitle" :class="['mt-2 text-lg uppercase', titleAlignClass]">
+            <div v-if="subtitle" :class="['mt-2 text-lg uppercase', titleAlignClass]">
                 {{ subtitle }}
-            </p>
-            <p v-if="meta" :class="['mt-2 text-xs text-gray-500', titleAlignClass]">
+            </div>
+            <div v-if="meta" :class="['mt-2 text-xs text-gray-500', titleAlignClass]">
                 {{ meta }}
-            </p>
+            </div>
         </div>
     </section>
 </template>

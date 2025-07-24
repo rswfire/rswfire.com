@@ -44,77 +44,104 @@
 
 
             </div>
+        </div>
 
+        <div class="max-w-6xl mx-auto flex items-center justify-between mb-2">
 
+            <div class="flex-1 overflow-hidden whitespace-nowrap py-1">
+                <div class="flex justify-between items-center space-x-2 animate-marquee text-xs text-gray-600 font-medium leading-tight">
 
+                    <span class="mr-8">🔥 In a forest pitch dark, glowed the tiniest spark. It burst into a flame.</span>
 
-
-
-
-
-
-            <!-- Auth menu -->
-            <div v-if="authUser" class="relative" @mouseleave="showMenu = false">
-                <div
-                    class="relative inline-block text-left"
-                    @mouseenter="showMenu = true"
-                    @mouseleave="showMenu = false"
-                >
-                    <button
-                        class="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none"
-                    >
-                        <span>{{ authUser.name }}</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <transition name="fade">
-                        <div
-                            v-if="showMenu"
-                            class="absolute right-0 top-full w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10"
-                        >
-                            <a href="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                            <form @submit.prevent="logout">
-                                <button
-                                    type="submit"
-                                    class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                >Log Out</button>
-                            </form>
-                        </div>
-                    </transition>
                 </div>
             </div>
 
+            <div class="max-w-6xl mx-auto flex justify-between items-center mb-2">
+
+                <div class="ml-4 flex-shrink-0">
+                <!-- Auth menu -->
+                <div v-if="authUser" class="relative" @mouseleave="showMenu = false">
+                    <div
+                        class="relative inline-block text-left"
+                        @mouseenter="showMenu = true"
+                        @mouseleave="showMenu = false"
+                    >
+                        <button
+                            class="flex items-center space-x-2 text-xs font-medium text-gray-700 hover:text-gray-900 focus:outline-none"
+                        >
+                            <span>{{ authUser.name }}</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <transition name="fade">
+                            <div
+                                v-if="showMenu"
+                                class="absolute right-0 top-full w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10"
+                            >
+                                <a href="/profile" class="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Profile</a>
+                                <form @submit.prevent="logout">
+                                    <button
+                                        type="submit"
+                                        class="w-full text-left px-4 py-2 text-xs text-gray-700 hover:bg-gray-100"
+                                    >Log Out</button>
+                                </form>
+                            </div>
+                        </transition>
+                    </div>
+                </div>
+
+
             <div v-else>
                 <div class="flex items-center space-x-2">
-                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
-                        <Icon name="MessageCircle" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    <Link href="/about" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="Layers" color="text-black" class="w-3 h-3 flex-shrink-0" />
                     </Link>
-                    <Link href="/about" class="text-sm font-medium text-gray-700 hover:underline">
+                    <Link href="/about" class="text-xs font-medium text-gray-700 hover:underline">
                         About
                     </Link>
 
                     <div class="space-x-4">&nbsp;</div>
-                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
-                        <Icon name="LogIn" color="text-black" class="w-4 h-4 flex-shrink-0" />
+
+                    <Link href="/contact" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="MessageSquareDot" color="text-black" class="w-3 h-3 flex-shrink-0" />
                     </Link>
-                    <Link href="/login" class="text-sm font-medium text-gray-700 hover:underline">
+                    <Link href="/contact" class="text-xs font-medium text-gray-700 hover:underline">
+                        Contact
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
+
+                    <Link href="/contribute" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="HandCoins" color="text-black" class="w-3 h-3 flex-shrink-0" />
+                    </Link>
+                    <Link href="/contribute" class="text-xs font-medium text-gray-700 hover:underline">
+                        Contribute
+                    </Link>
+
+                    <div class="space-x-4">&nbsp;</div>
+                    <Link href="/login" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="Key" color="text-black" class="w-3 h-3 flex-shrink-0" />
+                    </Link>
+                    <Link href="/login" class="text-xs font-medium text-gray-700 hover:underline">
                         Sign In
                     </Link>
 
                     <div class="space-x-4">&nbsp;</div>
 
-                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
-                        <Icon name="UserPlus" color="text-black" class="w-4 h-4 flex-shrink-0" />
+                    <Link href="/register" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="BookKey" color="text-black" class="w-3 h-3 flex-shrink-0" />
                     </Link>
-                    <Link href="/register" class="text-sm font-medium text-gray-700 hover:underline">
+                    <Link href="/register" class="text-xs font-medium text-gray-700 hover:underline">
                         Register
                     </Link>
 
                 </div>
-
             </div>
+            </div>
+            </div>
+
         </div>
     </header>
 </template>
@@ -166,4 +193,16 @@
         overflow: hidden;
         transform: translateX(-8px);
     }
+
+    @keyframes marquee {
+        0% { transform: translateX(100%) }
+        100% { transform: translateX(-100%) }
+    }
+
+    .animate-marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 20s linear infinite;
+    }
+
 </style>

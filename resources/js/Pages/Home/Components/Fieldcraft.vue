@@ -1,9 +1,8 @@
 <template>
 
-    <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
-
+    <section class="h-full flex flex-col gap-4 rounded-xl bg-fieldcraft-50 border border-fieldcraft-300 p-6 shadow-md">
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="Map" color="text-green-500" class="flex-shrink-0" />
+            <Icon name="Map" color="text-fieldcraft-500" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 FIELDCRAFT RECORDS
             </h2>
@@ -40,7 +39,7 @@
             <div class="flex justify-end">
                 <a
                     href="/fieldcraft"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-green-400 border-green-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-fieldcraft-400 border-fieldcraft-200 shadow-md"
                 >
                     Fieldcraft →
                 </a>

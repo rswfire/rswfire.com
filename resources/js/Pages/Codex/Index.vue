@@ -1,6 +1,6 @@
 <template>
 
-    <Content>
+    <Content theme="codex">
 
         <Hero
             title="CODEX"

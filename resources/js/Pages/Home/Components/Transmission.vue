@@ -1,8 +1,8 @@
 <template>
-    <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
+    <section class="h-full flex flex-col gap-4 rounded-xl bg-transmission-50 border border-transmission-300 p-6 shadow-md">
 
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="SatelliteDish" color="text-pink-400" class="flex-shrink-0" />
+            <Icon name="SatelliteDish" color="text-transmission-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 TRANSMISSION VAULT
             </h2>
@@ -39,7 +39,7 @@
             <div class="flex justify-end">
                 <a
                     href="/transmission"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-pink-400 border-pink-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-transmission-400 border-transmission-200 shadow-md"
                 >
                     Transmission →
                 </a>

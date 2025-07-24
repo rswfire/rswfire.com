@@ -3,7 +3,7 @@
 namespace App\Models\Library;
 
 use App\BaseModel;
-use App\Models\Library\Transmission;
+use App\Models\Transmission;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 

@@ -1,8 +1,8 @@
 <template>
-    <section class="h-full flex flex-col gap-4 rounded-xl bg-white border p-6 shadow-md">
+    <section class="h-full flex flex-col gap-4 rounded-xl bg-signal-50 border border-signal-300 p-6 shadow-md">
 
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="Activity" color="text-sky-400" class="flex-shrink-0" />
+            <Icon name="Activity" color="text-signal-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 SIGNAL ARCHIVE
             </h2>
@@ -39,7 +39,7 @@
             <div class="flex justify-end">
                 <a
                     href="/signal"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-sky-400 border-sky-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-signal-400 border-signal-200 shadow-md"
                 >
                     Signal →
                 </a>

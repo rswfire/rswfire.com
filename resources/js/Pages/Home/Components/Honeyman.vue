@@ -1,8 +1,8 @@
 <template>
 
-    <section class="h-full flex flex-col gap-4 rounded-xl bg-green-50 border border-green-300 p-6 shadow-md">
+    <section class="h-full flex flex-col gap-4 rounded-xl bg-honeyman-50 border border-honeyman-300 p-6 shadow-md">
         <div class="flex items-center space-x-2 pb-4 border-b">
-            <Icon name="TreeDeciduous" color="text-emerald-400" class="flex-shrink-0" />
+            <Icon name="TreeDeciduous" color="text-honeyman-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 HONEYMAN STATE PARK, OREGON STATE PARKS (OPRD)
             </h2>
@@ -24,7 +24,7 @@
             <div class="flex justify-end">
                 <a
                     href="/honeyman"
-                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-emerald-400 border-emerald-200 shadow-md"
+                    class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-honeyman-400 border-honeyman-200 shadow-md"
                 >
                     Honeyman →
                 </a>
