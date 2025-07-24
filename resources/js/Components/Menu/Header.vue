@@ -46,20 +46,18 @@
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto flex items-center justify-between mb-2">
+        <div class="max-w-6xl mx-auto flex">
 
-            <div class="flex-1 overflow-hidden whitespace-nowrap py-1">
-                <div class="flex justify-between items-center space-x-2 animate-marquee text-xs text-gray-600 font-medium leading-tight">
-
+            <div class="flex-1 justify-between overflow-hidden whitespace-nowrap ml-4">
+                <div class="flex space-x-2 animate-marquee text-xs text-black font-medium leading-tight h-4">
                     <span class="mr-8">🔥 In a forest pitch dark, glowed the tiniest spark. It burst into a flame.</span>
-
                 </div>
             </div>
 
-            <div class="max-w-6xl mx-auto flex justify-between items-center mb-2">
+            <div class="max-w-6xl mx-auto flex justify-between items-center mb-2 mr-4">
 
                 <div class="ml-4 flex-shrink-0">
-                <!-- Auth menu -->
+
                 <div v-if="authUser" class="relative" @mouseleave="showMenu = false">
                     <div
                         class="relative inline-block text-left"

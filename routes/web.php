@@ -292,7 +292,7 @@ Route::get("/contact", function () {
 
 Route::get("/contribute", function () {
     return Inertia::render("Contribute", [
-        "metaTitle" => "Contribute to the Field | ".request()->getHost(),
+        "metaTitle" => "Contributions | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

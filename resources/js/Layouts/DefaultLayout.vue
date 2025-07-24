@@ -41,7 +41,7 @@
     </div>
 
     <div class="hidden md:block">
-        <div class="pt-[100px] mx-auto max-w-6xl">
+        <div class="pt-[125px] mx-auto max-w-6xl">
             <slot />
         </div>
     </div>
