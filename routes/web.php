@@ -298,6 +298,14 @@ Route::get("/contribute", function () {
     ]);
 });
 
+Route::get("/updates", function () {
+    return Inertia::render("Updates", [
+        "metaTitle" => "Updates | ".request()->getHost(),
+        "metaDescription" => "",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/identity", function () {
     return Inertia::render("Identity", [
         "metaTitle" => "Identity | ".request()->getHost(),

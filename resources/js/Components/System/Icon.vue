@@ -24,6 +24,7 @@ import {
     ShieldCheck,
     SquareCode,
     SquareLibrary,
+    Squirrel,
     TreeDeciduous,
     UserPlus
 } from "lucide-vue-next"
@@ -45,6 +46,7 @@ const iconMap = {
     ShieldCheck,
     SquareCode,
     SquareLibrary,
+    Squirrel,
     TreeDeciduous,
     UserPlus
 }

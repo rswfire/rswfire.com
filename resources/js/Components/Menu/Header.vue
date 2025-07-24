@@ -135,6 +135,15 @@
                         Register
                     </Link>
 
+                    <div class="space-x-4">&nbsp;</div>
+
+                    <Link href="/updates" class="text-xs font-medium text-gray-700 hover:underline">
+                        <Icon name="Squirrel" color="text-black" class="w-3 h-3 flex-shrink-0" />
+                    </Link>
+                    <Link href="/updates" class="text-xs font-medium text-gray-700 hover:underline">
+                        Updates
+                    </Link>
+
                 </div>
             </div>
             </div>
