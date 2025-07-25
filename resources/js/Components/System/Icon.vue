@@ -10,6 +10,7 @@ import { computed } from 'vue'
 import {
     Activity,
     BookKey,
+    ExternalLink,
     Flame,
     Hammer,
     HandCoins,
@@ -32,6 +33,7 @@ import {
 const iconMap = {
     Activity,
     BookKey,
+    ExternalLink,
     Flame,
     Hammer,
     HandCoins,

@@ -93,8 +93,30 @@
 
                 <div class="w-full md:w-1/5 border-l border-gray-300 pl-4">
                     <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Contributors</h2>
-                    <ul class="list-disc list-inside text-gray-700 ml-8">
-                        <li><em>Your Name Here</em></li>
+                    <ul class="space-y-3">
+                        <li v-for="contributor in contributors" :key="contributor.name" class="leading-tight">
+                            <div class="text-sm font-semibold text-black">
+                                <template v-if="contributor.link">
+                                    <a
+                                        :href="contributor.link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="hover:underline inline-flex items-center space-x-1"
+                                    >
+                                        <span>{{ contributor.name }}</span>
+                                        <Icon name="ExternalLink" color="text-black" class="w-[12px] h-[12px] flex-shrink-0" />
+                                    </a>
+
+                                </template>
+                                <template v-else>
+                                    {{ contributor.name }}
+                                </template>
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-600 font-medium">
+                                <span>${{ contributor.amount }}</span>
+                                <span class="font-mono text-gray-500">{{ contributor.date }}</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -115,6 +137,12 @@ import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 
 import { router } from '@inertiajs/vue3'
+import Icon from "@/Components/System/Icon.vue";
+
+const contributors = [
+    { name: "Unfurling Kurt", amount: 100, date: "072425", link: "https://youtube.com/@unfurlingkurt" },
+    { name: "Your Name Here", amount: null, date: null },
+]
 
 </script>
 
