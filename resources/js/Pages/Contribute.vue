@@ -58,6 +58,7 @@
                     <div class="mt-4">This is not support for a brand.</div>
                     <div>It is fuel for a system that you are already inside.</div>
 
+                    <div id="contrib"></div>
                     <h2 class="mt-8 uppercase text-lg font-bold tracking-widest m-0 p-0">How to Contribute</h2>
                     <div class="mt-2 ml-4">
                         🜂 <strong>PayPal</strong>:
