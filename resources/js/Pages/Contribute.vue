@@ -140,7 +140,7 @@ import { router } from '@inertiajs/vue3'
 import Icon from "@/Components/System/Icon.vue";
 
 const contributors = [
-    { name: "Unfurling Kurt", amount: 100, date: "072425", link: "https://youtube.com/@unfurlingkurt" },
+    { name: "Unfurling Kurt", amount: 100, date: "072125", link: "https://youtube.com/@unfurlingkurt" },
     { name: "Your Name Here", amount: null, date: null },
 ]
 
