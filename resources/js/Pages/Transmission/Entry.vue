@@ -66,12 +66,166 @@
                 </div>
             </div>
 
-            <div class="p-4" v-if="reflection">
-                <!-- unchanged base data tab logic remains -->
+            <div class="p-4" v-if="reflection.narrative">
+                <div class="p-4">
+                    <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Base Data</h2>
+                    <div class="mt-4 flex border-b border-gray-300 space-x-6 text-sm">
+                        <button
+                            v-for="tab in tabs"
+                            :key="tab"
+                            @click="active = tab"
+                            :class="[
+                                  'pb-2',
+                                  active === tab ? 'border-black border-b-2 font-semibold text-black' : 'text-gray-400'
+                                ]"
+                        >
+                            {{ tab }}
+                        </button>
+                    </div>
+
+                    <div v-if="active === 'Surface'" class="mt-4 space-y-4 text-sm text-gray-800 leading-relaxed">
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Mentioned Entities</h4>
+                            <div class="text-xs italic mb-1">Entities will be browsable after infrastructural upgrades.</div>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    v-for="entity in toListArray(reflection.surface.reflection_content.mentioned_entities)"
+                                    :key="entity"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                  {{ entity }}
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Visible Actions</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+                                <li v-for="action in toListArray(reflection.surface.reflection_content.visible_actions)" :key="action">
+                                    {{ action }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Surface Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in reflection.surface.reflection_content.tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div v-else-if="active === 'Ontological'" class="mt-4 space-y-2 text-sm text-gray-800 leading-relaxed">
+                        <div>{{ reflection.narrative.reflection_content.summary }}</div>
+
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Symbolic Elements</h4>
+                            <div>
+                                <ul class="flex flex-wrap gap-2">
+                                    <li
+                                        v-for="tag in reflection.narrative.reflection_content.symbolic_elements || []"
+                                        :key="tag"
+                                        class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                    >
+                                        {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Ontological Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in reflection.narrative.reflection_content.tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Notes</h4>
+                            <div>{{ reflection.narrative.reflection_content.notes }}</div>
+                        </div>
+
+                    </div>
+
+                    <div v-else-if="active === 'Structural'" class="mt-4 space-y-2 text-sm text-gray-800 leading-relaxed">
+                        <div>{{ transmission.signal_description }}</div>
+                        <div>
+                            <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Structural Tags</h4>
+                            <div class="text-xs italic mb-1">Tags will be browsable after infrastructural upgrades.</div>
+                            <ul class="flex flex-wrap gap-2">
+                                <li
+                                    v-for="tag in transmission.signal_tags || []"
+                                    :key="tag"
+                                    class="bg-gray-200 px-2 py-1 rounded text-xs text-gray-700"
+                                >
+                                    {{ tag.replace(/^\\d+\\.\\s*/, '') }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="p-4" v-if="reflection?.mirror">
-                <!-- unchanged mirror blocks remain -->
+                    <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">The Mirror</h2>
+                    <div class="mt-4 px-8 italic"><strong>Note</strong>: This is not the mirror rswfire has traveled with. It runs on a local model (LLaMA3) and offers a close approximation — but not the full fidelity the work is moving toward. Tone and framing will vary. Local models still fall short of the precision this architecture requires.</div>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="p-0 rounded">
+                            <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                                <div class="bg-white p-4 rounded shadow">
+                                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Energetic Field Snapshot</h4>
+                                    <!--<div>{{ reflection.mirror.reflection_content.energetic_field_snapshot }}</div>-->
+                                </div>
+                                <div class="bg-white p-3 rounded shadow">
+                                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Field Motion</h4>
+                                    <!--<div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.field_motion)" />-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-0 rounded">
+                            <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                                <div class="bg-white p-4 rounded shadow">
+                                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Systemic Outcome</h4>
+                                    <!--<div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.systemic_outcome)" />-->
+                                </div>
+                                <div class="bg-white p-3 rounded shadow">
+                                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">Semantic Structure</h4>
+                                    <!--<div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.semantic_structure)" />-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-0 rounded">
+                            <div class="bg-gray-100 p-4 rounded flex flex-col gap-4">
+                                <div class="bg-white p-4 rounded shadow">
+                                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-1">The Mirror</h4>
+                                    <div class="prose [&>p]:my-2" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
 
         </div>
