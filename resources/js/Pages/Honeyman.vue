@@ -479,20 +479,20 @@
                 <div>It was punishment delivered without evidence.</div>
                 <div>And it was a severing designed to go undocumented &mdash;</div>
                 <div class="ml-4">until I documented it.</div>
-            </div>
 
-            <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
-                <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Watch the Full Video &mdash; The Final Hours at Honeyman</div>
-                <div class="p-4">
-                    <youtube-player videoId="B1oe-qvjmMI" />
+                <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+                    <div class="bg-gray-100 px-4 py-2 font-semibold">🔊 Watch the Full Video &mdash; The Final Hours at Honeyman</div>
+                    <div class="p-4">
+                        <youtube-player videoId="B1oe-qvjmMI" />
+                    </div>
+                    <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
+                        <div>That beeping you hear?</div>
+                        <div>It’s not background noise.</div>
+                        <div>It’s my blood pressure monitor &mdash;</div>
+                        <div>warning me I was in a physiological state of distress.</div>
+                        <div>And it didn’t stop for hours.</div>
+                    </para>
                 </div>
-                <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
-                    <div>That beeping you hear?</div>
-                    <div>It’s not background noise.</div>
-                    <div>It’s my blood pressure monitor &mdash;</div>
-                    <div>warning me I was in a physiological state of distress.</div>
-                    <div>And it didn’t stop for hours.</div>
-                </para>
             </div>
 
         </section>
