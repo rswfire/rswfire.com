@@ -13,9 +13,12 @@
             <div class="ml-4">surveilled,</div>
             <div class="ml-4">manipulated,</div>
             <div class="ml-4">and ultimately discarded.</div>
+            <div class="mt-4 italic">&quot;They tried to erase me, so I became unerasable.&quot;</div>
+            <div class="ml-4 italic">&mdash; rswfire</div>
 
         </div>
     </section>
 </template>
 
-<script></script>
+<script>
+</script>
