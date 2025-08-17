@@ -26,7 +26,7 @@
                     </div>
                 </li>
 
-                <li class="bg-white border border-honeyman-200 rounded-lg p-4 shadow-sm">
+                <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
                     <h3 class="font-semibold text-lg">Allison Watson</h3>
                     <div class="text-sm text-gray-700">
                         <div class="font-bold">Volunteer Engagement Coordinator, OPRD</div>
