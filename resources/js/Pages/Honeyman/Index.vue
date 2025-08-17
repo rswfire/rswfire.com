@@ -94,6 +94,14 @@
                 </div>
             </div>
 
+            <Logan/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Footer/>
 
     </div>
@@ -113,6 +121,7 @@
     import ImGoingPublic from "@/Pages/Honeyman/Sections/Im-Going-Public.vue";
     import KeyIndividuals from "@/Pages/Honeyman/Sections/Key-Individuals.vue";
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";
+    import Logan from "@/Pages/Honeyman/Sections/Logan.vue";
     import NamingTheHarm from "@/Pages/Honeyman/Sections/Naming-the-Harm.vue";
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
