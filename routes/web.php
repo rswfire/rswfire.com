@@ -472,7 +472,9 @@ Route::get("/signal", function () {
 
 Route::get("/signal/{id}", function ($id) {
     $user = auth()->user();
-
+    if ($user->id !== 1) {
+        abort(403, 'Unauthorized');
+    }
     $conversation = DB::table("chronicle_conversations")->where("conversation_id", $id)->first();
 
     $messages = DB::table("chronicle_messages")
@@ -491,7 +493,7 @@ Route::get("/signal/{id}", function ($id) {
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
-});
+})->middleware('auth');
 
 Route::get("/tech", function () {
     return Inertia::render("Tech", [
