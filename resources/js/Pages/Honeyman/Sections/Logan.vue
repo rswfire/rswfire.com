@@ -2,6 +2,7 @@
     <section id="logan">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">LOGAN</h2>
+            <div class="italic text-gray-600">MARCH 2, 2025 &mdash; THE MOMENT TRUST WAS BROKEN</div>
 
             <div class="mt-4">Logan was my direct supervisor. We became something like friends right from the start. I recognized in him someone who had both depth and integrity, sometimes at odds with the institution he is part of, and I chose to make space for that. What I didn't see, or perhaps didn't want to see, is that his integrity is compartmentalized.</div>
             <div class="mt-4">Logan participated in many of the dynamics I have shared in this archive, but his involvement was tertiary, orders seeded by Ryan and Kati. When it became clear they were trying to sabatoge my trajectory, I was forced to act to protect myself. And thus I wrote the &quot;Trust&quot; email to end that harmful dynamic. </div>
