@@ -1,8 +1,8 @@
 <template>
     <section id="letter-to-allison-watson" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">Letter to Allison Watson</h2>
-            <div class="italic text-gray-600">March 27, 2025 &mdash; The Letter They Could Not Metabolize</div>
+            <h2 class="text-2xl font-semibold">LETTER TO ALLISON WATSON</h2>
+            <div class="italic text-gray-600">MARCH 27, 2025 &mdash; THE LETTER THEY COULD NOT METABOLIZE</div>
 
             <div class="mt-4">This letter was sent to Allison Watson the evening before I was permanently dismissed from the Oregon State Parks volunteer program.</div>
             <div>It was one of the most direct, honest, and measured attempts to name harm and restore clarity.</div>

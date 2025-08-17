@@ -5,7 +5,7 @@
         <Hero
             title="THE HONEYMAN ARCHIVE"
             subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
-            meta="LAST UPDATED: 08/16/25"
+            meta="LAST UPDATED: 08/17/25"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -55,6 +55,14 @@
             </div>
 
             <Day-Use-Meeting/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
+            <The-Unidentified-Man/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
@@ -126,6 +134,7 @@
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
     import TheStoryOfHoneyman from "@/Pages/Honeyman/Sections/The-Story-of-Honeyman.vue";
+    import TheUnidentifiedMan from "@/Pages/Honeyman/Sections/The-Unidentified-Man.vue";
 
 </script>
 

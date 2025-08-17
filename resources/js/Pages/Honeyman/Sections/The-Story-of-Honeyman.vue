@@ -12,7 +12,7 @@
             <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, integrated &mdash;</div>
             <div>they didn’t know what to do with me.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">The First Fracture</h2>
+            <h2 class="mt-8 text-xl font-semibold">THE FIRST FRACTURE</h2>
 
             <div class="mt-4">It began with a power outage.</div>
             <div>I texted Kati, the park supervisor, early in the morning &mdash;</div>
@@ -43,7 +43,7 @@
             <div class="ml-4">And they would return to it again and again,</div>
             <div class="ml-8">Over the next two months.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">Distortion as Policy</h2>
+            <h2 class="mt-8 text-xl font-semibold">DISTORTION AS POLICY</h2>
 
             <div class="mt-4">I applied for a job at Honeyman &mdash;</div>
             <div class="ml-4">not out of desperation, but because I liked the park, the rhythm, the work.</div>
@@ -70,7 +70,7 @@
             <div>Instead of responding directly,</div>
             <div>they convened a meeting.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">The Orchestrated Confrontation</h2>
+            <h2 class="mt-8 text-xl font-semibold">THE ORCHESTRATED CONFRONTATION</h2>
 
             <div class="mt-4">Ryan and Kati summoned me to the day-use area.</div>
             <div>A picnic table, a public setting, the illusion of calm.</div>
@@ -91,7 +91,7 @@
             <div class="mt-4">I recorded the meeting &mdash;</div>
             <div class="ml-4">because I already knew what was coming.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">The Final Move</h2>
+            <h2 class="mt-8 text-xl font-semibold">THE FINAL MOVE</h2>
 
             <div class="mt-4">Weeks passed. I kept working. Professionally. Precisely.</div>
             <div>No infractions. No escalation.</div>
@@ -123,7 +123,7 @@
 
             <div class="mt-4">But I had already built the archive.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">What They Did</h2>
+            <h2 class="mt-8 text-xl font-semibold">WHAT THEY DID</h2>
 
             <div class="mt-4">They misread my coherence as confrontation.</div>
             <div>They punished integrity because it disrupted their comfort.</div>
@@ -142,7 +142,7 @@
             <div class="ml-4">control over contact,</div>
             <div class="ml-4">narrative over truth.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">What I Did</h2>
+            <h2 class="mt-8 text-xl font-semibold">WHAT I DID</h2>
 
             <div class="mt-4">I held my shape.</div>
             <div>I named the distortions.</div>

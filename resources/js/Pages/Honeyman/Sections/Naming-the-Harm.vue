@@ -1,8 +1,8 @@
 <template>
     <section id="naming-the-harm" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">Naming the Harm &mdash; My Final Letter to Allison Watson</h2>
-            <div class="italic text-gray-600">May 28, 2025 &mdash; The Letter They Must Reckon With</div>
+            <h2 class="text-2xl font-semibold">NAMING THE HARM &mdash; MY FINAL LETTER TO ALLISON WATSON</h2>
+            <div class="italic text-gray-600">MAY 28, 2025 &mdash; THE LETTER THEY MUST RECKON WITH</div>
 
             <div class="mt-4">Two months and one day after my vulnerable follow-up letter was met with silence,</div>
             <div>I named the full scope of the harm &mdash;</div>

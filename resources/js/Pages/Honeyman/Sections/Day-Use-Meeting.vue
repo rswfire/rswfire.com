@@ -1,8 +1,8 @@
 <template>
     <section id="day-use-meeting" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">The Honeyman Day-Use Area Meeting</h2>
-            <div class="italic text-gray-600">March 5, 2025 &mdash; The Moment They Tried to Break Me</div>
+            <h2 class="text-2xl font-semibold">THE HONEYMAN DAY-USE AREA MEETING</h2>
+            <div class="italic text-gray-600">MARCH 5, 2025 &mdash; THE MOMENT THEY TRIED TO BREAK ME</div>
 
             <div class="mt-4">I was summoned to a picnic table tucked into the public quiet of Honeyman’s day-use area &mdash;</div>
             <div>a location chosen not for privacy,</div>

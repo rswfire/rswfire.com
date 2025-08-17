@@ -1,8 +1,8 @@
 <template>
     <section id="call-with-allison-watson" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">Call with Allison Watson</h2>
-            <div class="italic text-gray-600">March 25, 2025 &mdash; The Moment They Tried to Erase Me</div>
+            <h2 class="text-2xl font-semibold">CALL WITH ALLISON WATSON</h2>
+            <div class="italic text-gray-600">MARCH 25, 2025 &mdash; THE MOMENT THEY TRIED TO ERASE ME</div>
 
             <div class="mt-4">This wasn’t a conversation. It was a containment protocol.</div>
 
