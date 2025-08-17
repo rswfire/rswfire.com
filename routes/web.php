@@ -426,8 +426,8 @@ Route::get("/about", function () {
 });
 
 Route::get("/honeyman", function () {
-    return Inertia::render("Honeyman", [
-        "metaTitle" => "The Story of Honeyman | ".request()->getHost(),
+    return Inertia::render("Honeyman/Index", [
+        "metaTitle" => "The Honeyman Archive | ".request()->getHost(),
         "metaDescription" => "A precise and permanent archive of institutional harm at Honeyman State Park. Documented by Sam White, this page exposes systemic coercion, silence, and dismissal inside Oregon State Parks.",
         "metaUrl" => "https://rswfire.com/honeyman",
     ]);
