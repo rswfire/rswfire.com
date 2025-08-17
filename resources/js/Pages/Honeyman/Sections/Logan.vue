@@ -12,7 +12,7 @@
             <div class="mt-4">I've minimized my discussion of him in this archive. His actions don't come anywhere close to the violations I experienced from the others.</div>
             <div class="mt-4">I wrote this email because I had already experienced a month of abuse at Honeyman. And I saw the writing on the wall. When Logan lied to me &mdash; this cannot be softened &mdash; I understood why. They were creating conditions they hoped would lead to my removal.</div>
             <div class="mt-4">This event proved Logan was doing what Ryan and Kati told him to do. And those two were persistently unethical.</div>
-            <div class="mt-4">In a different environment, Logan would probably thrive.</div>
+            <div class="mt-4">In a different environment, with support instead of distortion, Logan would probably thrive.</div>
 
             <h3 class="mt-8 text-lg font-semibold">📝 The &quot;Trust&quot; Email</h3>
 
