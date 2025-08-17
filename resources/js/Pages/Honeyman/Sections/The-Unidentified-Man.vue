@@ -16,7 +16,7 @@
             <div class="mt-4">This letter represents the moment I moved from private accountability to institutional pressure. It documents not just the encounter with the unidentified operative, but the broader pattern of covert tactics, systematic retaliation, and institutional protection of misconduct.</div>
             <div class="mt-4">The response to this letter would determine whether Oregon State Parks was capable of ethical leadership — or whether external accountability would become necessary.</div>
             <div class="mt-4">This letter has gone unanswered.</div>
-            <div class="mt-4 text-xs font-bold">Correction: This encounter took place on March 18, not March 20, making it six days before my removaL.</div>
+            <div class="mt-4 text-xs font-bold">Correction: This encounter took place on March 18, not March 20, making it six days before my removal.</div>
 
             <h3 class="mt-8 text-lg font-semibold">📝 Letter to Director Lisa Sumption &mdash; August 16, 2025</h3>
 
