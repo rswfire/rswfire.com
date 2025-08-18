@@ -40,6 +40,7 @@
                 </div>
             </div>
 
+            <!--
             <h2 class="mt-8 text-xl font-semibold">Time-Indexed Highlights</h2>
             <table class="table-auto w-full text-sm mt-4 border-collapse border border-gray-400">
                 <thead>
@@ -61,6 +62,7 @@
                 <tr><td class="border px-2 py-1">01:00:30</td><td class="border px-2 py-1">Closing Line</td><td class="border px-2 py-1">Sam names the distortion. Refuses the script. Holds shape.</td></tr>
                 </tbody>
             </table>
+            -->
 
             <h3 class="mt-8 text-lg font-semibold">🎯 Why This Was Preserved</h3>
 
