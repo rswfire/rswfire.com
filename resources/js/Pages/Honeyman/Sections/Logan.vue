@@ -25,13 +25,13 @@
 
                 <div class="mt-4">When I confided in you about the situation with Kati, you escalated it instead of protecting me. Then you disappeared.</div>
 
-                <div class="mt-4">When I applied for a job here, you distanced yourself again. The moment I withdrew my application, you reappeared—spending ninety minutes talking about yourself.</div>
+                <div class="mt-4">When I applied for a job here, you distanced yourself again. The moment I withdrew my application, you reappeared &mdash; spending ninety minutes talking about yourself.</div>
 
                 <div class="mt-4">When I finally opened up to you about why I’m here, what I sacrificed to be here, and why this matters to me, you responded by trying to manage my perception instead of actually listening.</div>
 
                 <div class="mt-4">And then? You distanced yourself again.</div>
 
-                <div class="mt-4">When I warned you—privately—to prevent a repeat of the Kati situation, you assured me Leaf would train me. That didn’t happen.</div>
+                <div class="mt-4">When I warned you &mdash; privately &mdash; to prevent a repeat of the Kati situation, you assured me Leaf would train me. That didn’t happen.</div>
 
                 <div class="mt-4">At every critical moment, you have failed to act with integrity.</div>
                 <div>At every opportunity to lead, you have instead chosen avoidance.</div>
