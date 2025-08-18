@@ -12,13 +12,16 @@
 
             <HeaderContext/>
 
+            <!--
             <HeaderBreaches/>
+            -->
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
                     <hr class="h-1 bg-honeyman-300 border-0 rounded" />
                 </div>
             </div>
+
 
             <Key-Individuals/>
 
@@ -37,6 +40,14 @@
                 </div>
             </div>
             -->
+
+            <An-Introduction/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
 
             <The-Story-of-Honeyman/>
 
@@ -121,6 +132,7 @@
     import Content from "@/Components/System/Content.vue"
     import Hero from "@/Components/System/Hero.vue"
 
+    import AnIntroduction from "@/Pages/Honeyman/Sections/An-Introduction.vue";
     import CallWithAllisonWatson from "@/Pages/Honeyman/Sections/Call-With-Allison-Watson.vue";
     import DayUseMeeting from "@/Pages/Honeyman/Sections/Day-Use-Meeting.vue";
     import Footer from "@/Pages/Honeyman/Sections/Footer.vue";
