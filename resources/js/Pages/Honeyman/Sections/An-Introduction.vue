@@ -11,7 +11,7 @@
             <div class="mt-4">This archive exists because I maintained what should have been unremarkable standards: I documented interactions, I communicated clearly, I held boundaries, I expected good faith responses to legitimate concerns. These simple practices &mdash; which should be institutional norms &mdash; made me what they considered an impossible adversary.</div>
             <div class="mt-4">Not because I was unreasonable. Not because I was vindictive. Not because I operated outside ethical guidelines.</div>
             <div class="mt-4">But because I refused to abandon them.</div>
-            <div class="mt-4">The pages that follow document what happens when someone approaches institutional dysfunction with uncompromising ethical clarity. They reveal how systems protect themselves by targeting those who witness their failures. They show what institutional retaliation looks like when deployed against someone whose only "weapon" is documented truth.</div>
+            <div class="mt-4">This archive documents what happens when someone approaches institutional dysfunction with uncompromising ethical clarity. It reveals how systems protect themselves by targeting those who witness their failures. It shows what institutional retaliation looks like when deployed against someone whose only &quot;weapon&quot; is documented truth.</div>
             <div class="mt-4">This is not a story about one problematic park or a few bad employees. This is a story about what American institutions have become when basic human decency is perceived as an existential threat to their operations.</div>
             <div class="mt-4">I thought ethics were the rulebook.</div>
             <div class="mt-4">They should be.</div>

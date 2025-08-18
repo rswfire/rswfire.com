@@ -22,15 +22,6 @@
                 </div>
             </div>
 
-
-            <Key-Individuals/>
-
-            <div class="relative">
-                <div class="-mx-6 md:-mx-8">
-                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
-                </div>
-            </div>
-
             <!--
             <Im-Going-Public/>
 
@@ -42,6 +33,14 @@
             -->
 
             <An-Introduction/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
+            <Key-Individuals/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
