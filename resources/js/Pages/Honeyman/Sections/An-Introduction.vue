@@ -16,7 +16,15 @@
             <div class="mt-4">I thought ethics were the rulebook.</div>
             <div class="mt-4">They should be.</div>
             <div class="mt-4">The archive that follows is proof that they're not &mdash; and testimony to what happens when someone refuses to accept that corruption as normal.</div>
-
+            <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+                <div class="bg-gray-100 px-4 py-2 font-semibold">&quot;They tried to break me and I am still whole.&quot;</div>
+                <div class="p-4">
+                    <youtube-player videoId="k0Fd1RFrecE" />
+                </div>
+                <para class="text-sm italic text-gray-500 m-0 p-2 ml-6 mb-4">
+                    <div>They tried to stop me here, but this archive is proof they did not. I am still here. This video is not argument or analysis — it is simply me, speaking my life as it unfolded in the months after Honeyman. It stands as evidence that it is possible to remain ethical, coherent, and whole even in the face of distortion. Institutions attempted to erase me, to collapse my story into silence. Instead, I continue. This is what survival looks like when you refuse to fragment: a voice that goes on, a life that does not end where they wanted it to. What follows is testimony that my story was never contained by their harm.</div>
+                </para>
+            </div>
         </div>
 
     </section>
@@ -24,4 +32,6 @@
 
 <script setup>
 
+import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
+import Para from "@/Components/System/Para.vue";
 </script>
