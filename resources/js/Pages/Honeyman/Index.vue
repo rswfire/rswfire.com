@@ -5,7 +5,7 @@
         <Hero
             title="THE HONEYMAN ARCHIVE"
             subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
-            meta="LAST UPDATED: 08/17/25"
+            meta="LAST UPDATED: 08/18/25"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
