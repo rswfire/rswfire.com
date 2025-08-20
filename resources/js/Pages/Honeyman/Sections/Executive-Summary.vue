@@ -19,7 +19,8 @@
             </ul>
 
             <h2 class="mt-8 text-xl font-semibold">The Coercive Meeting</h2>
-            <div>On March 5, Ryan Warren and Kati Baker summoned me to a public picnic table for over an hour of psychological pressure designed to force my resignation. The entire meeting was recorded. Key moments include:</div>
+            <div>On March 5, Ryan Warren and Kati Baker summoned me to a public picnic table for over an hour of psychological pressure designed to force my resignation. The entire meeting was recorded.</div>
+            <div>Key moments include:</div>
 
             <ul class="list-disc list-inside ml-4">
                 <li>Ryan telling me to &quot;chew glass and swallow it&quot; as leadership advice.</li>
@@ -27,6 +28,7 @@
                 <li>Repeated suggestions that I should &quot;just leave&quot; if uncomfortable.</li>
                 <li>Reframing of normal communication as threatening behavior.</li>
                 <li>Clear weaponization of my identity.</li>
+                <li>Absolute refusal to engage in any substantive claims.</li>
             </ul>
 
             <h2 class="mt-8 text-xl font-semibold">The Setup</h2>
