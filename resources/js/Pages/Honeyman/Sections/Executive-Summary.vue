@@ -13,9 +13,9 @@
             <div>What should have been a minor communication issue became a sustained campaign of psychological pressure:</div>
 
             <ul class="list-disc list-inside ml-4">
-                <li><strong>Week 1</strong>: Park Manager Ryan Warren confronted me in the Welcome Center, cataloguing every minor mistake from my first week as a new volunteer.</li>
-                <li><strong>Month 1</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems.</li>
-                <li><strong>Month 2</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt.</li>
+                <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me in the Welcome Center, cataloguing every minor mistake from my first week as a new volunteer.</li>
+                <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems.</li>
+                <li><strong>March</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt.</li>
             </ul>
 
             <h2 class="mt-8 text-xl font-semibold">The Coercive Meeting</h2>
