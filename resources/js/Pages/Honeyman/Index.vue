@@ -5,7 +5,7 @@
         <Hero
             title="THE HONEYMAN ARCHIVE"
             subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
-            meta="LAST UPDATED: 08/18/25"
+            meta="LAST UPDATED: 08/20/25"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -31,6 +31,14 @@
                 </div>
             </div>
             -->
+
+            <Executive-Summary/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
 
             <An-Introduction/>
 
@@ -134,6 +142,7 @@
     import AnIntroduction from "@/Pages/Honeyman/Sections/An-Introduction.vue";
     import CallWithAllisonWatson from "@/Pages/Honeyman/Sections/Call-With-Allison-Watson.vue";
     import DayUseMeeting from "@/Pages/Honeyman/Sections/Day-Use-Meeting.vue";
+    import ExecutiveSummary from "@/Pages/Honeyman/Sections/Executive-Summary.vue";
     import Footer from "@/Pages/Honeyman/Sections/Footer.vue";
     import HeaderBreaches from "@/Pages/Honeyman/Sections/Header-Breaches.vue";
     import HeaderContext from "@/Pages/Honeyman/Sections/Header-Context.vue";
