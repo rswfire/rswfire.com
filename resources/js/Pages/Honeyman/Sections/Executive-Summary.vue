@@ -13,7 +13,7 @@
             <div>What should have been a minor communication issue became a sustained campaign of psychological pressure:</div>
 
             <ul class="list-disc list-inside ml-4">
-                <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me in the Welcome Center, cataloguing every minor mistake from my first week as a new volunteer.</li>
+                <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
                 <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems.</li>
                 <li><strong>March</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt.</li>
             </ul>
