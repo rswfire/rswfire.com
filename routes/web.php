@@ -542,6 +542,11 @@ Route::get("/transmission/{id}", function ($id) {
 
     $transmission = $transmissionResponse->json();
 
+    $isPrivate = data_get($transmission, "signal_metadata.stats.is_private", false);
+    if ($isPrivate && !auth()->check()) {
+        abort(404, "Transmission not found.");
+    }
+
     $navResponse = Http::get("https://rswfire.online/api/transmission/{$id}/neighbors", [
         "domain" => $domain,
     ]);
