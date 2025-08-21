@@ -543,7 +543,7 @@ Route::get("/transmission/{id}", function ($id) {
     $transmission = $transmissionResponse->json();
 
     $isPrivate = data_get($transmission, "signal_metadata.stats.is_private", false);
-    if ($isPrivate && !auth()->check()) {
+    if ($isPrivate && (!auth()->check() || auth()->id() !== 1)) {
         abort(404, "Transmission not found.");
     }
 
