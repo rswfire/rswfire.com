@@ -128,6 +128,14 @@
                 </div>
             </div>
 
+            <Lessons-Learned/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Footer/>
 
     </div>
@@ -148,6 +156,7 @@
     import HeaderContext from "@/Pages/Honeyman/Sections/Header-Context.vue";
     import ImGoingPublic from "@/Pages/Honeyman/Sections/Im-Going-Public.vue";
     import KeyIndividuals from "@/Pages/Honeyman/Sections/Key-Individuals.vue";
+    import LessonsLearned from "@/Pages/Honeyman/Sections/Lessons-Learned.vue";
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";
     import Logan from "@/Pages/Honeyman/Sections/Logan.vue";
     import NamingTheHarm from "@/Pages/Honeyman/Sections/Naming-the-Harm.vue";
