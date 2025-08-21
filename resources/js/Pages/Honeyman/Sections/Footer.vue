@@ -12,6 +12,8 @@
         <div>It does not ask for repair.</div>
         <div>It exists so that the next distortion cannot pretend it was the first.</div>
 
+        <div class="mt-4">🙃</div>
+
     </section>
 </template>
 
