@@ -37,8 +37,6 @@
 
             <h3 class="mt-8 text-lg font-semibold">📝 Dismissal Email from Allison Watson</h3>
 
-            <div class="mt-4"><Link href="/public/oprd-dismissal.pdf">Download the Dismissal Letter (PDF)</Link></div>
-
             <div class="mt-4 max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 leading-relaxed font-mono">
                 <div>Hello Sam,</div>
 
@@ -54,6 +52,8 @@
 
                 <div class="mt-4">Allison Watson</div>
             </div>
+
+            <div class="mt-4"><a href="/oprd-dismissal.pdf" download>Download the Dismissal Letter (PDF)</a></div>
 
         </div>
 
