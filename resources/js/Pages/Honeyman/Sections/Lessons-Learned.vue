@@ -147,13 +147,13 @@
             <div class="mt-4"><strong>If you're experiencing institutional retaliation:</strong></div>
             <ul class="list-disc list-inside ml-4">
                 <li><strong>Know Your Rights</strong>: <a class="underline text-green-600" href="https://www.whistleblowers.gov/" target="_blank">Department of Labor Whistleblower Protection</a></li>
-                <li><strong>Document Everything</strong>: <a class="underline text-green-600" href="https://www.aclu.org/know-your-rights/workplace-rights/" target="_blank">ACLU Guide to Documenting Workplace Violations</a></li>
+                <li><strong>Document Everything</strong>: <a class="underline text-green-600" href="https://www.usa.gov/job-discrimination-harassment" target="_blank">Discrimination, Harassment, and Retaliation</a></li>
                 <li><strong>Legal Support</strong>: <a class="underline text-green-600" href="https://www.nela.org/" target="_blank">National Employment Lawyers Association</a></li>
                 <li><strong>Psychological Support</strong>: <a class="underline text-green-600" href="https://www.psychologytoday.com/us/therapists/trauma-and-ptsd" target="_blank">Psychology Today Trauma Therapists</a></li>
             </ul>
 
-            <div class="mt-4"><strong>Remember: The problem isn't you. The problem is systems that require human diminishment to function.</strong></div>
-            <div class="mt-4"><strong>Your wholeness is not negotiable.</strong></div>
+            <div class="mt-8 text-lg"><strong>The problem isn't you. The problem is systems that require human diminishment to function.</strong></div>
+            <div class="mt-4 text-lg"><strong>Your wholeness is not negotiable.</strong></div>
 
         </div>
 
