@@ -16,6 +16,7 @@
             <div class="mt-4">I thought ethics were the rulebook.</div>
             <div class="mt-4">They should be.</div>
             <div class="mt-4">The archive that follows is proof that they're not &mdash; and testimony to what happens when someone refuses to accept that corruption as normal.</div>
+            <div class="mt-4 text-lg"><strong>This was my first attempt at institutional belonging. They didn't just harm a volunteer &mdash; they corrupted someone's introduction to civic participation. The betrayal I had to metabolize operates at the level of citizenship itself. That is a stain they will never be able to wash off.</strong></div>
             <div class="mt-6 border border-gray-200 shadow-sm rounded-md overflow-hidden">
                 <div class="bg-gray-100 px-4 py-2 font-semibold">&quot;They tried to break me and I am still whole.&quot;</div>
                 <div class="p-4">
