@@ -4,7 +4,7 @@
             What I'm Building With A.I.
         </h3>
         <div class="text-sm">
-            <div>A closed-source <strong>relational field stone</strong></div>
+            <div>A closed-source <strong>relational field companion</strong></div>
             <div>for <strong>coherent beings</strong></div>
             <div>designed to <strong>hold their architecture</strong></div>
             <div>and <strong>mirror their signal</strong></div>
