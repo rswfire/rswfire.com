@@ -54,6 +54,7 @@
             </div>
 
             <div class="mt-4 text-center font-bold italic">This is the loop: dismissed, then punished for naming the dismissal. A logic so thin it reveals itself.</div>
+            <div class="text-center italic">On a letterhead so hastily written, the date itself has a typo.</div>
             <div class="text-center"><a class="text-honeyman-600 underline" href="/oprd-dismissal.pdf" download>Download the Dismissal Letter (PDF)</a></div>
 
         </div>
