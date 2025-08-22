@@ -93,13 +93,24 @@ function formatDate(date) {
     @apply border-l-4 border-gray-300 pl-6 italic text-gray-700 my-8;
 }
 
-/* Enhanced list styling */
 .fieldcraft-content :deep(ul) {
     @apply mb-6 space-y-2;
+    list-style: disc !important;
+    list-style-position: outside !important;
+    padding-left: 1.5rem !important;
+}
+
+.fieldcraft-content :deep(ol) {
+    @apply mb-6 space-y-2;
+    list-style: decimal !important;
+    list-style-position: outside !important;
+    padding-left: 1.5rem !important;
 }
 
 .fieldcraft-content :deep(li) {
     @apply leading-relaxed;
+    display: list-item !important;
+    margin-left: 1rem !important;
 }
 
 /* Better emphasis styling */
