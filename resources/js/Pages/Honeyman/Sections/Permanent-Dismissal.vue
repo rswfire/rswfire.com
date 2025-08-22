@@ -53,7 +53,7 @@
                 <div class="mt-4">Allison Watson</div>
             </div>
 
-            <div class="mt-4"><a href="/oprd-dismissal.pdf" download>Download the Dismissal Letter (PDF)</a></div>
+            <div class="mt-4 text-center"><a href="/oprd-dismissal.pdf" download>Download the Dismissal Letter (PDF)</a></div>
 
         </div>
 
