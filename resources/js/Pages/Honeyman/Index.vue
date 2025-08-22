@@ -5,7 +5,7 @@
         <Hero
             title="THE HONEYMAN ARCHIVE"
             subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
-            meta="LAST UPDATED: 08/21/25"
+            meta="LAST UPDATED: 08/22/25"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -33,6 +33,14 @@
             -->
 
             <Executive-Summary/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
+            <Public-Records/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
@@ -169,6 +177,7 @@
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";
     import Logan from "@/Pages/Honeyman/Sections/Logan.vue";
     import NamingTheHarm from "@/Pages/Honeyman/Sections/Naming-the-Harm.vue";
+    import PublicRecords from "@/Pages/Honeyman/Sections/Public-Records.vue";
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
     import TheStoryOfHoneyman from "@/Pages/Honeyman/Sections/The-Story-of-Honeyman.vue";
