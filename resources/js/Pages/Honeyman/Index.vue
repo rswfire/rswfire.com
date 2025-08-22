@@ -128,6 +128,14 @@
                 </div>
             </div>
 
+            <Permanent-Dismissal/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Naming-the-Harm/>
 
             <div class="relative">
@@ -177,6 +185,7 @@
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";
     import Logan from "@/Pages/Honeyman/Sections/Logan.vue";
     import NamingTheHarm from "@/Pages/Honeyman/Sections/Naming-the-Harm.vue";
+    import PermanentDismissal from "@/Pages/Honeyman/Sections/Permanent-Dismissal.vue";
     import PublicRecords from "@/Pages/Honeyman/Sections/Public-Records.vue";
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
