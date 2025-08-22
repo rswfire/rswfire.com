@@ -325,7 +325,7 @@ Route::get("/slide", function () {
 Route::get("/fieldcraft", function () {
     $converter = new CommonMarkConverter();
 
-    $fieldwork = Content::where("content_type", "fieldcraft")
+    $fieldcraft = Content::where("content_type", "fieldcraft")
         ->orderByDesc("stamp_created")
         ->paginate(9)
         ->through(function ($entry) use ($converter) {
@@ -344,7 +344,7 @@ Route::get("/fieldcraft", function () {
         ->withQueryString();
 
     return Inertia::render("Fieldcraft/Index", [
-        "entries" => $fieldwork,
+        "entries" => $fieldcraft,
         "metaTitle" => "Fieldwork Records | " . request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
@@ -426,10 +426,31 @@ Route::get("/about", function () {
 });
 
 Route::get("/honeyman", function () {
+    $converter = new CommonMarkConverter();
+
+    $fieldcraft = Content::where("content_type", "fieldcraft")
+        ->whereJsonContains('content_meta->tags', 'honeyman')
+        ->orderByDesc("stamp_created")
+        ->get()
+        ->map(function ($entry) use ($converter) {
+            $html = $converter->convert($entry->content_body)->getContent();
+            $text = strip_tags($html);
+            $summary = Str::limit($text, 280);
+
+            return [
+                "content_id" => $entry->content_id,
+                "content_title" => $entry->content_title,
+                "content_body" => $summary,
+                "stamp_created" => $entry->stamp_created->toDateString(),
+            ];
+        })
+        ->toArray();
+
     return Inertia::render("Honeyman/Index", [
         "metaTitle" => "The Honeyman Archive | ".request()->getHost(),
         "metaDescription" => "A precise and permanent archive of institutional harm at Honeyman State Park. Documented by Sam White, this page exposes systemic coercion, silence, and dismissal inside Oregon State Parks.",
         "metaUrl" => "https://rswfire.com/honeyman",
+        "fieldcraft" => $fieldcraft,
     ]);
 });
 
