@@ -363,19 +363,16 @@ Route::get("/fieldcraft/{id}", function ($id) {
 
     $content = DB::table("content")->where("content_id", $id)->first();
 
-    $environment = new Environment([
-        "commonmark" => [
-            "renderer" => [
-                "soft_break" => "<br />\n",
-            ],
-        ],
-    ]);
+    // PRE-process: Convert your single line breaks to <br> tags BEFORE CommonMark
+    $preprocessed = preg_replace('/(?<!\n)\n(?!\n)/', '<br>', $content->content_body);
 
+    // Standard CommonMark without soft_break config
+    $environment = new Environment();
     $environment->addExtension(new CommonMarkCoreExtension());
-
     $converter = new CommonMarkConverter([], $environment);
 
-    $content->content_body = $converter->convert($content->content_body)->getContent();
+    // Convert the preprocessed content
+    $content->content_body = $converter->convert($preprocessed)->getContent();
 
     if (!$content) {
         abort(404);

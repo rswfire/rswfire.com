@@ -140,4 +140,12 @@ function formatDate(date) {
 .fieldcraft-content :deep(p:first-child) {
     @apply text-xl leading-relaxed text-gray-800;
 }
+
+.fieldcraft-content :deep(p) {
+    @apply mb-4; /* Consistent bottom margin */
+}
+
+.fieldcraft-content :deep(p:last-child) {
+    @apply mb-0; /* Remove margin from last paragraph */
+}
 </style>

@@ -12,25 +12,19 @@
 
             <HeaderContext/>
 
-            <!--
-            <HeaderBreaches/>
-            -->
-
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
                     <hr class="h-1 bg-honeyman-300 border-0 rounded" />
                 </div>
             </div>
 
-            <!--
-            <Im-Going-Public/>
+            <Key-Individuals/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
                     <hr class="h-1 bg-honeyman-300 border-0 rounded" />
                 </div>
             </div>
-            -->
 
             <Executive-Summary/>
 
@@ -49,14 +43,6 @@
             </div>
 
             <An-Introduction/>
-
-            <div class="relative">
-                <div class="-mx-6 md:-mx-8">
-                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
-                </div>
-            </div>
-
-            <Key-Individuals/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
@@ -167,7 +153,7 @@
 </template>
 
 <script setup>
-
+import {Link} from "@inertiajs/vue3";
     import Content from "@/Components/System/Content.vue"
     import Hero from "@/Components/System/Hero.vue"
 
@@ -177,9 +163,7 @@
     import ExecutiveSummary from "@/Pages/Honeyman/Sections/Executive-Summary.vue";
     import FieldcraftRecords from "@/Pages/Honeyman/Sections/Fieldcraft-Records.vue";
     import Footer from "@/Pages/Honeyman/Sections/Footer.vue";
-    import HeaderBreaches from "@/Pages/Honeyman/Sections/Header-Breaches.vue";
     import HeaderContext from "@/Pages/Honeyman/Sections/Header-Context.vue";
-    import ImGoingPublic from "@/Pages/Honeyman/Sections/Im-Going-Public.vue";
     import KeyIndividuals from "@/Pages/Honeyman/Sections/Key-Individuals.vue";
     import LessonsLearned from "@/Pages/Honeyman/Sections/Lessons-Learned.vue";
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";
