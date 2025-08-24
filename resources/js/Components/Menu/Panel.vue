@@ -132,13 +132,13 @@ const items = [
         url: "/transmission",
     },
     {
-        label: "Fieldwork",
+        label: "Fieldcraft",
         icon: "Map",
         color: "text-green-500",
         bg: "bg-green-50",
         border: "border-green-200",
         hover: "hover:bg-green-100",
-        url: "/fieldwork",
+        url: "/fieldcraft",
     },
     {
         label: "Codex",

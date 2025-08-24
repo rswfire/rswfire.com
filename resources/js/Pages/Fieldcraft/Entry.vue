@@ -2,7 +2,7 @@
     <Content>
         <Hero
             :title="entry.content_title"
-            subtitle="Fieldwork Record • Lived Signal"
+            :subtitle="tags.length > 0 ? `Fieldcraft Record • ${tags[0]}` : 'Fieldcraft Record • Lived Signal'"
             :meta="formatDate(entry.stamp_created)"
         />
 
