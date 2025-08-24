@@ -36,6 +36,12 @@
 
             </ul>
 
+            <div class="px-8">
+                <div class="mt-6"><strong>Lisa Sumption</strong></div>
+                <div><em>Director, Oregon Parks &amp; Recreation Department</em></div>
+                <div>Received detailed evidence of systematic abuse and chose complete silence. Her non-response to documented institutional harm became institutional endorsement of misconduct.</div>
+            </div>
+
         </div>
 
     </section>
