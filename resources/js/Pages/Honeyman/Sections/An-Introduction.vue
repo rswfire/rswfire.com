@@ -12,7 +12,7 @@
             <div class="mt-4">Not because I was unreasonable. Not because I was vindictive. Not because I operated outside ethical guidelines.</div>
             <div class="mt-4">But because I refused to abandon them.</div>
             <div class="mt-4">This archive documents what happens when someone approaches institutional dysfunction with uncompromising ethical clarity. It reveals how systems protect themselves by targeting those who witness their failures. It shows what institutional retaliation looks like when deployed against someone whose only &quot;weapon&quot; is documented truth.</div>
-            <div class="mt-4">This is not a story about one problematic park or a few bad employees. This is a story about what American institutions have become when basic human decency is perceived as an existential threat to their operations.</div>
+            <div class="mt-4">This is not a story about one problematic park or a few bad employees. This is a story about what modern institutions have become when basic human decency is perceived as an existential threat to their operations.</div>
             <div class="mt-4">I thought ethics were the rulebook.</div>
             <div class="mt-4">They should be.</div>
             <div class="mt-4">The archive that follows is proof that they're not &mdash; and testimony to what happens when someone refuses to accept that corruption as normal.</div>
