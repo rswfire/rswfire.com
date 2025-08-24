@@ -39,7 +39,7 @@
             <div class="ml-4">this archive will not be finished.</div>
 
             <div class="mt-4 italic">&quot;They tried to erase me, so I became unerasable, and I won't let them erase you either.&quot;</div>
-            <div class="ml-4 italic">&mdash; rsw@rswfire</div>
+            <div class="ml-4 italic">&mdash; rsw@rswfire.com</div>
 
         </div>
     </section>
