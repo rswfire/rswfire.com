@@ -12,7 +12,7 @@
             <div class="mt-4">It is deeply unethical, but I will not center their distortions.</div>
             <div class="mt-4">For the record, nothing inappropriate ever happened between us. He was just someone I trusted, and probably shouldn't have.</div>
             <div class="mt-4">I think it deserves consequences, but appropriate ones. Perhaps private ones. He is a young ranger who cares about his job and his park, but works in one of the most dysfunctional and toxic environments I have ever encountered. This is not an excuse. But it is reality.</div>
-            <div class="mt-4">I've minimized my discussion of him in this archive. His actions don't come anywhere close to the violations I experienced from the others.</div>
+            <div class="mt-4">I’ve kept my discussion of him minimal &mdash; not out of forgiveness or proportion, but because the deepest ruptures often require the most careful holding. His harm was quieter, more personal, and woven through trust. That deserves acknowledgment, not amplification.</div>
             <div class="mt-4">I wrote this email because I had already experienced a month of abuse at Honeyman. And I saw the writing on the wall. When Logan lied to me &mdash; this cannot be softened &mdash; I understood why. They were creating conditions they hoped would lead to my removal.</div>
             <div class="mt-4">This event proved Logan was doing what Ryan and Kati told him to do. And those two were persistently unethical. In a different environment, with support instead of distortion, away from these dysfunctional dynamics, I believe Logan would thrive.</div>
 
