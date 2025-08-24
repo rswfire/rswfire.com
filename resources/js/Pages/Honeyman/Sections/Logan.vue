@@ -8,7 +8,8 @@
             <div class="mt-4">Logan participated in many of the dynamics I have shared in this archive, but his involvement was tertiary, orders seeded by Ryan and Kati. When it became clear they were trying to sabatoge my trajectory, I was forced to act to protect myself. And thus I wrote the &quot;Trust&quot; email to end that harmful dynamic. </div>
             <div class="mt-4">This letter requires framing, which forces me to discuss dynamics I would have preferred stayed private, as a personal ethic. I navigated this relationship with great care, but it was weaponized against me.</div>
             <div class="mt-4">During the day-use area meeting, Ryan had the audacity to say outright, in a mocking tone, I thought I had a future with Logan. It was so ludicrous I laughed, but I understood the insinuation. He was accusing me of having &quot;inappropriate feelings&quot; for Logan. This was weaponization of my sexuality, and a distortion of normal human emotions, and I'm fairly confident that could have only happened with Logan's consent and participation in that narrative.</div>
-            <div class="mt-4">It is deeply unethical, but I will not center this.</div>
+            <div class="mt-4">Logan also weaponized personal information I shared during a vulnerable moment, which was later used by Allison Watson to pathologize my character during dismissal proceedings. <Link href="/fieldcraft/01K3EZWG5AS64E152MTTS9DEKR" class="text-honeyman-600 underline">Full documentation here</Link>.</div>
+            <div class="mt-4">It is deeply unethical, but I will not center their distortions.</div>
             <div class="mt-4">For the record, nothing inappropriate ever happened between us. He was just someone I trusted, and probably shouldn't have.</div>
             <div class="mt-4">I think it deserves consequences, but appropriate ones. Perhaps private ones. He is a young ranger who cares about his job and his park, but works in one of the most dysfunctional and toxic environments I have ever encountered. This is not an excuse. But it is reality.</div>
             <div class="mt-4">I've minimized my discussion of him in this archive. His actions don't come anywhere close to the violations I experienced from the others.</div>
@@ -51,5 +52,6 @@
     </section>
 </template>
 
-<script>
+<script setup>
+import { Link } from '@inertiajs/vue3'
 </script>
