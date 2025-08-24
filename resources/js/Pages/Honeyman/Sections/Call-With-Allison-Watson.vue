@@ -11,7 +11,7 @@
             <div>I received a phone call from Allison Watson, Volunteer Engagement Coordinator for Oregon State Parks.</div>
             <div>I recorded the call for documentation and clarity.</div>
 
-            <div class="mt-4">This call revealed the coordinated nature of my removal. Questions and framing that echoed the March 5 meeting. Personal information shared in confidence with Logan now weaponized as &quot;concerning behavior.&quot; Each response I gave was filtered through a predetermined narrative of problematic conduct.</div>
+            <div class="mt-4">This call revealed the coordinated nature of my removal. Questions and framing that echoed the March 5 meeting. Personal information shared in confidence with Logan now <Link href="/fieldcraft/01K3EZWG5AS64E152MTTS9DEKR" class="text-honeyman-600 underline">weaponized</Link> as &quot;concerning behavior.&quot; Each response I gave was filtered through a predetermined narrative of problematic conduct.</div>
 
             <div class="mt-4">What you’ll hear is not a leader showing up in presence.</div>
             <div>It is institutional posture cloaked in empathy &mdash; a soft tone used to reroute accountability,</div>
@@ -53,4 +53,5 @@
 <script setup>
 import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
 import Para from "@/Components/System/Para.vue";
+import {Link} from "@inertiajs/vue3";
 </script>
