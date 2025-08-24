@@ -14,7 +14,7 @@
             <div class="mt-4">I think it deserves consequences, but appropriate ones. Perhaps private ones. He is a young ranger who cares about his job and his park, but works in one of the most dysfunctional and toxic environments I have ever encountered. This is not an excuse. But it is reality.</div>
             <div class="mt-4">I’ve kept my discussion of him minimal &mdash; not out of forgiveness or proportion, but because the deepest ruptures often require the most careful holding. His harm was quieter, more personal, and woven through trust. That deserves acknowledgment, not amplification.</div>
             <div class="mt-4">I wrote this email because I had already experienced a month of abuse at Honeyman. And I saw the writing on the wall. When Logan lied to me &mdash; this cannot be softened &mdash; I understood why. They were creating conditions they hoped would lead to my removal.</div>
-            <div class="mt-4">This event proved Logan was doing what Ryan and Kati told him to do. And those two were persistently unethical. In a different environment, with support instead of distortion, away from these dysfunctional dynamics, I believe Logan would thrive.</div>
+            <div class="mt-4">This event proved Logan was doing what Ryan and Kati told him to do. And those two were persistently unethical. In a different environment, with support instead of distortion, away from these dysfunctional dynamics, and some self-reflection, I believe Logan would thrive.</div>
 
             <h3 class="mt-8 text-lg font-semibold">📝 The &quot;Trust&quot; Email</h3>
 
