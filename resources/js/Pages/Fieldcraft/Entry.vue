@@ -108,7 +108,7 @@ function formatDate(date) {
 }
 
 .fieldcraft-content :deep(li) {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-lg; /* Add text-lg to match paragraphs */
     display: list-item !important;
     margin-left: 1rem !important;
 }
@@ -140,12 +140,8 @@ function formatDate(date) {
 .fieldcraft-content :deep(p:first-child) {
     @apply text-xl leading-relaxed text-gray-800;
 }
-
-.fieldcraft-content :deep(p) {
-    @apply mb-4; /* Consistent bottom margin */
+.fieldcraft-content :deep(hr) {
+    @apply my-8 border-gray-300; /* Adjust my-8 to my-6, my-4, etc. for less space */
 }
 
-.fieldcraft-content :deep(p:last-child) {
-    @apply mb-0; /* Remove margin from last paragraph */
-}
 </style>
