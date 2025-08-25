@@ -40,6 +40,7 @@
                 <div class="mt-6"><strong>Lisa Sumption</strong></div>
                 <div><em>Director, Oregon Parks &amp; Recreation Department</em></div>
                 <div>Received detailed evidence of systematic abuse and chose complete silence. Her non-response to documented institutional harm became institutional endorsement of misconduct.</div>
+                <div><Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="text-honeyman-600 underline">Read the Open Letter to Director Sumption →</Link></div>
             </div>
 
         </div>
@@ -47,5 +48,6 @@
     </section>
 </template>
 
-<script>
+<script setup>
+import { Link } from '@inertiajs/vue3'
 </script>
