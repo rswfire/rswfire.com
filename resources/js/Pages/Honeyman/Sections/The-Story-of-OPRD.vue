@@ -26,7 +26,7 @@
             <div class="mt-4">Strip away the diplomatic language, and her letter communicates several admissions:</div>
             <div class="ml-4"><strong>&quot;I hear the depth of your concern&quot;</strong> &mdash; Translation: Your documentation is comprehensive enough to require director-level attention.</div>
             <div class="ml-4"><strong>&quot;I recognize the effort you have put into documenting&quot;</strong> &mdash; Translation: We understand this isn't casual complaint but systematic evidence gathering.</div>
-            <div class="ml-4"><strong>&quot;I take concerns about our volunteer program seriously&qupt;</strong> &mdash; Translation: This has implications beyond one dismissed volunteer.</div>
+            <div class="ml-4"><strong>&quot;I take concerns about our volunteer program seriously&quot;</strong> &mdash; Translation: This has implications beyond one dismissed volunteer.</div>
             <div class="ml-4"><strong>&quot;Appropriate channels within the department&quot;</strong> &mdash; Translation: We will route your evidence to internal protection systems rather than external accountability.</div>
             <div class="ml-4"><strong>&quot;Cannot respond here to the specific claims&quot;</strong> &mdash; Translation: The documented misconduct is real, but admitting specifics creates liability exposure.</div>
 
@@ -74,9 +74,9 @@
             <div class="mt-4">The director's response creates new exposure:</div>
 
             <div class="mt-4">&bull; Acknowledges the comprehensiveness of documentation they previously ignored.</div>
-            <div class="mt-4">&bull; Legitimizes the institutional significance through personal engagement.</div>
-            <div class="mt-4">&bull; Promises internal review while protecting those documented in misconduct.</div>
-            <div class="mt-4">&bull; Creates expectations for meaningful response without committing to specific action.</div>
+            <div>&bull; Legitimizes the institutional significance through personal engagement.</div>
+            <div>&bull; Promises internal review while protecting those documented in misconduct.</div>
+            <div>&bull; Creates expectations for meaningful response without committing to specific action.</div>
 
             <div class="mt-4">She attempted to thread an impossible needle &mdash; appearing responsive while maintaining protection of systematic abuse.</div>
             <div class="mt-4">But engagement without accountability often amplifies rather than resolves exposure.</div>
