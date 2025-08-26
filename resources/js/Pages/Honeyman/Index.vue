@@ -68,6 +68,14 @@
                 </div>
             </div>
 
+            <The-Story-of-OPRD/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Logan/>
 
             <div class="relative">
@@ -185,6 +193,7 @@ import {Link} from "@inertiajs/vue3";
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
     import TheStoryOfHoneyman from "@/Pages/Honeyman/Sections/The-Story-of-Honeyman.vue";
+    import TheStoryOfOPRD from "@/Pages/Honeyman/Sections/The-Story-of-OPRD.vue";
     import TheUnidentifiedMan from "@/Pages/Honeyman/Sections/The-Unidentified-Man.vue";
 
     defineProps({

@@ -1,6 +1,6 @@
 <template>
     <section id="context-matters" class="w-full mx-auto mb-8">
-        <div class="w-full p-8 rounded-xl bg-green-50 border border-green-300 text-lg">
+        <div class="w-full p-8 rounded-xl bg-green-50 border border-green-300 text-sm">
 
             <div class="text-lg"><strong>Why This Archive Exists</strong></div>
 

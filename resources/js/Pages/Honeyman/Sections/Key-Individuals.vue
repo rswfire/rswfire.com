@@ -29,7 +29,7 @@
                 <li class="bg-white bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
                     <h3 class="font-semibold text-lg">Allison Watson</h3>
                     <div class="text-sm text-gray-700">
-                        <div class="font-bold">Volunteer Engagement Coordinator, OPRD</div>
+                        <div class="font-bold">Engagement Programs Manager, OPRD</div>
                         <div>Conducted the post-dismissal call. Framed reflective truth as misconduct. Refused to acknowledge documented abuse, and issued the permanent dismissal without responding to direct concerns.</div>
                     </div>
                 </li>
