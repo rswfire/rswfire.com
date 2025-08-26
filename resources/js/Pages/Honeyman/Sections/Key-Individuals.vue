@@ -41,6 +41,8 @@
                 <div><em>Director, Oregon Parks &amp; Recreation Department</em></div>
                 <!-- <div>Received detailed evidence of systematic abuse and chose complete silence. Her non-response to documented institutional harm became institutional endorsement of misconduct.</div> -->
                 <div><Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="text-honeyman-600 underline">Read the Open Letter to Director Sumption →</Link></div>
+                <div><strong>Interim Note</strong>: I want to take a moment to thank Director Sumption for responding to my Open Letter.</div>
+                <div>I will provide an update after I've metabolized it.</div>
             </div>
 
         </div>
