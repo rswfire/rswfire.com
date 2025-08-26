@@ -39,10 +39,10 @@
             <div class="px-8">
                 <div class="mt-6"><strong>Lisa Sumption</strong></div>
                 <div><em>Director, Oregon Parks &amp; Recreation Department</em></div>
-                <!-- <div>Received detailed evidence of systematic abuse and chose complete silence. Her non-response to documented institutional harm became institutional endorsement of misconduct.</div> -->
+                <div>Received documentation of systematic volunteer abuse and responded with procedural language that acknowledged concerns while committing to no specific accountability measures.</div>
+                <div>By directing recorded misconduct into internal &quot;appropriate channels,&quot; she maintained institutional protection of those implicated in documented misconduct while appearing responsive to external pressure.</div>
                 <div><Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="text-honeyman-600 underline">Read the Open Letter to Director Sumption →</Link></div>
-                <div><strong>Interim Note</strong>: I want to take a moment to thank Director Sumption for responding to my Open Letter.</div>
-                <div>I will provide an update after I've metabolized it.</div>
+                <div><Link href="/fieldcraft/01K3J5AW1NGKN285PRRA4RBW6X" class="text-honeyman-600 underline">Read Director Sumption's Response &amp; Analysis →</Link></div>
             </div>
 
         </div>
