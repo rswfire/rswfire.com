@@ -12,16 +12,6 @@
 
             <HeaderContext/>
 
-            <!--
-            <div class="relative">
-                <div class="-mx-6 md:-mx-8">
-                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
-                </div>
-            </div>
-
-            <Announce-IVS/>
-            -->
-
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
                     <hr class="h-1 bg-honeyman-300 border-0 rounded" />
@@ -164,6 +154,14 @@
                 </div>
             </div>
 
+            <I-Held-My-Shape/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Footer/>
 
     </div>
@@ -176,13 +174,13 @@ import {Link} from "@inertiajs/vue3";
     import Hero from "@/Components/System/Hero.vue"
 
     import AnIntroduction from "@/Pages/Honeyman/Sections/An-Introduction.vue";
-    import AnnounceIVS from "@/Pages/Honeyman/Sections/Announce-IVS.vue";
     import CallWithAllisonWatson from "@/Pages/Honeyman/Sections/Call-With-Allison-Watson.vue";
     import DayUseMeeting from "@/Pages/Honeyman/Sections/Day-Use-Meeting.vue";
     import ExecutiveSummary from "@/Pages/Honeyman/Sections/Executive-Summary.vue";
     import FieldcraftRecords from "@/Pages/Honeyman/Sections/Fieldcraft-Records.vue";
     import Footer from "@/Pages/Honeyman/Sections/Footer.vue";
     import HeaderContext from "@/Pages/Honeyman/Sections/Header-Context.vue";
+    import IHeldMyShape from "@/Pages/Honeyman/Sections/I-Held-My-Shape.vue";
     import KeyIndividuals from "@/Pages/Honeyman/Sections/Key-Individuals.vue";
     import LessonsLearned from "@/Pages/Honeyman/Sections/Lessons-Learned.vue";
     import LetterToAllisonWatson from "@/Pages/Honeyman/Sections/Letter-To-Allison-Watson.vue";

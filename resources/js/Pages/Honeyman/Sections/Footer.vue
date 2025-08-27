@@ -12,12 +12,10 @@
         <div>It does not ask for repair.</div>
         <div>It exists so that the next distortion cannot pretend it was the first.</div>
 
-        <div class="mt-4"><Link href="/fieldcraft/01K3MW1QJVT3P4QCEK8MW5N07F" class="text-honeyman-600 hover:underline">&quot;I held my shape. Now hold yours.&quot;</Link></div>
         <div class="mt-4">🙃</div>
 
     </section>
 </template>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
 </script>
