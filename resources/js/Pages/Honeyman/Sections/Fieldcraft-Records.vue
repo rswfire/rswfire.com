@@ -2,7 +2,6 @@
     <section id="fieldcraft-records" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-w-full mx-auto">
             <h2 class="text-2xl font-semibold">FIELDCRAFT RECORDS</h2>
-            <div class="italic text-gray-600">BLOG ENTRIES WITH "HONEYMAN" TAG</div>
 
             <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <Link

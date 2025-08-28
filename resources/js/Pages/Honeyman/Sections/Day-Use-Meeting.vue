@@ -64,7 +64,7 @@
             </table>
             -->
 
-            <h3 class="mt-8 text-lg font-semibold">🎯 Why This Was Preserved</h3>
+            <h3 class="mt-8 text-lg font-semibold">WHY THIS WAS PRESERVED</h3>
 
             <div class="mt-4">Because what happened that day was not a misunderstanding.</div>
             <div>It was deliberate &mdash;</div>

@@ -2,7 +2,6 @@
     <section id="an-introduction" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">I HELD MY SHAPE</h2>
-            <div class="italic text-gray-600">BY ROBERT SAMUEL WHITE</div>
 
             <div class="mt-4">I held my shape</div>
             <div>when they pressed from all directions,</div>

@@ -3,7 +3,6 @@
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE STORY OF HONEYMAN</h2>
             <div class="italic text-gray-600">WHAT THEY DID. WHAT I SAW. WHAT I CARRIED.</div>
-            <div class="ml-4 italic text-gray-600">&mdash; BY SAM WHITE (MAY 29, 2025)</div>
 
             <div class="mt-4">I arrived at Honeyman State Park not to fill a shift, but to hold a field &mdash;</div>
             <div>a sovereign man in alignment, in service, not to authority, but to coherence.</div>

@@ -3,7 +3,6 @@
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE STORY OF OPRD</h2>
             <div class="italic text-gray-600">WHAT THEY REVEALED. HOW THEY RESPONDED. WHERE THEY STAND NOW.</div>
-            <div class="ml-4 italic text-gray-600">&mdash; BY SAM WHITE (AUGUST 26, 2025)</div>
 
             <div class="mt-4">This is not the story they wanted to tell.</div>
             <div class="mt-4">For five months, Oregon Parks &amp; Recreation Department maintained complete institutional silence about documented volunteer abuse. No acknowledgment. No investigation. No accountability. Just the strategic erasure that institutions deploy when truth becomes inconvenient.</div>
