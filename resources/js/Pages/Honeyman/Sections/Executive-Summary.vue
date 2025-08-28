@@ -41,9 +41,9 @@
             <h2 class="mt-8 text-xl font-semibold">THE INSTITUTIONAL RESPONSE</h2>
             <div class="mt-4">When I documented this treatment through internal channels, I was met with escalation rather than accountability:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Regional Level</strong>: Engagement Programs Manager Allison Watson reframed documented abuse as my behavioral problems.</li>
-                <li><strong>State Level</strong>: Director Lisa Sumption received detailed evidence and chose complete silence.</li>
+                <li><strong>State Level</strong>: Director Lisa Sumption received detailed evidence and responded with procedural language that acknowledged concerns while committing to no specific accountability measures.</li>
                 <li><strong>Final Result</strong>: Permanent dismissal from all Oregon State Parks volunteer programs.</li>
             </ul>
 
