@@ -10,7 +10,6 @@
             <div class="mt-4">This is not about retribution. This is about <strong>systemic integrity</strong>.</div>
             <div class="mt-4">It is here so others don't get erased. It is here so the next whistleblower isn't isolated. It is here because someone has to hold the line.</div>
             <div class="mt-4 italic font-bold">&quot;They tried to erase me, so I became unerasable, and I won't let them erase you either.&quot;</div>
-            <div class="ml-4 italic">&mdash; rsw@rswfire.com</div>
 
             <div class="mt-6 border-t border-gray-300 pt-4 text-center">
                 <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
