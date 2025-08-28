@@ -12,9 +12,13 @@
             <div class="mt-4">What should have been a minor communication issue became a sustained campaign of psychological pressure:</div>
 
             <ul class="list-disc list-outside ml-4">
-                <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
-                <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems.</li>
-                <li><strong>March</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt.</li>
+                <li><strong>Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
+                <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems, requiring me to document it with the &quot;Trust&quot; email.</li>
+                <li><strong>March 5</strong>: Orchestrated meeting where I was told to "chew glass and swallow it" and that I would never be given the benefit of the doubt. I recorded the entire meeting.</li>
+                <li><strong>Days Later</strong>: Engagement Programs Manager Allison Watson called warning me that recording was illegal in Oregon — institutional panic about documented evidence they couldn't control.</li>
+                <li><strong>March 18</strong>: When legal intimidation failed to eliminate recorded evidence, an unidentified operative was deployed to conduct covert assessment while I worked alone.</li>
+                <li><strong>March 24</strong>: Immediate dismissal six days before scheduled completion, using fabricated pretenses with no formal documentation.</li>
+                <li><strong>March 26</strong>: Permanent dismissal from all Oregon State Parks volunteer programs, explicitly citing my public speech about the abuse as the reason.</li>
             </ul>
 
             <h2 class="mt-8 text-xl font-semibold">THE COERCIVE MEETING</h2>
@@ -31,7 +35,7 @@
             </ul>
 
             <h2 class="mt-8 text-xl font-semibold">THE SETUP</h2>
-            <div class="mt-4">Six days before my removal, an unidentified man with no uniform or identification approached me while I was working alone. He interrogated me with personal questions about leadership treatment, then disappeared. When I reported this, it was hastily explained as &quot;IT photo documentation&quot; &mdash; yet no photos were ever produced.</div>
+            <div class="mt-4">Six days before my removal, following Allison's failed attempt to eliminate recorded evidence through legal intimidation, an unidentified man with no uniform or identification approached me while I was working alone. He interrogated me with personal questions about leadership treatment, then disappeared. When I reported this, it was hastily explained as &quot;IT photo documentation&quot; &mdash; yet no photos were ever produced.</div>
 
             <h2 class="mt-8 text-xl font-semibold">THE DISMISSAL</h2>
             <div class="mt-4">With less than one week remaining in my assignment, Ryan Warren called requesting another meeting. When I asked why, he became agitated and dismissed me over the phone &mdash; using a homeless man's lost journal as pretext, claiming I had made inappropriate comments about park staff. He arrived at my RV an hour later to collect keys and site documents, admitting on camera that no formal documentation existed for my removal.</div>
@@ -72,7 +76,4 @@
 </template>
 
 <script setup>
-
-import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
-import Para from "@/Components/System/Para.vue";
 </script>
