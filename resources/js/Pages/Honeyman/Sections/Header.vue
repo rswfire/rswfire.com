@@ -14,6 +14,7 @@
             <div class="mt-6 border-t border-gray-300 pt-4 text-center">
                 <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
                 <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">The Hidden Problem: On the Invisibility of Unpaid Labor Abuse →</Link></div>
+                <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
             </div>
 
         </div>
