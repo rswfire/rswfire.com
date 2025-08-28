@@ -10,7 +10,7 @@
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
-            <HeaderContext/>
+            <Header/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
@@ -179,7 +179,7 @@ import {Link} from "@inertiajs/vue3";
     import ExecutiveSummary from "@/Pages/Honeyman/Sections/Executive-Summary.vue";
     import FieldcraftRecords from "@/Pages/Honeyman/Sections/Fieldcraft-Records.vue";
     import Footer from "@/Pages/Honeyman/Sections/Footer.vue";
-    import HeaderContext from "@/Pages/Honeyman/Sections/Header-Context.vue";
+    import Header from "@/Pages/Honeyman/Sections/Header.vue";
     import IHeldMyShape from "@/Pages/Honeyman/Sections/I-Held-My-Shape.vue";
     import KeyIndividuals from "@/Pages/Honeyman/Sections/Key-Individuals.vue";
     import LessonsLearned from "@/Pages/Honeyman/Sections/Lessons-Learned.vue";
