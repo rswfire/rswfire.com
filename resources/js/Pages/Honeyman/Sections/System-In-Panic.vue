@@ -125,7 +125,7 @@
             <div class="ml-4">It collapsed because it was <strong>wrong</strong> &mdash; and someone was watching who couldn't be managed, broken, or disappeared.</div>
 
             <div class="mt-8 italic text-gray-600 text-center">
-                Every action after the recorded meeting was institutional panic masquerading as procedure.<br/>They had already lost &mdash; they just didn't know it yet.
+                Every action after the recorded meeting was institutional panic masquerading as procedure.<br/>They had already lost &mdash; every escalation just added to the existing record.
             </div>
 
         </div>
