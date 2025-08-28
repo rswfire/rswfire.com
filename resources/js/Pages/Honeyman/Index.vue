@@ -66,6 +66,14 @@
                 </div>
             </div>
 
+            <The-Turning-Point/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
             <Logan/>
 
             <div class="relative">
@@ -176,7 +184,7 @@
 </template>
 
 <script setup>
-import {Link} from "@inertiajs/vue3";
+
     import Content from "@/Components/System/Content.vue"
     import Hero from "@/Components/System/Hero.vue"
 
@@ -199,6 +207,7 @@ import {Link} from "@inertiajs/vue3";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
     import TheStoryOfHoneyman from "@/Pages/Honeyman/Sections/The-Story-of-Honeyman.vue";
     import TheStoryOfOPRD from "@/Pages/Honeyman/Sections/The-Story-of-OPRD.vue";
+    import TheTurningPoint from "@/Pages/Honeyman/Sections/The-Turning-Point.vue";
     import TheUnidentifiedMan from "@/Pages/Honeyman/Sections/The-Unidentified-Man.vue";
 
     defineProps({
