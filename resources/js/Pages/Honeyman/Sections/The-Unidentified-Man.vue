@@ -14,7 +14,7 @@
             <div class="mt-4">Within days, I was removed from my position using a <strong>homeless man's journal</strong> as pretext.</div>
             <div class="mt-4">Five months after my permanent dismissal from the Oregon State Parks volunteer program, I sent the following letter to Director Lisa Sumption. I had given the institution multiple opportunities to address documented harm through internal channels. All had been met with silence.</div>
             <div class="mt-4">This letter represents the moment I moved from private accountability to institutional pressure. It documents not just the encounter with the unidentified operative, but the broader pattern of covert tactics, systematic retaliation, and institutional protection of misconduct.</div>
-            <div class="mt-4">The response to this letter would determine whether Oregon State Parks was capable of ethical leadership — or whether external accountability would become necessary.</div>
+            <div class="mt-4">The response to this letter would determine whether Oregon State Parks was capable of ethical leadership &mdash; or whether external accountability would become necessary.</div>
             <div class="mt-4">This letter has gone unanswered.</div>
 
             <h3 class="mt-8 text-lg font-semibold">📝 Letter to Director Lisa Sumption &mdash; August 16, 2025</h3>
@@ -28,9 +28,9 @@
 
                 <div class="mt-4">He was not in uniform. He offered no name. He carried no identification.</div>
 
-                <div class="mt-4">He said he was with the park service and that he was taking photos of the yurts — while they were still dirty, mid-clean, with all doors propped open.</div>
+                <div class="mt-4">He said he was with the park service and that he was taking photos of the yurts &mdash; while they were still dirty, mid-clean, with all doors propped open.</div>
 
-                <div class="mt-4">Then, without transition, he pressed me — hard and fast — with direct personal questions:</div>
+                <div class="mt-4">Then, without transition, he pressed me &mdash; hard and fast &mdash; with direct personal questions:</div>
                 <div>How do you like the park?</div>
                 <div>How are you being treated here?</div>
                 <div>Is the leadership treating you well?</div>
@@ -39,11 +39,11 @@
                 <div>It was not polite.</div>
                 <div class="mt-4">It was a calculated psychological pressure test, delivered by a stranger while I was isolated and working. And while all the rangers were away for a regional event.</div>
 
-                <div class="mt-4">I recognized it in real time. It was disorienting — because it was meant to be. It didn’t read like routine oversight. It read like a probe. It read like aggression. When I didn’t answer, he asked again — reframed the question, stepped in closer. It was intimate. And it was forced.</div>
+                <div class="mt-4">I recognized it in real time. It was disorienting &mdash; because it was meant to be. It didn’t read like routine oversight. It read like a probe. It read like aggression. When I didn’t answer, he asked again — reframed the question, stepped in closer. It was intimate. And it was forced.</div>
 
                 <div class="mt-4">I asked Kati about it because I wanted it documented (see attached thread). I understood what this was. She had an immediate justification: he was &quot;from I.T.&quot; taking photos for site documentation. She praised how I &quot;handled it.&quot;</div>
 
-                <div class="mt-4">That wasn’t a reassurance. That was a confirmation that I’d been observed and evaluated — and that the probe had failed to elicit the intended response.</div>
+                <div class="mt-4">That wasn’t a reassurance. That was a confirmation that I’d been observed and evaluated &mdash; and that the probe had failed to elicit the intended response.</div>
 
                 <div class="mt-4">Let’s name what this was:</div>
 
@@ -56,7 +56,7 @@
                 <div class="mt-4">Just Kati &mdash; tying off the thread as quickly as possible.</div>
 
                 <div class="mt-4">It was a setup. It failed.</div>
-                <div>And within DAYS, I was removed from my role — using a homeless man’s journal as pretext.</div>
+                <div>And within DAYS, I was removed from my role &mdash; using a homeless man’s journal as pretext.</div>
                 <div>The irony is grotesque.</div>
 
                 <div class="mt-4">So I’ll ask directly:</div>
@@ -81,7 +81,7 @@
                 <div class="mt-4">That silence is now part of the record.</div>
                 <div>And so is this message.</div>
 
-                <div class="mt-4">You’ve left the same people in charge at your flagship campground — even after direct, documented, and now expanded evidence of unethical conduct.</div>
+                <div class="mt-4">You’ve left the same people in charge at your flagship campground &mdash; even after direct, documented, and now expanded evidence of unethical conduct.</div>
 
                 <div class="mt-4">What happened at Honeyman is not behind you.</div>
                 <div>It is with you now.</div>
@@ -105,12 +105,12 @@
                 <div class="mt-4">This email chain may appear mundane on the surface.</div>
                 <div>It is not.</div>
 
-                <div class="mt-4">What it documents is the outer shell of an orchestrated event — a baited encounter that I now know, without doubt, was sent by Kati.</div>
+                <div class="mt-4">What it documents is the outer shell of an orchestrated event &mdash; a baited encounter that I now know, without doubt, was sent by Kati.</div>
 
                 <div class="mt-4">A man appeared while I was cleaning. No identification. No uniform.</div>
-                <div>He claimed to be taking photos of the yurts — which were still dirty, mid-clean, doors propped open. No one does that. That was the first tell.</div>
+                <div>He claimed to be taking photos of the yurts &mdash; which were still dirty, mid-clean, doors propped open. No one does that. That was the first tell.</div>
 
-                <div class="mt-4">He confronted me immediately with invasive, personal questions — not park-related, not procedural.</div>
+                <div class="mt-4">He confronted me immediately with invasive, personal questions &mdash; not park-related, not procedural.</div>
                 <div>When I didn’t engage, he turned and left quickly.</div>
 
                 <div class="mt-4">Later, Kati confirmed he was &quot;with IT&quot; and praised how I &quot;handled it.&quot;</div>
@@ -189,11 +189,11 @@
 
                 <div class="mt-4">I wanted to check in about something from today.</div>
 
-                <div class="mt-4">While I was working, a man showed up, said he was with the park service, and started taking photos of the yurts while they were still dirty, since I was in the process of cleaning them. I engaged him briefly—asked if he had any questions—but the interaction felt a little off.</div>
+                <div class="mt-4">While I was working, a man showed up, said he was with the park service, and started taking photos of the yurts while they were still dirty, since I was in the process of cleaning them. I engaged him briefly &mdash; asked if he had any questions—but the interaction felt a little off.</div>
 
-                <div class="mt-4">He didn’t introduce himself by name, wasn’t in uniform, and had no visible identification. He only said he was with the park service and that they “needed photos of some of them still.” Then he started asking me questions—how I like the park, how I’m being treated here. It stood out, especially with the timing, since all the rangers were away for meetings.</div>
+                <div class="mt-4">He didn’t introduce himself by name, wasn’t in uniform, and had no visible identification. He only said he was with the park service and that they “needed photos of some of them still.” Then he started asking me questions &mdash; how I like the park, how I’m being treated here. It stood out, especially with the timing, since all the rangers were away for meetings.</div>
 
-                <div class="mt-4">Was this an official visit that you're aware of? If so, no problem—just seemed a bit odd, and I wasn’t sure if I should have handled it differently. If not, I wanted to flag it in case it’s something to be aware of. Let me know if you have any insight.</div>
+                <div class="mt-4">Was this an official visit that you're aware of? If so, no problem &mdash; just seemed a bit odd, and I wasn’t sure if I should have handled it differently. If not, I wanted to flag it in case it’s something to be aware of. Let me know if you have any insight.</div>
 
                 <div class="mt-4">Thanks,</div>
 

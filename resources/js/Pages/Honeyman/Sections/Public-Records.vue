@@ -28,10 +28,10 @@
             <div class="mt-4">I am requesting:</div>
 
             <ul class="list-disc list-outside ml-8">
-                <li>The policies that justified my removal — if they exist.</li>
-                <li>The records of complaints — if they were ever filed.</li>
-                <li>The conversations between staff and administration — if they were ever honest.</li>
-                <li>The institutional reactions to my archive — now that the silence is no longer working.</li>
+                <li>The policies that justified my removal &mdash; if they exist.</li>
+                <li>The records of complaints &mdash; if they were ever filed.</li>
+                <li>The conversations between staff and administration &mdash; if they were ever honest.</li>
+                <li>The institutional reactions to my archive &mdash; now that the silence is no longer working.</li>
             </ul>
 
             <div class="mt-4">I have also requested a fee waiver under Oregon law, on the grounds of public interest.</div>
