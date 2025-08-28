@@ -105,7 +105,7 @@
             <div class="ml-4">They thought they were managing a disposable volunteer. They were actually performing for a strategic observer with documentation skills, platform access, and uncompromising ethical boundaries.</div>
 
             <div class="mt-4"><strong>This was about institutional coordination above park level.</strong></div>
-            <div class="ml-4">Covert operative deployment required administrative authorization beyond what local managers could implement independently. State-level resources were allocated to eliminate a volunteer who maintained comprehensive documentation capability.</div>
+            <div class="ml-4">Covert operative deployment likely required administrative authorization beyond what local managers could implement independently. State-level resources were allocated to eliminate a volunteer who maintained comprehensive documentation capability.</div>
 
             <div class="mt-4"><strong>This was about power miscalculation.</strong></div>
             <div class="ml-4">They wielded institutional authority expecting submission. Instead, they created documentation of systematic abuse that would outlast their ability to contain it.</div>
