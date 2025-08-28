@@ -15,7 +15,7 @@
                 <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
                 <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems, requiring me to document it with the &quot;Trust&quot; email.</li>
                 <li><strong>March 5</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt. I recorded the entire meeting.</li>
-                <li><strong>Days Later</strong>: Engagement Programs Manager Allison Watson called warning me that recording was illegal in Oregon — institutional panic about documented evidence they couldn't control.</li>
+                <li><strong>March 10</strong>: Engagement Programs Manager Allison Watson called warning me that recording was illegal in Oregon — institutional panic about documented evidence they couldn't control. I recorded this also.</li>
                 <li><strong>March 18</strong>: When legal intimidation failed to eliminate recorded evidence, an unidentified operative was deployed to conduct covert assessment while I worked alone.</li>
                 <li><strong>March 24</strong>: Immediate dismissal six days before scheduled completion, using fabricated pretenses with no formal documentation.</li>
                 <li><strong>March 26</strong>: Permanent dismissal from all Oregon State Parks volunteer programs, explicitly citing my public speech about the abuse as the reason.</li>
