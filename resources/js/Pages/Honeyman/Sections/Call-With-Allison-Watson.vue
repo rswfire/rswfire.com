@@ -18,7 +18,7 @@
             <div>a performance that frames legitimacy as disruption.</div>
 
             <div class="mt-4">In this call, you will hear:</div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>Vague, unverifiable third-party reports used to justify my removal.</li>
                 <li>Reflective statements reframed as misconduct.</li>
                 <li>Complete refusal to engage the March 5 coercion meeting.</li>

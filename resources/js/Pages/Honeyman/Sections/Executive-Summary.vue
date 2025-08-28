@@ -11,7 +11,7 @@
             <h2 class="mt-8 text-xl font-semibold">THE ESCALATION</h2>
             <div class="mt-4">What should have been a minor communication issue became a sustained campaign of psychological pressure:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
                 <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems.</li>
                 <li><strong>March</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt.</li>
@@ -21,7 +21,7 @@
             <div class="mt-4">On March 5, Ryan Warren and Kati Baker summoned me to a public picnic table for over an hour of psychological pressure designed to force my resignation. The entire meeting was recorded.</div>
             <div>Key moments include:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>Ryan telling me to &quot;chew glass and swallow it&quot; as leadership advice.</li>
                 <li>Admission that I was never given the benefit of the doubt from day one.</li>
                 <li>Repeated suggestions that I should &quot;just leave&quot; if uncomfortable.</li>
@@ -50,7 +50,7 @@
             <h2 class="mt-8 text-xl font-semibold">THE EVIDENCE</h2>
             <div class="mt-4">This archive contains:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>60+ minutes of recorded meetings showing systematic psychological pressure.</li>
                 <li>Video documentation of dismissal without cause or paperwork.</li>
                 <li>Email correspondence revealing coordinated campaigns against me.</li>

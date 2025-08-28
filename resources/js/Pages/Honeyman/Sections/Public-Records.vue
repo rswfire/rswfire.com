@@ -14,7 +14,7 @@
 
             <div class="mt-4">Since that release, the field has shifted:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>Thousands have read the archive.</li>
                 <li>Hundreds have listened to the March 5 recording.</li>
                 <li>Volunteers across the coast have begun discussing what’s happening behind the curtain.</li>
@@ -27,7 +27,7 @@
 
             <div class="mt-4">I am requesting:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>The policies that justified my removal — if they exist.</li>
                 <li>The records of complaints — if they were ever filed.</li>
                 <li>The conversations between staff and administration — if they were ever honest.</li>
@@ -38,7 +38,7 @@
 
             <div class="mt-4">Because it is in the public interest to know:</div>
 
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li>How volunteers are treated.</li>
                 <li>How harm is managed.</li>
                 <li>And whether Oregon State Parks is capable of self-reflection.</li>

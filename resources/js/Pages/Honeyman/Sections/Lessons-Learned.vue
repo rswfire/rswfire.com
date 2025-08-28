@@ -24,7 +24,7 @@
             <div class="mt-4"><strong>Most people don't have my advantages</strong>. I had decades of independence as a freelancer, technical skills, platform access, and years of practice holding boundaries under pressure. But everyone can develop some version of these practices:</div>
 
             <div class="mt-4"><strong>Document Everything</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Save all communications</strong>. Screenshots, emails, text threads. Even casual conversations.</li>
                 <li><strong>Note dates, times, witnesses</strong>. You don't need recordings &mdash; just consistent record-keeping.</li>
                 <li><strong>Write summary emails</strong>. &quot;Thanks for our conversation today about X. Just to confirm, you said Y and we agreed on Z.&quot;</li>
@@ -32,7 +32,7 @@
             </ul>
 
             <div class="mt-4"><strong>Recognize the Patterns Early</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Trust your body</strong>. If interactions leave you feeling destabilized, confused, or questioning yourself &mdash; that's data.</li>
                 <li><strong>Watch for isolation tactics</strong>. Are your normal support people suddenly unavailable? Are you being excluded from routine communications?</li>
                 <li><strong>Notice reframing</strong>. When your reasonable concerns get pathologized as &quot;attitude problems&quot; or &quot;communication issues.&quot;</li>
@@ -40,7 +40,7 @@
             </ul>
 
             <div class="mt-4"><strong>Maintain Your Integrity Architecture</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Know your non-negotiables</strong>. What values won't you compromise? What treatment won't you accept?</li>
                 <li><strong>Communicate clearly, without emotion</strong>. State facts. Ask direct questions. Don't justify your humanity.</li>
                 <li><strong>Don't absorb their narrative</strong>. When they tell you you're the problem, check with people outside the system.</li>
@@ -48,7 +48,7 @@
             </ul>
 
             <div class="mt-4"><strong>Build External Accountability</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Find witnesses outside the institution</strong>. Friends, family, other volunteers who can reality-check your experience.</li>
                 <li><strong>Document to people who care about you</strong>. Regular check-ins where you share what's happening.</li>
                 <li><strong>Know your resources</strong>. Labor boards, ombudsman offices, professional organizations, legal aid.</li>
@@ -59,21 +59,21 @@
             <div class="mt-4"><strong>If you recognize these patterns in your situation</strong>:</div>
 
             <div class="mt-4"><strong>Don't Fragment</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Resist the urge to split yourself</strong>. Don't become &quot;professional you&quot; vs &quot;real you.&quot; Stay integrated.</li>
                 <li><strong>Don't apologize for existing</strong>. Your depth, your questions, your humanity are not problems to be managed.</li>
                 <li><strong>Don't accept their reframing</strong>. If you're being called &quot;difficult,&quot; ask for specific examples. Demand clarity.</li>
             </ul>
 
             <div class="mt-4"><strong>Document the Pattern</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Name what's happening</strong>. &quot;I'm experiencing retaliation for raising concerns about X.&quot;</li>
                 <li><strong>Connect the dots</strong>. Show how isolated incidents form a coordinated campaign.</li>
                 <li><strong>Preserve evidence</strong>. They will try to disappear documentation after they remove you.</li>
             </ul>
 
             <div class="mt-4"><strong>Seek External Perspective</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Talk to people outside the system</strong>. Get reality checks from friends, mentors, other professionals.</li>
                 <li><strong>Research the institution</strong>. Are others having similar experiences? Is this a known pattern?</li>
                 <li><strong>Consult experts</strong>. Employment lawyers, HR professionals, ombudsman offices often offer free consultations.</li>
@@ -81,7 +81,7 @@
             </ul>
 
             <div class="mt-4"><strong>Protect Yourself</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Don't give them ammunition</strong>. Stay professional even when they're not.</li>
                 <li><strong>Prepare for escalation</strong>. They may accelerate timelines once they realize you're documenting.</li>
                 <li><strong>Have multiple exit strategies</strong>. Don't let them corner you into accepting abuse because you have nowhere else to go. Especially in volunteer contexts.</li>
@@ -91,7 +91,7 @@
             <div class="mt-4"><strong>Even if you survive the immediate situation, institutional fragmentation leaves lasting damage:</strong></div>
 
             <div class="mt-4"><strong>Recognize the Symptoms</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Self-doubt about your own perceptions</strong> &mdash; &quot;Maybe I was being too sensitive.&quot;</li>
                 <li><strong>Hypervigilance in professional settings</strong> &mdash; Scanning for threat, unable to relax.</li>
                 <li><strong>Internalized criticism</strong> &mdash; Adopting their narrative about your &quot;problematic&quot; behavior.</li>
@@ -99,7 +99,7 @@
             </ul>
 
             <div class="mt-4"><strong>Rebuild Your Integration</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Reconnect with people who see you clearly</strong>. Spend time with friends who know your worth.</li>
                 <li><strong>Practice expressing your full self</strong>. Don't let their cramped vision of professionalism shrink you permanently.</li>
                 <li><strong>Tell your story to safe people</strong>. Speaking truth helps you reclaim your narrative.</li>
@@ -110,21 +110,21 @@
             <div class="mt-4"><strong>If you see someone being targeted by institutional fragmentation:</strong></div>
 
             <div class="mt-4"><strong>Don't Abandon Them</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Stay in contact</strong>. Isolation is the primary weapon. Your presence disrupts their strategy.</li>
                 <li><strong>Believe their account</strong>. Institutional gaslighting is real. Trust their perception over official narratives.</li>
                 <li><strong>Offer concrete support</strong>. Documentation help, reference checks, job leads, financial assistance.</li>
             </ul>
 
             <div class="mt-4"><strong>Document What You See</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Be a witness</strong>. Note patterns, save communications, offer to testify if needed.</li>
                 <li><strong>Don't participate in isolation</strong>. If leadership asks you to distance yourself, question why.</li>
                 <li><strong>Speak up when safe</strong>. Challenge reframing, ask for specifics, demand accountability.</li>
             </ul>
 
             <div class="mt-4"><strong>Address the System</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Name the pattern publicly when possible</strong>. &quot;This is the third person this year who's had issues with Manager X.&quot;</li>
                 <li><strong>Support policy changes</strong>. Advocate for better documentation, grievance procedures, oversight.</li>
                 <li><strong>Protect future targets</strong>. Your silence enables the pattern to continue.</li>
@@ -145,7 +145,7 @@
 
             <h2 class="mt-8 text-xl font-semibold">RESOURCES</h2>
             <div class="mt-4"><strong>If you're experiencing institutional retaliation:</strong></div>
-            <ul class="list-disc list-inside ml-4">
+            <ul class="list-disc list-outside ml-4">
                 <li><strong>Know Your Rights</strong>: <a class="underline text-green-600" href="https://www.whistleblowers.gov/" target="_blank">Department of Labor Whistleblower Protection</a></li>
                 <li><strong>Document Everything</strong>: <a class="underline text-green-600" href="https://www.usa.gov/job-discrimination-harassment" target="_blank">Discrimination, Harassment, and Retaliation</a></li>
                 <li><strong>Legal Support</strong>: <a class="underline text-green-600" href="https://www.nela.org/" target="_blank">National Employment Lawyers Association</a></li>
