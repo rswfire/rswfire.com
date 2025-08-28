@@ -1,7 +1,7 @@
 <template>
     <section id="an-introduction" class="border-t border-gray-300">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">AN INTRODUCTION</h2>
+            <h2 class="text-2xl font-semibold">A NOTE ABOUT ETHICS</h2>
 
             <div class="mt-4">I thought ethics were the rulebook.</div>
             <div class="mt-4">I approached Oregon State Parks believing that basic human decency, professional accountability, and institutional integrity were shared values &mdash; the foundation we all operated from. I assumed that documenting misconduct would lead to correction, that truth-telling would be welcomed, that maintaining ethical boundaries was not just acceptable but expected.</div>

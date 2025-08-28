@@ -54,9 +54,7 @@
 
             <div class="mt-4">To those still inside the institution: This isn’t an attack. It’s an opportunity. The question is whether anyone will rise to meet it.</div>
 
-            <div class="mt-4"><Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="text-honeyman-600 underline">View the Public Records Request</Link></div>
-
-            <div class="mt-4">🜁</div>
+            <div class="mt-4"><Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="text-honeyman-600 hover:underline">View the Public Records Request →</Link></div>
 
         </div>
 
