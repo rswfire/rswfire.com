@@ -11,10 +11,10 @@
             <h2 class="mt-8 text-xl font-semibold">THE ESCALATION</h2>
             <div class="mt-4">What should have been a minor communication issue became a sustained campaign of psychological pressure:</div>
 
-            <ul class="list-disc list-outside ml-4">
-                <li><strong>Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
+            <ul class="list-disc list-outside ml-8">
+                <li><strong>The Same Day</strong>: Park Manager Ryan Warren confronted me alone, cataloguing every minor mistake from my first week as a new volunteer.</li>
                 <li><strong>February</strong>: Systematic undermining of my supervisor relationships and isolation from normal support systems, requiring me to document it with the &quot;Trust&quot; email.</li>
-                <li><strong>March 5</strong>: Orchestrated meeting where I was told to "chew glass and swallow it" and that I would never be given the benefit of the doubt. I recorded the entire meeting.</li>
+                <li><strong>March 5</strong>: Orchestrated meeting where I was told to &quot;chew glass and swallow it&quot; and that I would never be given the benefit of the doubt. I recorded the entire meeting.</li>
                 <li><strong>Days Later</strong>: Engagement Programs Manager Allison Watson called warning me that recording was illegal in Oregon — institutional panic about documented evidence they couldn't control.</li>
                 <li><strong>March 18</strong>: When legal intimidation failed to eliminate recorded evidence, an unidentified operative was deployed to conduct covert assessment while I worked alone.</li>
                 <li><strong>March 24</strong>: Immediate dismissal six days before scheduled completion, using fabricated pretenses with no formal documentation.</li>
@@ -25,7 +25,7 @@
             <div class="mt-4">On March 5, Ryan Warren and Kati Baker summoned me to a public picnic table for over an hour of psychological pressure designed to force my resignation. The entire meeting was recorded.</div>
             <div>Key moments include:</div>
 
-            <ul class="list-disc list-outside ml-4">
+            <ul class="list-disc list-outside ml-8">
                 <li>Ryan telling me to &quot;chew glass and swallow it&quot; as leadership advice.</li>
                 <li>Admission that I was never given the benefit of the doubt from day one.</li>
                 <li>Repeated suggestions that I should &quot;just leave&quot; if uncomfortable.</li>
@@ -45,7 +45,7 @@
             <h2 class="mt-8 text-xl font-semibold">THE INSTITUTIONAL RESPONSE</h2>
             <div class="mt-4">When I documented this treatment through internal channels, I was met with escalation rather than accountability:</div>
 
-            <ul class="list-disc list-outside ml-4">
+            <ul class="list-disc list-outside ml-8">
                 <li><strong>Regional Level</strong>: Engagement Programs Manager Allison Watson reframed documented abuse as my behavioral problems.</li>
                 <li><strong>State Level</strong>: Director Lisa Sumption received detailed evidence and responded with procedural language that acknowledged concerns while committing to no specific accountability measures.</li>
                 <li><strong>Final Result</strong>: Permanent dismissal from all Oregon State Parks volunteer programs.</li>
@@ -54,7 +54,7 @@
             <h2 class="mt-8 text-xl font-semibold">THE EVIDENCE</h2>
             <div class="mt-4">This archive contains:</div>
 
-            <ul class="list-disc list-outside ml-4">
+            <ul class="list-disc list-outside ml-8">
                 <li>60+ minutes of recorded meetings showing systematic psychological pressure.</li>
                 <li>Video documentation of dismissal without cause or paperwork.</li>
                 <li>Email correspondence revealing coordinated campaigns against me.</li>
