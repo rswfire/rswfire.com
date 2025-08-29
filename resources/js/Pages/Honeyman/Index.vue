@@ -42,6 +42,7 @@
                 </div>
             </div>
 
+            <!--
             <Public-Records/>
 
             <div class="relative">
@@ -49,6 +50,7 @@
                     <hr class="h-1 bg-honeyman-300 border-0 rounded" />
                 </div>
             </div>
+            -->
 
             <An-Introduction/>
 
