@@ -1,7 +1,50 @@
 <template>
     <section id="fieldcraft-records">
         <div class="my-8 prose prose-neutral max-w-full mx-auto">
-            <h2 class="text-2xl font-semibold">{{ title || 'FIELDCRAFT RECORDS' }}</h2>
+            <h2 class="text-2xl font-semibold text-center">{{ title || 'FIELDCRAFT RECORDS' }}</h2>
+
+            <!-- Results info -->
+            <div v-if="filteredEntries.length > 0" class="text-center text-sm text-gray-500 mt-2">
+                Showing {{ ((currentPage - 1) * perPage) + 1 }} - {{ Math.min(currentPage * perPage, filteredEntries.length) }} of {{ filteredEntries.length }} Entries
+            </div>
+
+            <div v-else class="text-center text-gray-500 mt-8">
+                No entries found{{ searchKeywords ? ` for "${searchKeywords.join(', ')}"` : '' }}
+            </div>
+
+            <!-- Pagination Controls -->
+            <div v-if="totalPages > 1" class="flex items-center justify-center space-x-2 mt-2">
+                <button
+                    @click="previousPage"
+                    :disabled="currentPage === 1"
+                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    Previous
+                </button>
+
+                <div class="flex space-x-1">
+                    <button
+                        v-for="page in visiblePages"
+                        :key="page"
+                        @click="goToPage(page)"
+                        :class="{
+                            'bg-gray-900 text-white': page === currentPage,
+                            'bg-white text-gray-700 hover:bg-gray-50': page !== currentPage
+                        }"
+                        class="px-3 py-1 text-sm border border-gray-300 rounded-md"
+                    >
+                        {{ page }}
+                    </button>
+                </div>
+
+                <button
+                    @click="nextPage"
+                    :disabled="currentPage === totalPages"
+                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    Next
+                </button>
+            </div>
 
             <div v-if="filteredEntries.length > 0" class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <Link
@@ -37,48 +80,6 @@
                 </Link>
             </div>
 
-            <!-- Pagination Controls -->
-            <div v-if="totalPages > 1" class="flex items-center justify-center space-x-2 mt-8">
-                <button
-                    @click="previousPage"
-                    :disabled="currentPage === 1"
-                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                    Previous
-                </button>
-
-                <div class="flex space-x-1">
-                    <button
-                        v-for="page in visiblePages"
-                        :key="page"
-                        @click="goToPage(page)"
-                        :class="{
-                            'bg-gray-900 text-white': page === currentPage,
-                            'bg-white text-gray-700 hover:bg-gray-50': page !== currentPage
-                        }"
-                        class="px-3 py-1 text-sm border border-gray-300 rounded-md"
-                    >
-                        {{ page }}
-                    </button>
-                </div>
-
-                <button
-                    @click="nextPage"
-                    :disabled="currentPage === totalPages"
-                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                    Next
-                </button>
-            </div>
-
-            <!-- Results info -->
-            <div v-if="filteredEntries.length > 0" class="text-center text-sm text-gray-500 mt-4">
-                Showing {{ ((currentPage - 1) * perPage) + 1 }} - {{ Math.min(currentPage * perPage, filteredEntries.length) }} of {{ filteredEntries.length }} entries
-            </div>
-
-            <div v-else class="text-center text-gray-500 mt-8">
-                No entries found{{ searchKeywords ? ` for "${searchKeywords.join(', ')}"` : '' }}
-            </div>
         </div>
     </section>
 </template>
