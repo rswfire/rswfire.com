@@ -6,6 +6,7 @@
                 <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
                 <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">The Hidden Problem: On the Invisibility of Unpaid Labor Abuse →</Link></div>
                 <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
+                <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
             </div>
 
             <div class="mt-4">This archive is not a monument to survival. It is a demand for <strong>structural protection</strong>.</div>
