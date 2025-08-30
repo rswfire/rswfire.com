@@ -6,15 +6,26 @@
             <div class="flex items-center space-x-2 py-2">
 
                 <!-- Flame + rswfire.com block -->
-                <div class="flex items-center space-x-2 pl-2 pr-4 py-0 rounded-full bg-orange-50 border border-orange-200">
+                <div class="group flex items-center space-x-2 pl-2 pr-4 py-0 rounded-full bg-orange-50 border border-orange-200 transition-all duration-200">
+
+                    <!-- Flame Container -->
                     <div class="w-10 h-10 flex items-center justify-center rounded-full relative">
-                        <div class="absolute w-full h-full rounded-full bg-orange-200 opacity-50 animate-ping"></div>
+
+                        <!-- Hover-only Pulse -->
+                        <div class="absolute w-full h-full rounded-full bg-orange-200 opacity-50 animate-ping hidden group-hover:block"></div>
+
+                        <!-- Flame Icon -->
                         <div class="relative text-lg leading-none text-orange-600">🔥</div>
                     </div>
+
+                    <!-- Text -->
                     <div class="text-sm font-semibold tracking-tight text-orange-800">
                         <Link href="/">RSWFIRE.COM</Link>
                     </div>
+
                 </div>
+
+
 
                 <!-- Nav icons (visually separate group) -->
                 <nav class="flex items-center gap-2 px-2 py-1">
@@ -57,7 +68,27 @@
                             :pauseOnHover="true"
                             :speed="60"
                         >
-                            🔥 &quot;In a forest pitch dark, glowed the tiniest spark. It burst into a flame.&quot; &mdash; Björk
+                            🔥 <span class="italic text-gray-700">&quot;In a forest pitch dark, glowed the tiniest spark. It burst into a flame.&quot;</span>
+                            <span class="text-gray-600">&nbsp;&mdash;&nbsp;Björk</span>
+
+                            <span class="mx-2">&nbsp;|&nbsp;</span>
+
+                            🌳 <span class="text-gray-700">The&nbsp;</span>
+                            <Link href="/honeyman" class="text-honeyman-600 font-semibold hover:underline">
+                                Honeyman Archive
+                            </Link>
+                            <span class="text-gray-700">&nbsp;is now completed. We await updates on the public records request.</span>
+
+                            <span class="mx-2">&nbsp;|&nbsp;</span>
+
+                            🪙 <span class="text-gray-700">Please consider&nbsp;</span>
+                            <Link href="/contribute" class="text-orange-600 font-semibold hover:underline">
+                                Contributions
+                            </Link>
+                            <span class="text-gray-700">&nbsp;to this open source project.</span>
+
+                            <span class="mx-2">&nbsp;|&nbsp;</span>
+
                         </Vue3Marquee>
                     </div>
                 </div>
