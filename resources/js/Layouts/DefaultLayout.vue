@@ -35,15 +35,15 @@
         </div>
 
         <MobileNav v-if="menuOpen" @close="menuOpen = false" />
-        <div class="m-0 p-0">
+        <main class="mx-auto max-w-6xl px-4 sm:px-6 py-4">
             <slot />
-        </div>
+        </main>
     </div>
 
     <div class="hidden md:block">
-        <div class="pt-[125px] mx-auto max-w-6xl">
+        <main class="pt-[125px] mx-auto max-w-6xl px-6 lg:px-8">
             <slot />
-        </div>
+        </main>
     </div>
 
 </template>
