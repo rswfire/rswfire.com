@@ -104,7 +104,7 @@
                     <div v-else>
                         <Link
                                 href="/login"
-                                class="flex items-center gap-2 text-sm font-semibold text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1 rounded-full border border-orange-200 transition focus:outline-none focus:ring-2 focus:ring-orange-300"
+                                class="flex items-center gap-2 text-xs font-semibold text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1 rounded-full border border-orange-200 transition focus:outline-none focus:ring-2 focus:ring-orange-300"
                         >
                             <Icon name="Key" color="text-orange-600" class="w-4 h-4" />
                             <span class="hidden sm:inline">Authenticate</span>
