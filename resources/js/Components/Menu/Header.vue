@@ -63,33 +63,38 @@
 
                 <div class="flex-1 flex justify-center overflow-hidden whitespace-nowrap">
                     <div class="w-full max-w-[800px]">
-                        <Vue3Marquee
-                            class="text-xs text-black font-medium leading-tight"
-                            :pauseOnHover="true"
-                            :speed="60"
-                        >
-                            🔥 <span class="italic text-gray-700">&quot;In a forest pitch dark, glowed the tiniest spark. It burst into a flame.&quot;</span>
-                            <span class="text-gray-600">&nbsp;&mdash;&nbsp;Björk</span>
 
-                            <span class="mx-2">&nbsp;|&nbsp;</span>
+                        <Ticker :speedPxPerSec="47" :gapPx="24" :respectReducedMotion="false" class="text-xs text-black font-medium leading-tight">
+  <span class="inline-flex items-center">
+    🔥
+    <span class="italic text-gray-700 ml-2">“In a forest pitch dark, glowed the tiniest spark. It burst into a flame.”</span>
+    <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
+  </span>
 
-                            🌳 <span class="text-gray-700">The&nbsp;</span>
-                            <Link href="/honeyman" class="text-honeyman-600 font-semibold hover:underline">
-                                Honeyman Archive
-                            </Link>
-                            <span class="text-gray-700">&nbsp;is now completed. We await updates on the public records request.</span>
+                            <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
-                            <span class="mx-2">&nbsp;|&nbsp;</span>
+                            <span class="inline-flex items-center text-gray-700">
+    🌳 <span class="ml-2">The</span>
+    <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
+      Honeyman Archive
+    </Link>
+                                <span class="ml-1">is now complete. We await updates on the <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="ml-1 text-honeyman-600 font-semibold hover:underline">public records request</Link>.</span>
+  </span>
 
-                            🪙 <span class="text-gray-700">Please consider&nbsp;</span>
-                            <Link href="/contribute" class="text-orange-600 font-semibold hover:underline">
-                                Contributions
-                            </Link>
-                            <span class="text-gray-700">&nbsp;to this open source project.</span>
+                            <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
-                            <span class="mx-2">&nbsp;|&nbsp;</span>
+                            <span class="inline-flex items-center text-gray-700">
+    🪙 <span class="ml-2">Please consider</span>
+    <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
+      contributing
+    </Link>
+    <span class="ml-1">to this open-source project. Thank you! 🙃</span>
+  </span>
+                        </Ticker>
 
-                        </Vue3Marquee>
+
+
+
                     </div>
                 </div>
 
@@ -201,7 +206,7 @@
     import { ref } from "vue"
     import { router } from "@inertiajs/vue3"
     import Icon from "@/Components/System/Icon.vue"
-    import { Vue3Marquee } from 'vue3-marquee'
+    import Ticker from "@/Components/Menu/Ticker.vue"
 
     const hovered = ref(null)
     const showMenu = ref(false)
