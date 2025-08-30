@@ -5,16 +5,27 @@
         @mouseenter="paused = true"
         @mouseleave="paused = false"
     >
-        <div
-            ref="track"
-            class="inline-flex items-center will-change-transform"
-            :style="trackStyle"
-        >
-            <div ref="copyA" class="inline-flex items-center" :style="copyStyle">
-                <slot />
-            </div>
-            <div class="inline-flex items-center" :style="copyStyle" aria-hidden="true">
-                <slot />
+        <!-- optional soft fade; add back if you like -->
+        <!--
+        <div class="pointer-events-none absolute inset-0"
+             style="mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);
+                    -webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);"></div>
+        -->
+
+        <!-- STATIC offset wrapper: holds the off-screen start -->
+        <div ref="offset" class="inline-block" :style="offsetStyle">
+            <!-- LOOPING track: moves only by content width -->
+            <div
+                ref="track"
+                class="inline-flex items-center will-change-transform"
+                :style="trackStyle"
+            >
+                <div ref="copyA" class="inline-flex items-center" :style="copyStyle">
+                    <slot />
+                </div>
+                <div class="inline-flex items-center" :style="copyStyle" aria-hidden="true">
+                    <slot />
+                </div>
             </div>
         </div>
     </div>
@@ -27,8 +38,7 @@ const props = defineProps({
     speedPxPerSec: { type: Number, default: 28 }, // px/s
     gapPx: { type: Number, default: 32 },
     respectReducedMotion: { type: Boolean, default: true },
-    // NEW: start offscreen by the container width
-    startOffscreen: { type: Boolean, default: true },
+    startOffscreen: { type: Boolean, default: true }, // start from right edge
 })
 
 const container = ref(null)
@@ -41,26 +51,36 @@ mql?.addEventListener?.('change', e => (reduced.value = e.matches))
 
 const isPaused = computed(() => paused.value || (props.respectReducedMotion && reduced.value))
 
-const distancePx = ref(600)      // one copy width + gap
-const startOffsetPx = ref(0)     // how far to start from the right
+const distancePx = ref(600)   // width of one copy + gap
+const startOffsetPx = ref(0)  // container width (static offset)
 
 function measure() {
-    const wContent = (copyA.value?.scrollWidth || 0) + props.gapPx
-    const wContainer = container.value?.clientWidth || 0
-    distancePx.value = Math.max(1, wContent)
-    startOffsetPx.value = props.startOffscreen ? Math.max(0, wContainer) : 0
+    const content = (copyA.value?.scrollWidth || 0) + props.gapPx
+    const cont = container.value?.clientWidth || 0
+
+    // Only update if values actually changed to avoid animation restarts
+    const newDist = Math.max(1, Math.round(content))
+    const newStart = props.startOffscreen ? Math.max(0, Math.round(cont)) : 0
+
+    if (newDist !== distancePx.value) distancePx.value = newDist
+    if (newStart !== startOffsetPx.value) startOffsetPx.value = newStart
 }
 
 const durationSec = computed(() =>
-    Math.max(0.001, (distancePx.value + startOffsetPx.value) / Math.max(1, props.speedPxPerSec))
+    Math.max(0.001, distancePx.value / Math.max(1, props.speedPxPerSec))
 )
 
 const copyStyle = computed(() => ({ paddingRight: `${props.gapPx}px` }))
 
+// Static offset on the parent wrapper
+const offsetStyle = computed(() => ({
+    transform: `translateX(${startOffsetPx.value}px)`,
+}))
+
+// Inner track loops by the content width only
 const trackStyle = computed(() => ({
-    '--ticker-distance': `${distancePx.value}px`,
-    '--ticker-start': `${startOffsetPx.value}px`,
-    animationName: (props.respectReducedMotion && reduced.value) ? 'none' : 'tickerFromRight',
+    '--dist': `${distancePx.value}px`,
+    animationName: (props.respectReducedMotion && reduced.value) ? 'none' : 'ticker',
     animationDuration: `${durationSec.value}s`,
     animationTimingFunction: 'linear',
     animationIterationCount: 'infinite',
@@ -71,9 +91,9 @@ let ro
 onMounted(async () => {
     await nextTick()
     measure()
-    ro = new ResizeObserver(measure)
-    ro.observe(copyA.value)
-    container.value && ro.observe(container.value)
+    ro = new ResizeObserver(() => requestAnimationFrame(measure))
+    if (copyA.value) ro.observe(copyA.value)
+    if (container.value) ro.observe(container.value)
     window.addEventListener('resize', measure)
 })
 
@@ -83,10 +103,10 @@ onBeforeUnmount(() => {
 })
 </script>
 
+<!-- global (not scoped) so keyframes are always available -->
 <style>
-/* global (not scoped) to avoid keyframe scoping quirks */
-@keyframes tickerFromRight {
-    from { transform: translateX(var(--ticker-start)); }
-    to   { transform: translateX(calc(-1 * (var(--ticker-distance) + var(--ticker-start)))); }
+@keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-1 * var(--dist))); }
 }
 </style>

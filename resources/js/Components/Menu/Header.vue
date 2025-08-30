@@ -88,7 +88,7 @@
     <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
       contributing
     </Link>
-    <span class="ml-1">to this open-source project. Thank you! 🙃</span>
+    <span class="ml-1">to this open-source project, thank you!</span>
   </span>
                         </Ticker>
 
