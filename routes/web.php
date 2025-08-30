@@ -345,7 +345,7 @@ Route::get("/fieldcraft", function () {
 
     return Inertia::render("Fieldcraft/Index", [
         "entries" => $fieldcraft,
-        "metaTitle" => "Fieldwork Records | " . request()->getHost(),
+        "metaTitle" => "Fieldcraft Blog | " . request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
     ]);
@@ -353,7 +353,7 @@ Route::get("/fieldcraft", function () {
 
 Route::get("/fieldcraft/create", function () {
     return Inertia::render("Fieldcraft/Create", [
-        "metaTitle" => "Fieldcraft Records (Create) | ".request()->getHost(),
+        "metaTitle" => "Fieldcraft Blog (Create) | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
@@ -389,7 +389,7 @@ Route::get("/fieldcraft/{id}", function ($id) {
 
     return Inertia::render("Fieldcraft/Entry", [
         "entry" => $content,
-        "metaTitle" => $content->content_title." | Fieldcraft Records | ".request()->getHost(),
+        "metaTitle" => $content->content_title." | Fieldcraft Blog | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
         "previous" => $previous ? [

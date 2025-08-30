@@ -3,7 +3,7 @@
     <Content>
 
         <Hero
-            title="FIELDCRAFT ARCHIVE"
+            title="FIELDCRAFT BLOG"
             subtitle="A DIGITAL ARCHIVE OF LIVED COHERENCE, COLLAPSE TRACKING, AND SIGNAL ORIENTATION"
             :meta="`PAGE ${entries.current_page} OF ${entries.last_page}`"
         />
