@@ -4,7 +4,7 @@
             <FieldcraftWidget
                 :fieldcraft="fieldcraft"
                 :search-keywords="[]"
-                title="FIELDCRAFT RECORDS"
+                title=""
                 :per-page="3"
             />
 

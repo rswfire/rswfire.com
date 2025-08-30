@@ -68,7 +68,7 @@
             <div class="mt-4">This case is not just about one volunteer. It is about whether Oregon State Parks tolerates &mdash; or encourages &mdash; the use of coercive tactics against those who speak with clarity about internal harm. It is about whether the system protects its image, or its people.</div>
 
             <h2 class="mt-8 text-xl font-semibold">THE PROOF IT'S INSTITUTIONAL</h2>
-            <div class="mt-4">Following my dismissal from Oregon State Parks, I began volunteering with another agency. For five months, I have served without incident, received positive feedback, and maintained excellent working relationships. This demonstrates that the problems at Honeyman were cultural and institutional, not personal or behavioral.</div>
+            <div class="mt-4">Following my dismissal from Oregon State Parks, I began volunteering with another agency. For six months, I have served without incident, received positive feedback, and maintained excellent working relationships. This demonstrates that the problems at Honeyman were cultural and institutional, not personal or behavioral.</div>
             <div class="mt-4">The question is not whether this happened &mdash; the recordings make that undeniable. The question is whether Oregon State Parks will hold itself accountable for systematic abuse of volunteers, or continue protecting those who execute it.</div>
 
         </div>

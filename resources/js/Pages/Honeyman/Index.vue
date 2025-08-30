@@ -34,25 +34,15 @@
                 </div>
             </div>
 
-            <Executive-Summary/>
-
-            <div class="relative">
-                <div class="-mx-6 md:-mx-8">
-                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
-                </div>
-            </div>
-
-            <!--
-            <Public-Records/>
-
-            <div class="relative">
-                <div class="-mx-6 md:-mx-8">
-                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
-                </div>
-            </div>
-            -->
-
             <An-Introduction/>
+
+            <div class="relative">
+                <div class="-mx-6 md:-mx-8">
+                    <hr class="h-1 bg-honeyman-300 border-0 rounded" />
+                </div>
+            </div>
+
+            <Executive-Summary/>
 
             <div class="relative">
                 <div class="-mx-6 md:-mx-8">
@@ -204,7 +194,6 @@
     import Logan from "@/Pages/Honeyman/Sections/Logan.vue";
     import NamingTheHarm from "@/Pages/Honeyman/Sections/Naming-the-Harm.vue";
     import PermanentDismissal from "@/Pages/Honeyman/Sections/Permanent-Dismissal.vue";
-    import PublicRecords from "@/Pages/Honeyman/Sections/Public-Records.vue";
     import SystemInPanic from "@/Pages/Honeyman/Sections/System-In-Panic.vue";
     import TheFinalHours from "@/Pages/Honeyman/Sections/The-Final-Hours.vue";
     import TheStoryOfHoneyman from "@/Pages/Honeyman/Sections/The-Story-of-Honeyman.vue";

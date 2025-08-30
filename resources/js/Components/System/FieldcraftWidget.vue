@@ -1,16 +1,7 @@
 <template>
     <section id="fieldcraft-records">
         <div class="my-8 prose prose-neutral max-w-full mx-auto">
-            <h2 class="text-2xl font-semibold text-center">{{ title || 'FIELDCRAFT RECORDS' }}</h2>
-
-            <!-- Results info -->
-            <div v-if="filteredEntries.length > 0" class="text-center text-sm text-gray-500 mt-2">
-                Showing {{ ((currentPage - 1) * perPage) + 1 }} - {{ Math.min(currentPage * perPage, filteredEntries.length) }} of {{ filteredEntries.length }} Entries
-            </div>
-
-            <div v-else class="text-center text-gray-500 mt-8">
-                No entries found{{ searchKeywords ? ` for "${searchKeywords.join(', ')}"` : '' }}
-            </div>
+            <h2 v-if="title" class="text-2xl font-semibold text-center">{{ title || 'FIELDCRAFT RECORDS' }}</h2>
 
             <!-- Pagination Controls -->
             <div v-if="totalPages > 1" class="flex items-center justify-center space-x-2 mt-2">
@@ -44,6 +35,15 @@
                 >
                     Next
                 </button>
+            </div>
+
+            <!-- Results info -->
+            <div v-if="filteredEntries.length > 0" class="text-center text-sm text-gray-500 mt-2">
+                Showing {{ ((currentPage - 1) * perPage) + 1 }} - {{ Math.min(currentPage * perPage, filteredEntries.length) }} of {{ filteredEntries.length }} Entries
+            </div>
+
+            <div v-else class="text-center text-gray-500 mt-8">
+                No entries found{{ searchKeywords ? ` for "${searchKeywords.join(', ')}"` : '' }}
             </div>
 
             <div v-if="filteredEntries.length > 0" class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
