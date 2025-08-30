@@ -46,15 +46,26 @@
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto flex">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 pb-2">
 
-            <div class="flex-1 justify-between overflow-hidden whitespace-nowrap ml-4">
-                <div class="flex space-x-2 animate-marquee text-xs text-black font-medium leading-tight h-4">
-                    <span class="mr-8">🔥 In a forest pitch dark, glowed the tiniest spark. It burst into a flame.</span>
+            <div class="flex-1 flex justify-center overflow-hidden whitespace-nowrap">
+
+                <div class="flex-1 flex justify-center overflow-hidden whitespace-nowrap">
+                    <div class="w-full max-w-[800px]">
+                        <Vue3Marquee
+                            class="text-xs text-black font-medium leading-tight"
+                            :pauseOnHover="true"
+                            :speed="60"
+                        >
+                            🔥 &quot;In a forest pitch dark, glowed the tiniest spark. It burst into a flame.&quot; &mdash; Björk
+                        </Vue3Marquee>
+                    </div>
                 </div>
+
             </div>
 
-            <div class="max-w-6xl mx-auto flex justify-between items-center mb-2 mr-4">
+
+            <div class="flex items-center space-x-4">
 
                 <div class="ml-4 flex-shrink-0">
 
@@ -159,6 +170,7 @@
     import { ref } from "vue"
     import { router } from "@inertiajs/vue3"
     import Icon from "@/Components/System/Icon.vue"
+    import { Vue3Marquee } from 'vue3-marquee'
 
     const hovered = ref(null)
     const showMenu = ref(false)
@@ -188,28 +200,5 @@
 </script>
 
 <style scoped>
-    .fade-width-enter-active,
-    .fade-width-leave-active {
-        transition: opacity 250ms ease, max-width 300ms ease, transform 250ms ease;
-        max-width: 160px;
-    }
-    .fade-width-enter-from,
-    .fade-width-leave-to {
-        opacity: 0;
-        max-width: 0;
-        overflow: hidden;
-        transform: translateX(-8px);
-    }
-
-    @keyframes marquee {
-        0% { transform: translateX(100%) }
-        100% { transform: translateX(-100%) }
-    }
-
-    .animate-marquee {
-        display: inline-block;
-        white-space: nowrap;
-        animation: marquee 20s linear infinite;
-    }
-
+.fade-width-enter-active, .fade-width-leave-active { transition: opacity 250ms ease, max-width 300ms ease, transform 250ms ease; max-width: 160px; } .fade-width-enter-from, .fade-width-leave-to { opacity: 0; max-width: 0; overflow: hidden; transform: translateX(-8px); }
 </style>
