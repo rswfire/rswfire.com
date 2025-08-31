@@ -7,7 +7,7 @@
         aria-label="Open table of contents"
         @click="open = true"
     >
-      TOC
+      📑 ToC
     </button>
 
     <div class="hidden md:block fixed z-[70]" :style="railStyle">
@@ -27,7 +27,7 @@
             aria-label="Table of contents"
         >
           <div class="flex items-center justify-between mb-2">
-            <div class="text-xs font-semibold tracking-wide uppercase text-gray-600">Contents</div>
+            <div class="text-xs font-semibold tracking-wide uppercase text-gray-600">📑 Contents</div>
             <button
                 @click="railOpen = false"
                 class="text-xs px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-50"
@@ -56,7 +56,7 @@
       <div class="absolute inset-0 bg-black/30" @click="open = false"></div>
       <div class="absolute inset-x-0 bottom-0 rounded-t-2xl bg-white shadow-2xl p-4 max-h-[70vh] overflow-auto">
         <div class="flex items-center justify-between mb-2">
-          <div class="text-xs font-semibold tracking-wide uppercase text-gray-600">Contents</div>
+          <div class="text-xs font-semibold tracking-wide uppercase text-gray-600">📑 Contents</div>
           <button
               @click="open = false"
               class="text-sm px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-50"
