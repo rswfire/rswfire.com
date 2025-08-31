@@ -1,6 +1,6 @@
 <template>
   <Teleport to="body">
-    <!-- Mobile FAB -->
+
     <button
         class="fixed md:hidden z-[70] shadow-md rounded-full px-4 py-2 bg-white/90 backdrop-blur border border-gray-300 text-sm font-medium hover:bg-white focus:outline-none focus:ring-2 focus:ring-honeyman-400"
         :style="fabStyle"
@@ -10,7 +10,6 @@
       TOC
     </button>
 
-    <!-- Desktop rail (open by default, anchored to window edge) -->
     <div class="hidden md:block fixed z-[70]" :style="railStyle">
       <div :class="['transition-all duration-200', railOpen ? 'opacity-90' : 'opacity-70']">
         <div v-if="!railOpen" class="flex justify-end">
@@ -53,7 +52,6 @@
       </div>
     </div>
 
-    <!-- Mobile bottom sheet -->
     <div v-if="open" class="fixed inset-0 z-[80] md:hidden" role="dialog" aria-modal="true" @keydown.esc="open = false">
       <div class="absolute inset-0 bg-black/30" @click="open = false"></div>
       <div class="absolute inset-x-0 bottom-0 rounded-t-2xl bg-white shadow-2xl p-4 max-h-[70vh] overflow-auto">
@@ -87,28 +85,25 @@
 <script setup>
 import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
 
-const props = defineProps({
-  sections: { type: Array, required: true },
-
-  // placement controls
-  anchorTo:      { type: String, default: 'window' }, // 'window' | 'container'
-  containerMax:  { type: String, default: '72rem' },  // used only for 'container'
-  gutter:        { type: String, default: '1rem' },
-  topOffset:     { type: String, default: '6rem' },
-  defaultOpenDesktop: { type: Boolean, default: true }
-})
-
-const open     = ref(false)            // mobile sheet
-const railOpen = ref(true)             // desktop rail default open
+const open     = ref(false)
+const railOpen = ref(true)
 const activeId = ref(null)
 
-// Mobile FAB placement (safe-area aware)
+const props = defineProps({
+  sections: { type: Array, required: true },
+  anchorTo: { type: String, default: 'window' },
+  containerMax: { type: String, default: '72rem' },
+  gutter: { type: String, default: '1rem' },
+  topOffset: { type: String, default: '6rem' },
+  defaultOpenDesktop: { type: Boolean, default: true },
+})
+
 const fabStyle = computed(() => ({
-  right: 'max(16px, env(safe-area-inset-right, 0px))',
-  bottom: 'max(16px, env(safe-area-inset-bottom, 0px))'
+  position: 'fixed',
+  right:  `calc(env(safe-area-inset-right, 0px) + ${props.fabRight})`,
+  bottom: `calc(env(safe-area-inset-bottom, 0px) + ${props.fabBottom})`,
 }))
 
-// Desktop rail placement
 const railStyle = computed(() => {
   if (props.anchorTo === 'container') {
     return {
@@ -161,7 +156,6 @@ function onKey(e) {
 }
 
 onMounted(() => {
-  // ensure smooth native anchor jumps
   document.documentElement.style.scrollBehavior = 'smooth'
   railOpen.value = props.defaultOpenDesktop
   setupSpy()

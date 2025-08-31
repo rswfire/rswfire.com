@@ -6,6 +6,7 @@
       top-offset="6rem"
   />
   <Content theme="honeyman">
+    <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
     <Hero
         title="THE HONEYMAN ARCHIVE"
         subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
@@ -14,7 +15,7 @@
 
     <div class="honeyman-content mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
-      <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
+      <div class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
       <Header />
 
       <HrBar id="hr-1" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
