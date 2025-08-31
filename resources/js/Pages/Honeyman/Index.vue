@@ -4,7 +4,7 @@
       anchor-to="window"
       :default-open-desktop="true"
       top-offset="6rem"
-      fab-right="28px"
+      fab-right="40px"
   />
   <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
   <Content theme="honeyman">
@@ -124,13 +124,13 @@ const sections = [
   { id: 'hr-2',  label: 'Key Individuals' },
   { id: 'hr-3',  label: 'A Note About Ethics' },
   { id: 'hr-4',  label: 'Executive Summary' },
-  { id: 'hr-5',  label: 'Story of Honeyman' },
-  { id: 'hr-6',  label: 'Story of OPRD' },
+  { id: 'hr-5',  label: 'The Story of Honeyman' },
+  { id: 'hr-6',  label: 'The Story of OPRD' },
   { id: 'hr-7',  label: 'Turning Point' },
   { id: 'hr-8',  label: 'Logan' },
   { id: 'hr-9',  label: 'Day-Use Meeting' },
   { id: 'hr-10', label: 'Unidentified Man' },
-  { id: 'hr-11', label: 'System in Panic' },
+  { id: 'hr-11', label: 'Timeline: System in Panic' },
   { id: 'hr-12', label: 'Final Hours' },
   { id: 'hr-13', label: 'Call: Allison Watson' },
   { id: 'hr-14', label: 'Letter: Allison Watson' },

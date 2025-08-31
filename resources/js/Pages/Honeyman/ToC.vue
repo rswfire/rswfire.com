@@ -122,24 +122,59 @@ const railStyle = computed(() => {
 let spyObserver
 
 function setupSpy () {
-  const els = props.sections
-      .map(s => document.getElementById(s.id))
+  // clean any previous observer
+  if (spyObserver) {
+    spyObserver.disconnect()
+    spyObserver = null
+  }
+
+  const ids = (props.sections || []).map(s => s.id)
+  const els = ids
+      .map(id => document.getElementById(id))
       .filter(Boolean)
 
+  if (!els.length) return
+
+  const isAtBottom = () => {
+    const d = document.documentElement
+    // ceil guards tiny FP rounding differences
+    return Math.ceil(window.scrollY + window.innerHeight) >= d.scrollHeight - 1
+  }
+
   spyObserver = new IntersectionObserver((entries) => {
+    // 1) bottom-of-page: lock to the last section
+    if (isAtBottom()) {
+      const lastId = ids[ids.length - 1]
+      if (lastId && activeId.value !== lastId) activeId.value = lastId
+      return
+    }
+
+    // 2) prefer the topmost intersecting marker (in a reduced viewport)
     const visible = entries
         .filter(e => e.isIntersecting)
         .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
 
     if (visible.length) {
-      activeId.value = visible[0].target.id
+      const id = visible[0].target.id
+      if (id && activeId.value !== id) activeId.value = id
       return
     }
 
-    const tops = els.map(el => ({ id: el.id, top: el.getBoundingClientRect().top }))
-    const above = tops.filter(t => t.top <= 100).sort((a,b) => b.top - a.top)
-    if (above.length) activeId.value = above[0].id
-  }, { threshold: [0, 0.2], rootMargin: '0px 0px -70% 0px' })
+    // 3) fallback: choose the closest anchor that is on-screen or above the fold
+    const candidate = els
+        .map(el => ({ id: el.id, top: el.getBoundingClientRect().top }))
+        .filter(t => t.top <= window.innerHeight - 8) // in view or already above
+        .sort((a, b) => b.top - a.top)[0]
+
+    if (candidate && activeId.value !== candidate.id) {
+      activeId.value = candidate.id
+    }
+  }, {
+    root: null,
+    threshold: [0, 0.2],
+    // shrink the "active zone" to the top 50% so we highlight what you've scrolled to
+    rootMargin: '0px 0px -50% 0px'
+  })
 
   els.forEach(el => spyObserver.observe(el))
 }
