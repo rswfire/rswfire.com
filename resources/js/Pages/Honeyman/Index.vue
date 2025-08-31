@@ -4,7 +4,7 @@
       anchor-to="window"
       :default-open-desktop="true"
       top-offset="6rem"
-      fab-right="24px"
+      fab-right="28px"
   />
   <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
   <Content theme="honeyman">
