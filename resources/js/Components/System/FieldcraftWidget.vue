@@ -3,39 +3,78 @@
         <div class="my-8 prose prose-neutral max-w-full mx-auto">
             <h2 v-if="title" class="text-2xl font-semibold text-center">{{ title || 'FIELDCRAFT RECORDS' }}</h2>
 
-            <!-- Pagination Controls -->
-            <div v-if="totalPages > 1" class="flex items-center justify-center space-x-2 mt-2">
-                <button
-                    @click="previousPage"
-                    :disabled="currentPage === 1"
-                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                    Previous
-                </button>
+          <!-- Pagination -->
+          <!-- Mobile: Prev/Next only -->
+          <nav
+              v-if="totalPages > 1"
+              class="mt-2 sm:hidden flex items-center justify-between gap-2 px-2"
+              aria-label="Pagination"
+          >
+            <button
+                @click="previousPage"
+                :disabled="currentPage === 1"
+                class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Previous
+            </button>
 
-                <div class="flex space-x-1">
-                    <button
-                        v-for="page in visiblePages"
-                        :key="page"
-                        @click="goToPage(page)"
-                        :class="{
-                            'bg-gray-900 text-white': page === currentPage,
-                            'bg-white text-gray-700 hover:bg-gray-50': page !== currentPage
-                        }"
-                        class="px-3 py-1 text-sm border border-gray-300 rounded-md"
-                    >
-                        {{ page }}
-                    </button>
-                </div>
+            <span class="text-sm text-gray-500">
+    Page {{ currentPage }} / {{ totalPages }}
+  </span>
+
+            <button
+                @click="nextPage"
+                :disabled="currentPage === totalPages"
+                class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </nav>
+
+          <!-- Desktop: full numbers -->
+          <nav
+              v-if="totalPages > 1"
+              class="mt-2 hidden sm:flex flex-wrap items-center justify-center gap-2 px-2"
+              aria-label="Pagination"
+          >
+            <button
+                @click="previousPage"
+                :disabled="currentPage === 1"
+                class="shrink-0 px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Previous
+            </button>
+
+            <div class="w-full sm:w-auto flex flex-wrap justify-center gap-1">
+              <template v-for="(page, i) in visiblePages" :key="i">
+      <span
+          v-if="page === '...'"
+          class="shrink-0 px-3 py-1 text-sm text-gray-500 select-none"
+      >…</span>
 
                 <button
-                    @click="nextPage"
-                    :disabled="currentPage === totalPages"
-                    class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    v-else
+                    @click="goToPage(page)"
+                    :aria-current="page === currentPage ? 'page' : null"
+                    :class="page === currentPage
+          ? 'bg-gray-900 text-white'
+          : 'bg-white text-gray-700 hover:bg-gray-50'"
+                    class="shrink-0 px-3 py-1 text-sm border border-gray-300 rounded-md"
                 >
-                    Next
+                  {{ page }}
                 </button>
+              </template>
             </div>
+
+            <button
+                @click="nextPage"
+                :disabled="currentPage === totalPages"
+                class="shrink-0 px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </nav>
+
 
             <!-- Results info -->
             <div v-if="filteredEntries.length > 0" class="text-center text-sm text-gray-500 mt-2">
