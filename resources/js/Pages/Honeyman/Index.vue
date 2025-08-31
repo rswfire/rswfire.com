@@ -8,24 +8,16 @@
 
     <div class="honeyman-content mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
-      <!-- Overview (anchor to top marker) -->
+      <ToC
+          :sections="sections"
+          reveal-after-id="hr-1"
+          anchor-to="window"
+      :default-open-desktop="true"
+      top-offset="6rem"
+      />
+
       <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
       <Header />
-
-      <HrBar class="scroll-mt-[92px] md:scroll-mt-[125px]" />
-      <nav class="mt-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ul class="flex flex-wrap justify-center gap-2 text-[13px] sm:text-sm">
-          <li v-for="s in sections" :key="s.id">
-            <a
-                :href="'#' + s.id"
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-honeyman-300/70 text-honeyman-900/90 bg-white hover:bg-honeyman-50 transition"
-            >
-              <span class="w-1.5 h-1.5 rounded-full bg-honeyman-400"></span>
-              {{ s.label }}
-            </a>
-          </li>
-        </ul>
-      </nav>
 
       <HrBar id="hr-1" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <FieldcraftRecords :fieldcraft="fieldcraft" />
@@ -99,6 +91,7 @@
 <script setup>
 import Content from "@/Components/System/Content.vue"
 import Hero from "@/Components/System/Hero.vue"
+import ToC from "./ToC.vue"
 
 import AnIntroduction from "@/Pages/Honeyman/Sections/An-Introduction.vue"
 import CallWithAllisonWatson from "@/Pages/Honeyman/Sections/Call-With-Allison-Watson.vue"
