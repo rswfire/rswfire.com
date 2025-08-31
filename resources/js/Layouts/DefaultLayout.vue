@@ -65,7 +65,9 @@ const menuOpen = ref(false)
 </script>
 
 <style>
-.page-wrap { @apply max-w-6xl mx-auto px-6; }
+.page-wrap {
+  @apply max-w-6xl mx-auto px-0 sm:px-6;
+}
 
 /* optional but nice: smooth native anchor jumps sitewide */
 html { scroll-behavior: smooth; }

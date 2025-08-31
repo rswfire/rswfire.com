@@ -1,4 +1,10 @@
 <template>
+  <ToC
+      :sections="sections"
+      anchor-to="window"
+      :default-open-desktop="true"
+      top-offset="6rem"
+  />
   <Content theme="honeyman">
     <Hero
         title="THE HONEYMAN ARCHIVE"
@@ -7,14 +13,6 @@
     />
 
     <div class="honeyman-content mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
-
-      <ToC
-          :sections="sections"
-          reveal-after-id="hr-1"
-          anchor-to="window"
-      :default-open-desktop="true"
-      top-offset="6rem"
-      />
 
       <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
       <Header />
@@ -122,7 +120,7 @@ const sections = [
   { id: 'hr-0',  label: 'Overview' },
   { id: 'hr-1',  label: 'Fieldcraft Records' },
   { id: 'hr-2',  label: 'Key Individuals' },
-  { id: 'hr-3',  label: 'Introduction' },
+  { id: 'hr-3',  label: 'A Note About Ethics' },
   { id: 'hr-4',  label: 'Executive Summary' },
   { id: 'hr-5',  label: 'Story of Honeyman' },
   { id: 'hr-6',  label: 'Story of OPRD' },
