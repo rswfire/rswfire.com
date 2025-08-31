@@ -1,9 +1,23 @@
 <template>
     <section id="permanent-dismissal">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">PERMANENT DISMISSAL</h2>
-            <div class="italic text-gray-600">MARCH 27, 2025 &mdash; THE DOCUMENT THAT GAVE THEM AWAY</div>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
+            <div>
+              <h2 class="text-2xl font-semibold">PERMANENT DISMISSAL</h2>
+              <div class="italic text-gray-600">MARCH 27, 2025 &mdash; THE DOCUMENT THAT GAVE THEM AWAY</div>
+            </div>
+            <div class="md:justify-self-end">
+              <button
+                  @click="onCopy('hr-15')"
+                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+                  aria-label="Copy section link"
+              >
+                <Icon name="Link2" color="text-green-600" class="w-4 h-4" /> Copy Section Link
+              </button>
+              <div v-if="justCopied" class="text-sm text-green-700 text-center">Copied ✓</div>
+            </div>
+          </div>
             <div class="mt-4 text-lg"><strong>This was my first attempt at institutional belonging. They didn't just harm a volunteer &mdash; they corrupted someone's introduction to civic participation. The betrayal I had to metabolize operates at the level of citizenship itself. That is a stain they will never be able to wash off.</strong></div>
 
             <div class="mt-4">It’s important to be precise about the sequence.</div>
@@ -63,4 +77,22 @@
 </template>
 
 <script setup>
+import { ref, onBeforeUnmount } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+import { Link } from "@inertiajs/vue3"
+import Icon from "@/Components/System/Icon.vue";
+
+const { copySectionLink } = useCopySectionLink()
+
+const justCopied = ref(false)
+let hideTimer
+
+async function onCopy(anchorId) {
+  await copySectionLink(anchorId)
+  justCopied.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => (justCopied.value = false), 1200)
+}
+
+onBeforeUnmount(() => clearTimeout(hideTimer))
 </script>

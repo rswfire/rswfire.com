@@ -1,9 +1,23 @@
 <template>
     <section id="system-in-panic">
         <div class="my-8 prose prose-neutral max-w-full mx-auto">
-            <h2 class="text-2xl font-semibold">TIMELINE: A SYSTEM IN PANIC</h2>
-            <div class="italic text-gray-600">MARCH 5-26, 2025 &mdash; THE MOMENT THEY OVERPLAYED THEIR HAND</div>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
+            <div>
+              <h2 class="text-2xl font-semibold">TIMELINE: A SYSTEM IN PANIC</h2>
+              <div class="italic text-gray-600">MARCH 5-26, 2025 &mdash; THE MONTH OF INCREASING PRESSURE</div>
+            </div>
+            <div class="md:justify-self-end">
+              <button
+                  @click="onCopy('hr-11')"
+                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+                  aria-label="Copy section link"
+              >
+                <Icon name="Link2" color="text-green-600" class="w-4 h-4" /> Copy Section Link
+              </button>
+              <div v-if="justCopied" class="text-sm text-green-700 text-center">Copied ✓</div>
+            </div>
+          </div>
             <div class="mt-4">I was scheduled to leave Honeyman on March 30 and begin my next assignment at Tugman State Park &mdash; somewhere I had already volunteered, somewhere I was welcomed.</div>
 
             <div class="mt-4">I was calm. I was complete. I was prepared to go clean.</div>
@@ -132,4 +146,23 @@
     </section>
 </template>
 
-<script></script>
+<script setup>
+import { ref, onBeforeUnmount } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+import { Link } from "@inertiajs/vue3"
+import Icon from "@/Components/System/Icon.vue";
+
+const { copySectionLink } = useCopySectionLink()
+
+const justCopied = ref(false)
+let hideTimer
+
+async function onCopy(anchorId) {
+  await copySectionLink(anchorId)
+  justCopied.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => (justCopied.value = false), 1200)
+}
+
+onBeforeUnmount(() => clearTimeout(hideTimer))
+</script>

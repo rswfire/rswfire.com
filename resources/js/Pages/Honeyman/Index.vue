@@ -89,6 +89,9 @@
 </template>
 
 <script setup>
+import { provide } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+
 import Content from "@/Components/System/Content.vue"
 import Hero from "@/Components/System/Hero.vue"
 import ToC from "./ToC.vue"
@@ -116,6 +119,7 @@ import TheUnidentifiedMan from "@/Pages/Honeyman/Sections/The-Unidentified-Man.v
 
 import HrBar from "./HrBar.vue"
 
+
 defineProps({ fieldcraft: Array })
 
 const sections = [
@@ -140,6 +144,10 @@ const sections = [
   { id: 'hr-18', label: 'I Held My Shape' },
   { id: 'hr-19', label: 'This Is...' },
 ]
+
+const { copySectionLink } = useCopySectionLink()
+provide('copySectionLink', copySectionLink)
+
 </script>
 
 <style>

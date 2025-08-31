@@ -1,9 +1,23 @@
 <template>
     <section id="lessons-learned">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">LESSONS LEARNED</h2>
-            <div class="italic text-gray-600">HOW TO SURVIVE INSTITUTIONAL FRAGMENTATION</div>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
+            <div>
+              <h2 class="text-2xl font-semibold">LESSONS LEARNED</h2>
+              <div class="italic text-gray-600">HOW TO SURVIVE INSTITUTIONAL FRAGMENTATION</div>
+            </div>
+            <div class="md:justify-self-end">
+              <button
+                  @click="onCopy('hr-17')"
+                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+                  aria-label="Copy section link"
+              >
+                <Icon name="Link2" color="text-green-600" class="w-4 h-4" /> Copy Section Link
+              </button>
+              <div v-if="justCopied" class="text-sm text-green-700 text-center">Copied ✓</div>
+            </div>
+          </div>
             <div class="mt-4">The central insight from my experience at Honeyman State Park isn't about bad supervisors or dysfunctional policies. It's about fragmentation.</div>
             <div class="mt-4">Institutions survive by fragmenting people &mdash; splitting you into parts they can manage, control, and ultimately discard. They separate your &quot;professional self&quot; from your human needs, your compliance from your integrity, your survival from your values. Once you're fragmented, you become predictable. Manageable. Disposable.</div>
             <div class="mt-4">The people who harmed me at Honeyman weren't uniquely evil. They were executing a playbook that exists in every workplace, every volunteer program, every hierarchical system. They were trying to fragment me the same way they had been fragmented.</div>
@@ -161,7 +175,22 @@
 </template>
 
 <script setup>
+import { ref, onBeforeUnmount } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+import { Link } from "@inertiajs/vue3"
+import Icon from "@/Components/System/Icon.vue";
 
-import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
-import Para from "@/Components/System/Para.vue";
+const { copySectionLink } = useCopySectionLink()
+
+const justCopied = ref(false)
+let hideTimer
+
+async function onCopy(anchorId) {
+  await copySectionLink(anchorId)
+  justCopied.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => (justCopied.value = false), 1200)
+}
+
+onBeforeUnmount(() => clearTimeout(hideTimer))
 </script>

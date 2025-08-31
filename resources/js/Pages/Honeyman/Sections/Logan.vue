@@ -1,9 +1,23 @@
 <template>
     <section id="logan">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">LOGAN</h2>
-            <div class="italic text-gray-600">MARCH 2, 2025 &mdash; THE MOMENT TRUST WAS BROKEN</div>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
+            <div>
+              <h2 class="text-2xl font-semibold">LOGAN</h2>
+              <div class="italic text-gray-600">MARCH 2, 2025 &mdash; THE MOMENT TRUST WAS BROKEN</div>
+            </div>
+            <div class="md:justify-self-end">
+              <button
+                  @click="onCopy('hr-8')"
+                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+                  aria-label="Copy section link"
+              >
+                <Icon name="Link2" color="text-green-600" class="w-4 h-4" /> Copy Section Link
+              </button>
+              <div v-if="justCopied" class="text-sm text-green-700 text-center">Copied ✓</div>
+            </div>
+          </div>
             <div class="mt-4">Logan was my direct supervisor. From the beginning, we formed something like a friendship. I saw in him a mix of depth and integrity, sometimes in quiet tension with the institution he served. I chose to make space for that. What I didn’t see &mdash; or didn’t want to &mdash; was that his integrity is compartmentalized.</div>
             <div class="mt-4">Logan participated in many of the dynamics detailed in this archive, though his role was tertiary &mdash; directives seeded by Ryan and Kati. When it became clear they were actively sabotaging my trajectory, I acted to protect myself. I wrote the &quot;Trust&quot; email to sever a dynamic that had become harmful.</div>
             <div class="mt-4">This letter requires context &mdash; context I would have preferred to leave private. I navigated this relationship with care. That care was later used against me.</div>
@@ -55,5 +69,22 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { ref, onBeforeUnmount } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+import { Link } from "@inertiajs/vue3"
+import Icon from "@/Components/System/Icon.vue";
+
+const { copySectionLink } = useCopySectionLink()
+
+const justCopied = ref(false)
+let hideTimer
+
+async function onCopy(anchorId) {
+  await copySectionLink(anchorId)
+  justCopied.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => (justCopied.value = false), 1200)
+}
+
+onBeforeUnmount(() => clearTimeout(hideTimer))
 </script>

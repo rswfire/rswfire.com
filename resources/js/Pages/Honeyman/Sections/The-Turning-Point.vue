@@ -1,9 +1,23 @@
 <template>
     <section id="the-turning-point">
         <div class="my-8 prose prose-neutral max-full mx-auto">
-            <h2 class="text-2xl font-semibold">THE TURNING POINT</h2>
-            <div class="italic text-gray-600">FEBRUARY 9, 2025 &mdash; THE MOMENT SHE SAW ME</div>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
+            <div>
+              <h2 class="text-2xl font-semibold">THE TURNING POINT</h2>
+              <div class="italic text-gray-600">FEBRUARY 9, 2025 &mdash; THE MOMENT SHE SAW ME</div>
+            </div>
+            <div class="md:justify-self-end">
+              <button
+                  @click="onCopy('hr-7')"
+                  class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+                  aria-label="Copy section link"
+              >
+                <Icon name="Link2" color="text-green-600" class="w-4 h-4" /> Copy Section Link
+              </button>
+              <div v-if="justCopied" class="text-sm text-green-700 text-center">Copied ✓</div>
+            </div>
+          </div>
             <div class="mt-4">This email marked the pivot from a minor operational issue into a full-scale campaign of escalation. I sent it for two reasons:</div>
             <ul class=" list-decimal list-outside ml-8">
                 <li>
@@ -56,5 +70,21 @@
 </template>
 
 <script setup>
-import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
+import { ref, onBeforeUnmount } from 'vue'
+import { useCopySectionLink } from '@/Composables/useCopySectionLink'
+import Icon from "@/Components/System/Icon.vue";
+
+const { copySectionLink } = useCopySectionLink()
+
+const justCopied = ref(false)
+let hideTimer
+
+async function onCopy(anchorId) {
+  await copySectionLink(anchorId)
+  justCopied.value = true
+  clearTimeout(hideTimer)
+  hideTimer = setTimeout(() => (justCopied.value = false), 1200)
+}
+
+onBeforeUnmount(() => clearTimeout(hideTimer))
 </script>
