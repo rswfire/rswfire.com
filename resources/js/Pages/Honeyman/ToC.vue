@@ -17,7 +17,7 @@
               @click="railOpen = true"
               class="shadow-md rounded-full px-3 py-2 bg-white/90 backdrop-blur border border-gray-300 text-xs uppercase tracking-wide hover:bg-white focus:outline-none focus:ring-2 focus:ring-honeyman-400"
               aria-label="Open table of contents"
-          >TOC</button>
+          >📑 ToC</button>
         </div>
 
         <aside
