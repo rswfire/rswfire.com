@@ -4,9 +4,10 @@
       anchor-to="window"
       :default-open-desktop="true"
       top-offset="6rem"
+      fab-right="28px"
   />
+  <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
   <Content theme="honeyman">
-    <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
     <Hero
         title="THE HONEYMAN ARCHIVE"
         subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
