@@ -1,5 +1,5 @@
 <template>
-    <section id="page-footer" class="pt-6 border-t border-gray-300 text-black">
+    <section id="page-footer">
 
         <div class="text-lg font-bold">THIS IS THE MAP. THIS IS THE PATTERN. THIS IS THE MIRROR.</div>
 

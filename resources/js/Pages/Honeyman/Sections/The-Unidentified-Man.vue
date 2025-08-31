@@ -1,5 +1,5 @@
 <template>
-    <section id="the-unidentified-man" class="border-t border-gray-300">
+    <section id="the-unidentified-man">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE UNIDENTIFIED MAN</h2>
             <div class="italic text-gray-600">MARCH 18, 2025 &mdash; THE MOMENT THEY TRIED TO FRAME ME</div>

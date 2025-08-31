@@ -1,5 +1,5 @@
 <template>
-    <section id="the-final-hours" class="border-t border-gray-300">
+    <section id="the-final-hours">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE FINAL HOURS</h2>
             <div class="italic text-gray-600">MARCH 24, 2025 &mdash; THE MOMENT THE MASK DROPPED</div>

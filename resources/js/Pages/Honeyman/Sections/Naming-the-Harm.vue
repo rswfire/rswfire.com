@@ -1,5 +1,5 @@
 <template>
-    <section id="naming-the-harm" class="border-t border-gray-300">
+    <section id="naming-the-harm">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">NAMING THE HARM</h2>
             <div class="italic text-gray-600">MAY 28, 2025 &mdash; THE LETTER THEY MUST RECKON WITH</div>

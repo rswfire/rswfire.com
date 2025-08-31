@@ -9,7 +9,7 @@
             class="pb-4 border-b"
         />
 
-        <section id="hello-fellow-humans" class="border-t border-gray-300">
+        <section id="hello-fellow-humans">
             <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                 <div class="prose prose-neutral lg:col-span-2">
@@ -62,7 +62,7 @@
             </div>
         </section>
 
-        <section id="popstar" class="border-t border-gray-300">
+        <section id="popstar">
             <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                 <div class="prose prose-neutral lg:col-span-2">
@@ -106,7 +106,7 @@
             </div>
         </section>
 
-        <section id="hotelnet" class="border-t border-gray-300">
+        <section id="hotelnet">
             <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                 <div class="prose prose-neutral lg:col-span-2">
@@ -151,7 +151,7 @@
             </div>
         </section>
 
-        <section id="soundlock" class="border-t border-gray-300">
+        <section id="soundlock">
             <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                 <div class="prose prose-neutral lg:col-span-2">
@@ -200,7 +200,7 @@
             </div>
         </section>
 
-        <section id="early-history" class="border-t border-gray-300">
+        <section id="early-history">
             <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                 <div class="prose prose-neutral lg:col-span-2">

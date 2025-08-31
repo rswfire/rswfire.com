@@ -1,5 +1,5 @@
 <template>
-    <section id="public-records" class="border-t border-gray-300">
+    <section id="public-records">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">PUBLIC RECORDS REQUEST</h2>
             <div class="italic text-gray-600">AUGUST 22, 2025 &mdash; SUBMITTED TO OREGON STATE PARKS</div>

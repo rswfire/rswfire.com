@@ -1,5 +1,5 @@
 <template>
-    <section id="day-use-meeting" class="border-t border-gray-300">
+    <section id="day-use-meeting">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE HONEYMAN DAY-USE AREA MEETING</h2>
             <div class="italic text-gray-600">MARCH 5, 2025 &mdash; THE MOMENT THEY TRIED TO BREAK ME</div>

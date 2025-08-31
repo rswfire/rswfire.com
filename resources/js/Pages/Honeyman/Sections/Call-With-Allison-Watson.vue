@@ -1,5 +1,5 @@
 <template>
-    <section id="call-with-allison-watson" class="border-t border-gray-300">
+    <section id="call-with-allison-watson">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">CALL WITH ALLISON WATSON</h2>
             <div class="italic text-gray-600">MARCH 25, 2025 &mdash; THE MOMENT THEY TRIED TO ERASE ME</div>

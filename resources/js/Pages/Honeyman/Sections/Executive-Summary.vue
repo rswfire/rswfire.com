@@ -1,5 +1,5 @@
 <template>
-    <section id="executive-summary" class="border-t border-gray-300">
+    <section id="executive-summary">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">EXECUTIVE SUMMARY</h2>
 

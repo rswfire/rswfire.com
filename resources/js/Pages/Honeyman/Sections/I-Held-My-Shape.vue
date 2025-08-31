@@ -1,5 +1,5 @@
 <template>
-    <section id="an-introduction" class="border-t border-gray-300">
+    <section id="an-introduction">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">I HELD MY SHAPE</h2>
 

@@ -1,5 +1,5 @@
 <template>
-    <section id="lessons-learned" class="border-t border-gray-300">
+    <section id="lessons-learned">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">LESSONS LEARNED</h2>
             <div class="italic text-gray-600">HOW TO SURVIVE INSTITUTIONAL FRAGMENTATION</div>

@@ -1,5 +1,5 @@
 <template>
-    <section id="permanent-dismissal" class="border-t border-gray-300">
+    <section id="permanent-dismissal">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">PERMANENT DISMISSAL</h2>
             <div class="italic text-gray-600">MARCH 27, 2025 &mdash; THE DOCUMENT THAT GAVE THEM AWAY</div>

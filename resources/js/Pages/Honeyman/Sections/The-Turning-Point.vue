@@ -1,5 +1,5 @@
 <template>
-    <section id="the-turning-point" class="border-t border-gray-300">
+    <section id="the-turning-point">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">THE TURNING POINT</h2>
             <div class="italic text-gray-600">FEBRUARY 9, 2025 &mdash; THE MOMENT SHE SAW ME</div>

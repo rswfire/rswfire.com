@@ -1,5 +1,5 @@
 <template>
-    <section id="letter-to-allison-watson" class="border-t border-gray-300">
+    <section id="letter-to-allison-watson">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">LETTER TO ALLISON WATSON</h2>
             <div class="italic text-gray-600">MARCH 27, 2025 &mdash; THE LETTER THEY COULD NOT METABOLIZE</div>

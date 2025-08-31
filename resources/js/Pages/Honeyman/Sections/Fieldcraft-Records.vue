@@ -1,5 +1,5 @@
 <template>
-    <section id="fieldcraft-records" class="border-t border-gray-300">
+    <section id="fieldcraft-records">
 
             <FieldcraftWidget
                 :fieldcraft="fieldcraft"

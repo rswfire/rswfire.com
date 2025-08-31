@@ -1,5 +1,5 @@
 <template>
-    <section id="an-introduction" class="border-t border-gray-300">
+    <section id="an-introduction">
         <div class="my-8 prose prose-neutral max-full mx-auto">
             <h2 class="text-2xl font-semibold">TABLE OF CONTENTS</h2>
             <div class="italic text-gray-600">HANG IN THERE &mdash; IT'S A LONG READ</div>
