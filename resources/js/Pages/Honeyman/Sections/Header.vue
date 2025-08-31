@@ -28,7 +28,7 @@
             </div>
             <div class="p-4 rounded-lg border border-green-300 bg-white">
               <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">UPDATES</div>
-              <div><Link href="/updates" class="text-honeyman-600 hover:underline">Updates</Link> are available. Manage or unsubscribe any time. For press, see <Link href="/contact" class="text-honeyman-600 hover:underline">/contact</Link>. I don’t debate the archive; I point to it. <em>Thank you for following my story</em>.</div>
+              <div><Link href="/updates" class="text-honeyman-600 hover:underline">Updates</Link> are available. Manage or unsubscribe any time. For press, see <Link href="/contact" class="text-honeyman-600 hover:underline">/contact</Link>. I don’t debate the archive; I point to it. <em>Thank you for witnessing the record</em>.</div>
             </div>
           </div>
 
