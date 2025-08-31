@@ -72,7 +72,7 @@
       <HrBar id="hr-18" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <IHeldMyShape />
 
-      <HrBar class="scroll-mt-[92px] md:scroll-mt-[125px]" />
+      <HrBar id="hr-19" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <Footer />
     </div>
   </Content>
@@ -137,6 +137,7 @@ const sections = [
   { id: 'hr-16', label: 'Naming the Harm' },
   { id: 'hr-17', label: 'Lessons Learned' },
   { id: 'hr-18', label: 'I Held My Shape' },
+  { id: 'hr-19', label: 'This Is...' },
 ]
 </script>
 

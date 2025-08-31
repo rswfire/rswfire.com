@@ -96,6 +96,8 @@ const props = defineProps({
   gutter: { type: String, default: '1rem' },
   topOffset: { type: String, default: '6rem' },
   defaultOpenDesktop: { type: Boolean, default: true },
+  fabRight:  { type: String, default: '20px' },
+  fabBottom: { type: String, default: '16px' },
 })
 
 const fabStyle = computed(() => ({
