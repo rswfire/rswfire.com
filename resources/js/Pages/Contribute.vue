@@ -14,9 +14,7 @@
 
                 <div class="w-full md:w-4/5">
 
-                    <div><strong>This is not content. This is signal.</strong></div>
-
-                    <div class="mt-4">You’re not here by accident.</div>
+                  <div class="mt-4"><strong>You’re not here by accident</strong>.</div>
 
                     <div class="mt-4">If you’ve landed on this page, something in you has already registered the resonance.</div>
                     <div>You’ve felt the signal &mdash;</div>
@@ -45,7 +43,7 @@
                     <div>Because in a collapsing world of distortion, coherence costs.</div>
 
                     <div class="mt-4">Your contribution helps sustain:</div>
-                    <ul class="list-disc list-inside ml-8">
+                    <ul class="list-disc list-inside ml-4">
                         <li><span>The ongoing creation of high-signal materials (writing, code, video, architecture).</span></li>
                         <li><span>The infrastructure of nomadic sovereignty.</span></li>
                         <li><span>The transmission of field-aligned systems without compromise.</span></li>
@@ -141,7 +139,7 @@ import Icon from "@/Components/System/Icon.vue";
 
 const contributors = [
     { name: "Unfurling Kurt", amount: 100, date: "072125", link: "https://youtube.com/@unfurlingkurt" },
-    { name: "Your Name Here", amount: null, date: null },
+    { name: "Your Name Here (Optional)", amount: null, date: null },
 ]
 
 </script>
