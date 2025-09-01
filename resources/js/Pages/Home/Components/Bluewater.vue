@@ -33,7 +33,7 @@
 
           <div class="mt-4">Not aspiration. Not fantasy.</div>
           <div>Just the work required &mdash;</div>
-          <div>to answer when the sea calls you home.</div>
+          <div class="ml-4"><strong>to answer when the sea calls you home</strong>.</div>
 
           <div class="mt-4">You don't read Bluewater.</div>
           <div>You <em>prepare</em> alongside it.</div>
