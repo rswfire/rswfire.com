@@ -170,7 +170,7 @@
       <div class="pt-4 text-center text-sm border-t">
         <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
         <div>No open-source license is explicitly granted.</div>
-        <div>&copy; Robert Samuel White, 2025+.</div>
+        <div>&copy; Robert Samuel White, 2002-{{ new Date().getFullYear() }}.</div>
       </div>
     </div>
   </footer>
