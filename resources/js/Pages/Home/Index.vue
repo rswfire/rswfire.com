@@ -21,7 +21,7 @@
             </div>
 
         </div>
-
+'
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
             <SignalCard />
             <TransmissionCard />
@@ -32,6 +32,10 @@
             <LexiconCard />
             <MythCard />
             <HoneymanCard />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-6 pt-6">
+          <BluewaterCard />
         </div>
 
         <div class="py-4 text-center text-sm">
@@ -46,6 +50,7 @@
 
 <script setup>
 
+    import BluewaterCard from "@/Pages/Home/Components/Bluewater.vue";
     import CodexCard from "@/Pages/Home/Components/Codex.vue";
     import CompanionCard from "@/Pages/Home/Components/Companion.vue";
     import FieldcraftCard from "@/Pages/Home/Components/Fieldcraft.vue";

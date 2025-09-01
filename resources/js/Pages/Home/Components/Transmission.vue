@@ -1,7 +1,7 @@
 <template>
     <section class="h-full flex flex-col gap-4 rounded-xl bg-transmission-50 border border-transmission-300 p-6 shadow-md">
 
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-transmission-300">
             <Icon name="SatelliteDish" color="text-transmission-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 TRANSMISSION VAULT
@@ -35,7 +35,7 @@
 
         </div>
 
-        <div class="pt-6 pr-4 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t border-transmission-300 mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/transmission"

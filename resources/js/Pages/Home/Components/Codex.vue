@@ -1,7 +1,7 @@
 <template>
     <section class="h-full flex flex-col rounded-xl bg-codex-50 border border-codex-300 p-6 shadow-md space-y-4">
 
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-codex-300">
             <Icon name="SquareCode" color="text-codex-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">CODEX</h2>
         </div>
@@ -59,7 +59,7 @@
 
         </div>
 
-        <div class="border-t pt-6 pr-4 mt-auto">
+        <div class="border-t border-codex-300 pt-6 pr-4 mt-auto">
             <div class="w-full flex justify-end">
                 <Link
                     href="/codex"

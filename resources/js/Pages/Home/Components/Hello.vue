@@ -3,7 +3,7 @@
     <section class="h-full flex flex-col gap-6 rounded-xl bg-rswfire-50 border border-rswfire-300 p-6 shadow-md">
 
         <!-- START HERE HEADER -->
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-rswfire-300">
             <Icon name="Flame" color="text-rswfire-400" class="flex-shrink-0" />
             <h2 class="text-xl tracking-tight text-gray-700"><strong class="text-gray-900">START</strong> HERE</h2>
         </div>
@@ -65,7 +65,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <div class="border-t pt-6 mt-6 pr-4">
+                <div class="border-t border-rswfire-300 pt-6 mt-6 pr-4">
                     <div class="w-full flex justify-end">
                         <a
                             href="/hello"

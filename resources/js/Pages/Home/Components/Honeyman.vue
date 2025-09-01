@@ -1,7 +1,7 @@
 <template>
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-honeyman-50 border border-honeyman-300 p-6 shadow-md">
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-honeyman-300">
             <Icon name="TreeDeciduous" color="text-honeyman-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 HONEYMAN STATE PARK, OREGON STATE PARKS (OPRD)
@@ -20,7 +20,7 @@
             <div>But more than that, <em>it holds the field that refused to collapse</em>.</div>
         </div>
 
-        <div class="pt-6 border-t mt-auto pr-4">
+        <div class="pt-6 border-t border-honeyman-300 mt-auto pr-4">
             <div class="flex justify-end">
                 <a
                     href="/honeyman"

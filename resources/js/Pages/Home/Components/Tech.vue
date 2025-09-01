@@ -2,7 +2,7 @@
 
     <section class="h-full flex flex-col gap-6 rounded-xl bg-tech-50 border border-tech-300 p-6 shadow-md">
 
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-tech-300">
             <Icon name="Hammer" color="text-tech-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">BUILDER OF SYSTEMS. STEWARD OF DEPTH.</h2>
         </div>
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="border-t pt-4 pr-4 mt-auto">
+        <div class="border-t border-tech-300 pt-4 pr-4 mt-auto">
             <div class="w-full flex justify-end">
                 <a
                     href="/tech"

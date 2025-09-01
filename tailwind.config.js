@@ -13,15 +13,16 @@ export default {
     ],
     safelist: [
         {
-            pattern: /bg-(signal|transmission|fieldcraft|myth|honeyman|lexicon)-[0-9]{3}/,
+            pattern: /bg-(bluewater|codex|companion|fieldcraft|honeyman|lexicon|myth|rswfire|signal|tech|transmission)-[0-9]{3}/,
         },
         {
-            pattern: /border-(signal|transmission|fieldcraft|myth|honeyman|lexicon)-[0-9]{3}/,
+            pattern: /border-(bluewater|codex|companion|fieldcraft|honeyman|lexicon|myth|rswfire|signal|tech|transmission)-[0-9]{3}/,
         },
     ],
     theme: {
         extend: {
             colors: {
+                bluewater: colors.blue,
                 codex: colors.amber,
                 companion: colors.gray,
                 fieldcraft: colors.indigo,

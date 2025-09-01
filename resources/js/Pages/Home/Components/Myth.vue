@@ -2,7 +2,7 @@
 
     <section class="h-full flex flex-col gap-4 rounded-xl bg-myth-50 border border-myth-300 p-6 shadow-md">
 
-        <div class="flex items-center space-x-2 pb-4 border-b">
+        <div class="flex items-center space-x-2 pb-4 border-b border-myth-300">
             <Icon name="ShieldCheck" color="text-myth-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
                 MYTH
@@ -25,7 +25,7 @@
 
         </div>
 
-        <div class="pt-6 pr-4 border-t mt-auto">
+        <div class="pt-6 pr-4 border-t border-myth-300 mt-auto">
             <div class="flex justify-end">
                 <a
                     href="/myth"
