@@ -74,6 +74,15 @@ Route::get("/", function () {
     ]);
 });
 
+Route::get("/bluewater", function () {
+
+    return Inertia::render("Bluewater/Index", [
+        "metaTitle" => "Bluewater | ".request()->getHost(),
+        "metaDescription" => "The next chapter begins here.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/codex", function () {
     return Inertia::render("Codex/Index", [
         "metaTitle" => "Codex | ".request()->getHost(),

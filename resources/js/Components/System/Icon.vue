@@ -28,7 +28,8 @@ import {
     SquareLibrary,
     Squirrel,
     TreeDeciduous,
-    UserPlus
+    UserPlus,
+    WavesLadder
 } from "lucide-vue-next"
 
 const iconMap = {
@@ -52,7 +53,8 @@ const iconMap = {
     SquareLibrary,
     Squirrel,
     TreeDeciduous,
-    UserPlus
+    UserPlus,
+    WavesLadder
 }
 
 const props = defineProps({

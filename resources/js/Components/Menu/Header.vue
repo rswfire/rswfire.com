@@ -218,6 +218,7 @@ const items = [
     { label: "Lexicon", icon: "SquareLibrary", color: "text-orange-400", url: "/lexicon" },
     { label: "Myth", icon: "ShieldCheck", color: "text-yellow-400", url: "/myth" },
     { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", url: "/honeyman" },
+    { label: "Bluewater", icon: "WavesLadder", color: "text-blue-400", url: "/bluewater" },
 ]
 
 const props = defineProps({
