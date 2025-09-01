@@ -20,9 +20,14 @@
             alt="RSWFIRE"
             class="w-16 h-16 rounded-full border border-gray-800 shadow-sm"
         />
-        <div class="flex flex-col">
-          <div class="text-sm font-semibold tracking-wide text-gray-800">RSWFIRE 🔥</div>
-          <div class="text-xs text-gray-800 uppercase">ROBERT SAMUEL WHITE</div>
+        <div class="flex items-start gap-1">
+          <div class="flex flex-col justify-center h-12">
+            <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
+          </div>
+          <div class="flex flex-col justify-center">
+            <div class="text-lg font-semibold">Robert Samuel White</div>
+            <div class="text-sm text-gray-500 tracking-wide">rswfire.com</div>
+          </div>
         </div>
       </div>
       <button

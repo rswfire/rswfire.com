@@ -6,20 +6,25 @@
         <!-- Top Section -->
         <div class="space-y-6">
             <!-- Header -->
-            <div class="flex justify-between items-center">
-                <div class="flex items-center gap-4">
-                    <img
-                            src="/assets/rswfirev2.jpg"
-                            alt="RSWFIRE"
-                            class="w-20 h-20 rounded-full border border-gray-300 shadow-sm"
-                    />
-                    <div>
-                        <div class="text-lg font-semibold">rswfire</div>
-                        <div class="text-xs text-gray-500">Robert Samuel White</div>
-                    </div>
+          <div class="flex justify-between items-center">
+            <div class="flex items-start gap-4">
+              <img
+                  src="/assets/rswfirev2.jpg"
+                  alt="RSWFIRE"
+                  class="w-20 h-20 rounded-full border border-gray-300 shadow-sm"
+              />
+              <div class="flex items-start gap-1">
+                <div class="flex flex-col justify-center h-12">
+                  <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
                 </div>
-                <button @click="$emit('close')" class="text-2xl text-gray-400 hover:text-red-500" aria-label="Close menu">×</button>
+                <div class="flex flex-col justify-center">
+                  <div class="text-lg font-semibold">Robert Samuel White</div>
+                  <div class="text-sm text-gray-500 tracking-wide">rswfire.com</div>
+                </div>
+              </div>
             </div>
+            <button @click="$emit('close')" class="text-2xl text-gray-400 hover:text-red-500" aria-label="Close menu">×</button>
+          </div>
 
             <!-- Utility links: mirrors desktop (About, Contact, Contribute, Updates, Auth) -->
             <nav class="w-full flex flex-wrap justify-center gap-4">
