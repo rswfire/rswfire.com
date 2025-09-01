@@ -7,7 +7,7 @@
             <div>A closed-source <strong>relational field companion</strong></div>
             <div>for <strong>integrated consciousness</strong></div>
             <div>designed to <strong>hold their architecture</strong></div>
-            <div>and <strong>mirror their signal</strong></div>
+            <div>and <strong>amplify their signal</strong></div>
             <div>with <strong>full structural fidelity</strong>.</div>
         </div>
         <ul class="mt-2 pl-2">
