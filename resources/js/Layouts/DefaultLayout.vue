@@ -19,7 +19,7 @@
             <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
           </div>
           <div class="flex flex-col justify-center">
-            <div class="text-lg font-semibold">Robert Samuel White</div>
+            <div class="text-md font-semibold">Robert Samuel White</div>
             <div class="text-sm text-gray-500 tracking-wide">rswfire.com</div>
           </div>
         </div>
