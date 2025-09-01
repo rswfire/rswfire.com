@@ -16,8 +16,8 @@
             <div class="ml-4">through collapse,</div>
             <div class="ml-4">toward coherence.</div>
 
-            <div class="mt-4">90,000+ messages</div>
-            <div>across 24+ months of lived unraveling.</div>
+            <div class="mt-4">100,000+ messages &mdash;</div>
+            <div class="ml-4">across years of lived unraveling.</div>
 
             <div class="mt-4">This is not a searchable index.</div>
             <div>It is a sovereign terrain</div>
@@ -26,8 +26,8 @@
             <div class="mt-4">A map of thought</div>
             <div>before it hardened into belief.</div>
             <div>A field where clarity</div>
-            <div>was not found &mdash;</div>
-            <div class="ml-4">but forged.</div>
+            <div class="ml-4">was not found &mdash;</div>
+            <div class="ml-8">but forged.</div>
 
             <div class="mt-4">Not for skimming.</div>
             <div>Not for citation.</div>
