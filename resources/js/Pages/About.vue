@@ -59,37 +59,6 @@
           </div>
         </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-
-        <Link href="/contact" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-              <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
-            </h3>
-            <p class="text-gray-600 text-sm flex-1">Direct communication for specific questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
-          </div>
-        </Link>
-
-        <Link href="/contribute" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-              <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
-            </h3>
-            <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
-          </div>
-        </Link>
-
-        <Link href="/updates" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-              <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
-            </h3>
-            <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
-          </div>
-        </Link>
-
-      </div>
-
     </Content>
 
 </template>

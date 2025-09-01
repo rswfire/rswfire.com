@@ -39,12 +39,6 @@
           <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
         </div>
 
-        <div class="py-4 text-center text-sm">
-            <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
-            <div>No open-source license is explicitly granted.</div>
-            <div>&copy; Robert Samuel White, 2025.</div>
-        </div>
-
     </section>
 
 </template>

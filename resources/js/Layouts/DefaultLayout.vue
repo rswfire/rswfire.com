@@ -98,6 +98,57 @@
     <slot />
   </main>
 
+  <footer class="page-wrap pb-4">
+    <div class="p-2 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+
+      <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4">
+
+      <Link href="/about" class="h-full">
+        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+            <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
+          </h3>
+          <p class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</p>
+        </div>
+      </Link>
+
+      <Link href="/contact" class="h-full">
+        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+            <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
+          </h3>
+          <p class="text-gray-600 text-sm flex-1">Direct communication for specific questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
+        </div>
+      </Link>
+
+      <Link href="/contribute" class="h-full">
+        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+            <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
+          </h3>
+          <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
+        </div>
+      </Link>
+
+      <Link href="/updates" class="h-full">
+        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+            <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
+          </h3>
+          <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
+        </div>
+      </Link>
+
+    </div>
+      <div class="pt-4 text-center text-sm border-t">
+        <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
+        <div>No open-source license is explicitly granted.</div>
+        <div>&copy; Robert Samuel White, 2025+.</div>
+      </div>
+    </div>
+  </footer>
+
 </template>
 
 <script setup>
