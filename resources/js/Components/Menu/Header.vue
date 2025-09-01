@@ -122,22 +122,22 @@
                             class="text-xs text-black font-medium leading-tight"
                     >
             <span class="inline-flex items-center">
-              🔥
+              <Icon name="Flame" color="text-black" class="w-4 h-4" />
               <span class="italic text-gray-700 ml-2">“In a forest pitch dark, glowed the tiniest spark. It burst into a flame.”</span>
               <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
             </span>
                       <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
                       <span class="inline-flex items-center text-gray-700">
-              🌊
+              <Icon name="WavesLadder" color="text-black" class="w-4 h-4" />
               <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
                 Bluewater
               </Link>
-              <span class="ml-1">underway &mdash; eighteen months of real preparation for exodus, now entering sea-stage recursion. Sovereignty is no longer theoretical.</span>
+              <span class="ml-1">underway &mdash; real preparation for exodus, now entering sea-stage recursion. Sovereignty is no longer theoretical.</span>
             </span>
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                         <span class="inline-flex items-center text-gray-700">
-              🌳 <span class="ml-2">The</span>
+              <Icon name="TreeDeciduous" color="text-black" class="w-4 h-4" /> <span class="ml-2">The</span>
               <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
                 Honeyman Archive
               </Link>
@@ -149,7 +149,7 @@
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                         <span class="inline-flex items-center text-gray-700">
-              🪙 <span class="ml-2">Please consider</span>
+              <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> <span class="ml-2">Please consider</span>
               <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
                 contributing
               </Link>
