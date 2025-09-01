@@ -126,7 +126,15 @@
               <span class="italic text-gray-700 ml-2">“In a forest pitch dark, glowed the tiniest spark. It burst into a flame.”</span>
               <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
             </span>
+                      <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
+                      <span class="inline-flex items-center text-gray-700">
+              🌊 <span class="ml-2">Announcing the next chapter of my life &mdash; </span>
+              <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
+                Bluewater
+              </Link>
+              <span>!</span>
+            </span>
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                         <span class="inline-flex items-center text-gray-700">
