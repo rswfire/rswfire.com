@@ -11,7 +11,7 @@
 
         <div class="text-muted-foreground text-base leading-relaxed">
 
-          <div class="grid grid-cols-1 md:grid-cols-3 px-6 md:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 px-0 md:px-8">
 
             <div>
               <div>This is not a sailing blog.</div>
