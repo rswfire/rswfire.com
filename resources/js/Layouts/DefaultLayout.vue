@@ -100,30 +100,18 @@
 
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
 
-      <!--
-      <div class="flex justify-center">
-      <div class="inline-grid grid-cols-1 md:grid-cols-3 gap-4 my-4 text-sm px-2 md:px-10 border-b pb-4 mx-auto">
-        <div>
-          <div>Not a brand.</div>
-          <div>A signal architecture.</div>
-          <div>Not built for reach.</div>
-          <div>Built for resonance.</div>
-        </div>
-        <div>
-          <div>Not content.</div>
-          <div>Coherence.</div>
-          <div>Not static.</div>
-          <div>Alive.</div>
-        </div>
-        <div>
-          <div>Not followed.</div>
-          <div>Felt.</div>
-          <div>If it finds you,</div>
-          <div>you’re already in the field.</div>
-        </div>
+      <div class="flex flex-wrap justify-center gap-2 pb-4">
+        <Link
+            v-for="item in items"
+            :key="item.label"
+            :href="item.url"
+            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm border hover:shadow-sm transition"
+            :class="[item.bg, item.hover]"
+        >
+          <Icon :name="item.icon" :class="['w-3 h-3', item.color]" />
+          <span>{{ item.label }}</span>
+        </Link>
       </div>
-      </div>
-      -->
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4">
 
@@ -163,7 +151,57 @@
         </div>
       </Link>
 
+
+
     </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
+
+        <!-- Identity Column -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Identity</h4>
+          <Link
+              v-for="item in itemsIdentity"
+              :key="item.label"
+              :href="item.url"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              :class="[item.bg, item.border, item.hover]"
+          >
+            <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+            <span class="text-sm">{{ item.label }}</span>
+          </Link>
+        </div>
+
+        <!-- Content Column -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Content</h4>
+          <Link
+              v-for="item in itemsContent"
+              :key="item.label"
+              :href="item.url"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              :class="[item.bg, item.border, item.hover]"
+          >
+            <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+            <span class="text-sm">{{ item.label }}</span>
+          </Link>
+        </div>
+
+        <!-- Archive Column -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Archive</h4>
+          <Link
+              v-for="item in itemsArchive"
+              :key="item.label"
+              :href="item.url"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              :class="[item.bg, item.border, item.hover]"
+          >
+            <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+            <span class="text-sm">{{ item.label }}</span>
+          </Link>
+        </div>
+
+      </div>
       <div class="pt-4 text-center text-sm border-t">
         <div>&copy; Copyright Robert Samuel White, 2002-{{ new Date().getFullYear() }}. All Rights Reserved Worldwide.</div>
         <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
@@ -187,6 +225,26 @@ defineProps(['metaTitle', 'metaDescription', 'metaKeywords', 'metaUrl'])
 const page = usePage()
 const authUser = computed(() => page.props.auth?.user)
 const menuOpen = ref(false)
+
+const itemsIdentity = [
+  { label: "Codex",         icon: "SquareCode",     color: "text-amber-400",  bg: "bg-amber-50",       border: "border-amber-200",       hover: "hover:bg-amber-100",       url: "/codex" },
+  { label: "Who I Am",      icon: "Flame",          color: "text-red-400",    bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/hello" },
+  { label: "What I Do",     icon: "Hammer",         color: "text-purple-400", bg: "bg-purple-50",      border: "border-purple-200",      hover: "hover:bg-purple-100",      url: "/tech" },
+]
+
+const itemsContent = [
+  { label: "Signal",        icon: "Activity",       color: "text-sky-400",    bg: "bg-sky-50",         border: "border-sky-200",         hover: "hover:bg-sky-100",         url: "/signal" },
+  { label: "Transmission",  icon: "SatelliteDish",  color: "text-pink-400",   bg: "bg-pink-50",        border: "border-pink-200",        hover: "hover:bg-pink-100",        url: "/transmission" },
+  { label: "Fieldcraft",    icon: "Map",            color: "text-green-500",  bg: "bg-green-50",       border: "border-green-200",       hover: "hover:bg-green-100",       url: "/fieldcraft" },
+  { label: "Bluewater",     icon: "WavesLadder",    color: "text-blue-400",   bg: "bg-blue-50",        border: "border-blue-200",        hover: "hover:bg-blue-100",        url: "/bluewater" },
+]
+
+const itemsArchive = [
+  { label: "Lexicon",       icon: "SquareLibrary",  color: "text-orange-400", bg: "bg-orange-50",      border: "border-orange-200",      hover: "hover:bg-orange-100",      url: "/lexicon" },
+  { label: "Myth",          icon: "ShieldCheck",    color: "text-yellow-400", bg: "bg-yellow-50",      border: "border-yellow-200",      hover: "hover:bg-yellow-100",      url: "/myth" },
+  { label: "Honeyman",      icon: "TreeDeciduous",  color: "text-emerald-400",bg: "bg-emerald-50",     border: "border-emerald-200",     hover: "hover:bg-emerald-100",     url: "/honeyman" },
+]
+
 </script>
 
 <style>
