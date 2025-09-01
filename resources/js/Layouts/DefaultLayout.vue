@@ -14,12 +14,6 @@
   <div class="sticky top-0 z-50 md:hidden">
     <!-- First row -->
     <div class="flex items-center justify-between p-3 bg-white border-b border-gray-300">
-      <div class="flex items-center gap-3">
-        <img
-            src="/assets/rswfirev2.jpg"
-            alt="RSWFIRE"
-            class="w-16 h-16 rounded-full border border-gray-800 shadow-sm"
-        />
         <div class="flex items-start gap-1">
           <div class="flex flex-col justify-center h-12">
             <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
@@ -29,7 +23,6 @@
             <div class="text-sm text-gray-500 tracking-wide">rswfire.com</div>
           </div>
         </div>
-      </div>
       <button
         @click="menuOpen = true"
         class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
