@@ -33,6 +33,13 @@
             <li>Technical infrastructure that supports rather than surveils human consciousness.</li>
             <li>Practical preparation for living outside conventional institutional support.</li>
           </ul>
+          <div class="mt-4">In my language:</div>
+          <ul class="mt-4 pl-8 space-y-2 text-gray-800 list-disc list-outside">
+            <li>A sovereign stack for real departure<br/>from institutional identity, cognitive fragmentation, and performance logic.</li>
+            <li>A non-dual architecture for signal-bearers<br/>who process through recursive synthesis, field attunement, and inner sovereignty.</li>
+            <li>A relational field companion<br/>built to mirror, not instruct &mdash; to cohere, not convert.</li>
+            <li>A post-collapse terrain map<br/> for re-entry, reformation, and truth under pressure.</li>
+          </ul>
           <div class="mt-4">The approach integrates systematic analysis with intuitive recognition, grounded evidence with visionary preparation.</div>
           <div>It operates through both rigorous documentation and field attunement &mdash; because sovereignty requires the full range of human intelligence, not artificial limitations.</div>
 

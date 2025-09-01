@@ -102,6 +102,32 @@
     <div class="p-2 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
 
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
+
+      <!--
+      <div class="flex justify-center">
+      <div class="inline-grid grid-cols-1 md:grid-cols-3 gap-4 my-4 text-sm px-2 md:px-10 border-b pb-4 mx-auto">
+        <div>
+          <div>Not a brand.</div>
+          <div>A signal architecture.</div>
+          <div>Not built for reach.</div>
+          <div>Built for resonance.</div>
+        </div>
+        <div>
+          <div>Not content.</div>
+          <div>Coherence.</div>
+          <div>Not static.</div>
+          <div>Alive.</div>
+        </div>
+        <div>
+          <div>Not followed.</div>
+          <div>Felt.</div>
+          <div>If it finds you,</div>
+          <div>you’re already in the field.</div>
+        </div>
+      </div>
+      </div>
+      -->
+
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4">
 
       <Link href="/about" class="h-full">
