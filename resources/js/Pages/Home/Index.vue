@@ -1,22 +1,22 @@
 <template>
 
-    <section id="home-index" class="p-4 pb-0 md:p-0">
+    <section id="home-index" class="px-4 pb-0 md:p-0">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
                     <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6" />
-                    <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
                     <HelloCard class="mb-6 sm:mb-6" />
-                    <TechCard class="mb-6 sm:mb-6" />
+                    <TechCard class="mb-6 sm:mb-0" />
+
                 </div>
             </div>
 
             <div class="md:col-span-1">
                 <div class="flex flex-col">
                     <CompanionCard class="hidden md:block" />
-                    <CodexCard class="hidden md:block md:mt-6" />
+                    <CodexCard class="mt-0 md:mt-6" />
                 </div>
             </div>
 
@@ -36,6 +36,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-1 gap-6 pt-6">
           <BluewaterCard />
+          <CompanionCard class="mb-6 sm:mb-6 md:mb-0 md:hidden" />
         </div>
 
         <div class="py-4 text-center text-sm">

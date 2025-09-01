@@ -94,7 +94,7 @@
   />
 
   <!-- Shared main -->
-  <main class="page-wrap py-4 md:pt-[125px]">
+  <main class="page-wrap py-4 md:pt-[110px]">
     <slot />
   </main>
 
