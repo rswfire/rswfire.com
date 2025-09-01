@@ -104,9 +104,9 @@
                     <div v-else>
                         <Link
                                 href="/login"
-                                class="flex items-center gap-2 text-xs font-semibold text-orange-700 bg-orange-50 hover:bg-orange-100 px-3 py-1 rounded-full border border-orange-200 transition focus:outline-none focus:ring-2 focus:ring-orange-300"
+                                class="flex items-center gap-2 text-xs font-semibold text-yellow-700 bg-yellow-50 hover:bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200 transition focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         >
-                            <Icon name="Key" color="text-orange-600" class="w-4 h-4" />
+                            <Icon name="Key" color="text-yellow-600" class="w-4 h-4" />
                             <span class="hidden sm:inline">Authenticate</span>
                         </Link>
                     </div>
@@ -127,13 +127,12 @@
               <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
             </span>
                       <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
-
                       <span class="inline-flex items-center text-gray-700">
-              🌊 <span class="ml-2">Announcing the next chapter of my life &mdash; </span>
+              🌊
               <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
                 Bluewater
               </Link>
-              <span>!</span>
+              <span class="ml-1">underway &mdash; eighteen months of real preparation for exodus, now entering sea-stage recursion. Sovereignty is no longer theoretical.</span>
             </span>
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
