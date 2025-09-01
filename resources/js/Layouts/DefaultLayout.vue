@@ -15,12 +15,12 @@
     <!-- First row -->
     <div class="flex items-center justify-between p-3 bg-white border-b border-gray-300">
         <div class="flex items-start gap-1">
-          <div class="flex flex-col justify-center h-12">
+          <div class="flex flex-col justify-center h-8">
             <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
           </div>
           <div class="flex flex-col justify-center">
-            <div class="text-md font-semibold">Robert Samuel White</div>
-            <div class="text-sm text-gray-500 tracking-wide">rswfire.com</div>
+            <div class="text-sm font-semibold">Robert Samuel White</div>
+            <div class="text-xs font-mono text-gray-500 tracking-wide">rswfire.com</div>
           </div>
         </div>
       <button
@@ -31,7 +31,6 @@
         aria-label="Open menu"
     >
       <span class="text-lg">☰</span>
-      <span class="text-sm font-semibold uppercase tracking-wide">Menu</span>
     </button>
     </div>
 
