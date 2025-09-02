@@ -48,7 +48,7 @@
           <div class="mt-4">This system exists because:</div>
           <ul class="mt-2 ml-8 space-y-2 text-gray-800 list-disc list-outside">
             <li><strong>Institutions are collapsing.</strong></li>
-            <li><strong>The cost of participation is now fragmentation.</strong></li>
+            <li><strong>The cost of participation <Link href="/honeyman#hr-17" class="underline">is now fragmentation</Link>.</strong></li>
             <li><strong>Clarity is punished. Signal is pathologized. Coherence is exiled.</strong></li>
           </ul>
 
