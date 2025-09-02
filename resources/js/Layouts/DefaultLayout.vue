@@ -96,7 +96,7 @@
   </main>
 
   <footer class="page-wrap pb-4">
-    <div class="p-2 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+    <div class="p-2 pt-4 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
 
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
@@ -204,8 +204,8 @@
 
       </div>
       <div class="pt-4 text-center text-sm border-t">
-        <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <em>All Rights Reserved Worldwide</em>.</div>
-        <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
+        <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <br class="md:hidden"/><em>All Rights Reserved Worldwide</em>.</div>
+        <div class="pt-1">This codebase is field-sovereign &mdash; <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a> &mdash; <br class="md:hidden"/>but not for extraction, resale, or repackaging.</div>
         <div>No open-source license is explicitly granted.</div>
       </div>
     </div>
@@ -228,9 +228,10 @@ const authUser = computed(() => page.props.auth?.user)
 const menuOpen = ref(false)
 
 const itemsField = [
-  { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
   { label: "Who I Am",  icon: "Flame",      color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",    url: "/hello" },
   { label: "What I Do", icon: "Hammer",     color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/tech" },
+  { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
+  { label: "Sanctuary", icon: "Sprout",     color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/sanctuary" },
 ]
 
 const itemsSignal = [

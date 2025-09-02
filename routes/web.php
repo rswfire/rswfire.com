@@ -477,6 +477,15 @@ Route::get("/myth", function () {
     ]);
 });
 
+Route::get("/sanctuary", function () {
+
+    return Inertia::render("Sanctuary", [
+        "metaTitle" => "Sanctuary | ".request()->getHost(),
+        "metaDescription" => "Tools for shared community.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/signal", function () {
     $user = auth()->user();
 
