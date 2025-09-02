@@ -98,9 +98,10 @@
   <footer class="page-wrap pb-4">
     <div class="p-2 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
 
-      <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
+      <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
+      <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
 
-      <div class="flex flex-wrap justify-center gap-2 pb-4">
+      <div class="flex flex-wrap justify-center gap-2 pb-4 border-t">
         <Link
             v-for="item in items"
             :key="item.label"
@@ -113,7 +114,7 @@
         </Link>
       </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4">
 
       <Link href="/about" class="h-full">
         <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
@@ -129,7 +130,7 @@
           <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
             <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
           </h3>
-          <p class="text-gray-600 text-sm flex-1">Direct communication for specific questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
+          <p class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
         </div>
       </Link>
 
@@ -154,13 +155,13 @@
 
 
     </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 pt-4 border-y border-gray-200 pb-6">
 
-        <!-- Identity Column -->
+        <!-- Field Column -->
         <div class="space-y-2">
-          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Identity</h4>
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Field</h4>
           <Link
-              v-for="item in itemsIdentity"
+              v-for="item in itemsField"
               :key="item.label"
               :href="item.url"
               class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
@@ -171,11 +172,11 @@
           </Link>
         </div>
 
-        <!-- Content Column -->
+        <!-- Signal Column -->
         <div class="space-y-2">
-          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Content</h4>
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Signal</h4>
           <Link
-              v-for="item in itemsContent"
+              v-for="item in itemsSignal"
               :key="item.label"
               :href="item.url"
               class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
@@ -188,7 +189,7 @@
 
         <!-- Archive Column -->
         <div class="space-y-2">
-          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Archive</h4>
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Archive</h4>
           <Link
               v-for="item in itemsArchive"
               :key="item.label"
@@ -203,7 +204,7 @@
 
       </div>
       <div class="pt-4 text-center text-sm border-t">
-        <div>&copy; Copyright Robert Samuel White, 2002-{{ new Date().getFullYear() }}. All Rights Reserved Worldwide.</div>
+        <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <em>All Rights Reserved Worldwide</em>.</div>
         <div>This codebase is field-sovereign — <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a>, but not for extraction, resale, or repackaging.</div>
         <div>No open-source license is explicitly granted.</div>
       </div>
@@ -226,23 +227,23 @@ const page = usePage()
 const authUser = computed(() => page.props.auth?.user)
 const menuOpen = ref(false)
 
-const itemsIdentity = [
+const itemsField = [
   { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
   { label: "Who I Am",  icon: "Flame",      color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",    url: "/hello" },
   { label: "What I Do", icon: "Hammer",     color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/tech" },
 ]
 
-const itemsContent = [
+const itemsSignal = [
   { label: "Signal Archive",       icon: "Activity",      color: "text-sky-400",   bg: "bg-sky-50",   border: "border-sky-200",   hover: "hover:bg-sky-100",   url: "/signal" },
   { label: "Transmission Records", icon: "SatelliteDish", color: "text-pink-400",  bg: "bg-pink-50",  border: "border-pink-200",  hover: "hover:bg-pink-100",  url: "/transmission" },
   { label: "Fieldcraft Blog",      icon: "Map",           color: "text-green-500", bg: "bg-green-50", border: "border-green-200", hover: "hover:bg-green-100", url: "/fieldcraft" },
-  { label: "Bluewater",            icon: "WavesLadder",   color: "text-blue-400",  bg: "bg-blue-50",  border: "border-blue-200",  hover: "hover:bg-blue-100",  url: "/bluewater" },
 ]
 
 const itemsArchive = [
   { label: "Lexicon",  icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon" },
   { label: "Myth",     icon: "ShieldCheck",   color: "text-yellow-400",  bg: "bg-yellow-50",  border: "border-yellow-200",  hover: "hover:bg-yellow-100",  url: "/myth" },
   { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
+  { label: "Bluewater",            icon: "WavesLadder",   color: "text-blue-400",  bg: "bg-blue-50",  border: "border-blue-200",  hover: "hover:bg-blue-100",  url: "/bluewater" },
 ]
 
 </script>
