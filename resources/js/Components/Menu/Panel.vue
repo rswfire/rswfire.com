@@ -9,7 +9,7 @@
           <div class="flex justify-between items-center">
             <div class="flex items-start gap-4">
               <img
-                  src="/assets/rswfirev2.jpg"
+                  src="/assets/rswfirev3.jpg"
                   alt="RSWFIRE"
                   class="w-20 h-20 rounded-full border border-gray-300 shadow-sm"
               />

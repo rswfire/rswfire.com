@@ -17,7 +17,7 @@
                 <!-- Profile -->
                 <div class="flex flex-col items-center space-y-1">
                     <img
-                        src="/assets/rswfirev2.jpg"
+                        src="/assets/rswfirev3.jpg"
                         alt="Robert Samuel White"
                         class="w-40 h-40 rounded-full border border-gray-300 shadow-md object-cover"
                     />
