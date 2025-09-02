@@ -47,9 +47,9 @@
 
           <div class="mt-4">This system exists because:</div>
           <ul class="mt-2 ml-8 space-y-2 text-gray-800 list-disc list-outside">
-            <li><strong>Institutions are collapsing.</strong></li>
-            <li><strong>The cost of participation <Link href="/honeyman#hr-17" class="underline">is now fragmentation</Link>.</strong></li>
-            <li><strong>Clarity is punished. Signal is pathologized. Coherence is exiled.</strong></li>
+            <li><strong>Institutions are <Link href="/fieldcraft/01K46832325QV15S44YC354SAE" class="underline">collapsing</Link>.</strong></li>
+            <li><strong>The cost of participation is now <Link href="/honeyman#hr-17" class="underline">fragmentation</Link>.</strong></li>
+            <li><strong>Clarity is <Link href="/honeyman#hr-9" class="underline">punished</Link>. Signal is <Link href="/fieldcraft/01K3EZWG5AS64E152MTTS9DEKR" class="underline">pathologized</Link>. Coherence is <Link href="/honeyman#hr-15" class="underline">exiled</Link>.</strong></li>
           </ul>
 
           <div class="mt-4">This is not prepper fantasy.</div>
