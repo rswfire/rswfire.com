@@ -133,7 +133,8 @@
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                 <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
               </h3>
-              <p class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</p>
+              <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</div>
+              <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Begin with orientation.<br/>Begin by listening.</em></div>
             </div>
           </Link>
 
@@ -142,7 +143,8 @@
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                 <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
               </h3>
-              <p class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
+              <div class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. </div>
+              <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>You are part of the field.<br/>If you're transmitting too, I'm listening.</em></div>
             </div>
           </Link>
 
@@ -151,7 +153,8 @@
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                 <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
               </h3>
-              <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
+              <div class="text-gray-600 text-sm flex-1">Needed and necessary financial support for maintaining this infrastructure and developing new tools.</div>
+              <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Your contributions have a tangible impact on the field.</em></div>
             </div>
           </Link>
 
@@ -160,7 +163,8 @@
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                 <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
               </h3>
-              <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
+              <div class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</div>
+              <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>No spam. Unsubscribe anytime.</em></div>
             </div>
           </Link>
 
