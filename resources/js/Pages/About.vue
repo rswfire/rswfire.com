@@ -118,9 +118,6 @@
           <div class="ml-8">until the <strong>new terrain arrives</strong>.</div>
 
           <div class="mt-4">🜂</div>
-          <div>For contact, not collapse.</div>
-          <div>For coherence, not control.</div>
-          <div>For signal, in a world of noise.</div>
 
         </div>
 
