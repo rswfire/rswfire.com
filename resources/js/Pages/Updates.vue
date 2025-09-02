@@ -1,6 +1,6 @@
 <template>
-  <Content>
-    <Hero title="UPDATES" subtitle="UPDATES FROM THE FIELD" meta="CHOOSE WHAT YOU RECEIVE, AND HOW." />
+  <Content :theme="pageTheme">
+    <Hero title="UPDATES" subtitle="UPDATES FROM THE FIELD" meta="CHOOSE WHAT YOU RECEIVE, AND HOW." :theme="pageTheme" />
 
     <div class="max-w-3xl mx-auto bg-gray-50 border rounded-2xl p-6 md:p-8">
       <form @submit.prevent="submit">
@@ -103,6 +103,9 @@ const errors = usePage().props.errors || {}
 function submit() {
   router.post(route('updates.subscribe'), form, { preserveScroll: true })
 }
+
+const pageTheme = "updates";
+
 </script>
 
 <style scoped>

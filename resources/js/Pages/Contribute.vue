@@ -1,11 +1,12 @@
 <template>
 
-    <Content theme="rswfire">
+    <Content :theme="pageTheme">
 
         <Hero
             title="CONTRIBUTIONS"
             subtitle="SUPPORT THE CONTINUED SYNTHESIS OF THIS FIELD"
             meta="WRITING. VIDEO. SOUND. SYSTEMS. SANCTUARY."
+            :theme="pageTheme"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -141,6 +142,8 @@ const contributors = [
     { name: "Unfurling Kurt", amount: 100, date: "072125", link: "https://youtube.com/@unfurlingkurt" },
     { name: "Your Name Here (Optional)", amount: null, date: null },
 ]
+
+const pageTheme = "contribute";
 
 </script>
 

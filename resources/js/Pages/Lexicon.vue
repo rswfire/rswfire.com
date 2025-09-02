@@ -5,7 +5,7 @@
     <Hero
         title="LEXICON"
         subtitle="THE LANGUAGE OF THE FIELD"
-        meta="A LIVING VOCABULARY FOR TRANSMITTING IN FIELD CONDITIONS."
+        meta="A LIVING VOCABULARY FOR TRANSMITTING IN FIELD CONDITIONS"
         class="pb-4 border-b"
         :theme="pageTheme"
     />

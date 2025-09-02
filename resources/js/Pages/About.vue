@@ -1,11 +1,12 @@
 <template>
 
-    <Content theme="rswfire">
+    <Content :theme="pageTheme">
 
         <Hero
             title="ABOUT RSWFIRE.COM"
             subtitle="THE WORK OF HOLDING SIGNAL UNDER PRESSURE"
             meta="ROBERT SAMUEL WHITE"
+            :theme="pageTheme"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -77,6 +78,8 @@ import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 import Icon from "@/Components/System/Icon.vue";
+
+const pageTheme = "about";
 
 </script>
 
