@@ -103,8 +103,9 @@
     <slot />
   </main>
 
-  <footer class="page-wrap pb-4">
-    <div class="p-2 pt-4 md:p-6 md:border md:rounded-2xl md:shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+  <footer class="page-wrap p-4">
+    <div class="p-2 pt-4 border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+      <div class="p-4">
 
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
@@ -231,6 +232,7 @@
         <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <br class="md:hidden"/><em>All Rights Reserved Worldwide</em>.</div>
         <div class="pt-1">This codebase is field-sovereign &mdash; <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a> &mdash; <br class="md:hidden"/>but not for extraction, resale, or repackaging.</div>
         <div>No open-source license is explicitly granted.</div>
+      </div>
       </div>
     </div>
   </footer>
