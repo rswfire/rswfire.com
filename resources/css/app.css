@@ -5,5 +5,5 @@
 html { scroll-behavior: smooth; }
 
 .page-wrap {
-    @apply max-w-6xl mx-auto px-0 sm:px-6;
+    @apply max-w-6xl mx-auto px-4;
 }
