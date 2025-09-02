@@ -14,24 +14,32 @@
   <div class="sticky top-0 z-50 md:hidden">
     <!-- First row -->
     <div class="flex items-center justify-between p-3 bg-white border-b border-gray-300">
-        <div class="flex items-start gap-1">
-          <div class="flex flex-col justify-center h-8">
-            <Icon name="Flame" color="text-rswfire-600" class="w-8 h-8 flex-shrink-0"/>
+      <Link href="/" class="flex items-center gap-3">
+        <img
+            src="/assets/rswfirev2.jpg"
+            alt="RSWFIRE"
+            class="w-16 h-16 rounded-full border border-gray-300 shadow-sm"
+        />
+        <div class="flex items-center gap-2">
+          <div class="flex flex-col justify-center">
+            <Icon name="Flame" color="text-rswfire-600" class="w-6 h-6 flex-shrink-0"/>
           </div>
           <div class="flex flex-col justify-center">
             <div class="text-sm font-semibold">Robert Samuel White</div>
             <div class="text-xs font-mono text-gray-500 tracking-wide">rswfire.com</div>
           </div>
         </div>
+      </Link>
+
       <button
-        @click="menuOpen = true"
-        class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
-        :aria-expanded="menuOpen ? 'true' : 'false'"
-        aria-controls="mobile-menu"
-        aria-label="Open menu"
-    >
-      <span class="text-lg">☰</span>
-    </button>
+          @click="menuOpen = true"
+          class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
+          :aria-expanded="menuOpen ? 'true' : 'false'"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+      >
+        <span class="text-lg">☰</span>
+      </button>
     </div>
 
     <!-- Second row -->
