@@ -109,61 +109,9 @@
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
 
-      <div class="flex flex-wrap justify-center pb-4 border-t">
-        <Link
-            v-for="item in items"
-            :key="item.label"
-            :href="item.url"
-            class="inline-flex items-center justify-center rounded-full border hover:shadow-sm transition group relative z-10 hover:z-20"
-            :class="[item.bg, item.hover]"
-        >
-          <Icon :name="item.icon" :class="['w-3 h-3 flex-shrink-0', item.color]" />
-          <span class="hidden group-hover:inline ml-1">{{ item.label }}</span>
-        </Link>
-      </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4">
-
-      <Link href="/about" class="h-full">
-        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-            <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
-          </h3>
-          <p class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</p>
-        </div>
-      </Link>
-
-      <Link href="/contact" class="h-full">
-        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-            <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
-          </h3>
-          <p class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
-        </div>
-      </Link>
-
-      <Link href="/contribute" class="h-full">
-        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-            <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
-          </h3>
-          <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
-        </div>
-      </Link>
-
-      <Link href="/updates" class="h-full">
-        <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-          <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
-            <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
-          </h3>
-          <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
-        </div>
-      </Link>
 
 
-
-    </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 pt-4 border-y border-gray-200 pb-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
 
         <!-- Field Column -->
         <div class="space-y-2">
@@ -172,7 +120,7 @@
               v-for="item in itemsField"
               :key="item.label"
               :href="item.url"
-              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
               :class="[item.bg, item.border, item.hover]"
           >
             <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
@@ -187,7 +135,7 @@
               v-for="item in itemsSignal"
               :key="item.label"
               :href="item.url"
-              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
               :class="[item.bg, item.border, item.hover]"
           >
             <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
@@ -202,7 +150,7 @@
               v-for="item in itemsReference"
               :key="item.label"
               :href="item.url"
-              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
+              class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
               :class="[item.bg, item.border, item.hover]"
           >
             <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
@@ -211,6 +159,60 @@
         </div>
 
       </div>
+
+      <div class="flex flex-wrap justify-center pb-4 border-t">
+        <Link
+            v-for="item in items"
+            :key="item.label"
+            :href="item.url"
+            class="inline-flex items-center justify-center rounded-full border hover:shadow-sm transition group relative z-10 hover:z-20"
+            :class="[item.bg, item.hover]"
+        >
+          <Icon :name="item.icon" :class="['w-3 h-3 flex-shrink-0', item.color]" />
+          <span class="hidden group-hover:inline ml-1">{{ item.label }}</span>
+        </Link>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4">
+
+        <Link href="/about" class="h-full">
+          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
+            </h3>
+            <p class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</p>
+          </div>
+        </Link>
+
+        <Link href="/contact" class="h-full">
+          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
+            </h3>
+            <p class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
+          </div>
+        </Link>
+
+        <Link href="/contribute" class="h-full">
+          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
+            </h3>
+            <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
+          </div>
+        </Link>
+
+        <Link href="/updates" class="h-full">
+          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
+            </h3>
+            <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
+          </div>
+        </Link>
+
+      </div>
+
       <div class="pt-4 text-center text-sm border-t">
         <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <br class="md:hidden"/><em>All Rights Reserved Worldwide</em>.</div>
         <div class="pt-1">This codebase is field-sovereign &mdash; <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a> &mdash; <br class="md:hidden"/>but not for extraction, resale, or repackaging.</div>
