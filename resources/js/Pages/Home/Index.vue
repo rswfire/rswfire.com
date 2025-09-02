@@ -1,6 +1,6 @@
 <template>
 
-    <section id="home-index" class="px-4 pb-0 md:p-0">
+    <section id="home-index" class="pb-0">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 

@@ -90,7 +90,6 @@
     </div>
   </div>
 
-  <!-- Mobile menu panel (only on mobile) -->
   <MobileNav
       v-if="menuOpen"
       id="mobile-menu"
@@ -98,19 +97,16 @@
       @close="menuOpen = false"
   />
 
-  <!-- Shared main -->
   <main class="page-wrap py-4 md:pt-[110px]">
     <slot />
   </main>
 
-  <footer class="page-wrap px-4">
-    <div class="px-4 m-4 border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+  <footer class="page-wrap mb-6">
+    <div class="border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
       <div class="p-4">
 
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
-
-
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
 
