@@ -1,9 +1,10 @@
 <template>
-    <Content>
+    <Content :theme="pageTheme">
         <Hero
             :title="entry.content_title"
             :subtitle="tags.length > 0 ? `Fieldcraft Record • ${tags[0]}` : 'Fieldcraft Record • Lived Signal'"
             :meta="formatDate(entry.stamp_created)"
+            :theme="pageTheme"
         />
 
         <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -75,6 +76,9 @@ function formatDate(date) {
         day: 'numeric'
     })
 }
+
+const pageTheme = "fieldcraft";
+
 </script>
 
 <style scoped>
