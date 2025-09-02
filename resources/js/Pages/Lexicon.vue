@@ -20,9 +20,9 @@
           <div
               v-for="entry in section.entries"
               :key="entry.term"
-              class="group pl-5 border-l-2 border-neutral-300 hover:border-red-500 transition-all"
+              class="group pl-5 border-l-2 border-neutral-300 hover:border-lexicon-500 transition-all"
           >
-            <h3 class="text-lg font-semibold text-neutral-900 group-hover:text-red-600 transition-colors">
+            <h3 class="text-lg font-semibold text-neutral-900 group-hover:text-lexicon-600 transition-colors">
               {{ entry.term }}
             </h3>
             <p class="text-[15px] leading-relaxed text-neutral-600 mt-1">
