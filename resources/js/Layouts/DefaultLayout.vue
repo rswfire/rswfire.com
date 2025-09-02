@@ -104,7 +104,7 @@
   </main>
 
   <footer class="page-wrap p-4">
-    <div class="p-2 pt-4 border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
+    <div class="p-2 m-4 border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
       <div class="p-4">
 
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
