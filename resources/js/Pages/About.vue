@@ -3,7 +3,7 @@
     <Content :theme="pageTheme">
 
         <Hero
-            title="ABOUT RSWFIRE.COM"
+            title="RSWFIRE.COM"
             subtitle="INTERFACE FOR THE POST-INSTITUTIONAL MIND"
             meta="YOU ARE NOT EARLY. YOU ARE EXACTLY ON TIME."
             :theme="pageTheme"
