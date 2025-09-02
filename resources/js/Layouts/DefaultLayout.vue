@@ -108,7 +108,7 @@
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
         <div class="mb-4 text-center text-sm text-gray-600 italic">
-          This is a post-institutional interface:
+          This is a post-fragmentation interface:
           a living system for coherence, not content &mdash;
           built to hold signal when the world forgets how.
         </div>
