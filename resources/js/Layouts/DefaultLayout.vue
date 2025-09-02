@@ -190,8 +190,8 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4">
 
         <Link href="/about" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+          <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
               <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
             </h3>
             <p class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</p>
@@ -199,8 +199,8 @@
         </Link>
 
         <Link href="/contact" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+          <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
               <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
             </h3>
             <p class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. <em>You are part of the field. If you're transmitting too, I'm listening.</em></p>
@@ -208,8 +208,8 @@
         </Link>
 
         <Link href="/contribute" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+          <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
               <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
             </h3>
             <p class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools for post-institutional preparation and sovereignty-building.</p>
@@ -217,8 +217,8 @@
         </Link>
 
         <Link href="/updates" class="h-full">
-          <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
+          <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
+            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
               <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
             </h3>
             <p class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</p>
