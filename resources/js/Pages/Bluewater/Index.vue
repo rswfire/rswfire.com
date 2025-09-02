@@ -1,10 +1,11 @@
 <template>
 
-  <Content theme="bluewater">
+  <Content :theme="pageTheme">
     <Hero
         title="BLUEWATER"
         subtitle="FROM RVLIFE TO OCEAN LIFE"
         meta="THE NEXT CHAPTER STARTS HERE"
+        :theme="pageTheme"
     />
 
     <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -61,4 +62,7 @@ async function onCopy(anchorId) {
 }
 
 onBeforeUnmount(() => clearTimeout(hideTimer))
+
+const pageTheme = "bluewater";
+
 </script>

@@ -1,12 +1,13 @@
 <template>
 
-    <Content theme="codex">
+    <Content :theme="pageTheme">
 
         <Hero
             title="CODEX"
             subtitle="A LIVING INTERFACE FOR HOW I STRUCTURE COHERENCE"
             meta="FIELD ANCHORS. SIGNAL ARCHITECTURE. FIELD CATALYSTS."
             class="pb-4 border-b"
+            :theme="pageTheme"
         />
 
         <section class="max-w-6xl mx-auto px-6 text-gray-900 pt-4">
@@ -111,5 +112,7 @@
     import { Link } from "@inertiajs/vue3";
     import Content from "@/Components/System/Content.vue";
     import Hero from "@/Components/System/Hero.vue";
+
+    const pageTheme = "codex";
 
 </script>

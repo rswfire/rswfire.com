@@ -1,10 +1,11 @@
 <template>
-    <Content theme="signal">
+    <Content :theme="pageTheme">
 
         <Hero
             title="SIGNAL ARCHIVE"
             subtitle="A LIVING RECORD OF POST-FRAGMENTATION CONSCIOUSNESS"
             meta="UNLOCKED. NOT EXPLAINED."
+            :theme="pageTheme"
         />
 
         <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
@@ -120,6 +121,8 @@ function pageRange(current, last, delta = 40) {
     for (let i = start; i <= end; i++) range.push(i)
     return range
 }
+
+const pageTheme = "signals";
 </script>
 
 <style>

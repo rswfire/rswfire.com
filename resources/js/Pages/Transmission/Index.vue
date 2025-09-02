@@ -1,10 +1,11 @@
 <template>
-    <Content theme="transmission">
+    <Content :theme="pageTheme">
 
         <Hero
-            title="TRANSMISSION RECORDS"
+            title="TRANSMISSIONS"
             subtitle="A LIVING LOG OF EMBODIED EXPRESSION"
             meta="700+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
+            :theme="pageTheme"
         />
 
         <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
@@ -147,6 +148,8 @@ const formatDuration = (seconds) => {
     const s = seconds % 60
     return `${m}m ${s}s`
 }
+
+const pageTheme = "transmissions";
 </script>
 
 <style>
@@ -168,4 +171,5 @@ const formatDuration = (seconds) => {
         -webkit-line-clamp: 7;
     }
 }
+
 </style>

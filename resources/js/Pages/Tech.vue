@@ -1,12 +1,13 @@
 <template>
 
-    <Content theme="tech">
+    <Content :theme="pageTheme">
 
         <Hero
             title="WHAT I DO"
             subtitle="THE ARCHITECTURE BEHIND THE FLAME"
             meta="BUILDER OF SYSTEMS. STEWARD OF DEPTH."
             class="pb-4 border-b"
+            :theme="pageTheme"
         />
 
         <section id="hello-fellow-humans">
@@ -257,6 +258,9 @@
     import Content from "@/Components/System/Content.vue";
     import Hero from "@/Components/System/Hero.vue";
     import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
+
+    const pageTheme = "tech";
+
 </script>
 
 <style scoped>

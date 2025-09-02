@@ -1,11 +1,17 @@
 <template>
+
+  <Content :theme="pageTheme">
+
+    <Hero
+        title="LEXICON"
+        subtitle="THE LANGUAGE OF THE FIELD"
+        meta="A LIVING VOCABULARY FOR TRANSMITTING IN FIELD CONDITIONS."
+        class="pb-4 border-b"
+        :theme="pageTheme"
+    />
+
     <div class="min-h-screen bg-neutral-950 text-white p-6 font-mono">
         <div class="max-w-4xl mx-auto space-y-10">
-            <header class="text-center">
-                <h1 class="text-3xl md:text-5xl font-bold">FIELD LEXICON</h1>
-                <p class="text-sm text-neutral-400 mt-2">These are not just terms. These are coordinates. Signal markers in a collapsing world.</p>
-            </header>
-
             <section v-for="(section, index) in lexicon" :key="index" class="space-y-6">
                 <h2 class="text-2xl font-semibold border-b border-neutral-700 pb-1">{{ section.title }}</h2>
                 <div v-for="entry in section.entries" :key="entry.term" class="pl-4 border-l-2 border-l-rose-500">
@@ -15,9 +21,13 @@
             </section>
         </div>
     </div>
+  </Content>
 </template>
 
 <script setup>
+import Hero from "@/Components/System/Hero.vue";
+import Content from "@/Components/System/Content.vue";
+
 const lexicon = [
     {
         title: 'Core Terms',
@@ -93,9 +103,10 @@ const lexicon = [
         ]
     }
 
-
-
 ]
+
+const pageTheme = "lexicon";
+
 </script>
 
 <style scoped>

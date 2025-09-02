@@ -250,10 +250,10 @@ const itemsSignal = [
 ]
 
 const itemsReference = [
-  { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
-  { label: "Bluewater",            icon: "WavesLadder",   color: "text-blue-400",  bg: "bg-blue-50",  border: "border-blue-200",  hover: "hover:bg-blue-100",  url: "/bluewater" },
-  { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
-  { label: "Lexicon",  icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon" },
+  { label: "Codex",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex" },
+  { label: "Bluewater", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater" },
+  { label: "Honeyman",  icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
+  { label: "Lexicon",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon" },
 ]
 
 </script>

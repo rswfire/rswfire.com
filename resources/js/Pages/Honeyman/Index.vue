@@ -7,11 +7,12 @@
       fab-right="28px"
   />
   <div id="hr-0" class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
-  <Content theme="honeyman">
+  <Content :theme="pageTheme">
     <Hero
         title="THE HONEYMAN ARCHIVE"
         subtitle="HONEYMAN STATE PARK, OREGON PARKS &amp; RECREATION DEPARTMENT (OPRD)"
         meta="THE TREATMENT OF VOLUNTEERS IS NOT PERIPHERAL &mdash; BUT CENTRAL &mdash; TO INSTITUTIONAL LEGITIMACY"
+        :theme="pageTheme"
     />
 
     <div class="honeyman-content mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -139,6 +140,8 @@ const sections = [
 
 const { copySectionLink } = useCopySectionLink()
 provide('copySectionLink', copySectionLink)
+
+const pageTheme = "honeyman";
 
 </script>
 

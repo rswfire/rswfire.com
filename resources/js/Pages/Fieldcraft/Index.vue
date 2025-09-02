@@ -1,11 +1,12 @@
 <template>
 
-    <Content>
+    <Content :theme="pageTheme">
 
         <Hero
             title="FIELDCRAFT BLOG"
             subtitle="A DIGITAL ARCHIVE OF LIVED COHERENCE, COLLAPSE TRACKING, AND SIGNAL ORIENTATION"
             :meta="`PAGE ${entries.current_page} OF ${entries.last_page}`"
+            :theme="pageTheme"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -84,4 +85,7 @@ function parsedTags(meta) {
         return []
     }
 }
+
+const pageTheme = "fieldcraft";
+
 </script>

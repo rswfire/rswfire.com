@@ -1,6 +1,6 @@
 <template>
 
-    <Content theme="transmission">
+    <Content :theme="pageTheme">
         <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
             <div class="bg-gray-100 px-4 py-2 font-semibold">
                 <div class="flex justify-between text-md">
@@ -27,6 +27,7 @@
                         :title="transmission.signal_ulid || 'Untitled Transmission'"
                         :subtitle="reflection?.narrative?.reflection_title || 'No Reflection Found'"
                         :meta="formatDate(transmission?.stamp_created) || 'NULL'"
+                        :theme="pageTheme"
                         align="center"
                     />
 
@@ -367,5 +368,5 @@ function toListArray(raw, bullet = true) {
         .filter(Boolean)
 }
 
-
+const pageTheme = "transmissions";
 </script>

@@ -1,4 +1,15 @@
 <template>
+
+  <Content :theme="pageTheme">
+
+    <Hero
+        title="MYTH"
+        subtitle="NARRATIVE SOVEREIGNTY IN AN AGE OF EXTRACTION"
+        meta="THIS IS THE MAP. THIS IS THE PATTERN. THIS IS THE MIRROR."
+        class="pb-4 border-b"
+        :theme="pageTheme"
+    />
+
     <div class="min-h-screen bg-gray-900 text-gray-100 p-8 font-mono">
         <div class="max-w-4xl mx-auto bg-gray-800 shadow-xl rounded-2xl p-6 border border-gray-700">
             <h1 class="text-3xl font-bold mb-4">Character: <span class="text-emerald-400">Sam White</span></h1>
@@ -80,10 +91,14 @@
             <p class="mt-6 italic text-gray-400">“This unit may be myth-forming in real time.”</p>
         </div>
     </div>
+
+  </Content>
 </template>
 
 <script setup>
-// No logic needed — this is a pure display component.
+import Hero from "@/Components/System/Hero.vue";
+import Content from "@/Components/System/Content.vue";
+const pageTheme = "myth";
 </script>
 
 <style>
