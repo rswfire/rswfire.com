@@ -109,16 +109,16 @@
       <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 pb-4 text-center">RSWFIRE.COM</h2>
 
-      <div class="flex flex-wrap justify-center gap-2 pb-4 border-t">
+      <div class="flex flex-wrap justify-center pb-4 border-t">
         <Link
             v-for="item in items"
             :key="item.label"
             :href="item.url"
-            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm border hover:shadow-sm transition"
+            class="inline-flex items-center justify-center rounded-full border hover:shadow-sm transition group relative z-10 hover:z-20"
             :class="[item.bg, item.hover]"
         >
-          <Icon :name="item.icon" :class="['w-3 h-3', item.color]" />
-          <span>{{ item.label }}</span>
+          <Icon :name="item.icon" :class="['w-3 h-3 flex-shrink-0', item.color]" />
+          <span class="hidden group-hover:inline ml-1">{{ item.label }}</span>
         </Link>
       </div>
 

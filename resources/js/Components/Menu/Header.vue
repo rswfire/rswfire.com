@@ -14,24 +14,24 @@
                     </div>
                 </div>
 
-                <nav class="flex items-center justify-center gap-2">
-                    <div
-                        v-for="item in items"
-                        :key="item.label"
-                        @mouseenter="hovered = item.label"
-                        @mouseleave="hovered = null"
-                        class="group inline-flex items-center px-2 py-1 rounded-full transition-all duration-300"
-                    >
-                        <Link :href="item.url" class="flex items-center space-x-2">
-                            <Icon :name="item.icon" :color="item.color" class="flex-shrink-0" />
-                            <transition name="fade-width">
-                <span v-if="hovered === item.label" class="text-sm whitespace-nowrap text-gray-800">
-                  {{ item.label }}
-                </span>
-                            </transition>
-                        </Link>
-                    </div>
-                </nav>
+              <nav class="flex items-center justify-center gap-2">
+                <div
+                    v-for="item in items"
+                    :key="item.label"
+                    @mouseenter="hovered = item.label"
+                    @mouseleave="hovered = null"
+                    class="group inline-flex items-center px-0.5 md:px-2 rounded-full transition-all duration-300"
+                >
+                  <Link :href="item.url" class="flex items-center space-x-0 md:space-x-2">
+                    <Icon :name="item.icon" :color="item.color" class="flex-shrink-0" />
+                    <transition name="fade-width">
+                      <span v-if="hovered === item.label" class="text-sm whitespace-nowrap text-gray-800">
+                        {{ item.label }}
+                      </span>
+                    </transition>
+                  </Link>
+                </div>
+              </nav>
 
                 <div class="flex items-center">
                     <div
@@ -122,13 +122,13 @@
                             class="text-xs text-black font-medium leading-tight"
                     >
             <span class="inline-flex items-center">
-              <Icon name="Flame" color="text-black" class="w-4 h-4" />
+              <Icon name="Flame" color="text-black" class="w-[16px] h-[16px]" />
               <span class="italic text-gray-700 ml-2">“In a forest pitch dark, glowed the tiniest spark. It burst into a flame.”</span>
               <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
             </span>
                       <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
                       <span class="inline-flex items-center text-gray-700">
-              <Icon name="WavesLadder" color="text-black" class="w-4 h-4" />
+              <Icon name="WavesLadder" color="text-black" class="w-[16px] h-[16px]" />
               <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
                 Bluewater
               </Link>
@@ -137,7 +137,7 @@
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                         <span class="inline-flex items-center text-gray-700">
-              <Icon name="TreeDeciduous" color="text-black" class="w-4 h-4" /> <span class="ml-2">The</span>
+              <Icon name="TreeDeciduous" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">The</span>
               <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
                 Honeyman Archive
               </Link>
@@ -149,7 +149,7 @@
                         <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                         <span class="inline-flex items-center text-gray-700">
-              <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> <span class="ml-2">Please consider</span>
+              <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">Please consider</span>
               <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
                 contributing
               </Link>
@@ -160,16 +160,16 @@
 
                 <div class="flex items-center gap-6 mb-2">
                     <Link href="/about" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
+                        <Icon name="Layers" color="text-black" class="w-[16px] h-[16px]" /> About
                     </Link>
                     <Link href="/contact" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
+                        <Icon name="MessageSquareDot" color="text-black" class="w-[16px] h-[16px]" /> Contact
                     </Link>
                     <Link href="/contribute" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
+                        <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> Contribute
                     </Link>
                     <Link href="/updates" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
+                        <Icon name="Squirrel" color="text-black" class="w-[16px] h-[16px]" /> Updates
                     </Link>
                 </div>
             </div>
