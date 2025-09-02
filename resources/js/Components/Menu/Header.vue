@@ -33,7 +33,7 @@
                 </div>
               </nav>
 
-                <div class="flex items-center">
+                <div class="sm:hidden lg:flex lg:items-center">
                     <div
                             v-if="authUser"
                             class="relative inline-block"
@@ -101,7 +101,7 @@
                         </transition>
                     </div>
 
-                    <div v-else>
+                    <div v-else class="sm:hidden lg:flex">
                         <Link
                                 href="/login"
                                 class="flex items-center gap-2 text-xs font-semibold text-yellow-700 bg-yellow-50 hover:bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200 transition focus:outline-none focus:ring-2 focus:ring-yellow-300"
