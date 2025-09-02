@@ -2,7 +2,7 @@
     <section class="mt-4 bg-transparent">
         <div :class="wrapperClass">
             <div class="w-full flex justify-center pb-2"><Icon :name="currentTheme.icon" color="text-black" class="w-[40px] h-[40px]" /></div>
-            <h1 :class="['text-4xl font-bold tracking-tight uppercase', titleAlignClass]">
+            <h1 :class="['text-4xl font-bold tracking-widest uppercase', titleAlignClass]">
                 {{ title }}
             </h1>
             <div v-if="subtitle" :class="['mt-2 text-lg uppercase', titleAlignClass]">
