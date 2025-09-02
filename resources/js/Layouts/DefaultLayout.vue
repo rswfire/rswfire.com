@@ -131,7 +131,7 @@
           <Link href="/about" class="h-full">
             <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                <Icon name="Layers" color="text-black" class="w-4 h-4" /> About
+                <Icon name="Layers" color="text-black" class="w-4 h-4" /> ABOUT
               </h3>
               <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</div>
               <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Begin with orientation.<br/>Begin by listening.</em></div>
@@ -141,7 +141,7 @@
           <Link href="/contact" class="h-full">
             <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> Contact
+                <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> CONTACT
               </h3>
               <div class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. </div>
               <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>You are part of the field.<br/>If you're transmitting too, I'm listening.</em></div>
@@ -151,7 +151,7 @@
           <Link href="/contribute" class="h-full">
             <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> Contribute
+                <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> CONTRIBUTE
               </h3>
               <div class="text-gray-600 text-sm flex-1">Needed and necessary financial support for maintaining this infrastructure and developing new tools.</div>
               <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Your contributions have a tangible impact on the field.</em></div>
@@ -161,7 +161,7 @@
           <Link href="/updates" class="h-full">
             <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
               <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> Updates
+                <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> UPDATES
               </h3>
               <div class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</div>
               <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>No spam. Unsubscribe anytime.</em></div>
@@ -259,24 +259,24 @@ const authUser = computed(() => page.props.auth?.user)
 const menuOpen = ref(false)
 
 const itemsField = [
-  { label: "Home",      icon: "Radar",       color: "text-stone-400", bg: "bg-stone-100", border: "border-stone-300",    hover: "hover:bg-stone-200",  url: "/",      blurb: "Field entry point. Orientation for first contact." },
-  { label: "Who I Am",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",     url: "/hello", blurb: "Foundational identity. The sovereign node." },
-  { label: "What I Do", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100",  url: "/tech",  blurb: "Builder of systems. Steward of depth." },
-  { label: "Myth",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200",  hover: "hover:bg-yellow-100", url: "/myth",  blurb: "Pattern recognition through lived narrative." },
+  { label: "HOME",      icon: "Radar",       color: "text-stone-400", bg: "bg-stone-100", border: "border-stone-300",    hover: "hover:bg-stone-200",  url: "/",      blurb: "Field entry point. Orientation for first contact." },
+  { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",     url: "/hello", blurb: "Foundational identity. The sovereign node." },
+  { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100",  url: "/tech",  blurb: "Builder of systems. Steward of depth." },
+  { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200",  hover: "hover:bg-yellow-100", url: "/myth",  blurb: "Pattern recognition through lived narrative." },
 ]
 
 const itemsSignal = [
-  { label: "Fieldcraft",    icon: "Map",           color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/fieldcraft",   blurb: "Real-time documentation of lived practice." },
-  { label: "Transmissions", icon: "SatelliteDish", color: "text-pink-400",   bg: "bg-pink-50",   border: "border-pink-200",   hover: "hover:bg-pink-100",   url: "/transmission", blurb: "Uncompressed signal. First-language dispatches." },
-  { label: "Signals",       icon: "Activity",      color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/signal",       blurb: "Anchored insight. Durable expressions of the field." },
-  { label: "Sanctuary",     icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctuary",    blurb: "Relational space. Signal coherence in human form." },
+  { label: "FIELDCRAFT",    icon: "Map",           color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/fieldcraft",   blurb: "Real-time documentation of lived practice." },
+  { label: "TRANSMISSIONS", icon: "SatelliteDish", color: "text-pink-400",   bg: "bg-pink-50",   border: "border-pink-200",   hover: "hover:bg-pink-100",   url: "/transmission", blurb: "Uncompressed signal. First-language dispatches." },
+  { label: "SIGNALS",       icon: "Activity",      color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/signal",       blurb: "Anchored insight. Durable expressions of the field." },
+  { label: "SANCTUARY",     icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctuary",    blurb: "Relational space. Signal coherence in human form." },
 ]
 
 const itemsReference = [
-  { label: "Codex",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
-  { label: "Bluewater", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },
-  { label: "Honeyman",  icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman",  blurb: "The story of a fracture." },
-  { label: "Lexicon",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
+  { label: "CODEX",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
+  { label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },
+  { label: "HONEYMAN",  icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman",  blurb: "The story of a fracture." },
+  { label: "LEXICON",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
 ]
 
 </script>
