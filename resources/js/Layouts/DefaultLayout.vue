@@ -238,7 +238,7 @@ const menuOpen = ref(false)
 const itemsField = [
   { label: "Who I Am",  icon: "Flame",      color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",    url: "/hello" },
   { label: "What I Do", icon: "Hammer",     color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/tech" },
-  { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
+  { label: "Myth",     icon: "ShieldCheck",   color: "text-yellow-400",  bg: "bg-yellow-50",  border: "border-yellow-200",  hover: "hover:bg-yellow-100",  url: "/myth" },
   { label: "Sanctuary", icon: "Sprout",     color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/sanctuary" },
 ]
 
@@ -249,10 +249,10 @@ const itemsSignal = [
 ]
 
 const itemsReference = [
+  { label: "Codex",     icon: "SquareCode", color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/codex" },
   { label: "Lexicon",  icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon" },
-  { label: "Myth",     icon: "ShieldCheck",   color: "text-yellow-400",  bg: "bg-yellow-50",  border: "border-yellow-200",  hover: "hover:bg-yellow-100",  url: "/myth" },
-  { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
   { label: "Bluewater",            icon: "WavesLadder",   color: "text-blue-400",  bg: "bg-blue-50",  border: "border-blue-200",  hover: "hover:bg-blue-100",  url: "/bluewater" },
+  { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
 ]
 
 </script>
