@@ -276,11 +276,5 @@ const itemsReference = [
 
 </script>
 
-<style lang="postcss">
-
-  html { scroll-behavior: smooth; }
-
-  .page-wrap {
-      @apply max-w-6xl mx-auto px-0 sm:px-6;
-  }
+<style>
 </style>
