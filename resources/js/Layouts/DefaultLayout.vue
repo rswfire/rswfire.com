@@ -197,9 +197,9 @@
 
         <!-- Archive Column -->
         <div class="space-y-2">
-          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Archive</h4>
+          <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Reference</h4>
           <Link
-              v-for="item in itemsArchive"
+              v-for="item in itemsReference"
               :key="item.label"
               :href="item.url"
               class="flex items-center gap-2 px-3 py-2 rounded-r-lg border-l-4 transition-all hover:shadow-sm"
@@ -248,7 +248,7 @@ const itemsSignal = [
   { label: "Fieldcraft Blog",      icon: "Map",           color: "text-green-500", bg: "bg-green-50", border: "border-green-200", hover: "hover:bg-green-100", url: "/fieldcraft" },
 ]
 
-const itemsArchive = [
+const itemsReference = [
   { label: "Lexicon",  icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon" },
   { label: "Myth",     icon: "ShieldCheck",   color: "text-yellow-400",  bg: "bg-yellow-50",  border: "border-yellow-200",  hover: "hover:bg-yellow-100",  url: "/myth" },
   { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman" },
