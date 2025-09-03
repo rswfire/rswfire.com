@@ -21,21 +21,22 @@
             <div class="mt-4">This email marked the pivot from a minor operational issue into a full-scale campaign of escalation. I sent it for two reasons:</div>
             <ul class=" list-decimal list-outside ml-8">
                 <li>
-                    <div><strong>To Set a Boundary</strong></div>
+                    <div class="mt-4"><strong>To Set a Boundary</strong></div>
                     <div>I made it clear that dismissive responses were not acceptable. I had reached out in good faith about handling guest concerns during a power outage, and the response I received left me feeling minimized. In this message, I asserted &mdash; calmly but firmly &mdash; that my role deserved respect and that my questions were valid.</div>
                 </li>
                 <li>
-                    <div><strong>To Insist on Clarity</strong></div>
+                    <div class="mt-4"><strong>To Insist on Clarity</strong></div>
                     <div>My questions weren’t abstract. As a volunteer host positioned directly across from the gate, I was the first point of contact for frustrated guests during overnight outages. I needed to know: Who should I call in off-hours? How do I get accurate updates? What information can I share with guests to keep them reassured? These are basic operational needs, and without answers, I was left exposed &mdash; responsible to the public, but unsupported by leadership.</div>
                 </li>
             </ul>
 
             <div class="mt-4">By drawing this line &mdash; respect for my role, and clear answers for performing it effectively &mdash; I disrupted an unspoken norm: that volunteers should quietly accept whatever treatment they receive, even when it undermines their ability to do the work.</div>
-            <div class="mt-4">Instead of responding with clarity or collaboration, leadership escalated. From this point forward, I was treated not as someone trying to serve responsibly, but as a problem to be neutralized. This email is therefore <strong>the hinge of the entire story</strong>: a good-faith request for guidance and respect that revealed the organization’s unwillingness to provide either. Everything that followed &mdash; humiliation, intimidation, surveillance, dismissal &mdash; was a reaction not to misconduct, but to the simple act of asserting boundaries and insisting on answers that mattered.</div>
+            <div class="mt-4">Instead of responding with clarity or collaboration, leadership escalated. From this point forward, I was treated not as someone trying to serve responsibly, but as a problem to be neutralized. This email is therefore <strong>the hinge of the entire story</strong>: a good-faith request for guidance and respect that revealed the organization’s unwillingness to provide either.</div>
+            <div class="mt-4"><strong>Everything that followed &mdash; humiliation, intimidation, surveillance, dismissal &mdash; was a reaction not to misconduct, but to the simple act of asserting boundaries and insisting on answers that mattered.</strong></div>
             <div class="mt-4">This single incident &mdash; my request for clarity and respect &mdash; was repeatedly brought up as justification for later treatment. It resurfaced in conversations and meetings long after the fact, including the orchestrated day-use area meeting and the call with Allison Watson. What should have been a straightforward exchange about utility protocols became the foundation of the narrative used against me.</div>
             <div class="mt-4"><em>This started everything</em>.</div>
 
-            <h3 class="mt-8 text-lg font-semibold">📝 Letter to Kati Baker</h3>
+            <h3 class="mt-8 text-lg font-semibold">📝 Letter to Park Supervisor Kati Baker</h3>
 
             <div class="mt-4 max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 leading-relaxed font-mono">
 

@@ -32,7 +32,7 @@
             <div class="mt-4">When Logan lied to me &mdash; and there’s no other word for it &mdash; I saw the writing on the wall. They were creating conditions they hoped would lead to my removal.</div>
             <div class="mt-4">That moment made clear: Logan was acting under instruction from people who were persistently unethical. And yet, in a different environment &mdash; with support, with reflection, and without distortion &mdash; I still believe Logan could thrive.</div>
 
-            <h3 class="mt-8 text-lg font-semibold">📝 The &quot;Trust&quot; Email</h3>
+            <h3 class="mt-8 text-lg font-semibold">📝 The &quot;Trust&quot; Email &mdash; Letter to Volunteer Coordinator Logan</h3>
 
             <div class="mt-4 max-h-[40rem] overflow-y-auto border border-gray-300 rounded-md shadow-inner bg-white p-4 leading-relaxed font-mono">
 
