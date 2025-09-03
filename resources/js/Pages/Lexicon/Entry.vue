@@ -28,32 +28,40 @@
 
       <div class="lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
 
-      <div v-if="anyTonalities" class="space-y-6">
-        <div v-if="entry.tonality_mythic">
-          <h2 class="text-xl font-semibold text-gray-800">Mythic</h2>
-          <p>{{ entry.tonality_mythic }}</p>
-        </div>
-        <div v-if="entry.tonality_clinical">
-          <h2 class="text-xl font-semibold text-gray-800">Clinical</h2>
-          <p>{{ entry.tonality_clinical }}</p>
-        </div>
-        <div v-if="entry.tonality_poetic">
-          <h2 class="text-xl font-semibold text-gray-800">Poetic</h2>
-          <p>{{ entry.tonality_poetic }}</p>
-        </div>
-        <div v-if="entry.tonality_tactical">
-          <h2 class="text-xl font-semibold text-gray-800">Tactical</h2>
-          <p>{{ entry.tonality_tactical }}</p>
-        </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-lexicon-400">
+        <button
+            v-for="{ key, label } in availableTonalities"
+            :key="key"
+            @click="activeTab = key"
+            :class="[
+      'px-4 py-2 text-sm font-medium uppercase tracking-wide',
+      activeTab === key
+        ? 'border-b-2 border-lexicon-400 text-white bg-lexicon-400'
+        : 'text-gray-500 hover:text-black'
+    ]"
+        >
+          {{ label }}
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="p-6 text-black bg-white whitespace-pre-line">
+        <p v-if="activeTab === 'tonality_mythic'">{{ props.entry.tonality_mythic }}</p>
+        <p v-else-if="activeTab === 'tonality_clinical'">{{ props.entry.tonality_clinical }}</p>
+        <p v-else-if="activeTab === 'tonality_poetic'">{{ props.entry.tonality_poetic }}</p>
+        <p v-else-if="activeTab === 'tonality_tactical'">{{ props.entry.tonality_tactical }}</p>
       </div>
     </div>
+      <pre class="text-xs text-yellow-400 bg-gray-800 p-2 rounded">anyTonalities: {{ anyTonalities }}</pre>
 
   </Content>
 </template>
 
 <script setup>
 
-  import { computed } from 'vue'
+  import { ref, computed } from 'vue'
   import { Link } from "@inertiajs/vue3";
   import Hero from '@/Components/System/Hero.vue'
   import Content from '@/Components/System/Content.vue'
@@ -88,13 +96,20 @@
     return html
   }
 
-  const anyTonalities = computed(() =>
-  ['tonality_mythic', 'tonality_clinical', 'tonality_poetic', 'tonality_tactical'].some(
-  key => !!props.entry[key]
-  )
+  const showEditLink = computed(() => props.canEdit)
+
+  const tonalities = [
+    { key: 'tonality_mythic', label: 'Mythic' },
+    { key: 'tonality_clinical', label: 'Clinical' },
+    { key: 'tonality_poetic', label: 'Poetic' },
+    { key: 'tonality_tactical', label: 'Tactical' },
+  ]
+
+  const availableTonalities = computed(() =>
+      tonalities.filter(({ key }) => !!props.entry[key])
   )
 
-  const showEditLink = computed(() => props.canEdit)
+  const activeTab = ref(availableTonalities.value[0]?.key || null)
 
 </script>
 
