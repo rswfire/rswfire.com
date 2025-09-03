@@ -35,15 +35,22 @@ onMounted(async () => {
 
       if (element && entry.value) {
         tippyInstance = tippy(element, {
-          content: `
-        <div class="lexicon-tooltip">
-          <p class="font-semibold text-gray-900 mb-1">${entry.value.lexicon_term}</p>
-          <p class="text-sm text-gray-700 leading-snug">${entry.value.lexicon_essence}</p>
-          <a href="/lexicon/${entry.value.lexicon_slug}" class="text-lexicon-600 text-sm font-medium mt-2 block hover:underline">
-            View Full Entry →
-          </a>
-        </div>
-      `,
+              content: `
+    <div class="lexicon-tooltip flex gap-3">
+      <div class="flex-shrink-0">
+        <svg class="w-8 h-8 text-lexicon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+        </svg>
+      </div>
+      <div class="flex-1">
+        <p class="font-semibold text-gray-900 mb-1">${entry.value.lexicon_term}</p>
+        <p class="text-sm text-gray-700 leading-snug">${entry.value.lexicon_essence}</p>
+        <a href="/lexicon/${entry.value.lexicon_slug}" class="text-lexicon-600 text-sm font-medium mt-2 block hover:underline">
+          View Full Entry →
+        </a>
+      </div>
+    </div>
+  `,
           allowHTML: true,
           interactive: true,
           placement: 'top',
