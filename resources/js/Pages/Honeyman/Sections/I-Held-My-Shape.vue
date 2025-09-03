@@ -17,7 +17,7 @@
             </div>
           </div>
 
-            <div class="mt-4">I held my shape</div>
+            <div class="mt-4">I held my <Lexicon term="shape">shape</Lexicon></div>
             <div>when they pressed from all directions,</div>
             <div>when silence became weapon</div>
             <div>and isolation became strategy,</div>
@@ -115,6 +115,7 @@ import { ref, onBeforeUnmount } from 'vue'
 import { useCopySectionLink } from '@/Composables/useCopySectionLink'
 import { Link } from "@inertiajs/vue3"
 import Icon from "@/Components/System/Icon.vue";
+import Lexicon from "@/Components/System/Lexicon.vue";
 
 const { copySectionLink } = useCopySectionLink()
 
