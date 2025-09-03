@@ -170,10 +170,10 @@
           <div class="mt-4">To anyone reading this &mdash; inside or outside the institution:</div>
 
           <div class="mt-4">This is what it looks like when <Lexicon term="coherence">coherence</Lexicon> survives <Lexicon term="collapse">collapse</Lexicon>.</div>
-          <div>This is what it sounds like when the <Lexicon term="signal">signal</Lexicon> outlasts the noise.</div>
+          <div>This is what it sounds like when the <Lexicon term="signal">signal</Lexicon> outlasts the <Lexicon term="noise">noise</Lexicon>.</div>
 
           <div class="mt-4">I am still here.</div>
-          <div>And the <Lexicon term="the archive">archive speaks</Lexicon>.</div>
+          <div><Lexicon term="the archive">And the archive speaks</Lexicon>.</div>
 
         </div>
 
