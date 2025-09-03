@@ -25,7 +25,7 @@
             <div class="mt-4">He also disclosed vulnerable, personal information I shared with him in trust &mdash; information later used by Allison Watson to pathologize my character during dismissal proceedings.</div>
             <div><Link href="/fieldcraft/01K3EZWG5AS64E152MTTS9DEKR" class="text-honeyman-600 underline">Full documentation here →</Link></div>
             <div class="mt-4">That is not just unethical. It is betrayal.</div>
-            <div>But I will not center their distortions.</div>
+            <div>But I will not center their <lexicon term="distortion">distortions</lexicon>.</div>
             <div class="mt-4">For the record: nothing inappropriate ever happened between us. He was simply someone I trusted &mdash; and someone I now understand I should not have.</div>
             <div class="mt-4">I’ve chosen not to center him &mdash; not because his actions were minor, but because they were embedded in proximity and trust. That dynamic requires precision, not amplification.</div>
             <div class="mt-4">I think it deserves consequences &mdash; but perhaps private ones. He’s a younger ranger, in a toxic, fragmented environment. That’s not an excuse. But it is part of the system he’s inside.</div>
@@ -73,6 +73,7 @@ import { ref, onBeforeUnmount } from 'vue'
 import { useCopySectionLink } from '@/Composables/useCopySectionLink'
 import { Link } from "@inertiajs/vue3"
 import Icon from "@/Components/System/Icon.vue";
+import Lexicon from "@/Components/System/Lexicon.vue";
 
 const { copySectionLink } = useCopySectionLink()
 

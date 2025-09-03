@@ -4,8 +4,8 @@
       :data-term="term"
       class="underline decoration-dotted cursor-help lexicon-term inline-flex items-center gap-1 whitespace-nowrap"
   >
-    {{ term }}
-    <Icon name="SquareLibrary" color="text-lexicon-600" class="w-3 h-3 flex-shrink-0"/>
+    <slot />
+    <Icon name="SquareLibrary" color="text-lexicon-600" class="w-[20px] h-[20px] flex-shrink-0"/>
   </span>
 
   <span v-else class="text-red-600 italic">
@@ -36,7 +36,7 @@ onMounted(async () => {
       if (element && entry.value) {
         tippyInstance = tippy(element, {
               content: `
-    <div class="lexicon-tooltip flex gap-3">
+    <div class="lexicon-tooltip flex gap-3" style="font-size: 14px;">
       <div class="flex-shrink-0">
         <svg class="w-8 h-8 text-lexicon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>

@@ -26,7 +26,7 @@
 
       <p class="text-xl text-gray-700 mb-6">{{ entry.lexicon_essence }}</p>
 
-      <div class="lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" />
+      <div class="lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
 
       <div v-if="anyTonalities" class="space-y-6">
         <div v-if="entry.tonality_mythic">
@@ -67,28 +67,26 @@
   const pageTheme = 'lexicon'
 
   const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  breaks: true,
-})
-
-  md.use(function lexiconPlugin(md) {
-    const regex = /\[lexicon\](.*?)\[\/lexicon\]/g
-
-    md.core.ruler.push('lexicon_inline', function (state) {
-      state.tokens.forEach((token) => {
-        if (token.type === 'inline' && regex.test(token.content)) {
-          token.content = token.content.replace(regex, (_, term) => {
-            return `<LexiconInline term="${term}">${term}</LexiconInline>`
-          })
-        }
-      })
-    })
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true,
   })
+
   function renderMarkdown(content) {
-  return md.render(content || '')
-}
+    // First process markdown with MarkdownIt
+    let html = md.render(content)
+
+    // Handle both [lexicon]term[/lexicon] and [lexicon term="lookup"]display[/lexicon]
+    html = html.replace(/\[lexicon(?:\s+term="([^"]+)")?\](.*?)\[\/lexicon\]/g, (match, termAttr, content) => {
+      const term = termAttr || content  // Use term attribute if provided, otherwise use content
+      const displayText = content       // Always display the content between tags
+
+      return `<span class="lexicon-placeholder inline-flex items-center gap-1 whitespace-nowrap" data-lexicon-term="${term}">${displayText}<svg class="w-[20px] h-[20px] flex-shrink-0 text-lexicon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 7v10"></path><path d="M11 7v10"></path><path d="m15 7 2 10"></path></svg></span>`
+    })
+
+    return html
+  }
 
   const anyTonalities = computed(() =>
   ['tonality_mythic', 'tonality_clinical', 'tonality_poetic', 'tonality_tactical'].some(

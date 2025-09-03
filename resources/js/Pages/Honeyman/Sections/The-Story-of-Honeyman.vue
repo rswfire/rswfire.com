@@ -20,7 +20,7 @@
           </div>
 
           <div class="mt-4">I arrived at Honeyman State Park not to fill a shift, but to hold a field &mdash;</div>
-          <div>a sovereign man in alignment, in service, not to authority, but to coherence.</div>
+          <div>a <lexicon term="sovereignty">sovereign</lexicon> man in alignment, in service, not to authority, but to <lexicon term="coherence">coherence</lexicon>.</div>
           <div>I came prepared. I came committed. I came clean.</div>
 
           <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, integrated &mdash;</div>
@@ -184,6 +184,7 @@
 import { ref, onBeforeUnmount } from 'vue'
 import { useCopySectionLink } from '@/Composables/useCopySectionLink'
 import Icon from "@/Components/System/Icon.vue";
+import Lexicon from "@/Components/System/Lexicon.vue";
 
 const { copySectionLink } = useCopySectionLink()
 
