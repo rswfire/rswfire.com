@@ -26,25 +26,39 @@
 
       <div class="flex border-b border-lexicon-400">
         <button
-            v-for="{ key, label } in availableTonalities"
+            v-for="{ key, label, icon } in availableTonalities"
             :key="key"
             @click="activeTab = key"
             :class="[
-      'px-4 py-2 text-sm font-medium uppercase tracking-wide',
+      'flex items-center gap-1 px-3 py-1.5 text-xs font-medium uppercase tracking-wide',
       activeTab === key
         ? 'border-b-2 border-lexicon-400 text-white bg-lexicon-400'
-        : 'text-gray-500 hover:text-black'
+        : 'text-lexicon-400 hover:text-black'
     ]"
         >
-          {{ label }}
+    <span class="flex items-center gap-1">
+      <Icon :name="icon" class="w-4 h-4 flex-shrink-0" />
+      <span class="hidden md:inline">{{ label }}</span>
+    </span>
         </button>
       </div>
 
       <div class="p-6 text-black bg-white whitespace-pre-line">
-        <p v-if="activeTab === 'tonality_mythic'">{{ props.entry.tonality_mythic }}</p>
-        <p v-else-if="activeTab === 'tonality_clinical'">{{ props.entry.tonality_clinical }}</p>
-        <p v-else-if="activeTab === 'tonality_poetic'">{{ props.entry.tonality_poetic }}</p>
-        <p v-else-if="activeTab === 'tonality_tactical'">{{ props.entry.tonality_tactical }}</p>
+        <div class="md:hidden text-xs font-semibold text-lexicon-400 uppercase tracking-wider mb-4">
+          {{ availableTonalities.find(t => t.key === activeTab)?.label }}
+        </div>
+        <div v-if="activeTab === 'tonality_mythic'">
+          {{ props.entry.tonality_mythic }}
+        </div>
+        <div v-else-if="activeTab === 'tonality_clinical'">
+          {{ props.entry.tonality_clinical }}
+        </div>
+        <div v-else-if="activeTab === 'tonality_poetic'">
+          {{ props.entry.tonality_poetic }}
+        </div>
+        <div v-else-if="activeTab === 'tonality_tactical'">
+          {{ props.entry.tonality_tactical }}
+        </div>
       </div>
 
       <div class="mt-6 border-t border-gray-200">
@@ -66,6 +80,7 @@
   import Hero from '@/Components/System/Hero.vue'
   import Content from '@/Components/System/Content.vue'
   import MarkdownIt from 'markdown-it'
+  import Icon from "@/Components/System/Icon.vue";
 
   const props = defineProps({
     entry: Object,
@@ -99,10 +114,10 @@
   const showEditLink = computed(() => props.canEdit)
 
   const tonalities = [
-    { key: 'tonality_mythic', label: 'Mythic' },
-    { key: 'tonality_clinical', label: 'Clinical' },
-    { key: 'tonality_poetic', label: 'Poetic' },
-    { key: 'tonality_tactical', label: 'Tactical' },
+    { key: 'tonality_mythic', label: 'Mythic', icon: "Sparkles" },
+    { key: 'tonality_clinical', label: 'Clinical', icon: "ScanLine" },
+    { key: 'tonality_poetic', label: 'Poetic', icon: "Feather" },
+    { key: 'tonality_tactical', label: 'Tactical', icon: "Crosshair" },
   ]
 
   const availableTonalities = computed(() =>
