@@ -35,9 +35,6 @@
       <HrBar id="hr-5" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <TheStoryOfHoneyman />
 
-      <HrBar id="hr-6" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
-      <TheStoryOfOPRD />
-
       <HrBar id="hr-7" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <TheTurningPoint />
 
@@ -49,9 +46,6 @@
 
       <HrBar id="hr-10" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <TheUnidentifiedMan />
-
-      <HrBar id="hr-11" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
-      <SystemInPanic />
 
       <HrBar id="hr-12" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <TheFinalHours />
@@ -65,8 +59,14 @@
       <HrBar id="hr-15" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <PermanentDismissal />
 
+      <HrBar id="hr-11" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
+      <SystemInPanic />
+
       <HrBar id="hr-16" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <NamingTheHarm />
+
+      <HrBar id="hr-6" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
+      <TheStoryOfOPRD />
 
       <HrBar id="hr-17" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <LessonsLearned />
@@ -122,17 +122,17 @@ const sections = [
   { id: 'hr-3',  label: 'A Note About Ethics' },
   { id: 'hr-4',  label: 'Executive Summary' },
   { id: 'hr-5',  label: 'The Story of Honeyman' },
-  { id: 'hr-6',  label: 'The Story of OPRD' },
   { id: 'hr-7',  label: 'Turning Point' },
   { id: 'hr-8',  label: 'Logan' },
   { id: 'hr-9',  label: 'Day-Use Meeting' },
   { id: 'hr-10', label: 'Unidentified Man' },
-  { id: 'hr-11', label: 'Timeline: System in Panic' },
   { id: 'hr-12', label: 'Final Hours' },
   { id: 'hr-13', label: 'Call: Allison Watson' },
   { id: 'hr-14', label: 'Letter: Allison Watson' },
   { id: 'hr-15', label: 'Permanent Dismissal' },
+  { id: 'hr-11', label: 'Timeline: System in Panic' },
   { id: 'hr-16', label: 'Naming the Harm' },
+  { id: 'hr-6',  label: 'The Story of OPRD' },
   { id: 'hr-17', label: 'Lessons Learned' },
   { id: 'hr-18', label: 'I Held My Shape' },
   { id: 'hr-19', label: 'This Is...' },
