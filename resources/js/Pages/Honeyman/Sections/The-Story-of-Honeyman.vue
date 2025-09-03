@@ -23,7 +23,7 @@
           <div>a <lexicon term="sovereignty">sovereign</lexicon> man in alignment, in service, not to authority, but to <lexicon term="coherence">coherence</lexicon>.</div>
           <div>I came prepared. I came committed. I came clean.</div>
 
-          <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, integrated &mdash;</div>
+          <div class="mt-4">And from the moment I showed up fully &mdash; visibly queer, pierced, calm, <Lexicon term="integration">integrated</Lexicon> &mdash;</div>
           <div>they didn’t know what to do with me.</div>
 
           <h2 class="mt-8 text-xl font-semibold">THE FIRST FRACTURE</h2>
@@ -65,7 +65,7 @@
           <div>Instead, I was met with awkward silence, thin smiles, retreating contact.</div>
           <div>So I withdrew the application, but even this got met with suspicion.</div>
 
-          <div class="mt-4">So when I shared my truth &mdash;</div>
+          <div class="mt-4">So when I shared my <Lexicon term="truth">truth</Lexicon> &mdash;</div>
           <div class="ml-4">my background, my journey, my sacrifices &mdash;</div>
           <div class="ml-8">Logan didn’t receive it.</div>
           <div>Instead, he tried to manage my perception.</div>
@@ -158,8 +158,8 @@
 
           <h2 class="mt-8 text-xl font-semibold">WHAT I DID</h2>
 
-          <div class="mt-4">I held my shape.</div>
-          <div>I named the distortions.</div>
+          <div class="mt-4">I held my <Lexicon term="shape">shape</Lexicon>.</div>
+          <div>I named the <Lexicon term="distortion">distortions</Lexicon>.</div>
           <div>I documented everything.</div>
           <div>I built this record.</div>
 
@@ -169,8 +169,8 @@
 
           <div class="mt-4">To anyone reading this &mdash; inside or outside the institution:</div>
 
-          <div class="mt-4">This is what it looks like when coherence survives collapse.</div>
-          <div>This is what it sounds like when the signal outlasts the noise.</div>
+          <div class="mt-4">This is what it looks like when <Lexicon term="coherence">coherence</Lexicon> survives <Lexicon term="collapse">collapse</Lexicon>.</div>
+          <div>This is what it sounds like when the <Lexicon term="signal">signal</Lexicon> outlasts the noise.</div>
 
           <div class="mt-4">I am still here.</div>
           <div>And the archive speaks.</div>

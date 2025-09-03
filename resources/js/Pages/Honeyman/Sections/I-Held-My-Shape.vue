@@ -102,7 +102,7 @@
             <div>The work continues without me.</div>
             <div>The documentation persists.</div>
 
-            <div class="mt-4">I held my shape.</div>
+            <div class="mt-4">I held my <Lexicon term="shape">shape</Lexicon>.</div>
             <div>Now hold yours.</div>
 
         </div>
