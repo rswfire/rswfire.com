@@ -165,7 +165,7 @@
 
           <div class="mt-4">And now, it stands &mdash;</div>
           <div class="ml-4">not as retribution,</div>
-          <div class="ml-8">but as mirror.</div>
+          <div class="ml-8">but as <Lexicon term="mirror">mirror</Lexicon>.</div>
 
           <div class="mt-4">To anyone reading this &mdash; inside or outside the institution:</div>
 

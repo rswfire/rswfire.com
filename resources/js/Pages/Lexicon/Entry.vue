@@ -28,8 +28,6 @@
 
       <div class="lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
 
-
-      <!-- Tabs -->
       <div class="flex border-b border-lexicon-400">
         <button
             v-for="{ key, label } in availableTonalities"
@@ -46,7 +44,6 @@
         </button>
       </div>
 
-      <!-- Content -->
       <div class="p-6 text-black bg-white whitespace-pre-line">
         <p v-if="activeTab === 'tonality_mythic'">{{ props.entry.tonality_mythic }}</p>
         <p v-else-if="activeTab === 'tonality_clinical'">{{ props.entry.tonality_clinical }}</p>
@@ -54,7 +51,6 @@
         <p v-else-if="activeTab === 'tonality_tactical'">{{ props.entry.tonality_tactical }}</p>
       </div>
     </div>
-      <pre class="text-xs text-yellow-400 bg-gray-800 p-2 rounded">anyTonalities: {{ anyTonalities }}</pre>
 
   </Content>
 </template>
