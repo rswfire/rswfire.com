@@ -10,11 +10,9 @@
         :theme="pageTheme"
     />
 
-    <div class="max-w-3xl mx-auto py-12">
+    <div class="max-w-3xl mx-auto py-12 relative">
       <div class="flex justify-between items-center mb-4">
-        <h1 class="text-4xl font-bold">{{ entry.lexicon_term }}</h1>
-
-        <div v-if="showEditLink">
+        <div v-if="showEditLink" class="absolute top-4 right-4 z-10">
           <Link
               :href="route('lexicon.edit', { slug: entry.lexicon_slug })"
               class="text-sm text-blue-500 hover:underline"

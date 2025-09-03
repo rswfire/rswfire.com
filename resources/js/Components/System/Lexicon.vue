@@ -8,7 +8,7 @@
     <Icon name="SquareLibrary" color="text-lexicon-600" class="w-[20px] h-[20px] flex-shrink-0"/>
   </span>
 
-  <span v-else class="text-red-600 italic">
+  <span v-else class="text-black">
     <slot />
   </span>
 </template>
