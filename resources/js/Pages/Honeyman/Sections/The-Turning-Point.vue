@@ -4,7 +4,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 items-start md:items-baseline">
             <div>
-              <h2 class="text-2xl font-semibold">THE TURNING POINT</h2>
+              <h2 class="text-2xl font-semibold">HOW IT STARTED</h2>
               <div class="italic text-gray-600">FEBRUARY 9, 2025 &mdash; THE MOMENT SHE SAW ME</div>
             </div>
             <div class="md:justify-self-end">
