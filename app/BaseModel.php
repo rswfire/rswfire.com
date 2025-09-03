@@ -2,11 +2,13 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 abstract class BaseModel extends Model
 {
+    use HasFactory;
     const CREATED_AT = "stamp_created";
     const UPDATED_AT = "stamp_updated";
 

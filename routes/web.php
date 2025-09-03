@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Content;
+use App\Http\Controllers\Lexicon;
 use App\Models\Transmission;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
@@ -461,12 +462,23 @@ Route::get("/honeyman/{any}", function () {
     return redirect("/honeyman");
 })->where("any", ".*");
 
-Route::get("/lexicon", function () {
-    return Inertia::render("Lexicon", [
-        "metaTitle" => "Lexicon | ".request()->getHost(),
-        "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
-    ]);
+Route::prefix("lexicon")->group(function () {
+    Route::get("/", [Lexicon::class, "index"])->name("lexicon.index");
+
+    Route::middleware(["auth:sanctum"])->group(function () {
+        Route::get("/create", [Lexicon::class, "create"])->name("lexicon.create");
+        Route::get('/edit/{slug}', [Lexicon::class, 'edit'])
+            ->where('slug', '.*')
+            ->name('lexicon.edit');
+        Route::put('/{slug}', [Lexicon::class, 'update'])
+            ->where('slug', '.*')
+            ->name('lexicon.update');
+        Route::post("/", [Lexicon::class, "store"])->name("lexicon.store");
+    });
+
+    Route::get('/{slug}', [Lexicon::class, 'show'])
+        ->where('slug', '.*')
+        ->name('lexicon.show');
 });
 
 Route::get("/myth", function () {

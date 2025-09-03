@@ -113,20 +113,7 @@
           built to hold signal when the world forgets how.
         </div>
 
-        <div class="flex flex-wrap justify-center pb-4 border-t">
-          <Link
-              v-for="item in items"
-              :key="item.label"
-              :href="item.url"
-              class="inline-flex items-center justify-center rounded-full border hover:shadow-sm transition group relative z-10 hover:z-20"
-              :class="[item.bg, item.hover]"
-          >
-            <Icon :name="item.icon" :class="['w-3 h-3 flex-shrink-0', item.color]" />
-            <span class="hidden group-hover:inline ml-1">{{ item.label }}</span>
-          </Link>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4 border-t pt-6">
 
           <Link href="/about" class="h-full">
             <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
