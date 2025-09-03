@@ -173,7 +173,7 @@
           <div>This is what it sounds like when the <Lexicon term="signal">signal</Lexicon> outlasts the noise.</div>
 
           <div class="mt-4">I am still here.</div>
-          <div>And the archive speaks.</div>
+          <div>And the <Lexicon term="the archive">archive speaks</Lexicon>.</div>
 
         </div>
 

@@ -24,8 +24,6 @@
 
       <p class="text-xl text-gray-700 mb-6">{{ entry.lexicon_essence }}</p>
 
-      <div class="lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
-
       <div class="flex border-b border-lexicon-400">
         <button
             v-for="{ key, label } in availableTonalities"
@@ -48,6 +46,14 @@
         <p v-else-if="activeTab === 'tonality_poetic'">{{ props.entry.tonality_poetic }}</p>
         <p v-else-if="activeTab === 'tonality_tactical'">{{ props.entry.tonality_tactical }}</p>
       </div>
+
+      <div class="mt-6 border-t border-gray-200">
+          <h2 class="mt-8 uppercase text-lg font-bold tracking-widest">EXPANDED DEFINITION</h2>
+          <div class="mt-4 lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
+      </div>
+
+
+
     </div>
 
   </Content>
