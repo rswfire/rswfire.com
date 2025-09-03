@@ -1,5 +1,6 @@
 import '../css/app.css';
 import './bootstrap';
+import 'tippy.js/dist/tippy.css'
 
 import { createInertiaApp } from '@inertiajs/vue3';
 import { createApp, h } from 'vue';

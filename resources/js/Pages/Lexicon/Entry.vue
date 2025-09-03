@@ -3,9 +3,9 @@
   <Content :theme="pageTheme">
 
     <Hero
-        title="LEXICON"
-        subtitle="THE LANGUAGE OF THE FIELD"
-        meta="A LIVING VOCABULARY FOR TRANSMITTING IN FIELD CONDITIONS"
+        :title="entry.lexicon_term"
+        :subtitle="entry.lexicon_category"
+        meta="LEXICON"
         class="pb-4 border-b"
         :theme="pageTheme"
     />
@@ -73,6 +73,19 @@
   breaks: true,
 })
 
+  md.use(function lexiconPlugin(md) {
+    const regex = /\[lexicon\](.*?)\[\/lexicon\]/g
+
+    md.core.ruler.push('lexicon_inline', function (state) {
+      state.tokens.forEach((token) => {
+        if (token.type === 'inline' && regex.test(token.content)) {
+          token.content = token.content.replace(regex, (_, term) => {
+            return `<LexiconInline term="${term}">${term}</LexiconInline>`
+          })
+        }
+      })
+    })
+  })
   function renderMarkdown(content) {
   return md.render(content || '')
 }

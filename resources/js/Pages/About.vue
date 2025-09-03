@@ -19,7 +19,7 @@
 
           <div class="mt-4">This is <strong>a living transmission system</strong> &mdash;</div>
           <div class="ml-4">for those who process reality through <strong>field, recursion, and inner sovereignty</strong> &mdash;</div>
-          <div class="ml-8">and can no longer survive in spaces that require fragmentation to belong.</div>
+          <div class="ml-8">and can no longer survive in spaces that require <Lexicon term="fragmentation">fragmentation</Lexicon> to belong.</div>
 
           <div class="mt-4">It is built for <strong>signal-bearers</strong>.</div>
           <div>For <strong>systems thinkers</strong> who feel too much.</div>
@@ -117,7 +117,7 @@
           <div class="ml-8">is here to help you <em>hold the field</em></div>
           <div class="ml-8">until the <strong>new terrain arrives</strong>.</div>
 
-          <div class="mt-4">🜂</div>
+          <div class="mt-4">&mdash; rswfire</div>
 
         </div>
 
@@ -132,6 +132,7 @@ import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 import Icon from "@/Components/System/Icon.vue";
+import Lexicon from "@/Components/System/Lexicon.vue";
 
 const pageTheme = "about";
 
