@@ -16,37 +16,40 @@ const lexiconCache = new Map();
 
 function makeTooltipNode(entry) {
     const wrapper = document.createElement("div");
-    wrapper.className = "lexicon-tooltip flex gap-3";
+    wrapper.className = "lexicon-tooltip flex flex-col items-center text-center gap-2";
     wrapper.style.fontSize = "14px";
 
+    const inner = document.createElement("div");
+    inner.className = "p-2";
+
     const iconWrap = document.createElement("div");
-    iconWrap.className = "flex-shrink-0";
+    iconWrap.className = "flex justify-center";
     iconWrap.innerHTML = `
     <svg class="w-8 h-8 text-lexicon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
     </svg>
   `;
 
-    const body = document.createElement("div");
-    body.className = "flex-1";
-
-    const termEl = document.createElement("p");
-    termEl.className = "font-semibold text-gray-900 mb-1";
+    const termEl = document.createElement("div");
+    termEl.className = "font-semibold text-gray-900 tracking-widest text-center uppercase";
     termEl.innerText = entry.lexicon_term ?? "";
 
-    const essenceEl = document.createElement("p");
-    essenceEl.className = "text-sm text-gray-700 leading-snug";
+    const essenceEl = document.createElement("div");
+    essenceEl.className = "text-sm text-gray-700 leading-snug text-left w-full";
     essenceEl.innerText = entry.lexicon_essence ?? "";
 
     const linkEl = document.createElement("a");
-    linkEl.className = "text-lexicon-600 text-sm font-medium mt-2 block hover:underline";
+    linkEl.className = "inline-flex items-center justify-center text-lexicon-600 text-sm font-medium mt-2 hover:underline uppercase";
     linkEl.href = `/lexicon/${entry.lexicon_slug}`;
     linkEl.innerText = "View Full Entry →";
 
-    body.append(termEl, essenceEl, linkEl);
-    wrapper.append(iconWrap, body);
+    inner.append(iconWrap, termEl, essenceEl, linkEl);
+    wrapper.append(inner);
+
     return wrapper;
 }
+
 
 window.createLexiconTooltip = async (element, term) => {
     try {
