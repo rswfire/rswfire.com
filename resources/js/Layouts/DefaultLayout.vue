@@ -115,12 +115,13 @@
     <div class="border rounded-2xl shadow-md w-full mx-auto bg-gray-50 border-gray-300">
       <div class="p-4">
 
-      <div class="w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
+      <div class="pt-4 w-full flex justify-center"><Icon name="Flame" color="text-black" class="w-4 h-4" /></div>
       <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
-        <div class="mb-4 text-center text-sm text-gray-600 italic">
-          This is a post-fragmentation interface:
-          a living system for coherence, not content &mdash;
-          built to hold signal when the world forgets how.
+        <div class="mb-4 text-center text-sm text-gray-600">
+          <div class="leading-loose">
+            <div>This is a <Lexicon term="post-collapse">post-collapse</Lexicon>, <Lexicon term="post-fragmentation">post-fragmentation</Lexicon>, <Lexicon term="post-institutional">post-institutional</Lexicon> interface.</div>
+            <div>A living system for <Lexicon term="coherence">coherence</Lexicon>, not content &mdash; built to hold <Lexicon term="signal">signal</Lexicon> when the world forgets how.</div>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4 border-t pt-6">
@@ -248,6 +249,7 @@ import Header from '@/Components/Menu/Header.vue'
 import MobileNav from '@/Components/Menu/Panel.vue'
 import Ticker from "@/Components/Menu/Ticker.vue";
 import Icon from "@/Components/System/Icon.vue";
+import Lexicon from "@/Components/System/Lexicon.vue";
 
 defineProps(['metaTitle', 'metaDescription', 'metaKeywords', 'metaUrl'])
 
