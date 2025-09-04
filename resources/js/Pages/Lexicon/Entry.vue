@@ -10,19 +10,46 @@
         :theme="pageTheme"
     />
 
-    <div class="max-w-3xl mx-auto py-12 relative">
-      <div class="flex justify-between items-center mb-4">
-        <div v-if="showEditLink" class="absolute top-4 right-4 z-10">
+    <div class="pt-6 text-lexicon-600 text-base flex flex-col md:flex-row justify-between gap-6 items-start md:items-center">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center">
+        <Link :href="route('lexicon.index')" class="hover:underline text-lg">← Back to Lexicon</Link>
+        <span v-if="showEditLink">
+          <span class="hidden sm:inline"> &nbsp;|&nbsp; </span>
+          <Link :href="route('lexicon.edit', { slug: entry.lexicon_slug })" class="hover:underline text-lg">Edit Entry</Link>
+        </span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+        <div v-if="previousEntry">
           <Link
-              :href="route('lexicon.edit', { slug: entry.lexicon_slug })"
-              class="text-sm text-blue-500 hover:underline"
+              :href="route('lexicon.show', { slug: previousEntry.lexicon_slug })"
+              class="hover:underline text-lg"
           >
-            Edit Entry
+            ← {{ previousEntry.lexicon_term }}
+          </Link>
+        </div>
+        <div v-if="nextEntry">
+          <Link
+              :href="route('lexicon.show', { slug: nextEntry.lexicon_slug })"
+              class="hover:underline text-lg"
+          >
+            {{ nextEntry.lexicon_term }} →
           </Link>
         </div>
       </div>
+    </div>
 
-      <p class="text-xl text-gray-700 mb-6">{{ entry.lexicon_essence }}</p>
+    <div class="max-w-3xl mx-auto">
+
+
+
+      <!-- <p class="text-xl text-gray-700 mb-6">{{ entry.lexicon_essence }}</p> -->
+
+
+      <!-- <div class="mt-6 border-t border-gray-200"> -->
+          <!-- <h2 class="mt-8 uppercase text-lg font-bold tracking-widest">EXPANDED DEFINITION</h2> -->
+          <div class="mt-4 lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
+      <!-- </div> -->
 
       <div class="flex border-b border-lexicon-400">
         <button
@@ -30,16 +57,16 @@
             :key="key"
             @click="activeTab = key"
             :class="[
-      'flex items-center gap-1 px-3 py-1.5 text-xs font-medium uppercase tracking-wide',
-      activeTab === key
-        ? 'border-b-2 border-lexicon-400 text-white bg-lexicon-400'
-        : 'text-lexicon-400 hover:text-black'
-    ]"
+              'flex items-center gap-1 px-3 py-1.5 text-xs font-medium uppercase tracking-wide',
+              activeTab === key
+                ? 'border-b-2 border-lexicon-400 text-white bg-lexicon-400'
+                : 'text-lexicon-400 hover:text-black'
+            ]"
         >
-    <span class="flex items-center gap-1">
-      <Icon :name="icon" class="w-4 h-4 flex-shrink-0" />
-      <span class="hidden md:inline">{{ label }}</span>
-    </span>
+            <span class="flex items-center gap-1">
+              <Icon :name="icon" class="w-4 h-4 flex-shrink-0" />
+              <span class="hidden md:inline">{{ label }}</span>
+            </span>
         </button>
       </div>
 
@@ -61,14 +88,37 @@
         </div>
       </div>
 
-      <div class="mt-6 border-t border-gray-200">
-          <h2 class="mt-8 uppercase text-lg font-bold tracking-widest">EXPANDED DEFINITION</h2>
-          <div class="mt-4 lexicon-content" v-html="renderMarkdown(entry.lexicon_expanded)" v-lexicon-content />
       </div>
 
+    <div class="mt-6 border-t border-gray-300 pt-6 text-lexicon-600 text-base flex flex-col md:flex-row justify-between gap-6 items-start md:items-center">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center">
+        <Link :href="route('lexicon.index')" class="hover:underline text-lg">← Back to Lexicon</Link>
+        <span v-if="showEditLink">
+          <span class="hidden sm:inline"> &nbsp;|&nbsp; </span>
+          <Link :href="route('lexicon.edit', { slug: entry.lexicon_slug })" class="hover:underline text-lg">Edit Entry</Link>
+        </span>
+      </div>
 
-
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+        <div v-if="previousEntry">
+          <Link
+              :href="route('lexicon.show', { slug: previousEntry.lexicon_slug })"
+              class="hover:underline text-lg"
+          >
+            ← {{ previousEntry.lexicon_term }}
+          </Link>
+        </div>
+        <div v-if="nextEntry">
+          <Link
+              :href="route('lexicon.show', { slug: nextEntry.lexicon_slug })"
+              class="hover:underline text-lg"
+          >
+            {{ nextEntry.lexicon_term }} →
+          </Link>
+        </div>
+      </div>
     </div>
+
 
   </Content>
 </template>
@@ -88,6 +138,8 @@
 })
 
   const pageTheme = 'lexicon'
+  const previousEntry = props.entry.previous ?? null
+  const nextEntry = props.entry.next ?? null
 
   const md = new MarkdownIt({
     html: true,
