@@ -122,14 +122,14 @@
               class="text-xs text-black font-medium leading-tight"
           >
             <span class="inline-flex items-center">
-              <Icon name="Flame" color="text-black" class="w-4 h-4" />
+              <Icon name="Flame" color="text-black" class="w-[16px] h-[16px]" />
               <span class="italic text-gray-700 ml-2">“In a forest pitch dark, glowed the tiniest spark. It burst into a flame.”</span>
               <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
             </span>
             <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
             <span class="inline-flex items-center text-gray-700">
-              <Icon name="SquareLibrary" color="text-black" class="w-4 h-4" />
+              <Icon name="SquareLibrary" color="text-black" class="w-[16px] h-[16px]" />
               <Link href="/lexicon" class="ml-1 text-lexicon-600 font-semibold hover:underline">
                 Lexicon
               </Link>
@@ -138,7 +138,7 @@
             <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
             <span class="inline-flex items-center text-gray-700">
-              <Icon name="TreeDeciduous" color="text-black" class="w-4 h-4" /> <span class="ml-2">The</span>
+              <Icon name="TreeDeciduous" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">The</span>
               <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
                 Honeyman Archive
               </Link>
@@ -150,7 +150,7 @@
             <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
             <span class="inline-flex items-center text-gray-700">
-              <Icon name="WavesLadder" color="text-black" class="w-4 h-4" />
+              <Icon name="WavesLadder" color="text-black" class="w-[16px] h-[16px]" />
               <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
                 Bluewater
               </Link>
@@ -159,7 +159,7 @@
             <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
             <span class="inline-flex items-center text-gray-700">
-              <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> <span class="ml-2">Please consider</span>
+              <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">Please consider</span>
               <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
                 contributing
               </Link>
