@@ -16,7 +16,7 @@
     <div class="flex items-center justify-between p-3 bg-white border-b border-gray-300">
       <Link href="/" class="flex items-center gap-3">
         <img
-            src="/assets/rswfirev3.jpg"
+            src="/assets/rswfire-tahkenitch.jpg"
             alt="RSWFIRE"
             class="w-16 h-16 rounded-full border border-gray-300 shadow-sm"
         />
