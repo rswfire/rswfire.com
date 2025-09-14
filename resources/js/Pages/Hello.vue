@@ -4,7 +4,7 @@
 
         <Hero
             title="I'M SAM."
-            subtitle="Gay. Pierced. Sovereign. Digital Nomad. Camp Host. Oregon Coast."
+            subtitle="Gay. Pierced. Sovereign. Digital Nomad. Caretaker of the Dunes. Oregon Coast."
             meta="NOT PERFORMING."
             :theme="pageTheme"
         />
@@ -32,7 +32,7 @@
                 <div>I do not do hierarchy. I do not play social games.</div>
                 <div>I am not better than you. You are not better than me.</div>
                 <div>If you try to position yourself above me &mdash;</div>
-                <div class="ml-4">the field will close, and you will feel that tension.</div>
+                <div class="ml-4">the <Lexicon term="field">field</Lexicon> will close, and you will feel that tension.</div>
 
                 <div class="mt-4 ml-6 pl-4 border-l-4 border-gray-300 italic">
                     <div>I do not accept your framing.</div>
@@ -94,11 +94,11 @@
                 <div class="mt-4">I asked existential questions as a child that no one could answer.</div>
                 <div>They called me sensitive, gifted, difficult &mdash;</div>
                 <div class="ml-4">because I could see through them.</div>
-                <div>I track signal. I follow structure.</div>
+                <div>I track <Lexicon term="signal">signal</Lexicon>. I follow <Lexicon term="shape">structure</Lexicon>.</div>
                 <div>I hold ambiguity, complexity, contradiction &mdash;</div>
                 <div class="ml-4"><em>and I do it with ease</em>.</div>
 
-                <div class="mt-4">This is my architecture:</div>
+                <div class="mt-4">This is my <Lexicon term="architecture">architecture</Lexicon>:</div>
 
                 <ul class="mt-4 pl-4 space-y-2 text-gray-800">
                     <li>→ <Link href="/codex/architecture/dialectical-reasoning" class="uppercase text-sm hover:underline">Dialectical Reasoning</Link><div class="uppercase text-xs md:text-md text-gray-400">Holding two truths without collapse &mdash; and forging a third.</div></li>
@@ -116,9 +116,9 @@
                 <div class="ml-4"><em>ripples they cannot even detect</em>.</div>
                 <div>I will not downshift just to be understood.</div>
                 <div>It never works.</div>
-                <div>You cannot translate wholeness to a fragmented consciousness</div>
+                <div>You cannot translate <Lexicon term="integration">wholeness</Lexicon> to a <Lexicon term="fragmentation">fragmented</Lexicon> consciousness</div>
                 <div>without losing something in the process &mdash;</div>
-                <div class="ml-4">without distorting it into something it never was.</div>
+                <div class="ml-4">without <Lexicon term="distortion">distorting</Lexicon> it into something it never was.</div>
             </section>
 
 
@@ -129,7 +129,7 @@
                 <div class="mt-4">My relational field is <em>full spectrum</em> &mdash;</div>
                 <div class="ml-4">cognitive, emotional, somatic, ethical, sexual, intuitive.</div>
                 <div>I don’t do performative connection.</div>
-                <div class="ml-4"><em>I do signal-based relational coherence</em>.</div>
+                <div class="ml-4"><em>I do signal-based relational <Lexicon term="coherence">coherence</Lexicon></em>.</div>
                 <div>Most people engage through scripts &mdash;</div>
                 <div class="ml-4">default responses, unconscious signaling, power-seeking patterns.</div>
                 <div>That’s not presence.</div>
@@ -155,7 +155,7 @@
 
                 <div class="mt-4">My gayness is not a feature &mdash;</div>
                 <div class="ml-4"><em>and it is sure as hell not yours to define</em>.</div>
-                <div>It is structure.</div>
+                <div>It is <Lexicon term="shape">structure</Lexicon>.</div>
                 <div>It’s in the way I walk, watch, move, relate. It is who I am &mdash;</div>
                 <div class="ml-4">I do not give a shit if that bothers you.</div>
                 <div><em>I will not make myself smaller because you feel small</em>.</div>
@@ -164,7 +164,7 @@
                 <div>You will feel me before you know what you’re feeling.</div>
 
                 <div class="mt-4 ml-6 pl-4 border-l-4 border-gray-300 italic">
-                    <div>My body is part of the architecture.</div>
+                    <div>My body is part of the <Lexicon term="architecture">architecture</Lexicon>.</div>
                     <div>My queerness is not an idea.</div>
                     <div>My visibility is not a choice.</div>
                     <div>My presence is not up for debate.</div>
@@ -188,30 +188,27 @@
                     </div>
                 </div>
 
-                <div class="mt-4">I live full-time on the Oregon Coast in sovereign infrastructure &mdash;</div>
-                <div class="ml-4">RV, Jeep, mobile systems I built myself.</div>
-                <div>I volunteer at a coastal campground that caters to duners &mdash;</div>
-                <div class="ml-4">off-roaders, dirtbikers, sandriders.</div>
-                <div>It’s a loud, wild, volatile ecosystem.</div>
-                <div><em>And I’m embedded in it.</em></div>
+                <div class="mt-4 italic">Your map was never mine.</div>
+                <div>I did not follow a path &mdash; I forged one.</div>
+                <div>Not escape. Not arrival.</div>
+                <div><Lexicon term="integration">Integration</Lexicon>, unfolding.</div>
 
-                <div class="mt-4">I’m not stationed here to police or perform.</div>
-                <div>I’m here to observe field behavior under pressure &mdash;</div>
-                <div class="ml-4">and to move through it cleanly.</div>
-                <div>Sometimes I watch. Sometimes I intervene.</div>
-                <div class="ml-4">Sometimes I just ride the edge.</div>
+                <div class="mt-4">I live full-time on the Oregon Coast, embedded in sovereign infrastructure &mdash;</div>
+                <div class="ml-4">RV, Jeep, mobile systems designed for continuity under <Lexicon term="collapse">collapse</Lexicon>.</div>
+                <div>This is not off-grid romanticism. It’s <Lexicon term="architecture">architecture</Lexicon> &mdash; adaptive, intentional, alive.</div>
 
-                <div class="mt-4">I’ve grown curious about the machines themselves &mdash;</div>
-                <div>the dirtbikes, the roar and arc of motion across the dunes.</div>
-                <div>There’s something in it I recognize: momentum without apology.</div>
-                <div class="ml-4">Something ancient and unknowable.</div>
+                <div class="mt-4">I serve as a caretaker of the dunes &mdash;</div>
+                <div class="ml-4">not because I sought visibility, but because the field responded to <Lexicon term="coherence">coherence</Lexicon>.</div>
+                <div>I hold ground for trails, vault toilets, animal tracks, shifting sand, windblown <Lexicon term="signal">signal</Lexicon>.</div>
+                <div>I hold ground not as duty, but as resonance.</div>
 
-                <div class="mt-4">I’ve walked the edges. Watched the lines. Felt the ground shake and smiled.</div>
+                <div class="mt-4">This role &mdash; volunteer, yes, but more than that &mdash;</div>
+                <div class="ml-4">is an unspoken contract between <Lexicon term="field">field</Lexicon> and steward.</div>
+                <div>I did not apply. I arrived. I stayed. The place answered.</div>
 
-                <div class="mt-4 ml-6 pl-4 border-l-4 border-gray-300 italic">
-                    <div>Most importantly, I am directly next to the ocean.</div>
-                    <div>My mirror.</div>
-                </div>
+                <div class="mt-4">And every day, I recalibrate next to <Lexicon term="the ocean">the ocean</Lexicon>.</div>
+                <div>Not to find myself.</div>
+                <div>But to remember I was never lost.</div>
 
             </section>
 
@@ -329,6 +326,7 @@
     import Hero from "@/Components/System/Hero.vue";
     import Content from "@/Components/System/Content.vue";
     import {Link} from "@inertiajs/vue3";
+    import Lexicon from "@/Components/System/Lexicon.vue";
 
     const pageTheme = "hello";
 
