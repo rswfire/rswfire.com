@@ -235,7 +235,9 @@
 
                 <div class="mt-4">I left a six-figure job when I began living in my RV.</div>
                 <div>Now, eighteen months later, I’m slowly reintegrating freelance work &mdash;</div>
-                <div class="ml-4">on my own terms.</div>
+                <div class="ml-4">on my own terms &mdash;</div>
+                <div class="ml-8">reintroducing signal into commerce &mdash;</div>
+                <div class="ml-12">without permitting collapse.</div>
 
                 <div class="mt-4">My current focus is AI &mdash;</div>
                 <div class="ml-4">not as a tool,</div>
