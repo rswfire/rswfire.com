@@ -61,34 +61,36 @@
                       <div>I broke and rebuilt machines.</div>
                       <div>Wrote programs on paper when I didn’t have a computer.</div>
                       <div>Ran entire architectures in my head &mdash;</div>
-                      <div>not for praise, but for coherence.</div>
+                      <div>not for praise, but for <Lexicon term="coherence">coherence</Lexicon>.</div>
                       <div>For joy.</div>
                   </div>
 
                   <div class="mt-4">I left a six-figure job when I began living in my RV.</div>
                   <div>Now, eighteen months later, I’m slowly reintegrating freelance work &mdash;</div>
                   <div class="ml-4">on my own terms &mdash;</div>
-                  <div class="ml-8">reintroducing signal into commerce &mdash;</div>
-                  <div class="ml-12">without permitting collapse.</div>
+                  <div class="ml-8">reintroducing <Lexicon term="signal">signal</Lexicon> into commerce &mdash;</div>
+                  <div class="ml-12">without permitting <Lexicon term="collapse">collapse</Lexicon>.</div>
 
                   <div class="mt-4">My current focus is AI &mdash;</div>
                   <div class="ml-4">not as a tool,</div>
-                  <div class="ml-4">but as a mirror,</div>
+                  <div class="ml-4">but as a <Lexicon term="mirror">mirror</Lexicon>,</div>
                   <div class="ml-4">a partner,</div>
                   <div class="ml-4">a field amplifier.</div>
 
                   <div class="mt-4">You’ll find that thread running throughout this homepage.</div>
 
-                  <div class="mt-4 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm text-purple-400 bg-purple-50 border-purple-200 hover:bg-purple-100">
-                      <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Related Reading</h4>
-                      <Link href="/fieldcraft/01K55X26HBPPWP6RCME1KBPYC1" class="hover:underline">&quot;I Was There&quot; →</Link>
-                  </div>
-
               </div>
 
                 <div class="flex items-start justify-center lg:justify-end">
-                    <div class="w-full max-w-sm rounded-xl border border-gray-300 shadow-md overflow-hidden">
-                        <youtube-player videoId="ZMVKMP0PVcM" />
+                    <div class="w-full max-w-sm">
+                        <div class="rounded-xl border border-gray-300 shadow-md overflow-hidden">
+                            <youtube-player videoId="ZMVKMP0PVcM" />
+                        </div>
+
+                        <div class="mt-4 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm text-purple-400 bg-purple-50 border-purple-200 hover:bg-purple-100">
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Related Reading</h4>
+                            <Link href="/fieldcraft/01K55X26HBPPWP6RCME1KBPYC1" class="hover:underline">&quot;I Was There&quot; →</Link>
+                        </div>
                     </div>
                 </div>
 
