@@ -51,7 +51,7 @@
 
                   <div class="mt-4 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm text-purple-400 bg-purple-50 border-purple-200 hover:bg-purple-100">
                       <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Related Reading</h4>
-                      <Link href="/fieldcraft/01K55X26HBPPWP6RCME1KBPYC1">&quot;I Was There&quot;</Link>
+                      <Link href="/fieldcraft/01K55X26HBPPWP6RCME1KBPYC1" class="hover:underline">&quot;I Was There&quot; →</Link>
 
                   </div>
 
