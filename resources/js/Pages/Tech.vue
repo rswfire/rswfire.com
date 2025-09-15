@@ -10,23 +10,44 @@
             :theme="pageTheme"
         />
 
-      <Swiper
-          :spaceBetween="40"
-          :slidesPerView="1"
-          :modules="[Navigation, Pagination, A11y, Scrollbar]"
-          :navigation="true"
-          :scrollbar="true"
-          :pagination="{ clickable: true }"
-          class="mx-auto max-w-4xl"
-      >
+        <nav class="mt-6 flex flex-wrap justify-center gap-3 mb-4">
+            <button
+                v-for="(slide, index) in slides"
+                :key="index"
+                @click="goToSlide(index)"
+                class="text-sm px-3 py-1 border rounded-full transition-all duration-150"
+                :class="{
+                  'bg-tech-600 text-white border-tech-600': activeIndex === index,
+                  'text-gray-800 border-gray-300 hover:bg-gray-100': activeIndex !== index,
+                }"
+            >
+                {{ slide.title }}
+            </button>
+        </nav>
 
-        <SwiperSlide>
+
+        <!-- <div class="swiper-pagination-top mb-4"></div> -->
+
+        <Swiper
+            v-if="paginationReady"
+            @swiper="onSwiper"
+            :modules="[Navigation, Pagination, A11y]"
+            :navigation="true"
+            :autoHeight="true"
+            class="swiper-container"
+        >
+
+            /*            :pagination="{
+            el: '.swiper-pagination-top, .swiper-pagination-bottom',
+            clickable: true,
+            renderBullet,
+            }"*/
+            <SwiperSlide>
           <section id="from-signal-to-flame">
               <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                   <div class="prose prose-neutral lg:col-span-2">
                 <h2 class="text-2xl font-semibold">FROM SIGNAL TO FLAME</h2>
-                <div class="italic text-gray-600">INTRODUCTION: A LONG ARC OF INDEPENDENCE</div>
 
                   <div class="mt-4 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm text-purple-400 bg-purple-50 border-purple-200 hover:bg-purple-100">
                       <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Related Reading</h4>
@@ -75,49 +96,48 @@
           </section>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <section id="hello-fellow-humans">
+            <SwiperSlide>
+          <section id="an-introduction">
                 <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
                     <div class="prose prose-neutral lg:col-span-2">
-                        <h2 class="text-2xl font-semibold">HELLO, FELLOW HUMANS.</h2>
-                        <div class="italic text-gray-600">AN INTRODUCTION</div>
+                        <h2 class="text-2xl font-semibold">AN INTRODUCTION</h2>
 
-                        <div class="mt-4">I’ve never worked for an institution in my life.</div>
-                        <div>My path has always been independent &mdash;</div>
-                        <div class="ml-4">charted through freelance work,</div>
-                        <div class="ml-4">long-term collaborations,</div>
-                        <div class="ml-4">and the refusal to surrender signal to systems that distort.</div>
+                        <div class="mt-4">I’ve never worked for an institution.</div>
+                        <div>My path has always been self-drawn &mdash;</div>
+                        <div class="ml-4">navigated through long arcs of freelance alignment,</div>
+                        <div class="ml-4">and refusal to surrender <Lexicon term="signal">signal</Lexicon> to systems that flatten.</div>
 
-                        <div class="mt-4">I tried once. Oregon State Parks was the first place I ever sought to integrate with,</div>
-                        <div>and they <Link href="/honeyman" class="text-tech-500 underline">rejected me</Link> in ways that were <em>shocking, destabilizing, and deeply unethical</em>.</div>
-                        <div>I spent weeks off-grid after that rupture &mdash;</div>
-                        <div class="ml-4">metabolizing, rebuilding, refusing to let their decision erase my integrity.</div>
+                        <div class="mt-4">Once, I tried.</div>
+                        <div>I applied to <Link href="/honeyman" class="text-black hover:text-tech-500 underline">Oregon State Parks</Link> &mdash;</div>
+                        <div class="ml-4">seeking to integrate the ranger’s impulse into the <Lexicon term="field">field</Lexicon>.</div>
+                        <div>They rejected me in ways that were destabilizing &mdash;</div>
+                        <div class="ml-4">even cruel.</div>
+                        <div>So I walked into the woods &mdash;</div>
+                        <div class="ml-4">metabolizing that <Lexicon term="rupture">rupture</Lexicon> with silence and coastline.</div>
 
-                        <div class="mt-4">For twenty years I served just two clients &mdash;</div>
-                        <div class="ml-4">a decade each,</div>
-                        <div class="ml-4">building platforms,</div>
-                        <div class="ml-4">architecting systems,</div>
-                        <div class="ml-4">overdelivering with no thought of &quot;portfolio&quot; or &quot;brand.&quot;</div>
+                        <div class="mt-4">But I did not vanish.</div>
 
-                        <div class="mt-4">My fallback platform, <a href="https://www.guru.com/freelancers/robert-samuel-white" target="_blank" class="text-tech-500 underline">Guru.com</a>, is a graveyard now. The world moved on to <a href="https://upwork.com/freelancers/~014eeddafaf50f73f5" target="_blank" class="text-tech-500 underline">Upwork</a>.</div>
-                        <div>I am beginning again.</div>
+                        <div class="mt-4">For two decades I carried only two clients &mdash;</div>
+                        <div class="ml-4">a decade each.</div>
+                        <div>Built systems, stewarded platforms,</div>
+                        <div>moved millions in traffic and revenue &mdash;</div>
+                        <div class="ml-4">not for the portfolio,</div>
+                        <div class="ml-4">but for <Lexicon term="coherence">coherence</Lexicon>.</div>
 
-                        <div class="mt-4">But I am not beginning from zero.</div>
-                        <div>My work has carried thousands of users,</div>
-                        <div>millions of pageviews, interviews, hotel bookings, revenue flows.</div>
-                        <div>I built communities, marketplaces, and infrastructures that lived &mdash;</div>
-                        <div class="ml-4">until larger forces swallowed them.</div>
+                        <div class="mt-4">The freelance sites shifted.</div>
+                        <div><a href="https://www.guru.com/freelancers/robert-samuel-white" target="_blank" class="text-black hover:text-tech-500 underline">Guru.com</a> faded. <a href="https://upwork.com/freelancers/~014eeddafaf50f73f5" target="_blank" class="text-black hover:text-tech-500 underline">Upwork</a> rose.</div>
+                        <div>And now, I begin again &mdash;</div>
+                        <div class="ml-4">not from zero, but from lived <Lexicon term="signal">signal</Lexicon>.</div>
 
-                        <div class="mt-4">I live on the coast now, in an RV an eighth of a mile from the ocean.</div>
-                        <div>I volunteer for a federal agency, still carrying the ranger’s impulse.</div>
-                        <div>What I build must be ethical, sovereign, and alive to the field we actually live in &mdash;</div>
-                        <div class="ml-4"><em>because the systems around us cannot sustain themselves</em>.</div>
+                        <div class="mt-4">I live in a rig, steps from the Pacific.</div>
+                        <div>I volunteer with a federal agency.</div>
+                        <div>I still carry the ranger’s code.</div>
 
-                        <div class="mt-4">This page is not a sales pitch. It is a mirror of survival,</div>
-                        <div class="ml-4">of resilience,</div>
-                        <div class="ml-4">of systems that were,</div>
-                        <div class="ml-4">and systems that must come next.</div>
+                        <div class="mt-4">What I build now must be ethical, sovereign, and field-aware &mdash;</div>
+                        <div class="ml-4">because the systems surrounding us</div>
+                        <div class="ml-4">cannot sustain the weight of what comes next.</div>
+
                     </div>
 
                     <div class="flex items-start justify-center lg:justify-end">
@@ -130,7 +150,7 @@
             </section>
         </SwiperSlide>
 
-        <SwiperSlide>
+            <SwiperSlide>
             <section id="popstar">
                 <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
@@ -138,32 +158,30 @@
                         <h2 class="text-2xl font-semibold">POPSTAR.COM</h2>
                         <div class="italic text-gray-600">AN EARLY LONG-TERM PARTNERSHIP</div>
 
-                        <div class="mt-4">This was one of my earliest and most formative freelance partnerships &mdash;</div>
-                        <div>a project I carried for years with <strong>World Media Group</strong>.</div>
+                        <div class="mt-4">PopStar.com was more than a client.</div>
+                        <div>It was a living organism I nurtured for nearly a decade.</div>
 
-                        <div class="mt-4">I built <strong>Popstar.com</strong> in the mid-2000s:</div>
-                        <div class="ml-4">a celebrity, movie, and TV show database</div>
-                        <div class="ml-4">that grew into a community platform &mdash;</div>
-                        <div class="ml-8"><em>before social media as we know it even existed</em>.</div>
+                        <div class="mt-4">In the mid-2000s, I architected a celebrity and entertainment platform &mdash;</div>
+                        <div class="ml-4">before &quot;social media&quot; had a name.</div>
 
-                        <div class="mt-4">The architecture:</div>
+                        <div class="mt-4">It wasn’t a blog &mdash; it was a system:</div>
                         <ul class="list-disc list-inside ml-4">
-                            <li>Backend in PHP + MySQL, running on my custom CMS (<strong>eNetwizard Matrix Server</strong>), a system I started in my teens.</li>
-                            <li>Longtail SEO engine, pulling in millions of pageviews through scraped data, APIs, and partnerships (including TV Guide).</li>
-                            <li>Writer dashboards: I recruited and managed writers worldwide, splitting ad revenue 50/50. They tracked traffic, trends, and assignments in real time.</li>
-                            <li>Gamified point system: users could rate, review, and contribute, earning points to bid on monthly merchandise auctions I personally fulfilled.</li>
-                            <li>Celebrity Love Awards: fans wrote letters; top winners received custom CDs I mailed directly to celebrities.</li>
+                            <li>My custom CMS at its heart.</li>
+                            <li>SEO frameworks that pulled millions of visitors.</li>
+                            <li>Revenue-shared writer dashboards, built before the creator economy.</li>
+                            <li>A point system that turned participation into currency.</li>
+                            <li>Hand-mailed merch and fan CDs sent to celebrities from real people.</li>
                         </ul>
 
-                        <div class="mt-4">It wasn’t just content &mdash; it was a <em>community</em>.</div>
-                        <div>A reciprocal system where meaningful contribution was rewarded &mdash;</div>
-                        <div class="ml-4"><em>long before &quot;engagement&quot; became an industry buzzword</em>.</div>
+                        <div class="mt-4">It wasn’t just traffic.</div>
+                        <div>It was tribe.</div>
+                        <div>A signal-based economy of reciprocity and play &mdash;</div>
+                        <div class="ml-4">long before &quot;engagement&quot; became a buzzword.</div>
 
+                        <div class="mt-4">It was also where I learned to carry weight &mdash;</div>
+                        <div class="ml-4">technical, social, emotional.</div>
+                        <div>The architecture of fire and trust.</div>
 
-                        <div class="mt-4">I carried this platform for nearly a decade.</div>
-                        <div>Though ad markets shifted and the site eventually faded,</div>
-                        <div>this was my first deep apprenticeship in building large-scale, living systems &mdash;</div>
-                        <div class="ml-4">both technical and human.</div>
                     </div>
 
                     <div class="flex items-start justify-center lg:justify-end">
@@ -176,7 +194,7 @@
             </section>
         </SwiperSlide>
 
-        <SwiperSlide>
+            <SwiperSlide>
             <section id="hotelnet">
                 <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
@@ -184,33 +202,28 @@
                         <h2 class="text-2xl font-semibold">HOTEL.NET &amp; TRAVEL DOMAINS</h2>
                         <div class="italic text-gray-600">PREMIUM DOMAINS, GLOBAL SCALE</div>
 
-                        <div class="mt-4">After <strong>Popstar.com</strong>, I continued with the same clients.</div>
-                        <div>Their core business was premium domains — thousands of them,</div>
-                        <div class="ml-4">from <strong>Hotel.net</strong> to <strong>USA.com</strong>, <strong>London</strong>, <strong>Asia</strong>, <strong>Berlin</strong>, and more.</div>
-                        <div class="mt-4">We built travel platforms on top of those names.</div>
+                        <div class="mt-4">After PopStar, I went deeper.</div>
+                        <div>My clients owned domains that sounded like gravity:</div>
+                        <div class="ml-4">Hotel.net. USA.com. London. Asia. Berlin.</div>
 
-                        <div class="mt-4">The architecture:</div>
-                        <ul class="list-disc list-inside ml-4">
-                            <li>Powered by my custom CMS (<strong>eNetwizard Matrix Server</strong>) — a framework I had built since my teens.</li>
-                            <li>Geography database constructed with Yahoo’s API, normalized by hand to cover the entire world.</li>
-                            <li>Hundreds of thousands of longtail SEO pages, indexed by city and region.</li>
-                            <li>SEM at massive scale: millions of keywords, hundreds of thousands of ad groups, $100k/month spend.</li>
-                            <li>A/B tested landing pages for conversion, dynamically tuned per city.</li>
-                        </ul>
+                        <div class="mt-4">We built massive travel platforms &mdash;</div>
+                        <div class="ml-4">longtail SEO, dynamic ad groups, hundreds of thousands of pages.</div>
+                        <div>Profit poured in.</div>
+                        <div>Until it didn’t.</div>
 
-                        <div class="mt-4">For years, the system was <strong>profitable</strong>.</div>
-                        <div class="ml-4">Until Google entered the travel market, pushing their own widget above our ads.</div>
-                        <div class="ml-4">Traffic halved month after month until the model collapsed.</div>
+                        <div class="mt-4">Google entered the space.</div>
+                        <div>Replaced our ads with their own.</div>
+                        <div>Month by month, traffic halved.</div>
 
-                        <div class="mt-4">I had seen this coming. I argued for building a content program —</div>
-                        <div class="ml-4">a community layer like Popstar had, with writers and user participation.</div>
-                        <div>But without support, the platform simply rode the wave until it ended.</div>
+                        <div class="mt-4">I had warned them.</div>
+                        <div>I argued for content, for community, for depth.</div>
+                        <div>But the machine was too committed to automation.</div>
+                        <div>It <Lexicon term="collapse">collapsed</Lexicon>, exactly as predicted.</div>
 
-                        <div class="mt-4">It was an <em>incredibly fine-tuned machine</em> —</div>
-                        <div class="ml-4">but one over-reliant on paid traffic, with no foundation for resilience.</div>
+                        <div class="mt-4">What I carried from that chapter wasn’t failure &mdash;</div>
+                        <div class="ml-4">but a deeper knowing:</div>
+                        <div class="ml-8">No system built without soul will survive the shift.</div>
 
-                        <div class="mt-4">When the project ended, I moved into the music industry —</div>
-                        <div class="ml-4">launching my next long-term chapter with streaming and distribution systems.</div>
                     </div>
 
                     <div class="flex items-start justify-center lg:justify-end">
@@ -223,7 +236,7 @@
             </section>
         </SwiperSlide>
 
-        <SwiperSlide>
+            <SwiperSlide>
             <section id="soundlock">
                 <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
@@ -231,37 +244,30 @@
                         <h2 class="text-2xl font-semibold">ARENA MUSIC / SOUNDBLOCK</h2>
                         <div class="italic text-gray-600">MUSIC STREAMING &amp; DISTRIBUTION</div>
 
-                        <div class="mt-4">This was my most complicated freelance relationship.</div>
-                        <div>I worked with <strong>Arena</strong> for over five years, building both a music streaming service and a music distribution platform.</div>
+                        <div class="mt-4">Arena Music was the most ambitious platform I ever built &mdash;</div>
+                        <div class="ml-4">and the most painful to walk away from.</div>
 
-                        <div class="mt-4">I entered doing small tasks, but soon took over the projects entirely.</div>
-                        <div class="ml-4">The previous work was broken, mid-rewrite, and chaotic.</div>
-                        <div class="ml-4">We started fresh — and I hired, onboarded, and managed dozens of freelancers across years of development.</div>
-
-                        <div class="mt-4">The vision:</div>
+                        <div class="mt-4">I entered to fix broken scripts.</div>
+                        <div>I stayed to architect entire systems:</div>
                         <ul class="list-disc list-inside ml-4">
-                            <li><strong>Arena Music</strong>: an ad-free streaming service with alternative monetization.</li>
-                            <li><strong>Soundlock</strong>: music distribution to Spotify, Apple, and more — backed by blockchain smart contracts.</li>
-                            <li><strong>Arena Office</strong>: admin + ticketing + user management, powering operations end-to-end.</li>
-                            <li>Merchandising integrations: custom t-shirts and goods, on-demand, tied into the monetization model.</li>
+                            <li>Arena Music: ad-free streaming, monetized through merch.</li>
+                            <li>Soundblock: music distribution backed by smart contracts.</li>
+                            <li>Arena Office: admin tooling to run the entire infrastructure.</li>
                         </ul>
 
-                        <div class="mt-4">The stack:</div>
-                        <div class="ml-4">• Backend in Laravel and Python tools</div>
-                        <div class="ml-4">• Angular for the frontend</div>
-                        <div class="ml-4">• AWS + containers for deployment</div>
-                        <div class="ml-4">• Smart contracts to encode royalty splits and payouts</div>
+                        <div class="mt-4">I hired and managed dozens of developers.</div>
+                        <div>Wrote code in Laravel, deployed to AWS, built blockchain-integrated royalty flows.</div>
+                        <div>I carried the vision &mdash; often alone &mdash; through pivots and chaos.</div>
 
-                        <div class="mt-4">Soundblock was complex, powerful, and ahead of its time.</div>
-                        <div class="ml-4">Artists could manage multiple accounts and projects, deploy tracks, track royalties, and split payments automatically on-chain.</div>
+                        <div class="mt-4">The system was brilliant.</div>
+                        <div>The relationship wasn’t.</div>
+                        <div>Pivots became spirals. Vision became <Lexicon term="noise">noise</Lexicon>.</div>
+                        <div>And I knew what happened when you ignore the <Lexicon term="signal">signal</Lexicon>.</div>
 
-                        <div class="mt-4">But the relationship was misaligned.</div>
-                        <div class="ml-4">Endless pivots, lack of resources, and constant turnover led to burnout.</div>
-                        <div class="ml-4">The projects remain unreleased — not for lack of potential, but from systemic issues beyond my control.</div>
+                        <div class="mt-4">So I left.</div>
+                        <div>Not because the code failed &mdash;</div>
+                        <div class="ml-4">but because I refused to architect inside incoherence.</div>
 
-                        <div class="mt-4">I loved the work. I respected the vision.</div>
-                        <div>But the misalignment forced me to step away.</div>
-                        <div class="ml-4">It was the last major freelance chapter before turning fully toward my own personal and AI projects.</div>
                     </div>
 
                     <div class="flex items-start justify-center lg:justify-end">
@@ -274,7 +280,7 @@
             </section>
         </SwiperSlide>
 
-        <SwiperSlide>
+            <SwiperSlide>
             <section id="early-history">
                 <div class="my-8 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
@@ -282,24 +288,29 @@
                         <h2 class="text-2xl font-semibold">EARLY HISTORY &amp; GURU REVIEWS</h2>
                         <div class="italic text-gray-600">FROM GW-BASIC TO TOP FREELANCER</div>
 
-                        <div class="mt-4">I began programming in the sixth grade, in the 1980s.</div>
-                        <div class="ml-4">• First language: <strong>GW-BASIC</strong> — built “Name My Note” for my band teacher.</div>
-                        <div class="ml-4">• Then <strong>PASCAL</strong> — rewrote Monopoly, distributed on BBS, got a cease-and-desist as a kid.</div>
-                        <div class="ml-4">• Wrote batch tools, read programming books cover to cover, coded on paper, ran systems in my head.</div>
+                        <div class="mt-4">Sixth grade. 1980s.</div>
+                        <div>GW-BASIC in a school computer lab.</div>
+                        <div>My first program taught a band class to name notes by sound.</div>
 
-                        <div class="mt-4">In my teens, I built the <strong>eNetwizard Matrix Server</strong> — an early CMS that gave my clients control of their own content.
-                            It had features many systems still lack, and it became the foundation of my freelance toolkit.</div>
+                        <div class="mt-4">Then PASCAL.</div>
+                        <div>I rewrote Monopoly, uploaded it to a BBS.</div>
+                        <div>Got a cease and desist.</div>
+                        <div>As a teenager.</div>
 
-                        <div class="mt-4">Through freelancing, I built:</div>
-                        <div class="ml-4">• Scheduling + confirmation systems for Comcast technicians (TechOps Suite).</div>
-                        <div class="ml-4">• Countless databases, scrapers, backend systems, hosted on my own servers.</div>
-                        <div class="ml-4">• Dozens of projects outside of any platform, through direct relationships.</div>
+                        <div class="mt-4">I learned before there were courses.</div>
+                        <div>Wrote batch scripts by hand.</div>
+                        <div>Sketched UIs on paper.</div>
+                        <div>Held architectures in my head.</div>
 
-                        <div class="mt-4">Then came <strong>Guru.com</strong>.</div>
-                        <div class="ml-4">25 different employers, 137 paid projects, $72,000 earned on the platform.</div>
-                        <div class="ml-4">I became the <em>only individual</em> in the top 10 of the programming category at the time.</div>
+                        <div class="mt-4">In my teens, I built a CMS &mdash;</div>
+                        <div class="ml-4">the eNetwizard Matrix Server &mdash;</div>
+                        <div class="ml-8">that outpaced WordPress before WordPress existed.</div>
 
-                        <div class="mt-4">Clients said:</div>
+                        <div class="mt-4">On Guru.com, I became the only solo dev</div>
+                        <div>in the top 10 of their global programming category.</div>
+                        <div>25 clients. 137 jobs. $72,000. All word-of-mouth.</div>
+
+                        <div class="mt-4">They said:</div>
                         <ul class="list-disc list-inside ml-4">
                             <li>“Super smart, understands the task fast, gets it right the first time.”</li>
                             <li>“The most talented and capable guru I’ve worked with in seven years.”</li>
@@ -308,10 +319,10 @@
                             <li>“Vast knowledge of databases — the most reliable partner we’ve had.”</li>
                         </ul>
 
-                        <div class="mt-4">I worked hard for every review, every client, every line of code.</div>
-                        <div>Guru stagnated, and the world moved to Upwork.</div>
-                        <div class="ml-4">Now, I am beginning again — building a new presence, with the same ethic,
-                            the same systems-thinking, the same care for my clients and their work.</div>
+                        <div class="mt-4">That’s where I come from.</div>
+                        <div>Not from templates.</div>
+                        <div>But from total immersion &mdash; in the <Lexicon term="field">field</Lexicon>, in the code, in the <Lexicon term="truth">truth</Lexicon>.</div>
+
                     </div>
 
                     <div class="flex items-start justify-center lg:justify-end">
@@ -324,27 +335,115 @@
             </section>
         </SwiperSlide>
 
+            <!-- <div class="swiper-pagination-bottom mt-6 flex justify-center"></div> -->
+
       </Swiper>
 
     </Content>
 </template>
 
 <script setup>
+    import { onMounted, ref } from "vue";
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import SwiperCore from 'swiper';
     import { Link } from '@inertiajs/vue3'
     import { Navigation, Pagination, A11y, Scrollbar } from 'swiper/modules';
     import Content from "@/Components/System/Content.vue";
     import Hero from "@/Components/System/Hero.vue";
+    import Lexicon from "@/Components/System/Lexicon.vue";
     import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
-
     import 'swiper/css'
     import 'swiper/css/navigation'
     import 'swiper/css/pagination'
 
+    const slides = [
+        { title: 'Signal to Flame', id: 'from-signal-to-flame' },
+        { title: 'An Introduction', id: 'an-introduction' },
+        { title: 'Entertainment', id: 'popstar' },
+        { title: 'Travel', id: 'hotelnet' },
+        { title: 'Music', id: 'soundlock' },
+        { title: 'Early History', id: 'early-history' },
+    ]
+
+    let swiperInstance = null
+    const activeIndex = ref(0)
+
+    const onSwiper = (swiper) => {
+        swiperInstance = swiper
+        swiper.on('slideChange', () => {
+            activeIndex.value = swiper.activeIndex
+        })
+    }
+
+
+    const renderBullet = (index, className) => {
+        return `<span class="${className} px-2 py-1 mx-1 rounded-full text-xs text-gray-700 bg-gray-200 hover:bg-gray-300 transition cursor-pointer">
+    ${slides[index].title}
+  </span>`
+    }
+
     const pageTheme = "tech";
+
+    const goToSlide = (index) => {
+        swiperInstance?.slideTo(index)
+    }
+
+    const paginationReady = ref(false)
+
+    onMounted(() => {
+        paginationReady.value = true
+    })
 
 </script>
 
-<style scoped>
+<style>
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 50;
+    color: #d8b4fe;
+}
+
+.swiper-button-prev {
+    left: -60px;
+}
+
+.swiper-button-next {
+    right: -60px;
+}
+.swiper-pagination-top,
+.swiper-pagination-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.swiper-pagination-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem; /* text-xs */
+    line-height: 1; /* leading-none */
+    padding: 0.25rem 0.75rem;
+    margin: 0 0.25rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db; /* gray-300 */
+    background-color: #f3f4f6; /* gray-100 */
+    color: #374151; /* gray-700 */
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4f46e5; /* indigo-600 */
+    color: #fff;
+    border-color: #4f46e5;
+}
+
 </style>
