@@ -28,6 +28,12 @@
                 <h2 class="text-2xl font-semibold">FROM SIGNAL TO FLAME</h2>
                 <div class="italic text-gray-600">INTRODUCTION: A LONG ARC OF INDEPENDENCE</div>
 
+                  <div class="mt-4 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm text-purple-400 bg-purple-50 border-purple-200 hover:bg-purple-100">
+                      <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Related Reading</h4>
+                      <Link href="/fieldcraft/01K55X26HBPPWP6RCME1KBPYC1">&quot;I Was There&quot;</Link>
+
+                  </div>
+
                   <div class="mt-4">I’ve been building systems &mdash; digital and human &mdash; for most of my life.</div>
                   <div>But what matters isn’t time.</div>
                   <div>It’s how I built:</div>
