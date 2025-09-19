@@ -30,6 +30,7 @@ jobs:
             rm -rf node_modules public/build
             npm ci
             npm run build
+            npm run build:ssr
             composer update
             pip3 install -r requirements.txt
             php artisan config:clear
@@ -37,5 +38,6 @@ jobs:
             php artisan view:clear
             php artisan migrate --force
             php artisan ziggy:generate
+            pm2 restart inertia-ssr || pm2 start bootstrap/ssr/ssr.js --name inertia-ssr
             echo "✔️ Deployed to rswfire.com: $(date) ($(git rev-parse --short HEAD))"
           EOF

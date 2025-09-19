@@ -245,12 +245,12 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import {Head, Link, usePage} from '@inertiajs/vue3'
+import { Head, Link, usePage } from '@inertiajs/vue3'
 import Header from '@/Components/Menu/Header.vue'
-import MobileNav from '@/Components/Menu/Panel.vue'
-import Ticker from "@/Components/Menu/Ticker.vue";
 import Icon from "@/Components/System/Icon.vue";
 import Lexicon from "@/Components/System/Lexicon.vue";
+import MobileNav from '@/Components/Menu/Panel.vue'
+import Ticker from "@/Components/Menu/Ticker.vue";
 
 defineProps(['metaTitle', 'metaDescription', 'metaKeywords', 'metaUrl'])
 
