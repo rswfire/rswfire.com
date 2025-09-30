@@ -4,7 +4,7 @@
         <div class="flex items-center space-x-2 pb-4 border-b border-transmission-300">
             <Icon name="SatelliteDish" color="text-transmission-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
-                TRANSMISSION VAULT
+                TRANSMISSIONS
             </h2>
         </div>
 

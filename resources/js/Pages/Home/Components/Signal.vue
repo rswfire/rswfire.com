@@ -4,7 +4,7 @@
         <div class="flex items-center space-x-2 pb-4 border-b border-signal-300">
             <Icon name="Activity" color="text-signal-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
-                SIGNAL ARCHIVE
+                SIGNALS
             </h2>
         </div>
 

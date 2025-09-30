@@ -4,7 +4,7 @@
         <div class="flex items-center space-x-2 pb-4 border-b border-honeyman-300">
             <Icon name="TreeDeciduous" color="text-honeyman-400" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
-                HONEYMAN STATE PARK, OREGON STATE PARKS (OPRD)
+                HONEYMAN (OPRD)
             </h2>
         </div>
 

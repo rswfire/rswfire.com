@@ -1,7 +1,7 @@
 <template>
     <div class="rounded-xl bg-stone-50 border border-stone-300 p-4 shadow-sm">
         <h3 class="text-sm font-semibold text-stone-800 uppercase tracking-wide mb-2">
-            Recent Fieldcraft
+            Recent <Link href="/fieldcraft" class="hover:underline">Fieldcraft</Link>
         </h3>
         <ul class="pl-2 space-y-1 text-xs text-stone-900 uppercase">
             <li v-for="entry in entries" :key="entry.content_id">

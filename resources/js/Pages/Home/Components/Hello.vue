@@ -26,15 +26,15 @@
                 </div>
 
                 <!-- Identity Stack -->
-                <div class="pt-4 pl-4 text-xs text-gray-700 space-y-1 text-left self-start">
-                    <div class="uppercase text-rswfire-500 tracking-tight">Fieldholder.</div>
-                    <div class="uppercase text-orange-500 tracking-tight">Signal keeper.</div>
-                    <div class="uppercase text-yellow-500 tracking-tight">Sovereign mind.</div>
-                    <div class="uppercase text-green-500 tracking-tight">Living blueprint.</div>
-                    <div class="uppercase text-blue-500 tracking-tight">Still here.</div>
-                    <div class="uppercase text-purple-500 tracking-tighter">Still unbroken.</div>
-                    <div class="uppercase text-stone-600 tracking-tighter">At the edge &mdash;</div>
-                    <div class="uppercase text-stone-600 tracking-tighter ml-4">of everything.</div>
+                <div class="pt-4 pl-4 text-sm text-gray-700 space-y-1 text-left self-start">
+                    <div class="uppercase text-rswfire-500 tracking-tight">Field Holder.</div>
+                    <div class="uppercase text-orange-500 tracking-tight">Signal Keeper.</div>
+                    <div class="uppercase text-yellow-500 tracking-tight">Sovereign Mind.</div>
+                    <div class="uppercase text-green-500 tracking-tight">Living Blueprint.</div>
+                    <div class="uppercase text-blue-500 tracking-tight">Still Here.</div>
+                    <div class="uppercase text-purple-500 tracking-tighter">Still Unbroken.</div>
+                    <div class="uppercase text-stone-600 tracking-tighter">At the Edge &mdash;</div>
+                    <div class="uppercase text-stone-600 tracking-tighter ml-4">of Everything.</div>
                 </div>
             </div>
 
