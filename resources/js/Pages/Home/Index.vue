@@ -2,11 +2,9 @@
 
     <section id="home-index" class="pb-0">
 
-        <TransmissionRecentCard :transmissions="transmissions" />
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <div class="mt-6 md:col-span-2 flex flex-col">
+            <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
                     <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6" />
                     <HelloCard class="mb-6 sm:mb-6" />
@@ -15,7 +13,7 @@
                 </div>
             </div>
 
-            <div class="mt-6 md:col-span-1">
+            <div class="md:col-span-1">
                 <div class="flex flex-col">
                     <CompanionCard class="hidden md:block" />
                     <CodexCard class="mt-0 md:mt-6" />
@@ -23,6 +21,8 @@
             </div>
 
         </div>
+
+        <TransmissionRecentCard class="mt-6" :transmissions="transmissions" />
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
             <SignalCard />

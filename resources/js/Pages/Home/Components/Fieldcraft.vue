@@ -4,7 +4,7 @@
         <div class="flex items-center space-x-2 pb-4 border-b border-fieldcraft-300">
             <Icon name="Map" color="text-fieldcraft-500" class="flex-shrink-0" />
             <h2 class="text-xl font-semibold tracking-tight">
-                FIELDCRAFT BLOG
+                FIELDCRAFT
             </h2>
         </div>
 

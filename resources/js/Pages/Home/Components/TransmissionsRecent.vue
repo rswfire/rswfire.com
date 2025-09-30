@@ -5,7 +5,7 @@
             Recent <Link href="/transmission" class="hover:underline">Transmissions</Link>
         </h3>
 
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mt-4 px-6 pb-4 pt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
                 v-for="transmission in transmissions.data"
                 :key="transmission.signal_id"
