@@ -1,35 +1,102 @@
 <template>
 
     <Content :theme="pageTheme">
-        <div class="border border-gray-200 shadow-sm rounded-md overflow-hidden">
-            <div class="bg-gray-100 px-4 py-2 font-semibold">
-                <div class="flex justify-between text-md">
-                    <div v-if="previous">
-                        <Link :href="`/transmission/${previous.signal_ulid}`" class="hover:text-black hover:underline">
-                            ← Previous Video
+
+        <Hero
+            :title="transmission.signal_ulid || 'Untitled Transmission'"
+            :subtitle="formatDate(transmission?.stamp_created) || 'NULL'"
+            meta="TRANSMISSION"
+            :theme="pageTheme"
+            align="center"
+        />
+
+
+        <div class="mt-6">
+            <Link
+                href="/transmission"
+                class="inline-flex items-center gap-1 text-[11px] uppercase tracking-wide text-gray-500 hover:text-black"
+            >
+                ← Return to Archive
+            </Link>
+        </div>
+
+        <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+
+            <!-- Compact thumbnail pager -->
+            <div class="bg-gray-100 px-4 pb-2">
+                <div class="flex items-center justify-between gap-4">
+                    <!-- Previous -->
+                    <div v-if="previous" class="w-32 sm:w-40">
+                        <Link :href="`/transmission/${previous.signal_ulid}`" class="block group">
+                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow transition">
+                                <img
+                                    :src="previous.signal_metadata?.youtube?.thumbnail"
+                                    alt="Previous thumbnail"
+                                    class="w-full aspect-video object-cover"
+                                    loading="lazy"
+                                />
+                                <div class="px-2 py-1 text-[10px] text-gray-600 group-hover:text-black">
+                                    ← Previous
+                                </div>
+                            </div>
                         </Link>
                     </div>
-                    <div v-else></div>
-                    <Link href="/transmission" class="hover:text-black hover:underline">[ Return to Archive ]</Link>
-                    <div v-if="next">
-                        <Link :href="`/transmission/${next.signal_ulid}`" class="hover:text-black hover:underline">
-                            Next Video →
+                    <div v-else class="w-32 sm:w-40"></div>
+
+                    <div class="flex-1">
+                        <div class="rounded-md overflow-hidden bg-white border">
+                            <div :class="playerClass">
+                                <YoutubePlayer :video-id="transmission.signal_metadata.youtube.id" :is-portrait="effectiveIsPortrait" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next -->
+                    <div v-if="next" class="w-32 sm:w-40">
+                        <Link :href="`/transmission/${next.signal_ulid}`" class="block group">
+                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                                <img
+                                    :src="next.signal_metadata?.youtube?.thumbnail"
+                                    alt="Next thumbnail"
+                                    class="w-full aspect-video object-cover"
+                                />
+                                <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 text-right group-hover:text-black">
+                                    Next →
+                                </div>
+                            </div>
                         </Link>
                     </div>
-                    <div v-else></div>
+                    <div v-else class="w-32 sm:w-40"></div>
                 </div>
             </div>
+
+            <template v-if="reflection?.narrative?.reflection_content">
+                <div class="m-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    <div class="bg-gray-50 border rounded-md p-2">
+                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Energetic Signature</div>
+                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.energetic_signature }}</div>
+                    </div>
+                    <div class="bg-gray-50 border rounded-md p-2">
+                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Alignment Vector</div>
+                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.alignment_vector }}</div>
+                    </div>
+                    <div class="bg-gray-50 border rounded-md p-2">
+                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Field Phase</div>
+                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.field_phase }}</div>
+                    </div>
+                </div>
+            </template>
+
+            <TimelineFilmstrip :items="timelineItems" :active-ulid="transmission.signal_ulid" />
+
+
+
+
 
             <div class="md:flex md:items-start md:gap-4 p-4">
 
                 <div class="md:w-7/12">
-                    <Hero
-                        :title="transmission.signal_ulid || 'Untitled Transmission'"
-                        :subtitle="reflection?.narrative?.reflection_title || 'No Reflection Found'"
-                        :meta="formatDate(transmission?.stamp_created) || 'NULL'"
-                        :theme="pageTheme"
-                        align="center"
-                    />
+
 
                     <section id="signal-metadata" v-if="reflection.surface">
                         <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Timestamp Context</div>
@@ -41,28 +108,18 @@
                 </div>
 
                 <div class="md:w-5/12 md:mt-0">
-                    <div :class="containerClass">
-                        <YoutubePlayer :video-id="transmission.signal_metadata.youtube.id" :is-portrait="isPortrait" />
-                    </div>
 
-                    <template v-if="reflection.surface">
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Energetic Signature</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.energetic_signature }}</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Alignment Vector</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.alignment_vector }}</div>
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Field Phase</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.field_phase }}</div>
-                    </template>
-
-                    <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
-                    <div class="mt-2 max-h-[20vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
-                        <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
-                            <div v-for="(segment, index) in parsedTranscript" :key="index">
-                                <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
-                                <span>{{ segment.text }}</span>
+                    <template v-if="parsedTranscript.length">
+                        <div class="text-xs uppercase tracking-widest text-gray-500 mt-4">Transcript</div>
+                        <div class="mt-2 max-h-[20vh] overflow-y-auto rounded-md border-y bg-gray-50 text-sm leading-relaxed text-gray-600">
+                            <div class="mt-2 space-y-1 text-sm leading-relaxed text-gray-600">
+                                <div v-for="(segment, index) in parsedTranscript" :key="index">
+                                    <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
+                                    <span>{{ segment.text }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </template>
 
                 </div>
             </div>
@@ -245,7 +302,7 @@
             </ul>
         </div>
         -->
-<pre>{{previous}}</pre>
+
         <div class="mt-4 bg-gray-100 px-4 py-2 font-semibold">
             <div class="flex justify-between text-md">
                 <div v-if="previous">
@@ -270,19 +327,13 @@
 </template>
 
 <script setup>
-import { router } from '@inertiajs/vue3';
-import Content from "@/Components/System/Content.vue";
-import Hero from "@/Components/System/Hero.vue";
-import YoutubePlayer from '@/Components/System/YoutubePlayer.vue';
-import MarkdownIt from 'markdown-it';
-import {computed, ref} from 'vue';
-import { Link } from '@inertiajs/vue3';
-
-const containerClass = computed(() =>
-    props.isPortrait
-        ? 'relative aspect-[9/16] w-full max-w-sm mx-auto'
-        : 'relative aspect-video w-full'
-)
+import { router, Link } from "@inertiajs/vue3"
+import Content from "@/Components/System/Content.vue"
+import Hero from "@/Components/System/Hero.vue"
+import TimelineFilmstrip from "@/Components/System/TimelineFilmstrip.vue"
+import YoutubePlayer from "@/Components/System/YoutubePlayer.vue"
+import MarkdownIt from "markdown-it"
+import { computed, ref, watchEffect } from "vue"
 
 const props = defineProps({
     transmission: Object,
@@ -290,83 +341,203 @@ const props = defineProps({
     next: Object,
     reflection: Object,
     isPortrait: Boolean,
+    timeline: Object,
 })
 
+const timelineItems = computed(() => {
+    // Trust the API’s shape; fall back gracefully
+    const items = Array.isArray(props.timeline?.items) ? props.timeline.items : []
+    return items.map(i => ({
+        ulid: i.ulid,
+        title: i.title || i.ulid,
+        date: i.date,
+        duration: i.duration ?? 0,
+        thumbnail: i.thumbnail || props.transmission?.signal_metadata?.youtube?.thumbnail || ""
+    }))
+})
+
+/**
+ * Derived flags / id
+ */
+const flags = computed(() => props.transmission?.signal_metadata?.flags ?? {})
+const youtubeId = computed(() => props.transmission?.signal_metadata?.youtube?.id ?? "")
+const isPortraitFromSignal = computed(() => {
+    // data shape uses "is_portrait-view"
+    const f = flags.value
+    if (typeof f["is_portrait-view"] === "boolean") return f["is_portrait-view"]
+    if (typeof f["is_portrait-view"] === "number") return f["is_portrait-view"] === 1
+    return undefined
+})
+
+const flagPortrait = computed(() => {
+    const f = flags.value
+    // accept either flag the API may emit
+    if (typeof f["is_portrait"] === "boolean") return f["is_portrait"]
+    if (typeof f["is_portrait"] === "number") return f["is_portrait"] === 1
+    if (typeof f["is_portrait-view"] === "boolean") return f["is_portrait-view"]
+    if (typeof f["is_portrait-view"] === "number") return f["is_portrait-view"] === 1
+    return undefined
+})
+
+const effectiveIsPortrait = computed(() => {
+    // precedence: explicit prop -> flags -> false
+    return (props.isPortrait ?? flagPortrait.value ?? false)
+})
+
+const playerClass = computed(() =>
+    effectiveIsPortrait.value
+        ? "relative aspect-[9/16] w-full max-w-[300px] sm:max-w-[340px] md:max-w-[380px] mx-auto"
+        : "relative aspect-video w-full max-w-[820px] mx-auto"
+)
+
+const containerClass = computed(() =>
+    effectiveIsPortrait.value
+        ? "relative aspect-[9/16] w-full max-w-sm mx-auto"
+        : "relative aspect-video w-full"
+)
+
+/**
+ * Markdown setup
+ * We permit markdown HTML but strip scripts / inline handlers as a minimal sanitizer.
+ */
 const md = new MarkdownIt({
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: true
 })
 
-const tabs = ['Surface', 'Ontological', 'Structural']
-const active = ref('Surface')
+function stripUnsafe(html = "") {
+    if (typeof html !== "string" || html.length === 0) return ""
 
-function renderMarkdown(input) {
-    return md.render(input || "")
+    const container = document.createElement("div")
+    container.innerHTML = html
+
+    // Remove dangerous nodes
+    container.querySelectorAll("script, iframe, object, embed").forEach((el) => el.remove())
+
+    // Strip inline event handlers (onclick, onload, etc.)
+    container.querySelectorAll("*").forEach((el) => {
+        // Copy to array because NamedNodeMap isn't a real array
+        Array.from(el.attributes).forEach((attr) => {
+            if (/^on/i.test(attr.name)) {
+                el.removeAttribute(attr.name)
+            }
+        })
+    })
+
+    return container.innerHTML
 }
 
+function renderMarkdown(input) {
+const raw = md.render(input || "")
+return stripUnsafe(raw)
+}
+
+/**
+* Tabs: choose first available pane based on available data
+*/
+const tabs = ["Surface", "Ontological", "Structural"]
+const active = ref("Surface")
+
+const hasSurface = computed(() => !!props.reflection?.surface?.reflection_content)
+const hasOntological = computed(() => !!props.reflection?.narrative?.reflection_content)
+const hasStructural = computed(() => !!props.transmission)
+
+const availableTabs = computed(() => {
+const t = []
+if (hasSurface.value) t.push("Surface")
+if (hasOntological.value) t.push("Ontological")
+if (hasStructural.value) t.push("Structural")
+return t
+})
+
+// ensure active is always valid
+watchEffect(() => {
+if (!availableTabs.value.includes(active.value)) {
+active.value = availableTabs.value[0] ?? "Structural"
+}
+})
+
+/**
+* Description / Tags
+*/
 const htmlDescription = computed(() => {
-    const input = props.transmission?.signal_description || ''
-    return md.render(input)
+const input = props.transmission?.signal_description || ""
+return renderMarkdown(input)
 })
 
 const parsedTags = computed(() => {
-    try {
-        const raw = props.transmission?.signal_tags
-        const parsed = Array.isArray(raw)
-            ? raw
-            : typeof raw === "string"
-                ? JSON.parse(raw)
-                : []
+try {
+const raw = props.transmission?.signal_tags
+const parsed = Array.isArray(raw)
+? raw
+: typeof raw === "string"
+? JSON.parse(raw)
+: []
 
-        return parsed
-            .filter(tag => typeof tag === "string")
-            .sort((a, b) => a.localeCompare(b))
-            .map(tag => tag.toUpperCase())
-    } catch (e) {
-        return []
-    }
+return parsed
+.filter(tag => typeof tag === "string")
+.sort((a, b) => a.localeCompare(b))
+.map(tag => tag.toUpperCase())
+} catch {
+return []
+}
 })
 
+/**
+* Transcript
+*/
 const parsedTranscript = computed(() => {
-    try {
-        return props.transmission?.signal_payload["timed-transcript"] || [];
-    } catch {
-        return [];
-    }
+try {
+const payload = props.transmission?.signal_payload
+if (!payload || typeof payload !== "object") return []
+const arr = payload["timed-transcript"]
+return Array.isArray(arr) ? arr : []
+} catch {
+return []
+}
 })
 
-const formatTime = (seconds) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+/**
+* Formatting
+*/
+const formatTime = seconds => {
+const mins = Math.floor((Number(seconds) || 0) / 60)
+const secs = Math.floor((Number(seconds) || 0) % 60)
+return `${mins}:${secs.toString().padStart(2, "0")}`
 }
 
-const formatDate = (str) => {
-    const date = new Date(str)
-    return date.toLocaleDateString(undefined, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-    }).toUpperCase()
+const formatDate = str => {
+if (!str) return ""
+const date = new Date(str)
+if (Number.isNaN(date.getTime())) return ""
+return date.toLocaleDateString(undefined, {
+year: "numeric",
+month: "long",
+day: "numeric"
+}).toUpperCase()
 }
 
-const goTo = (path) => {
-    router.visit(`/${path}`)
+const goTo = path => {
+router.visit(`/${path}`)
 }
+
+/**
+* Bullet list helper from newline text
+*/
 function toListArray(raw, bullet = true) {
-    if (!raw || typeof raw !== "string") return []
-
-    return raw
-        .split("\n")                             // real newline split
-        .map(line => {
-            const cleaned = line.trim()
-            return bullet
-                ? cleaned.replace(/^[-•*]+\s*/, "")  // strip bullets if wanted
-                : cleaned
-        })
-        .filter(Boolean)
+if (!raw || typeof raw !== "string") return []
+return raw
+.split("\n")
+.map(line => {
+const cleaned = line.trim()
+return bullet ? cleaned.replace(/^[-•*]+\s*/, "") : cleaned
+})
+.filter(Boolean)
 }
 
-const pageTheme = "transmissions";
+/**
+* Page theme
+*/
+const pageTheme = "transmissions"
 </script>

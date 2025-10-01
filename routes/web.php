@@ -622,11 +622,22 @@ Route::get("/transmission/{id}", function ($id) {
         ? $reflectionResponse->json()
         : null;
 
+    $timelineResponse = Http::get("https://rswfire.online/api/transmission/{$id}/timeline", [
+        "domain" => $domain,
+        "months" => 1,
+        "limit"  => 240,
+    ]);
+    $timeline = $timelineResponse->successful() ? $timelineResponse->json() : ["items" => []];
+
     return Inertia::render("Transmission/Entry", [
         "transmission" => $transmission,
-        "is_portrait" => data_get($transmission, "signal_metadata.flags.is_portrait", false),
-        "previous" => $neighbors["previous"] ?? null,
+        "isPortrait" => (bool) (
+            data_get($transmission, "signal_metadata.flags.is_portrait", false) ??
+            data_get($transmission, "signal_metadata.flags.is_portrait-view", false)
+        ),        "previous" => $neighbors["previous"] ?? null,
         "next" => $neighbors["next"] ?? null,
+        "timeline" => $timeline ?? null,
+
         "reflection" => $reflection,
         "metaTitle" => $transmission["signal_title"] . " (" . date("F d, Y", strtotime($transmission["stamp_created"])) . ") | " . request()->getHost(),
         "metaDescription" => "",
