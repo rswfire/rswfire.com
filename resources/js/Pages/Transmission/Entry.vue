@@ -324,6 +324,65 @@
             </div>
         </div>
 
+        <!-- Tabs wrapper under the video -->
+        <div class="mt-6 px-4">
+            <div class="flex border-b border-gray-300 space-x-6 text-sm">
+                <button
+                    v-for="tab in mainTabs"
+                    :key="tab"
+                    @click="activeMainTab = tab"
+                    :class="[
+                'pb-2',
+                activeMainTab === tab
+                    ? 'border-black border-b-2 font-semibold text-black'
+                    : 'text-gray-400 hover:text-black'
+            ]"
+                >
+                    {{ tab }}
+                </button>
+            </div>
+
+            <!-- Transmission Tab -->
+            <div v-if="activeMainTab === 'Transmission'" class="mt-4">
+                <!-- all your existing post-video content goes here -->
+                <div class="md:flex md:items-start md:gap-4 p-4">
+                    <!-- left column reflections, right column transcript -->
+                    <!-- ... your existing sections ... -->
+                </div>
+
+                <!-- Base Data + The Mirror sections -->
+                <!-- ... your existing sections ... -->
+            </div>
+
+            <!-- Sanctuary Tab -->
+            <div v-else-if="activeMainTab === 'Sanctuary'" class="mt-4 p-4">
+                <h2 class="uppercase text-lg font-bold tracking-widest">Sanctuary</h2>
+                <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                    This is a protected conversational space. Comments live here, not on YouTube.
+                    Distortion will not be allowed.
+                </p>
+
+                <!-- Placeholder for comments system -->
+                <div class="mt-4 border rounded-md bg-white p-4 shadow-sm">
+                    <div class="italic text-gray-500">
+                        Comments will appear here. Threaded conversations will be part of the Sanctuary forum.
+                    </div>
+                </div>
+
+                <!-- Placeholder for share buttons -->
+                <div class="mt-6">
+                    <h4 class="font-semibold text-xs text-gray-500 uppercase mb-2">Share This Transmission</h4>
+                    <div class="flex gap-3">
+                        <button class="px-3 py-1 rounded bg-gray-200 text-xs hover:bg-gray-300">Copy Link</button>
+                        <button class="px-3 py-1 rounded bg-gray-200 text-xs hover:bg-gray-300">Twitter</button>
+                        <button class="px-3 py-1 rounded bg-gray-200 text-xs hover:bg-gray-300">Mastodon</button>
+                        <button class="px-3 py-1 rounded bg-gray-200 text-xs hover:bg-gray-300">Bluesky</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </Content>
 </template>
 
@@ -344,6 +403,9 @@ const props = defineProps({
     isPortrait: Boolean,
     timeline: Object,
 })
+
+const mainTabs = ["Transmission", "Sanctuary"]
+const activeMainTab = ref("Transmission")
 
 const timelineItems = computed(() => {
     // Trust the API’s shape; fall back gracefully
