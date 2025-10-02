@@ -504,10 +504,10 @@ Route::get("/myth", function () {
     ]);
 });
 
-Route::get("/sanctuary", function () {
+Route::get("/sanctum", function () {
 
-    return Inertia::render("Sanctuary", [
-        "metaTitle" => "Sanctuary | ".request()->getHost(),
+    return Inertia::render("Sanctum", [
+        "metaTitle" => "Sanctum | ".request()->getHost(),
         "metaDescription" => "Tools for shared community.",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

@@ -3,7 +3,7 @@
     <Content :theme="pageTheme">
 
         <Hero
-            title="SANCTUARY"
+            title="SANCTUM"
             subtitle="TOOLS FOR SHARED COMMUNITY"
             meta="UNDER CONSTRUCTION"
             :theme="pageTheme"
@@ -26,7 +26,7 @@ import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 
-const pageTheme = "sanctuary";
+const pageTheme = "sanctum";
 
 </script>
 

@@ -5,7 +5,7 @@
         <Hero
             title="CONTRIBUTIONS"
             subtitle="SUPPORT THE CONTINUED SYNTHESIS OF THIS FIELD"
-            meta="WRITING. VIDEO. SOUND. SYSTEMS. SANCTUARY."
+            meta="WRITING. VIDEO. SOUND. SYSTEMS. SANCTUM."
             :theme="pageTheme"
         />
 

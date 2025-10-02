@@ -59,7 +59,7 @@ const themeIcons = [
   { label: "Transmissions", icon: "SatelliteDish",  color: "text-pink-400",    bg: "bg-pink-50",        border: "border-pink-200",        hover: "hover:bg-pink-100",        url: "/transmission" },
   { label: "Fieldcraft",    icon: "Map",            color: "text-green-500",   bg: "bg-green-50",       border: "border-green-200",       hover: "hover:bg-green-100",       url: "/fieldcraft" },
   { label: "Codex",         icon: "SquareCode",     color: "text-amber-400",   bg: "bg-amber-50",       border: "border-amber-200",       hover: "hover:bg-amber-100",       url: "/codex" },
-  { label: "Sanctuary",     icon: "Sprout",         color: "text-teal-400",    bg: "bg-teal-50",        border: "border-teal-200",        hover: "hover:bg-teal-100",        url: "/sanctuary" },
+  { label: "Sanctum",     icon: "Sprout",         color: "text-teal-400",    bg: "bg-teal-50",        border: "border-teal-200",        hover: "hover:bg-teal-100",        url: "/sanctum" },
   { label: "Lexicon",       icon: "SquareLibrary",  color: "text-orange-400",  bg: "bg-orange-50",      border: "border-orange-200",      hover: "hover:bg-orange-100",      url: "/lexicon" },
   { label: "Myth",          icon: "ShieldCheck",    color: "text-yellow-400",  bg: "bg-yellow-50",      border: "border-yellow-200",      hover: "hover:bg-yellow-100",      url: "/myth" },
   { label: "Honeyman",      icon: "TreeDeciduous",  color: "text-emerald-400", bg: "bg-emerald-50",     border: "border-emerald-200",     hover: "hover:bg-emerald-100",     url: "/honeyman" },

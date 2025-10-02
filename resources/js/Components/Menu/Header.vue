@@ -229,14 +229,14 @@ const items = [
   { label: "Who I Am", icon: "Flame", color: "text-red-400", url: "/hello" },
   { label: "What I Do", icon: "Hammer", color: "text-purple-400", url: "/tech" },
   { label: "Myth", icon: "ShieldCheck", color: "text-yellow-400", url: "/myth" },
+  { label: "Sanctum", icon: "Sprout", color: "text-indigo-400", url: "/sanctum" },
   { label: "Fieldcraft", icon: "Map", color: "text-teal-400", url: "/fieldcraft" },
   { label: "Transmissions", icon: "SatelliteDish", color: "text-pink-400", url: "/transmission" },
   { label: "Signals", icon: "Activity", color: "text-sky-400", url: "/signal" },
-  { label: "Sanctuary", icon: "Sprout", color: "text-indigo-400", url: "/sanctuary" },
   { label: "Codex", icon: "SquareCode", color: "text-amber-400", url: "/codex" },
+  { label: "Lexicon", icon: "SquareLibrary", color: "text-orange-400", url: "/lexicon" },
   { label: "Bluewater", icon: "WavesLadder", color: "text-blue-400", url: "/bluewater" },
   { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", url: "/honeyman" },
-  { label: "Lexicon", icon: "SquareLibrary", color: "text-orange-400", url: "/lexicon" },
 ]
 
 const props = defineProps({
