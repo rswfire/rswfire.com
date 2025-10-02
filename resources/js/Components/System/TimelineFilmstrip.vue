@@ -3,11 +3,13 @@
         <!-- Scrollable rail wrapper (mobile-first) -->
         <div
             ref="scrollWrap"
-            class="rounded-md bg-gray-100 border border-gray-200 px-3 py-3"
+            class="rounded-md bg-gray-100 border border-gray-200 py-3 px-2 sm:px-0 hide-scrollbar"
+            :class="isMobile ? 'overflow-x-auto' : 'overflow-x-hidden'"
         >
             <div
                 ref="rail"
-                class="relative h-1 bg-gray-300/70 rounded mx-2 w-full"
+                class="relative h-1 bg-gray-300/70 rounded mx-0"
+                :style="{ width: isMobile ? `${railWidth}px` : '100%' }"
             >
                 <!-- ticks -->
                 <button
@@ -78,18 +80,14 @@ const props = defineProps({
     // [{ ulid, title?, date, duration?, thumbnail?, url? }]
     items: { type: Array, default: () => [] },
     activeUlid: { type: String, default: "" },
-    minGapPx: { type: Number, default: 18 } // minimum pixel separation between ticks
+    minGapPx: { type: Number, default: 18 },
+    mobileScrollable: { type: Boolean, default: true }
 })
 
 /* responsive mode */
 const isMobile = ref(false)
-function setMode() {
-    isMobile.value = window.matchMedia("(max-width: 640px)").matches
-}
-onMounted(() => {
-    setMode()
-    window.addEventListener("resize", setMode)
-})
+function setMode() { isMobile.value = window.matchMedia("(max-width: 640px)").matches }
+onMounted(() => { setMode(); window.addEventListener("resize", setMode) })
 onUnmounted(() => window.removeEventListener("resize", setMode))
 
 /* measure + virtual width with min spacing */
@@ -99,13 +97,17 @@ const viewport = ref(0)
 const railWidth = ref(0)
 
 function measure() {
-    railWidth.value = scrollWrap.value ? scrollWrap.value.clientWidth - 32 : 0
+    const w = scrollWrap.value ? scrollWrap.value.clientWidth : 0
+    if (isMobile.value) {
+        const n = Math.max(1, normalized.value.length - 1)
+        railWidth.value = Math.max(w, n * props.minGapPx + 32)
+    } else {
+        railWidth.value = w  // full width, no gap
+    }
 }
-onMounted(() => {
-    measure()
-    window.addEventListener("resize", measure)
-})
+onMounted(() => { measure(); window.addEventListener("resize", measure) })
 onUnmounted(() => window.removeEventListener("resize", measure))
+watch([() => props.items, isMobile], () => nextTick().then(measure))
 
 /* normalize + time scale */
 const normalized = computed(() => {
@@ -129,24 +131,22 @@ const domain = computed(() => {
     return { min, max }
 })
 
-const innerPad = 16
-const rNormal = 8   // px (matches h-4/w-4)
-const rActive = 10  // px (matches h-5/w-5)
+const MOBILE_INNER_PAD = 16
+const DESKTOP_INNER_PAD = 6  // tighter to edges
+const innerPad = computed(() => (isMobile.value ? MOBILE_INNER_PAD : DESKTOP_INNER_PAD))
+const rNormal = 8
+const rActive = 10
 
 const ticks = computed(() => {
-    const span = domain.value.max - domain.value.min
-    const usable = Math.max(1, railWidth.value - innerPad * 2)
+    const span = domain.value.max - domain.value.min || 1
+    const usable = Math.max(1, railWidth.value - innerPad.value * 2)
 
     return normalized.value.map(n => {
-        const ratio = (n.date.getTime() - domain.value.min) / (domain.value.max - domain.value.min || 1)
-        const xRaw = innerPad + ratio * usable
-
+        const ratio = (n.date.getTime() - domain.value.min) / span
+        const xRaw = innerPad.value + ratio * usable
         const isActive = n.ulid === props.activeUlid
         const r = isActive ? rActive : rNormal
-
-        // clamp the dot CENTER, then we still center the element with -translate-x-1/2
-        const x = Math.min(Math.max(xRaw, innerPad + r), railWidth.value - innerPad - r)
-
+        const x = Math.min(Math.max(xRaw, innerPad.value + r), railWidth.value - innerPad.value - r)
         return { ...n, x }
     })
 })
@@ -295,4 +295,11 @@ function escapeHtml(s) {
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 .scrollbar-thin::-webkit-scrollbar { height: 6px; }
 .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(0,0,0,.2); border-radius: 9999px; }
+.hide-scrollbar {
+    -ms-overflow-style: none;      /* IE/Edge */
+    scrollbar-width: none;         /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;                 /* Chrome/Safari */
+}
 </style>

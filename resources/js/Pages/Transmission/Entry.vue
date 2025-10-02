@@ -20,78 +20,79 @@
             </Link>
         </div>
 
-        <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden">
+        <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden bg-gray-100">
 
-            <!-- Compact thumbnail pager -->
-            <div class="bg-gray-100 px-4 pb-2">
-                <div class="flex items-center justify-between gap-4">
-                    <!-- Previous -->
-                    <div v-if="previous" class="w-32 sm:w-40">
-                        <Link :href="`/transmission/${previous.signal_ulid}`" class="block group">
-                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow transition">
-                                <img
-                                    :src="previous.signal_metadata?.youtube?.thumbnail"
-                                    alt="Previous thumbnail"
-                                    class="w-full aspect-video object-cover"
-                                    loading="lazy"
-                                />
-                                <div class="px-2 py-1 text-[10px] text-gray-600 group-hover:text-black">
-                                    ← Previous
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div v-else class="w-32 sm:w-40"></div>
+            <!-- Pager + Player (mobile stacked 50/50; desktop 3-col w/ true vertical centering) -->
+            <div class="px-4 pb-2">
+                <div class="grid gap-3 grid-cols-2 sm:grid-cols-[auto,1fr,auto] sm:gap-4 sm:items-stretch">
 
-                    <div class="flex-1">
-                        <div class="rounded-md overflow-hidden bg-white border">
-                            <div :class="playerClass">
-                                <YoutubePlayer :video-id="transmission.signal_metadata.youtube.id" :is-portrait="effectiveIsPortrait" />
-                            </div>
+                    <!-- PLAYER -->
+                    <div
+                        class="col-span-2 sm:col-span-1
+             order-1 sm:order-2"
+                    >
+                    <div class="rounded-md overflow-hidden bg-white border">
+                        <div :class="playerClass">
+                            <YoutubePlayer
+                                :video-id="transmission.signal_metadata.youtube.id"
+                                :is-portrait="effectiveIsPortrait"
+                            />
                         </div>
                     </div>
-
-                    <!-- Next -->
-                    <div v-if="next" class="w-32 sm:w-40">
-                        <Link :href="`/transmission/${next.signal_ulid}`" class="block group">
-                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
-                                <img
-                                    :src="next.signal_metadata?.youtube?.thumbnail"
-                                    alt="Next thumbnail"
-                                    class="w-full aspect-video object-cover"
-                                />
-                                <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 text-right group-hover:text-black">
-                                    Next →
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div v-else class="w-32 sm:w-40"></div>
                 </div>
+
+                <!-- PREVIOUS (left) -->
+                <div
+                    v-if="previous"
+                    class="col-span-1 w-full sm:w-40
+             order-2 sm:order-1           <!-- ⟵ goes before player on desktop -->
+             sm:h-full sm:flex sm:items-center"
+                >
+                    <Link :href="`/transmission/${previous.signal_ulid}`" class="block group w-full">
+                        <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                            <img :src="previous.signal_metadata?.youtube?.thumbnail" alt="Previous thumbnail"
+                                 class="w-full aspect-video object-cover" loading="lazy" />
+                            <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 group-hover:text-black">← Previous</div>
+                        </div>
+                    </Link>
+                </div>
+                <div v-else class="col-span-1 w-full sm:w-40 order-2 sm:order-1"></div>
+
+                <!-- NEXT (right) -->
+                <div
+                    v-if="next"
+                    class="col-span-1 w-full sm:w-40
+             order-3 sm:order-3           <!-- ⟵ remains 3rd on desktop -->
+             sm:h-full sm:flex sm:items-center sm:justify-end"
+                >
+                    <Link :href="`/transmission/${next.signal_ulid}`" class="block group w-full">
+                        <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                            <img :src="next.signal_metadata?.youtube?.thumbnail" alt="Next thumbnail"
+                                 class="w-full aspect-video object-cover" />
+                            <div class="px-2 py-1 text-[10px] sm:text-xs text-right text-gray-600 group-hover:text-black">Next →</div>
+                        </div>
+                    </Link>
+                </div>
+                <div v-else class="col-span-1 w-full sm:w-40 order-3 sm:order-3"></div>
             </div>
+        </div>
 
-            <template v-if="reflection?.narrative?.reflection_content">
-                <div class="m-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <div class="bg-gray-50 border rounded-md p-2">
-                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Energetic Signature</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.energetic_signature }}</div>
-                    </div>
-                    <div class="bg-gray-50 border rounded-md p-2">
-                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Alignment Vector</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.alignment_vector }}</div>
-                    </div>
-                    <div class="bg-gray-50 border rounded-md p-2">
-                        <div class="text-[11px] uppercase tracking-widest text-gray-500">Field Phase</div>
-                        <div class="text-sm">→ {{ reflection.narrative.reflection_content.field_phase }}</div>
-                    </div>
-                </div>
-            </template>
-
-            <TimelineFilmstrip :items="timelineItems" :active-ulid="transmission.signal_ulid" />
+        <!-- Timeline stays exactly as you had it -->
+        <div class="px-4 pb-3">
+            <TimelineFilmstrip
+                :items="timelineItems"
+                :active-ulid="transmission.signal_ulid"
+                :mobile-scrollable="true"
+            />
+        </div>
 
 
 
 
+
+        </div>
+
+        <div>
 
             <div class="md:flex md:items-start md:gap-4 p-4">
 
@@ -381,7 +382,7 @@ const flagPortrait = computed(() => {
 
 const effectiveIsPortrait = computed(() => {
     // precedence: explicit prop -> flags -> false
-    return (props.isPortrait ?? flagPortrait.value ?? false)
+    return (flagPortrait.value ?? false)
 })
 
 const playerClass = computed(() =>
