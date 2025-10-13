@@ -28,6 +28,20 @@
                             <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
                         </div>
 
+                        <div v-if="reflection.surface.reflection_content.topic_timestamps?.length">
+                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Topic Timestamps</h3>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="(item, index) in reflection.surface.reflection_content.topic_timestamps"
+                                    :key="index"
+                                    class="flex items-start gap-3 text-sm"
+                                >
+                                    <span class="font-mono text-gray-500 text-xs">[{{ item.timestamp }}]</span>
+                                    <span class="text-gray-800">{{ item.topic }}</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div>
                             <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Timestamp Context</h3>
                             <div class="text-sm text-gray-700">{{ reflection.surface.reflection_content.timestamp_context }}</div>
@@ -159,8 +173,15 @@
 
                 <!-- Mirror Tab -->
                 <div v-else-if="activeTab === 'mirror' && reflection?.mirror" class="max-w-4xl">
-                    <div class="prose prose-sm max-w-none text-gray-800 leading-relaxed">
-                        {{ reflection.mirror.reflection_content.mirror_response }}
+                    <div class="grid grid-cols-1 gap-4">
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Direct</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)" />
+
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Recognition</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)" />
+
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Becoming</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)" />
                     </div>
                 </div>
 
@@ -200,10 +221,10 @@
                     </div>
 
                     <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Recurring Motifs</h4>
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Dominant Language</h4>
                         <div class="flex flex-wrap gap-2">
               <span
-                  v-for="motif in reflection.patterns.reflection_content.recurring_motifs"
+                  v-for="motif in reflection.patterns.reflection_content.dominant_language"
                   :key="motif"
                   class="bg-amber-100 px-3 py-1 rounded-full text-xs text-amber-700"
               >
@@ -233,7 +254,7 @@ const props = defineProps({
     formatTime: Function,
     toListArray: Function
 })
-console.log('Reflection data:', props.reflection)
+
 const reflectionTabs = [
     { key: 'surface', label: 'Surface', locked: false },
     { key: 'structure', label: 'Structure', locked: false },
