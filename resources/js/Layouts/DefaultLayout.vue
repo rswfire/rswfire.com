@@ -266,7 +266,7 @@ const itemsField = [
 ]
 
 const itemsSignal = [
-  { label: "SANCTUM",       icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctum",    blurb: "Relational space. Signal coherence in human form." },
+  { label: "SANCTUM",       icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctum",    blurb: "Relational space. Subscription service." },
   { label: "FIELDCRAFT",    icon: "Map",           color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/fieldcraft",   blurb: "Real-time documentation of lived practice." },
   { label: "TRANSMISSIONS", icon: "SatelliteDish", color: "text-pink-400",   bg: "bg-pink-50",   border: "border-pink-200",   hover: "hover:bg-pink-100",   url: "/transmission", blurb: "Uncompressed signal. First-language dispatches." },
   { label: "SIGNALS",       icon: "Activity",      color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/signal",       blurb: "Anchored expressions. Durable signal after resonance." },

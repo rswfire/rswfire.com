@@ -63,7 +63,7 @@ Route::get("/", function () {
     $page = request()->get("page", 1);
     $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
 
-    $response = Http::get("https://rswfire.online/api/transmissions", [
+    $response = Http::get(env("API_DOMAIN")."/api/transmissions", [
         "domain" => $domain,
         "page" => $page,
         "perPage" => 3,
@@ -568,7 +568,7 @@ Route::get("/transmission", function () {
     $page = request()->get("page", 1);
     $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
 
-    $response = Http::get("https://rswfire.online/api/transmissions", [
+    $response = Http::get(env("API_DOMAIN")."/api/transmissions", [
         "domain" => $domain,
         "page" => $page,
         "perPage" => 24,
@@ -591,7 +591,7 @@ Route::get("/transmission", function () {
 Route::get("/transmission/{id}", function ($id) {
     $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
 
-    $transmissionResponse = Http::get("https://rswfire.online/api/transmission/{$id}", [
+    $transmissionResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}", [
         "domain" => $domain,
     ]);
 
@@ -606,7 +606,7 @@ Route::get("/transmission/{id}", function ($id) {
         abort(404, "Transmission not found.");
     }
 
-    $navResponse = Http::get("https://rswfire.online/api/transmission/{$id}/neighbors", [
+    $navResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}/neighbors", [
         "domain" => $domain,
     ]);
 
@@ -616,13 +616,13 @@ Route::get("/transmission/{id}", function ($id) {
 
     $neighbors = $navResponse->json();
 
-      $reflectionResponse = Http::get("https://rswfire.online/api/reflection/{$id}");
+      $reflectionResponse = Http::get(env("API_DOMAIN")."/api/reflection/{$id}");
 
     $reflection = $reflectionResponse->successful()
         ? $reflectionResponse->json()
         : null;
 
-    $timelineResponse = Http::get("https://rswfire.online/api/transmission/{$id}/timeline", [
+    $timelineResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}/timeline", [
         "domain" => $domain,
         "months" => 1,
         "limit"  => 240,
