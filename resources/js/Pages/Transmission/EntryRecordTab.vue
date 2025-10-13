@@ -174,14 +174,14 @@
                 <!-- Mirror Tab -->
                 <div v-else-if="activeTab === 'mirror' && reflection?.mirror" class="max-w-4xl">
                     <div class="grid grid-cols-1 gap-4">
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Direct</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)" />
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Direct</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)" />
 
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Recognition</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)" />
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Recognition</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)" />
 
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Becoming</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)" />
+                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Becoming</h4>
+                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)" />
                     </div>
                 </div>
 
