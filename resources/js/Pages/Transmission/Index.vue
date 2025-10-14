@@ -35,7 +35,8 @@
                 v-for="transmission in transmissions.data"
                 :key="transmission.signal_id"
                 @click="goTo(transmission.signal_ulid)"
-                class="group cursor-pointer rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
+                class="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
+                :class="transmission.structure_visibility === 'sanctum' ? 'bg-amber-50' : 'bg-white'"
             >
 
                 <div class="aspect-w-16 aspect-h-9 bg-gray-100">
@@ -47,14 +48,15 @@
                 </div>
 
                 <div class="p-4 space-y-3">
-                    <div class="">
-                        <h2 class="text-md font-semibold leading-tighter text-gray-900 group-hover:text-black truncate">
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black truncate flex-1">
                             {{ transmission.structure_title || transmission.signal_ulid }}
                         </h2>
-                        <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
-                            {{ transmission.signal_ulid }}
-                        </h3>
+                        <span v-if="transmission.structure_visibility === 'sanctum'" class="text-sm flex-shrink-0">🔒</span>
                     </div>
+                    <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
+                        {{ transmission.signal_ulid }}
+                    </h3>
                     <p class="text-sm text-gray-600 line-clamp-3">
                         {{ transmission.timestamp_context || 'No context available' }}
                     </p>
