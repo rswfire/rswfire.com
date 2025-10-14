@@ -4,7 +4,7 @@
         <Hero
             title="TRANSMISSIONS"
             subtitle="A LIVING LOG OF EMBODIED EXPRESSION"
-            meta="700+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
+            meta="800+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
             :theme="pageTheme"
         />
 
@@ -18,12 +18,12 @@
                 <div>There is no summary to soften the entry.</div>
                 <div>There is no title that reveals what it means.</div>
 
-                <div>700+ transmissions &mdash;</div>
+                <div>800+ transmissions &mdash;</div>
                 <div class="ml-4">recorded across years of radical self-honesty.</div>
                 <div>This is not a catalog.</div>
                 <div class="ml-4">It is evidence of <em>coherence under pressure</em>.</div>
-                <div>You’re not here to watch.</div>
-                <div>You’re here to feel it move through you.</div>
+                <div>You're not here to watch.</div>
+                <div>You're here to feel it move through you.</div>
 
             </div>
         </section>
@@ -41,50 +41,69 @@
                 <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                     <img
                         :src="transmission.signal_metadata.youtube.thumbnail"
-                        :alt="transmission.signal_title"
+                        :alt="transmission.signal_ulid"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                     />
                 </div>
 
-                <div class="p-4 space-y-1">
-                    <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black line-clamp-2">
-                        {{ transmission.signal_title }}
+                <div class="p-4 space-y-3">
+                    <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
+                        {{ transmission.signal_ulid }}
                     </h2>
-                    <p class="text-sm text-gray-500 clamp-responsive">
-                        {{ transmission.signal_description }}
+
+                    <p class="text-sm text-gray-600 line-clamp-3">
+                        {{ transmission.timestamp_context || 'No context available' }}
                     </p>
 
-                    <div v-if="getSurfaceTags(transmission).length" class="pt-2">
-                        <div class="text-xs uppercase font-semibold text-gray-500 tracking-wide">
-                            Surface Tags <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B-surface</span>
+                    <!-- Symbolic Elements -->
+                    <div v-if="transmission.symbolic_elements?.length" class="space-y-1">
+                        <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
+                            Symbolic Elements
                         </div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <span
-                                v-for="tag in getSurfaceTags(transmission)"
-                                :key="tag"
-                                class="text-xs px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full"
-                            >
-                              {{ tag }}
-                            </span>
-                        </div>
-                    </div>
-
-                    <div v-if="getOntologicalTags(transmission).length" class="pt-2">
-                        <div class="text-xs uppercase font-semibold text-gray-500 tracking-wide">
-                            Symbolic Elements <span class="ml-2 text-gray-400 font-normal">LLAMA3:70B-narrative</span>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mt-1">
-                            <span
-                                v-for="tag in getOntologicalTags(transmission)"
-                                :key="tag"
-                                class="text-xs px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full"
-                            >
-                              {{ tag }}
-                            </span>
+                        <div class="flex gap-1.5 overflow-x-auto scrollbar-hide">
+            <span
+                v-for="element in transmission.symbolic_elements"
+                :key="element"
+                class="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full whitespace-nowrap flex-shrink-0"
+            >
+              {{ element }}
+            </span>
                         </div>
                     </div>
 
-                    <div class="text-xs text-gray-400 flex justify-between pt-2">
+                    <!-- Ontological States -->
+                    <div v-if="transmission.ontological_states?.length" class="space-y-1">
+                        <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
+                            Ontological States
+                        </div>
+                        <div class="flex gap-1.5 overflow-x-auto scrollbar-hide">
+            <span
+                v-for="state in transmission.ontological_states"
+                :key="state"
+                class="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded-full whitespace-nowrap flex-shrink-0"
+            >
+              {{ state }}
+            </span>
+                        </div>
+                    </div>
+
+                    <!-- Engaged Subsystems -->
+                    <div v-if="transmission.engaged_subsystems?.length" class="space-y-1">
+                        <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
+                            Engaged Subsystems
+                        </div>
+                        <div class="flex gap-1.5 overflow-x-auto scrollbar-hide">
+            <span
+                v-for="subsystem in transmission.engaged_subsystems"
+                :key="subsystem"
+                class="text-xs px-2 py-0.5 bg-green-100 text-green-700 rounded-full whitespace-nowrap flex-shrink-0"
+            >
+              {{ subsystem }}
+            </span>
+                        </div>
+                    </div>
+
+                    <div class="text-xs text-gray-400 flex justify-between pt-2 border-t border-gray-100">
                         <span>{{ formatDate(transmission.stamp_created) }}</span>
                         <span>{{ formatDuration(transmission.signal_metadata.duration) }}</span>
                     </div>
@@ -101,7 +120,6 @@
 
 <script setup>
 import { router } from '@inertiajs/vue3'
-import {computed, ref} from 'vue'
 import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import Pagination from '@/Components/System/Pagination.vue'
@@ -110,25 +128,6 @@ defineProps({
     transmissions: Object
 })
 
-const getOntologicalTags = (transmission) => {
-    try {
-        const content = JSON.parse(transmission.reflection_narrative?.reflection_content || "{}")
-        return content.symbolic_elements || []
-    } catch (e) {
-        return []
-    }
-}
-
-const getSurfaceTags = (transmission) => {
-    try {
-        const content = JSON.parse(transmission.reflection_surface?.reflection_content || "{}")
-        return content.tags || []
-    } catch (e) {
-        return []
-    }
-}
-
-const expanded = ref(false)
 const goTo = (id) => {
     router.visit(`/transmission/${id}`)
 }
@@ -153,23 +152,12 @@ const pageTheme = "transmissions";
 </script>
 
 <style>
-.clamp-responsive {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-@media (max-width: 640px) {
-    .clamp-responsive {
-        -webkit-line-clamp: 5;
-    }
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
-
-@media (min-width: 641px) {
-    .clamp-responsive {
-        -webkit-line-clamp: 7;
-    }
-}
-
 </style>
