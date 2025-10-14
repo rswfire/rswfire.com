@@ -47,10 +47,14 @@
                 </div>
 
                 <div class="p-4 space-y-3">
-                    <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
-                        {{ transmission.signal_ulid }}
-                    </h2>
-
+                    <div class="">
+                        <h2 class="text-md font-semibold leading-tighter text-gray-900 group-hover:text-black truncate">
+                            {{ transmission.structure_title || transmission.signal_ulid }}
+                        </h2>
+                        <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
+                            {{ transmission.signal_ulid }}
+                        </h3>
+                    </div>
                     <p class="text-sm text-gray-600 line-clamp-3">
                         {{ transmission.timestamp_context || 'No context available' }}
                     </p>
@@ -61,13 +65,13 @@
                             Symbolic Elements
                         </div>
                         <div class="flex gap-1.5 overflow-x-auto scrollbar-hide">
-            <span
-                v-for="element in transmission.symbolic_elements"
-                :key="element"
-                class="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full whitespace-nowrap flex-shrink-0"
-            >
-              {{ element }}
-            </span>
+                            <span
+                                v-for="element in transmission.symbolic_elements"
+                                :key="element"
+                                class="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full whitespace-nowrap flex-shrink-0"
+                            >
+                              {{ element }}
+                            </span>
                         </div>
                     </div>
 
@@ -77,13 +81,13 @@
                             Ontological States
                         </div>
                         <div class="flex gap-1.5 overflow-x-auto scrollbar-hide">
-            <span
-                v-for="state in transmission.ontological_states"
-                :key="state"
-                class="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded-full whitespace-nowrap flex-shrink-0"
-            >
-              {{ state }}
-            </span>
+                            <span
+                                v-for="state in transmission.ontological_states"
+                                :key="state"
+                                class="text-xs px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded-full whitespace-nowrap flex-shrink-0"
+                            >
+                              {{ state }}
+                            </span>
                         </div>
                     </div>
 
