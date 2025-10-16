@@ -75,7 +75,7 @@
 
       </div>
 
-      <div class="mt-8">
+      <div class="mt-6">
         <EntryRecordTab
             v-if="activeMainTab === 'Transmission'"
             :transmission="transmission"

@@ -3,13 +3,13 @@
 
         <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden bg-gray-100">
 
-            <div class="px-4">
-                <div class="grid gap-3 grid-cols-2 sm:grid-cols-[auto,1fr,auto] sm:gap-4 sm:items-stretch">
+            <div class="p-4">
+                <div class="flex flex-col lg:flex-row gap-4 items-stretch">
 
-                    <div
-                        class="col-span-2 sm:col-span-1
-             order-1 sm:order-2"
-                    >
+                    <!-- LEFT: Video + thumbnails -->
+                    <div class="flex flex-col w-full lg:w-2/3" ref="videoColumn">
+
+                        <!-- Main video -->
                         <div class="rounded-md overflow-hidden bg-white border">
                             <div :class="playerClass">
                                 <YoutubePlayer
@@ -18,54 +18,82 @@
                                 />
                             </div>
                         </div>
+
+                        <!-- Thumbnails row -->
+                        <div class="mt-3 flex justify-between w-full">
+                            <!-- Previous -->
+                            <div v-if="previous" class="w-40">
+                                <Link :href="`/transmission/${previous.signal_ulid}`" class="block group w-full">
+                                    <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                                        <img
+                                            :src="previous.signal_metadata?.youtube?.thumbnail"
+                                            alt="Previous thumbnail"
+                                            class="w-full aspect-video object-cover"
+                                            loading="lazy"
+                                        />
+                                        <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 group-hover:text-black">
+                                            ← Previous
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+
+                            <!-- Spacer keeps the thumbnails at video edges -->
+                            <div class="flex-1"></div>
+
+                            <!-- Next -->
+                            <div v-if="next" class="w-40 text-right">
+                                <Link :href="`/transmission/${next.signal_ulid}`" class="block group w-full">
+                                    <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                                        <img
+                                            :src="next.signal_metadata?.youtube?.thumbnail"
+                                            alt="Next thumbnail"
+                                            class="w-full aspect-video object-cover"
+                                        />
+                                        <div class="px-2 py-1 text-[10px] sm:text-xs text-right text-gray-600 group-hover:text-black">
+                                            Next →
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block border-l border-gray-200/70"></div>
+                    <!-- RIGHT: Transcript -->
+                    <div
+                        v-if="mergedTranscript.length"
+                        class="w-full lg:w-1/3 rounded-md border bg-gray-50 p-3 overflow-y-auto flex-1"
+                        :style="{ maxHeight: videoColumnHeight + 'px' }"
+                    >
+                        <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transcript</h3>
+                        <div class="space-y-1 text-sm leading-relaxed text-gray-700">
+                            <template v-for="(item, index) in mergedTranscript" :key="index">
+                                <div v-if="item.type === 'topic'" class="pt-2 text-indigo-600 font-semibold text-[12px] uppercase">
+                                    {{ item.text }}
+                                </div>
+                                <div v-else>
+                                    <span class="text-gray-400 mr-2">[{{ formatTime(item.time) }}]</span>
+                                    <span>{{ item.text }}</span>
+                                </div>
+                            </template>
+                        </div>
                     </div>
 
-                    <div
-                        v-if="previous"
-                        class="col-span-1 w-full sm:w-40
-             order-2 sm:order-1
-             sm:h-full sm:flex sm:items-center"
-                    >
-                        <Link :href="`/transmission/${previous.signal_ulid}`" class="block group w-full">
-                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
-                                <img :src="previous.signal_metadata?.youtube?.thumbnail" alt="Previous thumbnail"
-                                     class="w-full aspect-video object-cover" loading="lazy" />
-                                <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 group-hover:text-black">← Previous</div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div v-else class="col-span-1 w-full sm:w-40 order-2 sm:order-1"></div>
-
-                    <div
-                        v-if="next"
-                        class="col-span-1 w-full sm:w-40
-             order-3 sm:order-3
-             sm:h-full sm:flex sm:items-center sm:justify-end"
-                    >
-                        <Link :href="`/transmission/${next.signal_ulid}`" class="block group w-full">
-                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
-                                <img :src="next.signal_metadata?.youtube?.thumbnail" alt="Next thumbnail"
-                                     class="w-full aspect-video object-cover" />
-                                <div class="px-2 py-1 text-[10px] sm:text-xs text-right text-gray-600 group-hover:text-black">Next →</div>
-                            </div>
-                        </Link>
-                    </div>
-                    <div v-else class="col-span-1 w-full sm:w-40 order-3 sm:order-3"></div>
                 </div>
             </div>
 
-            <div class="m-4 mb-2">
+
                 <TimelineFilmstrip
                     :items="timelineItems"
                     :active-ulid="transmission.signal_ulid"
                     :mobile-scrollable="true"
                 />
-            </div>
+
 
         </div>
 
         <!-- Reflection Tabs -->
-        <div class="p-4">
+        <div class="pt-6">
             <div class="flex border-b border-gray-300 space-x-6 text-sm">
                 <button
                     v-for="tab in reflectionTabs"
@@ -308,10 +336,37 @@
             </div>
         </div>
     </div>
+
+    <div class="md:w-5/12 mt-6 md:mt-0">
+        <template v-if="mergedTranscript.length">
+            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transcript</h3>
+
+            <div class="max-h-[60vh] overflow-y-auto rounded-md border bg-gray-50 p-3">
+                <div class="space-y-1 text-sm leading-relaxed text-gray-600">
+                    <template v-for="(item, index) in mergedTranscript" :key="index">
+
+                        <!-- Topic label -->
+                        <div v-if="item.type === 'topic'" class="pt-2 text-indigo-600 font-semibold">
+                            TOPIC – {{ item.text }}
+                        </div>
+
+                        <!-- Transcript line -->
+                        <div v-else>
+                            <span class="text-gray-400 mr-2">[{{ formatTime(item.time) }}]</span>
+                            <span>{{ item.text }}</span>
+                        </div>
+
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+
+
 </template>
 
 <script setup>
-import {computed, ref, watchEffect} from 'vue'
+import {computed, onMounted, ref, nextTick, watchEffect} from 'vue'
 import MarkdownIt from 'markdown-it'
 import {Link, router} from "@inertiajs/vue3";
 import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
@@ -510,5 +565,88 @@ const activeTab = ref('surface')
             .filter(Boolean)
     }
 
+const mergedTranscript = computed(() => {
+    const transcript = parsedTranscript.value
+    const topics = props.reflection.surface?.reflection_content?.topic_timestamps || []
+
+    if (!transcript.length) return []
+
+    // Normalize transcript times to seconds
+    const normalizedTranscript = transcript.map(seg => ({
+        ...seg,
+        time: Number(seg.start), // already in seconds typically
+    }))
+
+    // Normalize topic timestamps like "00:00:07" → 7
+    const normalizedTopics = topics.map(t => {
+        const match = t.timestamp.match(/(\d+):(\d+):(\d+)/) || t.timestamp.match(/(\d+):(\d+)/)
+        if (!match) return null
+
+        let totalSeconds = 0
+        if (match.length === 4) {
+            // format hh:mm:ss
+            totalSeconds = parseInt(match[1]) * 3600 + parseInt(match[2]) * 60 + parseInt(match[3])
+        } else if (match.length === 3) {
+            // format mm:ss
+            totalSeconds = parseInt(match[1]) * 60 + parseInt(match[2])
+        }
+        return { time: totalSeconds, topic: t.topic }
+    }).filter(Boolean)
+
+    // Sort topics just in case they’re not sequential
+    normalizedTopics.sort((a, b) => a.time - b.time)
+
+    const result = []
+    let currentTopicIndex = 0
+
+    for (const seg of normalizedTranscript) {
+        const segTime = seg.time
+
+        // If current segment is at or beyond a topic mark, insert all due topics
+        while (
+            currentTopicIndex < normalizedTopics.length &&
+            segTime >= normalizedTopics[currentTopicIndex].time
+            ) {
+            result.push({
+                type: 'topic',
+                text: normalizedTopics[currentTopicIndex].topic,
+                time: normalizedTopics[currentTopicIndex].time,
+            })
+            currentTopicIndex++
+        }
+
+        result.push({
+            type: 'line',
+            time: seg.time,
+            text: seg.text,
+        })
+    }
+
+    // Add any remaining topics (in case transcript ends early)
+    while (currentTopicIndex < normalizedTopics.length) {
+        result.push({
+            type: 'topic',
+            text: normalizedTopics[currentTopicIndex].topic,
+            time: normalizedTopics[currentTopicIndex].time,
+        })
+        currentTopicIndex++
+    }
+
+    return result
+})
+
+const videoColumn = ref(null)
+const videoColumnHeight = ref(0)
+
+onMounted(async () => {
+    await nextTick()
+    const updateHeight = () => {
+        if (videoColumn.value) {
+            videoColumnHeight.value = videoColumn.value.offsetHeight
+        }
+    }
+    updateHeight()
+    window.addEventListener('resize', updateHeight)
+})
 
 </script>
