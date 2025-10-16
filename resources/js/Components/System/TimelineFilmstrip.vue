@@ -3,7 +3,7 @@
         <!-- Scrollable rail wrapper (mobile-first) -->
         <div
             ref="scrollWrap"
-            class="rounded-md bg-gray-100 border border-gray-200 py-3 px-2 sm:px-0 hide-scrollbar"
+            class="bg-gray-100 py-3 px-2 sm:px-0 hide-scrollbar"
             :class="isMobile ? 'overflow-x-auto' : 'overflow-x-hidden'"
         >
             <div

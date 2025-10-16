@@ -1,5 +1,69 @@
 <template>
     <div>
+
+        <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden bg-gray-100">
+
+            <div class="px-4">
+                <div class="grid gap-3 grid-cols-2 sm:grid-cols-[auto,1fr,auto] sm:gap-4 sm:items-stretch">
+
+                    <div
+                        class="col-span-2 sm:col-span-1
+             order-1 sm:order-2"
+                    >
+                        <div class="rounded-md overflow-hidden bg-white border">
+                            <div :class="playerClass">
+                                <YoutubePlayer
+                                    :video-id="transmission.signal_metadata.youtube.id"
+                                    :is-portrait="effectiveIsPortrait"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        v-if="previous"
+                        class="col-span-1 w-full sm:w-40
+             order-2 sm:order-1
+             sm:h-full sm:flex sm:items-center"
+                    >
+                        <Link :href="`/transmission/${previous.signal_ulid}`" class="block group w-full">
+                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                                <img :src="previous.signal_metadata?.youtube?.thumbnail" alt="Previous thumbnail"
+                                     class="w-full aspect-video object-cover" loading="lazy" />
+                                <div class="px-2 py-1 text-[10px] sm:text-xs text-gray-600 group-hover:text-black">← Previous</div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div v-else class="col-span-1 w-full sm:w-40 order-2 sm:order-1"></div>
+
+                    <div
+                        v-if="next"
+                        class="col-span-1 w-full sm:w-40
+             order-3 sm:order-3
+             sm:h-full sm:flex sm:items-center sm:justify-end"
+                    >
+                        <Link :href="`/transmission/${next.signal_ulid}`" class="block group w-full">
+                            <div class="rounded-md overflow-hidden shadow-sm bg-white hover:shadow-md transition">
+                                <img :src="next.signal_metadata?.youtube?.thumbnail" alt="Next thumbnail"
+                                     class="w-full aspect-video object-cover" />
+                                <div class="px-2 py-1 text-[10px] sm:text-xs text-right text-gray-600 group-hover:text-black">Next →</div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div v-else class="col-span-1 w-full sm:w-40 order-3 sm:order-3"></div>
+                </div>
+            </div>
+
+            <div class="m-4 mb-2">
+                <TimelineFilmstrip
+                    :items="timelineItems"
+                    :active-ulid="transmission.signal_ulid"
+                    :mobile-scrollable="true"
+                />
+            </div>
+
+        </div>
+
         <!-- Reflection Tabs -->
         <div class="p-4">
             <div class="flex border-b border-gray-300 space-x-6 text-sm">
@@ -247,15 +311,21 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {computed, ref, watchEffect} from 'vue'
 import MarkdownIt from 'markdown-it'
+import {Link, router} from "@inertiajs/vue3";
+import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
+import TimelineFilmstrip from "@/Components/System/TimelineFilmstrip.vue";
 
 const props = defineProps({
     transmission: Object,
     reflection: Object,
     parsedTranscript: Array,
     formatTime: Function,
-    toListArray: Function
+    isPortrait: Boolean,
+    timeline: Object,
+    previous: Object,
+    next: Object,
 })
 
 const reflectionTabs = [
@@ -266,21 +336,179 @@ const reflectionTabs = [
 
 const activeTab = ref('surface')
 
-const md = new MarkdownIt({ html: true, breaks: true, linkify: true })
-
-function stripUnsafe(html = '') {
-    const container = document.createElement('div')
-    container.innerHTML = html
-    container.querySelectorAll('script, iframe, object, embed').forEach(el => el.remove())
-    container.querySelectorAll('*').forEach(el => {
-        Array.from(el.attributes).forEach(attr => {
-            if (/^on/i.test(attr.name)) el.removeAttribute(attr.name)
-        })
+    const timelineItems = computed(() => {
+        // Trust the API’s shape; fall back gracefully
+        const items = Array.isArray(props.timeline?.items) ? props.timeline.items : []
+        return items.map(i => ({
+            ulid: i.ulid,
+            title: i.title || i.ulid,
+            date: i.date,
+            duration: i.duration ?? 0,
+            thumbnail: i.thumbnail || props.transmission?.signal_metadata?.youtube?.thumbnail || ""
+        }))
     })
-    return container.innerHTML
-}
 
-function renderMarkdown(input) {
-    return stripUnsafe(md.render(input || ''))
-}
+    /**
+     * Derived flags / id
+     */
+    const flags = computed(() => props.transmission?.signal_metadata?.flags ?? {})
+    const youtubeId = computed(() => props.transmission?.signal_metadata?.youtube?.id ?? "")
+    const isPortraitFromSignal = computed(() => {
+        // data shape uses "is_portrait-view"
+        const f = flags.value
+        if (typeof f["is_portrait-view"] === "boolean") return f["is_portrait-view"]
+        if (typeof f["is_portrait-view"] === "number") return f["is_portrait-view"] === 1
+        return undefined
+    })
+
+    const flagPortrait = computed(() => {
+        const f = flags.value
+        // accept either flag the API may emit
+        if (typeof f["is_portrait"] === "boolean") return f["is_portrait"]
+        if (typeof f["is_portrait"] === "number") return f["is_portrait"] === 1
+        if (typeof f["is_portrait-view"] === "boolean") return f["is_portrait-view"]
+        if (typeof f["is_portrait-view"] === "number") return f["is_portrait-view"] === 1
+        return undefined
+    })
+
+    const effectiveIsPortrait = computed(() => {
+        // precedence: explicit prop -> flags -> false
+        return (flagPortrait.value ?? false)
+    })
+
+    const playerClass = computed(() =>
+        effectiveIsPortrait.value
+            ? "relative aspect-[9/16] w-full max-w-[300px] sm:max-w-[340px] md:max-w-[380px] mx-auto"
+            : "relative aspect-video w-full max-w-[820px] mx-auto"
+    )
+
+    const containerClass = computed(() =>
+        effectiveIsPortrait.value
+            ? "relative aspect-[9/16] w-full max-w-sm mx-auto"
+            : "relative aspect-video w-full"
+    )
+
+    /**
+     * Markdown setup
+     * We permit markdown HTML but strip scripts / inline handlers as a minimal sanitizer.
+     */
+    const md = new MarkdownIt({
+        html: true,
+        breaks: true,
+        linkify: true
+    })
+
+    function stripUnsafe(html = "") {
+        if (typeof html !== "string" || html.length === 0) return ""
+
+        const container = document.createElement("div")
+        container.innerHTML = html
+
+        // Remove dangerous nodes
+        container.querySelectorAll("script, iframe, object, embed").forEach((el) => el.remove())
+
+        // Strip inline event handlers (onclick, onload, etc.)
+        container.querySelectorAll("*").forEach((el) => {
+            // Copy to array because NamedNodeMap isn't a real array
+            Array.from(el.attributes).forEach((attr) => {
+                if (/^on/i.test(attr.name)) {
+                    el.removeAttribute(attr.name)
+                }
+            })
+        })
+
+        return container.innerHTML
+    }
+
+    function renderMarkdown(input) {
+        const raw = md.render(input || "")
+        return stripUnsafe(raw)
+    }
+
+    /**
+     * Tabs: choose first available pane based on available data
+     */
+    const tabs = ["Surface", "Ontological", "Structural"]
+    const active = ref("Surface")
+
+    const hasSurface = computed(() => !!props.reflection?.surface?.reflection_content)
+    const hasOntological = computed(() => !!props.reflection?.narrative?.reflection_content)
+    const hasStructural = computed(() => !!props.transmission)
+
+    const availableTabs = computed(() => {
+        const t = []
+        if (hasSurface.value) t.push("Surface")
+        if (hasOntological.value) t.push("Ontological")
+        if (hasStructural.value) t.push("Structural")
+        return t
+    })
+
+// ensure active is always valid
+    watchEffect(() => {
+        if (!availableTabs.value.includes(active.value)) {
+            active.value = availableTabs.value[0] ?? "Structural"
+        }
+    })
+
+    /**
+     * Description / Tags
+     */
+    const htmlDescription = computed(() => {
+        const input = props.transmission?.signal_description || ""
+        return renderMarkdown(input)
+    })
+
+    const parsedTags = computed(() => {
+        try {
+            const raw = props.transmission?.signal_tags
+            const parsed = Array.isArray(raw)
+                ? raw
+                : typeof raw === "string"
+                    ? JSON.parse(raw)
+                    : []
+
+            return parsed
+                .filter(tag => typeof tag === "string")
+                .sort((a, b) => a.localeCompare(b))
+                .map(tag => tag.toUpperCase())
+        } catch {
+            return []
+        }
+    })
+
+    /**
+     * Transcript
+     */
+    const parsedTranscript = computed(() => {
+        try {
+            const payload = props.transmission?.signal_payload
+            if (!payload || typeof payload !== "object") return []
+            const arr = payload["timed-transcript"]
+            return Array.isArray(arr) ? arr : []
+        } catch {
+            return []
+        }
+    })
+
+
+
+    const goTo = path => {
+        router.visit(`/${path}`)
+    }
+
+    /**
+     * Bullet list helper from newline text
+     */
+    function toListArray(raw, bullet = true) {
+        if (!raw || typeof raw !== "string") return []
+        return raw
+            .split("\n")
+            .map(line => {
+                const cleaned = line.trim()
+                return bullet ? cleaned.replace(/^[-•*]+\s*/, "") : cleaned
+            })
+            .filter(Boolean)
+    }
+
+
 </script>
