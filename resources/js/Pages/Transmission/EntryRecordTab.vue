@@ -58,7 +58,9 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="hidden lg:block border-l border-gray-200/70"></div>
+
                     <!-- RIGHT: Transcript -->
                     <div
                         v-if="mergedTranscript.length"
@@ -67,28 +69,69 @@
                     >
                         <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transcript</h3>
                         <div class="space-y-1 text-sm leading-relaxed text-gray-700">
-                            <template v-for="(item, index) in mergedTranscript" :key="index">
-                                <div v-if="item.type === 'topic'" class="pt-2 text-indigo-600 font-semibold text-[12px] uppercase">
-                                    {{ item.text }}
-                                </div>
-                                <div v-else>
-                                    <span class="text-gray-400 mr-2">[{{ formatTime(item.time) }}]</span>
-                                    <span>{{ item.text }}</span>
-                                </div>
-                            </template>
+                            <div class="overflow-x-hide">
+                                <template v-for="(item, index) in mergedTranscript" :key="index">
+                                    <div
+                                        v-if="item.type === 'topic'"
+                                        class="pt-2 text-gray-700 font-semibold text-[12px] uppercase"
+                                    >
+                                        {{ item.text }}
+                                    </div>
+                                    <div
+                                        v-else
+                                        class="flex items-baseline whitespace-nowrap"
+                                    >
+                                        <span class="text-gray-400 mr-2 shrink-0">[{{ formatTime(item.time) }}]</span>
+                                        <span class="truncate">{{ item.text }}</span>
+                                    </div>
+                                </template>
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
             </div>
 
+            <div class="grid grid-cols-3 text-center divide-x divide-gray-200 border-t py-4">
+                <!-- Energetic Quality -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Energetic Quality
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.energetic_quality }}
+                    </div>
+                </div>
 
+                <!-- Journey Phase -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Journey Phase
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.journey_phase }}
+                    </div>
+                </div>
+
+                <!-- Directional Vector -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Directional Vector
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.directional_vector }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-4">
                 <TimelineFilmstrip
                     :items="timelineItems"
                     :active-ulid="transmission.signal_ulid"
                     :mobile-scrollable="true"
                 />
-
+            </div>
 
         </div>
 
@@ -136,7 +179,7 @@
                     <div class="hidden md:flex border-l border-gray-200"></div>
 
                     <!-- Right Column: Transcript -->
-                    <div class="md:w-5/12 mt-6 md:mt-0 divide-y divide-stone-200">
+                    <div class="md:w-5/12 mt-6 md:mt-0 divide-y divide-gray-200">
 
                         <!-- Visible Actions -->
                         <div v-if="reflection.surface.reflection_content.visible_actions?.length" class="pb-4">
@@ -154,7 +197,7 @@
                                 >
                                     <div class="flex items-center gap-2">
                                         <Icon name="Workflow" class="w-4 h-4 text-stone-400" />
-                                        <span class="text-[13px] font-normal text-stone-700">{{ action }}</span>
+                                        <span class="text-xs font-normal text-stone-700 uppercase">{{ action }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +219,7 @@
                                 >
                                     <div class="flex items-center gap-2">
                                         <Icon name="Milestone" class="w-4 h-4 text-stone-400" />
-                                        <span class="text-[13px] font-normal text-stone-700">{{ entity }}</span>
+                                        <span class="text-xs font-normal text-stone-700 uppercase">{{ entity }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -197,8 +240,8 @@
                                     class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
                                 >
                                     <div class="flex items-center gap-2">
-                                        <Icon name="Shapes" class="w-4 h-4 text-stone-400" />
-                                        <span class="text-[13px] font-normal text-stone-700">{{ tag }}</span>
+                                        <Icon name="Bookmark" class="w-4 h-4 text-stone-400" />
+                                        <span class="text-xs font-normal text-stone-700 uppercase">{{ tag }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -209,140 +252,306 @@
                 </div>
 
                 <!-- Structure Tab -->
-                <div v-else-if="activeTab === 'structure' && reflection?.structure" class="space-y-6 max-w-4xl">
-                    <div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ reflection.structure.reflection_content.title }}</h3>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Structural Substrate</h4>
-                        <div class="text-sm text-gray-800 leading-relaxed">{{ reflection.structure.reflection_content.structural_substrate }}</div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Symbolic Elements</h4>
-                        <div class="flex flex-wrap gap-2">
-              <span
-                  v-for="element in reflection.structure.reflection_content.symbolic_elements"
-                  :key="element"
-                  class="bg-purple-100 px-3 py-1 rounded-full text-xs text-purple-700"
-              >
-                {{ element }}
-              </span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Ontological States</h4>
-                        <div class="flex flex-wrap gap-2">
-              <span
-                  v-for="state in reflection.structure.reflection_content.ontological_states"
-                  :key="state"
-                  class="bg-indigo-100 px-3 py-1 rounded-full text-xs text-indigo-700"
-              >
-                {{ state }}
-              </span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
+                <div v-if="activeTab === 'structure' && reflection?.surface" class="md:flex md:gap-6">
+                    <!-- LEFT COLUMN -->
+                    <div class="md:w-7/12 space-y-6">
                         <div>
-                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">Energetic Quality</h4>
-                            <div class="text-sm text-gray-800">{{ reflection.structure.reflection_content.energetic_quality }}</div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                {{ reflection.structure.reflection_content.title }}
+                            </h3>
                         </div>
 
                         <div>
-                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">Journey Phase</h4>
-                            <div class="text-sm text-gray-800">{{ reflection.structure.reflection_content.journey_phase }}</div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Structural Substrate
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.structure.reflection_content.structural_substrate }}
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">Directional Vector</h4>
-                        <div class="text-sm text-gray-800">{{ reflection.structure.reflection_content.directional_vector }}</div>
-                    </div>
+                    <div class="hidden md:flex border-l border-gray-200"></div>
 
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Engaged Subsystems</h4>
-                        <div class="flex flex-wrap gap-2">
-              <span
-                  v-for="subsystem in reflection.structure.reflection_content.engaged_subsystems"
-                  :key="subsystem"
-                  class="bg-green-100 px-3 py-1 rounded-full text-xs text-green-700"
-              >
-                {{ subsystem }}
-              </span>
+                    <!-- RIGHT COLUMN -->
+                    <div class="md:w-5/12 divide-y divide-gray-200">
+                        <!-- Symbolic Elements -->
+                        <div
+                            v-if="reflection.structure.reflection_content.symbolic_elements?.length"
+                        >
+                            <h4
+                                class="text-xs font-semibold text-purple-700 uppercase tracking-wide ml-4"
+                            >
+                                Symbolic Elements
+                            </h4>
+                            <p class="text-xs text-purple-500 mt-2 mb-4 ml-4">
+                                Represented archetypes or recurring motifs.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="element in reflection.structure.reflection_content.symbolic_elements"
+                                    :key="element"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-purple-200 border-l-4 bg-purple-50/50 hover:bg-purple-100/70 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Shapes" class="w-4 h-4 text-purple-400" />
+                                        <span class="text-xs font-normal text-purple-700 uppercase">
+                                          {{ element }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ontological States -->
+                        <div
+                            v-if="reflection.structure.reflection_content.ontological_states?.length"
+                            class="py-4"
+                        >
+                            <h4
+                                class="text-xs font-semibold text-indigo-700 uppercase tracking-wide ml-4"
+                            >
+                                Ontological States
+                            </h4>
+                            <p class="text-xs text-indigo-500 mt-2 mb-4 ml-4">
+                                Expressed modes of being or awareness present in this reflection.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="state in reflection.structure.reflection_content.ontological_states"
+                                    :key="state"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-indigo-200 border-l-4 bg-indigo-50/50 hover:bg-indigo-100/70 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="SearchCode" class="w-4 h-4 text-indigo-400" />
+                                        <span class="text-xs font-normal text-indigo-700 uppercase">
+                                          {{ state }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Engaged Subsystems -->
+                        <div
+                            v-if="reflection.structure.reflection_content.engaged_subsystems?.length"
+                            class="py-4"
+                        >
+                            <h4
+                                class="text-xs font-semibold text-green-700 uppercase tracking-wide ml-4"
+                            >
+                                Engaged Subsystems
+                            </h4>
+                            <p class="text-xs text-green-500 mt-2 mb-4 ml-4">
+                                Architecture dynamically engaged in this reflection.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="subsystem in reflection.structure.reflection_content.engaged_subsystems"
+                                    :key="subsystem"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-green-200 border-l-4 bg-green-50/50 hover:bg-green-100/70 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="CircuitBoard" class="w-4 h-4 text-green-400" />
+                                        <span class="text-xs font-normal text-green-700 uppercase">
+                                          {{ subsystem }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mirror Tab -->
-                <div v-else-if="activeTab === 'mirror' && reflection?.mirror" class="max-w-4xl">
-                    <div class="grid grid-cols-1 gap-4">
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Direct</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)" />
-
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Recognition</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)" />
-
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Becoming</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)" />
-                    </div>
-                </div>
 
                 <!-- Patterns Tab -->
-                <div v-else-if="activeTab === 'patterns' && reflection?.patterns" class="space-y-6 max-w-4xl">
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-3">Emerging Patterns</h4>
-                        <ul class="space-y-2">
-                            <li
-                                v-for="(pattern, index) in reflection.patterns.reflection_content.emerging_patterns"
-                                :key="index"
-                                class="text-sm text-gray-800 leading-relaxed pl-4 border-l-2 border-gray-300"
+                <div
+                    v-else-if="activeTab === 'patterns' && reflection?.patterns" class="md:flex md:gap-6"
+                >
+                    <!-- LEFT COLUMN -->
+                    <div class="md:w-7/12 space-y-6">
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-3">
+                                Emerging Patterns
+                            </h4>
+                            <ul class="space-y-2">
+                                <li
+                                    v-for="(pattern, index) in reflection.patterns.reflection_content.emerging_patterns"
+                                    :key="index"
+                                    class="text-sm text-gray-800 leading-relaxed pl-4 border-l-2 border-gray-300"
+                                >
+                                    {{ pattern }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Somatic Signature
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.somatic_signature }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Field Resonance
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.field_resonance }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Transmission Function
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.transmission_function }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Catalytic Pathway
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.catalytic_pathway }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIVIDER -->
+                    <div class="hidden md:flex border-l border-gray-200"></div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="md:w-5/12 divide-y divide-gray-200">
+                        <!-- Dominant Language -->
+                        <div
+                            v-if="reflection.patterns.reflection_content.dominant_language?.length"
+                        >
+                            <h4
+                                class="text-xs font-semibold text-amber-700 uppercase tracking-wide ml-4"
                             >
-                                {{ pattern }}
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Somatic Signature</h4>
-                        <div class="text-sm text-gray-800 leading-relaxed">{{ reflection.patterns.reflection_content.somatic_signature }}</div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Field Resonance</h4>
-                        <div class="text-sm text-gray-800 leading-relaxed">{{ reflection.patterns.reflection_content.field_resonance }}</div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transmission Function</h4>
-                        <div class="text-sm text-gray-800 leading-relaxed">{{ reflection.patterns.reflection_content.transmission_function }}</div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Catalytic Pathway</h4>
-                        <div class="text-sm text-gray-800 leading-relaxed">{{ reflection.patterns.reflection_content.catalytic_pathway }}</div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Dominant Language</h4>
-                        <div class="flex flex-wrap gap-2">
-              <span
-                  v-for="motif in reflection.patterns.reflection_content.dominant_language"
-                  :key="motif"
-                  class="bg-amber-100 px-3 py-1 rounded-full text-xs text-amber-700"
-              >
-                {{ motif }}
-              </span>
+                                Dominant Language
+                            </h4>
+                            <p class="text-xs text-amber-500 mt-2 mb-4 ml-4">
+                                Core motifs or linguistic fields shaping this reflection.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="motif in reflection.patterns.reflection_content.dominant_language"
+                                    :key="motif"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-amber-200 border-l-4 bg-amber-50/50 hover:bg-amber-100/70 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Pilcrow" class="w-4 h-4 text-amber-400" />
+                                        <span class="text-xs font-normal text-amber-700 uppercase">
+                                          {{ motif }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- No Data -->
-                <div v-else class="text-gray-400 italic text-sm">
-                    No reflection data available for this tab.
+
+                <!-- Patterns Tab -->
+                <div
+                    v-else-if="activeTab === 'patterns' && reflection?.patterns" class="md:flex md:gap-6"
+                >
+                    <!-- LEFT COLUMN -->
+                    <div class="md:w-7/12 space-y-6">
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-3">
+                                Emerging Patterns
+                            </h4>
+                            <ul class="space-y-2">
+                                <li
+                                    v-for="(pattern, index) in reflection.patterns.reflection_content.emerging_patterns"
+                                    :key="index"
+                                    class="text-sm text-gray-800 leading-relaxed pl-4 border-l-2 border-gray-300"
+                                >
+                                    {{ pattern }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Somatic Signature
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.somatic_signature }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Field Resonance
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.field_resonance }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Transmission Function
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.transmission_function }}
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                Catalytic Pathway
+                            </h4>
+                            <div class="text-sm text-gray-800 leading-relaxed">
+                                {{ reflection.patterns.reflection_content.catalytic_pathway }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIVIDER -->
+                    <div class="hidden md:flex border-l border-gray-200"></div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="md:w-5/12 divide-y divide-gray-200">
+                        <!-- Dominant Language -->
+                        <div
+                            v-if="reflection.patterns.reflection_content.dominant_language?.length"
+                        >
+                            <h4
+                                class="text-xs font-semibold text-amber-700 uppercase tracking-wide ml-4"
+                            >
+                                Dominant Language
+                            </h4>
+                            <p class="text-xs text-amber-500 mt-2 mb-4 ml-4">
+                                Core motifs or linguistic fields shaping this reflection.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="motif in reflection.patterns.reflection_content.dominant_language"
+                                    :key="motif"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-amber-200 border-l-4 bg-amber-50/50 hover:bg-amber-100/70 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Languages" class="w-4 h-4 text-amber-400" />
+                                        <span class="text-xs font-normal text-amber-700 uppercase">
+                                          {{ motif }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
