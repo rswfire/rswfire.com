@@ -93,24 +93,28 @@
         </div>
 
         <!-- Reflection Tabs -->
-        <div class="pt-6">
-            <div class="flex border-b border-gray-300 space-x-6 text-sm">
+        <div class="pt-8">
+            <div class="flex border-b border-stone-300 text-sm pl-4">
                 <button
                     v-for="tab in reflectionTabs"
                     :key="tab.key"
                     @click="activeTab = tab.key"
                     :class="[
-              'pb-2 flex items-center gap-2',
-              activeTab === tab.key ? 'border-black border-b-2 font-semibold text-black' : 'text-gray-400'
-            ]"
+                      'relative -mb-px px-4 py-2 rounded-t-md transition-colors',
+                      activeTab === tab.key
+                        ? 'bg-stone-100 text-stone-800 border border-b border-stone-300 font-medium'
+                        : 'text-stone-500 hover:text-stone-700'
+                    ]"
                 >
-                    <span v-if="tab.locked" class="text-xs">🔒</span>
-                    {{ tab.label }}
+                    <div class="flex items-center gap-2">
+                        <span v-if="tab.locked" class="text-xs opacity-70"><Icon name="Sprout" color="text-indigo-600" class="w-[16px] h-[16px]" /></span>
+                        {{ tab.label }}
+                    </div>
                 </button>
             </div>
 
             <!-- Tab Content -->
-            <div class="mt-6">
+            <div class="mt-4 px-4">
                 <!-- Surface Tab -->
                 <div v-if="activeTab === 'surface' && reflection?.surface" class="md:flex md:gap-6">
                     <!-- Left Column: Surface Data -->
@@ -119,83 +123,89 @@
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ reflection.surface.reflection_content.title }}</h3>
                         </div>
                         <div>
+                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Timestamp Context</h3>
+                            <div class="text-sm text-gray-700">{{ reflection.surface.reflection_content.timestamp_context }}</div>
+                        </div>
+                        <div>
                             <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Summary</h3>
                             <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
                         </div>
 
-                        <div v-if="reflection.surface.reflection_content.topic_timestamps?.length">
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Topic Timestamps</h3>
-                            <div class="space-y-2">
-                                <div
-                                    v-for="(item, index) in reflection.surface.reflection_content.topic_timestamps"
-                                    :key="index"
-                                    class="flex items-start gap-3 text-sm"
-                                >
-                                    <span class="font-mono text-gray-500 text-xs">[{{ item.timestamp }}]</span>
-                                    <span class="text-gray-800">{{ item.topic }}</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Timestamp Context</h3>
-                            <div class="text-sm text-gray-700">{{ reflection.surface.reflection_content.timestamp_context }}</div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Visible Actions</h3>
-                            <div class="flex flex-wrap gap-2">
-                <span
-                    v-for="action in reflection.surface.reflection_content.visible_actions"
-                    :key="action"
-                    class="bg-gray-200 px-3 py-1 rounded-full text-xs text-gray-700"
-                >
-                  {{ action }}
-                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Mentioned Entities</h3>
-                            <div class="flex flex-wrap gap-2">
-                <span
-                    v-for="entity in reflection.surface.reflection_content.mentioned_entities"
-                    :key="entity"
-                    class="bg-gray-200 px-3 py-1 rounded-full text-xs text-gray-700"
-                >
-                  {{ entity }}
-                </span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Tags</h3>
-                            <div class="flex flex-wrap gap-2">
-                <span
-                    v-for="tag in reflection.surface.reflection_content.tags"
-                    :key="tag"
-                    class="bg-blue-100 px-3 py-1 rounded-full text-xs text-blue-700"
-                >
-                  {{ tag }}
-                </span>
-                            </div>
-                        </div>
                     </div>
 
+                    <div class="hidden md:flex border-l border-gray-200"></div>
+
                     <!-- Right Column: Transcript -->
-                    <div class="md:w-5/12 mt-6 md:mt-0">
-                        <template v-if="parsedTranscript.length">
-                            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transcript</h3>
-                            <div class="max-h-[60vh] overflow-y-auto rounded-md border bg-gray-50 p-3">
-                                <div class="space-y-1 text-sm leading-relaxed text-gray-600">
-                                    <div v-for="(segment, index) in parsedTranscript" :key="index">
-                                        <span class="text-gray-400 mr-2">[{{ formatTime(segment.start) }}]</span>
-                                        <span>{{ segment.text }}</span>
+                    <div class="md:w-5/12 mt-6 md:mt-0 divide-y divide-stone-200">
+
+                        <!-- Visible Actions -->
+                        <div v-if="reflection.surface.reflection_content.visible_actions?.length" class="pb-4">
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide ml-4">
+                                Visible Actions
+                            </h4>
+                            <p class="text-xs text-stone-500 mt-2 mb-4 ml-4">
+                                Recorded system or user-initiated action visible in this reflection.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="action in reflection.surface.reflection_content.visible_actions"
+                                    :key="action"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Workflow" class="w-4 h-4 text-stone-400" />
+                                        <span class="text-[13px] font-normal text-stone-700">{{ action }}</span>
                                     </div>
                                 </div>
                             </div>
-                        </template>
+                        </div>
+
+                        <!-- Mentioned Entities -->
+                        <div v-if="reflection.surface.reflection_content.mentioned_entities?.length" class="py-4">
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide ml-4">
+                                Mentioned Entities
+                            </h4>
+                            <p class="text-xs text-stone-500 mt-2 mb-4 ml-4">
+                                Referenced person, platform, or conceptual entity.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="entity in reflection.surface.reflection_content.mentioned_entities"
+                                    :key="entity"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Milestone" class="w-4 h-4 text-stone-400" />
+                                        <span class="text-[13px] font-normal text-stone-700">{{ entity }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div v-if="reflection.surface.reflection_content.tags?.length" class="py-4">
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide ml-4">
+                                Tags
+                            </h4>
+                            <p class="text-xs text-stone-500 mt-2 mb-4 ml-4">
+                                Thematic or contextual descriptor for this transmission.
+                            </p>
+                            <div class="space-y-2">
+                                <div
+                                    v-for="tag in reflection.surface.reflection_content.tags"
+                                    :key="tag"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <Icon name="Shapes" class="w-4 h-4 text-stone-400" />
+                                        <span class="text-[13px] font-normal text-stone-700">{{ tag }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
                 <!-- Structure Tab -->
@@ -337,32 +347,6 @@
         </div>
     </div>
 
-    <div class="md:w-5/12 mt-6 md:mt-0">
-        <template v-if="mergedTranscript.length">
-            <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Transcript</h3>
-
-            <div class="max-h-[60vh] overflow-y-auto rounded-md border bg-gray-50 p-3">
-                <div class="space-y-1 text-sm leading-relaxed text-gray-600">
-                    <template v-for="(item, index) in mergedTranscript" :key="index">
-
-                        <!-- Topic label -->
-                        <div v-if="item.type === 'topic'" class="pt-2 text-indigo-600 font-semibold">
-                            TOPIC – {{ item.text }}
-                        </div>
-
-                        <!-- Transcript line -->
-                        <div v-else>
-                            <span class="text-gray-400 mr-2">[{{ formatTime(item.time) }}]</span>
-                            <span>{{ item.text }}</span>
-                        </div>
-
-                    </template>
-                </div>
-            </div>
-        </template>
-    </div>
-
-
 </template>
 
 <script setup>
@@ -371,6 +355,7 @@ import MarkdownIt from 'markdown-it'
 import {Link, router} from "@inertiajs/vue3";
 import YoutubePlayer from "@/Components/System/YoutubePlayer.vue";
 import TimelineFilmstrip from "@/Components/System/TimelineFilmstrip.vue";
+import Icon from "@/Components/System/Icon.vue";
 
 const props = defineProps({
     transmission: Object,

@@ -26,12 +26,12 @@ import {
     Map,
     MessageCircle,
     MessageSquareDot,
+    Milestone,
     Radar,
     SatelliteDish,
-    Scan,
     ScanLine,
     Send,
-    SendHorizonal,
+    Shapes,
     ShieldCheck,
     Sparkles,
     Sprout,
@@ -41,7 +41,8 @@ import {
     TreeDeciduous,
     User,
     UserPlus,
-    WavesLadder
+    WavesLadder,
+    Workflow
 } from "lucide-vue-next"
 
 const iconMap = {
@@ -63,10 +64,12 @@ const iconMap = {
     Map,
     MessageCircle,
     MessageSquareDot,
+    Milestone,
     Radar,
     SatelliteDish,
     ScanLine,
     Send,
+    Shapes,
     ShieldCheck,
     Sparkles,
     Sprout,
@@ -76,7 +79,8 @@ const iconMap = {
     TreeDeciduous,
     User,
     UserPlus,
-    WavesLadder
+    WavesLadder,
+    Workflow
 }
 
 const props = defineProps({

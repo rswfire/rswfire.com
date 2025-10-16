@@ -2,8 +2,8 @@
   <Content :theme="pageTheme">
     <Hero
         :title="reflection.surface.reflection_content.title || transmission.signal_ulid || 'Untitled Transmission'"
-        :subtitle="formatDate(transmission?.stamp_created) || 'NULL'"
-        :meta="transmission.signal_ulid || TRANSMISSION"
+        :subtitle="transmission.signal_ulid || TRANSMISSION"
+        :meta="formatDate(transmission?.stamp_created) || 'NULL'"
         :theme="pageTheme"
         align="center"
     />
