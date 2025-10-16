@@ -7,7 +7,7 @@
             meta="800+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
             :theme="pageTheme"
         />
-
+        <!-- <LogInForm @success="router.visit('/')" /> -->
         <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
             <div class="max-w-none columns-2 gap-8">
 
@@ -50,7 +50,7 @@
                 <div class="p-4 space-y-3">
                     <div class="flex items-center gap-2">
                         <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black truncate flex-1">
-                            {{ transmission.structure_title || transmission.signal_ulid }}
+                            {{ transmission.surface_title || transmission.signal_ulid }}
                         </h2>
                         <span v-if="transmission.structure_visibility === 'sanctum'" class="text-sm flex-shrink-0">🔒</span>
                     </div>
@@ -129,6 +129,7 @@ import { router } from '@inertiajs/vue3'
 import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import Pagination from '@/Components/System/Pagination.vue'
+import LogInForm from "@/Components/Auth/LogInForm.vue";
 
 defineProps({
     transmissions: Object

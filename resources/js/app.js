@@ -7,13 +7,12 @@ import DefaultLayout from "./Layouts/DefaultLayout.vue";
 import tippy from "tippy.js";
 
 import { createInertiaApp, router } from "@inertiajs/vue3";
-import { createApp, h, nextTick } from "vue";
+import {createApp, h, nextTick, onMounted} from "vue";
 import { ZiggyVue } from "ziggy-js";
 
 const appName = import.meta.env.VITE_APP_NAME || "rswfire";
 
 const lexiconCache = new Map();
-
 function makeTooltipNode(entry) {
     const wrapper = document.createElement("div");
     wrapper.className = "lexicon-tooltip flex flex-col items-center text-center gap-2";

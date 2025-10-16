@@ -24,6 +24,9 @@
                     <!-- Left Column: Surface Data -->
                     <div class="md:w-7/12 space-y-6">
                         <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ reflection.surface.reflection_content.title }}</h3>
+                        </div>
+                        <div>
                             <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-2">Summary</h3>
                             <div class="prose prose-sm max-w-none text-gray-800" v-html="renderMarkdown(reflection.surface.reflection_content.summary)" />
                         </div>
@@ -258,7 +261,6 @@ const props = defineProps({
 const reflectionTabs = [
     { key: 'surface', label: 'Surface', locked: false },
     { key: 'structure', label: 'Structure', locked: false },
-    { key: 'mirror', label: 'Mirror', locked: true },
     { key: 'patterns', label: 'Patterns', locked: true }
 ]
 

@@ -14,6 +14,7 @@ import {
     ExternalLink,
     Feather,
     Flame,
+    FlaskConical,
     Hammer,
     HandCoins,
     HelpCircle,
@@ -21,11 +22,13 @@ import {
     Layers,
     Link2,
     LogIn,
+    LogOut,
     Map,
     MessageCircle,
     MessageSquareDot,
     Radar,
     SatelliteDish,
+    Scan,
     ScanLine,
     Send,
     SendHorizonal,
@@ -36,6 +39,7 @@ import {
     SquareLibrary,
     Squirrel,
     TreeDeciduous,
+    User,
     UserPlus,
     WavesLadder
 } from "lucide-vue-next"
@@ -47,6 +51,7 @@ const iconMap = {
     ExternalLink,
     Feather,
     Flame,
+    FlaskConical,
     Hammer,
     HandCoins,
     HelpCircle,
@@ -54,6 +59,7 @@ const iconMap = {
     Layers,
     Link2,
     LogIn,
+    LogOut,
     Map,
     MessageCircle,
     MessageSquareDot,
@@ -68,6 +74,7 @@ const iconMap = {
     SquareLibrary,
     Squirrel,
     TreeDeciduous,
+    User,
     UserPlus,
     WavesLadder
 }

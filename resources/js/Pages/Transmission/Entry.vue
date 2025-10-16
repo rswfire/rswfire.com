@@ -142,6 +142,11 @@
             :to-list-array="toListArray"
         />
 
+          <EntryMirrorTab
+              v-else-if="activeMainTab === 'Mirror'"
+              :transmission="transmission"
+              :reflection="reflection"
+          />
 
         <EntrySanctumTab
             v-else-if="activeMainTab === 'Sanctum'"
@@ -154,6 +159,7 @@
 <script setup>
 import { router, Link } from "@inertiajs/vue3"
 import Content from "@/Components/System/Content.vue"
+import EntryMirrorTab from "./EntryMirrorTab.vue"
 import EntryRecordTab from "./EntryRecordTab.vue"
 import EntrySanctumTab from "@/Pages/Transmission/EntrySanctumTab.vue";
 import Hero from "@/Components/System/Hero.vue"
@@ -181,12 +187,19 @@ const mainTabs = [
     background: "bg-pink-400",
   },
   {
-    key: "Sanctum",
-    label: "Sanctum",
-    icon: "Sprout",
-    color: "text-indigo-400",
-    background: "bg-indigo-400",
-  }
+    key: "Mirror",
+    label: "Mirror",
+    icon: "FlaskConical",
+    color: "text-sky-400",
+    background: "bg-sky-400",
+  },
+    {
+        key: "Sanctum",
+        label: "Sanctum",
+        icon: "Sprout",
+        color: "text-indigo-400",
+        background: "bg-indigo-400",
+    }
 ];
 
 const activeMainTab = ref("Transmission")

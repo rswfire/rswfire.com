@@ -16,7 +16,7 @@ class HandleInertiaRequests extends Middleware
 
     public function rootView(Request $request)
     {
-        return 'app';
+        return "app";
     }
 
     /**
@@ -36,8 +36,10 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
+            "api_url" => config("app.api_domain"),
             "auth" => [
-                "user" => $request->user(),
+                "check" => false,
+                "user" => null,
             ],
         ];
     }
