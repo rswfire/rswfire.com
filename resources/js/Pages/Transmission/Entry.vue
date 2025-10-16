@@ -40,7 +40,7 @@
           </div>
 
           <!-- Right-aligned container for return link + share buttons -->
-          <div class="flex items-center gap-2 ml-auto">
+          <div class="flex items-center gap-2 ml-auto mr-4">
               <Link
                   href="/transmission"
                   class="inline-flex items-center gap-1 text-[11px] uppercase tracking-wide text-gray-500 hover:text-black mb-2"

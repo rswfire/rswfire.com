@@ -193,7 +193,7 @@
                                 <div
                                     v-for="action in reflection.surface.reflection_content.visible_actions"
                                     :key="action"
-                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-white hover:bg-stone-100/80 transition-all"
                                 >
                                     <div class="flex items-center gap-2">
                                         <Icon name="Workflow" class="w-4 h-4 text-stone-400" />
@@ -215,7 +215,7 @@
                                 <div
                                     v-for="entity in reflection.surface.reflection_content.mentioned_entities"
                                     :key="entity"
-                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-white hover:bg-stone-100/80 transition-all"
                                 >
                                     <div class="flex items-center gap-2">
                                         <Icon name="Milestone" class="w-4 h-4 text-stone-400" />
@@ -237,7 +237,7 @@
                                 <div
                                     v-for="tag in reflection.surface.reflection_content.tags"
                                     :key="tag"
-                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-stone-50/70 hover:bg-stone-100/80 transition-all"
+                                    class="flex items-center justify-between px-3 py-2 rounded-r-md border border-stone-200 border-l-4 bg-white hover:bg-stone-100/80 transition-all"
                                 >
                                     <div class="flex items-center gap-2">
                                         <Icon name="Bookmark" class="w-4 h-4 text-stone-400" />
