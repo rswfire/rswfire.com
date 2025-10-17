@@ -3,6 +3,39 @@
 
         <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden bg-gray-100">
 
+            <div class="grid grid-cols-3 text-center divide-x divide-gray-200 border-b py-4 bg-white">
+                <!-- Energetic Quality -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Energetic Quality
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.energetic_quality }}
+                    </div>
+                </div>
+
+                <!-- Journey Phase -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Journey Phase
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.journey_phase }}
+                    </div>
+                </div>
+
+                <!-- Directional Vector -->
+                <div class="px-4">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                        Directional Vector
+                    </h4>
+                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
+                        {{ reflection.structure.reflection_content.directional_vector }}
+                    </div>
+                </div>
+            </div>
+
+
             <div class="p-4">
                 <div class="flex flex-col lg:flex-row gap-4 items-stretch">
 
@@ -93,39 +126,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 text-center divide-x divide-gray-200 border-t py-4">
-                <!-- Energetic Quality -->
-                <div class="px-4">
-                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
-                        Energetic Quality
-                    </h4>
-                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
-                        {{ reflection.structure.reflection_content.energetic_quality }}
-                    </div>
-                </div>
-
-                <!-- Journey Phase -->
-                <div class="px-4">
-                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
-                        Journey Phase
-                    </h4>
-                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
-                        {{ reflection.structure.reflection_content.journey_phase }}
-                    </div>
-                </div>
-
-                <!-- Directional Vector -->
-                <div class="px-4">
-                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-1">
-                        Directional Vector
-                    </h4>
-                    <div class="text-xs text-gray-800 font-medium uppercase truncate">
-                        {{ reflection.structure.reflection_content.directional_vector }}
-                    </div>
-                </div>
-            </div>
-
-            <div class="mx-4">
+            <div class="px-4 bg-white border-t border-gray-200">
                 <TimelineFilmstrip
                     :items="timelineItems"
                     :active-ulid="transmission.signal_ulid"
