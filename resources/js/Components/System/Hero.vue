@@ -65,7 +65,7 @@ const themeIcons = [
     { label: "Gallery",       icon: "GalleryHorizontal",       color: "text-orange-400",     bg: "bg-orange-50",         border: "border-orange-200",         hover: "hover:bg-orange-100",         url: "/gallery" },
     { label: "Synthesis",       icon: "Crosshair",       color: "textpurple-400",     bg: "bg-purple-50",         border: "border-purple-200",         hover: "hover:bg-purple-100",         url: "/synthesis" },
 
-    { label: "Autonomy",         icon: "Cpu",          color: "text-red-400",     bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/autonomy" },
+    { label: "Autonomy",         icon: "Layers",          color: "text-red-400",     bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/autonomy" },
     { label: "Codex",         icon: "SquareCode",     color: "text-amber-400",   bg: "bg-amber-50",       border: "border-amber-200",       hover: "hover:bg-amber-100",       url: "/codex" },
     { label: "Lexicon",       icon: "SquareLibrary",  color: "text-orange-400",  bg: "bg-orange-50",      border: "border-orange-200",      hover: "hover:bg-orange-100",      url: "/lexicon" },
     { label: "Bluewater",     icon: "WavesLadder",    color: "text-blue-400",    bg: "bg-blue-50",        border: "border-blue-200",        hover: "hover:bg-blue-100",        url: "/bluewater" },

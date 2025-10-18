@@ -121,10 +121,73 @@
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
                 <div class="mb-4 text-center text-sm text-gray-600">
                     <div class="leading-loose">
-                        <div class="text-lg font-bold leading-tighter">Built with <Link href="/autonomy" class="text-md underline">Autonomy</Link> &mdash; infrastructure for sovereign systems.</div>
+                        <div class="text-lg font-bold leading-tighter">Built with <Link href="/autonomy" class="text-md underline">Autonomy</Link> &mdash; <span class="italic">infrastructure for sovereign systems</span>.</div>
                         <div class="mt-4">This is a <Lexicon term="post-collapse">post-collapse</Lexicon>, <Lexicon term="post-fragmentation">post-fragmentation</Lexicon>, <Lexicon term="post-institutional">post-institutional</Lexicon> interface.</div>
                         <div>A living system for <Lexicon term="coherence">coherence</Lexicon>, not content &mdash; built to hold <Lexicon term="signal">signal</Lexicon> when the world forgets how.</div>
                         <div class="italic">Not a site. A system. Not for display. For resonance. For demonstration. For possibility.</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
+
+                    <!-- Field Column -->
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Field</h4>
+                        <Link
+                            v-for="item in itemsField"
+                            :key="item.label"
+                            :href="item.url"
+                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
+                            :class="[item.bg, item.border, item.hover]"
+                        >
+                            <div class="flex items-center gap-2">
+                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+                                <span class="text-sm font-medium">{{ item.label }}</span>
+                            </div>
+                            <span class="text-xs text-muted-foreground leading-tight">
+                                {{ item.blurb }}
+                            </span>
+                        </Link>
+                    </div>
+
+                    <!-- Signal Column -->
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Signal</h4>
+                        <Link
+                            v-for="item in itemsSignal"
+                            :key="item.label"
+                            :href="item.url"
+                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
+                            :class="[item.bg, item.border, item.hover]"
+                        >
+                            <div class="flex items-center gap-2">
+                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+                                <span class="text-sm font-medium">{{ item.label }}</span>
+                            </div>
+                            <span class="text-xs text-muted-foreground leading-tight">
+                                {{ item.blurb }}
+                            </span>
+                        </Link>
+                    </div>
+
+                    <!-- Reference Column -->
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Reference</h4>
+                        <Link
+                            v-for="item in itemsReference"
+                            :key="item.label"
+                            :href="item.url"
+                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
+                            :class="[item.bg, item.border, item.hover]"
+                        >
+                            <div class="flex items-center gap-2">
+                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
+                                <span class="text-sm font-medium">{{ item.label }}</span>
+                            </div>
+                            <span class="text-xs text-muted-foreground leading-tight">
+                                {{ item.blurb }}
+                            </span>
+                        </Link>
                     </div>
                 </div>
 
@@ -133,7 +196,7 @@
                     <Link href="/about" class="h-full">
                         <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
                             <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                                <Icon name="Layers" color="text-black" class="w-4 h-4" /> ABOUT
+                                <Icon name="Cpu" color="text-black" class="w-4 h-4" /> ABOUT
                             </h3>
                             <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those building post-institutional sovereignty.</div>
                             <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Begin with orientation.<br/>Begin by listening.</em></div>
@@ -170,69 +233,6 @@
                         </div>
                     </Link>
 
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-y border-gray-200 pb-6">
-
-                    <!-- Field Column -->
-                    <div class="space-y-2">
-                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Field</h4>
-                        <Link
-                            v-for="item in itemsField"
-                            :key="item.label"
-                            :href="item.url"
-                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
-                            :class="[item.bg, item.border, item.hover]"
-                        >
-                            <div class="flex items-center gap-2">
-                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
-                                <span class="text-sm font-medium">{{ item.label }}</span>
-                            </div>
-                            <span class="text-xs text-muted-foreground leading-tight">
-                {{ item.blurb }}
-              </span>
-                        </Link>
-                    </div>
-
-                    <!-- Signal Column -->
-                    <div class="space-y-2">
-                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Signal</h4>
-                        <Link
-                            v-for="item in itemsSignal"
-                            :key="item.label"
-                            :href="item.url"
-                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
-                            :class="[item.bg, item.border, item.hover]"
-                        >
-                            <div class="flex items-center gap-2">
-                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
-                                <span class="text-sm font-medium">{{ item.label }}</span>
-                            </div>
-                            <span class="text-xs text-muted-foreground leading-tight">
-                {{ item.blurb }}
-              </span>
-                        </Link>
-                    </div>
-
-                    <!-- Reference Column -->
-                    <div class="space-y-2">
-                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 ml-4">Reference</h4>
-                        <Link
-                            v-for="item in itemsReference"
-                            :key="item.label"
-                            :href="item.url"
-                            class="flex flex-col items-start gap-1 px-3 py-2 rounded-r-lg border-2 border-l-4 transition-all hover:shadow-sm"
-                            :class="[item.bg, item.border, item.hover]"
-                        >
-                            <div class="flex items-center gap-2">
-                                <Icon :name="item.icon" :class="['w-4 h-4', item.color]" />
-                                <span class="text-sm font-medium">{{ item.label }}</span>
-                            </div>
-                            <span class="text-xs text-muted-foreground leading-tight">
-                {{ item.blurb }}
-              </span>
-                        </Link>
-                    </div>
                 </div>
 
                 <div class="pt-4 text-center text-sm border-t">
@@ -290,7 +290,7 @@ const itemsSignal = [
 ]
 
 const itemsReference = [
-    { label: "AUTONOMY",  icon: "Cpu",      color: "text-red-400",  bg: "bg-red-50",  border: "border-red-200",   hover: "hover:bg-red-100",   url: "/autonomy", blurb: "Platform technology for sovereign systems." },
+    { label: "AUTONOMY",  icon: "Layers",      color: "text-red-400",  bg: "bg-red-50",  border: "border-red-200",   hover: "hover:bg-red-100",   url: "/autonomy", blurb: "Platform technology for sovereign systems." },
     { label: "CODEX",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
     { label: "LEXICON",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
     { label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },
