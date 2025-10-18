@@ -191,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 pb-4 border-t pt-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 py-4">
 
                     <Link href="/about" class="h-full">
                         <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
