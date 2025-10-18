@@ -3,8 +3,8 @@
 
         <Hero
             title="TRANSMISSIONS"
-            subtitle="A LIVING LOG OF EMBODIED EXPRESSION"
-            meta="800+ TRANSMISSIONS DOCUMENTING THE SOVEREIGN PATH"
+            meta="MAPPED THROUGH RECURSIVE AI REFLECTION"
+            subtitle="A REAL-TIME ARCHIVE OF SOVEREIGN LIFE"
             :theme="pageTheme"
         />
         <!-- <LogInForm @success="router.visit('/')" /> -->
