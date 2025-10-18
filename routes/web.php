@@ -90,6 +90,24 @@ Route::get("/", function () {
     ]);
 });
 
+Route::get("/atlas", function () {
+
+    return Inertia::render("Atlas/Index", [
+        "metaTitle" => "Atlas | ".request()->getHost(),
+        "metaDescription" => "Geo-temporal navigation through time and place.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/autonomy", function () {
+
+    return Inertia::render("Autonomy/Index", [
+        "metaTitle" => "Autonomy | ".request()->getHost(),
+        "metaDescription" => "Platform technology for sovereign systems.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/bluewater", function () {
 
     return Inertia::render("Bluewater/Index", [
@@ -106,6 +124,30 @@ Route::get("/codex", function () {
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
+
+Route::get("/gallery", function () {
+
+    return Inertia::render("Gallery/Index", [
+        "metaTitle" => "Gallery | ".request()->getHost(),
+        "metaDescription" => "Visual record of place, practice, and unfolding.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/synthesis", function () {
+
+    return Inertia::render("Synthesis/Index", [
+        "metaTitle" => "Synthesis | ".request()->getHost(),
+        "metaDescription" => "Recursive reflections clustered by signal density.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+
+
+
+
+
 
 Route::get("/codex/anchors", function () {
     return Inertia::render("Codex/Anchors", [

@@ -121,9 +121,10 @@
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
                 <div class="mb-4 text-center text-sm text-gray-600">
                     <div class="leading-loose">
-                        <div>This is a <Lexicon term="post-collapse">post-collapse</Lexicon>, <Lexicon term="post-fragmentation">post-fragmentation</Lexicon>, <Lexicon term="post-institutional">post-institutional</Lexicon> interface.</div>
+                        <div class="text-lg font-bold leading-tighter">Built with <Link href="/autonomy" class="text-md underline">Autonomy</Link> &mdash; infrastructure for sovereign systems.</div>
+                        <div class="mt-4">This is a <Lexicon term="post-collapse">post-collapse</Lexicon>, <Lexicon term="post-fragmentation">post-fragmentation</Lexicon>, <Lexicon term="post-institutional">post-institutional</Lexicon> interface.</div>
                         <div>A living system for <Lexicon term="coherence">coherence</Lexicon>, not content &mdash; built to hold <Lexicon term="signal">signal</Lexicon> when the world forgets how.</div>
-                        <div class="italic">Not a site. A system. Not for display. For resonance.</div>
+                        <div class="italic">Not a site. A system. Not for display. For resonance. For demonstration. For possibility.</div>
                     </div>
                 </div>
 
@@ -134,7 +135,7 @@
                             <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                                 <Icon name="Layers" color="text-black" class="w-4 h-4" /> ABOUT
                             </h3>
-                            <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those preparing for post-institutional sovereignty.</div>
+                            <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those building post-institutional sovereignty.</div>
                             <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Begin with orientation.<br/>Begin by listening.</em></div>
                         </div>
                     </Link>
@@ -154,7 +155,7 @@
                             <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
                                 <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> CONTRIBUTE
                             </h3>
-                            <div class="text-gray-600 text-sm flex-1">Needed and necessary financial support for maintaining this infrastructure and developing new tools.</div>
+                            <div class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools.</div>
                             <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Your contributions have a tangible impact on the field.</em></div>
                         </div>
                     </Link>
@@ -272,20 +273,24 @@ async function handleLogout() {
 }
 
 const itemsField = [
-    { label: "HOME",      icon: "Radar",       color: "text-stone-400", bg: "bg-stone-100", border: "border-stone-300",    hover: "hover:bg-stone-200",  url: "/",      blurb: "Field entry point. Orientation for first contact." },
-    { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",     url: "/hello", blurb: "Foundational identity. The sovereign node." },
-    { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100",  url: "/tech",  blurb: "Builder of systems. Steward of depth." },
-    { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200",  hover: "hover:bg-yellow-100", url: "/myth",  blurb: "Pattern recognition through lived narrative." },
+    /*{ label: "HOME",      icon: "Radar",       color: "text-stone-400",  bg: "bg-stone-100", border: "border-stone-300",   hover: "hover:bg-stone-200",   url: "/",      blurb: "Field entry point. Orientation for first contact." },*/
+    { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",     hover: "hover:bg-red-100",     url: "/hello", blurb: "Foundational identity. The sovereign node." },
+    { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200",  hover: "hover:bg-purple-100",  url: "/tech",  blurb: "Builder of systems. Steward of depth." },
+    { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200",  hover: "hover:bg-yellow-100",  url: "/myth",  blurb: "Pattern recognition through lived narrative." },
+    { label: "ATLAS",     icon: "MapPinHouse",      color: "text-sky-400",  bg: "bg-sky-50",  border: "border-sky-200",   hover: "hover:bg-sky-100",   url: "/atlas", blurb: "Geo-temporal navigation through time and place." },
+    { label: "SANCTUM",       icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctum",    blurb: "Relational space. Subscription service." },
 ]
 
 const itemsSignal = [
-    { label: "SANCTUM",       icon: "Sprout",        color: "text-indigo-400", bg: "bg-indigo-50", border: "border-indigo-200", hover: "hover:bg-indigo-100", url: "/sanctum",    blurb: "Relational space. Subscription service." },
     { label: "FIELDCRAFT",    icon: "Map",           color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/fieldcraft",   blurb: "Real-time documentation of lived practice." },
     { label: "TRANSMISSIONS", icon: "SatelliteDish", color: "text-pink-400",   bg: "bg-pink-50",   border: "border-pink-200",   hover: "hover:bg-pink-100",   url: "/transmission", blurb: "Uncompressed signal. First-language dispatches." },
     { label: "SIGNALS",       icon: "Activity",      color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/signal",       blurb: "Anchored expressions. Durable signal after resonance." },
+    { label: "GALLERY",       icon: "GalleryHorizontal",        color: "text-orange-400", bg: "bg-orange-50", border: "border-orange-200", hover: "hover:bg-orange-100", url: "/gallery",    blurb: "Visual record of place, practice, and unfolding." },
+    { label: "SYNTHESIS",     icon: "Crosshair",        color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/synthesis",    blurb: "Emergent patterns. Clustered signals by time and theme." },
 ]
 
 const itemsReference = [
+    { label: "AUTONOMY",  icon: "Cpu",      color: "text-red-400",  bg: "bg-red-50",  border: "border-red-200",   hover: "hover:bg-red-100",   url: "/autonomy", blurb: "Platform technology for sovereign systems." },
     { label: "CODEX",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
     { label: "LEXICON",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
     { label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },

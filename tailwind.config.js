@@ -22,15 +22,19 @@ export default {
     theme: {
         extend: {
             colors: {
+                atlas: colors.sky,
+                autonomy: colors.red,
                 bluewater: colors.blue,
                 codex: colors.amber,
                 companion: colors.gray,
                 fieldcraft: colors.indigo,
+                gallery: colors.orange,
                 honeyman: colors.emerald,
                 lexicon: colors.orange,
                 myth: colors.amber,
                 rswfire: colors.red,
                 signal: colors.sky,
+                synthesis: colors.purple,
                 tech: colors.purple,
                 transmission: colors.rose,
             },
@@ -42,3 +46,11 @@ export default {
 
     plugins: [forms],
 };
+// tailwind.config.js
+theme: {
+    extend: {
+        colors: {
+
+        }
+    }
+}

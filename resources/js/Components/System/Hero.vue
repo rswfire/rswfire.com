@@ -47,23 +47,29 @@ const titleAlignClass = computed(() => {
 })
 
 const themeIcons = [
-  { label: "About",         icon: "Layers",           color: "text-black",     bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/about" },
-  { label: "Contact",       icon: "MessageSquareDot", color: "text-black",     bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/contact" },
-  { label: "Contribute",    icon: "HandCoins",        color: "text-black",      bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/contribute" },
-  { label: "Updates",       icon: "Squirrel",         color: "text-black",      bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/updates" },
+    { label: "About",         icon: "Layers",           color: "text-black",     bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/about" },
+    { label: "Contact",       icon: "MessageSquareDot", color: "text-black",     bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/contact" },
+    { label: "Contribute",    icon: "HandCoins",        color: "text-black",      bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/contribute" },
+    { label: "Updates",       icon: "Squirrel",         color: "text-black",      bg: "bg-white",          border: "border-black",           hover: "hover:bg-white",           url: "/updates" },
 
-  { label: "Home",          icon: "Radar",          color: "text-indigo-400",  bg: "bg-indigo-50",      border: "border-indigo-200",      hover: "hover:bg-indigo-100",      url: "/" },
-  { label: "Hello",         icon: "Flame",          color: "text-red-400",     bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/hello" },
-  { label: "Tech",          icon: "Hammer",         color: "text-purple-400",  bg: "bg-purple-50",      border: "border-purple-200",      hover: "hover:bg-purple-100",      url: "/tech" },
-  { label: "Signals",       icon: "Activity",       color: "text-sky-400",     bg: "bg-sky-50",         border: "border-sky-200",         hover: "hover:bg-sky-100",         url: "/signal" },
-  { label: "Transmissions", icon: "SatelliteDish",  color: "text-pink-400",    bg: "bg-pink-50",        border: "border-pink-200",        hover: "hover:bg-pink-100",        url: "/transmission" },
-  { label: "Fieldcraft",    icon: "Map",            color: "text-green-500",   bg: "bg-green-50",       border: "border-green-200",       hover: "hover:bg-green-100",       url: "/fieldcraft" },
-  { label: "Codex",         icon: "SquareCode",     color: "text-amber-400",   bg: "bg-amber-50",       border: "border-amber-200",       hover: "hover:bg-amber-100",       url: "/codex" },
-  { label: "Sanctum",     icon: "Sprout",         color: "text-teal-400",    bg: "bg-teal-50",        border: "border-teal-200",        hover: "hover:bg-teal-100",        url: "/sanctum" },
-  { label: "Lexicon",       icon: "SquareLibrary",  color: "text-orange-400",  bg: "bg-orange-50",      border: "border-orange-200",      hover: "hover:bg-orange-100",      url: "/lexicon" },
-  { label: "Myth",          icon: "ShieldCheck",    color: "text-yellow-400",  bg: "bg-yellow-50",      border: "border-yellow-200",      hover: "hover:bg-yellow-100",      url: "/myth" },
-  { label: "Honeyman",      icon: "TreeDeciduous",  color: "text-emerald-400", bg: "bg-emerald-50",     border: "border-emerald-200",     hover: "hover:bg-emerald-100",     url: "/honeyman" },
-  { label: "Bluewater",     icon: "WavesLadder",    color: "text-blue-400",    bg: "bg-blue-50",        border: "border-blue-200",        hover: "hover:bg-blue-100",        url: "/bluewater" },
+    { label: "Home",          icon: "Radar",          color: "text-indigo-400",  bg: "bg-indigo-50",      border: "border-indigo-200",      hover: "hover:bg-indigo-100",      url: "/" },
+    { label: "Hello",         icon: "Flame",          color: "text-red-400",     bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/hello" },
+    { label: "Tech",          icon: "Hammer",         color: "text-purple-400",  bg: "bg-purple-50",      border: "border-purple-200",      hover: "hover:bg-purple-100",      url: "/tech" },
+    { label: "Myth",          icon: "ShieldCheck",    color: "text-yellow-400",  bg: "bg-yellow-50",      border: "border-yellow-200",      hover: "hover:bg-yellow-100",      url: "/myth" },
+    { label: "Atlas",     icon: "MapPinHouse",         color: "text-sky-400",    bg: "bg-sky-50",        border: "border-sky-200",        hover: "hover:bg-sky-100",        url: "/atlas" },
+    { label: "Sanctum",     icon: "Sprout",         color: "text-teal-400",    bg: "bg-teal-50",        border: "border-teal-200",        hover: "hover:bg-teal-100",        url: "/sanctum" },
+
+    { label: "Fieldcraft",    icon: "Map",            color: "text-green-500",   bg: "bg-green-50",       border: "border-green-200",       hover: "hover:bg-green-100",       url: "/fieldcraft" },
+    { label: "Transmissions", icon: "SatelliteDish",  color: "text-pink-400",    bg: "bg-pink-50",        border: "border-pink-200",        hover: "hover:bg-pink-100",        url: "/transmission" },
+    { label: "Signals",       icon: "Activity",       color: "text-sky-400",     bg: "bg-sky-50",         border: "border-sky-200",         hover: "hover:bg-sky-100",         url: "/signal" },
+    { label: "Gallery",       icon: "GalleryHorizontal",       color: "text-orange-400",     bg: "bg-orange-50",         border: "border-orange-200",         hover: "hover:bg-orange-100",         url: "/gallery" },
+    { label: "Synthesis",       icon: "Crosshair",       color: "textpurple-400",     bg: "bg-purple-50",         border: "border-purple-200",         hover: "hover:bg-purple-100",         url: "/synthesis" },
+
+    { label: "Autonomy",         icon: "Cpu",          color: "text-red-400",     bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/autonomy" },
+    { label: "Codex",         icon: "SquareCode",     color: "text-amber-400",   bg: "bg-amber-50",       border: "border-amber-200",       hover: "hover:bg-amber-100",       url: "/codex" },
+    { label: "Lexicon",       icon: "SquareLibrary",  color: "text-orange-400",  bg: "bg-orange-50",      border: "border-orange-200",      hover: "hover:bg-orange-100",      url: "/lexicon" },
+    { label: "Bluewater",     icon: "WavesLadder",    color: "text-blue-400",    bg: "bg-blue-50",        border: "border-blue-200",        hover: "hover:bg-blue-100",        url: "/bluewater" },
+    { label: "Honeyman",      icon: "TreeDeciduous",  color: "text-emerald-400", bg: "bg-emerald-50",     border: "border-emerald-200",     hover: "hover:bg-emerald-100",     url: "/honeyman" },
 
 ]
 
