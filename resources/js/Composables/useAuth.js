@@ -139,4 +139,37 @@ export function useAuth() {
         isAuthenticated: () => !!token.value,
     }
 
+    async function authFetch(url, options = {}) {
+        if (!token.value) {
+            console.warn('No auth token found; request may be unauthorized.')
+        }
+
+        const headers = {
+            ...(options.headers || {}),
+            'Accept': 'application/json',
+        }
+
+        if (token.value) {
+            headers['Authorization'] = `Bearer ${token.value}`
+        }
+
+        return fetch(url, {
+            ...options,
+            headers,
+        })
+    }
+
+    return {
+        user,
+        token,
+        loading,
+        login,
+        register,
+        logout,
+        fetchUser,
+        init,
+        authFetch,
+        isAuthenticated: () => !!token.value,
+    }
+
 }

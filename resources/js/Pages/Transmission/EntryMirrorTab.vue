@@ -1,16 +1,32 @@
 <template>
-    <div>
-        <!-- Reflection Tabs -->
-        <div class="p-4">
+    <div class="p-4">
+        <!-- Unauthenticated / Unauthorized -->
+        <div v-if="!canAccessMirror" class="max-w-md mx-auto py-12 text-center">
+            <h3 class="text-lg font-semibold mb-3">Sign in to access the Mirror</h3>
+            <p class="text-gray-500 text-sm mb-6">
+                The Mirror reflections are available to Sanctum members only.
+            </p>
+
+            <LogInForm
+                :show-register-link="true"
+                @success="handleLoginSuccess"
+            />
+        </div>
+
+        <!-- Authenticated / Authorized -->
+        <div v-else>
+            <!-- Reflection Tabs -->
             <div class="flex border-b border-gray-300 space-x-6 text-sm">
                 <button
                     v-for="tab in reflectionTabs"
                     :key="tab.key"
                     @click="activeTab = tab.key"
                     :class="[
-              'pb-2 flex items-center gap-2',
-              activeTab === tab.key ? 'border-black border-b-2 font-semibold text-black' : 'text-gray-400'
-            ]"
+            'pb-2 flex items-center gap-2',
+            activeTab === tab.key
+              ? 'border-black border-b-2 font-semibold text-black'
+              : 'text-gray-400'
+          ]"
                 >
                     <span v-if="tab.locked" class="text-xs">🔒</span>
                     {{ tab.label }}
@@ -19,30 +35,46 @@
 
             <!-- Tab Content -->
             <div class="mt-6">
-
-                <!-- Direct Tab -->
-                <div v-if="activeTab === 'direct' && reflection?.mirror" class="max-w-4xl">
-                    <div class="grid grid-cols-1 gap-4">
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Direct</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)" />
-                    </div>
+                <div
+                    v-if="activeTab === 'direct' && reflection?.mirror"
+                    class="max-w-4xl"
+                >
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                        Direct
+                    </h4>
+                    <div
+                        class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4"
+                        v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_direct)"
+                    />
                 </div>
 
-                <div v-else-if="activeTab === 'recognition' && reflection?.mirror" class="max-w-4xl">
-                    <div class="grid grid-cols-1 gap-4">
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Recognition</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)" />
-                    </div>
+                <div
+                    v-else-if="activeTab === 'recognition' && reflection?.mirror"
+                    class="max-w-4xl"
+                >
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                        Recognition
+                    </h4>
+                    <div
+                        class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4"
+                        v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_recognition)"
+                    />
                 </div>
 
-                <div v-else-if="activeTab === 'becoming' && reflection?.mirror" class="max-w-4xl">
-                    <div class="grid grid-cols-1 gap-4">
-                        <h4 class="text-xs uppercase tracking-widest text-gray-500">Becoming</h4>
-                        <div class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4" v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)" />
-                    </div>
+                <div
+                    v-else-if="activeTab === 'becoming' && reflection?.mirror"
+                    class="max-w-4xl"
+                >
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                        Becoming
+                    </h4>
+                    <div
+                        class="prose prose-sm max-w-none text-gray-800 [&>p]:my-4"
+                        v-html="renderMarkdown(reflection.mirror.reflection_content.mirror_becoming)"
+                    />
                 </div>
 
-                <!-- No Data -->
+                <!-- Fallback -->
                 <div v-else class="text-gray-400 italic text-sm">
                     No mirror data available for this tab.
                 </div>
@@ -52,22 +84,47 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import MarkdownIt from 'markdown-it'
+import LogInForm from '@/Components/Auth/LogInForm.vue'
+import { useAuth } from '@/Composables/useAuth'
 
 const props = defineProps({
     transmission: Object,
     reflection: Object,
 })
 
+/**
+ * Auth & access control
+ */
+const auth = useAuth()
+
+// Determine whether user has access to mirror reflections
+const canAccessMirror = computed(() => {
+    // Must be authenticated and have Sanctum role of 'free' or 'paid'
+    const sanctum = auth.user.value?.user_sanctum ?? 'none'
+    return sanctum === 'free' || sanctum === 'paid'
+})
+
+function handleLoginSuccess() {
+    // Re-fetch user or reload page content as needed
+    auth.fetchUser()
+}
+
+/**
+ * Mirror Tabs
+ */
 const reflectionTabs = [
     { key: 'direct', label: 'Direct Mirror', locked: true },
     { key: 'recognition', label: 'Recognition', locked: true },
-    { key: 'becoming', label: 'Becoming', locked: true }
+    { key: 'becoming', label: 'Becoming', locked: true },
 ]
 
 const activeTab = ref('direct')
 
+/**
+ * Markdown rendering
+ */
 const md = new MarkdownIt({ html: true, breaks: true, linkify: true })
 
 function stripUnsafe(html = '') {

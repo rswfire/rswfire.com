@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransmissionController;
 use App\Models\Content;
 use App\Http\Controllers\Lexicon;
 use App\Models\Transmission;
@@ -63,17 +64,7 @@ Route::get("/", function () {
     $page = request()->get("page", 1);
     $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
 
-    $response = Http::get(env("API_DOMAIN")."/api/transmissions", [
-        "domain" => $domain,
-        "page" => $page,
-        "perPage" => 3,
-    ]);
-
-    if ($response->failed()) {
-        abort(500, "Unable to fetch transmissions.");
-    }
-
-    $transmissions = $response->json();
+    $transmissions = [];
 
     $fieldcraft = DB::table("content")
         ->where("content_type", "fieldcraft")
@@ -606,106 +597,9 @@ Route::get("/tech", function () {
 });
 
 
-Route::get("/transmission", function () {
-    $page = request()->get("page", 1);
-    $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
-
-    $response = Http::get(env("API_DOMAIN")."/api/transmissions", [
-        "domain" => $domain,
-        "page" => $page,
-        "perPage" => 24,
-    ]);
-
-    if ($response->failed()) {
-        abort(500, "Unable to fetch transmissions.");
-    }
-
-    $transmissions = $response->json();
-
-    return Inertia::render("Transmission/Index", [
-        "transmissions" => $transmissions,
-        "metaTitle" => "Transmission Vault | " . request()->getHost(),
-        "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
-    ]);
-});
-
-Route::get("/transmission/{id}", function ($id) {
-    $domain = app()->environment("production") ? "rswfire.com" : "rswfire.local";
-
-    $transmissionResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}", [
-        "domain" => $domain,
-    ]);
-
-    if ($transmissionResponse->failed()) {
-        abort(404, "Transmission not found.");
-    }
-
-    $transmission = $transmissionResponse->json();
-
-    $isPrivate = data_get($transmission, "signal_metadata.stats.is_private", false);
-    if ($isPrivate && (!auth()->check() || auth()->id() !== 1)) {
-        abort(404, "Transmission not found.");
-    }
-
-    $navResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}/neighbors", [
-        "domain" => $domain,
-    ]);
-
-    if ($navResponse->failed()) {
-        abort(500, "Failed to fetch transmission neighbors.");
-    }
-
-    $neighbors = $navResponse->json();
-
-      $reflectionResponse = Http::get(env("API_DOMAIN")."/api/reflection/{$id}");
-
-    $reflection = $reflectionResponse->successful()
-        ? $reflectionResponse->json()
-        : null;
-
-    $timelineResponse = Http::get(env("API_DOMAIN")."/api/transmission/{$id}/timeline", [
-        "domain" => $domain,
-        "months" => 1,
-        "limit"  => 240,
-    ]);
-    $timeline = $timelineResponse->successful() ? $timelineResponse->json() : ["items" => []];
-
-    return Inertia::render("Transmission/Entry", [
-        "transmission" => $transmission,
-        "isPortrait" => (bool) (
-            data_get($transmission, "signal_metadata.flags.is_portrait", false) ??
-            data_get($transmission, "signal_metadata.flags.is_portrait-view", false)
-        ),        "previous" => $neighbors["previous"] ?? null,
-        "next" => $neighbors["next"] ?? null,
-        "timeline" => $timeline ?? null,
-
-        "reflection" => $reflection,
-        "metaTitle" => $transmission["signal_title"] . " (" . date("F d, Y", strtotime($transmission["stamp_created"])) . ") | " . request()->getHost(),
-        "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost() . request()->getPathInfo(),
-    ]);
-});
-
-
-Route::get("/transmission/tag/{tag}", function ($tag) {
-
-    $transmissions = Transmission::where("flag_public", 1)
-        ->whereJsonContains("transmission_tags", $tag)
-        ->orderByDesc("stamp_published")
-        ->paginate(24)
-        ->onEachSide(1)
-        ->withQueryString();
-
-    return Inertia::render("Transmission/Tag", [
-        "transmissions" => $transmissions,
-        "tag" => $tag,
-        "metaTitle" => $tag." | Tag | Transmission Vault | ".request()->getHost(),
-        "metaDescription" => "",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
-    ]);
-
-});
+Route::get('/transmission', [TransmissionController::class, 'index']);
+Route::get('/transmission/{ulid}', [TransmissionController::class, 'show']);
+Route::get('/transmission/tag/{tag}', [TransmissionController::class, 'tag']);
 
 Route::get("/dashboard", function () {
     return Inertia::render("Dashboard");

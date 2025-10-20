@@ -1,12 +1,17 @@
 <template>
-    <div class="w-full max-w-md">
-        <div v-if="error" class="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-600">
-            {{ error }}
+    <div class="w-full max-w-md mx-auto">
+        <!-- Error message -->
+        <div v-if="error" class="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+            <div class="flex items-start gap-3">
+                <Icon name="AlertCircle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div class="text-sm text-red-700">{{ error }}</div>
+            </div>
         </div>
 
-        <form @submit.prevent="handleLogin" class="space-y-4">
+        <form @submit.prevent="handleLogin" class="space-y-5">
+            <!-- Email -->
             <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">
                     Email
                 </label>
                 <input
@@ -14,13 +19,15 @@
                     v-model="form.email"
                     type="email"
                     required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="your@email.com"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:bg-gray-50 disabled:text-gray-400"
                     :disabled="loading"
                 />
             </div>
 
+            <!-- Password -->
             <div>
-                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
+                <label for="password" class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">
                     Password
                 </label>
                 <input
@@ -28,41 +35,51 @@
                     v-model="form.password"
                     type="password"
                     required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="••••••••"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition disabled:bg-gray-50 disabled:text-gray-400"
                     :disabled="loading"
                 />
             </div>
 
+            <!-- Submit button -->
             <button
                 type="submit"
                 :disabled="loading"
-                class="w-full px-4 py-2 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                class="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md"
             >
-                {{ loading ? 'Signing in...' : 'Sign In' }}
+                <span v-if="loading" class="flex items-center justify-center gap-2">
+                    <Icon name="Loader2" class="w-4 h-4 animate-spin" />
+                    Signing in...
+                </span>
+                <span v-else>Sign In</span>
             </button>
         </form>
 
-        <div v-if="showRegisterLink" class="mt-4 text-center text-sm text-gray-600">
-            Don't have an account?
-            <button @click="$emit('switch-to-register')" class="text-orange-600 hover:underline font-medium">
-                Register
-            </button>
+        <!-- Register link (optional) -->
+        <div v-if="showRegisterLink" class="mt-6 pt-6 border-t border-gray-200 text-center">
+            <p class="text-sm text-gray-600">
+                Don't have an account?
+                <button
+                    @click="handleSwitchToRegister"
+                    class="text-orange-600 hover:text-orange-700 font-semibold hover:underline transition ml-1"
+                >
+                    Create one
+                </button>
+            </p>
         </div>
     </div>
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue'
+import { router } from '@inertiajs/vue3'
+import Icon from '@/Components/System/Icon.vue'
 import { useAuth } from '@/Composables/useAuth'
 
-defineProps({
-    showRegisterLink: {
-        type: Boolean,
-        default: true
-    }
+const props = defineProps({
+    showRegisterLink: { type: Boolean, default: true },
+    redirectAfterLogin: { type: String, default: '/' }
 })
-
-const emit = defineEmits(['success', 'switch-to-register'])
 
 const auth = useAuth()
 const loading = ref(false)
@@ -79,11 +96,15 @@ async function handleLogin() {
 
     try {
         await auth.login(form.email, form.password)
-        emit('success')
+        window.location.reload() // Full reload of current page
     } catch (e) {
         error.value = e.message || 'Login failed. Please check your credentials.'
     } finally {
         loading.value = false
     }
+}
+
+function handleSwitchToRegister() {
+    router.visit('/sanctum')
 }
 </script>
