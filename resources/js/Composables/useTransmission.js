@@ -31,7 +31,7 @@ export function useTransmission() {
             const [txRes, rfRes, nbRes, tlRes] = await Promise.all([
                 fetch(`${apiBase}/transmission/${ulid}`, { headers }),
                 fetch(`${apiBase}/reflection/${ulid}`, { headers }),
-                fetch(`${apiBase}/transmission/${ulid}/neighbors`, { headers }),
+                fetch(`${apiBase}/transmission/${ulid}/neighbors?domain=${domain}`, { headers }),
                 fetch(`${apiBase}/transmission/${ulid}/timeline?domain=${domain}`, { headers })
             ])
 

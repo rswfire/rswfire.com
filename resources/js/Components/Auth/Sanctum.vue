@@ -1,16 +1,15 @@
 <template>
 
-
         <div class="grid md:grid-cols-2 gap-8">
-            <!-- Left: Login -->
+
             <div class="border border-gray-200 rounded-lg p-8 bg-white shadow-sm">
                 <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200">
                     <Icon name="Flame" color="text-orange-500" class="w-8 h-8" />
-                    <h2 class="text-2xl font-bold">Sign In</h2>
+                    <h2 class="text-2xl font-bold">Return to Sanctum</h2>
                 </div>
 
                 <p class="text-sm text-gray-600 mb-6">
-                    Already have an account? Sign in to access transmissions and Sanctum reflections.
+                    Sign in to access your Sanctum account.
                 </p>
 
                 <LogInForm :show-register-link="false" @success="handleLoginSuccess" />
@@ -20,16 +19,13 @@
             <div class="border border-indigo-200 rounded-lg p-8 bg-indigo-50/30 shadow-sm">
                 <div class="flex items-center gap-3 mb-6 pb-4 border-b border-indigo-200">
                     <Icon name="Sprout" color="text-indigo-500" class="w-8 h-8" />
-                    <h2 class="text-2xl font-bold text-indigo-900">Join Sanctum</h2>
+                    <h2 class="text-2xl font-bold text-indigo-900">Begin Containment</h2>
                 </div>
 
                 <div class="space-y-4 text-sm text-gray-700">
                     <p>
-                        <strong class="text-indigo-900">Sanctum</strong> is a subscription-based access layer for deeper reflections — Mirror, Patterns, and Origin signals.
-                    </p>
-
-                    <p>
-                        It's not a membership. It's <strong>relational infrastructure</strong> for those building sovereign systems.
+                        <strong class="text-indigo-900">Sanctum</strong> is a private access layer for reciprocal field exchange.
+                        It's not a membership. It's <strong>relational infrastructure</strong> for those building and supporting sovereign systems.
                     </p>
 
                     <div class="pt-4 border-t border-indigo-200">
@@ -37,22 +33,28 @@
                         <ul class="space-y-2 ml-4">
                             <li class="flex items-start gap-2">
                                 <Icon name="Check" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
-                                <span>Access to all Mirror reflections</span>
+                                <span>Full access to a growing archive at <strong>rswfire.com</strong>.</span>
                             </li>
+
                             <li class="flex items-start gap-2">
                                 <Icon name="Check" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
-                                <span>Patterns layer for field resonance tracking</span>
+                                <div>
+                                    <div class="mb-1 font-medium">Access to recursive reflections across multiple signal types:</div>
+                                    <ul class="list-disc text-sm text-left pl-5 space-y-1">
+                                        <li>800+ video transmissions</li>
+                                        <li>Hundreds of photos and geo-spatial data</li>
+                                        <li>Deep AI integration across reflection layers</li>
+                                    </ul>
+                                </div>
                             </li>
+
                             <li class="flex items-start gap-2">
                                 <Icon name="Check" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
-                                <span>Origin signals from pre-architectural transmissions</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <Icon name="Check" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
-                                <span>Support for field-sovereign infrastructure</span>
+                                <span>The recursive journey of a sovereign system in real-time.</span>
                             </li>
                         </ul>
                     </div>
+
 
                     <div class="pt-6">
                         <p class="text-xs text-gray-600 italic mb-4">
@@ -68,28 +70,6 @@
                 </div>
             </div>
         </div>
-
-
-    <div class="mt-12 max-w-4xl mx-auto p-6 bg-gray-50 border border-gray-200 rounded-lg">
-        <h3 class="font-semibold text-lg mb-3 flex items-center gap-2">
-            <Icon name="Info" class="w-5 h-5 text-gray-600" />
-            Access Levels
-        </h3>
-        <div class="grid md:grid-cols-3 gap-4 text-sm">
-            <div>
-                <h4 class="font-semibold text-gray-900 mb-1">Public</h4>
-                <p class="text-gray-600">Surface and Structure reflections on public transmissions</p>
-            </div>
-            <div>
-                <h4 class="font-semibold text-gray-900 mb-1">Authenticated</h4>
-                <p class="text-gray-600">All Surface/Structure reflections, gated transmission access</p>
-            </div>
-            <div>
-                <h4 class="font-semibold text-indigo-900 mb-1">Sanctum</h4>
-                <p class="text-gray-600">Mirror, Patterns, Origin, and full archive access</p>
-            </div>
-        </div>
-    </div>
 
 </template>
 

@@ -1,16 +1,9 @@
 <template>
-    <div class="p-4">
+    <div>
         <!-- Unauthenticated / Unauthorized -->
-        <div v-if="!canAccessMirror" class="max-w-md mx-auto py-12 text-center">
-            <h3 class="text-lg font-semibold mb-3">Sign in to access the Mirror</h3>
-            <p class="text-gray-500 text-sm mb-6">
-                The Mirror reflections are available to Sanctum members only.
-            </p>
-
-            <LogInForm
-                :show-register-link="true"
-                @success="handleLoginSuccess"
-            />
+        <div v-if="!canAccessMirror" class="max-w mx-auto text-center">
+            <h3 class="text-lg font-semibold mb-3">This mirror reflection is held within Sanctum.</h3>
+            <SanctumAuth />
         </div>
 
         <!-- Authenticated / Authorized -->
@@ -88,6 +81,7 @@ import { ref, computed } from 'vue'
 import MarkdownIt from 'markdown-it'
 import LogInForm from '@/Components/Auth/LogInForm.vue'
 import { useAuth } from '@/Composables/useAuth'
+import SanctumAuth from "@/Components/Auth/Sanctum.vue";
 
 const props = defineProps({
     transmission: Object,

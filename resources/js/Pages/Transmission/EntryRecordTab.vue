@@ -1,6 +1,7 @@
 <template>
     <div>
         <div v-if="!isPublicTransmission && !auth.user.value" class="max-w mx-auto text-center">
+            <h3 class="text-lg font-semibold mb-3">This transmission is held within Sanctum.</h3>
             <SanctumAuth />
         </div>
 
@@ -118,15 +119,9 @@
                 <!-- Tab Content -->
                 <div class="mt-4 px-4">
                     <!-- 🔒 Patterns tab requires Sanctum access -->
-                    <div v-if="activeTab === 'patterns' && !canAccessPatterns" class="max-w-md mx-auto py-12 text-center">
-                        <h3 class="text-lg font-semibold mb-3">Sanctum Access Required</h3>
-                        <p class="text-gray-500 text-sm mb-6">
-                            The Patterns reflection is reserved for Sanctum members.
-                        </p>
-                        <SanctumAuth v-if="!auth.user.value" />
-                        <p v-else class="text-sm text-gray-600">
-                            Your account does not have Sanctum access. Please upgrade to view this reflection.
-                        </p>
+                    <div v-if="activeTab === 'patterns' && !canAccessPatterns" class="max-w mx-auto text-center">
+                        <h3 class="text-lg font-semibold mb-3">This reflection is held within Sanctum.</h3>
+                        <SanctumAuth />
                     </div>
 
                     <!-- Surface Tab -->

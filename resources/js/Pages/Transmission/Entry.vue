@@ -3,7 +3,7 @@
         <!-- Hero -->
         <Hero
             v-if="!loading && transmission"
-            :title="transmission?.signal_title || 'Untitled Transmission'"
+            :title="reflection?.surface?.reflection_content?.title || transmission?.signal_title || 'Untitled Transmission'"
             :subtitle="transmission?.signal_ulid || 'TRANSMISSION'"
             :meta="formatDate(transmission?.stamp_created) || 'NULL'"
             :theme="pageTheme"
@@ -131,14 +131,14 @@ const mainTabs = [
         icon: 'FlaskConical',
         color: 'text-sky-400',
         background: 'bg-sky-400',
-    },
+    }/*,
     {
         key: 'Sanctum',
         label: 'Sanctum',
         icon: 'Sprout',
         color: 'text-indigo-400',
         background: 'bg-indigo-400',
-    }
+    }*/
 ]
 
 const activeMainTab = ref('Transmission')

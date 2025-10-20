@@ -26,7 +26,7 @@
         </section>
 
         <div v-if="loading" class="py-16 text-center text-gray-400">
-            Loading transmissions...
+            Loading Transmissions...
         </div>
 
         <div v-else-if="error" class="py-16 text-center text-red-600">
@@ -42,7 +42,7 @@
                     :key="transmission.signal_id"
                     @click="goTo(transmission.signal_ulid)"
                     class="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
-                    :class="transmission.structure_visibility === 'sanctum' ? 'bg-amber-50' : 'bg-white'"
+                    :class="transmission.structure_visibility === 'sanctum' ? 'bg-indigo-50' : 'bg-white'"
                 >
                     <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                         <img
@@ -57,16 +57,16 @@
                             <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black truncate flex-1">
                                 {{ transmission.surface_title || transmission.signal_ulid }}
                             </h2>
-                            <span v-if="transmission.structure_visibility === 'sanctum'" class="text-sm flex-shrink-0">🔒</span>
+                            <div v-if="transmission.structure_visibility === 'sanctum'" class="text-sm flex-shrink-0"><Icon name="Sprout" class="text-indigo-400 w-[32px] h-[32px]" /></div>
                         </div>
-                        <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
-                            {{ transmission.signal_ulid }}
-                        </h3>
+
                         <p class="text-sm text-gray-600 line-clamp-3">
                             {{ transmission.timestamp_context || 'No context available' }}
                         </p>
-
-                        <!-- Symbolic Elements -->
+                        <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
+                            {{ transmission.signal_ulid }}
+                        </h3>
+                        <!--
                         <div v-if="transmission.symbolic_elements?.length" class="space-y-1">
                             <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
                                 Symbolic Elements
@@ -81,8 +81,9 @@
                                 </span>
                             </div>
                         </div>
+                        -->
 
-                        <!-- Ontological States -->
+                        <!--
                         <div v-if="transmission.ontological_states?.length" class="space-y-1">
                             <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
                                 Ontological States
@@ -97,8 +98,9 @@
                                 </span>
                             </div>
                         </div>
+                        -->
 
-                        <!-- Engaged Subsystems -->
+                        <!--
                         <div v-if="transmission.engaged_subsystems?.length" class="space-y-1">
                             <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
                                 Engaged Subsystems
@@ -113,6 +115,7 @@
                                 </span>
                             </div>
                         </div>
+                        -->
 
                         <div class="text-xs text-gray-400 flex justify-between pt-2 border-t border-gray-100">
                             <span>{{ formatDate(transmission.stamp_created) }}</span>
@@ -134,6 +137,7 @@ import Hero from '@/Components/System/Hero.vue'
 import Content from '@/Components/System/Content.vue'
 import Pagination from '@/Components/System/Pagination.vue'
 import { useTransmissions } from '@/Composables/useTransmissions'
+import Icon from "@/Components/System/Icon.vue";
 
 const { transmissions, loading, error, loadIndex } = useTransmissions()
 
