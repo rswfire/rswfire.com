@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import { usePage } from '@inertiajs/vue3'
 import { useAuth } from '@/Composables/useAuth'
 
@@ -6,38 +6,50 @@ export function useTransmission() {
     const auth = useAuth()
     const apiBase = usePage().props.api_url.replace(/\/$/, '') + '/api'
 
-    const transmission = ref(null)
-    const reflection = ref(null)
-    const loading = ref(false)
-    const error = ref(null)
+    const state = reactive({
+        transmission: null,
+        reflection: null,
+        neighbors: { previous: null, next: null },
+        timeline: null,
+        loading: false,
+        error: null
+    })
 
     async function load(ulid) {
-        loading.value = true
-        error.value = null
+        state.loading = true
+        state.error = null
 
         try {
-            // Define shared headers
             const headers = { Accept: 'application/json' }
             if (auth.token.value) {
                 headers.Authorization = `Bearer ${auth.token.value}`
             }
 
-            // Fetch transmission
-            const txRes = await fetch(`${apiBase}/transmission/${ulid}`, { headers })
-            if (!txRes.ok) throw new Error(`Transmission request failed: ${txRes.status}`)
-            transmission.value = await txRes.json()
+            const domain = usePage().props.domain || 'rswfire.com'
 
-            // Fetch reflection
-            const rfRes = await fetch(`${apiBase}/reflection/${ulid}`, { headers })
-            reflection.value = rfRes.ok ? await rfRes.json() : {}
+            // Fetch all endpoints in parallel
+            const [txRes, rfRes, nbRes, tlRes] = await Promise.all([
+                fetch(`${apiBase}/transmission/${ulid}`, { headers }),
+                fetch(`${apiBase}/reflection/${ulid}`, { headers }),
+                fetch(`${apiBase}/transmission/${ulid}/neighbors`, { headers }),
+                fetch(`${apiBase}/transmission/${ulid}/timeline?domain=${domain}`, { headers })
+            ])
+
+            // Process responses
+            if (!txRes.ok) throw new Error(`Transmission request failed: ${txRes.status}`)
+            state.transmission = await txRes.json()
+
+            state.reflection = rfRes.ok ? await rfRes.json() : {}
+            state.neighbors = nbRes.ok ? await nbRes.json() : { previous: null, next: null }
+            state.timeline = tlRes.ok ? await tlRes.json() : null
 
         } catch (e) {
             console.error('Error loading transmission:', e)
-            error.value = e.message || 'Failed to load transmission'
+            state.error = e.message || 'Failed to load transmission'
         } finally {
-            loading.value = false
+            state.loading = false
         }
     }
-
-    return { transmission, reflection, loading, error, load }
+    // Return the reactive state object AND the load function
+    return { state, load }
 }

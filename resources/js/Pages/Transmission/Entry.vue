@@ -2,21 +2,20 @@
     <Content :theme="pageTheme">
         <!-- Hero -->
         <Hero
-            v-if="!loading"
-            :title="reflection?.surface?.reflection_content?.title || transmission?.signal_ulid || 'Untitled Transmission'"
+            v-if="!loading && transmission"
+            :title="transmission?.signal_title || 'Untitled Transmission'"
             :subtitle="transmission?.signal_ulid || 'TRANSMISSION'"
             :meta="formatDate(transmission?.stamp_created) || 'NULL'"
             :theme="pageTheme"
             align="center"
         />
         <div v-else class="py-16 text-center text-gray-400">
-            Loading transmission...
+            Loading Transmission...
         </div>
 
         <!-- Main Content -->
-        <div v-if="!loading" class="mt-8">
+        <div v-if="!loading && transmission" class="mt-8">
             <div class="flex justify-between items-center border-b border-gray-200">
-
                 <!-- Tabs -->
                 <div class="flex space-x-4">
                     <button
@@ -25,10 +24,10 @@
                         @click="activeMainTab = tab.key"
                         class="group relative pb-3 -mb-px flex items-center gap-2 px-4 text-md font-semibold transition-colors"
                         :class="[
-              activeMainTab === tab.key
-                ? 'text-black'
-                : 'text-gray-400 hover:text-black'
-            ]"
+                            activeMainTab === tab.key
+                                ? 'text-black'
+                                : 'text-gray-400 hover:text-black'
+                        ]"
                     >
                         <Icon
                             :name="tab.icon"
@@ -45,7 +44,7 @@
                     </button>
                 </div>
 
-                <!-- Right-aligned container for return link + share buttons -->
+                <!-- Right-aligned container -->
                 <div class="flex items-center gap-2 ml-auto mr-4">
                     <Link
                         href="/transmission"
@@ -56,27 +55,13 @@
 
                     <span class="text-gray-300 mb-2">|</span>
 
-                    <template v-for="link in shareLinks" :key="link.name">
-                        <button
-                            v-if="!link.href"
-                            @click="link.action"
-                            class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 transition text-xs mb-2"
-                        >
-                            <Icon :name="link.icon" class="w-[16px] h-[16px] text-gray-500" />
-                            {{ link.name }}
-                        </button>
-
-                        <a
-                            v-else
-                            :href="link.href"
-                            target="_blank"
-                            rel="noopener"
-                            class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 transition text-xs"
-                        >
-                            <Icon :name="link.icon" class="w-[16px] h-[16px] text-gray-500" />
-                            {{ link.name }}
-                        </a>
-                    </template>
+                    <button
+                        @click="copyLink"
+                        class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 transition text-xs mb-2"
+                    >
+                        <Icon name="Link2" class="w-[16px] h-[16px] text-gray-500" />
+                        Copy Link
+                    </button>
                 </div>
             </div>
 
@@ -86,6 +71,9 @@
                     v-if="activeMainTab === 'Transmission'"
                     :transmission="transmission"
                     :reflection="reflection"
+                    :previous="neighbors?.previous"
+                    :next="neighbors?.next"
+                    :timeline="timeline"
                     :format-time="formatTime"
                 />
 
@@ -104,7 +92,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, toRefs } from 'vue'
 import { Link } from '@inertiajs/vue3'
 
 import Content from '@/Components/System/Content.vue'
@@ -116,20 +104,15 @@ import EntrySanctumTab from '@/Pages/Transmission/EntrySanctumTab.vue'
 
 import { useTransmission } from '@/Composables/useTransmission'
 
-/**
- * Props
- */
 const props = defineProps({
     ulid: String,
     domain: String
 })
 
-/**
- * Composables
- */
-const { transmission, reflection, loading, error, load } = useTransmission()
+const transmissionData = useTransmission()
+const { transmission, reflection, neighbors, timeline, loading, error } = toRefs(transmissionData.state)
 
-onMounted(() => load(props.ulid))
+onMounted(() => transmissionData.load(props.ulid))
 
 /**
  * Tabs
@@ -161,12 +144,13 @@ const mainTabs = [
 const activeMainTab = ref('Transmission')
 
 /**
- * Share links
+ * Copy link
  */
 const url = ref(window.location.href)
-const shareLinks = [
-    { name: 'Copy Link', icon: 'Link2', action: () => navigator.clipboard.writeText(url.value) },
-]
+
+function copyLink() {
+    navigator.clipboard.writeText(url.value)
+}
 
 /**
  * Formatting utilities
