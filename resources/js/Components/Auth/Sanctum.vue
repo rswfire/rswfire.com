@@ -1,13 +1,9 @@
 <template>
-    <!-- Single outer container with unified border -->
+
     <div :class="['border rounded-lg shadow-sm overflow-hidden', theme.border, theme.bg]">
 
-        <!-- Top: Two-column grid -->
         <div class="grid md:grid-cols-3 divide-x divide-gray-200">
 
-
-
-            <!-- Right: What Sanctum Holds -->
             <div class="p-6 bg-white md:col-span-2">
                 <div class="flex items-center gap-3 mb-6 pb-4 border-b" :class="theme.border">
                     <Icon name="Sprout" class="w-8 h-8" :class="theme.color" />
@@ -47,7 +43,6 @@
                 </div>
             </div>
 
-            <!-- Left: Login -->
             <div class="p-6 md:col-span-1" :class="theme.bg">
                 <div class="flex items-center gap-3 mb-6 pb-4 border-b" :class="theme.border">
                     <Icon name="Flame" class="w-8 h-8" :class="theme.color" />

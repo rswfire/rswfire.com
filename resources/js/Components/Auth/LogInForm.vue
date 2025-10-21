@@ -45,7 +45,7 @@
             <button
                 type="submit"
                 :disabled="loading"
-                class="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md"
+                class="w-full px-6 py-3 bg-gradient-to-r from-gray-300 to-gray-400 text-white font-semibold rounded-lg hover:from-gray-400 hover:to-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md"
             >
                 <span v-if="loading" class="flex items-center justify-center gap-2">
                     <Icon name="Loader2" class="w-4 h-4 animate-spin" />
@@ -61,7 +61,7 @@
                 Don't have an account?
                 <button
                     @click="handleSwitchToRegister"
-                    class="text-orange-600 hover:text-orange-700 font-semibold hover:underline transition ml-1"
+                    class="text-gray-600 hover:text-gray-700 font-semibold hover:underline transition ml-1"
                 >
                     Create one
                 </button>

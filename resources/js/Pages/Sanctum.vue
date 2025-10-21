@@ -27,6 +27,8 @@
                 </div>
             </section>
 
+            <div class="mt-8"><SanctumAuth page-theme="sanctum"></SanctumAuth></div>
+
         </div>
 
     </Content>
@@ -39,6 +41,7 @@
 import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
+import SanctumAuth from "@/Components/Auth/Sanctum.vue";
 
 const pageTheme = "sanctum";
 
