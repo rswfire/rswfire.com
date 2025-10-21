@@ -3,7 +3,7 @@
         <!-- Unauthenticated / Unauthorized -->
         <div v-if="!canAccessMirror" class="max-w mx-auto text-center">
             <h3 class="text-lg font-semibold mb-3">This mirror reflection is held within Sanctum.</h3>
-            <SanctumAuth />
+            <SanctumAuth :page-theme="pageTheme" />
         </div>
 
         <!-- Authenticated / Authorized -->
@@ -79,13 +79,13 @@
 <script setup>
 import { ref, computed } from 'vue'
 import MarkdownIt from 'markdown-it'
-import LogInForm from '@/Components/Auth/LogInForm.vue'
 import { useAuth } from '@/Composables/useAuth'
 import SanctumAuth from "@/Components/Auth/Sanctum.vue";
 
 const props = defineProps({
     transmission: Object,
     reflection: Object,
+    pageTheme: String,
 })
 
 /**

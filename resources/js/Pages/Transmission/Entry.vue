@@ -75,12 +75,14 @@
                     :next="neighbors?.next"
                     :timeline="timeline"
                     :format-time="formatTime"
+                    :page-theme="pageTheme"
                 />
 
                 <EntryMirrorTab
                     v-else-if="activeMainTab === 'Mirror'"
                     :transmission="transmission"
                     :reflection="reflection"
+                    :page-theme="pageTheme"
                 />
 
                 <EntrySanctumTab
@@ -103,6 +105,8 @@ import EntryMirrorTab from './EntryMirrorTab.vue'
 import EntrySanctumTab from '@/Pages/Transmission/EntrySanctumTab.vue'
 
 import { useTransmission } from '@/Composables/useTransmission'
+import {useTheme} from "@/Composables/useTheme.js";
+import SanctumAuth from "@/Components/Auth/Sanctum.vue";
 
 const props = defineProps({
     ulid: String,
@@ -176,4 +180,5 @@ const formatDate = str => {
  * Page theme
  */
 const pageTheme = 'transmissions'
+
 </script>

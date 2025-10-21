@@ -3,21 +3,30 @@
   <Content :theme="pageTheme">
     <Hero
         title="AUTONOMY"
-        subtitle="PLATFORM TECHNOLOGY FOR SOVEREIGN SYSTEMS"
-        meta="UNDER CONSTRUCTION"
+        subtitle="THE INFRASTRUCTURE BEHIND THE SIGNAL"
+        meta="ARCHITECTURE FOR WHOLENESS PRESERVATION"
         :theme="pageTheme"
     />
 
     <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
-      <section id="introduction">
-        <div class="my-8 prose prose-neutral max-full mx-auto">
+        <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
+            <div class="max-w-none columns-2 gap-8">
+                <div>This is what it takes to build sovereignty &mdash;</div>
+                <div class="ml-4">the code that processes signal into reflection.</div>
+                <div class="ml-8">The structure that holds coherence across time.</div>
+                <div>Not a product.</div>
+                <div>A demonstration.</div>
+                <div><em>Infrastructure made visible</em>.</div>
 
-            <div class="mt-4">Coming Soon!</div>
-            <div>Subscribe to <Link href="/updates" class="underline">Updates</Link> to find out when it launches.</div>
+                <div>Laravel + Vue platform processing 800+ transmissions &mdash;</div>
+                <div class="ml-4">four-layer AI reflection system.</div>
+                <div>Built to prove wholeness can be technologically preserved.</div>
+                <div>You're not looking at software.</div>
+                <div>You're looking at structural integrity made legible.</div>
+            </div>
+        </section>
 
-        </div>
-      </section>
     </div>
   </Content>
 

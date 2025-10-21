@@ -2,7 +2,7 @@
     <div>
         <div v-if="!isPublicTransmission && !auth.user.value" class="max-w mx-auto text-center">
             <h3 class="text-lg font-semibold mb-3">This transmission is held within Sanctum.</h3>
-            <SanctumAuth />
+            <SanctumAuth :page-theme="pageTheme" />
         </div>
 
         <!-- 🌐 Page visible -->
@@ -121,7 +121,7 @@
                     <!-- 🔒 Patterns tab requires Sanctum access -->
                     <div v-if="activeTab === 'patterns' && !canAccessPatterns" class="max-w mx-auto text-center">
                         <h3 class="text-lg font-semibold mb-3">This reflection is held within Sanctum.</h3>
-                        <SanctumAuth />
+                        <SanctumAuth :page-theme="pageTheme" />
                     </div>
 
                     <!-- Surface Tab -->
@@ -320,6 +320,7 @@ const props = defineProps({
     timeline: Object,
     previous: Object,
     next: Object,
+    pageTheme: String,
 })
 
 const auth = useAuth()

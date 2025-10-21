@@ -4,14 +4,28 @@
 
         <Hero
             title="SANCTUM"
-            subtitle="TOOLS FOR SHARED COMMUNITY"
-            meta="UNDER CONSTRUCTION"
+            subtitle="RECIPROCAL FIELD EXCHANGE FOR ALIGNED WITNESS"
+            meta="WHERE DEPTH MEETS CONTRIBUTION"
             :theme="pageTheme"
         />
 
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
-            <div><strong>Coming Soon</strong> &mdash; Tools for Shared Community</div>
+            <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
+                <div class="max-w-none columns-2 gap-8">
+                    <div>Not a paywall &mdash;</div>
+                    <div class="ml-4">not charity.</div>
+                    <div class="ml-8">Not exclusive content.</div>
+                    <div>This is relational infrastructure.</div>
+                    <div><em>If you witness depth, you hold the field that enables it</em>.</div>
+
+                    <div>Subscription access to Mirror and Patterns layers &mdash;</div>
+                    <div class="ml-4">high-recursion transmissions with institutional context.</div>
+                    <div>Community space for those who track coherence.</div>
+                    <div>You're not buying access.</div>
+                    <div>You're entering reciprocal field exchange.</div>
+                </div>
+            </section>
 
         </div>
 
