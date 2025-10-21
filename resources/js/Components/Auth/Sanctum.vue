@@ -90,19 +90,23 @@
             </div>
 
             <div class="pt-6 mt-4 max-w-4xl mx-auto">
+
                 <!-- Pricing Cards Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div :class="[
+            'grid gap-4 mb-6',
+            showFreeOption ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 max-w-2xl mx-auto'
+        ]">
 
                     <!-- Free Tier (conditional) -->
                     <button
                         v-if="showFreeOption"
                         @click="selectedTier = 'free'"
                         :class="[
-                'p-6 rounded-lg border-2 transition-all',
-                selectedTier === 'free'
-                    ? 'border-purple-500 bg-purple-50'
-                    : 'border-gray-300 bg-white hover:border-purple-300'
-            ]"
+                    'p-6 rounded-lg border-2 transition-all',
+                    selectedTier === 'free'
+                        ? 'border-teal-400 bg-teal-50'
+                        : 'border-gray-300 bg-white hover:border-teal-200'
+                ]"
                     >
                         <div class="text-sm text-gray-500 mb-2">Free Access</div>
                         <div class="text-3xl font-bold mb-2">$0</div>
@@ -113,15 +117,14 @@
                     <button
                         @click="selectedTier = 'standard'"
                         :class="[
-                'p-6 rounded-lg border-2 transition-all relative',
-                selectedTier === 'standard'
-                    ? `border-2 ${theme.border} ${theme.bg}`
-                    : 'border-gray-300 bg-white hover:border-gray-400',
-                !showFreeOption ? 'md:col-span-1 md:col-start-1' : ''
-            ]"
+                    'p-6 rounded-lg border-2 transition-all relative',
+                    selectedTier === 'standard'
+                        ? 'border-teal-400 bg-teal-50'
+                        : 'border-gray-300 bg-white hover:border-teal-200'
+                ]"
                     >
                         <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-yellow-400 text-black text-xs font-bold rounded-full">
-                            RECOMMENDED
+                            ANCHOR
                         </div>
                         <div class="text-sm text-gray-500 mb-2">Standard</div>
                         <div class="text-4xl font-bold mb-2">$25</div>
@@ -132,28 +135,131 @@
                     <button
                         @click="selectedTier = 'custom'"
                         :class="[
-                'p-6 rounded-lg border-2 transition-all',
-                selectedTier === 'custom'
-                    ? `border-2 ${theme.border} ${theme.bg}`
-                    : 'border-gray-300 bg-white hover:border-gray-400'
-            ]"
+                    'p-6 rounded-lg border-2 transition-all',
+                    selectedTier === 'custom'
+                        ? 'border-teal-400 bg-teal-50'
+                        : 'border-gray-300 bg-white hover:border-teal-200'
+                ]"
                     >
                         <div class="text-sm text-gray-500 mb-2">Custom Amount</div>
-                        <div class="text-3xl font-bold mb-2">$15+</div>
+                        <div class="text-3xl font-bold mb-2">$5+</div>
                         <div class="text-sm text-gray-600">Set your own</div>
                     </button>
 
                 </div>
 
                 <!-- Custom Amount Input (shows when custom selected) -->
-                <div v-if="selectedTier === 'custom'" class="mb-6 max-w-md mx-auto">
-                    <!-- Amount input UI here -->
+                <div v-if="selectedTier === 'custom'" class="mb-6 max-w-2xl mx-auto space-y-4 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-medium text-gray-700">Monthly amount</label>
+                        <div class="text-3xl font-bold">${{ customAmount }}</div>
+                    </div>
+
+                    <input
+                        v-model.number="customAmount"
+                        type="range"
+                        min="5"
+                        max="100"
+                        step="5"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-teal-500"
+                    />
+
+                    <div class="flex justify-between text-xs text-gray-500">
+                        <span>$5</span>
+                        <span>$100+</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-600">Exact amount:</span>
+                        <div class="relative">
+                            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-medium">$</span>
+                            <input
+                                v-model.number="customAmount"
+                                type="number"
+                                min="5"
+                                step="5"
+                                class="w-28 pl-7 pr-3 py-2 border border-gray-300 rounded-lg text-center font-bold"
+                                @input="enforceMinimum"
+                            />
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-600 italic text-center">
+                        Set the amount that reflects your resonance with this work.
+                    </p>
                 </div>
 
-                <button disabled class="w-full px-6 py-3 bg-gray-300 text-gray-500 font-semibold rounded-lg cursor-not-allowed">
-                    Coming Soon
-                </button>
+                <!-- Registration Form (shows immediately after selection) -->
+                <div v-if="selectedTier" class="max-w-md mx-auto">
+                    <div class="mb-4 p-4 bg-teal-50 border border-teal-200 rounded-lg text-center">
+                        <div class="text-sm text-gray-600 mb-1">Selected tier:</div>
+                        <div class="text-xl font-bold">
+                            {{ selectedTier === 'free' ? 'Free Access' : selectedTier === 'standard' ? '$25/month' : `$${customAmount}/month` }}
+                        </div>
+                    </div>
+
+                    <!-- Registration fields here -->
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input
+                                v-model="form.name"
+                                type="text"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="Your name"
+                            />
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input
+                                v-model="form.email"
+                                type="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="your@email.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                            <input
+                                v-model="form.password"
+                                type="password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="Minimum 8 characters"
+                            />
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                            <input
+                                v-model="form.password_confirmation"
+                                type="password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="Re-enter password"
+                            />
+                        </div>
+
+                        <div class="text-center">(Sorry, this button is disabled while we await Paddle approval.)</div>
+                        <button
+                            @click="handleContinue"
+                            :disabled="!isFormValid"
+                            class="w-full px-6 py-3 bg-gradient-to-r from-gray-300 to-gray-400 text-white font-semibold rounded-lg hover:from-gray-400 hover:to-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md"
+                        >
+                            {{ selectedTier === 'free' ? 'Create Account' : 'Continue to Payment' }}
+                        </button>
+
+                        <button
+                            @click="selectedTier = null"
+                            class="w-full px-6 py-2 text-gray-600 hover:text-gray-800 text-sm"
+                        >
+                            ← Change tier
+                        </button>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
     </div>
@@ -178,13 +284,58 @@ const props = defineProps({
 
 const { theme } = useTheme(props.pageTheme)
 
-const selectedTier = ref(null);
-const customAmount = ref(25);
+const selectedTier = ref(null)
+const customAmount = ref(25)
+const form = ref({
+    name: '',
+    email: '',
+    password: '',
+    password_confirmation: ''
+})
+
+// Add these computed
 const showFreeOption = computed(() => {
     const params = new URLSearchParams(window.location.search)
     return params.get('access') === 'free'
 })
-selectedTier
+
+const isFormValid = computed(() => {
+    return form.value.name.length > 0
+        && form.value.email.length > 0
+        && form.value.password.length >= 8
+        && form.value.password === form.value.password_confirmation
+})
+
+// Add these functions
+function enforceMinimum() {
+    if (customAmount.value < 5) {
+        customAmount.value = 5
+    }
+    customAmount.value = Math.round(customAmount.value / 5) * 5
+}
+
+function handleContinue() {
+    if (!isFormValid.value) return
+
+    if (selectedTier.value === 'free') {
+        createFreeAccount()
+    } else {
+        const amount = selectedTier.value === 'standard' ? 25 : customAmount.value
+        initiatePaddleCheckout(amount)
+    }
+}
+
+function createFreeAccount() {
+    console.log('Creating free account:', form.value)
+    // TODO: API call
+}
+
+function initiatePaddleCheckout(amount) {
+    console.log('Initiating checkout for $' + amount, form.value)
+    // TODO: Paddle.js
+}
+
+// Add to onMounted (or create it if you don't have one)
 onMounted(() => {
     if (!showFreeOption.value) {
         selectedTier.value = 'standard'
