@@ -53,7 +53,7 @@
                     Sign in to access your <strong :class="theme.color">Sanctum</strong> account.
                 </p>
 
-                <LogInForm :show-register-link="false" @success="handleLoginSuccess" />
+                <LogInForm :show-register-link="false" />
             </div>
 
         </div>
@@ -89,7 +89,67 @@
         </span>
             </div>
 
-            <div class="pt-6 mt-4 max-w-md mx-auto">
+            <div class="pt-6 mt-4 max-w-4xl mx-auto">
+                <!-- Pricing Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+
+                    <!-- Free Tier (conditional) -->
+                    <button
+                        v-if="showFreeOption"
+                        @click="selectedTier = 'free'"
+                        :class="[
+                'p-6 rounded-lg border-2 transition-all',
+                selectedTier === 'free'
+                    ? 'border-purple-500 bg-purple-50'
+                    : 'border-gray-300 bg-white hover:border-purple-300'
+            ]"
+                    >
+                        <div class="text-sm text-gray-500 mb-2">Free Access</div>
+                        <div class="text-3xl font-bold mb-2">$0</div>
+                        <div class="text-sm text-gray-600">By invitation</div>
+                    </button>
+
+                    <!-- Standard Tier -->
+                    <button
+                        @click="selectedTier = 'standard'"
+                        :class="[
+                'p-6 rounded-lg border-2 transition-all relative',
+                selectedTier === 'standard'
+                    ? `border-2 ${theme.border} ${theme.bg}`
+                    : 'border-gray-300 bg-white hover:border-gray-400',
+                !showFreeOption ? 'md:col-span-1 md:col-start-1' : ''
+            ]"
+                    >
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-yellow-400 text-black text-xs font-bold rounded-full">
+                            RECOMMENDED
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2">Standard</div>
+                        <div class="text-4xl font-bold mb-2">$25</div>
+                        <div class="text-sm text-gray-600">per month</div>
+                    </button>
+
+                    <!-- Custom Tier -->
+                    <button
+                        @click="selectedTier = 'custom'"
+                        :class="[
+                'p-6 rounded-lg border-2 transition-all',
+                selectedTier === 'custom'
+                    ? `border-2 ${theme.border} ${theme.bg}`
+                    : 'border-gray-300 bg-white hover:border-gray-400'
+            ]"
+                    >
+                        <div class="text-sm text-gray-500 mb-2">Custom Amount</div>
+                        <div class="text-3xl font-bold mb-2">$15+</div>
+                        <div class="text-sm text-gray-600">Set your own</div>
+                    </button>
+
+                </div>
+
+                <!-- Custom Amount Input (shows when custom selected) -->
+                <div v-if="selectedTier === 'custom'" class="mb-6 max-w-md mx-auto">
+                    <!-- Amount input UI here -->
+                </div>
+
                 <button disabled class="w-full px-6 py-3 bg-gray-300 text-gray-500 font-semibold rounded-lg cursor-not-allowed">
                     Coming Soon
                 </button>
@@ -100,12 +160,12 @@
 </template>
 
 <script setup>
-import { router } from '@inertiajs/vue3'
 import Icon from '@/Components/System/Icon.vue'
 import LogInForm from '@/Components/Auth/LogInForm.vue'
 import { useAuth } from '@/Composables/useAuth'
 import { Link } from "@inertiajs/vue3"
 import {useTheme} from "@/Composables/useTheme.js";
+import {computed, onMounted, ref} from "vue";
 
 const auth = useAuth()
 
@@ -118,7 +178,16 @@ const props = defineProps({
 
 const { theme } = useTheme(props.pageTheme)
 
-function handleLoginSuccess() {
-    router.visit('/')
-}
+const selectedTier = ref(null);
+const customAmount = ref(25);
+const showFreeOption = computed(() => {
+    const params = new URLSearchParams(window.location.search)
+    return params.get('access') === 'free'
+})
+selectedTier
+onMounted(() => {
+    if (!showFreeOption.value) {
+        selectedTier.value = 'standard'
+    }
+})
 </script>
