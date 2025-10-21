@@ -529,6 +529,14 @@ Route::prefix("lexicon")->group(function () {
         ->name('lexicon.show');
 });
 
+Route::get("/lineage", function () {
+    return Inertia::render("Lineage/Index", [
+        "metaTitle" => "Lineage | ".request()->getHost(),
+        "metaDescription" => "Field manual for Sanctum members.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/myth", function () {
     return Inertia::render("Myth", [
         "metaTitle" => "Myth | ".request()->getHost(),
