@@ -28,61 +28,85 @@
             </section>
 
             <div>
-                <h1>Refund Policy</h1>
+                <h1>Privacy Policy</h1>
                 <p>Last updated: October 21, 2025</p>
             </div>
 
             <div>
-                <h2>General Policy</h2>
-                <p>Sanctum membership subscriptions are generally non-refundable. However, we offer a 7-day refund window for first-time subscribers who find that the Service does not meet their expectations.</p>
-            </div>
-
-            <div>
-                <h2>Eligibility for Refunds</h2>
-                <p>You may request a full refund within 7 days of your initial subscription payment if:</p>
+                <h2>1. Information We Collect</h2>
+                <p>We collect the following information when you use rswfire.com:</p>
                 <ul>
-                    <li>This is your first time subscribing to Sanctum</li>
-                    <li>You contact us within 7 days of the charge</li>
-                    <li>Your account has not been used to violate the Terms of Service</li>
+                    <li><strong>Account Information:</strong> Name, email address, and password when you create an account.</li>
+                    <li><strong>Payment Information:</strong> Processed by Paddle (our payment processor). We do not store credit card details.</li>
+                    <li><strong>Usage Data:</strong> Information about how you interact with the Service, including pages viewed, timestamps, and access patterns.</li>
+                    <li><strong>Device Information:</strong> IP address, browser type, and device identifiers for security and functionality purposes.</li>
                 </ul>
-                <p>Refunds are not available for subscription renewals or for requests made after the 7-day window.</p>
             </div>
 
             <div>
-                <h2>How to Request a Refund</h2>
-                <p>To request a refund, email rsw@rswfire.com with:</p>
+                <h2>2. How We Use Your Information</h2>
+                <p>We use collected information to:</p>
                 <ul>
-                    <li>Your account email address</li>
-                    <li>The date of your subscription payment</li>
-                    <li>Brief explanation (optional, but helps us improve)</li>
+                    <li>Provide access to the Service and Sanctum membership content</li>
+                    <li>Process subscription payments and manage your account</li>
+                    <li>Communicate about service updates, changes, or issues</li>
+                    <li>Analyze usage patterns to improve the Service</li>
+                    <li>Ensure security and prevent unauthorized access</li>
                 </ul>
-                <p>Refund requests are typically processed within 5-7 business days. Refunds are issued to the original payment method via Paddle.</p>
             </div>
 
             <div>
-                <h2>Access After Refund</h2>
-                <p>Upon refund approval, your Sanctum membership access will be revoked immediately. Your account will revert to free-tier access, and you will retain access to non-restricted content.</p>
-            </div>
-
-            <div>
-                <h2>Technical Issues</h2>
-                <p>If you experience technical problems preventing access to the Service, contact us before requesting a refund. We will work to resolve issues when possible. Refunds for technical issues are evaluated on a case-by-case basis.</p>
-            </div>
-
-            <div>
-                <h2>Cancellation vs. Refund</h2>
-                <p>Cancelling your subscription is not the same as requesting a refund. When you cancel:</p>
+                <h2>3. Information Sharing</h2>
+                <p>We share information with the following third parties only as necessary to operate the Service:</p>
                 <ul>
-                    <li>Future charges stop immediately</li>
-                    <li>You retain access until the end of your current billing period</li>
-                    <li>No refund is issued for the current period</li>
+                    <li><strong>Paddle:</strong> Payment processing and subscription management. See Paddle's privacy policy for their data practices.</li>
+                    <li><strong>Anthropic (Claude API):</strong> Transmission transcripts are processed by Claude AI to generate reflections. Anthropic's data usage policies apply to this processing.</li>
+                    <li><strong>Hosting providers:</strong> Service infrastructure is hosted by third-party providers who may have access to data in the course of providing hosting services.</li>
                 </ul>
-                <p>If you want a refund for the current period, you must submit a refund request separately within the 7-day window.</p>
+                <p>We do not sell your personal information to third parties. We do not share data for advertising purposes.</p>
             </div>
 
             <div>
-                <h2>Contact</h2>
-                <p>For refund inquiries, contact: rsw@rswfire.com</p>
+                <h2>4. Data Retention</h2>
+                <p>We retain your account information for as long as your account is active. If you cancel your subscription, we retain basic account data (email, username) to preserve free-tier access unless you request full deletion.</p>
+            </div>
+
+            <div>
+                <h2>5. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access the personal information we hold about you</li>
+                    <li>Request correction of inaccurate information</li>
+                    <li>Request deletion of your account and associated data</li>
+                    <li>Export your data in a portable format</li>
+                    <li>Withdraw consent for data processing (which may limit Service functionality)</li>
+                </ul>
+                <p>To exercise these rights, contact: rsw@rswfire.com</p>
+            </div>
+
+            <div>
+                <h2>6. Cookies and Tracking</h2>
+                <p>We use essential cookies to maintain your session and authentication state. We do not use third-party advertising or tracking cookies. You can disable cookies in your browser, but this may affect Service functionality.</p>
+            </div>
+
+            <div>
+                <h2>7. Security</h2>
+                <p>We implement reasonable security measures to protect your information, including encrypted connections (HTTPS) and secure password storage. However, no system is completely secure, and we cannot guarantee absolute security.</p>
+            </div>
+
+            <div>
+                <h2>8. International Users</h2>
+                <p>The Service is operated from the United States. If you access the Service from outside the U.S., your information will be transferred to and processed in the United States.</p>
+            </div>
+
+            <div>
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. Material changes will be communicated via email or site notice. Continued use after changes constitutes acceptance.</p>
+            </div>
+
+            <div>
+                <h2>10. Contact</h2>
+                <p>For privacy-related questions, contact: rsw@rswfire.com</p>
             </div>
 
         </div>

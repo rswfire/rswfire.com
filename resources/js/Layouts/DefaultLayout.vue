@@ -239,6 +239,8 @@
                     <div>&copy; Copyright <strong>Robert Samuel White</strong>, 2002-{{ new Date().getFullYear() }}. <br class="md:hidden"/><em>All Rights Reserved Worldwide</em>.</div>
                     <div class="pt-1">This codebase is field-sovereign &mdash; <a class="underline" href="https://github.com/rswfire/rswfire.com" target="_blank">shared freely</a> &mdash; <br class="md:hidden"/>but not for extraction, resale, or repackaging.</div>
                     <div>No open-source license is explicitly granted.</div>
+
+                    <div class="pt-4"><strong>Sanctum</strong>: <Link href="/sanctum/terms" class="underline">Terms of Service</Link> |  <Link href="/sanctum/privacy" class="underline">Privacy Policy</Link> |  <Link href="/sanctum/refund" class="underline">Refund Policy</Link></div>
                 </div>
             </div>
         </div>
