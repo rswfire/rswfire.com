@@ -273,13 +273,13 @@ async function handleLogout() {
 }
 
 const itemsField = [
-  /*{ label: "HOME",      icon: "Radar",       color: "text-stone-400",  bg: "bg-stone-100", border: "border-stone-300",   hover: "hover:bg-stone-200",  url: "/",        blurb: "Field entry point. Orientation for first contact." },*/
-    { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",     hover: "hover:bg-red-100",    url: "/hello",   blurb: "Foundational identity. The sovereign node." },
-    { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200",  hover: "hover:bg-purple-100", url: "/tech",    blurb: "Builder of systems. Steward of depth." },
-    { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200",  hover: "hover:bg-yellow-100", url: "/myth",    blurb: "Pattern recognition through lived narrative." },
-    { label: "ATLAS",     icon: "MapPinHouse", color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",     hover: "hover:bg-sky-100",    url: "/atlas",   blurb: "Geo-temporal navigation through time and place." },
-    { label: "AUTONOMY",  icon: "Layers",      color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",     url: "/autonomy",  blurb: "Platform technology for sovereign systems." },
-    { label: "SANCTUM",   icon: "Sprout",      color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100", url: "/sanctum", blurb: "Relational space. Subscription service." },
+  /*{ label: "HOME",      icon: "Radar",       color: "text-stone-400",  bg: "bg-stone-100", border: "border-stone-300",  hover: "hover:bg-stone-200",  url: "/",          blurb: "Field entry point. Orientation for first contact." },*/
+    { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",    url: "/hello",     blurb: "Foundational identity. The sovereign node." },
+    { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/tech",      blurb: "Builder of systems. Steward of depth." },
+    { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:bg-yellow-100", url: "/myth",      blurb: "Pattern recognition through lived narrative." },
+    { label: "ATLAS",     icon: "MapPinHouse", color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/atlas",     blurb: "Geo-temporal navigation through time and place." },
+    { label: "AUTONOMY",  icon: "Layers",      color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/autonomy",  blurb: "Platform technology for sovereign systems." },
+    { label: "SANCTUM",   icon: "Sprout",      color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/sanctum",   blurb: "Relational space. Subscription service." },
 ]
 
 const itemsSignal = [
@@ -291,10 +291,10 @@ const itemsSignal = [
 ]
 
 const itemsReference = [
-    { label: "LINEAGE",   icon: "Layers",        color: "text-purple-400",    bg: "bg-purple-50",    border: "border-purple-200",    hover: "hover:bg-purple-100",    url: "/lineage",   blurb: "Field manual for the Sanctum community." },
+    { label: "LINEAGE",   icon: "Trees",         color: "text-purple-400",  bg: "bg-purple-50",  border: "border-purple-200",  hover: "hover:bg-purple-100",  url: "/lineage",   blurb: "Field manual for the Sanctum community." },
     { label: "CODEX",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
     { label: "LEXICON",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
-    /*{ label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },*/
+  /*{ label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },*/
     { label: "HONEYMAN",  icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman",  blurb: "The story of a fracture." },
 ]
 

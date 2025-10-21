@@ -45,6 +45,6 @@ async function onCopy(anchorId) {
 
 onBeforeUnmount(() => clearTimeout(hideTimer))
 
-const pageTheme = "autonomy";
+const pageTheme = "lineage";
 
 </script>
