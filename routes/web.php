@@ -547,7 +547,34 @@ Route::get("/myth", function () {
 
 Route::get("/sanctum", function () {
 
-    return Inertia::render("Sanctum", [
+    return Inertia::render("Sanctum/Index", [
+        "metaTitle" => "Sanctum | ".request()->getHost(),
+        "metaDescription" => "Tools for shared community.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/sanctum/privacy", function () {
+
+    return Inertia::render("Sanctum/Privacy", [
+        "metaTitle" => "Sanctum | ".request()->getHost(),
+        "metaDescription" => "Tools for shared community.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/sanctum/refund", function () {
+
+    return Inertia::render("Sanctum/Refund", [
+        "metaTitle" => "Sanctum | ".request()->getHost(),
+        "metaDescription" => "Tools for shared community.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
+Route::get("/sanctum/terms", function () {
+
+    return Inertia::render("Sanctum/Terms", [
         "metaTitle" => "Sanctum | ".request()->getHost(),
         "metaDescription" => "Tools for shared community.",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
