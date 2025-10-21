@@ -41,6 +41,11 @@ class HandleInertiaRequests extends Middleware
                 "check" => false,
                 "user" => null,
             ],
+            "paddle" => [
+                "client_token" => config("services.paddle.client_token"),
+                "environment" => config("services.paddle.environment"),
+                "price_id_standard" => config("services.paddle.price_id_standard"),
+            ],
         ];
     }
 }

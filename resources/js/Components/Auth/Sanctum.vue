@@ -272,8 +272,10 @@ import { useAuth } from '@/Composables/useAuth'
 import { Link } from "@inertiajs/vue3"
 import {useTheme} from "@/Composables/useTheme.js";
 import {computed, onMounted, ref} from "vue";
+import { usePage } from '@inertiajs/vue3'
 
 const auth = useAuth()
+const page = usePage()
 
 const props = defineProps({
     pageTheme: {
@@ -325,14 +327,80 @@ function handleContinue() {
     }
 }
 
-function createFreeAccount() {
-    console.log('Creating free account:', form.value)
-    // TODO: API call
+async function createFreeAccount() {
+    try {
+        const response = await fetch('https://rswfire.online/api/auth/sanctum/free-access', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(form.value)
+        })
+
+        const data = await response.json()
+
+        if (response.ok) {
+            // Store token
+            localStorage.setItem('auth_token', data.token)
+
+            // Update auth state (if using your useAuth composable)
+            // auth.user.value = data.user
+
+            // Reload to refresh Sanctum state
+            window.location.href = '/'
+        } else {
+            // Handle validation errors
+            console.error('Registration failed:', data)
+            // TODO: Display error to user
+        }
+    } catch (error) {
+        console.error('Network error:', error)
+        // TODO: Display error to user
+    }
 }
 
-function initiatePaddleCheckout(amount) {
-    console.log('Initiating checkout for $' + amount, form.value)
-    // TODO: Paddle.js
+async function initiatePaddleCheckout(amount) {
+    if (!window.Paddle) {
+        console.error('Paddle not loaded')
+        errorMessage.value = 'Payment system not loaded. Please refresh.'
+        return
+    }
+
+    const paddleConfig = page.props.paddle
+
+    try {
+        const checkoutConfig = {
+            items: [{
+                priceId: paddleConfig.price_id_standard,
+                quantity: 1
+            }],
+            customer: {
+                email: form.value.email,
+            },
+            customData: {
+                user_name: form.value.name,
+                user_email: form.value.email,
+                user_password: form.value.password, // We'll need this for account creation
+                tier: selectedTier.value,
+                amount: amount
+            }
+        }
+
+        // Try price override for custom amounts
+        if (selectedTier.value === 'custom' && amount !== 25) {
+            checkoutConfig.items[0].price = {
+                amount: (amount * 100).toString(),
+                currencyCode: 'USD'
+            }
+        }
+
+        window.Paddle.Checkout.open(checkoutConfig)
+
+    } catch (error) {
+        console.error('Paddle checkout error:', error)
+        errorMessage.value = 'Failed to open checkout. Please try again.'
+    }
 }
 
 // Add to onMounted (or create it if you don't have one)

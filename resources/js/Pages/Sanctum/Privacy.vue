@@ -27,13 +27,13 @@
                 </div>
             </section>
 
-            <div>
-                <h1>Privacy Policy</h1>
+            <div class="mt-8">
+                <h1 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Privacy Policy</h1>
                 <p>Last updated: October 21, 2025</p>
             </div>
 
             <div>
-                <h2>1. Information We Collect</h2>
+                <h2 class="mt-8 text-xl font-semibold">1. Information We Collect</h2>
                 <p>We collect the following information when you use rswfire.com:</p>
                 <ul>
                     <li><strong>Account Information:</strong> Name, email address, and password when you create an account.</li>
@@ -44,7 +44,7 @@
             </div>
 
             <div>
-                <h2>2. How We Use Your Information</h2>
+                <h2 class="mt-8 text-xl font-semibold">2. How We Use Your Information</h2>
                 <p>We use collected information to:</p>
                 <ul>
                     <li>Provide access to the Service and Sanctum membership content</li>
@@ -56,7 +56,7 @@
             </div>
 
             <div>
-                <h2>3. Information Sharing</h2>
+                <h2 class="mt-8 text-xl font-semibold">3. Information Sharing</h2>
                 <p>We share information with the following third parties only as necessary to operate the Service:</p>
                 <ul>
                     <li><strong>Paddle:</strong> Payment processing and subscription management. See Paddle's privacy policy for their data practices.</li>
@@ -67,12 +67,12 @@
             </div>
 
             <div>
-                <h2>4. Data Retention</h2>
+                <h2 class="mt-8 text-xl font-semibold">4. Data Retention</h2>
                 <p>We retain your account information for as long as your account is active. If you cancel your subscription, we retain basic account data (email, username) to preserve free-tier access unless you request full deletion.</p>
             </div>
 
             <div>
-                <h2>5. Your Rights</h2>
+                <h2 class="mt-8 text-xl font-semibold">5. Your Rights</h2>
                 <p>You have the right to:</p>
                 <ul>
                     <li>Access the personal information we hold about you</li>
@@ -85,27 +85,27 @@
             </div>
 
             <div>
-                <h2>6. Cookies and Tracking</h2>
+                <h2 class="mt-8 text-xl font-semibold">6. Cookies and Tracking</h2>
                 <p>We use essential cookies to maintain your session and authentication state. We do not use third-party advertising or tracking cookies. You can disable cookies in your browser, but this may affect Service functionality.</p>
             </div>
 
             <div>
-                <h2>7. Security</h2>
+                <h2 class="mt-8 text-xl font-semibold">7. Security</h2>
                 <p>We implement reasonable security measures to protect your information, including encrypted connections (HTTPS) and secure password storage. However, no system is completely secure, and we cannot guarantee absolute security.</p>
             </div>
 
             <div>
-                <h2>8. International Users</h2>
+                <h2 class="mt-8 text-xl font-semibold">8. International Users</h2>
                 <p>The Service is operated from the United States. If you access the Service from outside the U.S., your information will be transferred to and processed in the United States.</p>
             </div>
 
             <div>
-                <h2>9. Changes to This Policy</h2>
+                <h2 class="mt-8 text-xl font-semibold">9. Changes to This Policy</h2>
                 <p>We may update this Privacy Policy periodically. Material changes will be communicated via email or site notice. Continued use after changes constitutes acceptance.</p>
             </div>
 
             <div>
-                <h2>10. Contact</h2>
+                <h2 class="mt-8 text-xl font-semibold">10. Contact</h2>
                 <p>For privacy-related questions, contact: rsw@rswfire.com</p>
             </div>
 

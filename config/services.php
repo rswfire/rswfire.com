@@ -26,6 +26,14 @@ return [
         "endpoint" => env("MAILGUN_ENDPOINT", "api.mailgun.net"),
     ],
 
+    "paddle" => [
+        "vendor_id" => env("PADDLE_VENDOR_ID"),
+        "client_token" => env("PADDLE_CLIENT_TOKEN"),
+        "environment" => env("PADDLE_ENVIRONMENT", "sandbox"),
+        "api_key" => env("PADDLE_API_KEY"),
+        "price_id_standard" => env("PADDLE_PRICE_ID_STANDARD"),
+    ],
+
     "postmark" => [
         "token" => env("POSTMARK_TOKEN"),
     ],

@@ -6,7 +6,7 @@ const token = ref(localStorage.getItem('auth_token'))
 const loading = ref(false)
 
 export function useAuth() {
-    // Helper to get API base URL
+
     function getApiBase() {
         const page = usePage()
         return page.props.api_url + '/api'
@@ -34,6 +34,64 @@ export function useAuth() {
             }
 
             throw new Error(data.message || 'Login failed')
+        } finally {
+            loading.value = false
+        }
+    }
+
+    async function register(name, email, password, password_confirmation) {
+        loading.value = true
+        try {
+            const response = await fetch(`${getApiBase()}/register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password, password_confirmation }),
+            })
+
+            const data = await response.json()
+
+            if (data.token) {
+                token.value = data.token
+                user.value = data.user
+                localStorage.setItem('auth_token', data.token)
+                return { success: true }
+            }
+
+            return { success: false, message: data.message, errors: data.errors }
+        } catch (error) {
+            return { success: false, message: 'Network error. Please try again.' }
+        } finally {
+            loading.value = false
+        }
+    }
+
+    async function registerFree(name, email, password, password_confirmation) {
+        loading.value = true
+        try {
+            const response = await fetch(`${getApiBase()}/auth/sanctum/free-access`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password, password_confirmation }),
+            })
+
+            const data = await response.json()
+
+            if (data.token) {
+                token.value = data.token
+                user.value = data.user
+                localStorage.setItem('auth_token', data.token)
+                return { success: true }
+            }
+
+            return { success: false, message: data.message, errors: data.errors }
+        } catch (error) {
+            return { success: false, message: 'Network error. Please try again.' }
         } finally {
             loading.value = false
         }
@@ -89,56 +147,6 @@ export function useAuth() {
         }
     }
 
-    return {
-        user,
-        token,
-        loading,
-        login,
-        logout,
-        fetchUser,
-        init,
-        isAuthenticated: () => !!token.value,
-    }
-
-    async function register(name, email, password, password_confirmation) {
-        loading.value = true
-        try {
-            const response = await fetch(`${getApiBase()}/register`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify({ name, email, password, password_confirmation }),
-            })
-
-            const data = await response.json()
-
-            if (data.token) {
-                token.value = data.token
-                user.value = data.user
-                localStorage.setItem('auth_token', data.token)
-                return true
-            }
-
-            throw new Error(data.message || 'Registration failed')
-        } finally {
-            loading.value = false
-        }
-    }
-
-    return {
-        user,
-        token,
-        loading,
-        login,
-        register,  // Add this
-        logout,
-        fetchUser,
-        init,
-        isAuthenticated: () => !!token.value,
-    }
-
     async function authFetch(url, options = {}) {
         if (!token.value) {
             console.warn('No auth token found; request may be unauthorized.')
@@ -165,11 +173,11 @@ export function useAuth() {
         loading,
         login,
         register,
+        registerFree,
         logout,
         fetchUser,
         init,
         authFetch,
         isAuthenticated: () => !!token.value,
     }
-
 }

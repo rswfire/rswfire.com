@@ -27,63 +27,63 @@
                 </div>
             </section>
 
-            <div>
-                <h1>Terms of Service</h1>
+            <div class="mt-8">
+                <h1 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Terms of Service</h1>
                 <p>Last updated: October 21, 2025</p>
             </div>
 
             <div>
-                <h2>1. Service Description</h2>
+                <h2 class="mt-8 text-xl font-semibold">1. Service Description</h2>
                 <p>rswfire.com ("the Service") provides access to a digital archive of transmissions, AI-processed reflections, field guides, and synthesis tools. Access to certain content requires a Sanctum membership subscription.</p>
             </div>
 
             <div>
-                <h2>2. Subscription Terms</h2>
+                <h2 class="mt-8 text-xl font-semibold">2. Subscription Terms</h2>
                 <p>Sanctum membership is offered as a recurring monthly subscription. By subscribing, you authorize automatic monthly charges to your payment method until you cancel. Subscription fees are non-refundable except as described in the Refund Policy.</p>
             </div>
 
             <div>
-                <h2>3. Account Creation</h2>
+                <h2 class="mt-8 text-xl font-semibold">3. Account Creation</h2>
                 <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to provide accurate information during registration and to update it as needed. One account per person.</p>
             </div>
 
             <div>
-                <h2>4. Cancellation</h2>
+                <h2 class="mt-8 text-xl font-semibold">4. Cancellation</h2>
                 <p>You may cancel your subscription at any time. Upon cancellation, access to Sanctum-restricted content will continue until the end of your current billing period, after which your account will revert to free-tier access. No partial refunds are provided for unused time in a billing period.</p>
             </div>
 
             <div>
-                <h2>5. Acceptable Use</h2>
+                <h2 class="mt-8 text-xl font-semibold">5. Acceptable Use</h2>
                 <p>You agree not to: (a) share your account credentials with others, (b) attempt to circumvent access restrictions, (c) scrape, copy, or redistribute content without permission, (d) use the Service for any unlawful purpose, or (e) interfere with the infrastructure or other users' access.</p>
             </div>
 
             <div>
-                <h2>6. Content Ownership</h2>
+                <h2 class="mt-8 text-xl font-semibold">6. Content Ownership</h2>
                 <p>All content on rswfire.com, including transmissions, reflections, and documentation, remains the property of Sam (rswfire). Sanctum membership grants you personal, non-transferable access to view content, not ownership or redistribution rights.</p>
             </div>
 
             <div>
-                <h2>7. Service Availability</h2>
+                <h2 class="mt-8 text-xl font-semibold">7. Service Availability</h2>
                 <p>The Service is provided "as is" without warranties of any kind. We do not guarantee uninterrupted access and reserve the right to modify or discontinue features at any time. We are not liable for data loss, service interruptions, or technical failures.</p>
             </div>
 
             <div>
-                <h2>8. Limitation of Liability</h2>
+                <h2 class="mt-8 text-xl font-semibold">8. Limitation of Liability</h2>
                 <p>To the maximum extent permitted by law, rswfire.com and its operator are not liable for any indirect, incidental, or consequential damages arising from your use of the Service. Total liability for any claim shall not exceed the amount you paid in subscription fees in the preceding 12 months.</p>
             </div>
 
             <div>
-                <h2>9. Modifications to Terms</h2>
+                <h2 class="mt-8 text-xl font-semibold">9. Modifications to Terms</h2>
                 <p>These Terms may be updated periodically. Continued use of the Service after changes constitutes acceptance of the updated Terms. Material changes will be communicated via email or site notice.</p>
             </div>
 
             <div>
-                <h2>10. Governing Law</h2>
+                <h2 class="mt-8 text-xl font-semibold">10. Governing Law</h2>
                 <p>These Terms are governed by the laws of the State of Oregon, United States. Any disputes shall be resolved in the courts of Oregon.</p>
             </div>
 
             <div>
-                <h2>11. Contact</h2>
+                <h2 class="mt-8 text-xl font-semibold">11. Contact</h2>
                 <p>For questions about these Terms, contact: rsw@rswfire.com</p>
             </div>
 

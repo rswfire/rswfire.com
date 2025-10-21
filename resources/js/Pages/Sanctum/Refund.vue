@@ -27,18 +27,18 @@
                 </div>
             </section>
 
-            <div>
-                <h1>Refund Policy</h1>
+            <div class="mt-8">
+                <h1 class="uppercase text-lg font-bold tracking-widest m-0 p-0">Refund Policy</h1>
                 <p>Last updated: October 21, 2025</p>
             </div>
 
             <div>
-                <h2>General Policy</h2>
+                <h2 class="mt-8 text-xl font-semibold">General Policy</h2>
                 <p>Sanctum membership subscriptions are generally non-refundable. However, we offer a 7-day refund window for first-time subscribers who find that the Service does not meet their expectations.</p>
             </div>
 
             <div>
-                <h2>Eligibility for Refunds</h2>
+                <h2 class="mt-8 text-xl font-semibold">Eligibility for Refunds</h2>
                 <p>You may request a full refund within 7 days of your initial subscription payment if:</p>
                 <ul>
                     <li>This is your first time subscribing to Sanctum</li>
@@ -49,7 +49,7 @@
             </div>
 
             <div>
-                <h2>How to Request a Refund</h2>
+                <h2 class="mt-8 text-xl font-semibold">How to Request a Refund</h2>
                 <p>To request a refund, email rsw@rswfire.com with:</p>
                 <ul>
                     <li>Your account email address</li>
@@ -60,17 +60,17 @@
             </div>
 
             <div>
-                <h2>Access After Refund</h2>
+                <h2 class="mt-8 text-xl font-semibold">Access After Refund</h2>
                 <p>Upon refund approval, your Sanctum membership access will be revoked immediately. Your account will revert to free-tier access, and you will retain access to non-restricted content.</p>
             </div>
 
             <div>
-                <h2>Technical Issues</h2>
+                <h2 class="mt-8 text-xl font-semibold">Technical Issues</h2>
                 <p>If you experience technical problems preventing access to the Service, contact us before requesting a refund. We will work to resolve issues when possible. Refunds for technical issues are evaluated on a case-by-case basis.</p>
             </div>
 
             <div>
-                <h2>Cancellation vs. Refund</h2>
+                <h2 class="mt-8 text-xl font-semibold">Cancellation vs. Refund</h2>
                 <p>Cancelling your subscription is not the same as requesting a refund. When you cancel:</p>
                 <ul>
                     <li>Future charges stop immediately</li>
@@ -81,7 +81,7 @@
             </div>
 
             <div>
-                <h2>Contact</h2>
+                <h2 class="mt-8 text-xl font-semibold">Contact</h2>
                 <p>For refund inquiries, contact: rsw@rswfire.com</p>
             </div>
 
