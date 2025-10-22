@@ -56,7 +56,7 @@
                     <li>The date of your subscription payment</li>
                     <li>Brief explanation (optional, but helps us improve)</li>
                 </ul>
-                <p>Refund requests are typically processed within 5-7 business days. Refunds are issued to the original payment method via Paddle.</p>
+                <p>Refund requests are typically processed within 5-7 business days. Refunds are issued to the original payment method via Stripe.</p>
             </div>
 
             <div>

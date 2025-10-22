@@ -235,7 +235,6 @@
                             />
                         </div>
 
-                        <div class="text-center mt-4">(Sorry, this button is disabled while we await Paddle approval.)</div>
                         <button
                             @click="handleContinue"
                             :disabled="!isFormValid"

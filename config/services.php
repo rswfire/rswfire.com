@@ -26,14 +26,6 @@ return [
         "endpoint" => env("MAILGUN_ENDPOINT", "api.mailgun.net"),
     ],
 
-    "paddle" => [
-        "vendor_id" => env("PADDLE_VENDOR_ID"),
-        "client_token" => env("PADDLE_CLIENT_TOKEN"),
-        "environment" => env("PADDLE_ENVIRONMENT", "sandbox"),
-        "api_key" => env("PADDLE_API_KEY"),
-        "price_id_standard" => env("PADDLE_PRICE_ID_STANDARD"),
-    ],
-
     "postmark" => [
         "token" => env("POSTMARK_TOKEN"),
     ],
@@ -53,6 +45,12 @@ return [
             "bot_user_oauth_token" => env("SLACK_BOT_USER_OAUTH_TOKEN"),
             "channel" => env("SLACK_BOT_USER_DEFAULT_CHANNEL"),
         ],
+    ],
+
+    "stripe" => [
+        "key" => env("STRIPE_KEY"),
+        "secret" => env("STRIPE_SECRET"),
+        "webhook_secret" => env("STRIPE_WEBHOOK_SECRET"),
     ],
 
 ];
