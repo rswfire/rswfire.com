@@ -144,6 +144,10 @@ createInertiaApp({
                 const paddleConfig = props.initialPage.props.paddle;
 
                 try {
+                    if (paddleConfig.environment === 'sandbox') {
+                        window.Paddle.Environment.set("sandbox");
+                    }
+
                     window.Paddle.Initialize({
                         token: paddleConfig.client_token,
                         eventCallback: function(event) {
@@ -160,7 +164,6 @@ createInertiaApp({
                     });
 
                     console.log('Paddle initialized with token:', paddleConfig.client_token.substring(0, 10) + '...');
-
                 } catch (error) {
                     console.error('Paddle initialization failed:', error);
                 }

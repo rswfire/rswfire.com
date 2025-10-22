@@ -110,7 +110,7 @@
                     >
                         <div class="text-sm text-gray-500 mb-2">Free Access</div>
                         <div class="text-3xl font-bold mb-2">$0</div>
-                        <div class="text-sm text-gray-600">By invitation</div>
+                        <div class="text-sm text-gray-600 italic">By Invitation</div>
                     </button>
 
                     <button
@@ -255,147 +255,150 @@
 </template>
 
 <script setup>
-import Icon from '@/Components/System/Icon.vue'
-import LogInForm from '@/Components/Auth/LogInForm.vue'
-import { useAuth } from '@/Composables/useAuth'
-import { Link } from "@inertiajs/vue3"
-import {useTheme} from "@/Composables/useTheme.js";
-import {computed, onMounted, ref} from "vue";
-import { usePage } from '@inertiajs/vue3'
 
-const auth = useAuth()
-const page = usePage()
+    import { useAuth } from '@/Composables/useAuth'
+    import { usePage } from '@inertiajs/vue3'
+    import { useTheme } from "@/Composables/useTheme.js";
+    import { computed, onMounted, ref } from "vue";
+    import { Link } from "@inertiajs/vue3"
+    import Icon from '@/Components/System/Icon.vue'
+    import LogInForm from '@/Components/Auth/LogInForm.vue'
 
-const props = defineProps({
-    pageTheme: {
-        type: String,
-        required: true
+    const props = defineProps({
+        pageTheme: {
+            type: String,
+            required: true
+        }
+    })
+
+    const auth = useAuth()
+    const page = usePage()
+    const { theme } = useTheme(props.pageTheme)
+
+    const customAmount = ref(25)
+
+    const form = ref({
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: ''
+    })
+
+    const isFormValid = computed(() => {
+        return form.value.name.length > 0
+            && form.value.email.length > 0
+            && form.value.password.length >= 8
+            && form.value.password === form.value.password_confirmation
+    })
+
+    const selectedTier = ref(null)
+
+    const showFreeOption = computed(() => {
+        const params = new URLSearchParams(window.location.search)
+        return params.get('access') === 'free'
+    })
+
+    function enforceMinimum() {
+        if (customAmount.value < 5) {
+            customAmount.value = 5
+        }
+        customAmount.value = Math.round(customAmount.value / 5) * 5
     }
-})
 
-const { theme } = useTheme(props.pageTheme)
+    async function createPendingAccount() {
+        try {
+            const response = await fetch(`${getApiBase()}/auth/register-pending`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: form.value.name,
+                    email: form.value.email,
+                    password: form.value.password,
+                    password_confirmation: form.value.password_confirmation
+                })
+            })
 
-const selectedTier = ref(null)
-const customAmount = ref(25)
-const form = ref({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: ''
-})
+            const data = await response.json()
 
-// Add these computed
-const showFreeOption = computed(() => {
-    const params = new URLSearchParams(window.location.search)
-    return params.get('access') === 'free'
-})
+            if (response.ok) {
+                localStorage.setItem('pending_token', data.token)
+                return { success: true, user: data.user }
+            }
 
-const isFormValid = computed(() => {
-    return form.value.name.length > 0
-        && form.value.email.length > 0
-        && form.value.password.length >= 8
-        && form.value.password === form.value.password_confirmation
-})
-
-// Add these functions
-function enforceMinimum() {
-    if (customAmount.value < 5) {
-        customAmount.value = 5
+            return { success: false, message: data.message, errors: data.errors }
+        } catch (error) {
+            return { success: false, message: 'Network error' }
+        }
     }
-    customAmount.value = Math.round(customAmount.value / 5) * 5
-}
 
-function handleContinue() {
-    if (!isFormValid.value) return
-
-    if (selectedTier.value === 'free') {
-        createFreeAccount()
-    } else {
-        const amount = selectedTier.value === 'standard' ? 25 : customAmount.value
-        initiatePaddleCheckout(amount)
+    function getApiBase() {
+        return page.props.api_url + "/api"
     }
-}
 
-async function createFreeAccount() {
-    try {
-        const response = await fetch('https://rswfire.online/api/auth/sanctum/free-access', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(form.value)
-        })
+    async function handleContinue() {
+        if (!isFormValid.value) return
 
-        const data = await response.json()
-
-        if (response.ok) {
-            // Store token
-            localStorage.setItem('auth_token', data.token)
-
-            // Update auth state (if using your useAuth composable)
-            // auth.user.value = data.user
-
-            // Reload to refresh Sanctum state
-            window.location.href = '/'
+        if (selectedTier.value === 'free') {
+            await createFreeAccount()
         } else {
-            // Handle validation errors
-            console.error('Registration failed:', data)
+            // Create account with 'none' status
+            const result = await createPendingAccount()
+
+            if (result.success) {
+                // Open checkout
+                const amount = selectedTier.value === 'standard' ? 25 : customAmount.value
+                initiatePaddleCheckout(amount)
+            }
+        }
+    }
+    async function createFreeAccount() {
+        try {
+            const response = await fetch('https://rswfire.online/api/auth/sanctum/free-access', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(form.value)
+            })
+
+            const data = await response.json()
+
+            if (response.ok) {
+                localStorage.setItem('auth_token', data.token)
+                window.reload();
+            } else {
+                // Handle validation errors
+                console.error('Registration failed:', data)
+                // TODO: Display error to user
+            }
+        } catch (error) {
+            console.error('Network error:', error)
             // TODO: Display error to user
         }
-    } catch (error) {
-        console.error('Network error:', error)
-        // TODO: Display error to user
-    }
-}
-
-async function initiatePaddleCheckout(amount) {
-    if (!window.Paddle) {
-        console.error('Paddle not loaded')
-        errorMessage.value = 'Payment system not loaded. Please refresh.'
-        return
     }
 
-    const paddleConfig = page.props.paddle
-
-    try {
+    function initiatePaddleCheckout(amount) {
         const checkoutConfig = {
             items: [{
-                priceId: paddleConfig.price_id_standard,
+                priceId: page.props.paddle.price_id_standard,
                 quantity: 1
             }],
             customer: {
-                email: form.value.email,
-            },
-            customData: {
-                user_name: form.value.name,
-                user_email: form.value.email,
-                user_password: form.value.password, // We'll need this for account creation
-                tier: selectedTier.value,
-                amount: amount
-            }
-        }
-
-        // Try price override for custom amounts
-        if (selectedTier.value === 'custom' && amount !== 25) {
-            checkoutConfig.items[0].price = {
-                amount: (amount * 100).toString(),
-                currencyCode: 'USD'
+                email: form.value.email
             }
         }
 
         window.Paddle.Checkout.open(checkoutConfig)
-
-    } catch (error) {
-        console.error('Paddle checkout error:', error)
-        errorMessage.value = 'Failed to open checkout. Please try again.'
     }
-}
 
-// Add to onMounted (or create it if you don't have one)
-onMounted(() => {
-    if (!showFreeOption.value) {
-        selectedTier.value = 'standard'
-    }
-})
+    onMounted(() => {
+        if (!showFreeOption.value) {
+            selectedTier.value = 'standard'
+        }
+    })
+
 </script>
