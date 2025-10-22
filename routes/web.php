@@ -62,7 +62,6 @@ Route::get("/oauth2callback", function (Request $request) {
 Route::get('/sanctum/success', function (Request $request) {
     return Inertia::render('Sanctum/Success', [
         'session_id' => $request->query('session_id'),
-        'api_url' => config('app.api_url'),
     ]);
 })->name('sanctum.success');
 

@@ -36,26 +36,25 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Link, router } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 import Icon from '@/Components/System/Icon.vue'
 
 const props = defineProps({
     session_id: {
         type: String,
         required: true
-    },
-    api_url: {
-        type: String,
-        required: true
     }
 })
 
+const page = usePage()
 const status = ref('loading')
 const errorMessage = ref('')
 
 async function activateSubscription() {
     try {
-        const response = await fetch(`${props.api_url}/api/subscription/activate`, {
+        const apiUrl = page.props.api_url;
+
+        const response = await fetch(`${apiUrl}/api/subscription/activate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
