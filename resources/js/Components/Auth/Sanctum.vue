@@ -381,7 +381,8 @@
 
     async function initiateStripeCheckout(amount, email) {
         try {
-            // Create Stripe Checkout Session
+            sessionStorage.setItem('subscription_return_url', window.location.pathname)
+
             const response = await fetch(`${getApiBase()}/create-checkout-session`, {
                 method: 'POST',
                 headers: {

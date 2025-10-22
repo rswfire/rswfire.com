@@ -59,7 +59,7 @@
                 <h2 class="mt-8 text-xl font-semibold">3. Information Sharing</h2>
                 <p>We share information with the following third parties only as necessary to operate the Service:</p>
                 <ul>
-                    <li><strong>Stripe:</strong> Payment processing and subscription management. See Paddle's privacy policy for their data practices.</li>
+                    <li><strong>Stripe:</strong> Payment processing and subscription management. See Stripe's privacy policy for their data practices.</li>
                     <li><strong>Anthropic (Claude API):</strong> Transmission transcripts are processed by Claude AI to generate reflections. Anthropic's data usage policies apply to this processing.</li>
                     <li><strong>Hosting providers:</strong> Service infrastructure is hosted by third-party providers who may have access to data in the course of providing hosting services.</li>
                 </ul>

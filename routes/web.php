@@ -59,6 +59,13 @@ Route::get("/oauth2callback", function (Request $request) {
     return response("✅ OAuth tokens saved to storage/oauth-tokens.json");
 });
 
+Route::get('/sanctum/success', function (Request $request) {
+    return Inertia::render('Sanctum/Success', [
+        'session_id' => $request->query('session_id'),
+        'api_url' => config('app.api_url'),
+    ]);
+})->name('sanctum.success');
+
 Route::get("/", function () {
 
     $page = request()->get("page", 1);
