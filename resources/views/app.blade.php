@@ -13,7 +13,7 @@
             gtag("js", new Date());
             gtag("config", "G-5K6H8GR1Q7", { send_page_view: false });
         </script>
-        <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
         @routes
         @vite(["resources/js/app.js"])
         @inertiaHead

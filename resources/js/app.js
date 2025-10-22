@@ -139,37 +139,6 @@ createInertiaApp({
             sendPageView();
         });
 
-        nextTick(() => {
-            if (window.Paddle && props.initialPage.props.paddle) {
-                const paddleConfig = props.initialPage.props.paddle;
-
-                try {
-                    if (paddleConfig.environment === 'sandbox') {
-                        window.Paddle.Environment.set("sandbox");
-                    }
-
-                    window.Paddle.Initialize({
-                        token: paddleConfig.client_token,
-                        eventCallback: function(event) {
-                            console.log('Paddle event:', event);
-
-                            if (event.name === 'checkout.completed') {
-                                console.log('Payment completed:', event.data);
-                            }
-
-                            if (event.name === 'checkout.closed') {
-                                console.log('Checkout closed');
-                            }
-                        }
-                    });
-
-                    console.log('Paddle initialized with token:', paddleConfig.client_token.substring(0, 10) + '...');
-                } catch (error) {
-                    console.error('Paddle initialization failed:', error);
-                }
-            }
-        });
-
         return mountedApp;
     },
     progress: { color: "#4B5563" }

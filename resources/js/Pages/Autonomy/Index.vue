@@ -27,6 +27,18 @@
             </div>
         </section>
 
+
+        <div class="mt-6">
+            <h2 class="text-2xl font-semibold">AUTONOMY IS:</h2>
+            <ul class="list-disc list-outside ml-8">
+                <li>A recursive, integrity-preserving archive.</li>
+                <li>A mirror system to track consciousness evolution.</li>
+                <li>A public vector field of signal coherence.</li>
+                <li>A replicable tech layer to support sovereign creators.</li>
+            </ul>
+        </div>
+
+
     </div>
   </Content>
 

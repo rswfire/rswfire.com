@@ -344,16 +344,15 @@
         if (selectedTier.value === 'free') {
             await createFreeAccount()
         } else {
-            // Create account with 'none' status
             const result = await createPendingAccount()
 
             if (result.success) {
-                // Open checkout
                 const amount = selectedTier.value === 'standard' ? 25 : customAmount.value
-                initiatePaddleCheckout(amount)
+                await initiateStripeCheckout(amount, result.user.email)
             }
         }
     }
+
     async function createFreeAccount() {
         try {
             const response = await fetch('https://rswfire.online/api/auth/sanctum/free-access', {
@@ -381,18 +380,33 @@
         }
     }
 
-    function initiatePaddleCheckout(amount) {
-        const checkoutConfig = {
-            items: [{
-                priceId: page.props.paddle.price_id_standard,
-                quantity: 1
-            }],
-            customer: {
-                email: form.value.email
-            }
-        }
+    async function initiateStripeCheckout(amount, email) {
+        try {
+            // Create Stripe Checkout Session
+            const response = await fetch(`${getApiBase()}/create-checkout-session`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    amount: amount,
+                    email: email
+                })
+            })
 
-        window.Paddle.Checkout.open(checkoutConfig)
+            const { sessionId } = await response.json()
+
+            // Redirect to Stripe Checkout
+            const stripe = window.Stripe(page.props.stripe.publishable_key)
+            const { error } = await stripe.redirectToCheckout({ sessionId })
+
+            if (error) {
+                console.error('Stripe checkout error:', error)
+            }
+        } catch (error) {
+            console.error('Checkout creation error:', error)
+        }
     }
 
     onMounted(() => {
