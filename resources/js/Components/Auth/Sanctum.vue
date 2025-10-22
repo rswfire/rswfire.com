@@ -367,7 +367,7 @@
 
             if (response.ok) {
                 localStorage.setItem('auth_token', data.token)
-                window.reload();
+                window.location.href = '/transmission';
             } else {
                 // Handle validation errors
                 console.error('Registration failed:', data)
