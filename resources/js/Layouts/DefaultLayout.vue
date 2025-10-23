@@ -33,12 +33,12 @@
 
             <button
                 @click="menuOpen = true"
-                class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-red-50 hover:border-red-400 hover:text-red-600 transition"
+                class="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-sm text-gray-700 hover:bg-gray-100 hover:border-black transition"
                 :aria-expanded="menuOpen ? 'true' : 'false'"
                 aria-controls="mobile-menu"
                 aria-label="Open menu"
             >
-                <span class="text-lg">☰</span>
+                <span class="text-lg"><Icon name="Menu" color="text-black" class="w-6 h-6 flex-shrink-0"/></span>
             </button>
         </div>
 
@@ -251,7 +251,6 @@ const page = usePage()
 const auth = useAuth()
 const menuOpen = ref(false)
 
-// Initialize auth on mount
 onMounted(async () => {
     await auth.init()
 })

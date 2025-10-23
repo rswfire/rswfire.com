@@ -14,22 +14,101 @@
                     </div>
                 </div>
 
-                <nav class="flex items-center justify-center gap-2">
+                <nav class="flex items-center justify-center gap-3">
+                    <!-- Field Section -->
                     <div
-                        v-for="item in items"
-                        :key="item.label"
-                        @mouseenter="hovered = item.label"
-                        @mouseleave="hovered = null"
-                        class="group inline-flex items-center px-0.5 md:px-2 rounded-full transition-all duration-300"
+                        class="relative"
+                        @mouseenter="onSectionEnter('field')"
+                        @mouseleave="onSectionLeave"
                     >
-                        <Link :href="item.url" class="flex items-center space-x-0 md:space-x-2">
-                            <Icon :name="item.icon" :color="item.color" class="flex-shrink-0" />
-                            <transition name="fade-width">
-                                <span v-if="hovered === item.label" class="text-sm whitespace-nowrap text-gray-800">
-                                  {{ item.label }}
-                                </span>
-                            </transition>
-                        </Link>
+                        <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <span>FIELD</span>
+                            <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
+                        </button>
+
+                        <transition name="dropdown">
+                            <div
+                                v-if="activeSection === 'field'"
+                                class="absolute left-0 top-full mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50"
+                            >
+                                <div class="h-1 bg-gradient-to-r from-red-300 via-purple-300 to-yellow-300"></div>
+                                <div class="p-2 space-y-1">
+                                    <Link
+                                        v-for="item in fieldItems"
+                                        :key="item.label"
+                                        :href="item.url"
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                                    >
+                                        <Icon :name="item.icon" :class="item.color" class="w-4 h-4 flex-shrink-0" />
+                                        <span class="text-sm text-gray-800">{{ item.label }}</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+
+                    <!-- Signal Section -->
+                    <div
+                        class="relative"
+                        @mouseenter="onSectionEnter('signal')"
+                        @mouseleave="onSectionLeave"
+                    >
+                        <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <span>SIGNAL</span>
+                            <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
+                        </button>
+
+                        <transition name="dropdown">
+                            <div
+                                v-if="activeSection === 'signal'"
+                                class="absolute left-0 top-full mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50"
+                            >
+                                <div class="h-1 bg-gradient-to-r from-green-300 via-pink-300 to-sky-300"></div>
+                                <div class="p-2 space-y-1">
+                                    <Link
+                                        v-for="item in signalItems"
+                                        :key="item.label"
+                                        :href="item.url"
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                                    >
+                                        <Icon :name="item.icon" :class="item.color" class="w-4 h-4 flex-shrink-0" />
+                                        <span class="text-sm text-gray-800">{{ item.label }}</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+
+                    <!-- Reference Section -->
+                    <div
+                        class="relative"
+                        @mouseenter="onSectionEnter('reference')"
+                        @mouseleave="onSectionLeave"
+                    >
+                        <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <span>REFERENCE</span>
+                            <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
+                        </button>
+
+                        <transition name="dropdown">
+                            <div
+                                v-if="activeSection === 'reference'"
+                                class="absolute left-0 top-full mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50"
+                            >
+                                <div class="h-1 bg-gradient-to-r from-amber-300 via-orange-300 to-emerald-300"></div>
+                                <div class="p-2 space-y-1">
+                                    <Link
+                                        v-for="item in referenceItems"
+                                        :key="item.label"
+                                        :href="item.url"
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                                    >
+                                        <Icon :name="item.icon" :class="item.color" class="w-4 h-4 flex-shrink-0" />
+                                        <span class="text-sm text-gray-800">{{ item.label }}</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </transition>
                     </div>
                 </nav>
 
@@ -189,15 +268,73 @@
 
 <script setup>
 import { Link } from "@inertiajs/vue3"
-import { ref } from "vue"
+import { ref, computed } from "vue"
 import Icon from "@/Components/System/Icon.vue"
 import Ticker from "@/Components/Menu/Ticker.vue"
+import { useTheme } from "@/Composables/useTheme"
 
-const hovered = ref(null)
+const { themesBySection } = useTheme()
+
+// Section dropdown state
+const activeSection = ref(null)
+let sectionEnterTimer = null
+let sectionLeaveTimer = null
+
+// Auth menu state
 const showMenu = ref(false)
 let menuEnterTimer = null
 let menuLeaveTimer = null
 
+// Section items from theme composable
+const fieldItems = computed(() =>
+    themesBySection.value.field.map(t => ({
+        label: t.label,
+        icon: t.icon,
+        color: t.color,
+        url: t.url
+    }))
+)
+
+const signalItems = computed(() =>
+    themesBySection.value.signal.map(t => ({
+        label: t.label,
+        icon: t.icon,
+        color: t.color,
+        url: t.url
+    }))
+)
+
+const referenceItems = computed(() =>
+    themesBySection.value.reference.map(t => ({
+        label: t.label,
+        icon: t.icon,
+        color: t.color,
+        url: t.url
+    }))
+)
+
+// Section dropdown hover handlers
+function onSectionEnter(section) {
+    if (sectionLeaveTimer) {
+        window.clearTimeout(sectionLeaveTimer)
+        sectionLeaveTimer = null
+    }
+    sectionEnterTimer = window.setTimeout(() => {
+        activeSection.value = section
+    }, 80)
+}
+
+function onSectionLeave() {
+    if (sectionEnterTimer) {
+        window.clearTimeout(sectionEnterTimer)
+        sectionEnterTimer = null
+    }
+    sectionLeaveTimer = window.setTimeout(() => {
+        activeSection.value = null
+    }, 120)
+}
+
+// Auth menu hover handlers
 function onMenuEnter() {
     if (menuLeaveTimer) {
         window.clearTimeout(menuLeaveTimer)
@@ -218,21 +355,6 @@ function onMenuLeave() {
     }, 120)
 }
 
-const items = [
-    { label: "Home", icon: "Radar", color: "text-stone-400", url: "/" },
-    { label: "Who I Am", icon: "Flame", color: "text-red-400", url: "/handshake" },
-    { label: "What I Do", icon: "Hammer", color: "text-purple-400", url: "/build" },
-    { label: "Myth", icon: "ShieldCheck", color: "text-yellow-400", url: "/myth" },
-    { label: "Sanctum", icon: "Sprout", color: "text-indigo-400", url: "/sanctum" },
-    { label: "Fieldcraft", icon: "Map", color: "text-teal-400", url: "/fieldcraft" },
-    { label: "Transmissions", icon: "SatelliteDish", color: "text-pink-400", url: "/transmission" },
-    { label: "Signals", icon: "Activity", color: "text-sky-400", url: "/signal" },
-    { label: "Codex", icon: "SquareCode", color: "text-amber-400", url: "/codex" },
-    { label: "Lexicon", icon: "SquareLibrary", color: "text-orange-400", url: "/lexicon" },
-    { label: "Bluewater", icon: "WavesLadder", color: "text-blue-400", url: "/bluewater" },
-    { label: "Honeyman", icon: "TreeDeciduous", color: "text-emerald-400", url: "/honeyman" },
-]
-
 const props = defineProps({
     authUser: Object
 })
@@ -246,16 +368,13 @@ function handleLogout() {
 </script>
 
 <style scoped>
-.fade-width-enter-active,
-.fade-width-leave-active {
-    transition: opacity 250ms ease, max-width 300ms ease, transform 250ms ease;
-    max-width: 160px;
+.dropdown-enter-active,
+.dropdown-leave-active {
+    transition: opacity 200ms ease, transform 200ms ease;
 }
-.fade-width-enter-from,
-.fade-width-leave-to {
+.dropdown-enter-from,
+.dropdown-leave-to {
     opacity: 0;
-    max-width: 0;
-    overflow: hidden;
-    transform: translateX(-8px);
+    transform: translateY(-8px);
 }
 </style>

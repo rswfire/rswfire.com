@@ -63,7 +63,7 @@ const THEMES = {
         bg: "bg-red-50",
         border: "border-red-200",
         hover: "hover:bg-red-100",
-        blurb: "Introduction to the field and orientation for new arrivals.",
+        blurb: "Orientation for new arrivals.",
         section: "field"
     },
     'build': {
@@ -91,15 +91,6 @@ const THEMES = {
         border: "border-sky-200",
         hover: "hover:bg-sky-100",
         blurb: "Geographic and territorial documentation.",
-        section: "field"
-    },
-    'autonomy': {
-        icon: "BringToFront",
-        color: "text-red-400",
-        bg: "bg-red-50",
-        border: "border-red-200",
-        hover: "hover:bg-red-100",
-        blurb: "Platform infrastructure for sovereign systems.",
         section: "field"
     },
     'sanctum': {
@@ -131,13 +122,13 @@ const THEMES = {
         blurb: "Video transmissions from the archive.",
         section: "signal"
     },
-    'signals': {
-        icon: "Activity",
-        color: "text-sky-400",
-        bg: "bg-sky-50",
-        border: "border-sky-200",
-        hover: "hover:bg-sky-100",
-        blurb: "All signal types across the platform.",
+    'synthesis': {
+        icon: "Crosshair",
+        color: "text-purple-400",
+        bg: "bg-purple-50",
+        border: "border-purple-200",
+        hover: "hover:bg-purple-100",
+        blurb: "Pattern recognition across the archive.",
         section: "signal"
     },
     'gallery': {
@@ -149,33 +140,24 @@ const THEMES = {
         blurb: "Visual archive and image documentation.",
         section: "signal"
     },
-    'synthesis': {
-        icon: "Crosshair",
-        color: "text-purple-400",
-        bg: "bg-purple-50",
-        border: "border-purple-200",
-        hover: "hover:bg-purple-100",
-        blurb: "Pattern recognition across the archive.",
+    'signals': {
+        icon: "Activity",
+        color: "text-sky-400",
+        bg: "bg-sky-50",
+        border: "border-sky-200",
+        hover: "hover:bg-sky-100",
+        blurb: "All signal types across the platform.",
         section: "signal"
     },
 
     // Reference
-    'lineage': {
-        icon: "Trees",
-        color: "text-purple-400",
-        bg: "bg-purple-50",
-        border: "border-purple-200",
-        hover: "hover:bg-purple-100",
-        blurb: "Field manual for navigating collapse and rebuilding.",
-        section: "reference"
-    },
     'codex': {
         icon: "SquareCode",
         color: "text-amber-400",
         bg: "bg-amber-50",
         border: "border-amber-200",
         hover: "hover:bg-amber-100",
-        blurb: "Conceptual access points into the archive.",
+        blurb: "Conceptual access points into the platform.",
         section: "reference"
     },
     'lexicon': {
@@ -197,6 +179,15 @@ const THEMES = {
         blurb: "Preparation for ocean navigation.",
         section: "reference"
     },*/
+    'autonomy': {
+        icon: "BringToFront",
+        color: "text-red-400",
+        bg: "bg-red-50",
+        border: "border-red-200",
+        hover: "hover:bg-red-100",
+        blurb: "Platform infrastructure for sovereign systems.",
+        section: "reference"
+    },
     'honeyman': {
         icon: "TreeDeciduous",
         color: "text-emerald-400",
@@ -204,6 +195,15 @@ const THEMES = {
         border: "border-emerald-200",
         hover: "hover:bg-emerald-100",
         blurb: "Honeyman State Park institutional documentation.",
+        section: "reference"
+    },
+    'lineage': {
+        icon: "Trees",
+        color: "text-purple-400",
+        bg: "bg-purple-50",
+        border: "border-purple-200",
+        hover: "hover:bg-purple-100",
+        blurb: "Field manual for navigating collapse and rebuilding.",
         section: "reference"
     },
 }

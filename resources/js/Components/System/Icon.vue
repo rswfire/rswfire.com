@@ -13,6 +13,7 @@ import {
     Bookmark,
     BringToFront,
     Check,
+    ChevronDown,
     CircuitBoard,
     Cpu,
     Crosshair,
@@ -34,6 +35,7 @@ import {
     LogOut,
     Map,
     MapPinHouse,
+    Menu,
     MessageCircle,
     MessageSquareDot,
     Milestone,
@@ -55,7 +57,8 @@ import {
     User,
     UserPlus,
     WavesLadder,
-    Workflow
+    Workflow,
+    X
 } from "lucide-vue-next"
 
 const iconMap = {
@@ -64,6 +67,7 @@ const iconMap = {
     Bookmark,
     BringToFront,
     Check,
+    ChevronDown,
     CircuitBoard,
     Cpu,
     Crosshair,
@@ -85,6 +89,7 @@ const iconMap = {
     LogOut,
     Map,
     MapPinHouse,
+    Menu,
     MessageCircle,
     MessageSquareDot,
     Milestone,
@@ -106,7 +111,8 @@ const iconMap = {
     User,
     UserPlus,
     WavesLadder,
-    Workflow
+    Workflow,
+    X
 }
 
 const props = defineProps({
