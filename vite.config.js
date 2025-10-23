@@ -7,13 +7,6 @@ export default defineConfig({
         outDir: "public/assets",
         emptyOutDir: true,
         manifest: "manifest.json",
-        rollupOptions: {
-            output: {
-                entryFileNames: "[name].js",
-                chunkFileNames: "[name].js",
-                assetFileNames: "[name].[ext]"
-            }
-        }
     },
     plugins: [
         laravel({
