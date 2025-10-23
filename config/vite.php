@@ -14,8 +14,3 @@ return [
     'build_directory' => env('VITE_BUILD_DIRECTORY', 'assets'),
 
 ];
-```
-
-Then in your `.env`:
-```
-VITE_BUILD_DIRECTORY=assets
