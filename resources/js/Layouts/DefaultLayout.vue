@@ -121,7 +121,7 @@
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0 text-center">RSWFIRE.COM</h2>
                 <div class="mb-4 text-center text-sm text-gray-600">
                     <div class="leading-loose">
-                        <div class="text-lg font-bold leading-tighter">Built with <Link href="/autonomy" class="text-md underline">Autonomy</Link> &mdash; <span class="italic">infrastructure for sovereign systems</span>.</div>
+                        <div class="text-lg font-bold leading-tighter">Built with <Link href="/autonomy" class="text-md underline">Autonomy</Link> &mdash; <span class="italic">platform infrastructure for sovereign systems</span>.</div>
                         <div class="mt-4">This is a <Lexicon term="post-collapse">post-collapse</Lexicon>, <Lexicon term="post-fragmentation">post-fragmentation</Lexicon>, <Lexicon term="post-institutional">post-institutional</Lexicon> interface.</div>
                         <div>A living system for <Lexicon term="coherence">coherence</Lexicon>, not content &mdash; built to hold <Lexicon term="signal">signal</Lexicon> when the world forgets how.</div>
                         <div class="italic">Not a site. A system. Not for display. For resonance. For demonstration. For possibility.</div>

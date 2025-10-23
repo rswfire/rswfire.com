@@ -646,8 +646,8 @@ Route::get("/build", function () {
     ]);
 });
 
-
-Route::get('/transmission', [TransmissionController::class, 'index']);
+Route::redirect('/transmission', '/transmissions', 301);
+Route::get('/transmissions', [TransmissionController::class, 'index']);
 Route::get('/transmission/{ulid}', [TransmissionController::class, 'show']);
 Route::get('/transmission/tag/{tag}', [TransmissionController::class, 'tag']);
 
