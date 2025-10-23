@@ -145,8 +145,8 @@
                                 <span class="text-sm font-medium">{{ item.label }}</span>
                             </div>
                             <span class="text-xs text-muted-foreground leading-tight">
-                                {{ item.blurb }}
-                            </span>
+                    {{ item.blurb }}
+                </span>
                         </Link>
                     </div>
 
@@ -165,8 +165,8 @@
                                 <span class="text-sm font-medium">{{ item.label }}</span>
                             </div>
                             <span class="text-xs text-muted-foreground leading-tight">
-                                {{ item.blurb }}
-                            </span>
+                    {{ item.blurb }}
+                </span>
                         </Link>
                     </div>
 
@@ -185,54 +185,40 @@
                                 <span class="text-sm font-medium">{{ item.label }}</span>
                             </div>
                             <span class="text-xs text-muted-foreground leading-tight">
-                                {{ item.blurb }}
-                            </span>
+                    {{ item.blurb }}
+                </span>
                         </Link>
                     </div>
                 </div>
 
+                <!-- System Cards Section -->
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-4 py-4">
-
-                    <Link href="/about" class="h-full">
+                    <Link
+                        v-for="item in itemsSystem"
+                        :key="item.key"
+                        :href="item.url"
+                        class="h-full"
+                    >
                         <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
                             <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                                <Icon name="Cpu" color="text-black" class="w-4 h-4" /> ABOUT
+                                <Icon :name="item.icon" :color="item.color" class="w-4 h-4" />
+                                {{ item.label.toUpperCase() }}
                             </h3>
-                            <div class="text-gray-600 text-sm flex-1">The methodology behind this work, why it exists, and what it offers to those building post-institutional sovereignty.</div>
-                            <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Begin with orientation.<br/>Begin by listening.</em></div>
+                            <div class="text-gray-600 text-sm flex-1">{{ item.blurb }}</div>
+                            <div v-if="item.key === 'about'" class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1">
+                                <em>Begin with orientation.<br/>Begin by listening.</em>
+                            </div>
+                            <div v-if="item.key === 'contact'" class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1">
+                                <em>You are part of the field.<br/>If you're transmitting too, I'm listening.</em>
+                            </div>
+                            <div v-if="item.key === 'contribute'" class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1">
+                                <em>Your contributions have a tangible impact on the field.</em>
+                            </div>
+                            <div v-if="item.key === 'updates'" class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1">
+                                <em>No spam. Unsubscribe anytime.</em>
+                            </div>
                         </div>
                     </Link>
-
-                    <Link href="/contact" class="h-full">
-                        <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                                <Icon name="MessageSquareDot" color="text-black" class="w-4 h-4" /> CONTACT
-                            </h3>
-                            <div class="text-gray-600 text-sm flex-1">Direct contact for questions, collaboration inquiries, or technical support. </div>
-                            <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>You are part of the field.<br/>If you're transmitting too, I'm listening.</em></div>
-                        </div>
-                    </Link>
-
-                    <Link href="/contribute" class="h-full">
-                        <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                                <Icon name="HandCoins" color="text-black" class="w-4 h-4" /> CONTRIBUTE
-                            </h3>
-                            <div class="text-gray-600 text-sm flex-1">Financial support for maintaining this infrastructure and developing new tools.</div>
-                            <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>Your contributions have a tangible impact on the field.</em></div>
-                        </div>
-                    </Link>
-
-                    <Link href="/updates" class="h-full">
-                        <div class="border-t-4 border-x border-b border-gray-200 rounded-b-lg p-6 hover:shadow-md transition-shadow bg-white h-full flex flex-col">
-                            <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 border-b pb-2">
-                                <Icon name="Squirrel" color="text-black" class="w-4 h-4" /> UPDATES
-                            </h3>
-                            <div class="text-gray-600 text-sm flex-1">Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.</div>
-                            <div class="mt-2 pt-2 border-t text-gray-600 text-sm flex-1"><em>No spam. Unsubscribe anytime.</em></div>
-                        </div>
-                    </Link>
-
                 </div>
 
                 <div class="pt-4 text-center text-sm border-t">
@@ -252,6 +238,7 @@
 import { computed, ref, onMounted } from 'vue'
 import { Head, Link, usePage } from '@inertiajs/vue3'
 import { useAuth } from '@/Composables/useAuth'
+import { useTheme } from '@/Composables/useTheme.js'
 import Header from '@/Components/Menu/Header.vue'
 import Icon from "@/Components/System/Icon.vue"
 import Lexicon from "@/Components/System/Lexicon.vue"
@@ -274,30 +261,10 @@ async function handleLogout() {
     menuOpen.value = false
 }
 
-const itemsField = [
-  /*{ label: "HOME",      icon: "Radar",       color: "text-stone-400",  bg: "bg-stone-100", border: "border-stone-300",  hover: "hover:bg-stone-200",  url: "/",          blurb: "Field entry point. Orientation for first contact." },*/
-    { label: "WHO I AM",  icon: "Flame",       color: "text-red-400",    bg: "bg-red-50",    border: "border-red-200",    hover: "hover:bg-red-100",    url: "/hello",     blurb: "Foundational identity. The sovereign node." },
-    { label: "WHAT I DO", icon: "Hammer",      color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/tech",      blurb: "Builder of systems. Steward of depth." },
-    { label: "MYTH",      icon: "ShieldCheck", color: "text-yellow-400", bg: "bg-yellow-50", border: "border-yellow-200", hover: "hover:bg-yellow-100", url: "/myth",      blurb: "Pattern recognition through lived narrative." },
-    { label: "ATLAS",     icon: "MapPinHouse", color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/atlas",     blurb: "Geo-temporal navigation through time and place." },
-    { label: "AUTONOMY",  icon: "Layers",      color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/autonomy",  blurb: "Platform technology for sovereign systems." },
-    { label: "SANCTUM",   icon: "Sprout",      color: "text-amber-400",  bg: "bg-amber-50",  border: "border-amber-200",  hover: "hover:bg-amber-100",  url: "/sanctum",   blurb: "Relational space. Subscription service." },
-]
-
-const itemsSignal = [
-    { label: "FIELDCRAFT",    icon: "Map",               color: "text-teal-400",   bg: "bg-teal-50",   border: "border-teal-200",   hover: "hover:bg-teal-100",   url: "/fieldcraft",   blurb: "Real-time documentation of lived practice." },
-    { label: "TRANSMISSIONS", icon: "SatelliteDish",     color: "text-pink-400",   bg: "bg-pink-50",   border: "border-pink-200",   hover: "hover:bg-pink-100",   url: "/transmission", blurb: "Uncompressed signal. First-language dispatches." },
-    { label: "SIGNALS",       icon: "Activity",          color: "text-sky-400",    bg: "bg-sky-50",    border: "border-sky-200",    hover: "hover:bg-sky-100",    url: "/signal",       blurb: "Anchored expressions. Durable signal after resonance." },
-    { label: "GALLERY",       icon: "GalleryHorizontal", color: "text-orange-400", bg: "bg-orange-50", border: "border-orange-200", hover: "hover:bg-orange-100", url: "/gallery",      blurb: "Visual record of place, practice, and unfolding." },
-    { label: "SYNTHESIS",     icon: "Crosshair",         color: "text-purple-400", bg: "bg-purple-50", border: "border-purple-200", hover: "hover:bg-purple-100", url: "/synthesis",    blurb: "Emergent patterns. Clustered signals by time and theme." },
-]
-
-const itemsReference = [
-    { label: "LINEAGE",   icon: "Trees",         color: "text-purple-400",  bg: "bg-purple-50",  border: "border-purple-200",  hover: "hover:bg-purple-100",  url: "/lineage",   blurb: "Field manual for the Sanctum community." },
-    { label: "CODEX",     icon: "SquareCode",    color: "text-amber-400",   bg: "bg-amber-50",   border: "border-amber-200",   hover: "hover:bg-amber-100",   url: "/codex",     blurb: "Core structural logic. What governs this system." },
-    { label: "LEXICON",   icon: "SquareLibrary", color: "text-orange-400",  bg: "bg-orange-50",  border: "border-orange-200",  hover: "hover:bg-orange-100",  url: "/lexicon",   blurb: "Field-defined language for naming what we navigate." },
-  /*{ label: "BLUEWATER", icon: "WavesLadder",   color: "text-blue-400",    bg: "bg-blue-50",    border: "border-blue-200",    hover: "hover:bg-blue-100",    url: "/bluewater", blurb: "Preparation for sea-stage sovereignty." },*/
-    { label: "HONEYMAN",  icon: "TreeDeciduous", color: "text-emerald-400", bg: "bg-emerald-50", border: "border-emerald-200", hover: "hover:bg-emerald-100", url: "/honeyman",  blurb: "The story of a fracture." },
-]
+const { themesBySection } = useTheme()
+const itemsField = themesBySection.value.field
+const itemsSignal = themesBySection.value.signal
+const itemsReference = themesBySection.value.reference
+const itemsSystem = themesBySection.value.system
 
 </script>

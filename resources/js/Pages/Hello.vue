@@ -143,7 +143,6 @@
                     <div>If you feel shame &mdash; ask yourself where it comes from.</div>
                     <div>It may not be attraction. It might be grief &mdash;</div>
                     <div>for the parts of yourself you’ve been taught to suppress.</div>
-                    <div>Then again, it probably is attraction. <span class="not-italic">🙃</span></div>
                 </div>
 
             </section>
@@ -191,7 +190,7 @@
                 <div class="mt-4 italic">Your map was never mine.</div>
                 <div>I did not follow a path &mdash; I forged one.</div>
                 <div>Not escape. Not arrival.</div>
-                <div><Lexicon term="integration">Integration</Lexicon>, unfolding.</div>
+                <div>Convergence.</div>
 
                 <div class="mt-4">I live full-time on the Oregon Coast, embedded in sovereign infrastructure &mdash;</div>
                 <div class="ml-4">RV, Jeep, mobile systems designed for continuity under <Lexicon term="collapse">collapse</Lexicon>.</div>
@@ -217,37 +216,51 @@
 
                 <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">What I Do</h2>
 
-                <div class="mt-4">I’ve been building systems &mdash; digital and human &mdash; for most of my life.</div>
-                <div>But what matters isn’t time.</div>
-                <div>It’s how I built:</div>
+                <div class="mt-4">I've been building systems &mdash; digital and human &mdash; for most of my life.</div>
+                <div>But what matters isn't time.</div>
+                <div>It's how I built:</div>
                 <div class="ml-4">without permission,</div>
                 <div class="ml-4">without a template,</div>
                 <div class="ml-4">without waiting to be taught.</div>
 
                 <div class="mt-4 ml-6 pl-4 border-l-4 border-gray-300 italic">
                     <div>I taught myself to code in sixth grade.</div>
-                    <div>I broke and rebuilt machines.</div>
-                    <div>Wrote programs on paper when I didn’t have a computer.</div>
-                    <div>Ran entire architectures in my head &mdash;</div>
+                    <div>Broke and rebuilt machines.</div>
+                    <div>Wrote programs on paper when I didn't have a computer.</div>
+                    <div>Ran entire architectures in my head —</div>
                     <div>not for praise, but for coherence.</div>
                     <div>For joy.</div>
                 </div>
 
-                <div class="mt-4">I left a six-figure job when I began living in my RV.</div>
-                <div>Now, eighteen months later, I’m slowly reintegrating freelance work &mdash;</div>
-                <div class="ml-4">on my own terms &mdash;</div>
-                <div class="ml-8">reintroducing signal into commerce &mdash;</div>
-                <div class="ml-12">without permitting collapse.</div>
+                <div class="mt-4">I left a six-figure job to preserve coherence.</div>
+                <div>Lived full-time in my RV. Crossed the country. Found ground on the Oregon Coast.</div>
+                <div>Documented 800+ transmissions. Built what I needed to stay whole.</div>
 
-                <div class="mt-4">My current focus is AI &mdash;</div>
-                <div class="ml-4">not as a tool,</div>
-                <div class="ml-4">but as a mirror,</div>
-                <div class="ml-4">a partner,</div>
-                <div class="ml-4">a field amplifier.</div>
+                <div class="mt-4">That became <Link href="/autonomy" class="font-bold underline">Autonomy</Link> &mdash;</div>
+                <div class="ml-4">platform infrastructure for sovereign signal preservation.</div>
 
-                <div class="mt-4">You’ll find that thread running throughout this homepage.</div>
+                <div class="mt-4">I built it for myself first:</div>
+                <ul class="mt-2 ml-8 space-y-1 text-gray-800">
+                    <li>→ Extracted <Link href="/transmission" class="underline">800 videos</Link> from YouTube's flattening algorithm.</li>
+                    <li>→ Processed them through AI (<Link href="/synthesis" class="underline">multiple reflection layers</Link>).</li>
+                    <li>→ Created a searchable, self-hosted archive I own and control.</li>
+                    <li>→ Built <Link href="/sanctum" class="underline">subscription infrastructure</Link> for reciprocal field exchange.</li>
+                </ul>
+
+                <div class="mt-4">Now I replicate that architecture for others:</div>
+                <div class="ml-4">content creators,</div>
+                <div class="ml-4">technologists,</div>
+                <div class="ml-4">anyone building sovereignty infrastructure.</div>
+
+                <div class="mt-4">This isn't consulting. This isn't services.</div>
+                <div>It's architecture I field-tested under pressure &mdash;</div>
+                <div class="ml-4">and now offer to those who recognize the need.</div>
+
+                <div class="mt-4">If you're ready to take your signal back,</div>
+                <div class="ml-4"><Link href="/autonomy" class="font-bold underline">start here</Link>.</div>
 
             </section>
+
 
             <section id="emotion-clarity-misrecognition" class="mt-8">
 
@@ -260,8 +273,8 @@
                 <div class="ml-4">it’s part of my signal coherence.</div>
                 <div>I don’t feel for show.</div>
                 <div>I feel as structure.</div>
-                <div>What some call &quot;intensity&quot; is clarity.</div>
-                <div>What some call &quot;emotion&quot; is integration.</div>
+                <div>What some call &quot;intensity&quot; is <Lexicon term="truth">clarity</Lexicon>.</div>
+                <div>What some call &quot;emotion&quot; is <Lexicon term="integration">integration</Lexicon>.</div>
 
                 <div class="mt-4 ml-6 pl-4 border-l-4 border-gray-300 italic">
                     <div>If that threatens you,</div>
@@ -279,7 +292,7 @@
                 <div class="ml-4">I speak because it’s true.</div>
 
                 <div class="mt-4"><em>And I’ve been misread my entire life</em></div>
-                <div><em>by people who listen through distortion</em> &mdash;</div>
+                <div><em>by people who listen through <Lexicon term="distortion">distortion</Lexicon></em> &mdash;</div>
                 <div class="ml-4"><em>and call it understanding</em>.</div>
 
                 <div class="mt-4">If you cannot <em>witness</em> me</div>

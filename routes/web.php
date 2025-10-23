@@ -105,6 +105,15 @@ Route::get("/autonomy", function () {
     ]);
 });
 
+Route::get("/autonomy/creators", function () {
+
+    return Inertia::render("Autonomy/Creators", [
+        "metaTitle" => "Autonomy for Content Creators | ".request()->getHost(),
+        "metaDescription" => "Platform technology for content creators.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
+    ]);
+});
+
 Route::get("/bluewater", function () {
 
     return Inertia::render("Bluewater/Index", [
