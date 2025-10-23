@@ -66,13 +66,13 @@ const THEMES = {
         blurb: "Introduction to the field and orientation for new arrivals.",
         section: "field"
     },
-    'tech': {
+    'build': {
         icon: "Hammer",
         color: "text-purple-400",
         bg: "bg-purple-50",
         border: "border-purple-200",
         hover: "hover:bg-purple-100",
-        blurb: "Technical projects and development archive.",
+        blurb: "Decades of systems built without permission.",
         section: "field"
     },
     'myth': {

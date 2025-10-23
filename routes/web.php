@@ -638,9 +638,9 @@ Route::get("/signal/{id}", function ($id) {
     ]);
 })->middleware('auth');
 
-Route::get("/tech", function () {
-    return Inertia::render("Tech", [
-        "metaTitle" => "What I Do | Systems, Signal & Architecture | ".request()->getHost(),
+Route::get("/build", function () {
+    return Inertia::render("Build", [
+        "metaTitle" => "Build | Systems, Signal & Architecture | ".request()->getHost(),
         "metaDescription" => "I don't build websites. I build ecosystems. Discover how 30+ years of systems thinking, foresight, and off-grid clarity power everything I touch.",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
