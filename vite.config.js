@@ -4,7 +4,7 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
     build: {
-        outDir: '../public/assets',
+        outDir: 'public/assets',
         emptyOutDir: true,
         manifest: true,
     },
