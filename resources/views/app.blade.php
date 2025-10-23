@@ -15,7 +15,7 @@
         </script>
         <script src="https://js.stripe.com/v3/"></script>
         @routes
-        @vite(["resources/js/app.js"])
+        @vite(["resources/js/app.js"], "assets")
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
