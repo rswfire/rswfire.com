@@ -89,6 +89,7 @@
                         @mouseleave="onSectionLeave"
                     >
                         <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <Icon name="MapPinned" class="w-[20px] h-[20px] mr-1.5" />
                             <span>FIELD</span>
                             <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
                         </button>
@@ -121,6 +122,7 @@
                         @mouseleave="onSectionLeave"
                     >
                         <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <Icon name="SquareActivity" class="w-[20px] h-[20px] mr-1.5" />
                             <span>SIGNAL</span>
                             <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
                         </button>
@@ -153,6 +155,7 @@
                         @mouseleave="onSectionLeave"
                     >
                         <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <Icon name="SquareLibrary" class="w-[20px] h-[20px] mr-1.5" />
                             <span>REFERENCE</span>
                             <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
                         </button>
@@ -185,6 +188,7 @@
                         @mouseleave="onSectionLeave"
                     >
                         <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <Icon name="SquareChevronRight" class="w-[20px] h-[20px] mr-1.5" />
                             <span>SYSTEM</span>
                             <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
                         </button>
