@@ -1,5 +1,72 @@
 <template>
     <header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+
+
+
+        <div class="mt-1 px-8 mx-auto max-w-6xl grid-cols-[1fr_auto] items-center page-wrap">
+            <div class="bg-white border-b border-gray-100 py-1.5" style="
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  ">
+                <Ticker
+                    :speedPxPerSec="47"
+                    :gapPx="24"
+                    :respectReducedMotion="false"
+                    class="text-black font-medium text-sm leading-snug"
+                >
+            <span class="inline-flex items-center">
+              <Icon name="Flame" color="text-black" class="w-[16px] h-[16px]" />
+              <span class="italic text-gray-700 ml-2">"In a forest pitch dark, glowed the tiniest spark. It burst into a flame."</span>
+              <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
+            </span>
+                    <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
+
+                    <span class="inline-flex items-center text-gray-700">
+              <Icon name="SquareLibrary" color="text-black" class="w-[16px] h-[16px]" />
+              <Link href="/lexicon" class="ml-1 text-lexicon-600 font-semibold hover:underline">
+                Lexicon
+              </Link>
+              <span class="ml-1">has expanded &mdash; new entries and integrated tooltips now weave the language into the whole project.</span>
+            </span>
+                    <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
+
+                    <span class="inline-flex items-center text-gray-700">
+              <Icon name="TreeDeciduous" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">The</span>
+              <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
+                Honeyman Archive
+              </Link>
+              <span class="ml-1">is now complete. We await updates on the
+                <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="ml-1 text-honeyman-600 font-semibold hover:underline">public records request</Link>.
+              </span>
+            </span>
+
+                    <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
+
+                    <span class="inline-flex items-center text-gray-700">
+              <Icon name="WavesLadder" color="text-black" class="w-[16px] h-[16px]" />
+              <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
+                Bluewater
+              </Link>
+              <span class="ml-1">underway &mdash; real preparation for exodus, now entering sea-stage recursion. Sovereignty is no longer theoretical.</span>
+            </span>
+                    <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
+
+                    <span class="inline-flex items-center text-gray-700">
+              <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">Please consider</span>
+              <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
+                contributing
+              </Link>
+              <span class="ml-1">to this open-source project, thank you!</span>
+            </span>
+                </Ticker>
+            </div>
+
+        </div>
+
+
+
+
+
         <div class="max-w-6xl mx-auto page-wrap">
             <div class="grid grid-cols-[auto_1fr_auto] items-center h-14">
                 <div class="flex items-center space-x-2">
@@ -110,7 +177,43 @@
                             </div>
                         </transition>
                     </div>
+
+                    <!-- System Section -->
+                    <div
+                        class="relative"
+                        @mouseenter="onSectionEnter('system')"
+                        @mouseleave="onSectionLeave"
+                    >
+                        <button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            <span>SYSTEM</span>
+                            <Icon name="ChevronDown" class="w-[20px] h-[20px]" />
+                        </button>
+
+                        <transition name="dropdown">
+                            <div
+                                v-if="activeSection === 'system'"
+                                class="absolute left-0 top-full mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50"
+                            >
+                                <div class="h-1 bg-gradient-to-r from-amber-300 via-orange-300 to-emerald-300"></div>
+                                <div class="p-2 space-y-1">
+                                    <Link
+                                        v-for="item in systemItems"
+                                        :key="item.label"
+                                        :href="item.url"
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 transition"
+                                    >
+                                        <Icon :name="item.icon" :class="item.color" class="w-4 h-4 flex-shrink-0" />
+                                        <span class="text-sm text-gray-800">{{ item.label }}</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+
                 </nav>
+
+
+
 
                 <div class="sm:hidden lg:flex lg:items-center">
                     <div
@@ -192,76 +295,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-[1fr_auto] items-center page-wrap">
-                <div class="min-w-0 px-3">
-                    <Ticker
-                        :speedPxPerSec="47"
-                        :gapPx="24"
-                        :respectReducedMotion="false"
-                        class="text-xs text-black font-medium leading-tight"
-                    >
-            <span class="inline-flex items-center">
-              <Icon name="Flame" color="text-black" class="w-[16px] h-[16px]" />
-              <span class="italic text-gray-700 ml-2">"In a forest pitch dark, glowed the tiniest spark. It burst into a flame."</span>
-              <span class="text-gray-600 ml-2">— <a href="https://bjork.com" class="text-red-600 hover:underline" target="_blank">Björk</a></span>
-            </span>
-                        <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
-                        <span class="inline-flex items-center text-gray-700">
-              <Icon name="SquareLibrary" color="text-black" class="w-[16px] h-[16px]" />
-              <Link href="/lexicon" class="ml-1 text-lexicon-600 font-semibold hover:underline">
-                Lexicon
-              </Link>
-              <span class="ml-1">has expanded &mdash; new entries and integrated tooltips now weave the language into the whole project.</span>
-            </span>
-                        <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
-
-                        <span class="inline-flex items-center text-gray-700">
-              <Icon name="TreeDeciduous" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">The</span>
-              <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
-                Honeyman Archive
-              </Link>
-              <span class="ml-1">is now complete. We await updates on the
-                <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="ml-1 text-honeyman-600 font-semibold hover:underline">public records request</Link>.
-              </span>
-            </span>
-
-                        <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
-
-                        <span class="inline-flex items-center text-gray-700">
-              <Icon name="WavesLadder" color="text-black" class="w-[16px] h-[16px]" />
-              <Link href="/bluewater" class="ml-1 text-blue-600 font-semibold hover:underline">
-                Bluewater
-              </Link>
-              <span class="ml-1">underway &mdash; real preparation for exodus, now entering sea-stage recursion. Sovereignty is no longer theoretical.</span>
-            </span>
-                        <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
-
-                        <span class="inline-flex items-center text-gray-700">
-              <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> <span class="ml-2">Please consider</span>
-              <Link href="/contribute" class="ml-1 text-orange-600 font-semibold hover:underline">
-                contributing
-              </Link>
-              <span class="ml-1">to this open-source project, thank you!</span>
-            </span>
-                    </Ticker>
-                </div>
-
-                <div class="flex items-center gap-6 mb-2">
-                    <Link href="/about" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="Layers" color="text-black" class="w-[16px] h-[16px]" /> About
-                    </Link>
-                    <Link href="/contact" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="MessageSquareDot" color="text-black" class="w-[16px] h-[16px]" /> Contact
-                    </Link>
-                    <Link href="/contribute" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="HandCoins" color="text-black" class="w-[16px] h-[16px]" /> Contribute
-                    </Link>
-                    <Link href="/updates" class="flex items-center gap-1 text-xs font-medium text-gray-700 hover:underline">
-                        <Icon name="Squirrel" color="text-black" class="w-[16px] h-[16px]" /> Updates
-                    </Link>
-                </div>
-            </div>
         </div>
     </header>
 </template>
@@ -312,6 +346,15 @@ const referenceItems = computed(() =>
         url: t.url
     }))
 )
+const systemItems = computed(() =>
+    themesBySection.value.system.map(t => ({
+        label: t.label,
+        icon: t.icon,
+        color: t.color,
+        url: t.url
+    }))
+)
+
 
 // Section dropdown hover handlers
 function onSectionEnter(section) {
