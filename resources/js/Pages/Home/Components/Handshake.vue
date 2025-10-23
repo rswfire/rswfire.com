@@ -68,10 +68,10 @@
                 <div class="border-t border-rswfire-300 pt-6 mt-6 pr-4">
                     <div class="w-full flex justify-end">
                         <a
-                            href="/hello"
+                            href="/handshake"
                             class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-rswfire-400 border-rswfire-200 shadow-md"
                         >
-                            Who I Am →
+                            Handshake →
                         </a>
                     </div>
                 </div>

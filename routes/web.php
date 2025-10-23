@@ -476,9 +476,9 @@ Route::get("/fieldcraft/{id}", function ($id) {
     ]);
 });
 
-Route::get("/hello", function () {
-    return Inertia::render("Hello", [
-        "metaTitle" => "Who I Am | ".request()->getHost(),
+Route::get("/handshake", function () {
+    return Inertia::render("Handshake", [
+        "metaTitle" => "Handshake | ".request()->getHost(),
         "metaDescription" => "",
         "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);

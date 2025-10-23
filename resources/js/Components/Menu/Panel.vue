@@ -112,8 +112,8 @@ const utilityLinks = computed(() => {
 // Main tiles
 const items = [
     { label: "Home",          icon: "Radar",          color: "text-indigo-400", bg: "bg-indigo-50",      border: "border-indigo-200",      hover: "hover:bg-indigo-100",      url: "/" },
-    { label: "Who I Am",      icon: "Flame",          color: "text-red-400",    bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/hello" },
-    { label: "What I Do",     icon: "Hammer",         color: "text-purple-400", bg: "bg-purple-50",      border: "border-purple-200",      hover: "hover:bg-purple-100",      url: "/tech" },
+    { label: "Who I Am",      icon: "Flame",          color: "text-red-400",    bg: "bg-red-50",         border: "border-red-200",         hover: "hover:bg-red-100",         url: "/handshake" },
+    { label: "What I Do",     icon: "Hammer",         color: "text-purple-400", bg: "bg-purple-50",      border: "border-purple-200",      hover: "hover:bg-purple-100",      url: "/build" },
     { label: "Signal",        icon: "Activity",       color: "text-sky-400",    bg: "bg-sky-50",         border: "border-sky-200",         hover: "hover:bg-sky-100",         url: "/signal" },
     { label: "Transmission",  icon: "SatelliteDish",  color: "text-pink-400",   bg: "bg-pink-50",        border: "border-pink-200",        hover: "hover:bg-pink-100",        url: "/transmission" },
     { label: "Fieldcraft",    icon: "Map",            color: "text-green-500",  bg: "bg-green-50",       border: "border-green-200",       hover: "hover:bg-green-100",       url: "/fieldcraft" },

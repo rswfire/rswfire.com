@@ -343,7 +343,7 @@
     import {Link} from "@inertiajs/vue3";
     import Lexicon from "@/Components/System/Lexicon.vue";
 
-    const pageTheme = "hello";
+    const pageTheme = "handshake";
 
 </script>
 

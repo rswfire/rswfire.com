@@ -57,7 +57,7 @@ const THEMES = {
         section: "field"
     },
      */
-    'hello': {
+    'handshake': {
         icon: "Flame",
         color: "text-red-400",
         bg: "bg-red-50",

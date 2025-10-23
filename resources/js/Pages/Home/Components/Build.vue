@@ -23,10 +23,10 @@
         <div class="border-t border-tech-300 pt-4 pr-4 mt-auto">
             <div class="w-full flex justify-end">
                 <a
-                    href="/tech"
+                    href="/build"
                     class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-tech-400 border-tech-200 shadow-md"
                 >
-                    What I Do →
+                    Build →
                 </a>
             </div>
         </div>

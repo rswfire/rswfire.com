@@ -7,8 +7,8 @@
             <div class="md:col-span-2 flex flex-col">
                 <div class="flex flex-col">
                     <FieldcraftRecentCard :entries="recentFieldcraft" class="mb-6 sm:mb-6" />
-                    <HelloCard class="mb-6 sm:mb-6" />
-                    <TechCard class="mb-6 sm:mb-0" />
+                    <HandshakeCard class="mb-6 sm:mb-6" />
+                    <BuildCard class="mb-6 sm:mb-0" />
 
                 </div>
             </div>
@@ -48,16 +48,16 @@
 <script setup>
 
     import BluewaterCard from "@/Pages/Home/Components/Bluewater.vue";
+    import BuildCard from "@/Pages/Home/Components/Build.vue";
     import CodexCard from "@/Pages/Home/Components/Codex.vue";
     import CompanionCard from "@/Pages/Home/Components/Companion.vue";
     import FieldcraftCard from "@/Pages/Home/Components/Fieldcraft.vue";
     import FieldcraftRecentCard from "@/Pages/Home/Components/FieldcraftRecent.vue";
-    import HelloCard from "@/Pages/Home/Components/Hello.vue";
+    import HandshakeCard from "@/Pages/Home/Components/Handshake.vue";
     import HoneymanCard from "@/Pages/Home/Components/Honeyman.vue";
     import LexiconCard from "@/Pages/Home/Components/Lexicon.vue";
     import MythCard from "@/Pages/Home/Components/Myth.vue";
     import SignalCard from "@/Pages/Home/Components/Signal.vue";
-    import TechCard from "@/Pages/Home/Components/Tech.vue";
     import TransmissionCard from "@/Pages/Home/Components/Transmission.vue";
     import TransmissionRecentCard from "@/Pages/Home/Components/TransmissionsRecent.vue";
 

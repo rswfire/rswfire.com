@@ -220,7 +220,7 @@ function onMenuLeave() {
 
 const items = [
     { label: "Home", icon: "Radar", color: "text-stone-400", url: "/" },
-    { label: "Who I Am", icon: "Flame", color: "text-red-400", url: "/hello" },
+    { label: "Who I Am", icon: "Flame", color: "text-red-400", url: "/handshake" },
     { label: "What I Do", icon: "Hammer", color: "text-purple-400", url: "/build" },
     { label: "Myth", icon: "ShieldCheck", color: "text-yellow-400", url: "/myth" },
     { label: "Sanctum", icon: "Sprout", color: "text-indigo-400", url: "/sanctum" },
