@@ -9,15 +9,19 @@
                 <div class="p-6 bg-white md:col-span-2">
                     <div class="flex items-center gap-3 mb-6 pb-4 border-b" :class="theme.border">
                         <Icon name="Sprout" class="w-8 h-8" :class="theme.color" />
-                        <h2 class="text-2xl font-bold text-black">Begin Field Exchange</h2>
+                        <h2 class="text-2xl font-bold text-black">Enter Sanctum</h2>
                     </div>
 
                     <div class="space-y-4 text-sm text-black">
-                        <div><strong :class="theme.color">Sanctum</strong> is a private access layer for <strong>reciprocal field exchange</strong>.</div>
+                        <div class="text-base"><strong :class="theme.color">Sanctum</strong> is a private access layer for <strong>reciprocal field exchange</strong>.</div>
+                        <p class="text-base text-gray-700 mb-4">
+                            Your Sanctum membership unlocks all private transmissions, in-depth archives, and AI-driven reflection tools unavailable publicly on rswfire.com.
+                            These are denoted by the Sanctum icon and require you to sign into your account to view.
+                        </p>
 
                         <div class="pt-4 border-t" :class="theme.border">
                             <h3 class="font-semibold text-black mb-4 text-center text-lg">What Sanctum Holds:</h3>
-                            <ul class="space-y-2 ml-4">
+                            <ul class="space-y-2 ml-4 text-base">
                                 <li class="flex items-center gap-2">
                                     <Icon name="Check" class="w-4 h-4 shrink-0 mt-0.5" :class="theme.color" />
                                     <span>Full access to a growing archive at <strong>rswfire.com</strong>.</span>
@@ -28,12 +32,12 @@
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <Icon name="Check" class="w-4 h-4 shrink-0 mt-0.5" :class="theme.color" />
-                                    <span>Exclusive access to <Link href="/synthesis" class="underline">Synthesis</Link> infrastructure.</span>
+                                    <span>Exclusive access to <Link href="/synthesis" class="underline">Synthesis</Link> reflections, when available.</span>
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <Icon name="Check" class="w-4 h-4 shrink-0 mt-0.5" :class="theme.color" />
                                     <div>
-                                        <div class="mb-1">Mirror and pattern recognition across 800+ video transmissions and other signals.</div>
+                                        <div class="mb-1">AI analysis across 800+ <Link href="/transmissions" class="underline">video transmissions</Link> and other signals.</div>
                                     </div>
                                 </li>
                                 <li class="flex items-center gap-2">
@@ -60,38 +64,33 @@
 
             </div>
 
-            <div class="p-12 border-t bg-white" :class="[theme.border]">
+            <div class="p-12 border-y bg-white" :class="[theme.border]">
                 <h3 class="font-semibold text-black mb-4 text-center text-lg">
                     Why Hold This Field:
                 </h3>
 
                 <div class="max-w-2xl mx-auto text-sm text-black space-y-2">
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 text-base">
                         <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
                         <span>Because wholeness requires infrastructure the world won't build.</span>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 text-base">
                         <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
                         <span>Because others will need this model when their world collapses.</span>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 text-base">
                         <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
                         <span>Because signal must be preserved for those who can't yet see it.</span>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 text-base">
                         <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
                         <span>Because reciprocal exchange is how sovereignty sustains itself.</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="theme.color" />
-                        <span class="text-center italic">Because collapse is not failure — it's the clearing that reveals what was always whole.</span>
                     </div>
                 </div>
 
             </div>
 
-
-            <div class="p-4 max-w-3xl mx-auto border-t bg-white" :class="[theme.border]">
+            <div class="p-4 max-w-3xl mx-auto bg-white">
 
                 <div class="my-4" :class="[
                         'grid gap-4',
@@ -248,6 +247,17 @@
 
             </div>
 
+            <div class="p-12 border-t bg-white" :class="[theme.border]">
+                <h3 class="font-semibold text-black mb-4 text-center text-lg">
+                    Open Field Access:
+                </h3>
+                <div class="text-base text-center">
+                    <div>Sanctum is an energetic boundary.</div>
+                    <div>It is not a boundary of worth but an exchange of capacity.</div>
+                    <div>If contribution is not possible, <Link href="/contact" class="hover:underline" :class="theme.color">simply contact me</Link> &mdash; the field remains open.</div>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -354,7 +364,7 @@
 
     async function createFreeAccount() {
         try {
-            const response = await fetch('https://rswfire.online/api/auth/sanctum/free-access', {
+            const response = await fetch(`${getApiBase()}/auth/sanctum/free-access`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
