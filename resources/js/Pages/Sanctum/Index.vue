@@ -32,6 +32,7 @@
                     <p class="text-gray-700">
                         Signed in as <span class="font-semibold">{{ user.name }}</span>
                     </p>
+                    <p>Features will be added here in the future. For now, you probably want to see <Link href="/transmissions" class="underline">transmissions</Link>.</p>
                 </template>
 
                 <template v-else>
