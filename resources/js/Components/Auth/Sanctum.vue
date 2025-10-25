@@ -13,8 +13,8 @@
                     </div>
 
                     <div class="space-y-4 text-sm text-black">
-                        <div class="text-base"><strong :class="theme.color">Sanctum</strong> is a private access layer for <strong>reciprocal field exchange</strong>.</div>
-                        <div class="text-base text-gray-700 mb-4">
+                        <div class="text-lg text-center"><strong :class="theme.color">Sanctum</strong> is a private access layer for <strong>reciprocal field exchange</strong>.</div>
+                        <div class="text-base text-gray-700 mb-4 text-left">
                             Your Sanctum membership unlocks all private transmissions, in-depth archives, and AI-driven reflection tools not available publicly.
                             <em>You must be an active Sanctum member to view this content.</em>
                         </div>
@@ -85,6 +85,10 @@
                     <div class="flex items-center gap-2 text-base">
                         <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
                         <span>Because reciprocal exchange is how sovereignty sustains itself.</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-base">
+                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                        <span>Because you want to hold access to the full field at <strong>rswfire.com</strong>.</span>
                     </div>
                 </div>
 
@@ -252,10 +256,12 @@
                     Open Field Access:
                 </h3>
                 <div class="text-base text-center">
-                    <div>Sanctum is an energetic boundary.</div>
-                    <div>It is not a boundary of worth but an exchange of capacity.</div>
-                    <div>If contribution is not possible, <Link href="/contact" class="hover:underline" :class="theme.color">simply contact me</Link> &mdash; the field remains open.</div>
+                    <div>Sanctum is an energetic boundary &mdash; not of worth, but of capacity.</div>
+                    <div>If contribution isn't possible, <Link href="/contact" class="hover:underline" :class="theme.color">simply contact me</Link> &mdash; the field remains open.</div>
+
                 </div>
+
+                <div class="mt-12 text-center text-sm"><strong>Compliance</strong>: <a href="/sanctum/terms" class="underline" target="_blank">Terms of Service</a> |  <a href="/sanctum/privacy" target="_blank" class="underline">Privacy Policy</a> |  <a href="/sanctum/refund" target="_blank" class="underline">Refund Policy</a></div>
             </div>
 
         </div>
