@@ -27,7 +27,17 @@
                 </div>
             </section>
 
-            <div class="mt-8"><SanctumAuth page-theme="sanctum"></SanctumAuth></div>
+            <div class="mt-8">
+                <template v-if="isAuthenticated() && user">
+                    <p class="text-gray-700">
+                        Signed in as <span class="font-semibold">{{ user.name }}</span>
+                    </p>
+                </template>
+
+                <template v-else>
+                    <SanctumAuth page-theme="sanctum" />
+                </template>
+            </div>
 
         </div>
 
@@ -42,8 +52,14 @@ import Hero from "@/Components/System/Hero.vue";
 import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 import SanctumAuth from "@/Components/Auth/Sanctum.vue";
+import {useAuth} from "@/Composables/useAuth.js";
 
+const { user, init, isAuthenticated } = useAuth()
 const pageTheme = "sanctum";
+
+onMounted(() => {
+    init() // ensures the user is fetched if token exists
+})
 
 </script>
 
