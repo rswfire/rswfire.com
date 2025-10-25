@@ -14,10 +14,10 @@
 
                     <div class="space-y-4 text-sm text-black">
                         <div class="text-base"><strong :class="theme.color">Sanctum</strong> is a private access layer for <strong>reciprocal field exchange</strong>.</div>
-                        <p class="text-base text-gray-700 mb-4">
-                            Your Sanctum membership unlocks all private transmissions, in-depth archives, and AI-driven reflection tools unavailable publicly on rswfire.com.
-                            These are denoted by the Sanctum icon and require you to sign into your account to view.
-                        </p>
+                        <div class="text-base text-gray-700 mb-4">
+                            Your Sanctum membership unlocks all private transmissions, in-depth archives, and AI-driven reflection tools not available publicly.
+                            <em>You must be an active Sanctum member to view this content.</em>
+                        </div>
 
                         <div class="pt-4 border-t" :class="theme.border">
                             <h3 class="font-semibold text-black mb-4 text-center text-lg">What Sanctum Holds:</h3>
@@ -247,7 +247,7 @@
 
             </div>
 
-            <div class="p-12 border-t bg-white" :class="[theme.border]">
+            <div class="p-8 border-t bg-white" :class="[theme.border]">
                 <h3 class="font-semibold text-black mb-4 text-center text-lg">
                     Open Field Access:
                 </h3>
