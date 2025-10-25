@@ -54,6 +54,7 @@ import Content from "@/Components/System/Content.vue";
 import {Link} from "@inertiajs/vue3";
 import SanctumAuth from "@/Components/Auth/Sanctum.vue";
 import {useAuth} from "@/Composables/useAuth.js";
+import {onMounted} from "vue";
 
 const { user, init, isAuthenticated } = useAuth()
 const pageTheme = "sanctum";
