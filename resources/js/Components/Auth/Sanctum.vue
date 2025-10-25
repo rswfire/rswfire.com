@@ -74,10 +74,10 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
 
-                    <div class="space-y-4">
+                    <div class="space-y-4 text-left">
                         <div class="flex items-center gap-2 text-base">
                             <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                            <span>Because wholeness requires infrastructure &mdash;<br/>the world won't build.</span>
+                            <div>Because wholeness requires infrastructure &mdash;<br/>the world won't build.</div>
                         </div>
                         <div class="flex items-center gap-2 text-base">
                             <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
