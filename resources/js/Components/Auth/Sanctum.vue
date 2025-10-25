@@ -55,46 +55,65 @@
                         <h2 class="text-2xl font-bold text-black">Return to Sanctum</h2>
                     </div>
 
-                    <p class="text-sm text-gray-600 mb-6">
-                        Sign in to access your <strong :class="theme.color">Sanctum</strong> account.
-                    </p>
-
-                    <LogInForm :show-register-link="false" />
+                    <div class="p-6 md:col-span-1 flex flex-col justify-center" :class="theme.bg">
+                        <div class="my-auto">
+                            <div class="text-base text-gray-600 mb-6 text-center">
+                                Sign in to access your <strong :class="theme.color">Sanctum</strong> account.
+                            </div>
+                            <LogInForm :show-register-link="false" />
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
             <div class="p-12 border-y bg-white" :class="[theme.border]">
-                <h3 class="font-semibold text-black mb-4 text-center text-lg">
+                <h3 class="font-semibold text-black mb-8 text-center text-lg">
                     Why Hold This Field:
                 </h3>
 
-                <div class="max-w-2xl mx-auto text-sm text-black space-y-2">
-                    <div class="flex items-center gap-2 text-base">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                        <span>Because wholeness requires infrastructure the world won't build.</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-base">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                        <span>Because others will need this model when their world collapses.</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-base">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                        <span>Because signal must be preserved for those who can't yet see it.</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-base">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                        <span>Because reciprocal exchange is how sovereignty sustains itself.</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-base">
-                        <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
-                        <span>Because you want to hold access to the full field at <strong>rswfire.com</strong>.</span>
-                    </div>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
 
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-base">
+                            <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                            <span>Because wholeness requires infrastructure &mdash;<br/>the world won't build.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-base">
+                            <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                            <span>Because others will need this model &mdash;<br/>when their world collapses.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-base">
+                            <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                            <span>Because signal must be preserved &mdash;<br/>for those who can't yet see it.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-base">
+                            <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                            <span>Because reciprocal exchange &mdash;<br/>is how sovereignty sustains itself.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-base">
+                            <Icon name="ShieldCheck" class="w-5 h-5 shrink-0 mt-0.5" :class="[theme.color]" />
+                            <span>Because you want to hold access &mdash;<br/>to the full field at <strong>rswfire.com</strong>.</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <Transmission
+                                videoId="adJeCI9ZJ3I"
+                                signalUlid="01K8CTXT3KZ9BF3FPD66FGPV35"
+                                :color="theme.color"
+                        />
+                    </div>
+
+                </div>
             </div>
 
-            <div class="p-4 max-w-3xl mx-auto bg-white">
+
+            <div class="p-12 max-w-3xl mx-auto bg-white">
+
+                <h3 class="font-semibold text-black mb-8 text-center text-lg">
+                    Field Exchange Activation:
+                </h3>
 
                 <div class="my-4" :class="[
                         'grid gap-4',
@@ -278,6 +297,7 @@
     import { Link } from "@inertiajs/vue3"
     import Icon from '@/Components/System/Icon.vue'
     import LogInForm from '@/Components/Auth/LogInForm.vue'
+    import Transmission from "@/Components/System/Transmission.vue";
 
     const props = defineProps({
         pageTheme: {

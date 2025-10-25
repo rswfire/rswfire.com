@@ -38,10 +38,10 @@
         <div class="pt-6 pr-4 border-t border-transmission-300 mt-auto">
             <div class="flex justify-end">
                 <a
-                    href="/transmission"
+                    href="/transmissions"
                     class="inline-block px-4 py-2 text-sm font-medium rounded hover:brightness-110 transition text-white bg-transmission-400 border-transmission-200 shadow-md"
                 >
-                    Transmission →
+                    Transmissions →
                 </a>
             </div>
         </div>
