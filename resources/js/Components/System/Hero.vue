@@ -10,7 +10,7 @@
             <div v-if="subtitle" :class="['mt-2 text-lg uppercase', titleAlignClass]">
                 {{ subtitle }}
             </div>
-            <div v-if="meta" :class="['mt-2 text-xs text-gray-500', titleAlignClass]">
+            <div v-if="meta" :class="['mt-2 text-sm text-gray-500', titleAlignClass]">
                 {{ meta }}
             </div>
         </div>
