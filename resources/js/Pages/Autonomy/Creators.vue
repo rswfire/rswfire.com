@@ -236,18 +236,15 @@
       <!-- CTA -->
       <section class="mt-16 text-center space-y-4">
         <p class="text-lg font-semibold">Ready to own your archive?</p>
+        <div>
+          <Link href="/contact" class="text-base font-medium hover:underline">Contact Me</Link>
+          <p class="text-sm text-gray-500">To begin building your own.</p>
+        </div>
+
         <p class="text-sm text-gray-500">Not sure yet? Start by exploring the demo.</p>
-
-        <div class="space-y-2">
-          <div>
-            <Link href="/demo" class="text-base font-medium hover:underline">See Demo (My Archive)</Link>
-            <p class="text-sm text-gray-500">A living example — structured, searchable, and self-hosted.</p>
-          </div>
-
-          <div>
-            <Link href="/contact" class="text-base font-medium hover:underline">Contact Me</Link>
-            <p class="text-sm text-gray-500">To begin building your own.</p>
-          </div>
+        <div>
+          <Link href="/transmissions" class="text-base font-medium hover:underline">See Demo (My Archive)</Link>
+          <p class="text-sm text-gray-500 italic">A living example — structured, searchable, and self-hosted.</p>
         </div>
       </section>
 
