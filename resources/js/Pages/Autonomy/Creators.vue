@@ -142,6 +142,42 @@
         <p class="mt-6 italic text-sm text-neutral-500">“Not just archiving &mdash; authoring.”</p>
       </section>
 
+
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
+
+        <div class="space-y-4 text-left">
+
+          <div class="space-y-4 text-left">
+            <h2 class="text-2xl font-bold">📹 The Transmission</h2>
+            <p class="text-base text-neutral-700">
+              What you’re about to see isn’t a trailer. It’s not a promo. It’s the field in motion.
+            </p>
+            <p class="text-base text-neutral-700">
+              In this video, I explain what <strong>Autonomy</strong> is — not as a concept, but as a working system I’ve built for creators who are done being flattened by platforms.
+            </p>
+            <p class="text-base text-neutral-700">
+              This isn’t just about hosting your own videos. It’s about restoring your <em>relationship</em> to your archive, your audience, and your own evolution as a creator.
+            </p>
+            <p class="text-base text-neutral-700">
+              I walk through the full architecture — from transcript automation and metadata extraction to tiered subscriptions, searchable reflections, and total stack ownership.
+            </p>
+            <p class="text-sm text-neutral-500 italic">
+              You don’t rent your presence back from an algorithm. You own the mirror.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="w-full">
+          <Transmission
+              videoId="GBVaLX75BDo"
+              signalUlid="01K8F6K3N3KX9R8RZENMDZEZ2C"
+              color="text-system"
+          />
+        </div>
+
+      </div>
+
       <!-- Deliverables -->
       <section class="mt-20">
         <h3 class="text-xl font-bold mb-4">What You Get</h3>
@@ -224,6 +260,7 @@ import { useCopySectionLink } from '@/Composables/useCopySectionLink'
 import Hero from "@/Components/System/Hero.vue"
 import Content from "@/Components/System/Content.vue"
 import Icon from "@/Components/System/Icon.vue"
+import Transmission from "@/Components/System/Transmission.vue";
 
 const { copySectionLink } = useCopySectionLink()
 const justCopied = ref(false)
