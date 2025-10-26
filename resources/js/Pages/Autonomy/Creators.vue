@@ -55,6 +55,10 @@
                 signalUlid="01K8F6K3N3KX9R8RZENMDZEZ2C"
                 color="text-system"
             />
+            <div class="mt-4 ml-4">
+              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
+              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K8FP372QH72MNA6FWMFBGA99" class="text-lg text-system-600 hover:underline">How This Was Really Built →</Link></div>
+            </div>
           </div>
 
         </div>
