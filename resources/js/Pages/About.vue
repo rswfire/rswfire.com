@@ -34,8 +34,8 @@
 
               <div class="mt-4">I built this &mdash; all of it &mdash; inside an RV,</div>
               <div class="ml-4">on federal land,</div>
-              <div class="ml-8">under economic pressure,</div>
-              <div class="ml-12">with zero institutional backing.</div>
+              <div class="ml-8">under <Link href="/fieldcraft/01K8FP372QH72MNA6FWMFBGA99" class="underline">economic pressure</Link>,</div>
+              <div class="ml-12">with <Link href="/honeyman" class="underline">zero institutional backing</Link>.</div>
 
               <div class="mt-4">Not to perform resilience. But to <strong>refuse <Lexicon term="distortion">distortion</Lexicon></strong>.</div>
 
