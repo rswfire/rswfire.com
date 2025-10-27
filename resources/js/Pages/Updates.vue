@@ -1,6 +1,6 @@
 <template>
   <Content :theme="pageTheme">
-    <Hero title="UPDATES" subtitle="UPDATES FROM THE FIELD" meta="CHOOSE WHAT YOU RECEIVE, AND HOW." :theme="pageTheme" />
+    <Hero title="UPDATES" subtitle="UPDATES FROM THE FIELD" meta="THE SQUIRREL KNOWS." :theme="pageTheme" />
 
     <div class="max-w-3xl mx-auto bg-gray-50 border rounded-2xl p-6 md:p-8">
       <form @submit.prevent="submit">
