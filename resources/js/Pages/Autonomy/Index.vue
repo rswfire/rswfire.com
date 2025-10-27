@@ -156,27 +156,6 @@
             </ul>
           </div>
 
-          <!-- Legal Documentation -->
-          <div>
-            <h4 class="font-semibold text-base mb-2">LEGAL DOCUMENTATION</h4>
-            <ul class="list-disc ml-6 space-y-1 text-base text-gray-700">
-              <li>Case files</li>
-              <li>Deposition transcripts</li>
-              <li>Pattern analysis</li>
-              <li>Precedent mapping</li>
-            </ul>
-          </div>
-
-          <!-- Medical Records -->
-          <div>
-            <h4 class="font-semibold text-base mb-2">MEDICAL RECORDS</h4>
-            <ul class="list-disc ml-6 space-y-1 text-base text-gray-700">
-              <li>Patient histories</li>
-              <li>Treatment documentation</li>
-              <li>Outcome pattern recognition</li>
-              <li>Research integration</li>
-            </ul>
-          </div>
         </div>
 
         <p class="mt-6 text-base italic">
