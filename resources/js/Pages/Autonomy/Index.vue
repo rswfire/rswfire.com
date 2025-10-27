@@ -50,47 +50,69 @@
       <!-- The Recursive Loop -->
       <section id="recursive-loop" class="space-y-4">
         <h2 class="text-2xl font-bold">The Recursive Loop</h2>
-        <h3 class="text-lg font-semibold text-gray-700">How It Becomes Self-Documenting</h3>
 
-        <div class="space-y-3 text-base">
-          <p>This page you're reading was documented through Autonomy.</p>
-          <p>The transmission announcing this was processed by this system.</p>
-          <p>The conversations about building it became signals in the archive.</p>
-          <p>The documentation generates more documentation.</p>
+        <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
+
+          <div class="space-y-4">
+
+            <h3 class="text-lg font-semibold text-gray-700">How It Becomes Self-Documenting</h3>
+
+            <div class="space-y-3 text-base">
+              <p>This page you're reading was documented through Autonomy.</p>
+              <p>The transmission announcing this was processed by this system.</p>
+              <p>The conversations about building it became signals in the archive.</p>
+              <p>The documentation generates more documentation.</p>
+            </div>
+
+            <div class="mt-6">
+              <p class="font-semibold mb-3">Example:</p>
+              <ol class="list-decimal ml-6 space-y-2 text-base">
+                <li>I make a video announcing open source release</li>
+                <li>Autonomy processes it (transcript, metadata, AI reflection)</li>
+                <li>Video becomes searchable entry in archive</li>
+                <li>AI identifies patterns across 800+ transmissions</li>
+                <li>Patterns inform next transmission</li>
+                <li>Next transmission gets processed</li>
+                <li>New patterns emerge</li>
+                <li>Loop continues</li>
+              </ol>
+            </div>
+
+            <div class="mt-6 space-y-3 text-base">
+              <p>The system grows more coherent through use.</p>
+              <p>Not because I curate it.</p>
+              <p class="font-semibold">Because the architecture is recursive.</p>
+            </div>
+
+            <div class="mt-6">
+              <p class="font-semibold mb-2">Every transmission:</p>
+              <ul class="list-disc ml-6 space-y-1 text-base">
+                <li>Documents a decision</li>
+                <li>Gets processed into structure</li>
+                <li>Generates reflective insight</li>
+                <li>Feeds back into next decision</li>
+                <li>Becomes discoverable by pattern</li>
+              </ul>
+            </div>
+
+            <p class="mt-6 text-base italic">The infrastructure doesn't just store signal. It amplifies coherence through recursion.</p>
+
         </div>
 
-        <div class="mt-6">
-          <p class="font-semibold mb-3">Example:</p>
-          <ol class="list-decimal ml-6 space-y-2 text-base">
-            <li>I make a video announcing open source release</li>
-            <li>Autonomy processes it (transcript, metadata, AI reflection)</li>
-            <li>Video becomes searchable entry in archive</li>
-            <li>AI identifies patterns across 800+ transmissions</li>
-            <li>Patterns inform next transmission</li>
-            <li>Next transmission gets processed</li>
-            <li>New patterns emerge</li>
-            <li>Loop continues</li>
-          </ol>
+        <div class="w-full">
+          <Transmission
+              videoId="3qq7ilzpa9U"
+              signalUlid="01K8HMFDKD1EYDWNJDSMA4KSM1"
+              color="text-system"
+          />
+          <div class="mt-4 ml-4">
+            <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K8FP372QH72MNA6FWMFBGA99" class="text-lg text-system-600 hover:underline">How This Was Really Built →</Link></div>
+          </div>
         </div>
 
-        <div class="mt-6 space-y-3 text-base">
-          <p>The system grows more coherent through use.</p>
-          <p>Not because I curate it.</p>
-          <p class="font-semibold">Because the architecture is recursive.</p>
         </div>
 
-        <div class="mt-6">
-          <p class="font-semibold mb-2">Every transmission:</p>
-          <ul class="list-disc ml-6 space-y-1 text-base">
-            <li>Documents a decision</li>
-            <li>Gets processed into structure</li>
-            <li>Generates reflective insight</li>
-            <li>Feeds back into next decision</li>
-            <li>Becomes discoverable by pattern</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-base italic">The infrastructure doesn't just store signal. It amplifies coherence through recursion.</p>
       </section>
 
       <!-- Beyond Content Creation -->
@@ -238,46 +260,27 @@
       <section id="meta" class="space-y-4">
         <h2 class="text-2xl font-bold">This Page Documents Itself</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
+          <h3 class="text-lg font-semibold text-gray-700">Meta: How This Page Exists</h3>
 
-          <div class="space-y-4">
+          <p class="text-base">This page was created through the recursive loop it describes:</p>
 
-            <h3 class="text-lg font-semibold text-gray-700">Meta: How This Page Exists</h3>
+          <ol class="list-decimal ml-6 space-y-2 text-base mt-4">
+            <li>Conversation with AI about Autonomy architecture</li>
+            <li>Conversation became signal (documented in Claude archive)</li>
+            <li>Conversation patterns informed page structure</li>
+            <li>Page content documents the conversation that created it</li>
+            <li>Page becomes reference for future conversations</li>
+            <li>Future conversations reference this page</li>
+            <li>Loop continues</li>
+          </ol>
 
-            <p class="text-base">This page was created through the recursive loop it describes:</p>
-
-            <ol class="list-decimal ml-6 space-y-2 text-base mt-4">
-              <li>Conversation with AI about Autonomy architecture</li>
-              <li>Conversation became signal (documented in Claude archive)</li>
-              <li>Conversation patterns informed page structure</li>
-              <li>Page content documents the conversation that created it</li>
-              <li>Page becomes reference for future conversations</li>
-              <li>Future conversations reference this page</li>
-              <li>Loop continues</li>
-            </ol>
-
-            <div class="mt-6 space-y-2 text-base">
-              <p class="font-semibold">The documentation is recursive because the system is recursive.</p>
-              <p class="italic">You're reading infrastructure that documents itself documenting.</p>
-            </div>
-
-            <p class="mt-6 text-base">This isn't content.<br />This is live architecture.</p>
-
+          <div class="mt-6 space-y-2 text-base">
+            <p class="font-semibold">The documentation is recursive because the system is recursive.</p>
+            <p class="italic">You're reading infrastructure that documents itself documenting.</p>
           </div>
 
-          <div class="w-full">
-            <Transmission
-                videoId="3qq7ilzpa9U"
-                signalUlid="01K8HMFDKD1EYDWNJDSMA4KSM1"
-                color="text-system"
-            />
-            <div class="mt-4 ml-4">
-              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
-              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K8FP372QH72MNA6FWMFBGA99" class="text-lg text-system-600 hover:underline">How This Was Really Built →</Link></div>
-            </div>
-          </div>
+          <p class="mt-6 text-base">This isn't content.<br />This is live architecture.</p>
 
-        </div>
       </section>
 
       <!-- Open Source Release -->
