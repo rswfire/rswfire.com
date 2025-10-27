@@ -23,7 +23,7 @@ const THEMES = {
         bg: "bg-white",
         border: "border-black",
         hover: "hover:bg-white",
-        blurb: "Platform infrastructure for sovereign systems.",
+        blurb: "Learn about the infrastructure behind this project.",
         section: "system"
     },
     'contact': {
@@ -50,7 +50,7 @@ const THEMES = {
         bg: "bg-white",
         border: "border-black",
         hover: "hover:bg-white",
-        blurb: "Recent additions to the archive, new fieldcraft records, progress reports on current projects, and notifications about system developments.",
+        blurb: "Set granular updates you want to receive.",
         section: "system"
     },
 
