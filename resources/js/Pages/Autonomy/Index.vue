@@ -237,26 +237,47 @@
       <!-- Meta Documentation -->
       <section id="meta" class="space-y-4">
         <h2 class="text-2xl font-bold">This Page Documents Itself</h2>
-        <h3 class="text-lg font-semibold text-gray-700">Meta: How This Page Exists</h3>
 
-        <p class="text-base">This page was created through the recursive loop it describes:</p>
+        <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 max-w-5xl mx-auto items-start">
 
-        <ol class="list-decimal ml-6 space-y-2 text-base mt-4">
-          <li>Conversation with AI about Autonomy architecture</li>
-          <li>Conversation became signal (documented in Claude archive)</li>
-          <li>Conversation patterns informed page structure</li>
-          <li>Page content documents the conversation that created it</li>
-          <li>Page becomes reference for future conversations</li>
-          <li>Future conversations reference this page</li>
-          <li>Loop continues</li>
-        </ol>
+          <div class="space-y-4">
 
-        <div class="mt-6 space-y-2 text-base">
-          <p class="font-semibold">The documentation is recursive because the system is recursive.</p>
-          <p class="italic">You're reading infrastructure that documents itself documenting.</p>
+            <h3 class="text-lg font-semibold text-gray-700">Meta: How This Page Exists</h3>
+
+            <p class="text-base">This page was created through the recursive loop it describes:</p>
+
+            <ol class="list-decimal ml-6 space-y-2 text-base mt-4">
+              <li>Conversation with AI about Autonomy architecture</li>
+              <li>Conversation became signal (documented in Claude archive)</li>
+              <li>Conversation patterns informed page structure</li>
+              <li>Page content documents the conversation that created it</li>
+              <li>Page becomes reference for future conversations</li>
+              <li>Future conversations reference this page</li>
+              <li>Loop continues</li>
+            </ol>
+
+            <div class="mt-6 space-y-2 text-base">
+              <p class="font-semibold">The documentation is recursive because the system is recursive.</p>
+              <p class="italic">You're reading infrastructure that documents itself documenting.</p>
+            </div>
+
+            <p class="mt-6 text-base">This isn't content.<br />This is live architecture.</p>
+
+          </div>
+
+          <div class="w-full">
+            <Transmission
+                videoId="3qq7ilzpa9U"
+                signalUlid="01K8HMFDKD1EYDWNJDSMA4KSM1"
+                color="text-system"
+            />
+            <div class="mt-4 ml-4">
+              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
+              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K8FP372QH72MNA6FWMFBGA99" class="text-lg text-system-600 hover:underline">How This Was Really Built →</Link></div>
+            </div>
+          </div>
+
         </div>
-
-        <p class="mt-6 text-base">This isn't content.<br />This is live architecture.</p>
       </section>
 
       <!-- Open Source Release -->
@@ -401,6 +422,7 @@ import { useCopySectionLink } from '@/Composables/useCopySectionLink'
 import Icon from "@/Components/System/Icon.vue"
 import Hero from "@/Components/System/Hero.vue"
 import Content from "@/Components/System/Content.vue"
+import Transmission from "@/Components/System/Transmission.vue";
 
 const { copySectionLink } = useCopySectionLink()
 
