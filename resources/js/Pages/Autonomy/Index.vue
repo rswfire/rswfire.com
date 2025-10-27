@@ -3,7 +3,7 @@
     <Hero
         title="AUTONOMY"
         subtitle="RECURSIVE INFRASTRUCTURE FOR SIGNAL PRESERVATION"
-        meta="ARCHITECTURE FOR WHOLENESS PRESERVATION"
+        meta="ARCHITECTURE FOR SOVEREIGN SYSTEMS"
         :theme="pageTheme"
     />
 

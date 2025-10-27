@@ -17,6 +17,15 @@ const THEMES = {
         blurb: "The methodology behind this work, why it exists, and what it offers to those building post-institutional sovereignty.",
         section: "system"
     },
+    'autonomy': {
+        icon: "BringToFront",
+        color: "text-black",
+        bg: "bg-white",
+        border: "border-black",
+        hover: "hover:bg-white",
+        blurb: "Platform infrastructure for sovereign systems.",
+        section: "system"
+    },
     'contact': {
         icon: "MessageSquareDot",
         color: "text-black",
@@ -179,15 +188,6 @@ const THEMES = {
         blurb: "Preparation for ocean navigation.",
         section: "reference"
     },*/
-    'autonomy': {
-        icon: "BringToFront",
-        color: "text-red-400",
-        bg: "bg-red-50",
-        border: "border-red-200",
-        hover: "hover:bg-red-100",
-        blurb: "Platform infrastructure for sovereign systems.",
-        section: "reference"
-    },
     'honeyman': {
         icon: "TreeDeciduous",
         color: "text-emerald-400",
