@@ -37,7 +37,7 @@
             </ul>
 
             <div class="mt-4">
-              That same week, I filed a
+              Earlier that week, I filed a
               <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">
                 Public Records Request
               </Link>.
