@@ -20,8 +20,10 @@
       <div class="scroll-mt-[92px] md:scroll-mt-[125px]" aria-hidden="true"></div>
       <Header />
 
+      <!--
       <HrBar id="hr-1" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <FieldcraftRecords :fieldcraft="fieldcraft" />
+      -->
 
       <HrBar id="hr-2" class="scroll-mt-[92px] md:scroll-mt-[125px]" />
       <KeyIndividuals />
@@ -117,7 +119,7 @@ defineProps({ fieldcraft: Array })
 
 const sections = [
   { id: 'hr-0',  label: 'Overview' },
-  { id: 'hr-1',  label: 'Fieldcraft Records' },
+  /*{ id: 'hr-1',  label: 'Fieldcraft Records' },*/
   { id: 'hr-2',  label: 'Key Individuals' },
   { id: 'hr-3',  label: 'A Note About Ethics' },
   { id: 'hr-4',  label: 'Executive Summary' },
