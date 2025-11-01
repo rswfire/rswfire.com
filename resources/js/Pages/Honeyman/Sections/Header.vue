@@ -9,17 +9,11 @@
               <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
           </div>
 
-          <div class="md:pt-0 md:p-6 border-b border-gray-300">
+          <div class="md:pt-0 md:p-6 border-b border-gray-300 text-base">
 
             <div class="mt-4 font-bold">This Archive Centers an Open Letter</div>
 
-            <div class="mt-4">
-              On August 25, 2025, I sent a
-              <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">
-                comprehensive open letter
-              </Link>
-              to Director Lisa Sumption.
-            </div>
+            <div class="mt-4">On August 25, 2025, I sent a comprehensive <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">Open Letter</Link> to Director Lisa Sumption.</div>
 
             <div class="mt-4">It acknowledged her accomplishments.</div>
             <div>It documented systemic abuse with evidence.</div>
@@ -36,12 +30,7 @@
               <li>Upheld institutional protection over volunteer accountability.</li>
             </ul>
 
-            <div class="mt-4">
-              Earlier that week, I filed a
-              <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">
-                Public Records Request
-              </Link>.
-            </div>
+            <div class="mt-4">Earlier that week, I filed a <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">Public Records Request</Link>.</div>
             <div>I received an automated acknowledgment, then a phone call attempting to narrow the request’s scope.</div>
             <div>I declined. I requested all further communication in writing.</div>
             <div>Oregon Parks &amp; Recreation Department has remained silent ever since &mdash;</div>
@@ -50,7 +39,7 @@
             <div class="mt-4">The open letter said what needed saying.</div>
             <div>The director’s response revealed what needed knowing.</div>
             <div>The agency’s refusal to act confirmed everything the evidence already proved.</div>
-            <div><Lexicon term="the archive">This archive</Lexicon> is now complete.</div>
+            <div>This archive is now complete.</div>
 
             <div class="mt-4">This is no longer about what happened to me.</div>
             <div>It is about how they responded to what happened to me.</div>
@@ -64,7 +53,7 @@
             </ul>
 
             <div class="mt-4">One day, something like this will happen again.</div>
-            <div>This archive will be there to meet it.</div>
+            <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
             <div>To prove: they knew, they were told, and they chose cowardice.</div>
 
             <div class="mt-4 ml-4">&mdash; Samuel White</div>
