@@ -11,47 +11,61 @@
 
           <div class="md:pt-0 md:p-6 border-b border-gray-300">
 
-            <div class="mt-4 font-bold">This Archive Centers An Open Letter</div>
+            <div class="mt-4 font-bold">This Archive Centers an Open Letter</div>
 
-            <div class="mt-4">On August 25, 2025, I sent a <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">comprehensive open letter</Link> to Director Lisa Sumption.</div>
+            <div class="mt-4">
+              On August 25, 2025, I sent a
+              <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">
+                comprehensive open letter
+              </Link>
+              to Director Lisa Sumption.
+            </div>
 
-            <div class="mt-4">It acknowledged her achievements.</div>
-            <div>It documented systematic abuse with evidence.</div>
-            <div>It named the power imbalance explicitly.</div>
-            <div>It requested specific institutional protections for volunteers.</div>
-            <div>It offered a clear pathway forward.</div>
+            <div class="mt-4">It acknowledged her accomplishments.</div>
+            <div>It documented systemic abuse with evidence.</div>
+            <div>It named the power imbalance plainly.</div>
+            <div>It called for institutional protections for volunteers.</div>
+            <div>It outlined a clear path forward.</div>
 
             <div class="mt-4">She responded within twelve hours.</div>
-            <div>Her response:</div>
+            <div>Her reply:</div>
             <ul class="ml-8 list-disc">
-              <li>Acknowledged receipt.</li>
-              <li>Committed to nothing specific.</li>
-              <li>Routed to &quot;appropriate channels.&quot;</li>
-              <li>Maintained institutional protection over volunteer accountability.</li>
+              <li>Formally acknowledged receipt.</li>
+              <li>Offered no specific commitments.</li>
+              <li>Deferred responsibility to &quot;appropriate channels.&quot;</li>
+              <li>Upheld institutional protection over volunteer accountability.</li>
             </ul>
 
-            <div class="mt-4">That same week, I filed a <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">Public Records Request</Link>.</div>
-            <div>I received an automated digital acknowledgment, followed by a phone call attempting to limit the request's scope.</div>
-            <div>I declined and requested all subsequent responses in writing.</div>
-            <div>Oregon Parks &amp; Recreation Department has maintained complete silence since &mdash;</div>
+            <div class="mt-4">
+              That same week, I filed a
+              <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">
+                Public Records Request
+              </Link>.
+            </div>
+            <div>I received an automated acknowledgment, then a phone call attempting to narrow the request’s scope.</div>
+            <div>I declined. I requested all further communication in writing.</div>
+            <div>Oregon Parks &amp; Recreation Department has remained silent ever since &mdash;</div>
             <div class="ml-4">a direct violation of Oregon public records law.</div>
 
-            <div class="mt-4">The open letter said everything that needed saying.</div>
-            <div>The director's response revealed everything that needed knowing.</div>
-            <div>And the agency's non-compliance shows they fear what those records would reveal.</div>
-            <div><Lexicon term="the archive">This archive</Lexicon> is complete.</div>
+            <div class="mt-4">The open letter said what needed saying.</div>
+            <div>The director’s response revealed what needed knowing.</div>
+            <div>The agency’s refusal to act confirmed everything the evidence already proved.</div>
+            <div><Lexicon term="the archive">This archive</Lexicon> is now complete.</div>
+
+            <div class="mt-4">This is no longer about what happened to me.</div>
+            <div>It is about how they responded to what happened to me.</div>
 
             <div class="mt-4">It stands as:</div>
             <ul class="ml-8 list-disc">
-              <li>Permanent record of institutional choice when accountability was requested.</li>
-              <li>Warning system for volunteers considering service.</li>
-              <li>Evidence for future accountability attempts.</li>
-              <li>Witness that director-level awareness did not produce protection.</li>
+              <li>A permanent record of institutional choice when accountability was requested.</li>
+              <li>A warning system for future volunteers.</li>
+              <li>Evidence for future accountability efforts.</li>
+              <li>Proof that director-level awareness did not lead to protection.</li>
             </ul>
 
-            <div class="mt-4">One day, something will happen again.</div>
+            <div class="mt-4">One day, something like this will happen again.</div>
             <div>This archive will be there to meet it.</div>
-            <div>Proving: they knew, they were told, and they chose refusal.</div>
+            <div>To prove: they knew, they were told, and they chose cowardice.</div>
 
             <div class="mt-4 ml-4">&mdash; Samuel White</div>
             <div class="ml-4">Former Oregon State Parks Volunteer</div>
