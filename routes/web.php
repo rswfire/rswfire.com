@@ -514,7 +514,7 @@ Route::get("/honeyman", function () {
         ->toArray();
 
     return Inertia::render("Honeyman/Index", [
-        "metaTitle" => "The Honeyman Archive | ".request()->getHost(),
+        "metaTitle" => "The Honeyman Archive | Oregon Parks &amp; Recreation Department - Lisa Sumption, Director | ".request()->getHost(),
         "metaDescription" => "A precise and permanent archive of institutional harm at Honeyman State Park. Documented by Sam White, this page exposes systemic coercion, silence, and dismissal inside Oregon State Parks.",
         "metaUrl" => "https://rswfire.com/honeyman",
         "fieldcraft" => $fieldcraft,
