@@ -2,16 +2,9 @@
     <section id="header" class="w-full mx-auto mb-8">
         <div class="w-full p-8 rounded-xl bg-green-50 border border-green-300 text-md">
 
-          <div class="mb-6 border-b border-gray-300 pb-6 text-center">
-              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
-              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">The Hidden Problem: On the Invisibility of Unpaid Labor Abuse →</Link></div>
-              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
-              <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
-          </div>
+          <div class="pt-0 md:p-6 sm:px-0 text-base">
 
-          <div class="md:pt-0 md:p-6 border-b border-gray-300 text-base">
-
-            <div class="mt-4 font-bold">This Archive Centers an Open Letter</div>
+            <div class="font-bold text-lg">This Archive Centers an Open Letter</div>
 
             <div class="mt-4">On August 25, 2025, I sent a comprehensive <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">Open Letter</Link> to Director Lisa Sumption.</div>
 
@@ -56,26 +49,22 @@
             <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
             <div>To prove: they knew, they were told, and they chose cowardice.</div>
 
-            <div class="mt-4 ml-4">&mdash; Samuel White</div>
-            <div class="ml-4">Former Oregon State Parks Volunteer</div>
-            <div class="ml-4">October 31, 2025</div>
+            <div class="mt-4 flex">
+              <div class="mr-2">&mdash;</div>
+              <div>
+                <div>Samuel White</div>
+                <div>Former Oregon State Parks Volunteer</div>
+                <div>October 31, 2025</div>
+              </div>
+            </div>
 
           </div>
 
-
-          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-4 rounded-lg border border-green-300 bg-white">
-              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">READER'S NOTE</div>
-              <div>Read this as record, not spectacle. If you quote, link the section and include the date. If you disagree, bring evidence. <em>The archive is the conversation</em>.</div>
-            </div>
-            <div class="p-4 rounded-lg border border-green-300 bg-white">
-              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">CITE/SHARE</div>
-              <div>Canonical: <Link href="/honeyman" class="text-honeyman-600 hover:underline">rswfire.com/honeyman</Link> &mdash; If quoting, include the section anchor and &quot;retrieved on&quot; date. <em>Please discuss this archive responsibly</em>.</div>
-            </div>
-            <div class="p-4 rounded-lg border border-green-300 bg-white">
-              <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">CONTACT</div>
-              <div>If you wish to reach me, use the <Link href="/contact" class="text-honeyman-600 hover:underline">/contact</Link> page. <em>Thank you for witnessing the record</em>.</div>
-            </div>
+          <div class="mt-6 border-t border-gray-300 pt-6 text-center">
+            <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">The Hidden Problem: On the Invisibility of Unpaid Labor Abuse →</Link></div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
           </div>
 
         </div>
