@@ -2,9 +2,30 @@
     <section id="header" class="w-full mx-auto mb-8">
         <div class="w-full p-8 rounded-xl bg-green-50 border border-green-300 text-md">
 
+          <div class="mb-6 border-b border-gray-300 pb-6 text-center">
+            <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">On the Invisibility of Unpaid Labor Abuse →</Link></div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
+            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
+          </div>
+
           <div class="pt-0 md:p-6 sm:px-0 text-base">
 
             <div class="font-bold text-lg">This Archive Centers an Open Letter</div>
+
+            <div class="mt-4">I entered the state parks system expecting alignment &mdash;</div>
+            <div class="ml-4">to protect the commons,</div>
+            <div class="ml-4">to hold space with integrity,</div>
+            <div class="ml-4">to support the land,</div>
+            <div class="ml-4">and to give freely without ownership.</div>
+
+            <div class="mt-4">That was the offer.</div>
+            <div>That was the signal I carried into the field.</div>
+
+            <div class="mt-4">What I found instead was conflict I did not create &mdash; and had no choice but to navigate.</div>
+            <div>This archive documents their actions &mdash; and what those actions made visible.</div>
+
+            <hr class="my-6 border-t border-gray-300" />
 
             <div class="mt-4">On August 25, 2025, I sent a comprehensive <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">Open Letter</Link> to Director Lisa Sumption.</div>
 
@@ -37,8 +58,10 @@
             <div>The director’s response revealed what needed knowing.</div>
             <div>The agency’s silence did the rest.</div>
 
+            <hr class="my-6 border-t border-gray-300" />
+
             <div class="mt-4 font-bold">This archive is now complete.</div>
-            <div>This is no longer about what happened to me.</div>
+            <div>This is no longer just about what happened to me.</div>
             <div>It is about how they responded to what happened to me.</div>
 
             <div class="mt-4">It stands as:</div>
@@ -51,9 +74,9 @@
 
             <div class="mt-4">One day, something like this will happen again.</div>
             <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
-            <div>To prove: they knew, they were told, and they chose <strong>cowardice</strong>.</div>
+            <div>To prove: they knew, they were told &mdash; and still, they chose <strong>cowardice</strong>.</div>
 
-            <div class="mt-4 flex">
+            <div class="mt-6 flex">
               <div class="mr-2">&mdash;</div>
               <div>
                 <div>Samuel White</div>
@@ -62,13 +85,6 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="mt-6 border-t border-gray-300 pt-6 text-center">
-            <div class="text-gray-600 text-sm tracking-wide uppercase mb-1">ESSENTIAL READING</div>
-            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3QGHKJ9M4FK1TEJ8RS70D6R" class="text-lg text-honeyman-600 hover:underline">The Hidden Problem: On the Invisibility of Unpaid Labor Abuse →</Link></div>
-            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
-            <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
           </div>
 
         </div>
