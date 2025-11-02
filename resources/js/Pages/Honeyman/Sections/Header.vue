@@ -74,7 +74,7 @@
 
             <div class="mt-4">One day, something like this will happen again.</div>
             <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
-            <div>To prove: they knew, they were told &mdash; and they chose <strong>cowardice</strong>.</div>
+            <div>To prove: they knew, they were told &mdash; and they chose <em>cowardice</em>.</div>
 
             <div class="mt-6 flex">
               <div class="mr-2">&mdash;</div>
