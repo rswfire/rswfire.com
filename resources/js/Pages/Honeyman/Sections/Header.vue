@@ -24,17 +24,21 @@
             </ul>
 
             <div class="mt-4">Earlier that week, I filed a <Link href="/fieldcraft/01K39AD52EG9K31B48YSTH3E7X" class="underline">Public Records Request</Link>.</div>
-            <div>I received an automated acknowledgment, then a phone call attempting to narrow the request’s scope.</div>
-            <div>I declined. I requested all further communication in writing.</div>
-            <div>Oregon Parks &amp; Recreation Department has remained silent ever since &mdash;</div>
-            <div class="ml-4">a direct violation of Oregon public records law.</div>
+            <div>I received an automated acknowledgment, then a phone call attempting to narrow its scope.</div>
+            <div>I declined and requested all further communication in writing.</div>
+            <div>Oregon Parks &amp; Recreation has remained silent ever since &mdash;</div>
+            <div class="ml-4">exceeding the legal timelines required under Oregon public records law.</div>
+            <div>No denial.</div>
+            <div>No extension.</div>
+            <div>No records.</div>
+            <div>Just silence.</div>
 
             <div class="mt-4">The open letter said what needed saying.</div>
             <div>The director’s response revealed what needed knowing.</div>
-            <div>The agency’s refusal to act confirmed everything the evidence already proved.</div>
-            <div>This archive is now complete.</div>
+            <div>The agency’s silence did the rest.</div>
 
-            <div class="mt-4">This is no longer about what happened to me.</div>
+            <div class="mt-4 font-bold">This archive is now complete.</div>
+            <div>This is no longer about what happened to me.</div>
             <div>It is about how they responded to what happened to me.</div>
 
             <div class="mt-4">It stands as:</div>
@@ -47,7 +51,7 @@
 
             <div class="mt-4">One day, something like this will happen again.</div>
             <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
-            <div>To prove: they knew, they were told, and they chose cowardice.</div>
+            <div>To prove: they knew, they were told, and they chose <strong>cowardice</strong>.</div>
 
             <div class="mt-4 flex">
               <div class="mr-2">&mdash;</div>
