@@ -81,9 +81,8 @@
             <div class="mt-4">The most direct confirmation of this came from inside the system itself. In her dismissal letter, Engagement Programs Manager Allison Watson explicitly stated that I was being removed not for misconduct, but for speaking publicly about what happened. In doing so, she converted what the agency might have passed off as misunderstanding into a written acknowledgment of retaliatory dismissal. It is rare that institutions name themselves so clearly. When they do, it matters.</div>
             <div class="mt-4">This case is not just about one volunteer. It is about whether Oregon State Parks tolerates &mdash; or encourages &mdash; the use of coercive tactics against those who speak with clarity about internal harm. It is about whether the system protects its image, or its people.</div>
 
-            <h2 class="mt-8 text-xl font-semibold">THE PROOF IT'S INSTITUTIONAL</h2>
-            <div class="mt-4">Following my dismissal from Oregon State Parks, I began volunteering with another agency. For six months, I have served without incident, received positive feedback, and maintained excellent working relationships. This demonstrates that the problems at Honeyman were cultural and institutional, not personal or behavioral.</div>
-            <div class="mt-4">The question is not whether this happened &mdash; the recordings make that undeniable. The question is whether Oregon State Parks will hold itself accountable for systematic abuse of volunteers, or continue protecting those who execute it.</div>
+            <!-- The proof its institutional is not my continued success afterward; it's in every action they took against me, and every silence that followed. -->
+            <!-- This paragraph is not needed; I am not defending. -->
 
         </div>
 
