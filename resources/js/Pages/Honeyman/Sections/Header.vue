@@ -13,7 +13,7 @@
 
             <div class="font-bold text-lg">This Archive Centers an Open Letter</div>
 
-            <div class="mt-4">I entered the state parks system expecting alignment &mdash;</div>
+            <div class="mt-4">I entered the state parks system anticipating alignment &mdash;</div>
             <div class="ml-4">to protect the commons,</div>
             <div class="ml-4">to hold space with integrity,</div>
             <div class="ml-4">to support the land,</div>
