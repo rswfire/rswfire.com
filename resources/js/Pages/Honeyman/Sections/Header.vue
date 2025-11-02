@@ -9,7 +9,7 @@
             <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
           </div>
 
-          <div class="pt-0 md:p-6 sm:px-0 text-base">
+          <div class="pt-0 md:px-6 sm:px-0 text-base">
 
             <div class="font-bold text-lg">This Archive Centers an Open Letter</div>
 
