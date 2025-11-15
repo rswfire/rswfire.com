@@ -21,4 +21,10 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+    <script>
+        window.appConfig = {
+            environment: "{{ config('app.env') }}",
+            server: "{{ config('app.server') }}",
+        };
+    </script>
 </html>
