@@ -1,11 +1,6 @@
 <template>
     <header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
 
-        <div class="bg-stone-100 text-center">
-            <div><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
-            <div class="font-mono"><strong>Server</strong>: {{ appConfig.server }} &nbsp;|&nbsp; <strong>Environment</strong>: {{ appConfig.environment }}</div>
-        </div>
-
         <div class="mt-1 px-8 mx-auto max-w-6xl grid-cols-[1fr_auto] items-center page-wrap">
             <div class="bg-white border-b border-gray-100 py-1.5" style="
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -314,7 +309,7 @@ import Icon from "@/Components/System/Icon.vue"
 import Ticker from "@/Components/Menu/Ticker.vue"
 import { useTheme } from "@/Composables/useTheme"
 
-const appConfig = window.appConfig;
+
 const { themesBySection } = useTheme()
 
 // Section dropdown state

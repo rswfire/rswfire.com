@@ -4,10 +4,6 @@
         role="dialog"
         aria-modal="true"
     >
-        <div class="bg-stone-100 text-center">
-            <div><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
-            <div class="font-mono"><strong>Server</strong>: {{ appConfig.server }} &nbsp;|&nbsp; <strong>Environment</strong>: {{ appConfig.environment }}</div>
-        </div>
 
         <!-- Header -->
         <div class="sticky top-0 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
@@ -161,6 +157,7 @@
             <div class="text-xs text-gray-400 mt-2">— Björk</div>
         </div>
     </div>
+
 </template>
 
 <script setup>

@@ -235,6 +235,11 @@
         </div>
     </footer>
 
+    <div class="bg-stone-100 text-center">
+        <div><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
+        <div class="font-mono"><strong>Server</strong>: {{ appConfig.server }} &nbsp;|&nbsp; <strong>Environment</strong>: {{ appConfig.environment }}</div>
+    </div>
+
 </template>
 
 <script setup>
@@ -250,6 +255,7 @@ import Ticker from "@/Components/Menu/Ticker.vue"
 
 defineProps(['metaTitle', 'metaDescription', 'metaKeywords', 'metaUrl'])
 
+const appConfig = window.appConfig;
 const page = usePage()
 const auth = useAuth()
 const menuOpen = ref(false)
