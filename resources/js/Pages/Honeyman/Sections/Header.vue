@@ -11,7 +11,7 @@
 
             <div class="pt-0 md:px-6 sm:px-0 text-base">
 
-                <div class="font-bold text-lg">This Archive Centers an Open Letter</div>
+                <div class="font-bold text-lg text-center">This Archive Centers an Open Letter to the Director of Oregon State Parks</div>
 
                 <div class="mt-4">I entered the state parks system anticipating alignment &mdash;</div>
                 <div class="ml-4">to protect the commons,</div>
@@ -90,6 +90,39 @@
                 <div><Lexicon term="the archive">This archive</Lexicon> will be there to meet it.</div>
                 <div>To prove: they knew, they were told, they were given every opportunity to self-correct &mdash;</div>
                 <div class="ml-4">and at every level, they chose institutional protection over accountability.</div>
+
+                <hr class="my-6 border-t border-gray-300" />
+
+                <div class="mt-4">Let me be very plain about this:</div>
+
+                <div class="mt-4">Humans did this to another human being.</div>
+
+                <div class="mt-4">Not policies. Not procedures. Not &quot;organizational complexity.&quot;</div>
+                <div>Humans with names, with faces, with the capacity to choose differently.</div>
+
+                <div class="mt-4">They knew what they were doing while they were doing it.</div>
+                <div>They felt the weight of their choices in real time.</div>
+                <div>They are responsible &mdash; whether they are willing to admit that to themselves or not.</div>
+
+                <div class="mt-4">Kati Baker orchestrated it.</div>
+                <div>Ryan Warren executed it.</div>
+                <div>Logan weaponized friendship to enable it.</div>
+                <div>An unidentified operative was deployed to assess me without authorization or explanation.</div>
+                <div>Allison Watson formalized the retaliation in writing.</div>
+                <div>Lisa Sumption acknowledged it and chose to protect them.</div>
+                <div>The agency violated public records law for 90+ days to avoid transparency about it.</div>
+
+                <div class="mt-4">Every person documented in this archive had the power to stop this.</div>
+                <div>Every person chose not to.</div>
+
+                <div class="mt-4">Those choices are now permanent.</div>
+                <div>They don't fade with time.</div>
+                <div>They don't disappear with career advancement.</div>
+                <div>They don't get absolved by silence.</div>
+
+                <div class="mt-4">Each person documented here faced a choice.</div>
+                <div>That choice is now attached to their name.</div>
+                <div>That choice follows them.</div>
 
                 <div class="mt-6 flex">
                     <div class="mr-2">&mdash;</div>
