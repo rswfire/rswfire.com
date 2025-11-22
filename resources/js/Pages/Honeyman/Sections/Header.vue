@@ -93,7 +93,7 @@
 
                 <hr class="my-6 border-t border-gray-300" />
 
-                <div class="mt-4">Let me be very plain about this:</div>
+                <div class="mt-4"><strong>Let me be very plain about this</strong>:</div>
 
                 <div class="mt-4">Humans did this to another human being.</div>
 
@@ -113,6 +113,9 @@
 
                 <div class="mt-4">Every person documented in this archive had the power to stop this.</div>
                 <div>Every person chose not to.</div>
+                <div>Every person who abused me remains in their positions.</div>
+                <div>No investigations occurred.</div>
+                <div>No protections were implemented.</div>
 
                 <div class="mt-4">Those choices are now permanent.</div>
                 <div>They don't fade with time.</div>
