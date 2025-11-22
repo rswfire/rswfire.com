@@ -107,7 +107,6 @@
                 <div class="mt-4">Kati Baker orchestrated it.</div>
                 <div>Ryan Warren executed it.</div>
                 <div>Logan weaponized friendship to enable it.</div>
-                <div>An unidentified operative was deployed to assess me without authorization or explanation.</div>
                 <div>Allison Watson formalized the retaliation in writing.</div>
                 <div>Lisa Sumption acknowledged it and chose to protect them.</div>
                 <div>The agency violated public records law for 90+ days to avoid transparency about it.</div>
