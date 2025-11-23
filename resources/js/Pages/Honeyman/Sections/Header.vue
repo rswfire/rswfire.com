@@ -27,7 +27,7 @@
 
                 <hr class="my-6 border-t border-gray-300" />
 
-                <div class="mt-4">On August 25, 2025, I sent a comprehensive <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">Open Letter</Link> to Director Lisa Sumption.</div>
+                <div class="mt-4">On August 25, 2025, I sent a comprehensive <Link href="/fieldcraft/01K3F8X412D5GEY1CXB4WRRPRK" class="underline">Open Letter to Director Lisa Sumption</Link>.</div>
 
                 <div class="mt-4">It acknowledged her accomplishments.</div>
                 <div>It documented systemic abuse with evidence.</div>
@@ -93,11 +93,10 @@
 
                 <hr class="my-6 border-t border-gray-300" />
 
-                <div class="mt-4"><strong>Let me be very plain about this</strong>:</div>
+                <div class="mt-4"><strong>Let me be very plainspoken about this</strong>:</div>
 
                 <div class="mt-4">Humans did this to another human being.</div>
-
-                <div class="mt-4">Not policies. Not procedures. Not &quot;organizational complexity.&quot;</div>
+                <div>Not policies. Not procedures. Not &quot;organizational complexity.&quot;</div>
                 <div>Humans with names, with faces, with the capacity to choose differently.</div>
 
                 <div class="mt-4">They knew what they were doing while they were doing it.</div>
@@ -131,7 +130,7 @@
                     <div>
                         <div>Samuel White</div>
                         <div>Former Oregon State Parks Volunteer</div>
-                        <div>November 21, 2025</div>
+                        <div>November 22, 2025</div>
                     </div>
                 </div>
 
