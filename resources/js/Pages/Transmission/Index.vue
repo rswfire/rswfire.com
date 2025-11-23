@@ -55,13 +55,13 @@
                     <div class="p-4 space-y-3">
                         <div class="flex items-center gap-2">
                             <h2 class="text-md font-semibold leading-tight text-gray-900 group-hover:text-black truncate flex-1">
-                                {{ transmission.surface_title || transmission.signal_ulid }}
+                                {{ transmission.signal_title || transmission.signal_ulid }}
                             </h2>
                             <div v-if="transmission.structure_visibility === 'sanctum'" class="text-sm flex-shrink-0"><Icon name="Sprout" class="text-indigo-400 w-[32px] h-[32px]" /></div>
                         </div>
 
                         <p class="text-sm text-gray-600 line-clamp-3">
-                            {{ transmission.timestamp_context || 'No context available' }}
+                            {{ transmission.signal_description || 'No Description Available' }}
                         </p>
                         <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
                             {{ transmission.signal_ulid }}
