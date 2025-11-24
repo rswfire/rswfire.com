@@ -44,6 +44,9 @@
                     class="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
                     :class="transmission.structure_visibility === 'sanctum' ? 'bg-indigo-50' : 'bg-white'"
                 >
+                    <h3 class="py-2 text-center text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono bg-yellow-100">
+                        {{ transmission.signal_ulid }}
+                    </h3>
                     <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                         <img
                             :src="transmission.signal_metadata.youtube.thumbnail"
@@ -63,9 +66,6 @@
                         <p class="text-sm text-gray-600 line-clamp-3">
                             {{ transmission.signal_description || 'No Description Available' }}
                         </p>
-                        <h3 class="text-xs font-semibold leading-tight text-gray-900 group-hover:text-black font-mono">
-                            {{ transmission.signal_ulid }}
-                        </h3>
                         <!--
                         <div v-if="transmission.symbolic_elements?.length" class="space-y-1">
                             <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
