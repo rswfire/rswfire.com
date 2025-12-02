@@ -123,7 +123,7 @@
 
                 <div class="mt-4">Each person documented here faced a choice.</div>
                 <div>That choice is now attached to their name.</div>
-                <div><Lexicon term="the archive">This archive</Lexicon> documents both.</div>
+                <div><Lexicon term="the archive">This archive</Lexicon> ensures neither is forgotten.</div>
 
                 <div class="mt-6 flex">
                     <div class="mr-2">&mdash;</div>
