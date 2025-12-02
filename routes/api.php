@@ -10,6 +10,6 @@ Route::get("/content/{id}", [Content::class, "show"]);
 
 Route::get('/lexicon/lookup/{term}', function ($term) {
     return Lexicon::select('lexicon_term', 'lexicon_slug', 'lexicon_essence')
-        ->where('lexicon_term', $term)
+        ->whereRaw('LOWER(lexicon_term) = LOWER(?)', [$term])
         ->firstOrFail();
 });

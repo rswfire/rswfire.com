@@ -123,14 +123,14 @@
 
                 <div class="mt-4">Each person documented here faced a choice.</div>
                 <div>That choice is now attached to their name.</div>
-                <div>That choice follows them.</div>
+                <div><Lexicon term="the archive">This archive</Lexicon> documents both.</div>
 
                 <div class="mt-6 flex">
                     <div class="mr-2">&mdash;</div>
                     <div>
                         <div>Samuel White</div>
                         <div>Former Oregon State Parks Volunteer</div>
-                        <div>November 22, 2025</div>
+                        <div>December 1, 2025</div>
                     </div>
                 </div>
 

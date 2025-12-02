@@ -9,6 +9,7 @@
 import { computed } from 'vue'
 import {
   Activity,
+    AlertCircle,
     BadgeX,
   BookKey,
   Bookmark,
@@ -79,6 +80,7 @@ import {
 
 const iconMap = {
   Activity,
+    AlertCircle,
   BadgeX,
   BookKey,
   Bookmark,
