@@ -12,6 +12,7 @@
 
     <!-- Mobile top bar (sticky; <md) -->
     <div class="sticky top-0 z-50 md:hidden">
+
         <!-- First row -->
         <div class="flex items-center justify-between p-3 bg-white border-b border-gray-300">
             <Link href="/" class="flex items-center gap-3">
@@ -101,6 +102,9 @@
     />
 
     <main class="page-wrap py-4 md:pt-[110px]">
+        <div class="bg-red-100 text-center">
+            <div class="p-4 mb-4"><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
+        </div>
         <slot />
     </main>
 
@@ -225,11 +229,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="bg-stone-100 text-center">
-        <div><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
-        <div class="font-mono"><strong>Server</strong>: {{ appConfig.server }} &nbsp;|&nbsp; <strong>Environment</strong>: {{ appConfig.environment }}</div>
-    </div>
 
 </template>
 
