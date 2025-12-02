@@ -102,9 +102,6 @@
     />
 
     <main class="page-wrap py-4 md:pt-[110px]">
-        <div class="bg-red-100 text-center">
-            <div class="p-4 mb-4"><strong>rswfire.com</strong> is migrating to a new environment. You may experience technical issues during this time.</div>
-        </div>
         <slot />
     </main>
 
