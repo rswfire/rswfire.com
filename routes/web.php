@@ -651,6 +651,17 @@ Route::get('/transmissions', [TransmissionController::class, 'index']);
 Route::get('/transmission/{ulid}', [TransmissionController::class, 'show']);
 Route::get('/transmission/tag/{tag}', [TransmissionController::class, 'tag']);
 
+Route::get('/transmissions/clusters', function () {
+    return Inertia::render("Transmission/ClusterIndex", [
+    ]);
+});
+
+Route::get('/transmissions/clusters/{ulid}', function ($ulid) {
+        return Inertia::render("Transmission/ClusterEntry", [
+            "ulid" => $ulid
+    ]);
+});
+
 Route::get("/dashboard", function () {
     return Inertia::render("Dashboard");
 })->middleware(["auth", "verified"])->name("dashboard");
