@@ -1,29 +1,11 @@
 <template>
     <Content :theme="pageTheme">
         <Hero
-            title="TRANSFORMATION ARCS"
+            title="TRANSMISSION CLUSTERS"
             meta="CLUSTER ANALYSIS THROUGH RECURSIVE AI REFLECTION"
             subtitle="COHERENT PHASES OF A SOVEREIGN JOURNEY"
             :theme="pageTheme"
         />
-
-        <section class="max-w-4xl mx-auto px-6 text-gray-900 pt-4">
-            <div class="max-w-none columns-2 gap-8">
-                <div>These are transformation arcs &mdash;</div>
-                <div class="ml-4">clusters of signals</div>
-                <div class="ml-8">spanning weeks or months.</div>
-                <div><em>Each arc holds its own pattern</em>.</div>
-                <div>Thresholds crossed.</div>
-                <div>Integration achieved or deferred.</div>
-
-                <div>11 clusters &mdash;</div>
-                <div class="ml-4">tracked from RV transition to federal positioning.</div>
-                <div>This is not timeline.</div>
-                <div class="ml-4">It is <em>structural mapping</em> of becoming.</div>
-                <div>You're not here to observe.</div>
-                <div>You're here to recognize the pattern.</div>
-            </div>
-        </section>
 
         <div v-if="loading" class="py-16 text-center text-gray-400">
             Loading Clusters...
@@ -56,6 +38,14 @@
                             </div>
                         </div>
 
+                        <!-- Arc Summary (first 2 lines) -->
+                        <p
+                            v-if="cluster.cluster_metadata?.reflection?.arc_summary"
+                            class="text-sm text-gray-600 line-clamp-2 leading-relaxed"
+                        >
+                            {{ stripMarkdown(cluster.cluster_metadata.reflection.arc_summary) }}
+                        </p>
+
                         <!-- Timespan -->
                         <div class="text-sm text-gray-500">
                             <span class="font-mono">{{ formatDate(cluster.stamp_cluster_start) }}</span>
@@ -65,37 +55,24 @@
                             </span>
                         </div>
 
-                        <!-- Pattern (if available) -->
+                        <!-- Transformation Pattern (if available) -->
                         <div
-                            v-if="cluster.cluster_data?.pattern"
-                            class="text-xs text-gray-600 italic"
+                            v-if="cluster.cluster_metadata?.reflection?.transformation_pattern"
+                            class="text-xs text-purple-700 font-mono bg-purple-50 px-3 py-2 rounded border border-purple-100"
                         >
-                            {{ cluster.cluster_data.pattern }}
+                            {{ cluster.cluster_metadata.reflection.transformation_pattern }}
                         </div>
 
-                        <!-- Themes -->
-                        <div v-if="cluster.cluster_data?.themes?.length" class="space-y-2">
-                            <div class="text-[10px] uppercase font-semibold text-gray-400 tracking-wide">
-                                Themes
-                            </div>
-                            <div class="flex flex-wrap gap-1.5">
-                                <span
-                                    v-for="theme in cluster.cluster_data.themes"
-                                    :key="theme"
-                                    class="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full whitespace-nowrap"
-                                >
-                                    {{ theme }}
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- Signal Count -->
-                        <div class="text-xs text-gray-400 flex justify-between pt-3 border-t border-gray-100">
-                            <span>
-                                {{ cluster.cluster_data?.signal_count_estimate || '~' }} signals
+                        <!-- Stats Footer -->
+                        <div class="text-xs text-gray-400 flex justify-between items-center pt-3 border-t border-gray-100">
+                            <span v-if="cluster.cluster_metadata?.signal_count_estimate">
+                                {{ cluster.cluster_metadata.signal_count_estimate }} signals
                             </span>
-                            <span v-if="cluster.cluster_data?.geographic_scope" class="truncate ml-2">
-                                {{ cluster.cluster_data.geographic_scope }}
+                            <span
+                                v-if="cluster.cluster_metadata?.reflection?.threshold_moments?.length"
+                                class="text-pink-600"
+                            >
+                                {{ cluster.cluster_metadata.reflection.threshold_moments.length }} thresholds
                             </span>
                         </div>
                     </div>
@@ -129,6 +106,15 @@ const formatDate = (dateStr) => {
         month: 'short',
         day: 'numeric',
     })
+}
+
+const stripMarkdown = (text) => {
+    if (!text) return ''
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '$1')  // Remove bold
+        .replace(/\*(.*?)\*/g, '$1')       // Remove italic
+        .replace(/\n/g, ' ')                // Replace newlines with spaces
+        .trim()
 }
 
 const pageTheme = 'transmissions'

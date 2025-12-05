@@ -77,6 +77,14 @@
                     :page-theme="pageTheme"
                 />
 
+                <ClusterElementsTab
+                    v-else-if="activeMainTab === 'Elements'"
+                    :cluster="cluster"
+                    :elements="elementsReflection"
+                    :signals="signals"
+                    :page-theme="pageTheme"
+                />
+
                 <ClusterPatternsTab
                     v-else-if="activeMainTab === 'Patterns'"
                     :cluster="cluster"
@@ -105,6 +113,7 @@ import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
 import Icon from '@/Components/System/Icon.vue'
 import ClusterArcTab from './ClusterArcTab.vue'
+import ClusterElementsTab from './ClusterElementsTab.vue'
 import ClusterPatternsTab from './ClusterPatternsTab.vue'
 import ClusterMirrorTab from './ClusterMirrorTab.vue'
 import { useCluster } from '@/Composables/useCluster'
@@ -131,6 +140,16 @@ const surfaceReflection = computed(() => {
 
 const structureReflection = computed(() => {
     const content = reflections.value.structure?.reflection_content
+    if (!content) return null
+    try {
+        return typeof content === 'string' ? JSON.parse(content) : content
+    } catch {
+        return null
+    }
+})
+
+const elementsReflection = computed(() => {
+    const content = reflections.value.elements?.reflection_content
     if (!content) return null
     try {
         return typeof content === 'string' ? JSON.parse(content) : content
@@ -167,6 +186,13 @@ const mainTabs = [
         icon: 'TrendingUp',
         color: 'text-pink-400',
         background: 'bg-pink-400',
+    },
+    {
+        key: 'Elements',
+        label: 'Elements',
+        icon: 'Gem',
+        color: 'text-emerald-400',
+        background: 'bg-emerald-400',
     },
     {
         key: 'Patterns',
