@@ -133,3 +133,13 @@ const getEntityTypeColor = (type) => {
     return colors[type] || 'bg-gray-100 text-gray-700'
 }
 </script>
+
+<style scoped>
+.prose :deep(p) {
+    margin-bottom: 1rem;
+}
+
+.prose :deep(p + p) {
+    margin-top: 1rem;
+}
+</style>

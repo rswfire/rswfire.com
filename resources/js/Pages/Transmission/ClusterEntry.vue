@@ -239,3 +239,13 @@ const formatTimespan = (start, end) => {
 
 const pageTheme = 'transmissions'
 </script>
+
+<style scoped>
+.prose :deep(p) {
+    margin-bottom: 1rem;
+}
+
+.prose :deep(p + p) {
+    margin-top: 1rem;
+}
+</style>
