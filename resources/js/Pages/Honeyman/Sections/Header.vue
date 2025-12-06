@@ -8,8 +8,8 @@
                 <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3RWVK2ZXARFNTEDCNHKMHCM" class="text-lg text-honeyman-600 hover:underline">The Weight of Documentation →</Link></div>
                 <div class="text-gray-800 font-medium"><Link href="/fieldcraft/01K3SY18HCQFW9J1QB878TZ62J" class="text-lg text-honeyman-600 hover:underline">The Harm That Didn't Have to Happen →</Link></div>
                 <div class="text-black text-center pt-6"><Icon name="FlaskConical" color="text-xs text-gray-600" class="flex-shrink-0 mx-auto w-[16px] h-[16px]" /></div>
-                <div class="text-gray-600 font-medium"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP" class="text-lg text-honeyman-600 hover:underline">Oregon State Parks: Abuse, Pattern &amp; Betrayal →</Link></div>
-                <div class="text-gray-800 text-sm"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP">AI SYNTHESIS OF THIS PERIOD OF MY LIFE</Link></div>
+                <div class="text-gray-600 font-medium"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP" class="text-lg text-honeyman-600 hover:underline">Oregon State Parks: Volunteer Entry to Systematic Abuse and Dismissal →</Link></div>
+                <div class="text-gray-800 text-sm"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP">AI SYNTHESIS OF THIS PERIOD FROM MY LIFE</Link></div>
             </div>
 
             <div class="pt-0 md:px-6 sm:px-0 text-base">
