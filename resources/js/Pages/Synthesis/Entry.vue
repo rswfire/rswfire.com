@@ -10,7 +10,7 @@
             align="center"
         />
         <div v-else class="py-16 text-center text-gray-400">
-            Loading Cluster...
+            Loading Synthesis...
         </div>
 
         <!-- Main Content -->
@@ -47,10 +47,10 @@
                 <!-- Right-aligned controls -->
                 <div class="flex items-center gap-2 ml-auto mr-4">
                     <Link
-                        href="/transmissions/clusters"
+                        href="/synthesis"
                         class="inline-flex items-center gap-1 text-[11px] uppercase tracking-wide text-gray-500 hover:text-black mb-2"
                     >
-                        ← Return to Clusters
+                        ← Index
                     </Link>
 
                     <span class="text-gray-300 mb-2">|</span>
@@ -67,8 +67,8 @@
 
             <!-- Tab Content -->
             <div class="mt-6">
-                <TabCluster
-                    v-if="activeMainTab === 'Arc'"
+                <TabSynthesis
+                    v-if="activeMainTab === 'Synthesis'"
                     :cluster="cluster"
                     :surface="surfaceReflection"
                     :structure="structureReflection"
@@ -112,10 +112,11 @@ import { Link } from '@inertiajs/vue3'
 import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
 import Icon from '@/Components/System/Icon.vue'
-import TabCluster from './TabCluster.vue'
 import TabElements from './TabElements.vue'
-import TabPatterns from './TabPatterns.vue'
 import TabMirror from './TabMirror.vue'
+import TabPatterns from './TabPatterns.vue'
+import TabSynthesis from './TabSynthesis.vue'
+
 import { useCluster } from '@/Composables/useCluster'
 
 const props = defineProps({
@@ -181,11 +182,11 @@ const mirrorReflection = computed(() => {
 // Tabs
 const mainTabs = [
     {
-        key: 'Arc',
-        label: 'Arc',
-        icon: 'TrendingUp',
-        color: 'text-pink-400',
-        background: 'bg-pink-400',
+        key: 'Synthesis',
+        label: 'Synthesis',
+        icon: 'FlaskConical',
+        color: 'text-synthesis-400',
+        background: 'bg-synthesis-400',
     },
     {
         key: 'Elements',
@@ -204,13 +205,13 @@ const mainTabs = [
     {
         key: 'Mirror',
         label: 'Mirror',
-        icon: 'FlaskConical',
+        icon: 'FlipVertical',
         color: 'text-sky-400',
         background: 'bg-sky-400',
     }
 ]
 
-const activeMainTab = ref('Arc')
+const activeMainTab = ref('Synthesis')
 
 // Copy link
 const url = ref(window.location.href)

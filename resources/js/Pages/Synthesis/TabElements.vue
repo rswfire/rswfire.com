@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-12 max-w-5xl mx-auto px-6 pb-12">
+    <div class="space-y-6 max-w-6xl mx-auto">
         <!-- Key Entities -->
         <section v-if="elements?.key_entities?.length" class="space-y-6">
             <h3 class="text-2xl font-bold text-gray-900">Key Entities</h3>

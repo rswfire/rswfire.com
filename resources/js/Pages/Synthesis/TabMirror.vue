@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-12 max-w-4xl mx-auto px-6 pb-12">
+    <div class="space-y-6 max-w-6xl mx-auto">
         <!-- Arc Recognition -->
         <section v-if="mirror?.arc_recognition" class="space-y-4">
             <h3 class="text-2xl font-bold text-gray-900">Arc Recognition</h3>

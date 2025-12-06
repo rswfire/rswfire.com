@@ -78,7 +78,6 @@
 
                                 </div>
 
-
                                 <!-- Stats Badge -->
                                 <div
                                     v-if="cluster.cluster_metadata?.reflection?.threshold_moments?.length"
@@ -86,7 +85,7 @@
                                 >
                                     <div class="text-xs uppercase tracking-wide text-synthesis-600 font-semibold mb-1">Signals</div>
                                     <div class="text-2xl font-bold text-synthesis-700 text-center">
-                                        {{ cluster.cluster_metadata.signal_count_estimate }}
+                                        {{ cluster.cluster_metadata?.signal_count_estimate ?? '?' }}
                                     </div>
                                 </div>
                             </div>

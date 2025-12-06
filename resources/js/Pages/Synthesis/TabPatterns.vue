@@ -1,5 +1,5 @@
 <template>
-    <div class="space-y-12 max-w-6xl mx-auto px-6 pb-12">
+    <div class="space-y-6 max-w-6xl mx-auto">
         <!-- Catalytic Sequence -->
         <section v-if="patterns?.catalytic_sequence?.length" class="space-y-4">
             <h3 class="text-2xl font-bold text-gray-900">Catalytic Sequence</h3>
