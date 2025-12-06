@@ -23,7 +23,7 @@
             <h3 class="text-xl font-semibold text-gray-900">Integration Markers</h3>
             <div
                 class="prose prose-sm max-w-none text-gray-700 leading-relaxed bg-green-50 p-6 rounded-lg border border-green-100"
-                v-html="formatMarkdown(patterns.integration_markers)"
+                v-html="formatBoldLabelList(patterns.integration_markers)"
             />
         </section>
 
@@ -117,7 +117,7 @@
             <h3 class="text-xl font-semibold text-gray-900">Emerging Meta-Patterns</h3>
             <div
                 class="prose prose-sm max-w-none text-gray-700 leading-relaxed"
-                v-html="formatMarkdown(patterns.emerging_meta_patterns)"
+                v-html="formatBoldLabelList(patterns.emerging_meta_patterns)"
             />
         </section>
 
@@ -150,8 +150,8 @@
 
 <script setup>
 import { router } from '@inertiajs/vue3'
-import markdownit from 'markdown-it'
 import SignalCard from './SignalCard.vue'
+import markdownit from "markdown-it";
 
 const props = defineProps({
     cluster: Object,
@@ -174,14 +174,56 @@ const formatMarkdown = (text) => {
     if (!text) return ''
     return md.render(text)
 }
+
+const formatBoldLabelList = (text) => {
+    // Split on bold labels followed by colons
+    const items = text.split(/\*\*([^*]+)\*\*:/).filter(Boolean)
+
+    // Group pairs (label, description)
+    const pairs = []
+    for (let i = 0; i < items.length; i += 2) {
+        if (items[i] && items[i + 1]) {
+            pairs.push({
+                label: items[i].trim(),
+                description: items[i + 1].trim()
+            })
+        }
+    }
+
+    if (pairs.length === 0) {
+        return md.render(text, { breaks: true, gfm: true })
+    }
+
+    // Format as HTML list
+    const listItems = pairs.map(pair =>
+        `<li><strong>${pair.label}</strong>: ${pair.description}</li>`
+    ).join('')
+
+    return `<ul class="space-y-3">${listItems}</ul>`
+}
 </script>
 
 <style scoped>
-.prose :deep(p) {
-    margin-bottom: 1rem;
+:deep(ul) {
+    list-style: none;
+    padding-left: 0;
 }
 
-.prose :deep(p + p) {
-    margin-top: 1rem;
+:deep(ul li) {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+:deep(ul li:before) {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #9ca3af;
+    font-weight: bold;
+}
+
+:deep(ul li strong) {
+    color: #111827;
 }
 </style>
