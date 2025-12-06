@@ -67,7 +67,7 @@
 
             <!-- Tab Content -->
             <div class="mt-6">
-                <ClusterArcTab
+                <TabCluster
                     v-if="activeMainTab === 'Arc'"
                     :cluster="cluster"
                     :surface="surfaceReflection"
@@ -77,7 +77,7 @@
                     :page-theme="pageTheme"
                 />
 
-                <ClusterElementsTab
+                <TabElements
                     v-else-if="activeMainTab === 'Elements'"
                     :cluster="cluster"
                     :elements="elementsReflection"
@@ -85,7 +85,7 @@
                     :page-theme="pageTheme"
                 />
 
-                <ClusterPatternsTab
+                <TabPatterns
                     v-else-if="activeMainTab === 'Patterns'"
                     :cluster="cluster"
                     :patterns="patternsReflection"
@@ -93,7 +93,7 @@
                     :page-theme="pageTheme"
                 />
 
-                <ClusterMirrorTab
+                <TabMirror
                     v-else-if="activeMainTab === 'Mirror'"
                     :cluster="cluster"
                     :mirror="mirrorReflection"
@@ -112,10 +112,10 @@ import { Link } from '@inertiajs/vue3'
 import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
 import Icon from '@/Components/System/Icon.vue'
-import ClusterArcTab from './ClusterArcTab.vue'
-import ClusterElementsTab from './ClusterElementsTab.vue'
-import ClusterPatternsTab from './ClusterPatternsTab.vue'
-import ClusterMirrorTab from './ClusterMirrorTab.vue'
+import TabCluster from './TabCluster.vue'
+import TabElements from './TabElements.vue'
+import TabPatterns from './TabPatterns.vue'
+import TabMirror from './TabMirror.vue'
 import { useCluster } from '@/Composables/useCluster'
 
 const props = defineProps({

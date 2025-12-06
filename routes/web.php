@@ -140,21 +140,6 @@ Route::get("/gallery", function () {
     ]);
 });
 
-Route::get("/synthesis", function () {
-
-    return Inertia::render("Synthesis/Index", [
-        "metaTitle" => "Synthesis | ".request()->getHost(),
-        "metaDescription" => "Recursive reflections clustered by signal density.",
-        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
-    ]);
-});
-
-
-
-
-
-
-
 Route::get("/codex/anchors", function () {
     return Inertia::render("Codex/Anchors", [
         "metaTitle" => "Field Anchors | Codex | ".request()->getHost(),
@@ -651,14 +636,24 @@ Route::get('/transmissions', [TransmissionController::class, 'index']);
 Route::get('/transmission/{ulid}', [TransmissionController::class, 'show']);
 Route::get('/transmission/tag/{tag}', [TransmissionController::class, 'tag']);
 
-Route::get('/transmissions/clusters', function () {
-    return Inertia::render("Transmission/ClusterIndex", [
+Route::redirect('/transmissions/clusters', '/synthesis', 301);
+Route::redirect('/transmissions/clusters/{ulid}', '/synthesis/{ulid}', 301);
+
+Route::get("/synthesis", function () {
+
+    return Inertia::render("Synthesis/Index", [
+        "metaTitle" => "Synthesis | ".request()->getHost(),
+        "metaDescription" => "Recursive reflections clustered by signal density.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 
-Route::get('/transmissions/clusters/{ulid}', function ($ulid) {
-        return Inertia::render("Transmission/ClusterEntry", [
-            "ulid" => $ulid
+Route::get('/synthesis/{ulid}', function ($ulid) {
+    return Inertia::render("Synthesis/Entry", [
+        "ulid" => $ulid,
+        "metaTitle" => "Synthesis | ".request()->getHost(),
+        "metaDescription" => "Recursive reflections clustered by signal density.",
+        "metaUrl" => request()->getSchemeAndHttpHost().request()->getPathInfo(),
     ]);
 });
 

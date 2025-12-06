@@ -176,8 +176,8 @@ const formatMarkdown = (text) => {
 }
 
 const formatBoldLabelList = (text) => {
-    // Split on bold labels followed by colons
-    const items = text.split(/\*\*([^*]+)\*\*:/).filter(Boolean)
+    // Split on bold labels followed by colons or dashes
+    const items = text.split(/\*\*([^*]+)\*\*\s*[:-]/).filter(Boolean)
 
     // Group pairs (label, description)
     const pairs = []
@@ -190,8 +190,9 @@ const formatBoldLabelList = (text) => {
         }
     }
 
-    if (pairs.length === 0) {
-        return md.render(text, { breaks: true, gfm: true })
+    // If we got fewer than 2 pairs, probably not a list pattern
+    if (pairs.length < 2) {
+        return marked(text, { breaks: true, gfm: true })
     }
 
     // Format as HTML list
