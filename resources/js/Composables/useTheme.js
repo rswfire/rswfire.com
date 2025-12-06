@@ -132,7 +132,7 @@ const THEMES = {
         section: "signal"
     },
     'synthesis': {
-        icon: "Crosshair",
+        icon: "FlaskConical",
         color: "text-purple-400",
         bg: "bg-purple-50",
         border: "border-purple-200",

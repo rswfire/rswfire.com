@@ -237,7 +237,7 @@ const formatTimespan = (start, end) => {
     return `${startDate.toUpperCase()} → ${endDate.toUpperCase()}`
 }
 
-const pageTheme = 'transmissions'
+const pageTheme = 'synthesis'
 </script>
 
 <style scoped>
