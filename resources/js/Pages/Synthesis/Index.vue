@@ -58,21 +58,24 @@
                                         <h2 class="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-black">
                                             {{ cluster.cluster_title }}
                                         </h2>
+                                    </div>
+
+                                    <!-- Timespan + Active Badge -->
+                                    <div class="flex flex-wrap items-center gap-3">
                                         <div
                                             v-if="cluster.cluster_state === 'active'"
                                             class="flex items-center gap-1.5 px-2.5 py-1 bg-synthesis-100 border border-synthesis-300 rounded-full"
                                         >
-                                            <Icon name="Zap" class="text-synthesis-600 w-[20px] h-[20px]" />
+                                            <Icon name="Zap" class="text-synthesis-600 w-[16px] h-[16px]" />
                                             <span class="text-xs font-semibold text-synthesis-700 uppercase tracking-wide">Active</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm text-gray-500 font-mono">
+                                            <span>{{ formatDate(cluster.stamp_cluster_start) }}</span>
+                                            <span class="text-gray-300">→</span>
+                                            <span>{{ cluster.stamp_cluster_end ? formatDate(cluster.stamp_cluster_end) : 'present' }}</span>
                                         </div>
                                     </div>
 
-                                    <!-- Timespan -->
-                                    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 font-mono">
-                                        <span>{{ formatDate(cluster.stamp_cluster_start) }}</span>
-                                        <span class="text-gray-300">→</span>
-                                        <span>{{ cluster.stamp_cluster_end ? formatDate(cluster.stamp_cluster_end) : 'present' }}</span>
-                                    </div>
                                 </div>
 
 
