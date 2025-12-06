@@ -38,64 +38,66 @@
             </div>
 
             <template v-else-if="clusters">
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
+                <div class="mt-12 space-y-6 max-w-6xl mx-auto px-6">
                     <div
                         v-for="cluster in clusters"
                         :key="cluster.cluster_ulid"
                         @click="goTo(cluster.cluster_ulid)"
-                        class="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-200 hover:border-black"
-                        :class="cluster.cluster_state === 'active' ? 'bg-emerald-50' : 'bg-white'"
+                        class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-black"
+                        :class="cluster.cluster_state === 'active' ? 'bg-gradient-to-r from-synthesis-50 to-white' : 'bg-white'"
                     >
-                        <div class="p-6 space-y-4">
-                            <!-- Header -->
-                            <div class="flex items-start justify-between gap-3">
-                                <h2 class="text-lg font-semibold leading-tight text-gray-900 group-hover:text-black flex-1">
-                                    {{ cluster.cluster_title }}
-                                </h2>
+                        <div class="p-8">
+                            <!-- Header Row -->
+                            <div class="flex items-start justify-between gap-6 mb-6">
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <h2 class="text-2xl font-bold text-gray-900 group-hover:text-black">
+                                            {{ cluster.cluster_title }}
+                                        </h2>
+                                        <div
+                                            v-if="cluster.cluster_state === 'active'"
+                                            class="flex items-center gap-1.5 px-2.5 py-1 bg-synthesis-100 border border-synthesis-300 rounded-full"
+                                        >
+                                            <Icon name="Zap" class="text-synthesis-600 w-[20px] h-[20px]" />
+                                            <span class="text-xs font-semibold text-synthesis-700 uppercase tracking-wide">Active</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Timespan -->
+                                    <div class="flex items-center gap-2 text-sm text-gray-500 font-mono">
+                                        <span>{{ formatDate(cluster.stamp_cluster_start) }}</span>
+                                        <span class="text-gray-300">→</span>
+                                        <span>{{ cluster.stamp_cluster_end ? formatDate(cluster.stamp_cluster_end) : 'present' }}</span>
+                                    </div>
+                                </div>
+
+                                <!-- Stats Badge -->
                                 <div
-                                    v-if="cluster.cluster_state === 'active'"
-                                    class="flex-shrink-0"
+                                    v-if="cluster.cluster_metadata?.reflection?.threshold_moments?.length"
+                                    class="flex-shrink-0 px-4 py-2 bg-synthesis-50 border border-synthesis-200 rounded-lg"
                                 >
-                                    <Icon name="Zap" class="text-emerald-500 w-[24px] h-[24px]" />
+                                    <div class="text-xs uppercase tracking-wide text-synthesis-600 font-semibold mb-1">Signals</div>
+                                    <div class="text-2xl font-bold text-synthesis-700 text-center">
+                                        {{ cluster.cluster_metadata.signal_count_estimate }}
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Arc Summary (first 2 lines) -->
+                            <!-- Arc Summary -->
                             <p
                                 v-if="cluster.cluster_metadata?.reflection?.arc_summary"
-                                class="text-sm text-gray-600 line-clamp-2 leading-relaxed"
+                                class="text-base text-gray-700 leading-relaxed mb-6"
                             >
-                                {{ stripMarkdown(cluster.cluster_metadata.reflection.arc_summary) }}
+                                {{ getFirstParagraph(cluster.cluster_metadata.reflection.arc_summary) }}
                             </p>
 
-                            <!-- Timespan -->
-                            <div class="text-sm text-gray-500">
-                                <span class="font-mono">{{ formatDate(cluster.stamp_cluster_start) }}</span>
-                                <span class="mx-2">→</span>
-                                <span class="font-mono">
-                                    {{ cluster.stamp_cluster_end ? formatDate(cluster.stamp_cluster_end) : 'present' }}
-                                </span>
-                            </div>
-
-                            <!-- Transformation Pattern (if available) -->
+                            <!-- Transformation Pattern -->
                             <div
                                 v-if="cluster.cluster_metadata?.reflection?.transformation_pattern"
-                                class="text-xs text-purple-700 font-mono bg-purple-50 px-3 py-2 rounded border border-purple-100"
+                                class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-mono text-purple-800 bg-purple-50 border border-purple-200 rounded-lg"
                             >
-                                {{ cluster.cluster_metadata.reflection.transformation_pattern }}
-                            </div>
-
-                            <!-- Stats Footer -->
-                            <div class="text-xs text-gray-400 flex justify-between items-center pt-3 border-t border-gray-100">
-                                <span v-if="cluster.cluster_metadata?.signal_count_estimate">
-                                    {{ cluster.cluster_metadata.signal_count_estimate }} signals
-                                </span>
-                                <span
-                                    v-if="cluster.cluster_metadata?.reflection?.threshold_moments?.length"
-                                    class="text-pink-600"
-                                >
-                                    {{ cluster.cluster_metadata.reflection.threshold_moments.length }} thresholds
-                                </span>
+                                <Icon name="TrendingUp" class="text-purple-600 w-[16px] h-[16px]" />
+                                <span>{{ cluster.cluster_metadata.reflection.transformation_pattern }}</span>
                             </div>
                         </div>
                     </div>
@@ -137,6 +139,20 @@ const stripMarkdown = (text) => {
         .replace(/\*\*(.*?)\*\*/g, '$1')
         .replace(/\*(.*?)\*/g, '$1')
         .replace(/\n/g, ' ')
+        .trim()
+}
+
+const getFirstParagraph = (text) => {
+    if (!text) return ''
+
+    const sentences = text.match(/[^.!?]+[.!?]+/g) || [text]
+
+    // Strip markdown from first 3-5 sentences
+    const firstFew = sentences.slice(0, 4).join(' ')
+
+    return firstFew
+        .replace(/\*\*(.*?)\*\*/g, '$1')  // Remove bold
+        .replace(/\*(.*?)\*/g, '$1')       // Remove italic
         .trim()
 }
 

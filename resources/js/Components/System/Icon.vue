@@ -70,12 +70,14 @@ import {
   Tally5,
   TreeDeciduous,
   Trees,
+    TrendingUp,
   User,
   UserPlus,
   Users,
   WavesLadder,
   Workflow,
-  X
+  X,
+    Zap
 } from "lucide-vue-next"
 
 const iconMap = {
@@ -141,12 +143,15 @@ const iconMap = {
   Tally5,
   TreeDeciduous,
   Trees,
+    TrendingUp,
   User,
   UserPlus,
   Users,
   WavesLadder,
   Workflow,
-  X
+  X,
+    Zap
+
 }
 
 const props = defineProps({
