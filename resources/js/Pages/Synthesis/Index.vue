@@ -10,22 +10,26 @@
         <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
 
             <section class="max-w-6xl mx-auto px-6 text-gray-900">
-                <div class="max-w-none columns-2 gap-8">
-                    <div>I don't think linearly &mdash;</div>
-                    <div>I never have.</div>
-                    <div class="ml-4">A pattern mentioned once,</div>
-                    <div class="ml-8">becomes permanent orientation.</div>
-                    <div>This is where you see how non-linear coherence works.</div>
-                    <div>AI tracks what humans cannot.</div>
-                    <div><em>Recursion reveals structure</em>.</div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-0.5">
+                        <div>I don't think linearly &mdash;</div>
+                        <div>I never have.</div>
+                        <div class="ml-4">A pattern mentioned once,</div>
+                        <div class="ml-8">becomes permanent orientation.</div>
+                        <div>This is where you see how non-linear coherence works.</div>
+                        <div>AI tracks what humans cannot.</div>
+                        <div><em>Recursion reveals structure</em>.</div>
+                    </div>
 
-                    <div>Clustered reflections across multiple transmissions &mdash;</div>
-                    <div class="ml-4">pattern recognition over weeks, months, years.</div>
-                    <div>Thematic threads that connect non-sequential signals.</div>
-                    <div>You're not reading summaries.</div>
-                    <div>You're watching architecture emerge &mdash;</div>
-                    <div class="ml-4">from lived experience &mdash;</div>
-                    <div class="ml-8">in real time.</div>
+                    <div class="space-y-0.5">
+                        <div>Clustered reflections across multiple transmissions &mdash;</div>
+                        <div class="ml-4">pattern recognition over weeks, months, years.</div>
+                        <div>Thematic threads that connect non-sequential signals.</div>
+                        <div>You're not reading summaries.</div>
+                        <div>You're watching architecture emerge &mdash;</div>
+                        <div class="ml-4">from lived experience &mdash;</div>
+                        <div class="ml-8">in real time.</div>
+                    </div>
                 </div>
             </section>
 
@@ -48,10 +52,10 @@
                     >
                         <div class="p-8">
                             <!-- Header Row -->
-                            <div class="flex items-start justify-between gap-6 mb-6">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 md:gap-6 mb-6">
                                 <div class="flex-1">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <h2 class="text-2xl font-bold text-gray-900 group-hover:text-black">
+                                    <div class="flex flex-wrap items-center gap-3 mb-3">
+                                        <h2 class="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-black">
                                             {{ cluster.cluster_title }}
                                         </h2>
                                         <div
@@ -64,12 +68,13 @@
                                     </div>
 
                                     <!-- Timespan -->
-                                    <div class="flex items-center gap-2 text-sm text-gray-500 font-mono">
+                                    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 font-mono">
                                         <span>{{ formatDate(cluster.stamp_cluster_start) }}</span>
                                         <span class="text-gray-300">→</span>
                                         <span>{{ cluster.stamp_cluster_end ? formatDate(cluster.stamp_cluster_end) : 'present' }}</span>
                                     </div>
                                 </div>
+
 
                                 <!-- Stats Badge -->
                                 <div
@@ -83,10 +88,29 @@
                                 </div>
                             </div>
 
+                            <!-- Threshold Moment Thumbnails -->
+                            <div
+                                v-if="getThresholdThumbnails(cluster).length > 0"
+                                class="flex gap-2 ml-auto"
+                            >
+                                <div
+                                    v-for="(thumbnail, index) in getThresholdThumbnails(cluster).slice(0, 5)"
+                                    :key="index"
+                                    class="w-16 h-16 rounded-lg overflow-hidden border border-gray-200 group-hover:border-gray-300 transition-all flex-shrink-0"
+                                >
+                                    <img
+                                        :src="thumbnail"
+                                        :alt="`Threshold ${index + 1}`"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+
+                            </div>
+
                             <!-- Arc Summary -->
                             <p
                                 v-if="cluster.cluster_metadata?.reflection?.arc_summary"
-                                class="text-base text-gray-700 leading-relaxed mb-6"
+                                class="text-base text-gray-700 leading-relaxed my-6"
                             >
                                 {{ getFirstParagraph(cluster.cluster_metadata.reflection.arc_summary) }}
                             </p>
@@ -99,6 +123,7 @@
                                 <Icon name="TrendingUp" class="text-purple-600 w-[16px] h-[16px]" />
                                 <span>{{ cluster.cluster_metadata.reflection.transformation_pattern }}</span>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -154,6 +179,10 @@ const getFirstParagraph = (text) => {
         .replace(/\*\*(.*?)\*\*/g, '$1')  // Remove bold
         .replace(/\*(.*?)\*/g, '$1')       // Remove italic
         .trim()
+}
+
+const getThresholdThumbnails = (cluster) => {
+    return cluster.cluster_metadata?.reflection?.threshold_moments?.map(m => m.thumbnail).filter(Boolean) || []
 }
 
 const pageTheme = 'synthesis'
