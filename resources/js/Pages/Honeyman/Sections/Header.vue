@@ -139,7 +139,7 @@
             <div class="mt-6 border-t border-gray-300 pt-6 text-center">
                 <div class="text-black text-center"><Icon name="FlaskConical" color="text-xs text-gray-600" class="flex-shrink-0 mx-auto w-[16px] h-[16px]" /></div>
                 <div class="text-gray-600 font-medium"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP" class="text-lg text-honeyman-600 hover:underline">Oregon State Parks: Volunteer Entry to Systematic Abuse and Dismissal →</Link></div>
-                <div class="text-gray-800 text-sm"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP">AI SYNTHESIS OF THIS PERIOD FROM MY LIFE</Link></div>
+                <div class="text-gray-800 text-sm"><Link href="/synthesis/01KBPH3WR31AERARVEVV2K8VTP">AI SYNTHESIS OF THIS PERIOD OF MY LIFE</Link></div>
             </div>
 
         </div>
