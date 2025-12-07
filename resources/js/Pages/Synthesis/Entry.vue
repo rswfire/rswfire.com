@@ -78,14 +78,6 @@
                     :surface="surfaceReflection"
                 />
 
-                <TabPatterns
-                    v-else-if="activeMainTab === 'Patterns'"
-                    :cluster="cluster"
-                    :patterns="patternsReflection"
-                    :signals="signals"
-                    :page-theme="pageTheme"
-                />
-
                 <TabMirror
                     v-else-if="activeMainTab === 'Mirror'"
                     :cluster="cluster"
@@ -106,7 +98,6 @@ import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
 import Icon from '@/Components/System/Icon.vue'
 import TabMirror from './TabMirror.vue'
-import TabPatterns from './TabPatterns.vue'
 import TabSynthesis from './TabSynthesis.vue'
 
 import { useCluster } from '@/Composables/useCluster'
@@ -179,13 +170,6 @@ const mainTabs = [
         icon: 'FlaskConical',
         color: 'text-synthesis-400',
         background: 'bg-synthesis-400',
-    },
-    {
-        key: 'Patterns',
-        label: 'Patterns',
-        icon: 'Network',
-        color: 'text-amber-400',
-        background: 'bg-amber-400',
     },
     {
         key: 'Mirror',

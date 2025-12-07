@@ -88,6 +88,124 @@
 
         <HrBar/>
 
+        <!-- Surface: Threshold Moments -->
+        <section v-if="surface?.threshold_moments?.length" class="space-y-4">
+            <h2 class="uppercase text-xl font-bold tracking-widest m-0 p-0 text-center">Threshold Moments</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-4">
+                <div
+                    v-for="moment in surface.threshold_moments"
+                    :key="moment.signal_ulid"
+                    @click="goToSignal(moment.signal_ulid)"
+                    class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 hover:border-pink-400 bg-white"
+                >
+                    <div
+                        v-if="getSignal(moment.signal_ulid)"
+                        class="aspect-w-16 aspect-h-9 bg-gray-100"
+                    >
+                        <img
+                            :src="getSignal(moment.signal_ulid)?.signal_metadata?.youtube?.thumbnail"
+                            :alt="moment.signal_ulid"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                        />
+                    </div>
+
+                    <div class="p-3 space-y-2">
+                        <p class="text-xs font-mono text-gray-400">{{ moment.signal_ulid }}</p>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-pink-600 line-clamp-2">
+                            {{ getSignal(moment.signal_ulid)?.signal_title || 'Untitled' }}
+                        </h4>
+                        <p class="text-xs text-gray-600 line-clamp-2">
+                            {{ moment.reason }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto">
+            <!-- Mobile: Dropdown -->
+            <div class="md:hidden mb-6">
+                <select
+                    v-model="activeFilmstrip"
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 text-base font-medium focus:border-synthesis-500 focus:ring-2 focus:ring-synthesis-200 bg-white"
+                >
+                    <template v-for="category in filmstripCategories" :key="category.key">
+                        <option
+                            v-if="patterns?.[category.key]?.length"
+                            :value="category.key"
+                        >
+                            {{ category.label }} ({{ patterns[category.key].length }} signals)
+                        </option>
+                    </template>
+                </select>
+            </div>
+
+            <!-- Desktop: Vertical tabs + Grid -->
+            <div class="hidden md:flex gap-6">
+                <div class="w-48 flex-shrink-0 space-y-1">
+                    <template v-for="category in filmstripCategories" :key="category.key">
+                        <button
+                            v-if="patterns?.[category.key]?.length"
+                            @click="activeFilmstrip = category.key"
+                            class="w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all"
+                            :class="activeFilmstrip === category.key
+                            ? getCategoryActiveClass(category.color)
+                            : 'text-gray-600 hover:bg-gray-50'"
+                        >
+                            <div class="font-semibold">{{ category.label }}</div>
+                            <div class="text-xs opacity-75 mt-0.5">{{ patterns[category.key].length }} signals</div>
+                        </button>
+                    </template>
+                </div>
+
+                <div class="flex-1 min-w-0 border-t">
+                    <template v-for="category in filmstripCategories" :key="'grid-' + category.key">
+                        <div v-if="activeFilmstrip === category.key && patterns?.[category.key]?.length">
+                            <div class="my-4">
+                                <h2 class="uppercase text-xl font-bold tracking-widest m-0 p-0 text-center">{{ category.label }}</h2>
+                                <div class="text-base text-center text-gray-600 mt-1">{{ category.description }}</div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <SignalCard
+                                    v-for="moment in patterns[category.key]"
+                                    :key="moment.signal_ulid"
+                                    :signal="getSignal(moment.signal_ulid)"
+                                    :ulid="moment.signal_ulid"
+                                    :description="moment[category.descKey]"
+                                    :color="category.color"
+                                />
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Mobile: Grid -->
+            <div class="md:hidden">
+                <template v-for="category in filmstripCategories" :key="'mobile-' + category.key">
+                    <div v-if="activeFilmstrip === category.key && patterns?.[category.key]?.length">
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-600">{{ category.description }}</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4">
+                            <SignalCard
+                                v-for="moment in patterns[category.key]"
+                                :key="moment.signal_ulid"
+                                :signal="getSignal(moment.signal_ulid)"
+                                :ulid="moment.signal_ulid"
+                                :description="moment[category.descKey]"
+                                :color="category.color"
+                            />
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <HrBar/>
+
         <h2 class="uppercase text-xl font-bold tracking-widest m-0 p-0 text-center">Key Elements</h2>
 
         <!-- Elements Tabs -->
@@ -266,41 +384,6 @@
 
 
 
-        <!-- Threshold Moments Filmstrip -->
-        <section v-if="surface?.threshold_moments?.length" class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">Threshold Moments</h3>
-            <p class="text-sm text-gray-600">Key phase shifts and crossings within this arc</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-4">
-                <div
-                    v-for="moment in surface.threshold_moments"
-                    :key="moment.signal_ulid"
-                    @click="goToSignal(moment.signal_ulid)"
-                    class="group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 hover:border-pink-400 bg-white"
-                >
-                    <div
-                        v-if="getSignal(moment.signal_ulid)"
-                        class="aspect-w-16 aspect-h-9 bg-gray-100"
-                    >
-                        <img
-                            :src="getSignal(moment.signal_ulid)?.signal_metadata?.youtube?.thumbnail"
-                            :alt="moment.signal_ulid"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                        />
-                    </div>
-
-                    <div class="p-3 space-y-2">
-                        <p class="text-xs font-mono text-gray-400">{{ moment.signal_ulid }}</p>
-                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-pink-600 line-clamp-2">
-                            {{ getSignal(moment.signal_ulid)?.signal_title || 'Untitled' }}
-                        </h4>
-                        <p class="text-xs text-gray-600 line-clamp-2">
-                            {{ moment.reason }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Structure: Ontological Progression -->
         <section v-if="structure?.ontological_progression" class="space-y-4">
@@ -327,8 +410,9 @@
 import { router } from '@inertiajs/vue3'
 import markdownit from "markdown-it";
 import Icon from "@/Components/System/Icon.vue";
-import {computed, ref} from "vue";
+import {computed, onMounted, ref} from "vue";
 import HrBar from "@/Pages/Synthesis/HrBar.vue";
+import SignalCard from "@/Pages/Synthesis/SignalCard.vue";
 
 const props = defineProps({
     cluster: Object,
@@ -438,6 +522,66 @@ const formatBoldLabelList = (text) => {
         `<li><strong>${pair.label}</strong>:<br/>${pair.description}</li>`
     ).join('')
     return `<ul class="space-y-3">${listItems}</ul>`
+}
+
+const filmstripCategories = [
+    {
+        key: 'teaching_moments',
+        label: 'Teaching',
+        description: 'Signals where frameworks and concepts are explicitly demonstrated',
+        descKey: 'lesson',
+        color: 'purple'
+    },
+    {
+        key: 'quirky_moments',
+        label: 'Quirky',
+        description: 'Memorable textures that make the arc human',
+        descKey: 'note',
+        color: 'pink'
+    },
+    {
+        key: 'technical_milestones',
+        label: 'Technical',
+        description: 'Infrastructure and skill development moments',
+        descKey: 'milestone',
+        color: 'blue'
+    },
+    {
+        key: 'relational_threads',
+        label: 'Relational',
+        description: 'Parallel arcs in relationships and connections',
+        descKey: 'thread',
+        color: 'rose'
+    },
+    {
+        key: 'place_markers',
+        label: 'Places',
+        description: 'Geographic moments of significance',
+        descKey: 'location',
+        color: 'emerald'
+    }
+]
+
+const activeFilmstrip = ref('teaching_moments')
+
+onMounted(() => {
+    for (const category of filmstripCategories) {
+        if (props.patterns?.[category.key]?.length) {
+            activeFilmstrip.value = category.key
+            break
+        }
+    }
+})
+
+const getCategoryActiveClass = (color) => {
+    const classes = {
+        purple: 'bg-purple-100 text-purple-900 border-l-4 border-purple-500',
+        pink: 'bg-pink-100 text-pink-900 border-l-4 border-pink-500',
+        blue: 'bg-blue-100 text-blue-900 border-l-4 border-blue-500',
+        rose: 'bg-rose-100 text-rose-900 border-l-4 border-rose-500',
+        emerald: 'bg-emerald-100 text-emerald-900 border-l-4 border-emerald-500'
+    }
+    return classes[color] || 'bg-gray-100 text-gray-900 border-l-4 border-gray-500'
 }
 
 </script>
