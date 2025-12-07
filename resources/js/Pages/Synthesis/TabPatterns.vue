@@ -1,31 +1,8 @@
 <template>
     <div class="space-y-6 max-w-6xl mx-auto">
-        <!-- Catalytic Sequence -->
-        <section v-if="patterns?.catalytic_sequence?.length" class="space-y-4">
-            <h3 class="text-2xl font-bold text-gray-900">Catalytic Sequence</h3>
-            <p class="text-sm text-gray-600">Key triggers that drove the transformation</p>
-            <ol class="space-y-3">
-                <li
-                    v-for="(catalyst, index) in patterns.catalytic_sequence"
-                    :key="index"
-                    class="flex items-start gap-3"
-                >
-                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold">
-                        {{ index + 1 }}
-                    </span>
-                    <span class="text-gray-700 pt-0.5">{{ catalyst }}</span>
-                </li>
-            </ol>
-        </section>
 
-        <!-- Integration Markers -->
-        <section v-if="patterns?.integration_markers" class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">Integration Markers</h3>
-            <div
-                class="prose prose-sm max-w-none text-gray-700 leading-relaxed bg-green-50 p-6 rounded-lg border border-green-100"
-                v-html="formatBoldLabelList(patterns.integration_markers)"
-            />
-        </section>
+
+
 
         <!-- Teaching Moments Filmstrip -->
         <section v-if="patterns?.teaching_moments?.length" class="space-y-4">
@@ -112,39 +89,9 @@
             </div>
         </section>
 
-        <!-- Emerging Meta-Patterns -->
-        <section v-if="patterns?.emerging_meta_patterns" class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">Emerging Meta-Patterns</h3>
-            <div
-                class="prose prose-sm max-w-none text-gray-700 leading-relaxed"
-                v-html="formatBoldLabelList(patterns.emerging_meta_patterns)"
-            />
-        </section>
 
-        <!-- Unresolved Threads -->
-        <section v-if="patterns?.unresolved_threads?.length" class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">Unresolved Threads</h3>
-            <ul class="space-y-2">
-                <li
-                    v-for="thread in patterns.unresolved_threads"
-                    :key="thread"
-                    class="flex items-start gap-2 text-sm text-gray-700"
-                >
-                    <span class="text-amber-500 mt-1">○</span>
-                    <span>{{ thread }}</span>
-                </li>
-            </ul>
-        </section>
 
-        <!-- Cluster Resonance -->
-        <section v-if="patterns?.cluster_resonance" class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">Cluster Resonance</h3>
-            <p class="text-sm text-gray-600 italic">Who would recognize themselves in this arc pattern?</p>
-            <div
-                class="prose prose-sm max-w-none text-gray-700 leading-relaxed bg-purple-50 p-6 rounded-lg border border-purple-100"
-                v-html="formatMarkdown(patterns.cluster_resonance)"
-            />
-        </section>
+
     </div>
 </template>
 

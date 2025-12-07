@@ -70,19 +70,12 @@
                 <TabSynthesis
                     v-if="activeMainTab === 'Synthesis'"
                     :cluster="cluster"
-                    :surface="surfaceReflection"
-                    :structure="structureReflection"
+                    :elements="elementsReflection"
+                    :page-theme="pageTheme"
                     :patterns="patternsReflection"
                     :signals="signals"
-                    :page-theme="pageTheme"
-                />
-
-                <TabElements
-                    v-else-if="activeMainTab === 'Elements'"
-                    :cluster="cluster"
-                    :elements="elementsReflection"
-                    :signals="signals"
-                    :page-theme="pageTheme"
+                    :structure="structureReflection"
+                    :surface="surfaceReflection"
                 />
 
                 <TabPatterns
@@ -112,7 +105,6 @@ import { Link } from '@inertiajs/vue3'
 import Content from '@/Components/System/Content.vue'
 import Hero from '@/Components/System/Hero.vue'
 import Icon from '@/Components/System/Icon.vue'
-import TabElements from './TabElements.vue'
 import TabMirror from './TabMirror.vue'
 import TabPatterns from './TabPatterns.vue'
 import TabSynthesis from './TabSynthesis.vue'
@@ -187,13 +179,6 @@ const mainTabs = [
         icon: 'FlaskConical',
         color: 'text-synthesis-400',
         background: 'bg-synthesis-400',
-    },
-    {
-        key: 'Elements',
-        label: 'Elements',
-        icon: 'Gem',
-        color: 'text-emerald-400',
-        background: 'bg-emerald-400',
     },
     {
         key: 'Patterns',

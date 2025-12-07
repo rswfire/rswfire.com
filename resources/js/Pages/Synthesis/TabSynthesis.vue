@@ -1,6 +1,10 @@
 <template>
     <div class="space-y-6 max-w-6xl mx-auto">
 
+        <div class="text-base text-gray-800 font-medium uppercase text-center tracking-tighter font-mono">
+            {{ surface.transformation_pattern }}
+        </div>
+
         <div class="mt-2 border border-gray-200 shadow-sm rounded-md overflow-hidden bg-gray-100">
 
             <!-- Structure: Energetic Arc -->
@@ -59,7 +63,7 @@
                                 </div>
 
                                 <div class="flex-1">
-                                    <div class="text-xs font-mono tracking-tight text-gray-500 mb-1">
+                                    <div class="text-base font-mono tracking-tight text-gray-500 mb-1">
                                         {{ formatMarkerDate(marker.date) }}
                                     </div>
                                     <div class="text-sm text-gray-800">
@@ -80,24 +84,194 @@
                 </div>
             </section>
 
-            <!-- Transformation Pattern -->
-            <section v-if="surface?.transformation_pattern" class="space-y-4">
-                <div class="my-6 text-center">
-                    <h3 class="text-xs uppercase tracking-widest text-gray-500">Synthesis Pattern</h3>
-                    <div class="text-sm text-gray-800 font-medium uppercase truncate">
-                        {{ surface.transformation_pattern }}
+        </div>
+
+        <HrBar/>
+
+        <h2 class="uppercase text-xl font-bold tracking-widest m-0 p-0 text-center">Key Elements</h2>
+
+        <!-- Elements Tabs -->
+        <div class="">
+            <div class="flex border-b border-stone-300 text-sm pl-4">
+                <button
+                    v-for="tab in tabsElements"
+                    :key="tab.key"
+                    @click="tabsElementsActive = tab.key"
+                    :class="[
+                            'relative -mb-px px-4 py-2 rounded-t-md transition-colors',
+                            tabsElementsActive === tab.key
+                                ? 'bg-stone-100 text-stone-800 border border-b border-stone-300 font-medium'
+                                : 'text-stone-500 hover:text-stone-700'
+                        ]"
+                >
+                    <div class="flex items-center gap-2">
+                            <span v-if="tab.locked" class="text-xs opacity-70">
+                                <Icon name="Sprout" color="text-indigo-600" class="w-4 h-4" />
+                            </span>
+                        {{ tab.label }}
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-4 px-4">
+
+            <!-- Elements Tabs: Entities -->
+            <div v-if="tabsElementsActive === 'entities' && elements?.key_entities?.length">
+                <div class="space-y-3">
+                    <div v-for="(entity, index) in elements.key_entities" :key="index" class="text-sm">
+                        <span class="font-semibold text-gray-900">{{ entity.entity }}</span>
+                        <span class="text-xs px-1.5 py-0.5 ml-2 rounded bg-gray-100 text-gray-600 uppercase">{{ entity.type }}</span>
+                        <p class="text-gray-700 mt-1">{{ entity.significance }}</p>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Elements Tabs: Symbols -->
+            <div v-if="tabsElementsActive === 'symbols' && elements?.symbolic_evolution?.length">
+                <div class="space-y-2">
+                    <div v-for="(symbol, index) in elements.symbolic_evolution" :key="index" class="text-sm">
+                        <span class="font-semibold text-gray-900">{{ symbol.symbol }}</span>
+                        <p class="text-gray-700 font-mono text-xs mt-1">{{ symbol.evolution }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elements Tabs: States -->
+            <div v-if="tabsElementsActive === 'states' && elements?.dominant_states?.length">
+                <div class="space-y-3">
+                    <div v-for="(state, index) in elements.dominant_states" :key="index" class="text-sm">
+                        <span class="font-semibold text-gray-900">{{ state.state }}</span>
+                        <span class="text-xs px-1.5 py-0.5 ml-2 rounded bg-gray-100 text-gray-600 uppercase">{{ state.type }}</span>
+                        <p class="text-gray-700 mt-1">{{ state.why_defining }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elements Tabs: Themes -->
+            <div v-if="tabsElementsActive === 'themes' && elements?.recurring_themes?.length">
+                <ul class="space-y-1">
+                    <li v-for="(theme, index) in elements.recurring_themes" :key="index" class="text-sm text-gray-800">
+                        {{ theme }}
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Elements Tabs: Capacity -->
+            <div v-if="tabsElementsActive === 'capacity' && elements?.capacity_shifts?.length">
+                <div class="space-y-3">
+                    <div v-for="(shift, index) in elements.capacity_shifts" :key="index" class="text-sm">
+                        <span class="font-semibold text-gray-900">{{ typeof shift === 'string' ? shift : shift.capacity }}</span>
+                        <p v-if="typeof shift === 'object' && shift.description" class="text-gray-700 mt-1">{{ shift.description }}</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+        <HrBar/>
+
+        <h2 class="uppercase text-xl font-bold tracking-widest m-0 p-0 text-center">Key Patterns</h2>
+
+        <!-- Patterns Tabs -->
+        <div class="">
+            <div class="flex border-b border-stone-300 text-sm pl-4">
+                <button
+                    v-for="tab in tabsPatterns"
+                    :key="tab.key"
+                    @click="tabsPatternsActive = tab.key"
+                    :class="[
+                            'relative -mb-px px-4 py-2 rounded-t-md transition-colors',
+                            tabsPatternsActive === tab.key
+                                ? 'bg-stone-100 text-stone-800 border border-b border-stone-300 font-medium'
+                                : 'text-stone-500 hover:text-stone-700'
+                        ]"
+                >
+                    <div class="flex items-center gap-2">
+                            <span v-if="tab.locked" class="text-xs opacity-70">
+                                <Icon name="Sprout" color="text-indigo-600" class="w-4 h-4" />
+                            </span>
+                        {{ tab.label }}
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="mt-4 px-4">
+
+            <!-- Patterns Tabs: Catalyst -->
+            <div v-if="tabsPatternsActive === 'catalyst' && patterns?.catalytic_sequence">
+                <ol class="space-y-2">
+                    <li
+                        v-for="(catalyst, index) in patterns.catalytic_sequence"
+                        :key="index"
+                        class="flex items-start gap-3 text-sm"
+                    >
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-synthesis-500 text-white flex items-center justify-center text-xs font-bold">
+                {{ index + 1 }}
+            </span>
+                        <span class="text-gray-800 pt-0.5">{{ catalyst }}</span>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Patterns Tabs: Integration -->
+            <div v-if="tabsPatternsActive === 'integration' && patterns?.integration_markers">
+                <div
+                    class="prose prose-sm max-w-none text-gray-800"
+                    v-html="formatBoldLabelList(patterns.integration_markers)"
+                />
+            </div>
+
+            <!-- Patterns Tabs: Emerging -->
+            <div v-if="tabsPatternsActive === 'emerging' && patterns?.emerging_meta_patterns">
+                <div
+                    class="prose prose-sm max-w-none text-gray-800"
+                    v-html="formatBoldLabelList(patterns.emerging_meta_patterns)"
+                />
+            </div>
+
+            <!-- Patterns Tabs: Unresolved -->
+            <div v-if="tabsPatternsActive === 'unresolved' && patterns?.unresolved_threads">
+                <ul class="prose prose-sm space-y-2">
+                    <li
+                        v-for="thread in patterns.unresolved_threads"
+                        :key="thread"
+                        class="flex items-start gap-2 text-sm"
+                    >
+                        <span class="text-synthesis-500 mt-0.5">○</span>
+                        <span class="text-gray-800">{{ thread }}</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Patterns Tabs: Resonance -->
+            <div v-if="tabsPatternsActive === 'resonance' && patterns?.cluster_resonance">
+                <div
+                    class="prose prose-sm max-w-none text-gray-800"
+                    v-html="formatMarkdown(patterns.cluster_resonance)"
+                />
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
 
         <!-- Threshold Moments Filmstrip -->
         <section v-if="surface?.threshold_moments?.length" class="space-y-4">
             <h3 class="text-xl font-semibold text-gray-900">Threshold Moments</h3>
             <p class="text-sm text-gray-600">Key phase shifts and crossings within this arc</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-4">
                 <div
                     v-for="moment in surface.threshold_moments"
                     :key="moment.signal_ulid"
@@ -153,13 +327,16 @@
 import { router } from '@inertiajs/vue3'
 import markdownit from "markdown-it";
 import Icon from "@/Components/System/Icon.vue";
+import {computed, ref} from "vue";
+import HrBar from "@/Pages/Synthesis/HrBar.vue";
 
 const props = defineProps({
     cluster: Object,
-    surface: Object,
-    structure: Object,
+    elements: Object,
     patterns: Object,
     signals: Array,
+    structure: Object,
+    surface: Object,
     pageTheme: String
 })
 
@@ -203,6 +380,64 @@ function formatMarkerDate(dateStr) {
     } catch {
         return iso
     }
+}
+
+const getEntityTypeColor = (type) => {
+    const colors = {
+        'person': 'bg-blue-100 text-blue-700',
+        'place': 'bg-green-100 text-green-700',
+        'thing': 'bg-gray-100 text-gray-700',
+        'system': 'bg-purple-100 text-purple-700',
+        'animal': 'bg-pink-100 text-pink-700'
+    }
+    return colors[type] || 'bg-gray-100 text-gray-700'
+}
+
+const tabsElements = computed(() => {
+    const tabs = [
+        { key: "entities", label: "Entities", locked: false },
+        { key: "symbols", label: "Symbols", locked: false },
+        { key: "states", label: "States", locked: false },
+        { key: "themes", label: "Themes", locked: false }
+    ];
+
+    if (props.elements?.capacity_shifts?.length > 0) {
+        tabs.push({ key: "capacity", label: "Capacity", locked: false });
+    }
+
+    return tabs;
+});
+
+const tabsElementsActive = ref("entities");
+
+const tabsPatterns = [
+    { key: "catalyst", label: "Catalyst", locked: false },
+    { key: "integration", label: "Integration", locked: false },
+    { key: "emerging", label: "Emerging", locked: false },
+    { key: "unresolved", label: "Unresolved", locked: false },
+    { key: "resonance", label: "Resonance", locked: false }
+];
+
+const tabsPatternsActive = ref("catalyst");
+
+const formatBoldLabelList = (text) => {
+    const items = text.split(/\*\*([^*]+)\*\*\s*[:-]/).filter(Boolean)
+    const pairs = []
+    for (let i = 0; i < items.length; i += 2) {
+        if (items[i] && items[i + 1]) {
+            pairs.push({
+                label: items[i].trim(),
+                description: items[i + 1].trim()
+            })
+        }
+    }
+    if (pairs.length < 2) {
+        return marked(text, { breaks: true, gfm: true })
+    }
+    const listItems = pairs.map(pair =>
+        `<li><strong>${pair.label}</strong>:<br/>${pair.description}</li>`
+    ).join('')
+    return `<ul class="space-y-3">${listItems}</ul>`
 }
 
 </script>
