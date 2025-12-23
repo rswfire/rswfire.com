@@ -21,11 +21,11 @@
                     <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
 
                     <span class="inline-flex items-center text-gray-700">
-                      <Icon name="TreeDeciduous" color="text-black" class="w-4 h-4" /> <span class="ml-2">The</span>
-                      <Link href="/honeyman" class="ml-1 text-honeyman-600 font-semibold hover:underline">
-                        Honeyman Archive
-                      </Link>
-                      <span class="ml-1">documents institutional abuse and 90+ days of public records law violation. Complete and permanent.</span>
+                      <Icon name="Hammer" color="text-black" class="w-4 h-4" /> <span class="ml-2">Check out </span>
+                      <a href="https://frontend.rswfire.com" target="_blank" class="ml-1 text-purple-400 font-semibold hover:underline">
+                        frontend.rswfire.com
+                      </a>
+                        <span class="ml-1">for an early preview of the new <strong>rswfire</strong> website!</span>
                     </span>
 
                     <span aria-hidden="true" class="mx-4 text-gray-300">|</span>
