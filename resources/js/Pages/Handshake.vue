@@ -5,7 +5,7 @@
         <Hero
             title="I'M SAM."
             subtitle="Gay. Pierced. Sovereign. Digital Nomad. Caretaker of the Dunes. Oregon Coast."
-            meta="NOT PERFORMING."
+            meta="NOT AVAILABLE FOR DISTORTION."
             :theme="pageTheme"
         />
 
@@ -25,9 +25,8 @@
                     <div>If you're encountering me &mdash; professionally or otherwise &mdash;</div>
                     <div class="ml-4">this is the clearest map you'll get.</div>
 
-                    <div class="mt-4">You don’t need to agree with it.</div>
-                    <div>You don't need to understand every word.</div>
-                    <div>You only need to decide whether this is a context you want to engage.</div>
+                    <div class="mt-4">You don't need to understand every word.</div>
+                    <div>You only need to recognize whether you're capable of engaging on these terms.</div>
 
                     <div class="mt-4 ml-4">&mdash; rswfire</div>
                 </div>
@@ -67,6 +66,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="what-i-care-about" class="mt-8">
 
@@ -100,6 +100,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="i-am-a-system" class="mt-8">
 
@@ -143,6 +144,7 @@
                 <div class="ml-4">without <Lexicon term="distortion">distorting</Lexicon> it into something it never was.</div>
             </section>
 
+            <hr class="my-6"/>
 
             <section id="relational-integrity" class="mt-8">
 
@@ -169,6 +171,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="embodiment" class="mt-8">
 
@@ -193,6 +196,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="where-i-am-now" class="mt-8">
 
@@ -233,6 +237,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="what-i-do" class="mt-8">
 
@@ -283,10 +288,11 @@
 
             </section>
 
+            <hr class="my-6"/>
 
-            <section id="emotion-clarity-misrecognition" class="mt-8">
+            <section id="misrecognition" class="mt-8">
 
-                <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">On Emotion, Clarity, and Misrecognition</h2>
+                <h2 class="uppercase text-lg font-bold tracking-widest m-0 p-0">On Misrecognition</h2>
 
                 <div class="mt-4">My emotional field is fully online.</div>
                 <div class="ml-4"><em>Always has been.</em></div>
@@ -323,6 +329,7 @@
 
             </section>
 
+            <hr class="my-6"/>
 
             <section id="engagement" class="mt-8">
 
