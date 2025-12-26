@@ -9,16 +9,38 @@
             :theme="pageTheme"
         />
 
-        <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
+        <div class="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-black text-base">
+
+
+            <section id="preamble" class="text-base">
+                <div class="ml-6 pl-4 border-l-4 border-gray-300 italic">
+                    <div>This page is not a personal statement, brand narrative, or marketing copy.</div>
+                    <div>It is a <strong>boundary document</strong>.</div>
+
+                    <div class="mt-4">It exists to describe how I operate and relate, and the conditions under which engagement with me is possible &mdash;</div>
+                    <div>without translation into institutional, therapeutic, or performative frames.</div>
+
+                    <div class="mt-4">This page does not exist to provoke, persuade, or signal status.</div>
+                    <div>It is written for accuracy.</div>
+                    <div>If you're encountering me &mdash; professionally or otherwise &mdash;</div>
+                    <div class="ml-4">this is the clearest map you'll get.</div>
+
+                    <div class="mt-4">You don’t need to agree with it.</div>
+                    <div>You don't need to understand every word.</div>
+                    <div>You only need to decide whether this is a context you want to engage.</div>
+
+                    <div class="mt-4 ml-4">&mdash; rswfire</div>
+                </div>
+            </section>
+
+            <hr class="my-6"/>
 
             <section id="opening">
 
-                <div class="ml-6 pl-4 border-l-4 border-gray-300 italic">
-                    <div>I will not fit into any frame you try to put me in &mdash;</div>
-                    <div>not personality,</div>
-                    <div>not role,</div>
-                    <div>not the story you reach for to explain away what you cannot understand.</div>
-                </div>
+                <div>I will not fit into any frame you try to put me in &mdash;</div>
+                <div>not personality,</div>
+                <div>not role,</div>
+                <div>not the story you reach for to explain away what you cannot understand.</div>
 
                 <div class="mt-4">I defy easy labels &mdash;</div>
                 <div class="ml-4">not out of any need to be different,</div>
