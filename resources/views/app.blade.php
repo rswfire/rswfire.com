@@ -6,13 +6,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="icon" href="{{ asset("favicon.ico") }}" type="image/x-icon">
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K6H8GR1Q7"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ dataLayer.push(arguments); }
-            gtag("js", new Date());
-            gtag("config", "G-5K6H8GR1Q7", { send_page_view: false });
-        </script>
+        <script defer src="https://analytics.rswfire.online/script.js" data-website-id="05567003-a5d4-409d-b017-7df4328f2d4a"></script>
         <script src="https://js.stripe.com/v3/"></script>
         @routes
         @vite(["resources/js/app.js"], "assets")
@@ -21,10 +15,4 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
-    <script>
-        window.appConfig = {
-            environment: "{{ config('app.env') }}",
-            server: "{{ config('app.server') }}",
-        };
-    </script>
 </html>
